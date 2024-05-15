@@ -83,12 +83,12 @@ collision_pallet_3 = build_collision(name="collision_pallet_3", origin=[2, -0.3+
 #前围栏
 collision_1 = build_collision(name="col_1", origin=[2.705+0.04, 0, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6.59,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
 
+# #后围栏
+# collision_2 = build_collision(name="col_2", origin=[-2.82+0.12, 0-5.25/2, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6.59-5.25,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
 #后围栏
-collision_2 = build_collision(name="col_2", origin=[-2.82+0.12, 0-5.25/2, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6.59-5.25,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
-#后围栏
-collision_15 = build_collision(name="col_15", origin=[-2.82+0.02, 0, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 4,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
-#后围栏
-collision_16 = build_collision(name="col_16", origin=[-2.82+0.12, 0+5.25/2, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6.59-5.25,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
+collision_15 = build_collision(name="col_15", origin=[-2.82, 0, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6,5.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
+# #后围栏
+# collision_16 = build_collision(name="col_16", origin=[-2.82+0.12, 0+5.25/2, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6.59-5.25,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
 
 #左围栏
 collision_3 = build_collision(name="col_3", origin=[0.052, 3.098+0.11/2, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[5.355, 0.14,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
@@ -151,7 +151,7 @@ pe.workspaces.append(ws7)
 pe.workspaces.append(ws8)
 
 pe.collision_objects.append(collision_1)
-pe.collision_objects.append(collision_2)
+# pe.collision_objects.append(collision_2)
 pe.collision_objects.append(collision_3)
 pe.collision_objects.append(collision_4)
 pe.collision_objects.append(collision_5)
@@ -165,7 +165,7 @@ pe.collision_objects.append(collision_12)
 pe.collision_objects.append(collision_13)
 pe.collision_objects.append(collision_14)
 pe.collision_objects.append(collision_15)
-pe.collision_objects.append(collision_16)
+# pe.collision_objects.append(collision_16)
 # pe.collision_objects.append(collision_pallet_2)
 # pe.collision_objects.append(collision_pallet_3)
 # pe.collision_objects.append(combined_collision)
