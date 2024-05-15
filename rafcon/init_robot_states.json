@@ -1,0 +1,2331 @@
+{
+    "robot_configs": [
+        {
+            "robot_id": "0",
+            "robot_description_name": "kuka_kr180",
+            "child_model": "r3200_pa",
+            "base_transform": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "qx": 0.0,
+                "qy": 0.0,
+                "qz": 0.0,
+                "qw": 1.0
+            },
+            "link_scale_vec": [],
+            "link_padding_vec": [],
+            "joint_limits": [
+                {
+                    "joint_index": 0,
+                    "min_position": -3.2288591161895095,
+                    "max_position": 3.2288591161895095,
+                    "has_velocity_limits": false,
+                    "max_velocity": 0.0,
+                    "has_acceleration_limits": false,
+                    "max_acceleration": 0.0
+                },
+                {
+                    "joint_index": 1,
+                    "min_position": -2.443460952792061,
+                    "max_position": -0.08726646259971647,
+                    "has_velocity_limits": false,
+                    "max_velocity": 0.0,
+                    "has_acceleration_limits": false,
+                    "max_acceleration": 0.0
+                },
+                {
+                    "joint_index": 2,
+                    "min_position": 0.0,
+                    "max_position": 2.6965336943312392,
+                    "has_velocity_limits": false,
+                    "max_velocity": 0.0,
+                    "has_acceleration_limits": false,
+                    "max_acceleration": 0.0
+                },
+                {
+                    "joint_index": 3,
+                    "min_position": -6.1086523819801535,
+                    "max_position": 6.1086523819801535,
+                    "has_velocity_limits": false,
+                    "max_velocity": 0.0,
+                    "has_acceleration_limits": false,
+                    "max_acceleration": 0.0
+                }
+            ],
+            "link_collision_masks": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+            ],
+            "allowed_collision_matrix": {
+                "entry_names": [],
+                "entry_values": []
+            },
+            "motion_ip": "192.168.37.100",
+            "motion_port": 5000,
+            "status_ip": "192.168.37.100",
+            "status_port": 5001,
+            "have_stream_motion": true,
+            "is_virtual_robot": true,
+            "joint_position": [
+                0.0,
+                -1.2653637076958888,
+                0.0,
+                0.0
+            ],
+            "has_tool": true,
+            "tool": {
+                "name": "tool0",
+                "tool_collisions": {
+                    "name": "tool_collision",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.55,
+                                0.3,
+                                0.2
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": -0.45649999999999996,
+                                "y": 0.0,
+                                "z": 0.0835,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.7071067811865477,
+                                "qw": 0.7071067811865475
+                            }
+                        },
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.7,
+                                0.552,
+                                0.7
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.43,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        },
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.11,
+                                0.35,
+                                0.25
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": -0.12000000000000001,
+                                "y": 0.0,
+                                "z": 0.76,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        },
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.25,
+                                0.11,
+                                0.25
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.149,
+                                "y": 0.299,
+                                "z": 0.76,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        },
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.25,
+                                0.11,
+                                0.25
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.149,
+                                "y": -0.299,
+                                "z": 0.76,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 0.800000011920929
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                "tool_collisions_name": [
+                    "+y",
+                    "-y",
+                    "body",
+                    "body_1",
+                    "camera",
+                    "x"
+                ],
+                "tool_collisions_list": [
+                    {
+                        "name": "+y",
+                        "origin": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        },
+                        "primitives": [
+                            {
+                                "type": 1,
+                                "dimensions": [
+                                    0.25,
+                                    0.11,
+                                    0.15
+                                ],
+                                "absolute_mesh_paths": "",
+                                "meshes": {
+                                    "triangles": [],
+                                    "vertices": []
+                                },
+                                "use_convex": false,
+                                "relative_pose": {
+                                    "x": 0.149,
+                                    "y": 0.299,
+                                    "z": 0.76,
+                                    "qx": 0.0,
+                                    "qy": 0.0,
+                                    "qz": 0.0,
+                                    "qw": 1.0
+                                }
+                            }
+                        ],
+                        "tfs": [],
+                        "color": {
+                            "r": 0.0,
+                            "g": 0.0,
+                            "b": 0.0,
+                            "a": 0.0
+                        },
+                        "additional_info": {
+                            "type": "",
+                            "keys": [],
+                            "values": [],
+                            "descriptions": []
+                        },
+                        "ignore_collision": false,
+                        "timestamp": ""
+                    },
+                    {
+                        "name": "-y",
+                        "origin": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        },
+                        "primitives": [
+                            {
+                                "type": 1,
+                                "dimensions": [
+                                    0.25,
+                                    0.11,
+                                    0.15
+                                ],
+                                "absolute_mesh_paths": "",
+                                "meshes": {
+                                    "triangles": [],
+                                    "vertices": []
+                                },
+                                "use_convex": false,
+                                "relative_pose": {
+                                    "x": 0.149,
+                                    "y": -0.299,
+                                    "z": 0.76,
+                                    "qx": 0.0,
+                                    "qy": 0.0,
+                                    "qz": 0.0,
+                                    "qw": 1.0
+                                }
+                            }
+                        ],
+                        "tfs": [],
+                        "color": {
+                            "r": 0.0,
+                            "g": 0.0,
+                            "b": 0.0,
+                            "a": 0.0
+                        },
+                        "additional_info": {
+                            "type": "",
+                            "keys": [],
+                            "values": [],
+                            "descriptions": []
+                        },
+                        "ignore_collision": false,
+                        "timestamp": ""
+                    },
+                    {
+                        "name": "body",
+                        "origin": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        },
+                        "primitives": [
+                            {
+                                "type": 1,
+                                "dimensions": [
+                                    0.39,
+                                    0.59,
+                                    0.65
+                                ],
+                                "absolute_mesh_paths": "",
+                                "meshes": {
+                                    "triangles": [],
+                                    "vertices": []
+                                },
+                                "use_convex": false,
+                                "relative_pose": {
+                                    "x": -0.015387001871562916,
+                                    "y": 0.0016854272989601507,
+                                    "z": 0.37,
+                                    "qx": 0.0,
+                                    "qy": 0.0,
+                                    "qz": -0.707246432451242,
+                                    "qw": 0.7069671023357387
+                                }
+                            }
+                        ],
+                        "tfs": [],
+                        "color": {
+                            "r": 0.0,
+                            "g": 0.0,
+                            "b": 0.0,
+                            "a": 0.0
+                        },
+                        "additional_info": {
+                            "type": "",
+                            "keys": [],
+                            "values": [],
+                            "descriptions": []
+                        },
+                        "ignore_collision": false,
+                        "timestamp": ""
+                    },
+                    {
+                        "name": "body_1",
+                        "origin": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        },
+                        "primitives": [
+                            {
+                                "type": 1,
+                                "dimensions": [
+                                    0.38,
+                                    0.7,
+                                    0.3
+                                ],
+                                "absolute_mesh_paths": "",
+                                "meshes": {
+                                    "triangles": [],
+                                    "vertices": []
+                                },
+                                "use_convex": false,
+                                "relative_pose": {
+                                    "x": -0.12422518600625876,
+                                    "y": -0.0009011965213759901,
+                                    "z": 0.19499999999999998,
+                                    "qx": -0.0024977710695978537,
+                                    "qy": -0.0030570717793057247,
+                                    "qz": 0.7075254540376501,
+                                    "qw": 0.7066782731413475
+                                }
+                            }
+                        ],
+                        "tfs": [],
+                        "color": {
+                            "r": 0.0,
+                            "g": 0.0,
+                            "b": 0.0,
+                            "a": 0.0
+                        },
+                        "additional_info": {
+                            "type": "",
+                            "keys": [],
+                            "values": [],
+                            "descriptions": []
+                        },
+                        "ignore_collision": false,
+                        "timestamp": ""
+                    },
+                    {
+                        "name": "camera",
+                        "origin": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        },
+                        "primitives": [
+                            {
+                                "type": 1,
+                                "dimensions": [
+                                    0.55,
+                                    0.32999999999999996,
+                                    0.25
+                                ],
+                                "absolute_mesh_paths": "",
+                                "meshes": {
+                                    "triangles": [],
+                                    "vertices": []
+                                },
+                                "use_convex": false,
+                                "relative_pose": {
+                                    "x": -0.45649999999999996,
+                                    "y": 0.0,
+                                    "z": 0.0835,
+                                    "qx": 0.0,
+                                    "qy": 0.0,
+                                    "qz": 0.707,
+                                    "qw": 0.707
+                                }
+                            }
+                        ],
+                        "tfs": [],
+                        "color": {
+                            "r": 0.0,
+                            "g": 0.0,
+                            "b": 0.0,
+                            "a": 0.0
+                        },
+                        "additional_info": {
+                            "type": "",
+                            "keys": [],
+                            "values": [],
+                            "descriptions": []
+                        },
+                        "ignore_collision": false,
+                        "timestamp": ""
+                    },
+                    {
+                        "name": "x",
+                        "origin": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        },
+                        "primitives": [
+                            {
+                                "type": 1,
+                                "dimensions": [
+                                    0.11,
+                                    0.35,
+                                    0.15
+                                ],
+                                "absolute_mesh_paths": "",
+                                "meshes": {
+                                    "triangles": [],
+                                    "vertices": []
+                                },
+                                "use_convex": false,
+                                "relative_pose": {
+                                    "x": -0.12000000000000001,
+                                    "y": 0.0,
+                                    "z": 0.76,
+                                    "qx": 0.0,
+                                    "qy": 0.0,
+                                    "qz": 0.0,
+                                    "qw": 1.0
+                                }
+                            }
+                        ],
+                        "tfs": [],
+                        "color": {
+                            "r": 0.0,
+                            "g": 0.0,
+                            "b": 0.0,
+                            "a": 0.0
+                        },
+                        "additional_info": {
+                            "type": "",
+                            "keys": [],
+                            "values": [],
+                            "descriptions": []
+                        },
+                        "ignore_collision": false,
+                        "timestamp": ""
+                    }
+                ],
+                "visual_mesh_path": "",
+                "active_tip_name": "",
+                "mounting_transform": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "qx": 0.0,
+                    "qy": 0.0,
+                    "qz": 0.0,
+                    "qw": 1.0
+                },
+                "tips": [
+                    {
+                        "name": "tip_0",
+                        "tip_pose": {
+                            "x": 0.13461299812843708,
+                            "y": 0.0016854272989601507,
+                            "z": 0.7824017537201751,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": -0.707246432451242,
+                            "qw": 0.7069671023357387
+                        },
+                        "child_primitives_ids": [
+                            "tp_1"
+                        ],
+                        "soft_cup_height": 0.03,
+                        "shrink_height": 0.015,
+                        "bounding_box": {
+                            "type": 1,
+                            "origin": {
+                                "x": 0.13461299812843708,
+                                "y": 0.0016854272989601507,
+                                "z": 0.7824017537201751,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": -0.707246432451242,
+                                "qw": 0.7069671023357387
+                            },
+                            "dimensions": [
+                                0.4,
+                                0.3,
+                                2.2250738585072014e-308
+                            ],
+                            "points": []
+                        }
+                    }
+                ],
+                "all_tip_primitives": [
+                    {
+                        "id": "tp_1",
+                        "suction_areas": [
+                            {
+                                "type": 1,
+                                "origin": {
+                                    "x": 0.13461299812843708,
+                                    "y": 0.0016854272989601507,
+                                    "z": 0.7824017537201751,
+                                    "qx": 0.0,
+                                    "qy": 0.0,
+                                    "qz": -0.707246432451242,
+                                    "qw": 0.7069671023357387
+                                },
+                                "dimensions": [
+                                    0.4,
+                                    0.3
+                                ],
+                                "points": []
+                            }
+                        ],
+                        "max_suction_force": 150.0,
+                        "pick_io_list": [],
+                        "pick_io_values": [],
+                        "pick_io_interval": [],
+                        "place_io_list": [],
+                        "place_io_values": [],
+                        "place_io_interval": [],
+                        "check_ios": []
+                    }
+                ]
+            },
+            "has_robot_tool_state": true,
+            "robot_tool_state": {
+                "robot_id": "0",
+                "has_tool": true,
+                "tool_name": "tool0",
+                "has_attached_collision_object": false,
+                "attached_collision_object": {
+                    "reference_tip_name": "",
+                    "reference_object_name": "",
+                    "from_workspace_id": "",
+                    "to_workspace_id": "",
+                    "origin_tip_transform": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 0.0
+                    },
+                    "objects": []
+                },
+                "ignored_objects": []
+            }
+        }
+    ],
+    "tools": [
+        {
+            "name": "tool0",
+            "tool_collisions": {
+                "name": "tool_collision",
+                "origin": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "qx": 0.0,
+                    "qy": 0.0,
+                    "qz": 0.0,
+                    "qw": 1.0
+                },
+                "primitives": [
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.55,
+                            0.3,
+                            0.2
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": -0.45649999999999996,
+                            "y": 0.0,
+                            "z": 0.0835,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.7071067811865477,
+                            "qw": 0.7071067811865475
+                        }
+                    },
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.7,
+                            0.552,
+                            0.7
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.43,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        }
+                    },
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.11,
+                            0.35,
+                            0.25
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": -0.12000000000000001,
+                            "y": 0.0,
+                            "z": 0.76,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        }
+                    },
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.25,
+                            0.11,
+                            0.25
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": 0.149,
+                            "y": 0.299,
+                            "z": 0.76,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        }
+                    },
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.25,
+                            0.11,
+                            0.25
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": 0.149,
+                            "y": -0.299,
+                            "z": 0.76,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        }
+                    }
+                ],
+                "tfs": [],
+                "color": {
+                    "r": 0.10000000149011612,
+                    "g": 0.5,
+                    "b": 0.20000000298023224,
+                    "a": 0.800000011920929
+                },
+                "additional_info": {
+                    "type": "",
+                    "keys": [],
+                    "values": [],
+                    "descriptions": []
+                },
+                "ignore_collision": false,
+                "timestamp": ""
+            },
+            "tool_collisions_name": [
+                "+y",
+                "-y",
+                "body",
+                "body_1",
+                "camera",
+                "x"
+            ],
+            "tool_collisions_list": [
+                {
+                    "name": "+y",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.25,
+                                0.11,
+                                0.15
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.149,
+                                "y": 0.299,
+                                "z": 0.76,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "-y",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.25,
+                                0.11,
+                                0.15
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.149,
+                                "y": -0.299,
+                                "z": 0.76,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "body",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.39,
+                                0.59,
+                                0.65
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": -0.015387001871562916,
+                                "y": 0.0016854272989601507,
+                                "z": 0.37,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": -0.707246432451242,
+                                "qw": 0.7069671023357387
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "body_1",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.38,
+                                0.7,
+                                0.3
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": -0.12422518600625876,
+                                "y": -0.0009011965213759901,
+                                "z": 0.19499999999999998,
+                                "qx": -0.0024977710695978537,
+                                "qy": -0.0030570717793057247,
+                                "qz": 0.7075254540376501,
+                                "qw": 0.7066782731413475
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "camera",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.55,
+                                0.32999999999999996,
+                                0.25
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": -0.45649999999999996,
+                                "y": 0.0,
+                                "z": 0.0835,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.707,
+                                "qw": 0.707
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "x",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.11,
+                                0.35,
+                                0.15
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": -0.12000000000000001,
+                                "y": 0.0,
+                                "z": 0.76,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                }
+            ],
+            "visual_mesh_path": "",
+            "active_tip_name": "",
+            "mounting_transform": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "qx": 0.0,
+                "qy": 0.0,
+                "qz": 0.0,
+                "qw": 1.0
+            },
+            "tips": [
+                {
+                    "name": "tip_0",
+                    "tip_pose": {
+                        "x": 0.13461299812843708,
+                        "y": 0.0016854272989601507,
+                        "z": 0.7824017537201751,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.707246432451242,
+                        "qw": 0.7069671023357387
+                    },
+                    "child_primitives_ids": [
+                        "tp_1"
+                    ],
+                    "soft_cup_height": 0.03,
+                    "shrink_height": 0.015,
+                    "bounding_box": {
+                        "type": 1,
+                        "origin": {
+                            "x": 0.13461299812843708,
+                            "y": 0.0016854272989601507,
+                            "z": 0.7824017537201751,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": -0.707246432451242,
+                            "qw": 0.7069671023357387
+                        },
+                        "dimensions": [
+                            0.4,
+                            0.3,
+                            2.2250738585072014e-308
+                        ],
+                        "points": []
+                    }
+                }
+            ],
+            "all_tip_primitives": [
+                {
+                    "id": "tp_1",
+                    "suction_areas": [
+                        {
+                            "type": 1,
+                            "origin": {
+                                "x": 0.13461299812843708,
+                                "y": 0.0016854272989601507,
+                                "z": 0.7824017537201751,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": -0.707246432451242,
+                                "qw": 0.7069671023357387
+                            },
+                            "dimensions": [
+                                0.4,
+                                0.3
+                            ],
+                            "points": []
+                        }
+                    ],
+                    "max_suction_force": 150.0,
+                    "pick_io_list": [],
+                    "pick_io_values": [],
+                    "pick_io_interval": [],
+                    "place_io_list": [],
+                    "place_io_values": [],
+                    "place_io_interval": [],
+                    "check_ios": []
+                }
+            ]
+        },
+        {
+            "name": "tool1",
+            "tool_collisions": {
+                "name": "tool_collision",
+                "origin": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "qx": 0.0,
+                    "qy": 0.0,
+                    "qz": 0.0,
+                    "qw": 1.0
+                },
+                "primitives": [
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.55,
+                            0.3,
+                            0.2
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": -0.45649999999999996,
+                            "y": 0.0,
+                            "z": 0.0835,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.7071067811865477,
+                            "qw": 0.7071067811865475
+                        }
+                    },
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.7,
+                            0.552,
+                            0.7
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.43,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        }
+                    },
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.11,
+                            0.35,
+                            0.25
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": -0.12000000000000001,
+                            "y": 0.0,
+                            "z": 0.76,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        }
+                    },
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.25,
+                            0.11,
+                            0.25
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": 0.149,
+                            "y": 0.299,
+                            "z": 0.76,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        }
+                    },
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.25,
+                            0.11,
+                            0.25
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": 0.149,
+                            "y": -0.299,
+                            "z": 0.76,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        }
+                    }
+                ],
+                "tfs": [],
+                "color": {
+                    "r": 0.10000000149011612,
+                    "g": 0.5,
+                    "b": 0.20000000298023224,
+                    "a": 0.800000011920929
+                },
+                "additional_info": {
+                    "type": "",
+                    "keys": [],
+                    "values": [],
+                    "descriptions": []
+                },
+                "ignore_collision": false,
+                "timestamp": ""
+            },
+            "tool_collisions_name": [
+                "+y",
+                "-y",
+                "body",
+                "body_1",
+                "camera",
+                "x"
+            ],
+            "tool_collisions_list": [
+                {
+                    "name": "+y",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.25,
+                                0.11,
+                                0.15
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.149,
+                                "y": 0.299,
+                                "z": 0.76,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "-y",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.25,
+                                0.11,
+                                0.15
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.149,
+                                "y": -0.299,
+                                "z": 0.76,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "body",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.39,
+                                0.59,
+                                0.65
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": -0.01842740915824298,
+                                "y": 0.00027221981129152,
+                                "z": 0.37,
+                                "qx": -0.0024977710695978537,
+                                "qy": -0.0030570717793057247,
+                                "qz": 0.7075254540376501,
+                                "qw": 0.7066782731413475
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "body_1",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.38,
+                                0.7,
+                                0.3
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": -0.12422518600625876,
+                                "y": -0.0009011965213759901,
+                                "z": 0.19499999999999998,
+                                "qx": -0.0024977710695978537,
+                                "qy": -0.0030570717793057247,
+                                "qz": 0.7075254540376501,
+                                "qw": 0.7066782731413475
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "camera",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.55,
+                                0.32999999999999996,
+                                0.25
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": -0.45649999999999996,
+                                "y": 0.0,
+                                "z": 0.0835,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.707,
+                                "qw": 0.707
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "x",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.11,
+                                0.35,
+                                0.15
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": -0.12000000000000001,
+                                "y": 0.0,
+                                "z": 0.76,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                }
+            ],
+            "visual_mesh_path": "",
+            "active_tip_name": "",
+            "mounting_transform": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "qx": 0.0,
+                "qy": 0.0,
+                "qz": 0.0,
+                "qw": 1.0
+            },
+            "tips": [
+                {
+                    "name": "tip_0",
+                    "tip_pose": {
+                        "x": 0.13257259084175702,
+                        "y": -0.0003527,
+                        "z": 0.77994,
+                        "qx": -0.0,
+                        "qy": 0.0,
+                        "qz": 0.70710678,
+                        "qw": 0.70710678
+                    },
+                    "child_primitives_ids": [
+                        "tp_1"
+                    ],
+                    "soft_cup_height": 0.03,
+                    "shrink_height": 0.015,
+                    "bounding_box": {
+                        "type": 1,
+                        "origin": {
+                            "x": 0.13257259084175702,
+                            "y": -0.0003527,
+                            "z": 0.77994,
+                            "qx": -0.0,
+                            "qy": 0.0,
+                            "qz": 0.70710678,
+                            "qw": 0.70710678
+                        },
+                        "dimensions": [
+                            0.4000000000000002,
+                            0.3000000000000001,
+                            2.2250738585072014e-308
+                        ],
+                        "points": []
+                    }
+                }
+            ],
+            "all_tip_primitives": [
+                {
+                    "id": "tp_1",
+                    "suction_areas": [
+                        {
+                            "type": 1,
+                            "origin": {
+                                "x": 0.13257259084175702,
+                                "y": -0.0003527,
+                                "z": 0.77994,
+                                "qx": -0.0,
+                                "qy": 0.0,
+                                "qz": 0.70710678,
+                                "qw": 0.70710678
+                            },
+                            "dimensions": [
+                                0.4,
+                                0.3
+                            ],
+                            "points": []
+                        }
+                    ],
+                    "max_suction_force": 150.0,
+                    "pick_io_list": [],
+                    "pick_io_values": [],
+                    "pick_io_interval": [],
+                    "place_io_list": [],
+                    "place_io_values": [],
+                    "place_io_interval": [],
+                    "check_ios": []
+                }
+            ]
+        },
+        {
+            "name": "tool2",
+            "tool_collisions": {
+                "name": "tool_collision",
+                "origin": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "qx": 0.0,
+                    "qy": 0.0,
+                    "qz": 0.0,
+                    "qw": 1.0
+                },
+                "primitives": [
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.55,
+                            0.3,
+                            0.2
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": -0.45649999999999996,
+                            "y": 0.0,
+                            "z": 0.0835,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.7071067811865477,
+                            "qw": 0.7071067811865475
+                        }
+                    },
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.7,
+                            0.552,
+                            0.7
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.43,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        }
+                    },
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.11,
+                            0.35,
+                            0.25
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": -0.269,
+                            "y": 0.0,
+                            "z": 0.76,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        }
+                    },
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.25,
+                            0.11,
+                            0.25
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": 0.149,
+                            "y": 0.299,
+                            "z": 0.76,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        }
+                    },
+                    {
+                        "type": 1,
+                        "dimensions": [
+                            0.25,
+                            0.11,
+                            0.25
+                        ],
+                        "absolute_mesh_paths": "",
+                        "meshes": {
+                            "triangles": [],
+                            "vertices": []
+                        },
+                        "use_convex": false,
+                        "relative_pose": {
+                            "x": 0.149,
+                            "y": -0.299,
+                            "z": 0.76,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.0,
+                            "qw": 1.0
+                        }
+                    }
+                ],
+                "tfs": [],
+                "color": {
+                    "r": 0.10000000149011612,
+                    "g": 0.5,
+                    "b": 0.20000000298023224,
+                    "a": 0.800000011920929
+                },
+                "additional_info": {
+                    "type": "",
+                    "keys": [],
+                    "values": [],
+                    "descriptions": []
+                },
+                "ignore_collision": false,
+                "timestamp": ""
+            },
+            "tool_collisions_name": [
+                "+y",
+                "-y",
+                "body",
+                "body_1",
+                "camera",
+                "x"
+            ],
+            "tool_collisions_list": [
+                {
+                    "name": "+y",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.25,
+                                0.11,
+                                0.15
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.149,
+                                "y": 0.299,
+                                "z": 0.76,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "-y",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.25,
+                                0.11,
+                                0.15
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.149,
+                                "y": -0.299,
+                                "z": 0.76,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "body",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.38,
+                                0.58,
+                                0.65
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": -0.024225186006258753,
+                                "y": -0.0009011965213759901,
+                                "z": 0.37,
+                                "qx": -0.0024977710695978537,
+                                "qy": -0.0030570717793057247,
+                                "qz": 0.7075254540376501,
+                                "qw": 0.7066782731413475
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "body_1",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.38,
+                                0.7,
+                                0.3
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": -0.12422518600625876,
+                                "y": -0.0009011965213759901,
+                                "z": 0.19499999999999998,
+                                "qx": -0.0024977710695978537,
+                                "qy": -0.0030570717793057247,
+                                "qz": 0.7075254540376501,
+                                "qw": 0.7066782731413475
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "camera",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.55,
+                                0.32999999999999996,
+                                0.25
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": -0.45649999999999996,
+                                "y": 0.0,
+                                "z": 0.0835,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.707,
+                                "qw": 0.707
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "x",
+                    "origin": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.11,
+                                0.35,
+                                0.15
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": -0.269,
+                                "y": 0.0,
+                                "z": 0.76,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 0.0
+                    },
+                    "additional_info": {
+                        "type": "",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                }
+            ],
+            "visual_mesh_path": "",
+            "active_tip_name": "",
+            "mounting_transform": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "qx": 0.0,
+                "qy": 0.0,
+                "qz": 0.0,
+                "qw": 1.0
+            },
+            "tips": [
+                {
+                    "name": "tip_0",
+                    "tip_pose": {
+                        "x": 0.1305349,
+                        "y": -0.002056659490519206,
+                        "z": 0.765,
+                        "qx": 0.0,
+                        "qy": -0.0,
+                        "qz": 0.003638965176896003,
+                        "qw": 0.9999933789443015
+                    },
+                    "child_primitives_ids": [
+                        "tp_1"
+                    ],
+                    "soft_cup_height": 0.03,
+                    "shrink_height": 0.015,
+                    "bounding_box": {
+                        "type": 1,
+                        "origin": {
+                            "x": 0.1305349,
+                            "y": -0.002056659490519206,
+                            "z": 0.765,
+                            "qx": 0.0,
+                            "qy": -0.0,
+                            "qz": 0.003638965176896003,
+                            "qw": 0.9999933789443015
+                        },
+                        "dimensions": [
+                            0.6,
+                            0.4,
+                            2.2250738585072014e-308
+                        ],
+                        "points": []
+                    }
+                }
+            ],
+            "all_tip_primitives": [
+                {
+                    "id": "tp_1",
+                    "suction_areas": [
+                        {
+                            "type": 1,
+                            "origin": {
+                                "x": 0.1305349,
+                                "y": -0.002056659490519206,
+                                "z": 0.765,
+                                "qx": 0.0,
+                                "qy": -0.0,
+                                "qz": 0.003638965176896003,
+                                "qw": 0.9999933789443015
+                            },
+                            "dimensions": [
+                                0.6,
+                                0.4
+                            ],
+                            "points": []
+                        }
+                    ],
+                    "max_suction_force": 150.0,
+                    "pick_io_list": [],
+                    "pick_io_values": [],
+                    "pick_io_interval": [],
+                    "place_io_list": [],
+                    "place_io_values": [],
+                    "place_io_interval": [],
+                    "check_ios": []
+                }
+            ]
+        }
+    ],
+    "robot_tool_states": [
+        {
+            "robot_id": "0",
+            "has_tool": true,
+            "tool_name": "tool0",
+            "has_attached_collision_object": false,
+            "attached_collision_object": {
+                "reference_tip_name": "",
+                "reference_object_name": "",
+                "from_workspace_id": "",
+                "to_workspace_id": "",
+                "origin_tip_transform": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "qx": 0.0,
+                    "qy": 0.0,
+                    "qz": 0.0,
+                    "qw": 0.0
+                },
+                "objects": []
+            },
+            "ignored_objects": []
+        }
+    ]
+}

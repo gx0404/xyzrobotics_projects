@@ -1,0 +1,49 @@
+robot:
+  vendor: KUKA
+  controller: kr4
+  custom_robot_cfg: OTHERS.yaml
+  custom_vendor: OTHERS
+request_handler_type: 1
+communication:
+  communication_type: 0
+  tcp_server_protocol:
+    port: 11111
+    protocol_type: 0
+    standard_protocol:
+      separator: ","
+      terminator: "#"
+      decimals:
+        joints: 2
+        xyz: 2
+        orientation: 2
+  modbus_tcp_master_protocol:
+    plc_ip: 127.0.0.1
+    port: 502
+    slave_id: 1
+    decimals:
+      joints: 3
+      xyz: 3
+      orientation: 3
+    cfg: modbus_tcp_config.yml
+  s7_protocol:
+    plc_ip: 192.168.37.5
+    port: 102
+    rack_num: 0
+    slot_num: 1
+    decimals:
+      joints: 3
+      xyz: 3
+      orientation: 3
+    cfg: s7_config.yml
+  melsec_protocol:
+    server_ip: 192.168.37.5
+    port: 12222
+sim_message_config: sim_message_config.yml
+task_server_config:
+  task_comm_type: 1
+  task_flow_map:
+    zzzzzzzzzzz1.t: tasks/拆码垛-料箱单拆-眼在手上1.task
+    zzzzzzzzzzz.t: tasks/拆码垛-料箱单拆-眼在手外1.task
+    zzzzzzz1.t: tasks/拆码垛-料箱单码1.task
+    zzzzzzz1_1.t: tasks/拆码垛-纸箱单码1.task
+    zzz1.t: tasks/空流图1.task

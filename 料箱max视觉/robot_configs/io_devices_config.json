@@ -1,0 +1,14 @@
+{
+    "devices": {
+        "0": {
+            "mode": 0,
+            "name": "PLC-1",
+            "protocol": {
+                "ip": "192.168.37.5",
+                "port": 502,
+                "slave_id": 1,
+                "type": "ModbusTcpMaster"
+            }
+        }
+    }
+}

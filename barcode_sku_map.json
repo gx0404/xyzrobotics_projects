@@ -1,0 +1,95 @@
+{   
+    "barcode_maps": {
+        "A": {
+            "barcode": "A", 
+            "height": 0.2, 
+            "length": 0.5, 
+            "weight": 10.0, 
+            "width": 0.4
+        },
+        "B": {
+            "barcode": "B", 
+            "height": 0.3, 
+            "length": 0.5, 
+            "weight": 10.0, 
+            "width": 0.4
+        },
+        "C": {
+            "barcode": "C", 
+            "height": 0.4, 
+            "length": 0.5, 
+            "weight": 10.0, 
+            "width": 0.4
+        },
+        "D": {
+            "barcode": "D", 
+            "height": 0.2, 
+            "length": 0.5, 
+            "weight": 10.0, 
+            "width": 0.3
+        },
+        "E": {
+            "barcode": "E", 
+            "height": 0.3, 
+            "length": 0.5, 
+            "weight": 10.0, 
+            "width": 0.3
+        },
+        "F": {
+            "barcode": "F", 
+            "height": 0.4, 
+            "length": 0.5, 
+            "weight": 10.0, 
+            "width": 0.3
+        },
+        "G": {
+            "barcode": "G", 
+            "height": 0.2, 
+            "length": 0.6, 
+            "weight": 10.0, 
+            "width": 0.4
+        },
+        "H": {
+            "barcode": "H", 
+            "height": 0.3, 
+            "length": 0.6, 
+            "weight": 10.0, 
+            "width": 0.4
+        },
+        "I": {
+            "barcode": "I", 
+            "height": 0.4, 
+            "length": 0.6, 
+            "weight": 10.0, 
+            "width": 0.4
+        },
+        "J": {
+            "barcode": "J", 
+            "height": 0.2, 
+            "length": 0.4, 
+            "weight": 10.0, 
+            "width": 0.3
+        },
+        "K": {
+            "barcode": "K", 
+            "height": 0.3, 
+            "length": 0.4, 
+            "weight": 10.0, 
+            "width": 0.3
+        },
+        "L": {
+            "barcode": "L", 
+            "height": 0.4, 
+            "length": 0.4, 
+            "weight": 10.0, 
+            "width": 0.3
+        }
+    },
+    "default": {
+        "barcode": "AA", 
+        "height": 0.4, 
+        "length": 0.4, 
+        "weight": 10.0, 
+        "width": 0.4
+    }
+}

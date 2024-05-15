@@ -1,0 +1,6002 @@
+{
+  "dataConnections": [
+    {
+      "id": "{062ec19f-bfe3-4faf-a5c0-2dcbd5b5791e}",
+      "in_id": "{28997384-f1bf-4e77-bc70-b13e6ce86e2a}",
+      "in_index": 0,
+      "out_id": "{5fd3afbf-2c14-4355-addc-c8069b7abb37}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{069eebfb-de40-4e34-a5bd-3ad404ccee00}",
+      "in_id": "{958bcd26-bad3-486c-8fea-3372a96366b2}",
+      "in_index": 0,
+      "out_id": "{8fdccc0a-db56-4db2-b991-a3d7b2c007d1}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{07308ab1-bc41-4bd2-b71f-9d74cf91e772}",
+      "in_id": "{2f42e71d-eaf3-43f8-be59-3830d6a8e522}",
+      "in_index": 0,
+      "out_id": "{3a359eb8-d38c-449a-9a73-3bdb5e965c4e}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{07ea52dd-0f42-47bf-921c-572c0ac4c6da}",
+      "in_id": "{46988da8-4edd-4d23-ad6d-6b6965cc9185}",
+      "in_index": 0,
+      "out_id": "{31526e85-4713-4b68-8b51-82c63f56bee2}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{093d25b4-edef-40e2-a1fe-b27d7d99d7aa}",
+      "in_id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "in_index": 0,
+      "out_id": "{7e040b69-5553-4638-a969-cfb6b6a8bd5b}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{095fc817-347f-4868-bcd5-4254e7a2b363}",
+      "in_id": "{c19dd7c1-f212-4ba3-bd13-d0ae8d0266a6}",
+      "in_index": 0,
+      "out_id": "{2d86fdef-695b-4efa-962e-e43479381f2c}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{09ae8fb3-dfec-487e-97b1-9da5469b60cf}",
+      "in_id": "{d891f703-632b-41ec-a404-3cac57b2633f}",
+      "in_index": 0,
+      "out_id": "{3a359eb8-d38c-449a-9a73-3bdb5e965c4e}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{0c04e678-e625-42e8-9a21-ac2503ca2219}",
+      "in_id": "{4d15dc5e-a01c-4856-8f10-38bf8744d03d}",
+      "in_index": 0,
+      "out_id": "{0b3a9621-5c6c-4cf4-9619-1feb27a6189d}",
+      "out_index": 2,
+      "port_category": "logic"
+    },
+    {
+      "id": "{0c67f059-8a2b-4fe6-b1bb-d382779d44e5}",
+      "in_id": "{31526e85-4713-4b68-8b51-82c63f56bee2}",
+      "in_index": 0,
+      "out_id": "{28997384-f1bf-4e77-bc70-b13e6ce86e2a}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{0f8680a0-312f-4eca-95a5-d2fab356adde}",
+      "in_id": "{31526e85-4713-4b68-8b51-82c63f56bee2}",
+      "in_index": 0,
+      "out_id": "{5bc25fd3-2198-4077-b358-e236c156f4f9}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{10037823-b3f2-438b-b83d-d7e0f920dce2}",
+      "in_id": "{0a2c0526-4e77-40c9-899d-0324f96243bd}",
+      "in_index": 0,
+      "out_id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "out_index": 2,
+      "port_category": "logic"
+    },
+    {
+      "id": "{11326830-ca38-417a-a1b8-86801b3cbe9b}",
+      "in_id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "in_index": 0,
+      "out_id": "{7e040b69-5553-4638-a969-cfb6b6a8bd5b}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{14eb81cd-59e6-44f6-9cd2-dc3eddd53f0e}",
+      "in_id": "{53748680-93d5-4f15-93da-27564b03826e}",
+      "in_index": 0,
+      "out_id": "{191cc91f-891a-4685-90cb-39c4bebdff3b}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{1750ee5f-8e64-4ce8-a133-aa2233ef2ff7}",
+      "in_id": "{60ee9482-6559-4404-9b96-ac3ee5ba4998}",
+      "in_index": 0,
+      "out_id": "{d899f5b0-ce2d-498c-bf03-c669e66198a9}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{17905c86-71d7-4288-af7a-e14d56853bf4}",
+      "in_id": "{254b3560-e2a0-40f0-8be1-83bc8f3d8cf8}",
+      "in_index": 0,
+      "out_id": "{9f20626f-2d67-4454-870d-06837fb41ac0}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{1889515b-ec33-4074-968e-3d4802e93ebf}",
+      "in_id": "{6d05270c-bd13-475e-9c40-f71a26a9e1cf}",
+      "in_index": 0,
+      "out_id": "{672602e9-98ba-44ca-9a59-b6152504150e}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{1ae41b03-98ee-4cdd-b5ae-f5b6d162677a}",
+      "in_id": "{2d86fdef-695b-4efa-962e-e43479381f2c}",
+      "in_index": 0,
+      "out_id": "{c19dd7c1-f212-4ba3-bd13-d0ae8d0266a6}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{1b6fa6d2-cc73-42a8-9999-519d02d5a3ca}",
+      "in_id": "{375b8b7f-57fd-4ed2-b991-ed478f8b4a88}",
+      "in_index": 0,
+      "out_id": "{55fe49ff-1825-408e-b80f-053bd2f9bb60}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{1cd4b709-af5d-472e-a3cd-497fa05bab2a}",
+      "in_id": "{8c93962c-f10e-4353-bbe3-a551860f4157}",
+      "in_index": 0,
+      "out_id": "{1927e2e2-22cc-470c-ae9c-a028d0debe88}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{1ce199e5-0494-44d8-b6d2-a6e3ce953228}",
+      "in_id": "{964879fe-8d2a-414a-9448-15820bcc6f79}",
+      "in_index": 0,
+      "out_id": "{958bcd26-bad3-486c-8fea-3372a96366b2}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{1e042888-f56d-4a28-b9ae-407340f0f5c3}",
+      "in_id": "{c46ea6d0-e83e-4ace-80a2-e0cad658ea64}",
+      "in_index": 0,
+      "out_id": "{da55c704-e01d-4deb-863a-aa71f129f47a}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{24bcdd32-1658-4700-81e1-68f8329840a6}",
+      "in_id": "{2ff41ce2-e769-40b2-9c79-babd733285a0}",
+      "in_index": 0,
+      "out_id": "{5304d3c2-163f-478e-93eb-b30ee49d5b85}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{25c127da-1e07-45ac-808b-1b2c14529b78}",
+      "in_id": "{8e87ccfc-3be4-4626-bed6-90b9666c70fa}",
+      "in_index": 0,
+      "out_id": "{c46ea6d0-e83e-4ace-80a2-e0cad658ea64}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{2656fadd-4434-4cae-98b8-b9d77ac1910f}",
+      "in_id": "{28997384-f1bf-4e77-bc70-b13e6ce86e2a}",
+      "in_index": 0,
+      "out_id": "{c92117ba-8d64-417e-a384-16922540c811}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{26b155ec-ac8e-4f36-abb0-708682d1cd88}",
+      "in_id": "{c19dd7c1-f212-4ba3-bd13-d0ae8d0266a6}",
+      "in_index": 0,
+      "out_id": "{791d64f7-2fc5-4d70-926e-cc378f0bf21e}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{277a0f1c-29e9-4fe5-8dcc-75107355f046}",
+      "in_id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "in_index": 0,
+      "out_id": "{83b2dc04-d9c4-4900-83e8-4122bdbedb16}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{28afe331-a3c5-4c5e-8644-b5480fe3bdf0}",
+      "in_id": "{1ae45fb3-d03b-4910-b4d0-0b90fa1ca68e}",
+      "in_index": 0,
+      "out_id": "{31f250ad-0a2d-4ecb-8889-fec7d0968af5}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{29847ccb-61b1-42ec-ae06-22deecbacae4}",
+      "in_id": "{d899f5b0-ce2d-498c-bf03-c669e66198a9}",
+      "in_index": 0,
+      "out_id": "{832b3e11-10d1-47a3-9858-71aee223ab87}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{299e38d4-59d1-4cb1-adea-e512a34b4d13}",
+      "in_id": "{0c8ab761-ecc1-4fe5-b214-d84c26cb660f}",
+      "in_index": 0,
+      "out_id": "{6f6a2fb0-27bb-4dc6-b7c8-2651530a288f}",
+      "out_index": 1,
+      "port_category": "data"
+    },
+    {
+      "id": "{2e3336f2-a01a-49c2-a0c3-0eada1ccd562}",
+      "in_id": "{affe0a07-4d52-4007-a3a0-3834cdbd0f87}",
+      "in_index": 0,
+      "out_id": "{8c93962c-f10e-4353-bbe3-a551860f4157}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{2f480277-e8e7-4797-a926-4539d5389de3}",
+      "in_id": "{254b3560-e2a0-40f0-8be1-83bc8f3d8cf8}",
+      "in_index": 0,
+      "out_id": "{9f20626f-2d67-4454-870d-06837fb41ac0}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{30f0b2da-02fa-4971-a5bc-7f5960b8c2a0}",
+      "in_id": "{964879fe-8d2a-414a-9448-15820bcc6f79}",
+      "in_index": 1,
+      "out_id": "{3a359eb8-d38c-449a-9a73-3bdb5e965c4e}",
+      "out_index": 3,
+      "port_category": "data"
+    },
+    {
+      "id": "{313e1e15-824b-443f-885a-3c1a8998de7a}",
+      "in_id": "{9583ee80-5a5b-45f6-bf92-070348be6b32}",
+      "in_index": 0,
+      "out_id": "{1f712483-90d8-4af4-b8fa-69e1ed923177}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{31c83b6e-aa2d-4c84-adbb-b5a1767a68af}",
+      "in_id": "{1927e2e2-22cc-470c-ae9c-a028d0debe88}",
+      "in_index": 0,
+      "out_id": "{c8faf79f-9158-4a5e-94a5-4040e7ec0e7e}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{331b87c2-c5dc-4255-a1a9-c9625307f725}",
+      "in_id": "{7c52d2e7-7d9e-431e-80a1-4d7cb19a6a65}",
+      "in_index": 2,
+      "out_id": "{31f250ad-0a2d-4ecb-8889-fec7d0968af5}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{336f4469-d1f0-4edb-87ac-eeade8f53891}",
+      "in_id": "{87745c0f-4a94-4676-b8c2-a6cd0f016bb1}",
+      "in_index": 0,
+      "out_id": "{4cd92365-fd76-4674-b16a-a79c51c21c1f}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{347f3acb-0d8c-41f1-84fa-6128acb25f6a}",
+      "in_id": "{ac94c796-a597-4624-aaba-8261ded5f0a8}",
+      "in_index": 2,
+      "out_id": "{1927e2e2-22cc-470c-ae9c-a028d0debe88}",
+      "out_index": 2,
+      "port_category": "data"
+    },
+    {
+      "id": "{34b86814-cb95-4964-a8a1-3be9a811e375}",
+      "in_id": "{0c8ab761-ecc1-4fe5-b214-d84c26cb660f}",
+      "in_index": 2,
+      "out_id": "{e30fe685-0af1-47e6-8f7b-45dbb7ed5ab5}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{3578a116-556b-4ae4-901e-341771060eb3}",
+      "in_id": "{640285f7-951e-4b33-8f9f-8ee203a792f3}",
+      "in_index": 0,
+      "out_id": "{96f1e756-044b-4a03-bf4e-4818dab7284d}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{35a2e0c4-9a4a-4ee9-a47c-6d449278db26}",
+      "in_id": "{c92117ba-8d64-417e-a384-16922540c811}",
+      "in_index": 0,
+      "out_id": "{1afe3669-e21b-4f1f-b72f-435539e73f9d}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{374a813d-4471-4547-a160-c5819af5ed4d}",
+      "in_id": "{ac94c796-a597-4624-aaba-8261ded5f0a8}",
+      "in_index": 1,
+      "out_id": "{7e040b69-5553-4638-a969-cfb6b6a8bd5b}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{389be166-a0b3-4644-918e-c1cc3de037e1}",
+      "in_id": "{d366d2bd-cef2-4d2b-95e3-1c439378f82f}",
+      "in_index": 0,
+      "out_id": "{3a359eb8-d38c-449a-9a73-3bdb5e965c4e}",
+      "out_index": 2,
+      "port_category": "logic"
+    },
+    {
+      "id": "{38b9d100-ce20-40c3-96d9-43dd46539964}",
+      "in_id": "{9d2cfb4b-ce92-4511-9f66-4b6fee9870c2}",
+      "in_index": 0,
+      "out_id": "{d6044e09-9a86-4ec7-95d6-12cc4cd6ebaf}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{3bb16faf-9ad2-4c6b-855f-df39829982d9}",
+      "in_id": "{5d52df7d-8372-459b-b209-92866f35a060}",
+      "in_index": 0,
+      "out_id": "{31981a55-3a4f-4568-8701-a8e4e198ee2a}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{3da84382-76cb-468f-9498-735116438a23}",
+      "in_id": "{964879fe-8d2a-414a-9448-15820bcc6f79}",
+      "in_index": 1,
+      "out_id": "{1a0e4126-a86a-46bc-bfab-6c1bb43049ae}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{40497f5f-d869-4f4d-8890-2aede1601b49}",
+      "in_id": "{b6d8069b-afda-435e-ab9b-5c35dface3f6}",
+      "in_index": 0,
+      "out_id": "{3b07c973-5dcd-42fb-8c1f-5610fc3919a6}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{4194e313-bf89-422e-aafe-a9f72004e5a7}",
+      "in_id": "{0c8ab761-ecc1-4fe5-b214-d84c26cb660f}",
+      "in_index": 0,
+      "out_id": "{ed78feae-d8af-4a2b-94f8-f6b171715c06}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{41c78628-a862-4e5c-a94e-efa888d1c85c}",
+      "in_id": "{25a6ff9f-21d0-450e-bbff-c93330b2951d}",
+      "in_index": 0,
+      "out_id": "{e7814e72-fb4e-40de-b843-9bd3eb69e91b}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{42866ef9-9374-44fe-848a-b1667b28738e}",
+      "in_id": "{9c936491-fbdb-439b-b4b5-3d609e0ed95f}",
+      "in_index": 0,
+      "out_id": "{00ad4239-0746-4fab-9778-bf50f387dbad}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{429413b3-ac70-4bdf-a9d8-19b29d065a75}",
+      "in_id": "{0c8ab761-ecc1-4fe5-b214-d84c26cb660f}",
+      "in_index": 1,
+      "out_id": "{ed78feae-d8af-4a2b-94f8-f6b171715c06}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{435db8c6-d55f-4ca5-8f9d-06a6b9ec3a7b}",
+      "in_id": "{4d15dc5e-a01c-4856-8f10-38bf8744d03d}",
+      "in_index": 0,
+      "out_id": "{0b3a9621-5c6c-4cf4-9619-1feb27a6189d}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{4374e8ef-53c5-416a-ab5b-b1eac04685a4}",
+      "in_id": "{b6583ed2-4c15-42ee-ac97-ff6b354be8b6}",
+      "in_index": 0,
+      "out_id": "{bda11f01-8f45-40cc-bf26-3f0f900ad998}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{4591f651-ad13-4e9d-9826-d9f318622689}",
+      "in_id": "{4c9322d5-f206-4023-81ad-87ab68af1c93}",
+      "in_index": 0,
+      "out_id": "{4cd92365-fd76-4674-b16a-a79c51c21c1f}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{46f1072b-fef9-4bfa-b7f2-69de5355c013}",
+      "in_id": "{b6583ed2-4c15-42ee-ac97-ff6b354be8b6}",
+      "in_index": 0,
+      "out_id": "{1a4f01ce-fdd7-4cc8-bfe1-7c22118d5878}",
+      "out_index": 2,
+      "port_category": "logic"
+    },
+    {
+      "id": "{47a06a66-d875-426a-8915-76a82aa25367}",
+      "in_id": "{dc636b8e-9d34-4156-a71c-4190e7f28cde}",
+      "in_index": 0,
+      "out_id": "{0535e7d1-5675-42d0-988f-049aad497fe3}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{47c014f1-6c53-49ce-a590-0d0328032154}",
+      "in_id": "{64e875a0-26d9-4fcc-a30a-ad9e31e6b9b1}",
+      "in_index": 0,
+      "out_id": "{187ce736-a2ab-48dd-b025-a8bb76036166}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{490c3240-8a39-4118-af89-a2aafec580eb}",
+      "in_id": "{2cbb1186-8b46-4513-abbf-59351a9d99e9}",
+      "in_index": 0,
+      "out_id": "{254b3560-e2a0-40f0-8be1-83bc8f3d8cf8}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{4b69d38a-927a-4883-82b5-6e987c94a0c0}",
+      "in_id": "{bc869799-cecc-42b7-99b9-bbef625ac0b4}",
+      "in_index": 0,
+      "out_id": "{c8babde9-451b-44ce-aad5-7a9d9afe99e9}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{4c569b49-579e-4e0d-aeaf-10fed4d8d8eb}",
+      "in_id": "{526d4bd5-fe22-49f6-999b-334e4af80d76}",
+      "in_index": 0,
+      "out_id": "{da55c704-e01d-4deb-863a-aa71f129f47a}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{4e083c17-fe10-4b5b-b288-18de7b55191a}",
+      "in_id": "{e30fe685-0af1-47e6-8f7b-45dbb7ed5ab5}",
+      "in_index": 0,
+      "out_id": "{466d13e7-fe44-4164-8cf1-1af506f478d6}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{4f425f9e-ff84-488f-a85d-0dbeb30e1299}",
+      "in_id": "{96f1e756-044b-4a03-bf4e-4818dab7284d}",
+      "in_index": 0,
+      "out_id": "{c1b47834-7688-4b5a-9b60-a787ad8d741e}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{4fe25726-4c69-4d96-b0a2-3be4139630af}",
+      "in_id": "{8e87ccfc-3be4-4626-bed6-90b9666c70fa}",
+      "in_index": 0,
+      "out_id": "{6bcf2599-b589-4573-bcee-3454f291fca9}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{50a126ac-94d6-4a5f-92e4-e092c1f270ad}",
+      "in_id": "{0535e7d1-5675-42d0-988f-049aad497fe3}",
+      "in_index": 0,
+      "out_id": "{2ff7bc6a-3e21-4f8f-be0b-684ac54b110e}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{51c714db-80cb-4c46-ae75-51ef4d03b0fe}",
+      "in_id": "{1f712483-90d8-4af4-b8fa-69e1ed923177}",
+      "in_index": 0,
+      "out_id": "{640285f7-951e-4b33-8f9f-8ee203a792f3}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{52e4cf1d-d51f-49f2-9945-46a8f6d96ace}",
+      "in_id": "{da55c704-e01d-4deb-863a-aa71f129f47a}",
+      "in_index": 0,
+      "out_id": "{5d52df7d-8372-459b-b209-92866f35a060}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{5429614d-d7ae-4a6c-bb20-cb227d6c833f}",
+      "in_id": "{1927e2e2-22cc-470c-ae9c-a028d0debe88}",
+      "in_index": 0,
+      "out_id": "{375b8b7f-57fd-4ed2-b991-ed478f8b4a88}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{5477d18b-fecf-43ab-bc33-c3f90345bb29}",
+      "in_id": "{0a2c0526-4e77-40c9-899d-0324f96243bd}",
+      "in_index": 0,
+      "out_id": "{83b2dc04-d9c4-4900-83e8-4122bdbedb16}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{55046db2-1e21-400f-b048-7e5619c1219f}",
+      "in_id": "{1a4f01ce-fdd7-4cc8-bfe1-7c22118d5878}",
+      "in_index": 0,
+      "out_id": "{bda11f01-8f45-40cc-bf26-3f0f900ad998}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{5895611f-f583-47ad-8883-e31598bea96e}",
+      "in_id": "{fa078654-dc44-4f95-b5fa-51092ffe3135}",
+      "in_index": 0,
+      "out_id": "{83b2dc04-d9c4-4900-83e8-4122bdbedb16}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{58a338b1-16d3-4568-b6dd-3185acc24d28}",
+      "in_id": "{e7814e72-fb4e-40de-b843-9bd3eb69e91b}",
+      "in_index": 1,
+      "out_id": "{e426fca5-1c5d-4281-bb98-e8f280245e71}",
+      "out_index": 1,
+      "port_category": "data"
+    },
+    {
+      "id": "{5b8b5c74-d331-4f6b-8ca8-31ccb2afebb7}",
+      "in_id": "{c8faf79f-9158-4a5e-94a5-4040e7ec0e7e}",
+      "in_index": 0,
+      "out_id": "{e7814e72-fb4e-40de-b843-9bd3eb69e91b}",
+      "out_index": 2,
+      "port_category": "data"
+    },
+    {
+      "id": "{5c37034a-700d-48ba-be69-2adcc60f308e}",
+      "in_id": "{55fe49ff-1825-408e-b80f-053bd2f9bb60}",
+      "in_index": 1,
+      "out_id": "{9583ee80-5a5b-45f6-bf92-070348be6b32}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{5c63d9d7-bd0c-4b11-8c5e-75854e2e3a54}",
+      "in_id": "{c92117ba-8d64-417e-a384-16922540c811}",
+      "in_index": 0,
+      "out_id": "{1afe3669-e21b-4f1f-b72f-435539e73f9d}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{5f73c627-9a1e-4514-9135-298c7b63a371}",
+      "in_id": "{86c0d086-16e9-4111-bb98-8ffec4306ef1}",
+      "in_index": 0,
+      "out_id": "{0b3a9621-5c6c-4cf4-9619-1feb27a6189d}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{609aea1f-72a6-4ee9-a12b-4b5cb5dacc98}",
+      "in_id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "in_index": 0,
+      "out_id": "{0a2c0526-4e77-40c9-899d-0324f96243bd}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{61a8c350-3f9c-46c5-a5b6-7ae8143a91c2}",
+      "in_id": "{6f6a2fb0-27bb-4dc6-b7c8-2651530a288f}",
+      "in_index": 0,
+      "out_id": "{1abd19eb-6b76-4db0-a452-a5772514cc09}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{643a280b-4881-47d9-b91d-331eaba37b9e}",
+      "in_id": "{5ede6f88-0186-4aac-a5af-f56968597dac}",
+      "in_index": 0,
+      "out_id": "{526d4bd5-fe22-49f6-999b-334e4af80d76}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{6455d47c-937d-48cf-8728-fca88d81b07a}",
+      "in_id": "{5fd3afbf-2c14-4355-addc-c8069b7abb37}",
+      "in_index": 0,
+      "out_id": "{3d110655-b7fe-4783-8749-7360ee98eef4}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{652b9244-a82f-441d-9857-31102664118f}",
+      "in_id": "{5304d3c2-163f-478e-93eb-b30ee49d5b85}",
+      "in_index": 0,
+      "out_id": "{2f42e71d-eaf3-43f8-be59-3830d6a8e522}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{657f2308-93ce-4d8a-b01c-b07fbce90afe}",
+      "in_id": "{55fe49ff-1825-408e-b80f-053bd2f9bb60}",
+      "in_index": 0,
+      "out_id": "{9583ee80-5a5b-45f6-bf92-070348be6b32}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{67cb8265-c8bd-422e-bcd6-9fa014723b91}",
+      "in_id": "{c46ea6d0-e83e-4ace-80a2-e0cad658ea64}",
+      "in_index": 0,
+      "out_id": "{87745c0f-4a94-4676-b8c2-a6cd0f016bb1}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{6855a899-9a13-4f48-8f96-fdf3a86b23ba}",
+      "in_id": "{817b6c85-8bc6-414b-a95a-3bfc84ab938f}",
+      "in_index": 0,
+      "out_id": "{3a359eb8-d38c-449a-9a73-3bdb5e965c4e}",
+      "out_index": 3,
+      "port_category": "logic"
+    },
+    {
+      "id": "{691e09cf-a8a0-4644-a751-3293ab3bd78c}",
+      "in_id": "{5304d3c2-163f-478e-93eb-b30ee49d5b85}",
+      "in_index": 1,
+      "out_id": "{3a359eb8-d38c-449a-9a73-3bdb5e965c4e}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{6a3d66d8-3f91-428c-8a78-0c0df8b826c8}",
+      "in_id": "{1a0e4126-a86a-46bc-bfab-6c1bb43049ae}",
+      "in_index": 0,
+      "out_id": "{2ff41ce2-e769-40b2-9c79-babd733285a0}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{6d690e6b-e8a4-437f-990f-444bf2ae23da}",
+      "in_id": "{d7f82cdc-266d-41a2-822f-e2dd44e3e8f7}",
+      "in_index": 0,
+      "out_id": "{466d13e7-fe44-4164-8cf1-1af506f478d6}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{6fe5843f-5b2f-45af-8e03-778d161ac52d}",
+      "in_id": "{0c8ab761-ecc1-4fe5-b214-d84c26cb660f}",
+      "in_index": 2,
+      "out_id": "{6d05270c-bd13-475e-9c40-f71a26a9e1cf}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{71e6d752-0df5-4c3d-bc47-301b23cf21fe}",
+      "in_id": "{31f250ad-0a2d-4ecb-8889-fec7d0968af5}",
+      "in_index": 0,
+      "out_id": "{00ce906b-cf4b-4a17-84c2-dcf84b3b1ab9}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{71f319d1-1186-49f0-ba1e-ebe1f2877560}",
+      "in_id": "{ed78feae-d8af-4a2b-94f8-f6b171715c06}",
+      "in_index": 0,
+      "out_id": "{2ea6891c-bd81-4365-9825-d20a518f0371}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{72651937-fb8f-4eb2-be90-f58473b13601}",
+      "in_id": "{a2cbb71a-50a5-402a-a408-7f3411182695}",
+      "in_index": 0,
+      "out_id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{72a570c6-9840-4bc4-a181-5df6d44cd0c9}",
+      "in_id": "{187ce736-a2ab-48dd-b025-a8bb76036166}",
+      "in_index": 0,
+      "out_id": "{c19dd7c1-f212-4ba3-bd13-d0ae8d0266a6}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{735508a9-0116-4527-8192-9de8d14a75b4}",
+      "in_id": "{2cbb1186-8b46-4513-abbf-59351a9d99e9}",
+      "in_index": 0,
+      "out_id": "{86c0d086-16e9-4111-bb98-8ffec4306ef1}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{75811278-e562-4732-80b4-b34af9114df1}",
+      "in_id": "{191cc91f-891a-4685-90cb-39c4bebdff3b}",
+      "in_index": 0,
+      "out_id": "{254b3560-e2a0-40f0-8be1-83bc8f3d8cf8}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{789fc240-52c3-4d72-ac42-c91a2c1a782b}",
+      "in_id": "{958bcd26-bad3-486c-8fea-3372a96366b2}",
+      "in_index": 0,
+      "out_id": "{3a359eb8-d38c-449a-9a73-3bdb5e965c4e}",
+      "out_index": 2,
+      "port_category": "data"
+    },
+    {
+      "id": "{7a45bf86-f306-4917-868a-91ad91674960}",
+      "in_id": "{ac94c796-a597-4624-aaba-8261ded5f0a8}",
+      "in_index": 0,
+      "out_id": "{1927e2e2-22cc-470c-ae9c-a028d0debe88}",
+      "out_index": 1,
+      "port_category": "data"
+    },
+    {
+      "id": "{7e408e3a-9e40-4a48-9e16-62fb7916f2e1}",
+      "in_id": "{74e14f97-bc56-4c81-b857-3852b0a09cc5}",
+      "in_index": 0,
+      "out_id": "{d9b369c0-3116-4a36-8238-0f962e0eedf0}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{81a75a91-02e1-4d22-a5d8-ef0374b9bfb6}",
+      "in_id": "{42607953-f805-4a17-9f0f-0b0e437c122d}",
+      "in_index": 0,
+      "out_id": "{9c7a1a43-25a2-4e66-a31e-bbbafa81b18a}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{84395532-9e5f-44d9-8e69-9ec04a40beb4}",
+      "in_id": "{def86004-91cc-4247-924c-75eef4a0a35a}",
+      "in_index": 0,
+      "out_id": "{d366d2bd-cef2-4d2b-95e3-1c439378f82f}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{84649101-5ad9-4734-97bf-986a338d6c21}",
+      "in_id": "{2ff7bc6a-3e21-4f8f-be0b-684ac54b110e}",
+      "in_index": 0,
+      "out_id": "{c33e4eb3-69d9-4efe-84c6-2e907c34ab84}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{849f044a-dae0-43dd-ace8-b1643554ccfe}",
+      "in_id": "{c8faf79f-9158-4a5e-94a5-4040e7ec0e7e}",
+      "in_index": 1,
+      "out_id": "{25a6ff9f-21d0-450e-bbff-c93330b2951d}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{88f8b485-5532-4134-8485-9ec730b55377}",
+      "in_id": "{1a0e4126-a86a-46bc-bfab-6c1bb43049ae}",
+      "in_index": 0,
+      "out_id": "{74e14f97-bc56-4c81-b857-3852b0a09cc5}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{8904f419-4d88-4466-88dd-43c7bad5d369}",
+      "in_id": "{25a6ff9f-21d0-450e-bbff-c93330b2951d}",
+      "in_index": 0,
+      "out_id": "{e7814e72-fb4e-40de-b843-9bd3eb69e91b}",
+      "out_index": 1,
+      "port_category": "data"
+    },
+    {
+      "id": "{8bc9abf6-bd7b-44e1-91e8-4920086847a9}",
+      "in_id": "{7e040b69-5553-4638-a969-cfb6b6a8bd5b}",
+      "in_index": 0,
+      "out_id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "out_index": 2,
+      "port_category": "data"
+    },
+    {
+      "id": "{8de71afc-3536-4ce2-b605-b3d7f5d5d875}",
+      "in_id": "{2ff41ce2-e769-40b2-9c79-babd733285a0}",
+      "in_index": 0,
+      "out_id": "{1a4f01ce-fdd7-4cc8-bfe1-7c22118d5878}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{9233e18e-fc1f-4e44-8d2c-473fa5ed0f9e}",
+      "in_id": "{7ed0ff49-790c-412a-8097-23f65c329277}",
+      "in_index": 0,
+      "out_id": "{540279ec-eca8-4db7-bff6-6d2766db3a03}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{92676d41-4b9a-4c8b-8639-986d0a85fcfd}",
+      "in_id": "{1927e2e2-22cc-470c-ae9c-a028d0debe88}",
+      "in_index": 0,
+      "out_id": "{375b8b7f-57fd-4ed2-b991-ed478f8b4a88}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{92d9ade6-09df-4591-840d-ff4642567ba3}",
+      "in_id": "{0b3a9621-5c6c-4cf4-9619-1feb27a6189d}",
+      "in_index": 0,
+      "out_id": "{4d15dc5e-a01c-4856-8f10-38bf8744d03d}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{933c3cd0-02a2-4d6c-bc6b-ef6c17a568ce}",
+      "in_id": "{e1c1e6d0-4244-4e81-8db7-6b3c065c2c54}",
+      "in_index": 0,
+      "out_id": "{c8a54ae6-feb9-4af4-902b-ba8f1fa59f15}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{94d4fda6-cdff-4c50-8255-050f6508f421}",
+      "in_id": "{466d13e7-fe44-4164-8cf1-1af506f478d6}",
+      "in_index": 0,
+      "out_id": "{ed78feae-d8af-4a2b-94f8-f6b171715c06}",
+      "out_index": 3,
+      "port_category": "logic"
+    },
+    {
+      "id": "{94ecb41d-5616-4b16-ba8f-12f186b5a34f}",
+      "in_id": "{6d05270c-bd13-475e-9c40-f71a26a9e1cf}",
+      "in_index": 1,
+      "out_id": "{466d13e7-fe44-4164-8cf1-1af506f478d6}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{95d0dbd8-82bd-4a63-8192-31f067555372}",
+      "in_id": "{5304d3c2-163f-478e-93eb-b30ee49d5b85}",
+      "in_index": 1,
+      "out_id": "{1a0e4126-a86a-46bc-bfab-6c1bb43049ae}",
+      "out_index": 1,
+      "port_category": "data"
+    },
+    {
+      "id": "{9645af68-be29-49c3-90fe-76cce6701c59}",
+      "in_id": "{ac94c796-a597-4624-aaba-8261ded5f0a8}",
+      "in_index": 0,
+      "out_id": "{affe0a07-4d52-4007-a3a0-3834cdbd0f87}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{98224664-e208-46c0-aa61-c47e49fc23c7}",
+      "in_id": "{375b8b7f-57fd-4ed2-b991-ed478f8b4a88}",
+      "in_index": 0,
+      "out_id": "{55fe49ff-1825-408e-b80f-053bd2f9bb60}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{9a320af2-beff-4c52-bb4e-2b05f18b81ce}",
+      "in_id": "{540279ec-eca8-4db7-bff6-6d2766db3a03}",
+      "in_index": 0,
+      "out_id": "{072cc2f8-113f-4d62-a402-d644e3391d90}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{9c9b2ae4-387a-4084-bd80-f54c0160a2ad}",
+      "in_id": "{964879fe-8d2a-414a-9448-15820bcc6f79}",
+      "in_index": 0,
+      "out_id": "{5304d3c2-163f-478e-93eb-b30ee49d5b85}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{9dd012ac-0a6a-48ab-92b9-b0683f0f75ba}",
+      "in_id": "{e74d7c14-1cf2-4753-b29b-afaacf9e9793}",
+      "in_index": 0,
+      "out_id": "{86e2de1e-9f32-4458-9be9-17d326051f48}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{9de4328f-2260-4b2a-a158-452d847a115e}",
+      "in_id": "{00ce906b-cf4b-4a17-84c2-dcf84b3b1ab9}",
+      "in_index": 0,
+      "out_id": "{1927e2e2-22cc-470c-ae9c-a028d0debe88}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{9df8feae-23e5-4d2e-9573-6dfd0bdd4596}",
+      "in_id": "{6bcf2599-b589-4573-bcee-3454f291fca9}",
+      "in_index": 0,
+      "out_id": "{c46ea6d0-e83e-4ace-80a2-e0cad658ea64}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{a15489af-d8c4-4c3f-996d-ebc2cb0a5824}",
+      "in_id": "{ac94c796-a597-4624-aaba-8261ded5f0a8}",
+      "in_index": 3,
+      "out_id": "{1ae45fb3-d03b-4910-b4d0-0b90fa1ca68e}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{a1a45f55-e15b-47c8-82d6-5ff9cec7db9d}",
+      "in_id": "{e30fe685-0af1-47e6-8f7b-45dbb7ed5ab5}",
+      "in_index": 1,
+      "out_id": "{466d13e7-fe44-4164-8cf1-1af506f478d6}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{a1dd9b6c-97cb-49da-b9a4-7269a3adfd15}",
+      "in_id": "{1a0e4126-a86a-46bc-bfab-6c1bb43049ae}",
+      "in_index": 0,
+      "out_id": "{958bcd26-bad3-486c-8fea-3372a96366b2}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{a237d31c-d5ac-45fc-81a5-26bb5b9c144f}",
+      "in_id": "{5304d3c2-163f-478e-93eb-b30ee49d5b85}",
+      "in_index": 0,
+      "out_id": "{2f42e71d-eaf3-43f8-be59-3830d6a8e522}",
+      "out_index": 5,
+      "port_category": "data"
+    },
+    {
+      "id": "{a32f191d-5336-4aac-9d17-95c657d9c191}",
+      "in_id": "{1a4f01ce-fdd7-4cc8-bfe1-7c22118d5878}",
+      "in_index": 0,
+      "out_id": "{bda11f01-8f45-40cc-bf26-3f0f900ad998}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{a349ea74-3cd5-47e2-87d1-7b37c29daefa}",
+      "in_id": "{470ad5de-9b10-43e3-a0ba-97d11d849871}",
+      "in_index": 0,
+      "out_id": "{7ed0ff49-790c-412a-8097-23f65c329277}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{a3d0d21c-c23c-4302-bda7-c122bdc91bd6}",
+      "in_id": "{d6044e09-9a86-4ec7-95d6-12cc4cd6ebaf}",
+      "in_index": 0,
+      "out_id": "{e1c1e6d0-4244-4e81-8db7-6b3c065c2c54}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{a7b21cfb-2c56-4ab5-bffc-ce5256fbd98d}",
+      "in_id": "{61a1ddad-80fd-41ae-87b2-d4d740378f8f}",
+      "in_index": 0,
+      "out_id": "{5ede6f88-0186-4aac-a5af-f56968597dac}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{a7d93fb0-cc3e-495a-8ebe-e877f9a7920a}",
+      "in_id": "{c8faf79f-9158-4a5e-94a5-4040e7ec0e7e}",
+      "in_index": 0,
+      "out_id": "{25a6ff9f-21d0-450e-bbff-c93330b2951d}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{a9725e63-9356-442a-b0e9-ebe93788a152}",
+      "in_id": "{00ad4239-0746-4fab-9778-bf50f387dbad}",
+      "in_index": 0,
+      "out_id": "{7d5e53d7-52e4-4fe9-aab3-3800f5867d73}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{a987e6bb-4c53-46c5-8260-01a58f5a9721}",
+      "in_id": "{6f6a2fb0-27bb-4dc6-b7c8-2651530a288f}",
+      "in_index": 0,
+      "out_id": "{7ed0ff49-790c-412a-8097-23f65c329277}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{ab3040d7-5576-4b61-9fc6-81aefd4c1868}",
+      "in_id": "{1927e2e2-22cc-470c-ae9c-a028d0debe88}",
+      "in_index": 0,
+      "out_id": "{c8faf79f-9158-4a5e-94a5-4040e7ec0e7e}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{ab95c2a6-9213-4e12-8fea-ab15ad1a4d02}",
+      "in_id": "{c8babde9-451b-44ce-aad5-7a9d9afe99e9}",
+      "in_index": 0,
+      "out_id": "{e74d7c14-1cf2-4753-b29b-afaacf9e9793}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{ac0f9f57-da1c-4618-87e3-af04982e4890}",
+      "in_id": "{c46ea6d0-e83e-4ace-80a2-e0cad658ea64}",
+      "in_index": 2,
+      "out_id": "{31981a55-3a4f-4568-8701-a8e4e198ee2a}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{aea58de8-01a4-449c-895c-76bbd814bffe}",
+      "in_id": "{9c7a1a43-25a2-4e66-a31e-bbbafa81b18a}",
+      "in_index": 0,
+      "out_id": "{9c936491-fbdb-439b-b4b5-3d609e0ed95f}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{aef775a4-0b15-400e-8d92-bb88b941b6f5}",
+      "in_id": "{8e87ccfc-3be4-4626-bed6-90b9666c70fa}",
+      "in_index": 1,
+      "out_id": "{c46ea6d0-e83e-4ace-80a2-e0cad658ea64}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{af606149-cbd8-48fc-9c68-38173448d941}",
+      "in_id": "{ac94c796-a597-4624-aaba-8261ded5f0a8}",
+      "in_index": 3,
+      "out_id": "{1927e2e2-22cc-470c-ae9c-a028d0debe88}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{b05d382f-09b9-4e88-b0b0-e46c98831c39}",
+      "in_id": "{3bb758a9-a093-497a-973b-bb9067c2857d}",
+      "in_index": 0,
+      "out_id": "{da55c704-e01d-4deb-863a-aa71f129f47a}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{b0b25fa1-eb60-4992-b3ab-9815a5f922d4}",
+      "in_id": "{7e040b69-5553-4638-a969-cfb6b6a8bd5b}",
+      "in_index": 0,
+      "out_id": "{35e74e48-009e-4e58-93a2-8a163f40c903}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{b2b28c29-9734-4bdf-a879-15c303ac61a2}",
+      "in_id": "{31f250ad-0a2d-4ecb-8889-fec7d0968af5}",
+      "in_index": 0,
+      "out_id": "{a2cbb71a-50a5-402a-a408-7f3411182695}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{b3e3d217-31d3-47f5-95cf-bba240a926e8}",
+      "in_id": "{2ea6891c-bd81-4365-9825-d20a518f0371}",
+      "in_index": 0,
+      "out_id": "{6f6a2fb0-27bb-4dc6-b7c8-2651530a288f}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{b4036a31-ee31-44fc-bb34-a8b2642ae29b}",
+      "in_id": "{83b2dc04-d9c4-4900-83e8-4122bdbedb16}",
+      "in_index": 0,
+      "out_id": "{e426fca5-1c5d-4281-bb98-e8f280245e71}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{b624974d-7b12-4a3e-a1b2-8f55a880a896}",
+      "in_id": "{96f1e756-044b-4a03-bf4e-4818dab7284d}",
+      "in_index": 1,
+      "out_id": "{c1b47834-7688-4b5a-9b60-a787ad8d741e}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{b68fe949-e0aa-4dc6-8b4f-f30f3b646c83}",
+      "in_id": "{25a6ff9f-21d0-450e-bbff-c93330b2951d}",
+      "in_index": 1,
+      "out_id": "{e7814e72-fb4e-40de-b843-9bd3eb69e91b}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{b6cfa326-dd27-4589-9417-064d315d0a7c}",
+      "in_id": "{bda11f01-8f45-40cc-bf26-3f0f900ad998}",
+      "in_index": 0,
+      "out_id": "{964879fe-8d2a-414a-9448-15820bcc6f79}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{b6cfa3c3-c97a-4d45-be30-312e397a3c63}",
+      "in_id": "{3a359eb8-d38c-449a-9a73-3bdb5e965c4e}",
+      "in_index": 0,
+      "out_id": "{a2a09d26-c89d-4adf-b2fd-ec5c51f05d1c}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{b83a4dd4-6cdb-4929-8bd7-2ff06c560e85}",
+      "in_id": "{e8d8ee0a-b8cc-4f1c-a404-dea01ad638ea}",
+      "in_index": 0,
+      "out_id": "{42607953-f805-4a17-9f0f-0b0e437c122d}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{bed6b457-4cb4-472e-a7aa-42c8aef397ef}",
+      "in_id": "{3d110655-b7fe-4783-8749-7360ee98eef4}",
+      "in_index": 0,
+      "out_id": "{c92117ba-8d64-417e-a384-16922540c811}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{bed74dcb-cd8f-45e8-a065-af67af45414f}",
+      "in_id": "{2f42e71d-eaf3-43f8-be59-3830d6a8e522}",
+      "in_index": 0,
+      "out_id": "{1a0e4126-a86a-46bc-bfab-6c1bb43049ae}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{bfb1b971-659f-4b16-ac09-a829c76031b3}",
+      "in_id": "{7d5e53d7-52e4-4fe9-aab3-3800f5867d73}",
+      "in_index": 0,
+      "out_id": "{9d2cfb4b-ce92-4511-9f66-4b6fee9870c2}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{bfeecbfe-3007-43b4-a76d-5ad11e700bfa}",
+      "in_id": "{3b07c973-5dcd-42fb-8c1f-5610fc3919a6}",
+      "in_index": 0,
+      "out_id": "{6ec4ed5f-39fa-4dda-a2de-9143bdad5403}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{c00d95c4-2db5-4d76-af00-f1beb417e129}",
+      "in_id": "{1f712483-90d8-4af4-b8fa-69e1ed923177}",
+      "in_index": 0,
+      "out_id": "{640285f7-951e-4b33-8f9f-8ee203a792f3}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{c473126d-d095-44aa-8bae-7fa37e4268f5}",
+      "in_id": "{7c52d2e7-7d9e-431e-80a1-4d7cb19a6a65}",
+      "in_index": 0,
+      "out_id": "{31f250ad-0a2d-4ecb-8889-fec7d0968af5}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{ca4abca4-3330-4de4-ae44-d4686dc08ead}",
+      "in_id": "{0a2c0526-4e77-40c9-899d-0324f96243bd}",
+      "in_index": 1,
+      "out_id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "out_index": 2,
+      "port_category": "data"
+    },
+    {
+      "id": "{cb9a86ab-3704-416d-9f93-383fef937943}",
+      "in_id": "{2d86fdef-695b-4efa-962e-e43479381f2c}",
+      "in_index": 0,
+      "out_id": "{c19dd7c1-f212-4ba3-bd13-d0ae8d0266a6}",
+      "out_index": 2,
+      "port_category": "logic"
+    },
+    {
+      "id": "{cc3dd5cd-ee94-42cc-ae95-1cc4b9546d77}",
+      "in_id": "{6ec4ed5f-39fa-4dda-a2de-9143bdad5403}",
+      "in_index": 0,
+      "out_id": "{e8d8ee0a-b8cc-4f1c-a404-dea01ad638ea}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{cde9bd0b-49aa-4df1-b798-3039f27d70d7}",
+      "in_id": "{1a0e4126-a86a-46bc-bfab-6c1bb43049ae}",
+      "in_index": 0,
+      "out_id": "{2ff41ce2-e769-40b2-9c79-babd733285a0}",
+      "out_index": 2,
+      "port_category": "logic"
+    },
+    {
+      "id": "{d079985b-d27d-4f79-a84d-e1febd2105b2}",
+      "in_id": "{e7814e72-fb4e-40de-b843-9bd3eb69e91b}",
+      "in_index": 0,
+      "out_id": "{e7b6e3ea-f769-4e49-a376-a82efd5a5935}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{d2c332c1-918d-4567-9bbe-16a8a049de75}",
+      "in_id": "{7ed0ff49-790c-412a-8097-23f65c329277}",
+      "in_index": 0,
+      "out_id": "{540279ec-eca8-4db7-bff6-6d2766db3a03}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{d2e4e2ee-6382-4e35-8b8e-e6dc17072bc9}",
+      "in_id": "{5ede6f88-0186-4aac-a5af-f56968597dac}",
+      "in_index": 0,
+      "out_id": "{526d4bd5-fe22-49f6-999b-334e4af80d76}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{d3d93ddf-c76f-48a1-8837-2cb1d4482338}",
+      "in_id": "{466d13e7-fe44-4164-8cf1-1af506f478d6}",
+      "in_index": 0,
+      "out_id": "{ed78feae-d8af-4a2b-94f8-f6b171715c06}",
+      "out_index": 2,
+      "port_category": "logic"
+    },
+    {
+      "id": "{d3eb578b-300d-44a9-9a1a-0c0e8c2c6de7}",
+      "in_id": "{9583ee80-5a5b-45f6-bf92-070348be6b32}",
+      "in_index": 0,
+      "out_id": "{1f712483-90d8-4af4-b8fa-69e1ed923177}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{d7711de9-fb6e-4f85-b8f6-fa5d040fa2f3}",
+      "in_id": "{4cd92365-fd76-4674-b16a-a79c51c21c1f}",
+      "in_index": 0,
+      "out_id": "{5ede6f88-0186-4aac-a5af-f56968597dac}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{d7ba6f65-5a5a-46d9-85fc-a4c3f2356b80}",
+      "in_id": "{640285f7-951e-4b33-8f9f-8ee203a792f3}",
+      "in_index": 0,
+      "out_id": "{96f1e756-044b-4a03-bf4e-4818dab7284d}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{d8db9fa4-080f-413f-b8eb-aacdeb1298eb}",
+      "in_id": "{96f1e756-044b-4a03-bf4e-4818dab7284d}",
+      "in_index": 0,
+      "out_id": "{e7814e72-fb4e-40de-b843-9bd3eb69e91b}",
+      "out_index": 1,
+      "port_category": "data"
+    },
+    {
+      "id": "{d96343ea-8dc6-43e3-a5da-b9b6330ad8fe}",
+      "in_id": "{31f250ad-0a2d-4ecb-8889-fec7d0968af5}",
+      "in_index": 0,
+      "out_id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{daa7997d-cec5-4b48-b8c3-f417b69b4cc8}",
+      "in_id": "{2ff41ce2-e769-40b2-9c79-babd733285a0}",
+      "in_index": 1,
+      "out_id": "{2f42e71d-eaf3-43f8-be59-3830d6a8e522}",
+      "out_index": 4,
+      "port_category": "data"
+    },
+    {
+      "id": "{db5988ad-1f1e-49f1-9549-15cf28be31d2}",
+      "in_id": "{55fe49ff-1825-408e-b80f-053bd2f9bb60}",
+      "in_index": 0,
+      "out_id": "{e7814e72-fb4e-40de-b843-9bd3eb69e91b}",
+      "out_index": 2,
+      "port_category": "data"
+    },
+    {
+      "id": "{ddb2e8d3-2f90-4649-8a19-5b2fbe6104c8}",
+      "in_id": "{e7b6e3ea-f769-4e49-a376-a82efd5a5935}",
+      "in_index": 0,
+      "out_id": "{7c52d2e7-7d9e-431e-80a1-4d7cb19a6a65}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{de71d08f-e9f7-423a-bdf7-6e8478c331c2}",
+      "in_id": "{e7814e72-fb4e-40de-b843-9bd3eb69e91b}",
+      "in_index": 2,
+      "out_id": "{31f250ad-0a2d-4ecb-8889-fec7d0968af5}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{ded371df-18e7-4095-b63f-4f6f1a929c18}",
+      "in_id": "{964879fe-8d2a-414a-9448-15820bcc6f79}",
+      "in_index": 0,
+      "out_id": "{3a359eb8-d38c-449a-9a73-3bdb5e965c4e}",
+      "out_index": 2,
+      "port_category": "data"
+    },
+    {
+      "id": "{df6e84ec-b122-4844-add8-ca0351d75a4a}",
+      "in_id": "{0b3a9621-5c6c-4cf4-9619-1feb27a6189d}",
+      "in_index": 0,
+      "out_id": "{53748680-93d5-4f15-93da-27564b03826e}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{dff3d2d0-1aa4-4009-aa57-a70439ea5478}",
+      "in_id": "{3a359eb8-d38c-449a-9a73-3bdb5e965c4e}",
+      "in_index": 0,
+      "out_id": "{2ff41ce2-e769-40b2-9c79-babd733285a0}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{e0713d16-a639-4c44-81b1-f7a57aaafb57}",
+      "in_id": "{c46ea6d0-e83e-4ace-80a2-e0cad658ea64}",
+      "in_index": 3,
+      "out_id": "{526d4bd5-fe22-49f6-999b-334e4af80d76}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{e1167cf6-11fe-4fcc-a99b-abd9e8c0c9ba}",
+      "in_id": "{2ff41ce2-e769-40b2-9c79-babd733285a0}",
+      "in_index": 0,
+      "out_id": "{3a359eb8-d38c-449a-9a73-3bdb5e965c4e}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{e15e9b0c-c67a-4262-9014-fe96058e016d}",
+      "in_id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "in_index": 0,
+      "out_id": "{e426fca5-1c5d-4281-bb98-e8f280245e71}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{e1aaa985-ef0d-44c4-8004-ad82b6839c02}",
+      "in_id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "in_index": 0,
+      "out_id": "{0a2c0526-4e77-40c9-899d-0324f96243bd}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{e2d8337c-e8a0-4d6d-af3e-32d0765aab0f}",
+      "in_id": "{d32ffdb7-0287-4230-b090-d5117b2b930e}",
+      "in_index": 0,
+      "out_id": "{2f42e71d-eaf3-43f8-be59-3830d6a8e522}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{e43c1357-9044-481f-adfa-43f7adf8e102}",
+      "in_id": "{958bcd26-bad3-486c-8fea-3372a96366b2}",
+      "in_index": 1,
+      "out_id": "{d366d2bd-cef2-4d2b-95e3-1c439378f82f}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{e4ea169b-c55b-4d24-ac26-3e422ff5cfd3}",
+      "in_id": "{1abd19eb-6b76-4db0-a452-a5772514cc09}",
+      "in_index": 0,
+      "out_id": "{470ad5de-9b10-43e3-a0ba-97d11d849871}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{e75611f5-4008-4c4e-9cab-6b791c575393}",
+      "in_id": "{c1b47834-7688-4b5a-9b60-a787ad8d741e}",
+      "in_index": 0,
+      "out_id": "{e7814e72-fb4e-40de-b843-9bd3eb69e91b}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{e8b78f6f-8050-47c5-91f5-5c52f0b4297c}",
+      "in_id": "{a2a09d26-c89d-4adf-b2fd-ec5c51f05d1c}",
+      "in_index": 0,
+      "out_id": "{1a4f01ce-fdd7-4cc8-bfe1-7c22118d5878}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{e8c2c457-b8a5-4309-a6ed-c96c71f2e477}",
+      "in_id": "{6d05270c-bd13-475e-9c40-f71a26a9e1cf}",
+      "in_index": 0,
+      "out_id": "{e30fe685-0af1-47e6-8f7b-45dbb7ed5ab5}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{e9fe2ec1-9b03-452c-ae69-fbbad6d70618}",
+      "in_id": "{d32ffdb7-0287-4230-b090-d5117b2b930e}",
+      "in_index": 0,
+      "out_id": "{2f42e71d-eaf3-43f8-be59-3830d6a8e522}",
+      "out_index": 2,
+      "port_category": "logic"
+    },
+    {
+      "id": "{ec3fd044-4f2e-41ff-982c-34c3ff3598c8}",
+      "in_id": "{7c52d2e7-7d9e-431e-80a1-4d7cb19a6a65}",
+      "in_index": 1,
+      "out_id": "{1927e2e2-22cc-470c-ae9c-a028d0debe88}",
+      "out_index": 2,
+      "port_category": "data"
+    },
+    {
+      "id": "{eca4ad61-889a-43f0-ad4e-dd287a5e1f4b}",
+      "in_id": "{958bcd26-bad3-486c-8fea-3372a96366b2}",
+      "in_index": 0,
+      "out_id": "{d366d2bd-cef2-4d2b-95e3-1c439378f82f}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{ed6e8104-4f1a-4de1-9098-9101978ad3bf}",
+      "in_id": "{ac94c796-a597-4624-aaba-8261ded5f0a8}",
+      "in_index": 2,
+      "out_id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "out_index": 3,
+      "port_category": "logic"
+    },
+    {
+      "id": "{edb41bf7-1045-485a-93a9-e96f3f4bfb0a}",
+      "in_id": "{941addbe-75e2-43dc-af2c-89809b319657}",
+      "in_index": 0,
+      "out_id": "{2ff41ce2-e769-40b2-9c79-babd733285a0}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{edd19b17-1a31-4b0b-99b9-1f6793d9e1ab}",
+      "in_id": "{35e74e48-009e-4e58-93a2-8a163f40c903}",
+      "in_index": 0,
+      "out_id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{efb6c698-4945-413c-a3fa-c1a0cc3e759f}",
+      "in_id": "{ed78feae-d8af-4a2b-94f8-f6b171715c06}",
+      "in_index": 1,
+      "out_id": "{1afe3669-e21b-4f1f-b72f-435539e73f9d}",
+      "out_index": 1,
+      "port_category": "data"
+    },
+    {
+      "id": "{efe8b55d-e168-4bfe-989c-6a88b869d5ae}",
+      "in_id": "{3bb758a9-a093-497a-973b-bb9067c2857d}",
+      "in_index": 0,
+      "out_id": "{526d4bd5-fe22-49f6-999b-334e4af80d76}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{f2447535-3624-4ff6-b18c-61dbe77d5c72}",
+      "in_id": "{072cc2f8-113f-4d62-a402-d644e3391d90}",
+      "in_index": 0,
+      "out_id": "{46988da8-4edd-4d23-ad6d-6b6965cc9185}",
+      "out_index": 0,
+      "port_category": "logic"
+    },
+    {
+      "id": "{f57d54d6-4e54-4919-94fe-9b6cc2e7c2d1}",
+      "in_id": "{e7814e72-fb4e-40de-b843-9bd3eb69e91b}",
+      "in_index": 0,
+      "out_id": "{7c52d2e7-7d9e-431e-80a1-4d7cb19a6a65}",
+      "out_index": 1,
+      "port_category": "data"
+    },
+    {
+      "id": "{f650b0c8-8a5b-4b20-90a8-599c5d9efbf7}",
+      "in_id": "{540279ec-eca8-4db7-bff6-6d2766db3a03}",
+      "in_index": 0,
+      "out_id": "{31526e85-4713-4b68-8b51-82c63f56bee2}",
+      "out_index": 0,
+      "port_category": "data"
+    },
+    {
+      "id": "{f659c598-1d5e-4072-95ff-7e09727b4e62}",
+      "in_id": "{08dc1a37-4c38-4747-a2d7-b327dd6229c9}",
+      "in_index": 0,
+      "out_id": "{254b3560-e2a0-40f0-8be1-83bc8f3d8cf8}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{f77d3e4a-2374-4db1-b592-7f9ab340c8c4}",
+      "in_id": "{7c52d2e7-7d9e-431e-80a1-4d7cb19a6a65}",
+      "in_index": 1,
+      "out_id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "out_index": 2,
+      "port_category": "data"
+    },
+    {
+      "id": "{f8076de4-600d-4315-bc62-6559444d8f48}",
+      "in_id": "{8cfdd7ff-be31-4f0c-8a1b-d432a39febea}",
+      "in_index": 0,
+      "out_id": "{5bc25fd3-2198-4077-b358-e236c156f4f9}",
+      "out_index": 1,
+      "port_category": "logic"
+    },
+    {
+      "id": "{fe5a392e-da73-4160-b5f1-7607f2295211}",
+      "in_id": "{31526e85-4713-4b68-8b51-82c63f56bee2}",
+      "in_index": 0,
+      "out_id": "{28997384-f1bf-4e77-bc70-b13e6ce86e2a}",
+      "out_index": 0,
+      "port_category": "data"
+    }
+  ],
+  "milestoneNodes": null,
+  "nodes": [
+    {
+      "id": "{00ad4239-0746-4fab-9778-bf50f387dbad}",
+      "model": {
+        "_CLASS_": "FunctionCallNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "机械臂已进入抓取工作空间"
+      },
+      "position": {
+        "x": 1120,
+        "y": -800
+      }
+    },
+    {
+      "id": "{00ce906b-cf4b-4a17-84c2-dcf84b3b1ab9}",
+      "model": {
+        "_CLASS_": "CycleCountNodeModel",
+        "catch_error": false,
+        "cycle_config": {
+          "average_flag": true,
+          "cnt_flag": true,
+          "last_flag": false,
+          "max_flag": true,
+          "min_flag": true,
+          "result_flag": false,
+          "stderr_flag": false
+        },
+        "cycle_flag": "CycleEnd",
+        "cycle_name": "单次求解需要的时间",
+        "cycle_result": "成功",
+        "dev_comment": ""
+      },
+      "position": {
+        "x": 4510,
+        "y": 2146
+      }
+    },
+    {
+      "id": "{0535e7d1-5675-42d0-988f-049aad497fe3}",
+      "model": {
+        "_CLASS_": "SleepNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "sleep_sec": 0.5
+      },
+      "position": {
+        "x": 8270,
+        "y": -525
+      }
+    },
+    {
+      "id": "{072cc2f8-113f-4d62-a402-d644e3391d90}",
+      "model": {
+        "_CLASS_": "FunctionCallNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "机械臂已进入抓取工作空间"
+      },
+      "position": {
+        "x": 1767,
+        "y": 4590
+      }
+    },
+    {
+      "id": "{08dc1a37-4c38-4747-a2d7-b327dd6229c9}",
+      "model": {
+        "_CLASS_": "NotifyHMINodeModel",
+        "catch_error": false,
+        "dev_comment": "机器人回Home点失败",
+        "enable_trilight": true,
+        "error_code": 50006,
+        "error_msg": "机器人回Home点失败,需要手摇机器人在Home点附近。",
+        "error_tip": "1）机器人切手动，将机器人移动到初始点附近，然后再切回自动；2）重启机器人节点，再次连接；3）请参考HMI用户手册，根据现场实际情况，继续当前任务",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "status": "ERR",
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": -158,
+        "y": 182
+      }
+    },
+    {
+      "id": "{0a2c0526-4e77-40c9-899d-0324f96243bd}",
+      "model": {
+        "_CLASS_": "HomoPalletizePlanningNode",
+        "box_id": "",
+        "catch_error": false,
+        "dev_comment": "[需修改参数]",
+        "dim_vec": {
+          "x": 0.3,
+          "y": 0.2,
+          "z": 0.1
+        },
+        "input_ws_manually": false,
+        "manual_palletize_mode": "kSearchBoxId",
+        "palletize_file_path": "resources/grasps_places/place_method/单码垛型规则_pal",
+        "planningtype": "kHomoPalletizePlanning",
+        "slot_color": {
+          "a": 0.2,
+          "b": 1.0,
+          "g": 0.8784313725490196,
+          "r": 0.5411764705882353
+        },
+        "target_workspace_id": 2
+      },
+      "position": {
+        "x": 770,
+        "y": 1367
+      }
+    },
+    {
+      "id": "{0b3a9621-5c6c-4cf4-9619-1feb27a6189d}",
+      "model": {
+        "_CLASS_": "GetTaskInfoNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "enable_trilight": true,
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "is_timeout_mode": true,
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "setting_timeout_mode": {
+          "sleep_interval": 1.0,
+          "timeout": 600.0
+        },
+        "setup_workspace_map": true,
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        },
+        "useboxitemlimits": true,
+        "usestrictlylimit": false
+      },
+      "position": {
+        "x": 526,
+        "y": -76
+      }
+    },
+    {
+      "id": "{0c8ab761-ecc1-4fe5-b214-d84c26cb660f}",
+      "model": {
+        "_CLASS_": "FunctionReturnNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "运动执行"
+      },
+      "position": {
+        "x": 6585,
+        "y": 4552
+      }
+    },
+    {
+      "id": "{187ce736-a2ab-48dd-b025-a8bb76036166}",
+      "model": {
+        "_CLASS_": "VarWriteNodeModel",
+        "catch_error": false,
+        "clear_variable": false,
+        "default_value": "0",
+        "dev_comment": "",
+        "var_name": "lock",
+        "var_scope": "SCENE",
+        "var_type": "INT"
+      },
+      "position": {
+        "x": 7550,
+        "y": -1791
+      }
+    },
+    {
+      "id": "{191cc91f-891a-4685-90cb-39c4bebdff3b}",
+      "model": {
+        "_CLASS_": "InitSceneNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "init_node_datas": true,
+        "init_node_members": false,
+        "init_variables": false
+      },
+      "position": {
+        "x": -141,
+        "y": -46
+      }
+    },
+    {
+      "id": "{1927e2e2-22cc-470c-ae9c-a028d0debe88}",
+      "model": {
+        "_CLASS_": "SolveMovementFlowNode",
+        "catch_error": false,
+        "dev_comment": "",
+        "endjoint_sort": true
+      },
+      "position": {
+        "x": 4010,
+        "y": 2172
+      }
+    },
+    {
+      "id": "{1a0e4126-a86a-46bc-bfab-6c1bb43049ae}",
+      "model": {
+        "_CLASS_": "FunctionCallNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "任务初始化"
+      },
+      "position": {
+        "x": -300,
+        "y": -2000
+      }
+    },
+    {
+      "id": "{1a4f01ce-fdd7-4cc8-bfe1-7c22118d5878}",
+      "model": {
+        "_CLASS_": "SwitchCaseNodeModel",
+        "catch_error": false,
+        "dev_comment": "1为“是”，0为“不是”",
+        "ports": [
+          0,
+          1
+        ]
+      },
+      "position": {
+        "x": 1640,
+        "y": -2000
+      }
+    },
+    {
+      "id": "{1abd19eb-6b76-4db0-a452-a5772514cc09}",
+      "model": {
+        "_CLASS_": "SetDigitalOutputNodeModel",
+        "catch_error": false,
+        "dev_comment": "输送线转动",
+        "device_type": "kOther",
+        "io_device_name": "0:PLC-qweqw",
+        "io_sequence": [
+          {
+            "port_id": 108,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 2
+          }
+        ],
+        "robot_path": {
+          "is_absolute": true,
+          "path": [
+            "root",
+            "WorldFrame",
+            "ABB-IRB-6700-155-2-85"
+          ]
+        },
+        "use_sequence_from_input": false
+      },
+      "position": {
+        "x": 3228,
+        "y": 4562
+      }
+    },
+    {
+      "id": "{1ae45fb3-d03b-4910-b4d0-0b90fa1ca68e}",
+      "model": {
+        "_CLASS_": "CycleCountNodeModel",
+        "catch_error": false,
+        "cycle_config": {
+          "average_flag": true,
+          "cnt_flag": true,
+          "last_flag": false,
+          "max_flag": true,
+          "min_flag": true,
+          "result_flag": false,
+          "stderr_flag": false
+        },
+        "cycle_flag": "CycleEnd",
+        "cycle_name": "运动规划总的时间",
+        "cycle_result": "成功",
+        "dev_comment": ""
+      },
+      "position": {
+        "x": 2259,
+        "y": 1867
+      }
+    },
+    {
+      "id": "{1afe3669-e21b-4f1f-b72f-435539e73f9d}",
+      "model": {
+        "_CLASS_": "FunctionEventNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_def": {
+          "in_args": [
+            {
+              "name": "执行负载",
+              "type": "EXECUTION_PAYLOAD"
+            },
+            {
+              "name": "任务编号",
+              "type": "STRING"
+            }
+          ],
+          "logic_out_ports": [
+            "成功",
+            "drop",
+            "任务完成"
+          ],
+          "out_args": [
+            {
+              "name": "qf",
+              "type": "VPJOINTDATA"
+            }
+          ]
+        },
+        "func_name": "运动执行"
+      },
+      "position": {
+        "x": -972,
+        "y": 4580
+      }
+    },
+    {
+      "id": "{1f712483-90d8-4af4-b8fa-69e1ed923177}",
+      "model": {
+        "_CLASS_": "AddRelativeNode",
+        "attached_obj_collision_operation": "None",
+        "base_frame": "ToWs",
+        "catch_error": false,
+        "change_robot_base_tf_at_planning": false,
+        "check_path_collision": false,
+        "check_point_collision": false,
+        "collision_check": "kTail",
+        "dev_comment": "",
+        "dsafe": {
+          "at_goal": 0.03,
+          "at_start": 0.03,
+          "midway": 0.05
+        },
+        "edit_interp_params": true,
+        "interp_config_params": {
+          "coarse_angle_rez": 0.2,
+          "coarse_distance_rez": 0.2,
+          "fine_angle_rez": 0.05,
+          "fine_distance_rez": 0.05
+        },
+        "move_type": "SmartPlanner",
+        "node_name": "slide_in",
+        "pick_place_flag": 0,
+        "relative_node_name": "near_place",
+        "relative_poses": [
+          {
+            "position": {
+              "x": 0.05,
+              "y": 0.05,
+              "z": 0.1
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          {
+            "position": {
+              "x": 0.05,
+              "y": -0.05,
+              "z": 0.1
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          {
+            "position": {
+              "x": -0.05,
+              "y": 0.05,
+              "z": 0.1
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          {
+            "position": {
+              "x": -0.05,
+              "y": -0.05,
+              "z": 0.1
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "smart_planner_option": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "astar_options": {
+            "_RESOURCE_": "xyz::motion_solver::AStarCartesianR3Planner::Options",
+            "goal_region_grids_range": 2,
+            "greedy_coeff": 2.0,
+            "grid_resolution": 0.1,
+            "grid_super_resolution": 0.1,
+            "max_number_of_iterations": 100000,
+            "move_type": "kMoveJ",
+            "number_of_rotation_interpolations": 5,
+            "post_collision_check": false,
+            "return_detailed_info": false,
+            "simplify_path_level": "kNo",
+            "singular_range": -1.0,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "start_and_goal_too_close_threshold": 1e-05,
+            "start_dist_increase_tolerance": 0.01,
+            "start_region_grids_range": 2,
+            "timeout": 3.0,
+            "use_theta_star": true,
+            "verbosity": "kSilent"
+          },
+          "astar_timeout": 0.7,
+          "early_exit": false,
+          "early_exit_simplify_level": "kNormal",
+          "first_wopt_timeout": 0.4,
+          "force_over_workspace": false,
+          "number_of_interpolations_when_initial_guess_is_straight_line": 3,
+          "number_of_reinterpolations_after_simplification": 5,
+          "over_workspace_timeout": 0.2,
+          "planning_method": "kSequential",
+          "post_distance_check": true,
+          "post_solve_simplification": true,
+          "prm_options": {
+            "_RESOURCE_": "xyz::motion_solver::PRMPlanner::Options",
+            "connect_planner": "kAStarPlanner",
+            "minimum_waypoint_num": 10,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "timeout": 2.0,
+            "verbosity": "kSilent"
+          },
+          "reinterpolate_after_simplification": true,
+          "return_detailed_info": false,
+          "safety_distance_check_margin": 0.025,
+          "simplify_initial_guess_from_planner": true,
+          "singular_range": 0.1,
+          "skip_options_sanity_check": false,
+          "skip_problem_sanity_check": false,
+          "smart_planner_move_type": "kMoveJ",
+          "timeout": 100.0,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          },
+          "verbosity": "kSilent",
+          "wopt_options": {
+            "_RESOURCE_": "xyz::motion_solver::WoptPlanner::Options",
+            "ctol": 0.005,
+            "dcheck": null,
+            "dsafe": null,
+            "improve_ratio_threshold": 0.2,
+            "limit_joint": false,
+            "max_convexify_iter": 40,
+            "max_merit_coeff_increase": 5,
+            "max_retries": 7,
+            "merit_coeff_increase_ratio": 10,
+            "merit_error_coeff": 1.0,
+            "min_approx_improve": 0.0001,
+            "min_approx_improve_frac": 0.001,
+            "min_trust_box_size": 0.0001,
+            "number_of_swept_interpolations": 4,
+            "number_of_waypoints": 8,
+            "post_solve_simplification": false,
+            "post_solve_verification": true,
+            "post_solve_verification_interpolation_resolution": 0.01,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "taud": 0.2,
+            "taui": 1.5,
+            "timeout": 100.0,
+            "trust_box_size": 0.5,
+            "verbosity": "kSilent"
+          }
+        },
+        "smart_planner_options_data": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "force_over_workspace": false,
+          "planner_timeout": 2.0,
+          "planning_method": "kSequential",
+          "post_solve_simplification": true,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          }
+        },
+        "target_frame_name": "ToWs",
+        "target_robot_base_poses": null,
+        "ws_obj_collision_operation": "None",
+        "ws_type": "Pick"
+      },
+      "position": {
+        "x": 3578,
+        "y": 2601
+      }
+    },
+    {
+      "id": "{254b3560-e2a0-40f0-8be1-83bc8f3d8cf8}",
+      "model": {
+        "GetCurrentRobotJoints": true,
+        "_CLASS_": "PlanAndMoveNode",
+        "acc": 10,
+        "basic_config_params": {
+          "dump_failure": true,
+          "dump_success": true,
+          "enable_early_check": true,
+          "log_level": "Verbose",
+          "mvf_timeout": 1.0,
+          "robot_id": 0
+        },
+        "catch_error": false,
+        "dev_comment": "回初始位[需修改参数]",
+        "dsafe": {
+          "at_goal": 0.0,
+          "at_start": 0.0,
+          "midway": 0.0
+        },
+        "edit_advanced_params": false,
+        "endjoint_sort": false,
+        "frame_poses": null,
+        "interp_config_params": {
+          "coarse_angle_rez": 0.2,
+          "coarse_distance_rez": 0.2,
+          "fine_angle_rez": 0.05,
+          "fine_distance_rez": 0.05
+        },
+        "mid_zone": 20,
+        "move_type": "SmartPlanner",
+        "robot": {
+          "is_absolute": true,
+          "path": [
+            "root",
+            "WorldFrame",
+            "ABB-IRB-6700-155-2-85"
+          ]
+        },
+        "smart_planner_option": {
+          "add_downward_constraint": false,
+          "add_tip_direction_constraint": false,
+          "astar_options": {
+            "_RESOURCE_": "xyz::motion_solver::AStarCartesianR3Planner::Options",
+            "goal_region_grids_range": 2,
+            "greedy_coeff": 2.0,
+            "grid_resolution": 0.1,
+            "grid_super_resolution": 0.1,
+            "max_number_of_iterations": 100000,
+            "move_type": "kMoveJ",
+            "number_of_rotation_interpolations": 5,
+            "post_collision_check": false,
+            "return_detailed_info": false,
+            "simplify_path_level": "kNo",
+            "singular_range": -1.0,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "start_and_goal_too_close_threshold": 1e-05,
+            "start_dist_increase_tolerance": 0.01,
+            "start_region_grids_range": 2,
+            "timeout": 3.0,
+            "use_theta_star": true,
+            "verbosity": "kSilent"
+          },
+          "astar_timeout": 0.7,
+          "early_exit": false,
+          "early_exit_simplify_level": "kNormal",
+          "first_wopt_timeout": 0.4,
+          "force_over_workspace": false,
+          "number_of_interpolations_when_initial_guess_is_straight_line": 3,
+          "number_of_reinterpolations_after_simplification": 10,
+          "over_workspace_timeout": 0.2,
+          "planning_method": "kSequential",
+          "post_distance_check": true,
+          "post_solve_simplification": false,
+          "prm_options": {
+            "_RESOURCE_": "xyz::motion_solver::PRMPlanner::Options",
+            "connect_planner": "kAStarPlanner",
+            "minimum_waypoint_num": 10,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "timeout": 2.0,
+            "verbosity": "kSilent"
+          },
+          "reinterpolate_after_simplification": true,
+          "return_detailed_info": false,
+          "safety_distance_check_margin": 0.025,
+          "simplify_initial_guess_from_planner": true,
+          "singular_range": 0.1,
+          "skip_options_sanity_check": false,
+          "skip_problem_sanity_check": false,
+          "smart_planner_move_type": "kMoveJ",
+          "timeout": 3.0,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          },
+          "verbosity": "kSilent",
+          "wopt_options": {
+            "_RESOURCE_": "xyz::motion_solver::WoptPlanner::Options",
+            "ctol": 0.005,
+            "dcheck": null,
+            "dsafe": null,
+            "improve_ratio_threshold": 0.2,
+            "limit_joint": false,
+            "max_convexify_iter": 40,
+            "max_merit_coeff_increase": 5,
+            "max_retries": 7,
+            "merit_coeff_increase_ratio": 10,
+            "merit_error_coeff": 1.0,
+            "min_approx_improve": 0.0001,
+            "min_approx_improve_frac": 0.001,
+            "min_trust_box_size": 0.0001,
+            "number_of_swept_interpolations": 4,
+            "number_of_waypoints": 8,
+            "post_solve_simplification": false,
+            "post_solve_verification": true,
+            "post_solve_verification_interpolation_resolution": 0.01,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "taud": 0.2,
+            "taui": 1.5,
+            "timeout": 3.0,
+            "trust_box_size": 0.5,
+            "verbosity": "kSilent"
+          }
+        },
+        "smart_planner_options_data": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "force_over_workspace": false,
+          "planner_timeout": 2.0,
+          "planning_method": "kSequential",
+          "post_solve_simplification": true,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          }
+        },
+        "speed": 10,
+        "target_joints": {
+          "current_joints": [
+            -0.3685691518132557,
+            0.7050741681574338,
+            -0.2639214500432541,
+            5.825785394178476
+          ],
+          "joint_type": [
+            "kRevoluteJoint",
+            "kRevoluteJoint",
+            "kRevoluteJoint",
+            "kRevoluteJoint"
+          ],
+          "soft_lower_limits": [
+            -3.141592653589793,
+            -0.767944870877505,
+            -2.199114857512855,
+            -6.283185307179586
+          ],
+          "soft_upper_limits": [
+            3.141592653589793,
+            1.7453292519943295,
+            0.17453292519943295,
+            6.283185307179586
+          ]
+        },
+        "tip": {
+          "is_absolute": false,
+          "path": null
+        }
+      },
+      "position": {
+        "x": -433,
+        "y": -48
+      }
+    },
+    {
+      "id": "{25a6ff9f-21d0-450e-bbff-c93330b2951d}",
+      "model": {
+        "_CLASS_": "AddPickNodes",
+        "catch_error": false,
+        "consider_place_converyor_collision": false,
+        "dev_comment": "",
+        "dsafe": {
+          "at_goal": 0.05,
+          "at_start": 0.05,
+          "midway": 0.05
+        },
+        "edit_advanced_params": true,
+        "near_postpick_info": {
+          "check_path_collision": false,
+          "check_point_collision": false,
+          "collision_check_order": "kHead",
+          "move_type": "MoveL"
+        },
+        "near_postpick_relative_poses": [
+          {
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.25
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "near_prepick_info": {
+          "check_path_collision": false,
+          "check_point_collision": true,
+          "collision_check_order": "kHead",
+          "move_type": "MoveL"
+        },
+        "near_prepick_relative_poses": null,
+        "pick_info": {
+          "check_path_collision": false,
+          "check_point_collision": false,
+          "collision_check_order": "kHead",
+          "move_type": "MoveL"
+        },
+        "postpick_info": {
+          "check_path_collision": false,
+          "check_point_collision": true,
+          "collision_check_order": "kHead",
+          "move_type": "MoveL"
+        },
+        "postpick_relative_poses": [
+          {
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.5
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "prepick_info": {
+          "check_path_collision": false,
+          "check_point_collision": false,
+          "collision_check_order": "kHead",
+          "move_type": "SmartPlanner"
+        },
+        "prepick_relative_poses": [
+          {
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.25
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "smart_planner_option": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "astar_options": {
+            "_RESOURCE_": "xyz::motion_solver::AStarCartesianR3Planner::Options",
+            "goal_region_grids_range": 2,
+            "greedy_coeff": 2.0,
+            "grid_resolution": 0.1,
+            "grid_super_resolution": 0.1,
+            "max_number_of_iterations": 100000,
+            "move_type": "kMoveJ",
+            "number_of_rotation_interpolations": 5,
+            "post_collision_check": false,
+            "return_detailed_info": false,
+            "simplify_path_level": "kNo",
+            "singular_range": -1.0,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "start_and_goal_too_close_threshold": 1e-05,
+            "start_dist_increase_tolerance": 0.01,
+            "start_region_grids_range": 2,
+            "timeout": 3.0,
+            "use_theta_star": true,
+            "verbosity": "kSilent"
+          },
+          "astar_timeout": 0.7,
+          "early_exit": false,
+          "early_exit_simplify_level": "kNormal",
+          "first_wopt_timeout": 0.4,
+          "force_over_workspace": false,
+          "number_of_interpolations_when_initial_guess_is_straight_line": 3,
+          "number_of_reinterpolations_after_simplification": 10,
+          "over_workspace_timeout": 0.2,
+          "planning_method": "kSequential",
+          "post_distance_check": true,
+          "post_solve_simplification": true,
+          "prm_options": {
+            "_RESOURCE_": "xyz::motion_solver::PRMPlanner::Options",
+            "connect_planner": "kAStarPlanner",
+            "minimum_waypoint_num": 10,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "timeout": 2.0,
+            "verbosity": "kSilent"
+          },
+          "reinterpolate_after_simplification": true,
+          "return_detailed_info": false,
+          "safety_distance_check_margin": 0.025,
+          "simplify_initial_guess_from_planner": true,
+          "singular_range": 0.1,
+          "skip_options_sanity_check": false,
+          "skip_problem_sanity_check": false,
+          "smart_planner_move_type": "kMoveJ",
+          "timeout": 2.0,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          },
+          "verbosity": "kSilent",
+          "wopt_options": {
+            "_RESOURCE_": "xyz::motion_solver::WoptPlanner::Options",
+            "ctol": 0.005,
+            "dcheck": null,
+            "dsafe": null,
+            "improve_ratio_threshold": 0.2,
+            "limit_joint": false,
+            "max_convexify_iter": 40,
+            "max_merit_coeff_increase": 5,
+            "max_retries": 7,
+            "merit_coeff_increase_ratio": 10,
+            "merit_error_coeff": 1.0,
+            "min_approx_improve": 0.0001,
+            "min_approx_improve_frac": 0.001,
+            "min_trust_box_size": 0.0001,
+            "number_of_swept_interpolations": 4,
+            "number_of_waypoints": 8,
+            "post_solve_simplification": false,
+            "post_solve_verification": true,
+            "post_solve_verification_interpolation_resolution": 0.01,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "taud": 0.2,
+            "taui": 1.5,
+            "timeout": 3.0,
+            "trust_box_size": 0.5,
+            "verbosity": "kSilent"
+          }
+        },
+        "smart_planner_options_data": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "force_over_workspace": false,
+          "planner_timeout": 2.0,
+          "planning_method": "kSequential",
+          "post_solve_simplification": true,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          }
+        },
+        "use_near_postpick": false,
+        "use_near_prepick": false,
+        "use_postpick": true,
+        "use_prepick": true
+      },
+      "position": {
+        "x": 2750,
+        "y": 2244
+      }
+    },
+    {
+      "id": "{28997384-f1bf-4e77-bc70-b13e6ce86e2a}",
+      "model": {
+        "_CLASS_": "MotionExecutionNode",
+        "acc": 100,
+        "catch_error": false,
+        "dev_comment": "",
+        "mid_zone": 100,
+        "speed": 100,
+        "target_node_name": "prepick",
+        "zone": 0
+      },
+      "position": {
+        "x": 278,
+        "y": 4587
+      }
+    },
+    {
+      "id": "{2cbb1186-8b46-4513-abbf-59351a9d99e9}",
+      "model": {
+        "_CLASS_": "FunctionReturnNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "任务初始化"
+      },
+      "position": {
+        "x": 1500,
+        "y": -76
+      }
+    },
+    {
+      "id": "{2d86fdef-695b-4efa-962e-e43479381f2c}",
+      "model": {
+        "_CLASS_": "SleepNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "sleep_sec": 0.2
+      },
+      "position": {
+        "x": 7330,
+        "y": -1941
+      }
+    },
+    {
+      "id": "{2ea6891c-bd81-4365-9825-d20a518f0371}",
+      "model": {
+        "_CLASS_": "CycleCountNodeModel",
+        "catch_error": false,
+        "cycle_config": {
+          "average_flag": true,
+          "cnt_flag": true,
+          "last_flag": false,
+          "max_flag": true,
+          "min_flag": true,
+          "result_flag": false,
+          "stderr_flag": false
+        },
+        "cycle_flag": "CycleEnd",
+        "cycle_name": "运动执行time",
+        "cycle_result": "成功",
+        "dev_comment": ""
+      },
+      "position": {
+        "x": 4114,
+        "y": 4558
+      }
+    },
+    {
+      "id": "{2f42e71d-eaf3-43f8-be59-3830d6a8e522}",
+      "model": {
+        "_CLASS_": "GetTaskInfoNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "enable_trilight": true,
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "is_timeout_mode": true,
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "setting_timeout_mode": {
+          "sleep_interval": 1.0,
+          "timeout": 600.0
+        },
+        "setup_workspace_map": true,
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        },
+        "useboxitemlimits": true,
+        "usestrictlylimit": false
+      },
+      "position": {
+        "x": 100,
+        "y": -2050
+      }
+    },
+    {
+      "id": "{2ff41ce2-e769-40b2-9c79-babd733285a0}",
+      "model": {
+        "_CLASS_": "FunctionCallNodeModel",
+        "catch_error": false,
+        "dev_comment": "第一次并不会执行",
+        "func_name": "运动执行"
+      },
+      "position": {
+        "x": 2108,
+        "y": -2064
+      }
+    },
+    {
+      "id": "{2ff7bc6a-3e21-4f8f-be0b-684ac54b110e}",
+      "model": {
+        "_CLASS_": "SetDigitalOutputNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "device_type": "kRobot",
+        "io_device_name": "",
+        "io_sequence": [
+          {
+            "port_id": 0,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 1
+          },
+          {
+            "port_id": 1,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 1
+          },
+          {
+            "port_id": 7,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 1
+          },
+          {
+            "port_id": 3,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 1
+          },
+          {
+            "port_id": 5,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 0
+          },
+          {
+            "port_id": 4,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 0
+          },
+          {
+            "port_id": 6,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 0
+          },
+          {
+            "port_id": 9,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 0
+          }
+        ],
+        "robot_path": {
+          "is_absolute": true,
+          "path": [
+            "root",
+            "WorldFrame",
+            "ABB-IRB-6700-155-2-85"
+          ]
+        },
+        "use_sequence_from_input": false
+      },
+      "position": {
+        "x": 7806,
+        "y": -539
+      }
+    },
+    {
+      "id": "{31526e85-4713-4b68-8b51-82c63f56bee2}",
+      "model": {
+        "_CLASS_": "MotionExecutionNode",
+        "acc": 10,
+        "catch_error": false,
+        "dev_comment": "",
+        "mid_zone": 0,
+        "speed": 30,
+        "target_node_name": "pick",
+        "zone": 0
+      },
+      "position": {
+        "x": 1136,
+        "y": 4556
+      }
+    },
+    {
+      "id": "{31981a55-3a4f-4568-8701-a8e4e198ee2a}",
+      "model": {
+        "_CLASS_": "FunctionEventNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_def": {
+          "in_args": [
+            {
+              "name": "动作负载",
+              "type": "MOTION_PAYLOAD"
+            }
+          ],
+          "logic_out_ports": [
+            "成功",
+            "穷尽"
+          ],
+          "out_args": [
+            {
+              "name": "动作负载",
+              "type": "MOTION_PAYLOAD"
+            }
+          ]
+        },
+        "func_name": "获取视觉"
+      },
+      "position": {
+        "x": 6850,
+        "y": -1391
+      }
+    },
+    {
+      "id": "{31f250ad-0a2d-4ecb-8889-fec7d0968af5}",
+      "model": {
+        "_CLASS_": "PickPlacePlanPairIteratorNodeModel",
+        "catch_error": false,
+        "dev_comment": ""
+      },
+      "position": {
+        "x": 876,
+        "y": 2115
+      }
+    },
+    {
+      "id": "{35e74e48-009e-4e58-93a2-8a163f40c903}",
+      "model": {
+        "_CLASS_": "VarWriteNodeModel",
+        "catch_error": false,
+        "clear_variable": false,
+        "default_value": "1",
+        "dev_comment": "是每层的最后一次规划",
+        "var_name": "if_last_one",
+        "var_scope": "SCENE",
+        "var_type": "INT"
+      },
+      "position": {
+        "x": 403,
+        "y": 973
+      }
+    },
+    {
+      "id": "{375b8b7f-57fd-4ed2-b991-ed478f8b4a88}",
+      "model": {
+        "_CLASS_": "AddRelativeNode",
+        "attached_obj_collision_operation": "None",
+        "base_frame": "ToWs",
+        "catch_error": false,
+        "change_robot_base_tf_at_planning": false,
+        "check_path_collision": false,
+        "check_point_collision": true,
+        "collision_check": "kTail",
+        "dev_comment": "",
+        "dsafe": {
+          "at_goal": 0.025,
+          "at_start": 0.025,
+          "midway": 0.025
+        },
+        "edit_interp_params": false,
+        "interp_config_params": {
+          "coarse_angle_rez": 0.2,
+          "coarse_distance_rez": 0.2,
+          "fine_angle_rez": 0.05,
+          "fine_distance_rez": 0.05
+        },
+        "move_type": "MoveJ",
+        "node_name": "postplace",
+        "pick_place_flag": 0,
+        "relative_node_name": "place",
+        "relative_poses": [
+          {
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.5
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "smart_planner_option": {
+          "add_downward_constraint": false,
+          "add_tip_direction_constraint": false,
+          "astar_options": {
+            "_RESOURCE_": "xyz::motion_solver::AStarCartesianR3Planner::Options",
+            "goal_region_grids_range": 2,
+            "greedy_coeff": 2.0,
+            "grid_resolution": 0.1,
+            "grid_super_resolution": 0.1,
+            "max_number_of_iterations": 100000,
+            "move_type": "kMoveJ",
+            "number_of_rotation_interpolations": 5,
+            "post_collision_check": false,
+            "return_detailed_info": false,
+            "simplify_path_level": "kNo",
+            "singular_range": -1.0,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "start_and_goal_too_close_threshold": 1e-05,
+            "start_dist_increase_tolerance": 0.01,
+            "start_region_grids_range": 2,
+            "timeout": 3.0,
+            "use_theta_star": true,
+            "verbosity": "kSilent"
+          },
+          "astar_timeout": 0.7,
+          "early_exit": false,
+          "early_exit_simplify_level": "kNormal",
+          "first_wopt_timeout": 0.4,
+          "force_over_workspace": false,
+          "number_of_interpolations_when_initial_guess_is_straight_line": 3,
+          "number_of_reinterpolations_after_simplification": 10,
+          "over_workspace_timeout": 0.2,
+          "planning_method": "kSequential",
+          "post_distance_check": true,
+          "post_solve_simplification": false,
+          "prm_options": {
+            "_RESOURCE_": "xyz::motion_solver::PRMPlanner::Options",
+            "connect_planner": "kAStarPlanner",
+            "minimum_waypoint_num": 10,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "timeout": 2.0,
+            "verbosity": "kSilent"
+          },
+          "reinterpolate_after_simplification": true,
+          "return_detailed_info": false,
+          "safety_distance_check_margin": 0.025,
+          "simplify_initial_guess_from_planner": true,
+          "singular_range": 0.1,
+          "skip_options_sanity_check": false,
+          "skip_problem_sanity_check": false,
+          "smart_planner_move_type": "kMoveJ",
+          "timeout": 100.0,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          },
+          "verbosity": "kSilent",
+          "wopt_options": {
+            "_RESOURCE_": "xyz::motion_solver::WoptPlanner::Options",
+            "ctol": 0.005,
+            "dcheck": null,
+            "dsafe": null,
+            "improve_ratio_threshold": 0.2,
+            "limit_joint": false,
+            "max_convexify_iter": 40,
+            "max_merit_coeff_increase": 5,
+            "max_retries": 7,
+            "merit_coeff_increase_ratio": 10,
+            "merit_error_coeff": 1.0,
+            "min_approx_improve": 0.0001,
+            "min_approx_improve_frac": 0.001,
+            "min_trust_box_size": 0.0001,
+            "number_of_swept_interpolations": 4,
+            "number_of_waypoints": 8,
+            "post_solve_simplification": false,
+            "post_solve_verification": true,
+            "post_solve_verification_interpolation_resolution": 0.01,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "taud": 0.2,
+            "taui": 1.5,
+            "timeout": 100.0,
+            "trust_box_size": 0.5,
+            "verbosity": "kSilent"
+          }
+        },
+        "smart_planner_options_data": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "force_over_workspace": false,
+          "planner_timeout": 2.0,
+          "planning_method": "kSequential",
+          "post_solve_simplification": true,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          }
+        },
+        "target_frame_name": "ToWs",
+        "target_robot_base_poses": null,
+        "ws_obj_collision_operation": "None",
+        "ws_type": "Pick"
+      },
+      "position": {
+        "x": 4556,
+        "y": 2619
+      }
+    },
+    {
+      "id": "{3a359eb8-d38c-449a-9a73-3bdb5e965c4e}",
+      "model": {
+        "_CLASS_": "FunctionWaitResultNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "运动规划"
+      },
+      "position": {
+        "x": 2612,
+        "y": -2034
+      }
+    },
+    {
+      "id": "{3b07c973-5dcd-42fb-8c1f-5610fc3919a6}",
+      "model": {
+        "_CLASS_": "SetBoxItemTechnicalAgreementInfoNode",
+        "boxitemlimits": {
+          "lower_limit": {
+            "height": 0.1,
+            "length": 0.1,
+            "weight": 0.0,
+            "width": 0.1
+          },
+          "upper_limit": {
+            "height": 0.6,
+            "length": 0.8,
+            "weight": 30.0,
+            "width": 0.8
+          }
+        },
+        "catch_error": false,
+        "dev_comment": "",
+        "sku_barcode_direction": "kNoBarcode"
+      },
+      "position": {
+        "x": 3640,
+        "y": -800
+      }
+    },
+    {
+      "id": "{3b70e225-8d0c-42ad-a259-c00abbaf7d03}",
+      "model": {
+        "GetCurrentRobotJoints": true,
+        "_CLASS_": "MoveToTargetJointsNode",
+        "acc": 10,
+        "catch_error": false,
+        "dev_comment": "【真机请删除】移动仿真机器人到初始位",
+        "move_type": "MoveJ",
+        "only_move_in_simulation_mode": false,
+        "robot": {
+          "is_absolute": true,
+          "path": [
+            "root",
+            "WorldFrame",
+            "ABB-IRB-6700-155-2-85"
+          ]
+        },
+        "speed": 10,
+        "target_joints": {
+          "current_joints": [
+            -0.3685691518132557,
+            0.7050741681574338,
+            -0.2639214500432541,
+            5.825785394178476
+          ],
+          "joint_type": [
+            "kRevoluteJoint",
+            "kRevoluteJoint",
+            "kRevoluteJoint",
+            "kRevoluteJoint"
+          ],
+          "soft_lower_limits": [
+            -3.141592653589793,
+            -0.767944870877505,
+            -2.199114857512855,
+            -6.283185307179586
+          ],
+          "soft_upper_limits": [
+            3.141592653589793,
+            1.7453292519943295,
+            0.17453292519943295,
+            6.283185307179586
+          ]
+        },
+        "tf_endflange_tip": {
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "quaternion": {
+            "w": 1.0,
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "vel_coeff": 1.0,
+        "zone": 0
+      },
+      "position": {
+        "x": -486,
+        "y": -263
+      }
+    },
+    {
+      "id": "{3bb758a9-a093-497a-973b-bb9067c2857d}",
+      "model": {
+        "_CLASS_": "NotifyHMINodeModel",
+        "catch_error": false,
+        "dev_comment": "读取全局变量异常",
+        "enable_trilight": true,
+        "error_code": 69999,
+        "error_msg": "变量读取超时错误，该错误不该发生，请检查流图是否正确",
+        "error_tip": "请联系售后人员",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "status": "ERR",
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": 7936,
+        "y": -1185
+      }
+    },
+    {
+      "id": "{3d110655-b7fe-4783-8749-7360ee98eef4}",
+      "model": {
+        "_CLASS_": "CycleCountNodeModel",
+        "catch_error": false,
+        "cycle_config": {
+          "average_flag": true,
+          "cnt_flag": true,
+          "last_flag": false,
+          "max_flag": true,
+          "min_flag": true,
+          "result_flag": false,
+          "stderr_flag": false
+        },
+        "cycle_flag": "CycleStart",
+        "cycle_name": "运动执行time",
+        "cycle_result": "成功",
+        "dev_comment": ""
+      },
+      "position": {
+        "x": -405,
+        "y": 4568
+      }
+    },
+    {
+      "id": "{42607953-f805-4a17-9f0f-0b0e437c122d}",
+      "model": {
+        "_CLASS_": "SetDigitalOutputNodeModel",
+        "catch_error": false,
+        "dev_comment": "输送线码垛模式[需修改参数]",
+        "device_type": "kOther",
+        "io_device_name": "0:PLC-qweqw",
+        "io_sequence": [
+          {
+            "port_id": 108,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 2
+          }
+        ],
+        "robot_path": {
+          "is_absolute": true,
+          "path": [
+            "root",
+            "WorldFrame",
+            "ABB-IRB-6700-155-2-85"
+          ]
+        },
+        "use_sequence_from_input": false
+      },
+      "position": {
+        "x": 2180,
+        "y": -800
+      }
+    },
+    {
+      "id": "{466d13e7-fe44-4164-8cf1-1af506f478d6}",
+      "model": {
+        "_CLASS_": "VarReadNodeModel",
+        "cases": null,
+        "catch_error": false,
+        "dev_comment": "抓取工作空间内部编号",
+        "reject_values_outside_cases": false,
+        "var_name": "_from_ws",
+        "var_scope": "SCENE",
+        "var_type": "INT",
+        "wait_value_timeout": 3.0
+      },
+      "position": {
+        "x": 4964,
+        "y": 4743
+      }
+    },
+    {
+      "id": "{46988da8-4edd-4d23-ad6d-6b6965cc9185}",
+      "model": {
+        "_CLASS_": "FunctionCallNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "夹具抓取动作"
+      },
+      "position": {
+        "x": 1426,
+        "y": 4573
+      }
+    },
+    {
+      "id": "{470ad5de-9b10-43e3-a0ba-97d11d849871}",
+      "model": {
+        "_CLASS_": "FunctionCallNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "夹具放置动作"
+      },
+      "position": {
+        "x": 2798,
+        "y": 4582
+      }
+    },
+    {
+      "id": "{4c9322d5-f206-4023-81ad-87ab68af1c93}",
+      "model": {
+        "_CLASS_": "NotifyHMINodeModel",
+        "catch_error": false,
+        "dev_comment": "抓取物体未到位[需修改参数]",
+        "enable_trilight": true,
+        "error_code": 80016,
+        "error_msg": "抓取物体未到位",
+        "error_tip": "等待抓取到位信号超时，请检查到位信号",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "status": "ERR",
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": 8730,
+        "y": -1141
+      }
+    },
+    {
+      "id": "{4cd92365-fd76-4674-b16a-a79c51c21c1f}",
+      "model": {
+        "_CLASS_": "GetDigitalInputNodeModel",
+        "catch_error": false,
+        "dev_comment": "等待抓取工作空间就绪",
+        "device_type": "kOther",
+        "io_device_name": "0:PLC-qweqw",
+        "max_waiting_time": 60.0,
+        "min_holding_time_in_seconds": 1.0,
+        "monitor_interval_in_seconds": 0.1,
+        "port_id": 9,
+        "require_holding": false,
+        "robot_path": {
+          "is_absolute": true,
+          "path": [
+            "root",
+            "WorldFrame",
+            "ABB-IRB-6700-155-2-85"
+          ]
+        },
+        "sim_value": 1,
+        "target_value": 1,
+        "wait_for_signal": true
+      },
+      "position": {
+        "x": 8330,
+        "y": -1441
+      }
+    },
+    {
+      "id": "{4d15dc5e-a01c-4856-8f10-38bf8744d03d}",
+      "model": {
+        "_CLASS_": "NotifyHMINodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "enable_trilight": true,
+        "error_code": 70003,
+        "error_msg": "未收到下发任务，等待任务中",
+        "error_tip": "Please refer to the manual for manual processing.",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "status": "INFO",
+        "tri_color_light_set": {
+          "device_id": 2,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": 592,
+        "y": -388
+      }
+    },
+    {
+      "id": "{526d4bd5-fe22-49f6-999b-334e4af80d76}",
+      "model": {
+        "_CLASS_": "VarReadNodeModel",
+        "cases": null,
+        "catch_error": false,
+        "dev_comment": "抓取工作空间内部编号",
+        "reject_values_outside_cases": false,
+        "var_name": "_from_ws",
+        "var_scope": "SCENE",
+        "var_type": "INT",
+        "wait_value_timeout": 3.0
+      },
+      "position": {
+        "x": 7730,
+        "y": -1441
+      }
+    },
+    {
+      "id": "{5304d3c2-163f-478e-93eb-b30ee49d5b85}",
+      "model": {
+        "_CLASS_": "UpdateMaxGraspNumNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "max_grasp_num": 1
+      },
+      "position": {
+        "x": 540,
+        "y": -2050
+      }
+    },
+    {
+      "id": "{53748680-93d5-4f15-93da-27564b03826e}",
+      "model": {
+        "_CLASS_": "ClearEnvironmentNodeModel",
+        "catch_error": false,
+        "clear_all_workspaces": false,
+        "clear_full_padding": false,
+        "clear_motion_payload": true,
+        "clear_pickable": false,
+        "dev_comment": "清空规划环境",
+        "robots": [
+          {
+            "is_absolute": true,
+            "path": [
+              "root",
+              "WorldFrame",
+              "ABB-IRB-6700-155-2-85"
+            ]
+          }
+        ],
+        "workspace_ids": null
+      },
+      "position": {
+        "x": 127,
+        "y": -50
+      }
+    },
+    {
+      "id": "{540279ec-eca8-4db7-bff6-6d2766db3a03}",
+      "model": {
+        "_CLASS_": "MotionExecutionNode",
+        "acc": 100,
+        "catch_error": false,
+        "dev_comment": "",
+        "mid_zone": 100,
+        "speed": 100,
+        "target_node_name": "slide_start",
+        "zone": 100
+      },
+      "position": {
+        "x": 2155,
+        "y": 4578
+      }
+    },
+    {
+      "id": "{55fe49ff-1825-408e-b80f-053bd2f9bb60}",
+      "model": {
+        "_CLASS_": "AddObjectNode",
+        "attached_obj_collision_operation": "None",
+        "catch_error": false,
+        "change_robot_base_tf_at_planning": false,
+        "check_path_collision": false,
+        "check_point_collision": false,
+        "collision_check": "kTail",
+        "dev_comment": "",
+        "dsafe": {
+          "at_goal": 0.025,
+          "at_start": 0.025,
+          "midway": 0.025
+        },
+        "edit_interp_params": false,
+        "frame_name": "${obj}",
+        "interp_config_params": {
+          "coarse_angle_rez": 0.2,
+          "coarse_distance_rez": 0.2,
+          "fine_angle_rez": 0.05,
+          "fine_distance_rez": 0.05
+        },
+        "move_type": "MoveJ",
+        "node_name": "place",
+        "obj_place_poses": null,
+        "pick_place_flag": 2,
+        "place_drop_height": 0.01,
+        "smart_planner_option": {
+          "add_downward_constraint": false,
+          "add_tip_direction_constraint": false,
+          "astar_options": {
+            "_RESOURCE_": "xyz::motion_solver::AStarCartesianR3Planner::Options",
+            "goal_region_grids_range": 2,
+            "greedy_coeff": 2.0,
+            "grid_resolution": 0.1,
+            "grid_super_resolution": 0.1,
+            "max_number_of_iterations": 100000,
+            "move_type": "kMoveJ",
+            "number_of_rotation_interpolations": 5,
+            "post_collision_check": false,
+            "return_detailed_info": false,
+            "simplify_path_level": "kNo",
+            "singular_range": -1.0,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "start_and_goal_too_close_threshold": 1e-05,
+            "start_dist_increase_tolerance": 0.01,
+            "start_region_grids_range": 2,
+            "timeout": 3.0,
+            "use_theta_star": true,
+            "verbosity": "kSilent"
+          },
+          "astar_timeout": 0.7,
+          "early_exit": false,
+          "early_exit_simplify_level": "kNormal",
+          "first_wopt_timeout": 0.4,
+          "force_over_workspace": false,
+          "number_of_interpolations_when_initial_guess_is_straight_line": 3,
+          "number_of_reinterpolations_after_simplification": 10,
+          "over_workspace_timeout": 0.2,
+          "planning_method": "kSequential",
+          "post_distance_check": true,
+          "post_solve_simplification": false,
+          "prm_options": {
+            "_RESOURCE_": "xyz::motion_solver::PRMPlanner::Options",
+            "connect_planner": "kAStarPlanner",
+            "minimum_waypoint_num": 10,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "timeout": 2.0,
+            "verbosity": "kSilent"
+          },
+          "reinterpolate_after_simplification": true,
+          "return_detailed_info": false,
+          "safety_distance_check_margin": 0.025,
+          "simplify_initial_guess_from_planner": true,
+          "singular_range": 0.1,
+          "skip_options_sanity_check": false,
+          "skip_problem_sanity_check": false,
+          "smart_planner_move_type": "kMoveJ",
+          "timeout": 100.0,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          },
+          "verbosity": "kSilent",
+          "wopt_options": {
+            "_RESOURCE_": "xyz::motion_solver::WoptPlanner::Options",
+            "ctol": 0.005,
+            "dcheck": null,
+            "dsafe": null,
+            "improve_ratio_threshold": 0.2,
+            "limit_joint": false,
+            "max_convexify_iter": 40,
+            "max_merit_coeff_increase": 5,
+            "max_retries": 7,
+            "merit_coeff_increase_ratio": 10,
+            "merit_error_coeff": 1.0,
+            "min_approx_improve": 0.0001,
+            "min_approx_improve_frac": 0.001,
+            "min_trust_box_size": 0.0001,
+            "number_of_swept_interpolations": 4,
+            "number_of_waypoints": 8,
+            "post_solve_simplification": false,
+            "post_solve_verification": true,
+            "post_solve_verification_interpolation_resolution": 0.01,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "taud": 0.2,
+            "taui": 1.5,
+            "timeout": 100.0,
+            "trust_box_size": 0.5,
+            "verbosity": "kSilent"
+          }
+        },
+        "smart_planner_options_data": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "force_over_workspace": false,
+          "planner_timeout": 2.0,
+          "planning_method": "kSequential",
+          "post_solve_simplification": true,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          }
+        },
+        "target_robot_base_poses": null,
+        "ws_obj_collision_operation": "None",
+        "ws_type": "Pick"
+      },
+      "position": {
+        "x": 4205,
+        "y": 2606
+      }
+    },
+    {
+      "id": "{5bc25fd3-2198-4077-b358-e236c156f4f9}",
+      "model": {
+        "_CLASS_": "GetDigitalInputNodeModel",
+        "catch_error": false,
+        "dev_comment": "等待放置位信号",
+        "device_type": "kOther",
+        "io_device_name": "0:PLC-plc",
+        "max_waiting_time": 10.0,
+        "min_holding_time_in_seconds": 1.0,
+        "monitor_interval_in_seconds": 0.1,
+        "port_id": 0,
+        "require_holding": false,
+        "robot_path": {
+          "is_absolute": true,
+          "path": [
+            "root",
+            "WorldFrame",
+            "ABB-IRB-6700-155-2-85"
+          ]
+        },
+        "sim_value": 0,
+        "target_value": 0,
+        "wait_for_signal": true
+      },
+      "position": {
+        "x": 628,
+        "y": 4723
+      }
+    },
+    {
+      "id": "{5d52df7d-8372-459b-b209-92866f35a060}",
+      "model": {
+        "_CLASS_": "FunctionCallNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "等待机械臂进入抓取工作空间"
+      },
+      "position": {
+        "x": 7095,
+        "y": -1407
+      }
+    },
+    {
+      "id": "{5ede6f88-0186-4aac-a5af-f56968597dac}",
+      "model": {
+        "_CLASS_": "WaitRobotLeaveCameraNode",
+        "catch_error": false,
+        "check_from_ws": false,
+        "check_to_ws": false,
+        "consider_multiple_robots": false,
+        "dev_comment": "",
+        "passive_robot": {
+          "is_absolute": false,
+          "path": null
+        },
+        "robot": {
+          "is_absolute": true,
+          "path": [
+            "root",
+            "WorldFrame",
+            "ABB-IRB-6700-155-2-85"
+          ]
+        },
+        "robot_id": 0,
+        "sleep_interval_s": 0.1,
+        "timeout": 100.0,
+        "workspace_id": 0,
+        "x_dim_scale": 1.0,
+        "y_dim_scale": 1.0,
+        "z_dim_scale": 10.0
+      },
+      "position": {
+        "x": 8027,
+        "y": -1422
+      }
+    },
+    {
+      "id": "{5fd3afbf-2c14-4355-addc-c8069b7abb37}",
+      "model": {
+        "_CLASS_": "CycleCountNodeModel",
+        "catch_error": false,
+        "cycle_config": {
+          "average_flag": true,
+          "cnt_flag": true,
+          "last_flag": false,
+          "max_flag": true,
+          "min_flag": true,
+          "result_flag": false,
+          "stderr_flag": false
+        },
+        "cycle_flag": "CycleEndAndStart",
+        "cycle_name": "总节拍统计",
+        "cycle_result": "成功",
+        "dev_comment": ""
+      },
+      "position": {
+        "x": -89,
+        "y": 4574
+      }
+    },
+    {
+      "id": "{60ee9482-6559-4404-9b96-ac3ee5ba4998}",
+      "model": {
+        "_CLASS_": "FunctionReturnNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "机械臂已进入抓取工作空间"
+      },
+      "position": {
+        "x": 7833,
+        "y": -2251
+      }
+    },
+    {
+      "id": "{61a1ddad-80fd-41ae-87b2-d4d740378f8f}",
+      "model": {
+        "_CLASS_": "NotifyHMINodeModel",
+        "catch_error": false,
+        "dev_comment": "等待机器人离开相机视野超时",
+        "enable_trilight": true,
+        "error_code": 60011,
+        "error_msg": "等待机器人离开相机视野超时",
+        "error_tip": "请检查机器人执行阶段的问题",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "status": "ERR",
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": 8278,
+        "y": -1195
+      }
+    },
+    {
+      "id": "{640285f7-951e-4b33-8f9f-8ee203a792f3}",
+      "model": {
+        "_CLASS_": "AddRelativeNode",
+        "attached_obj_collision_operation": "None",
+        "base_frame": "FromWs",
+        "catch_error": false,
+        "change_robot_base_tf_at_planning": false,
+        "check_path_collision": false,
+        "check_point_collision": true,
+        "collision_check": "kTail",
+        "dev_comment": "",
+        "dsafe": {
+          "at_goal": 0.0,
+          "at_start": 0.0,
+          "midway": 0.0
+        },
+        "edit_interp_params": false,
+        "interp_config_params": {
+          "coarse_angle_rez": 0.2,
+          "coarse_distance_rez": 0.2,
+          "fine_angle_rez": 0.05,
+          "fine_distance_rez": 0.05
+        },
+        "move_type": "MoveJ",
+        "node_name": "postpick",
+        "pick_place_flag": 0,
+        "relative_node_name": "pick",
+        "relative_poses": [
+          {
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.5
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "smart_planner_option": {
+          "add_downward_constraint": false,
+          "add_tip_direction_constraint": false,
+          "astar_options": {
+            "_RESOURCE_": "xyz::motion_solver::AStarCartesianR3Planner::Options",
+            "goal_region_grids_range": 2,
+            "greedy_coeff": 2.0,
+            "grid_resolution": 0.1,
+            "grid_super_resolution": 0.1,
+            "max_number_of_iterations": 100000,
+            "move_type": "kMoveJ",
+            "number_of_rotation_interpolations": 5,
+            "post_collision_check": false,
+            "return_detailed_info": false,
+            "simplify_path_level": "kNo",
+            "singular_range": -1.0,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "start_and_goal_too_close_threshold": 1e-05,
+            "start_dist_increase_tolerance": 0.01,
+            "start_region_grids_range": 2,
+            "timeout": 3.0,
+            "use_theta_star": true,
+            "verbosity": "kSilent"
+          },
+          "astar_timeout": 0.7,
+          "early_exit": false,
+          "early_exit_simplify_level": "kNormal",
+          "first_wopt_timeout": 0.4,
+          "force_over_workspace": false,
+          "number_of_interpolations_when_initial_guess_is_straight_line": 3,
+          "number_of_reinterpolations_after_simplification": 10,
+          "over_workspace_timeout": 0.2,
+          "planning_method": "kSequential",
+          "post_distance_check": true,
+          "post_solve_simplification": false,
+          "prm_options": {
+            "_RESOURCE_": "xyz::motion_solver::PRMPlanner::Options",
+            "connect_planner": "kAStarPlanner",
+            "minimum_waypoint_num": 10,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "timeout": 2.0,
+            "verbosity": "kSilent"
+          },
+          "reinterpolate_after_simplification": true,
+          "return_detailed_info": false,
+          "safety_distance_check_margin": 0.025,
+          "simplify_initial_guess_from_planner": true,
+          "singular_range": 0.1,
+          "skip_options_sanity_check": false,
+          "skip_problem_sanity_check": false,
+          "smart_planner_move_type": "kMoveJ",
+          "timeout": 100.0,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          },
+          "verbosity": "kSilent",
+          "wopt_options": {
+            "_RESOURCE_": "xyz::motion_solver::WoptPlanner::Options",
+            "ctol": 0.005,
+            "dcheck": null,
+            "dsafe": null,
+            "improve_ratio_threshold": 0.2,
+            "limit_joint": false,
+            "max_convexify_iter": 40,
+            "max_merit_coeff_increase": 5,
+            "max_retries": 7,
+            "merit_coeff_increase_ratio": 10,
+            "merit_error_coeff": 1.0,
+            "min_approx_improve": 0.0001,
+            "min_approx_improve_frac": 0.001,
+            "min_trust_box_size": 0.0001,
+            "number_of_swept_interpolations": 4,
+            "number_of_waypoints": 8,
+            "post_solve_simplification": false,
+            "post_solve_verification": true,
+            "post_solve_verification_interpolation_resolution": 0.01,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "taud": 0.2,
+            "taui": 1.5,
+            "timeout": 100.0,
+            "trust_box_size": 0.5,
+            "verbosity": "kSilent"
+          }
+        },
+        "smart_planner_options_data": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "force_over_workspace": false,
+          "planner_timeout": 2.0,
+          "planning_method": "kSequential",
+          "post_solve_simplification": true,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          }
+        },
+        "target_frame_name": "FromWs",
+        "target_robot_base_poses": null,
+        "ws_obj_collision_operation": "None",
+        "ws_type": "Pick"
+      },
+      "position": {
+        "x": 3290,
+        "y": 2600
+      }
+    },
+    {
+      "id": "{64e875a0-26d9-4fcc-a30a-ad9e31e6b9b1}",
+      "model": {
+        "_CLASS_": "FunctionReturnNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "等待机械臂进入抓取工作空间"
+      },
+      "position": {
+        "x": 7870,
+        "y": -1791
+      }
+    },
+    {
+      "id": "{672602e9-98ba-44ca-9a59-b6152504150e}",
+      "model": {
+        "_CLASS_": "WaitDigitalSignalUntilNode",
+        "catch_error": false,
+        "cont_check_time_in_seconds": 1.0,
+        "dev_comment": "等待托盘确认清空信号",
+        "device_id": 0,
+        "expected_value": 1,
+        "sleep_interval_in_seconds": 0.5,
+        "start_port_id": 0,
+        "target_value": 1,
+        "timeout_in_seconds": 1.0
+      },
+      "position": {
+        "x": 5983,
+        "y": 4835
+      }
+    },
+    {
+      "id": "{6bcf2599-b589-4573-bcee-3454f291fca9}",
+      "model": {
+        "_CLASS_": "CycleCountNodeModel",
+        "catch_error": false,
+        "cycle_config": {
+          "average_flag": true,
+          "cnt_flag": true,
+          "last_flag": false,
+          "max_flag": true,
+          "min_flag": true,
+          "result_flag": false,
+          "stderr_flag": false
+        },
+        "cycle_flag": "CycleEnd",
+        "cycle_name": "获取视觉结果需要的时间",
+        "cycle_result": "成功",
+        "dev_comment": ""
+      },
+      "position": {
+        "x": 9736,
+        "y": -1398
+      }
+    },
+    {
+      "id": "{6d05270c-bd13-475e-9c40-f71a26a9e1cf}",
+      "model": {
+        "_CLASS_": "ClearWorkspaceNodeModel",
+        "catch_error": false,
+        "clean_container_group": true,
+        "clean_planned_group": true,
+        "dev_comment": "",
+        "workspace_id": 1
+      },
+      "position": {
+        "x": 6311,
+        "y": 4775
+      }
+    },
+    {
+      "id": "{6ec4ed5f-39fa-4dda-a2de-9143bdad5403}",
+      "model": {
+        "_CLASS_": "ClearEnvironmentNodeModel",
+        "catch_error": false,
+        "clear_all_workspaces": false,
+        "clear_full_padding": true,
+        "clear_motion_payload": true,
+        "clear_pickable": true,
+        "dev_comment": "清空所有抓取工作空间物体，并保留放置工作空间物体",
+        "robots": [
+          {
+            "is_absolute": true,
+            "path": [
+              "root",
+              "WorldFrame",
+              "ABB-IRB-6700-155-2-85"
+            ]
+          }
+        ],
+        "workspace_ids": [
+          0
+        ]
+      },
+      "position": {
+        "x": 3101,
+        "y": -806
+      }
+    },
+    {
+      "id": "{6f6a2fb0-27bb-4dc6-b7c8-2651530a288f}",
+      "model": {
+        "_CLASS_": "MotionExecutionNode",
+        "acc": 100,
+        "catch_error": false,
+        "dev_comment": "",
+        "mid_zone": 100,
+        "speed": 100,
+        "target_node_name": "postplace",
+        "zone": 100
+      },
+      "position": {
+        "x": 3730,
+        "y": 4545
+      }
+    },
+    {
+      "id": "{74e14f97-bc56-4c81-b857-3852b0a09cc5}",
+      "model": {
+        "_CLASS_": "FunctionCallNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "流图初始化"
+      },
+      "position": {
+        "x": -640,
+        "y": -2000
+      }
+    },
+    {
+      "id": "{791d64f7-2fc5-4d70-926e-cc378f0bf21e}",
+      "model": {
+        "_CLASS_": "FunctionEventNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_def": {
+          "in_args": null,
+          "logic_out_ports": [
+            "成功"
+          ],
+          "out_args": null
+        },
+        "func_name": "等待机械臂进入抓取工作空间"
+      },
+      "position": {
+        "x": 6890,
+        "y": -1741
+      }
+    },
+    {
+      "id": "{7c52d2e7-7d9e-431e-80a1-4d7cb19a6a65}",
+      "model": {
+        "_CLASS_": "UpdateWorkspaceCollisionsNode",
+        "catch_error": false,
+        "collision_for_other_workspaces": true,
+        "collision_workspace_ids": null,
+        "dev_comment": "更新规划环境",
+        "non_collision_for_from_and_to_workspace": true,
+        "non_collision_workspace_ids": null
+      },
+      "position": {
+        "x": 1356,
+        "y": 2212
+      }
+    },
+    {
+      "embedded_widget_rect": {
+        "h": 87,
+        "w": 928
+      },
+      "id": "{7d5e53d7-52e4-4fe9-aab3-3800f5867d73}",
+      "model": {
+        "_CLASS_": "HmiExceptionProcessNodeModel",
+        "adding_box_slot_colors": null,
+        "catch_error": false,
+        "dev_comment": "",
+        "exception_type": "CheckEnv",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "image_file_path": "HmiExceptionProcessNodeModel_check_env.svg",
+        "manual_set_backend_address": false,
+        "notice_text": "<p>请仔细确认当前虚拟环境垛型和真实现场环境垛型是否一致。</p><p>仿真环境中黄色表示待放置的位置（无物体），绿色表示已经放置好的。</p><p style=\"color: #E85F5F;\">警告：如果环境信息确认错误，可能发生装箱等事故并压坏货物！不清楚如何确认请参考《产品使用说明书》中《异常处理》章节。</p>",
+        "title": "码垛环境检查"
+      },
+      "position": {
+        "x": 0,
+        "y": -800
+      }
+    },
+    {
+      "id": "{7e040b69-5553-4638-a969-cfb6b6a8bd5b}",
+      "model": {
+        "_CLASS_": "FunctionCallNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "获取视觉"
+      },
+      "position": {
+        "x": 796,
+        "y": 968
+      }
+    },
+    {
+      "id": "{7ed0ff49-790c-412a-8097-23f65c329277}",
+      "model": {
+        "_CLASS_": "MotionExecutionNode",
+        "acc": 10,
+        "catch_error": false,
+        "dev_comment": "",
+        "mid_zone": 0,
+        "speed": 30,
+        "target_node_name": "place",
+        "zone": 0
+      },
+      "position": {
+        "x": 2484,
+        "y": 4584
+      }
+    },
+    {
+      "id": "{817b6c85-8bc6-414b-a95a-3bfc84ab938f}",
+      "model": {
+        "_CLASS_": "NotifyHMINodeModel",
+        "catch_error": false,
+        "dev_comment": "运动规划失败",
+        "enable_trilight": true,
+        "error_code": 40000,
+        "error_msg": "运动规划失败",
+        "error_tip": "请联系售后人员",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "status": "ERR",
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": 3051,
+        "y": -1988
+      }
+    },
+    {
+      "id": "{832b3e11-10d1-47a3-9858-71aee223ab87}",
+      "model": {
+        "_CLASS_": "FunctionEventNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_def": {
+          "in_args": null,
+          "logic_out_ports": [
+            "成功"
+          ],
+          "out_args": null
+        },
+        "func_name": "机械臂已进入抓取工作空间"
+      },
+      "position": {
+        "x": 6890,
+        "y": -2241
+      }
+    },
+    {
+      "id": "{83b2dc04-d9c4-4900-83e8-4122bdbedb16}",
+      "model": {
+        "_CLASS_": "VarReadNodeModel",
+        "cases": null,
+        "catch_error": false,
+        "dev_comment": "",
+        "reject_values_outside_cases": false,
+        "var_name": "_sku_info",
+        "var_scope": "SCENE",
+        "var_type": "SKU_INFO",
+        "wait_value_timeout": 3.0
+      },
+      "position": {
+        "x": -824,
+        "y": 1561
+      }
+    },
+    {
+      "id": "{86c0d086-16e9-4111-bb98-8ffec4306ef1}",
+      "model": {
+        "_CLASS_": "VarWriteNodeModel",
+        "catch_error": false,
+        "clear_variable": false,
+        "default_value": "1",
+        "dev_comment": "是否是并行的第一次规划",
+        "var_name": "is_first_one",
+        "var_scope": "SCENE",
+        "var_type": "INT"
+      },
+      "position": {
+        "x": 981,
+        "y": -71
+      }
+    },
+    {
+      "id": "{86e2de1e-9f32-4458-9be9-17d326051f48}",
+      "model": {
+        "_CLASS_": "FunctionEventNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_def": {
+          "in_args": null,
+          "logic_out_ports": [
+            "成功"
+          ],
+          "out_args": null
+        },
+        "func_name": "夹具放置动作"
+      },
+      "position": {
+        "x": 7427,
+        "y": 102
+      }
+    },
+    {
+      "id": "{87745c0f-4a94-4676-b8c2-a6cd0f016bb1}",
+      "model": {
+        "_CLASS_": "CycleCountNodeModel",
+        "catch_error": false,
+        "cycle_config": {
+          "average_flag": true,
+          "cnt_flag": true,
+          "last_flag": false,
+          "max_flag": true,
+          "min_flag": true,
+          "result_flag": false,
+          "stderr_flag": false
+        },
+        "cycle_flag": "CycleStart",
+        "cycle_name": "获取视觉结果需要的时间",
+        "cycle_result": "成功",
+        "dev_comment": ""
+      },
+      "position": {
+        "x": 8790,
+        "y": -1391
+      }
+    },
+    {
+      "id": "{8c93962c-f10e-4353-bbe3-a551860f4157}",
+      "model": {
+        "_CLASS_": "CycleCountNodeModel",
+        "catch_error": false,
+        "cycle_config": {
+          "average_flag": true,
+          "cnt_flag": true,
+          "last_flag": false,
+          "max_flag": true,
+          "min_flag": true,
+          "result_flag": false,
+          "stderr_flag": false
+        },
+        "cycle_flag": "CycleEnd",
+        "cycle_name": "单次求解需要的时间",
+        "cycle_result": "成功",
+        "dev_comment": ""
+      },
+      "position": {
+        "x": 4781,
+        "y": 1823
+      }
+    },
+    {
+      "id": "{8cfdd7ff-be31-4f0c-8a1b-d432a39febea}",
+      "model": {
+        "_CLASS_": "NotifyHMINodeModel",
+        "catch_error": false,
+        "dev_comment": "码垛位托盘未到位",
+        "enable_trilight": true,
+        "error_code": 80002,
+        "error_msg": "收到码垛消息，但检测到码垛位托盘未到位",
+        "error_tip": "请检测码垛位托盘是否到位，检测PLC信号是否到位",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "status": "ERR",
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": 1080,
+        "y": 4862
+      }
+    },
+    {
+      "id": "{8e87ccfc-3be4-4626-bed6-90b9666c70fa}",
+      "model": {
+        "_CLASS_": "FunctionReturnNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "获取视觉"
+      },
+      "position": {
+        "x": 10250,
+        "y": -1391
+      }
+    },
+    {
+      "id": "{8fdccc0a-db56-4db2-b991-a3d7b2c007d1}",
+      "model": {
+        "_CLASS_": "WaitDigitalSignalUntilNode",
+        "catch_error": false,
+        "cont_check_time_in_seconds": 1.0,
+        "dev_comment": "等待托盘确认清空信号",
+        "device_id": 0,
+        "expected_value": 1,
+        "sleep_interval_in_seconds": 0.5,
+        "start_port_id": 0,
+        "target_value": 1,
+        "timeout_in_seconds": 1.0
+      },
+      "position": {
+        "x": 3354,
+        "y": -1522
+      }
+    },
+    {
+      "id": "{941addbe-75e2-43dc-af2c-89809b319657}",
+      "model": {
+        "_CLASS_": "NotifyHMINodeModel",
+        "catch_error": false,
+        "dev_comment": "掉箱[需修改参数]",
+        "enable_trilight": true,
+        "error_code": 69999,
+        "error_msg": "发生掉箱",
+        "error_tip": "请按照异常处理流程恢复掉箱异常",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "status": "ERR",
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": 2518,
+        "y": -2254
+      }
+    },
+    {
+      "id": "{9583ee80-5a5b-45f6-bf92-070348be6b32}",
+      "model": {
+        "_CLASS_": "AddRelativeNode",
+        "attached_obj_collision_operation": "None",
+        "base_frame": "ToWs",
+        "catch_error": false,
+        "change_robot_base_tf_at_planning": false,
+        "check_path_collision": false,
+        "check_point_collision": false,
+        "collision_check": "kTail",
+        "dev_comment": "",
+        "dsafe": {
+          "at_goal": 0.05,
+          "at_start": 0.05,
+          "midway": 0.05
+        },
+        "edit_interp_params": true,
+        "interp_config_params": {
+          "coarse_angle_rez": 0.2,
+          "coarse_distance_rez": 0.2,
+          "fine_angle_rez": 0.05,
+          "fine_distance_rez": 0.05
+        },
+        "move_type": "MoveJ",
+        "node_name": "near_place",
+        "pick_place_flag": 0,
+        "relative_node_name": "place",
+        "relative_poses": [
+          {
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.05
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "smart_planner_option": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "astar_options": {
+            "_RESOURCE_": "xyz::motion_solver::AStarCartesianR3Planner::Options",
+            "goal_region_grids_range": 2,
+            "greedy_coeff": 2.0,
+            "grid_resolution": 0.1,
+            "grid_super_resolution": 0.1,
+            "max_number_of_iterations": 100000,
+            "move_type": "kMoveJ",
+            "number_of_rotation_interpolations": 5,
+            "post_collision_check": false,
+            "return_detailed_info": false,
+            "simplify_path_level": "kNo",
+            "singular_range": -1.0,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "start_and_goal_too_close_threshold": 1e-05,
+            "start_dist_increase_tolerance": 0.01,
+            "start_region_grids_range": 2,
+            "timeout": 3.0,
+            "use_theta_star": true,
+            "verbosity": "kSilent"
+          },
+          "astar_timeout": 0.7,
+          "early_exit": false,
+          "early_exit_simplify_level": "kNormal",
+          "first_wopt_timeout": 0.4,
+          "force_over_workspace": false,
+          "number_of_interpolations_when_initial_guess_is_straight_line": 3,
+          "number_of_reinterpolations_after_simplification": 5,
+          "over_workspace_timeout": 0.2,
+          "planning_method": "kSequential",
+          "post_distance_check": true,
+          "post_solve_simplification": true,
+          "prm_options": {
+            "_RESOURCE_": "xyz::motion_solver::PRMPlanner::Options",
+            "connect_planner": "kAStarPlanner",
+            "minimum_waypoint_num": 10,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "timeout": 2.0,
+            "verbosity": "kSilent"
+          },
+          "reinterpolate_after_simplification": true,
+          "return_detailed_info": false,
+          "safety_distance_check_margin": 0.025,
+          "simplify_initial_guess_from_planner": true,
+          "singular_range": 0.1,
+          "skip_options_sanity_check": false,
+          "skip_problem_sanity_check": false,
+          "smart_planner_move_type": "kMoveJ",
+          "timeout": 100.0,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          },
+          "verbosity": "kSilent",
+          "wopt_options": {
+            "_RESOURCE_": "xyz::motion_solver::WoptPlanner::Options",
+            "ctol": 0.005,
+            "dcheck": null,
+            "dsafe": null,
+            "improve_ratio_threshold": 0.2,
+            "limit_joint": false,
+            "max_convexify_iter": 40,
+            "max_merit_coeff_increase": 5,
+            "max_retries": 7,
+            "merit_coeff_increase_ratio": 10,
+            "merit_error_coeff": 1.0,
+            "min_approx_improve": 0.0001,
+            "min_approx_improve_frac": 0.001,
+            "min_trust_box_size": 0.0001,
+            "number_of_swept_interpolations": 4,
+            "number_of_waypoints": 8,
+            "post_solve_simplification": false,
+            "post_solve_verification": true,
+            "post_solve_verification_interpolation_resolution": 0.01,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "taud": 0.2,
+            "taui": 1.5,
+            "timeout": 100.0,
+            "trust_box_size": 0.5,
+            "verbosity": "kSilent"
+          }
+        },
+        "smart_planner_options_data": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "force_over_workspace": false,
+          "planner_timeout": 2.0,
+          "planning_method": "kSequential",
+          "post_solve_simplification": true,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          }
+        },
+        "target_frame_name": "ToWs",
+        "target_robot_base_poses": null,
+        "ws_obj_collision_operation": "None",
+        "ws_type": "Pick"
+      },
+      "position": {
+        "x": 3872,
+        "y": 2608
+      }
+    },
+    {
+      "id": "{958bcd26-bad3-486c-8fea-3372a96366b2}",
+      "model": {
+        "_CLASS_": "ClearWorkspaceNodeModel",
+        "catch_error": false,
+        "clean_container_group": true,
+        "clean_planned_group": true,
+        "dev_comment": "",
+        "workspace_id": 1
+      },
+      "position": {
+        "x": 3801,
+        "y": -1595
+      }
+    },
+    {
+      "id": "{964879fe-8d2a-414a-9448-15820bcc6f79}",
+      "model": {
+        "_CLASS_": "FunctionAsyncCallNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "运动规划"
+      },
+      "position": {
+        "x": 900,
+        "y": -2000
+      }
+    },
+    {
+      "id": "{96f1e756-044b-4a03-bf4e-4818dab7284d}",
+      "model": {
+        "GetCurrentRobotJoints": true,
+        "_CLASS_": "AddAbsoluteNode",
+        "attached_obj_collision_operation": "None",
+        "catch_error": false,
+        "change_robot_base_tf_at_planning": false,
+        "check_path_collision": false,
+        "check_point_collision": false,
+        "collision_check": "kTail",
+        "dev_comment": "",
+        "dsafe": {
+          "at_goal": 0.025,
+          "at_start": 0.025,
+          "midway": 0.025
+        },
+        "edit_interp_params": false,
+        "frame_name": "${ef}",
+        "frame_poses": null,
+        "interp_config_params": {
+          "coarse_angle_rez": 0.2,
+          "coarse_distance_rez": 0.2,
+          "fine_angle_rez": 0.05,
+          "fine_distance_rez": 0.05
+        },
+        "move_type": "MoveJ",
+        "node_name": "pick",
+        "pick_place_flag": 1,
+        "place_drop_height": 0.0,
+        "robot": {
+          "is_absolute": true,
+          "path": [
+            "root",
+            "WorldFrame",
+            "ABB-IRB-6700-155-2-85"
+          ]
+        },
+        "smart_planner_option": {
+          "add_downward_constraint": false,
+          "add_tip_direction_constraint": false,
+          "astar_options": {
+            "_RESOURCE_": "xyz::motion_solver::AStarCartesianR3Planner::Options",
+            "goal_region_grids_range": 2,
+            "greedy_coeff": 2.0,
+            "grid_resolution": 0.1,
+            "grid_super_resolution": 0.1,
+            "max_number_of_iterations": 100000,
+            "move_type": "kMoveJ",
+            "number_of_rotation_interpolations": 5,
+            "post_collision_check": false,
+            "return_detailed_info": false,
+            "simplify_path_level": "kNo",
+            "singular_range": -1.0,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "start_and_goal_too_close_threshold": 1e-05,
+            "start_dist_increase_tolerance": 0.01,
+            "start_region_grids_range": 2,
+            "timeout": 3.0,
+            "use_theta_star": true,
+            "verbosity": "kSilent"
+          },
+          "astar_timeout": 0.7,
+          "early_exit": false,
+          "early_exit_simplify_level": "kNormal",
+          "first_wopt_timeout": 0.4,
+          "force_over_workspace": false,
+          "number_of_interpolations_when_initial_guess_is_straight_line": 3,
+          "number_of_reinterpolations_after_simplification": 10,
+          "over_workspace_timeout": 0.2,
+          "planning_method": "kSequential",
+          "post_distance_check": true,
+          "post_solve_simplification": false,
+          "prm_options": {
+            "_RESOURCE_": "xyz::motion_solver::PRMPlanner::Options",
+            "connect_planner": "kAStarPlanner",
+            "minimum_waypoint_num": 10,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "timeout": 2.0,
+            "verbosity": "kSilent"
+          },
+          "reinterpolate_after_simplification": true,
+          "return_detailed_info": false,
+          "safety_distance_check_margin": 0.025,
+          "simplify_initial_guess_from_planner": true,
+          "singular_range": 0.1,
+          "skip_options_sanity_check": false,
+          "skip_problem_sanity_check": false,
+          "smart_planner_move_type": "kMoveJ",
+          "timeout": 100.0,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          },
+          "verbosity": "kSilent",
+          "wopt_options": {
+            "_RESOURCE_": "xyz::motion_solver::WoptPlanner::Options",
+            "ctol": 0.005,
+            "dcheck": null,
+            "dsafe": null,
+            "improve_ratio_threshold": 0.2,
+            "limit_joint": false,
+            "max_convexify_iter": 40,
+            "max_merit_coeff_increase": 5,
+            "max_retries": 7,
+            "merit_coeff_increase_ratio": 10,
+            "merit_error_coeff": 1.0,
+            "min_approx_improve": 0.0001,
+            "min_approx_improve_frac": 0.001,
+            "min_trust_box_size": 0.0001,
+            "number_of_swept_interpolations": 4,
+            "number_of_waypoints": 8,
+            "post_solve_simplification": false,
+            "post_solve_verification": true,
+            "post_solve_verification_interpolation_resolution": 0.01,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "taud": 0.2,
+            "taui": 1.5,
+            "timeout": 100.0,
+            "trust_box_size": 0.5,
+            "verbosity": "kSilent"
+          }
+        },
+        "smart_planner_options_data": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "force_over_workspace": false,
+          "planner_timeout": 2.0,
+          "planning_method": "kSequential",
+          "post_solve_simplification": true,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          }
+        },
+        "target_robot_base_poses": null,
+        "target_robot_joints": null,
+        "ws_obj_collision_operation": "None",
+        "ws_type": "Pick"
+      },
+      "position": {
+        "x": 3030,
+        "y": 2572
+      }
+    },
+    {
+      "id": "{9c7a1a43-25a2-4e66-a31e-bbbafa81b18a}",
+      "model": {
+        "_CLASS_": "FunctionCallNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "夹具放置动作"
+      },
+      "position": {
+        "x": 1840,
+        "y": -800
+      }
+    },
+    {
+      "id": "{9c936491-fbdb-439b-b4b5-3d609e0ed95f}",
+      "model": {
+        "_CLASS_": "VarWriteNodeModel",
+        "catch_error": false,
+        "clear_variable": false,
+        "default_value": "1",
+        "dev_comment": "是否是每层的第一次规划",
+        "var_name": "is_first_one",
+        "var_scope": "SCENE",
+        "var_type": "INT"
+      },
+      "position": {
+        "x": 1480,
+        "y": -800
+      }
+    },
+    {
+      "embedded_widget_rect": {
+        "h": 21,
+        "w": 0
+      },
+      "id": "{9d2cfb4b-ce92-4511-9f66-4b6fee9870c2}",
+      "model": {
+        "_CLASS_": "HmiExceptionProcessNodeModel",
+        "adding_box_slot_colors": null,
+        "catch_error": false,
+        "dev_comment": "",
+        "exception_type": "CheckOrder",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "image_file_path": "HmiExceptionProcessNodeModel_check_env.svg",
+        "manual_set_backend_address": false,
+        "notice_text": "<p>请仔细确认当前虚拟环境垛型和真实现场环境垛型是否一致。</p><p>仿真环境中黄色表示待放置的位置（无物体），绿色表示已经放置好的。</p><p style=\"color: #E85F5F;\">警告：如果环境信息确认错误，可能发生装箱等事故并压坏货物！不清楚如何确认请参考《产品使用说明书》中《异常处理》章节。</p>",
+        "title": "码垛环境检查"
+      },
+      "position": {
+        "x": -280,
+        "y": -800
+      }
+    },
+    {
+      "id": "{9f20626f-2d67-4454-870d-06837fb41ac0}",
+      "model": {
+        "_CLASS_": "FunctionEventNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_def": {
+          "in_args": [
+            {
+              "name": "q0",
+              "type": "VPJOINTDATA"
+            }
+          ],
+          "logic_out_ports": [
+            "成功"
+          ],
+          "out_args": [
+            {
+              "name": "qf",
+              "type": "VPJOINTDATA"
+            },
+            {
+              "name": "执行负载",
+              "type": "EXECUTION_PAYLOAD"
+            }
+          ]
+        },
+        "func_name": "任务初始化"
+      },
+      "position": {
+        "x": -989,
+        "y": -54
+      }
+    },
+    {
+      "id": "{a2a09d26-c89d-4adf-b2fd-ec5c51f05d1c}",
+      "model": {
+        "_CLASS_": "VarWriteNodeModel",
+        "catch_error": false,
+        "clear_variable": false,
+        "default_value": "0",
+        "dev_comment": "是否是每层的第一次规划",
+        "var_name": "is_first_one",
+        "var_scope": "SCENE",
+        "var_type": "INT"
+      },
+      "position": {
+        "x": 2150,
+        "y": -1758
+      }
+    },
+    {
+      "id": "{a2cbb71a-50a5-402a-a408-7f3411182695}",
+      "model": {
+        "_CLASS_": "CycleCountNodeModel",
+        "catch_error": false,
+        "cycle_config": {
+          "average_flag": true,
+          "cnt_flag": true,
+          "last_flag": false,
+          "max_flag": true,
+          "min_flag": true,
+          "result_flag": false,
+          "stderr_flag": false
+        },
+        "cycle_flag": "CycleStart",
+        "cycle_name": "运动规划总的时间",
+        "cycle_result": "成功",
+        "dev_comment": ""
+      },
+      "position": {
+        "x": 348,
+        "y": 2100
+      }
+    },
+    {
+      "id": "{ac94c796-a597-4624-aaba-8261ded5f0a8}",
+      "model": {
+        "_CLASS_": "FunctionReturnNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "运动规划"
+      },
+      "position": {
+        "x": 5646,
+        "y": 1096
+      }
+    },
+    {
+      "id": "{affe0a07-4d52-4007-a3a0-3834cdbd0f87}",
+      "model": {
+        "_CLASS_": "CycleCountNodeModel",
+        "catch_error": false,
+        "cycle_config": {
+          "average_flag": true,
+          "cnt_flag": true,
+          "last_flag": false,
+          "max_flag": true,
+          "min_flag": true,
+          "result_flag": false,
+          "stderr_flag": false
+        },
+        "cycle_flag": "CycleEnd",
+        "cycle_name": "运动规划总的时间",
+        "cycle_result": "成功",
+        "dev_comment": ""
+      },
+      "position": {
+        "x": 5176,
+        "y": 1741
+      }
+    },
+    {
+      "id": "{b6583ed2-4c15-42ee-ac97-ff6b354be8b6}",
+      "model": {
+        "_CLASS_": "NotifyHMINodeModel",
+        "catch_error": false,
+        "dev_comment": "读取全局变量异常",
+        "enable_trilight": true,
+        "error_code": 69999,
+        "error_msg": "变量读取超时错误，该错误不该发生，请检查流图是否正确",
+        "error_tip": "请联系售后人员",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "status": "ERR",
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": 1905,
+        "y": -1641
+      }
+    },
+    {
+      "id": "{b6d8069b-afda-435e-ab9b-5c35dface3f6}",
+      "model": {
+        "_CLASS_": "FunctionReturnNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "流图初始化"
+      },
+      "position": {
+        "x": 3980,
+        "y": -800
+      }
+    },
+    {
+      "id": "{bc869799-cecc-42b7-99b9-bbef625ac0b4}",
+      "model": {
+        "_CLASS_": "FunctionReturnNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "夹具放置动作"
+      },
+      "position": {
+        "x": 8562,
+        "y": 84
+      }
+    },
+    {
+      "id": "{bda11f01-8f45-40cc-bf26-3f0f900ad998}",
+      "model": {
+        "_CLASS_": "VarReadNodeModel",
+        "cases": null,
+        "catch_error": false,
+        "dev_comment": "判断是否是每层的第一次规划",
+        "reject_values_outside_cases": false,
+        "var_name": "is_first_one",
+        "var_scope": "SCENE",
+        "var_type": "INT",
+        "wait_value_timeout": 0.0
+      },
+      "position": {
+        "x": 1260,
+        "y": -2000
+      }
+    },
+    {
+      "id": "{c19dd7c1-f212-4ba3-bd13-d0ae8d0266a6}",
+      "model": {
+        "_CLASS_": "VarReadNodeModel",
+        "cases": [
+          "0"
+        ],
+        "catch_error": false,
+        "dev_comment": "",
+        "reject_values_outside_cases": false,
+        "var_name": "lock",
+        "var_scope": "SCENE",
+        "var_type": "INT",
+        "wait_value_timeout": 3.0
+      },
+      "position": {
+        "x": 7330,
+        "y": -1741
+      }
+    },
+    {
+      "id": "{c1b47834-7688-4b5a-9b60-a787ad8d741e}",
+      "model": {
+        "_CLASS_": "AddRelativeNode",
+        "attached_obj_collision_operation": "None",
+        "base_frame": "FromWs",
+        "catch_error": false,
+        "change_robot_base_tf_at_planning": false,
+        "check_path_collision": true,
+        "check_point_collision": true,
+        "collision_check": "kTail",
+        "dev_comment": "",
+        "dsafe": {
+          "at_goal": 0.05,
+          "at_start": 0.05,
+          "midway": 0.05
+        },
+        "edit_interp_params": true,
+        "interp_config_params": {
+          "coarse_angle_rez": 0.2,
+          "coarse_distance_rez": 0.2,
+          "fine_angle_rez": 0.05,
+          "fine_distance_rez": 0.05
+        },
+        "move_type": "SmartPlanner",
+        "node_name": "prepick",
+        "pick_place_flag": 0,
+        "relative_node_name": "pick",
+        "relative_poses": [
+          {
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.25
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "smart_planner_option": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "astar_options": {
+            "_RESOURCE_": "xyz::motion_solver::AStarCartesianR3Planner::Options",
+            "goal_region_grids_range": 2,
+            "greedy_coeff": 2.0,
+            "grid_resolution": 0.1,
+            "grid_super_resolution": 0.1,
+            "max_number_of_iterations": 100000,
+            "move_type": "kMoveJ",
+            "number_of_rotation_interpolations": 5,
+            "post_collision_check": false,
+            "return_detailed_info": false,
+            "simplify_path_level": "kNo",
+            "singular_range": -1.0,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "start_and_goal_too_close_threshold": 1e-05,
+            "start_dist_increase_tolerance": 0.01,
+            "start_region_grids_range": 2,
+            "timeout": 3.0,
+            "use_theta_star": true,
+            "verbosity": "kSilent"
+          },
+          "astar_timeout": 0.7,
+          "early_exit": false,
+          "early_exit_simplify_level": "kNormal",
+          "first_wopt_timeout": 0.4,
+          "force_over_workspace": false,
+          "number_of_interpolations_when_initial_guess_is_straight_line": 3,
+          "number_of_reinterpolations_after_simplification": 8,
+          "over_workspace_timeout": 0.2,
+          "planning_method": "kSequential",
+          "post_distance_check": true,
+          "post_solve_simplification": true,
+          "prm_options": {
+            "_RESOURCE_": "xyz::motion_solver::PRMPlanner::Options",
+            "connect_planner": "kAStarPlanner",
+            "minimum_waypoint_num": 10,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "timeout": 2.0,
+            "verbosity": "kSilent"
+          },
+          "reinterpolate_after_simplification": true,
+          "return_detailed_info": false,
+          "safety_distance_check_margin": 0.025,
+          "simplify_initial_guess_from_planner": true,
+          "singular_range": 0.1,
+          "skip_options_sanity_check": false,
+          "skip_problem_sanity_check": false,
+          "smart_planner_move_type": "kMoveJ",
+          "timeout": 100.0,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          },
+          "verbosity": "kSilent",
+          "wopt_options": {
+            "_RESOURCE_": "xyz::motion_solver::WoptPlanner::Options",
+            "ctol": 0.005,
+            "dcheck": null,
+            "dsafe": null,
+            "improve_ratio_threshold": 0.2,
+            "limit_joint": false,
+            "max_convexify_iter": 40,
+            "max_merit_coeff_increase": 5,
+            "max_retries": 7,
+            "merit_coeff_increase_ratio": 10,
+            "merit_error_coeff": 1.0,
+            "min_approx_improve": 0.0001,
+            "min_approx_improve_frac": 0.001,
+            "min_trust_box_size": 0.0001,
+            "number_of_swept_interpolations": 4,
+            "number_of_waypoints": 8,
+            "post_solve_simplification": false,
+            "post_solve_verification": true,
+            "post_solve_verification_interpolation_resolution": 0.01,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "taud": 0.2,
+            "taui": 1.5,
+            "timeout": 100.0,
+            "trust_box_size": 0.5,
+            "verbosity": "kSilent"
+          }
+        },
+        "smart_planner_options_data": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "force_over_workspace": false,
+          "planner_timeout": 2.0,
+          "planning_method": "kSequential",
+          "post_solve_simplification": true,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          }
+        },
+        "target_frame_name": "FromWs",
+        "target_robot_base_poses": null,
+        "ws_obj_collision_operation": "None",
+        "ws_type": "Pick"
+      },
+      "position": {
+        "x": 2733,
+        "y": 2567
+      }
+    },
+    {
+      "id": "{c258a7d9-213f-4d36-b606-1ac4fd35b226}",
+      "model": {
+        "_CLASS_": "BoxPickPlanningNode",
+        "catch_error": false,
+        "dev_comment": "[需修改参数]",
+        "enable_error": true,
+        "input_ws_manually": false,
+        "match_pipeline_file_path": "resources/grasps_places/combination_pipeline/抓放组合处理流程",
+        "pick_workspace_id": 0,
+        "place_workspace_id": 1,
+        "use_input_merge_num": false
+      },
+      "position": {
+        "x": -135,
+        "y": 1505
+      }
+    },
+    {
+      "id": "{c33e4eb3-69d9-4efe-84c6-2e907c34ab84}",
+      "model": {
+        "_CLASS_": "FunctionEventNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_def": {
+          "in_args": null,
+          "logic_out_ports": [
+            "成功"
+          ],
+          "out_args": null
+        },
+        "func_name": "夹具抓取动作"
+      },
+      "position": {
+        "x": 7460,
+        "y": -539
+      }
+    },
+    {
+      "id": "{c46ea6d0-e83e-4ace-80a2-e0cad658ea64}",
+      "model": {
+        "_CLASS_": "PalletizeVisionResultNodeModel",
+        "bar_code": false,
+        "capture_image_timeout": 3.0,
+        "catch_error": false,
+        "check_dimension_consistency": false,
+        "check_empty_tote": true,
+        "check_primitive_cloud": true,
+        "debug_option": "kNone",
+        "dev_comment": "",
+        "dimension_2d_update_manner": "kUseInputSKU",
+        "dimension_check_fail_op": "kNone",
+        "dimension_check_mode": "kDisable",
+        "enable_bottom_padding": true,
+        "enable_mixdepalletize": false,
+        "enable_point_cloud": false,
+        "enable_point_cloud_filling": true,
+        "enable_shrink_size": true,
+        "enable_tri_color": true,
+        "eye_in_hand_mode": false,
+        "height_err_tols": 0.03,
+        "height_update_manner": "kUseInputSKU",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "if_capture": true,
+        "io_device_name": "",
+        "length_err_tols": 0.05,
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "max_allowed_overlap_percentage": 0.03,
+        "max_allowed_shrink_percentage": 0.3,
+        "max_num_capture_image": 1,
+        "max_sku_height": 0.0,
+        "min_sku_height": 0.27,
+        "mode": "kPhysicalVision",
+        "modify_z_offset": true,
+        "octree_grid_size": 0.01,
+        "point_cloud_project_plane_normal": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 1.0
+        },
+        "pointcloud_num_contacts_threshold": 15,
+        "remote_local_helper": false,
+        "robot_id": 0,
+        "set_vision_from_property": false,
+        "tri_color_light_setting": {
+          "device_id": 2,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        },
+        "vision_service_id": "0",
+        "vision_sku_type": "kTote",
+        "width_err_tols": 0.05,
+        "workspace_id": 0,
+        "workspace_id_source": "kDataInput"
+      },
+      "position": {
+        "x": 9250,
+        "y": -1441
+      }
+    },
+    {
+      "id": "{c8a54ae6-feb9-4af4-902b-ba8f1fa59f15}",
+      "model": {
+        "_CLASS_": "FunctionEventNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_def": {
+          "in_args": null,
+          "logic_out_ports": [
+            "成功"
+          ],
+          "out_args": null
+        },
+        "func_name": "流图初始化"
+      },
+      "position": {
+        "x": -1060,
+        "y": -800
+      }
+    },
+    {
+      "id": "{c8babde9-451b-44ce-aad5-7a9d9afe99e9}",
+      "model": {
+        "_CLASS_": "SleepNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "sleep_sec": 0.5
+      },
+      "position": {
+        "x": 8342,
+        "y": 84
+      }
+    },
+    {
+      "id": "{c8faf79f-9158-4a5e-94a5-4040e7ec0e7e}",
+      "model": {
+        "_CLASS_": "AddPlaceNodes",
+        "catch_error": false,
+        "consider_pick_converyor_collision": true,
+        "dev_comment": "",
+        "disable_slide_aco": false,
+        "dsafe": {
+          "at_goal": 0.03,
+          "at_start": 0.03,
+          "midway": 0.05
+        },
+        "edit_advanced_params": true,
+        "extended_object_dsafe": {
+          "at_goal": 0.0,
+          "at_start": 0.0,
+          "midway": 0.0
+        },
+        "inverse_pre_place": false,
+        "near_place_info": {
+          "check_path_collision": true,
+          "check_point_collision": false,
+          "collision_check_order": "kHead",
+          "move_type": "MoveL"
+        },
+        "near_place_relative_poses": [
+          {
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.05
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "place_drop_height": 0.002,
+        "place_info": {
+          "check_path_collision": false,
+          "check_point_collision": false,
+          "collision_check_order": "kHead",
+          "move_type": "MoveL"
+        },
+        "postplace_info": {
+          "check_path_collision": false,
+          "check_point_collision": false,
+          "collision_check_order": "kHead",
+          "move_type": "MoveL"
+        },
+        "postplace_relative_poses": [
+          {
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.35000000000000003
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "preplace_info": {
+          "check_path_collision": false,
+          "check_point_collision": false,
+          "collision_check_order": "kHead",
+          "move_type": "SmartPlanner"
+        },
+        "preplace_relative_poses": [
+          {
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.3
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "slide_interp_config_params": {
+          "coarse_angle_rez": 0.2,
+          "coarse_distance_rez": 0.2,
+          "fine_angle_rez": 0.05,
+          "fine_distance_rez": 0.05
+        },
+        "slide_start_info": {
+          "check_path_collision": true,
+          "check_point_collision": true,
+          "collision_check_order": "kHead",
+          "move_type": "MoveL"
+        },
+        "slide_start_relative_poses": [
+          {
+            "position": {
+              "x": 0.05,
+              "y": 0.05,
+              "z": 0.1
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          {
+            "position": {
+              "x": -0.05,
+              "y": 0.05,
+              "z": 0.1
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          {
+            "position": {
+              "x": 0.05,
+              "y": -0.05,
+              "z": 0.1
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          {
+            "position": {
+              "x": -0.05,
+              "y": -0.05,
+              "z": 0.1
+            },
+            "quaternion": {
+              "w": 1.0,
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "smart_planner_option": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "astar_options": {
+            "_RESOURCE_": "xyz::motion_solver::AStarCartesianR3Planner::Options",
+            "goal_region_grids_range": 2,
+            "greedy_coeff": 2.0,
+            "grid_resolution": 0.1,
+            "grid_super_resolution": 0.1,
+            "max_number_of_iterations": 100000,
+            "move_type": "kMoveJ",
+            "number_of_rotation_interpolations": 5,
+            "post_collision_check": false,
+            "return_detailed_info": false,
+            "simplify_path_level": "kNo",
+            "singular_range": -1.0,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "start_and_goal_too_close_threshold": 1e-05,
+            "start_dist_increase_tolerance": 0.01,
+            "start_region_grids_range": 2,
+            "timeout": 3.0,
+            "use_theta_star": true,
+            "verbosity": "kSilent"
+          },
+          "astar_timeout": 0.7,
+          "early_exit": false,
+          "early_exit_simplify_level": "kNormal",
+          "first_wopt_timeout": 0.4,
+          "force_over_workspace": false,
+          "number_of_interpolations_when_initial_guess_is_straight_line": 3,
+          "number_of_reinterpolations_after_simplification": 10,
+          "over_workspace_timeout": 0.2,
+          "planning_method": "kSequential",
+          "post_distance_check": true,
+          "post_solve_simplification": true,
+          "prm_options": {
+            "_RESOURCE_": "xyz::motion_solver::PRMPlanner::Options",
+            "connect_planner": "kAStarPlanner",
+            "minimum_waypoint_num": 10,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "timeout": 2.0,
+            "verbosity": "kSilent"
+          },
+          "reinterpolate_after_simplification": true,
+          "return_detailed_info": false,
+          "safety_distance_check_margin": 0.025,
+          "simplify_initial_guess_from_planner": true,
+          "singular_range": 0.1,
+          "skip_options_sanity_check": false,
+          "skip_problem_sanity_check": false,
+          "smart_planner_move_type": "kMoveJ",
+          "timeout": 2.0,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          },
+          "verbosity": "kSilent",
+          "wopt_options": {
+            "_RESOURCE_": "xyz::motion_solver::WoptPlanner::Options",
+            "ctol": 0.005,
+            "dcheck": null,
+            "dsafe": null,
+            "improve_ratio_threshold": 0.2,
+            "limit_joint": false,
+            "max_convexify_iter": 40,
+            "max_merit_coeff_increase": 5,
+            "max_retries": 7,
+            "merit_coeff_increase_ratio": 10,
+            "merit_error_coeff": 1.0,
+            "min_approx_improve": 0.0001,
+            "min_approx_improve_frac": 0.001,
+            "min_trust_box_size": 0.0001,
+            "number_of_swept_interpolations": 4,
+            "number_of_waypoints": 8,
+            "post_solve_simplification": false,
+            "post_solve_verification": true,
+            "post_solve_verification_interpolation_resolution": 0.01,
+            "return_detailed_info": false,
+            "skip_options_sanity_check": false,
+            "skip_problem_sanity_check": false,
+            "taud": 0.2,
+            "taui": 1.5,
+            "timeout": 3.0,
+            "trust_box_size": 0.5,
+            "verbosity": "kSilent"
+          }
+        },
+        "smart_planner_options_data": {
+          "add_downward_constraint": true,
+          "add_tip_direction_constraint": false,
+          "force_over_workspace": false,
+          "planner_timeout": 2.0,
+          "planning_method": "kSequential",
+          "post_solve_simplification": true,
+          "tip_direction_constraint_info": {
+            "constraint_tolerance": 0.01,
+            "reference_frame_axis": "kNegativeZ",
+            "reference_frame_path": {
+              "is_absolute": false,
+              "path": [
+                "root",
+                "WorldFrame"
+              ]
+            },
+            "tip_axis": "kPositiveZ"
+          }
+        },
+        "use_near_place": true,
+        "use_postplace": true,
+        "use_preplace": true,
+        "use_slide_start": true
+      },
+      "position": {
+        "x": 3239,
+        "y": 2239
+      }
+    },
+    {
+      "id": "{c92117ba-8d64-417e-a384-16922540c811}",
+      "model": {
+        "_CLASS_": "UpdateWorkspaceCollisionsNode",
+        "catch_error": false,
+        "collision_for_other_workspaces": true,
+        "collision_workspace_ids": null,
+        "dev_comment": "更新可视化环境",
+        "non_collision_for_from_and_to_workspace": true,
+        "non_collision_workspace_ids": null
+      },
+      "position": {
+        "x": -690,
+        "y": 4570
+      }
+    },
+    {
+      "id": "{d32ffdb7-0287-4230-b090-d5117b2b930e}",
+      "model": {
+        "_CLASS_": "NotifyHMINodeModel",
+        "catch_error": false,
+        "dev_comment": "后端错误",
+        "enable_trilight": true,
+        "error_code": 80013,
+        "error_msg": "工控机后端无法连接",
+        "error_tip": "请联系售后人员",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "status": "ERR",
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": 510,
+        "y": -1706
+      }
+    },
+    {
+      "id": "{d366d2bd-cef2-4d2b-95e3-1c439378f82f}",
+      "model": {
+        "_CLASS_": "VarReadNodeModel",
+        "cases": null,
+        "catch_error": false,
+        "dev_comment": "放置工作空间内部编号",
+        "reject_values_outside_cases": false,
+        "var_name": "_to_ws",
+        "var_scope": "SCENE",
+        "var_type": "INT",
+        "wait_value_timeout": 3.0
+      },
+      "position": {
+        "x": 2912,
+        "y": -1627
+      }
+    },
+    {
+      "id": "{d6044e09-9a86-4ec7-95d6-12cc4cd6ebaf}",
+      "model": {
+        "_CLASS_": "SetHTTPBackendInfoNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "send_error_to_hmi": true
+      },
+      "position": {
+        "x": -540,
+        "y": -800
+      }
+    },
+    {
+      "id": "{d7f82cdc-266d-41a2-822f-e2dd44e3e8f7}",
+      "model": {
+        "_CLASS_": "NotifyHMINodeModel",
+        "catch_error": false,
+        "dev_comment": "读取全局变量异常",
+        "enable_trilight": true,
+        "error_code": 69999,
+        "error_msg": "变量读取超时错误，该错误不该发生，请检查流图是否正确",
+        "error_tip": "请联系售后人员",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "status": "ERR",
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": 5413,
+        "y": 5002
+      }
+    },
+    {
+      "id": "{d891f703-632b-41ec-a404-3cac57b2633f}",
+      "model": {
+        "_CLASS_": "NotifyHMINodeModel",
+        "catch_error": false,
+        "dev_comment": "箱子数量不够",
+        "enable_trilight": true,
+        "error_code": 80010,
+        "error_msg": "箱子数量不够",
+        "error_tip": "1）WCS下发的任务订单错误，请根据现场实际，该异常约定的处理方式，WCS取消订单后修改订单重新下发，还是转人工处理；2）请参考HMI用户手册，根据现场实际情况，进行处理；3）若未解决，请联系售后人员",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "status": "ERR",
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": 3044,
+        "y": -2139
+      }
+    },
+    {
+      "id": "{d899f5b0-ce2d-498c-bf03-c669e66198a9}",
+      "model": {
+        "_CLASS_": "VarWriteNodeModel",
+        "catch_error": false,
+        "clear_variable": false,
+        "default_value": "1",
+        "dev_comment": "",
+        "var_name": "lock",
+        "var_scope": "SCENE",
+        "var_type": "INT"
+      },
+      "position": {
+        "x": 7399,
+        "y": -2240
+      }
+    },
+    {
+      "id": "{d9b369c0-3116-4a36-8238-0f962e0eedf0}",
+      "model": {
+        "_CLASS_": "StartEventNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "init_node_datas": true,
+        "init_node_members": true,
+        "init_statistical_data": true,
+        "init_variables": true
+      },
+      "position": {
+        "x": -860,
+        "y": -2000
+      }
+    },
+    {
+      "id": "{da55c704-e01d-4deb-863a-aa71f129f47a}",
+      "model": {
+        "_CLASS_": "VarReadNodeModel",
+        "cases": null,
+        "catch_error": false,
+        "dev_comment": "",
+        "reject_values_outside_cases": false,
+        "var_name": "_sku_info",
+        "var_scope": "SCENE",
+        "var_type": "SKU_INFO",
+        "wait_value_timeout": 3.0
+      },
+      "position": {
+        "x": 7470,
+        "y": -1441
+      }
+    },
+    {
+      "id": "{dc636b8e-9d34-4156-a71c-4190e7f28cde}",
+      "model": {
+        "_CLASS_": "FunctionReturnNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_name": "夹具抓取动作"
+      },
+      "position": {
+        "x": 8525,
+        "y": -523
+      }
+    },
+    {
+      "id": "{def86004-91cc-4247-924c-75eef4a0a35a}",
+      "model": {
+        "_CLASS_": "NotifyHMINodeModel",
+        "catch_error": false,
+        "dev_comment": "读取全局变量异常",
+        "enable_trilight": true,
+        "error_code": 69999,
+        "error_msg": "变量读取超时错误，该错误不该发生，请检查流图是否正确",
+        "error_tip": "请联系售后人员",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "status": "ERR",
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": 3199,
+        "y": -1418
+      }
+    },
+    {
+      "id": "{e1c1e6d0-4244-4e81-8db7-6b3c065c2c54}",
+      "model": {
+        "_CLASS_": "SetTriColorLightNode",
+        "catch_error": false,
+        "dev_comment": "",
+        "enable_trilight": true,
+        "io_device_name": "0:PLC-1",
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": -800,
+        "y": -800
+      }
+    },
+    {
+      "id": "{e30fe685-0af1-47e6-8f7b-45dbb7ed5ab5}",
+      "model": {
+        "_CLASS_": "DetermineWorkspaceNonempty",
+        "catch_error": false,
+        "dev_comment": "",
+        "group_to_determine": "PlannedGroup",
+        "workspace_id": 0
+      },
+      "position": {
+        "x": 5529,
+        "y": 4718
+      }
+    },
+    {
+      "id": "{e426fca5-1c5d-4281-bb98-e8f280245e71}",
+      "model": {
+        "_CLASS_": "FunctionEventNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "func_def": {
+          "in_args": [
+            {
+              "name": "动作负载",
+              "type": "MOTION_PAYLOAD"
+            },
+            {
+              "name": "q0",
+              "type": "VPJOINTDATA"
+            }
+          ],
+          "logic_out_ports": [
+            "成功",
+            "视觉穷尽",
+            "放置已满",
+            "规划失败"
+          ],
+          "out_args": [
+            {
+              "name": "执行负载",
+              "type": "EXECUTION_PAYLOAD"
+            },
+            {
+              "name": "sku",
+              "type": "SKU_INFO"
+            },
+            {
+              "name": "动作负载",
+              "type": "MOTION_PAYLOAD"
+            },
+            {
+              "name": "qf",
+              "type": "VPJOINTDATA"
+            }
+          ]
+        },
+        "func_name": "运动规划"
+      },
+      "position": {
+        "x": -1163,
+        "y": 1558
+      }
+    },
+    {
+      "id": "{e74d7c14-1cf2-4753-b29b-afaacf9e9793}",
+      "model": {
+        "_CLASS_": "SetDigitalOutputNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "device_type": "kRobot",
+        "io_device_name": "",
+        "io_sequence": [
+          {
+            "port_id": 0,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 0
+          },
+          {
+            "port_id": 1,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 0
+          },
+          {
+            "port_id": 7,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 0
+          },
+          {
+            "port_id": 3,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 0
+          },
+          {
+            "port_id": 5,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 1
+          },
+          {
+            "port_id": 4,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 1
+          },
+          {
+            "port_id": 6,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 1
+          },
+          {
+            "port_id": 9,
+            "sleep_interval_in_seconds": 0.0,
+            "value": 1
+          }
+        ],
+        "robot_path": {
+          "is_absolute": true,
+          "path": [
+            "root",
+            "WorldFrame",
+            "ABB-IRB-6700-155-2-85"
+          ]
+        },
+        "use_sequence_from_input": false
+      },
+      "position": {
+        "x": 7817,
+        "y": 78
+      }
+    },
+    {
+      "id": "{e7814e72-fb4e-40de-b843-9bd3eb69e91b}",
+      "model": {
+        "_CLASS_": "InitMVFDevNode",
+        "basic_config_params": {
+          "dump_failure": true,
+          "dump_success": true,
+          "enable_early_check": true,
+          "log_level": "Verbose",
+          "mvf_timeout": 10.0,
+          "robot_id": 0
+        },
+        "catch_error": false,
+        "dev_comment": "",
+        "enable_env_serialization": false,
+        "ignore_point_cloud_collision": false,
+        "input_ws_manually": false,
+        "interp_config_params": {
+          "coarse_angle_rez": 0.2,
+          "coarse_distance_rez": 0.2,
+          "fine_angle_rez": 0.02,
+          "fine_distance_rez": 0.02
+        },
+        "mvf_logger_name": "",
+        "place_workspace_id": 1,
+        "robot": {
+          "is_absolute": true,
+          "path": [
+            "root",
+            "WorldFrame",
+            "ABB-IRB-6700-155-2-85"
+          ]
+        }
+      },
+      "position": {
+        "x": 2223,
+        "y": 2208
+      }
+    },
+    {
+      "id": "{e7b6e3ea-f769-4e49-a376-a82efd5a5935}",
+      "model": {
+        "_CLASS_": "CycleCountNodeModel",
+        "catch_error": false,
+        "cycle_config": {
+          "average_flag": true,
+          "cnt_flag": true,
+          "last_flag": false,
+          "max_flag": true,
+          "min_flag": true,
+          "result_flag": false,
+          "stderr_flag": false
+        },
+        "cycle_flag": "CycleStart",
+        "cycle_name": "单次求解需要的时间",
+        "cycle_result": "成功",
+        "dev_comment": ""
+      },
+      "position": {
+        "x": 1803,
+        "y": 2201
+      }
+    },
+    {
+      "id": "{e8d8ee0a-b8cc-4f1c-a404-dea01ad638ea}",
+      "model": {
+        "_CLASS_": "WSIDToVisionIDMapNode",
+        "catch_error": false,
+        "dev_comment": "",
+        "ws_to_vision": [
+          {
+            "key": "0",
+            "value": "0"
+          }
+        ]
+      },
+      "position": {
+        "x": 2640,
+        "y": -800
+      }
+    },
+    {
+      "id": "{ed78feae-d8af-4a2b-94f8-f6b171715c06}",
+      "model": {
+        "_CLASS_": "ReportTaskStatusNodeModel",
+        "catch_error": false,
+        "dev_comment": "",
+        "drop_num": 0,
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "is_depal_pallet_empty": false,
+        "is_pal_pallet_full": false,
+        "manual_set_backend_address": false,
+        "pick_num": 1,
+        "report_task_ending_enable": true,
+        "task_id": "1"
+      },
+      "position": {
+        "x": 4558,
+        "y": 4554
+      }
+    },
+    {
+      "id": "{fa078654-dc44-4f95-b5fa-51092ffe3135}",
+      "model": {
+        "_CLASS_": "NotifyHMINodeModel",
+        "catch_error": false,
+        "dev_comment": "读取全局变量异常",
+        "enable_trilight": true,
+        "error_code": 69999,
+        "error_msg": "变量读取超时错误，该错误不该发生，请检查流图是否正确",
+        "error_tip": "请联系售后人员",
+        "http_ip": "127.0.0.1",
+        "http_port": 7002,
+        "io_device_name": "",
+        "manual_set_backend_address": false,
+        "manual_set_trilight_device": false,
+        "status": "ERR",
+        "tri_color_light_set": {
+          "device_id": 0,
+          "port": 124,
+          "value_green": 2,
+          "value_red": 3,
+          "value_yellow": 1
+        }
+      },
+      "position": {
+        "x": -498,
+        "y": 1802
+      }
+    }
+  ],
+  "service": {
+    "enable": false
+  }
+}

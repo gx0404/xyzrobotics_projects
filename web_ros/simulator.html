@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<script src="./js/threejs/current/three.min.js"></script>
+<script src="./js/threejs/current/ColladaLoader.min.js"></script>
+<script src="./js/ColladaAnimationCompress/current/ColladaLoader2.min.js"></script>
+<script src="./js/threejs/current/STLLoader.min.js"></script>
+<script src="./js/EventEmitter2/current/eventemitter2.min.js"></script>
+<script src="./js/roslibjs/current/roslib.min.js"></script>
+<script src="./js/ros3djs/current/ros3d.min.js"></script>
+<script src="./js/stats.min.js"></script>
+<script src="./js/simulator.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./css/simulator.css">
+
+<title>机械臂仿真测试</title>
+
+</head>
+
+<body onload="run()">
+  <!-- <h1>URDF仿真测试</h1> -->
+  <div>
+    <form >
+      <label>IP地址</label>
+      <input id="server_host" type="text" value="127.0.0.1" name="host" />
+      <label>端口号</label>
+      <input id="server_port" type="number" value='9191' name="port" />
+      <!-- <button type="button" onclick="run()">设置</button> -->
+    </form>
+  </div>
+  
+  <br />
+  
+  <div id="RobotSimulator"></div>
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+  /* 添加新的CSS样式来控制图像位置 */
+  .container {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .container_1 {
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  .editable {
+    background-color: #ddd;
+  }
+</style>
+</head>
+<body>
+
+<!-- 第一个图像和表格 -->
+<div class="container">
+  <h2>拣配托盘数据</h2>
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th>位置ID</th>
+        <th>条码</th>
+        <th>更新</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 数据将通过JavaScript填充 -->
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+  <h2>拣配托盘位置号参考</h2>
+  <!-- 使用<img>元素来显示图片 -->
+  <img src="/home/xyz/Pictures/2024-01-22_09-43_1.png" alt="示例图片">
+</div>
+
+
+
+<!-- 第二组图像和表格 -->
+<div class="container">
+  <h2>缓存区托盘数据</h2>
+  <table id="data-table-1">
+    <thead>
+      <tr>
+        <th>位置ID</th>
+        <th>条码</th>
+        <th>更新</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 数据将通过JavaScript填充 -->
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+  <h2>缓存托盘位置号参考</h2>
+  <!-- 使用<img>元素来显示图片 -->
+  <img src="/home/xyz/Pictures/2024-01-22_09-43_1.png" alt="示例图片">
+</div>
+
+
+
+<script>
+$(document).ready(function() {
+  // 页面加载完成后获取数据
+  fetchPalletData(); 
+  // 设置定时器，每隔一段时间获取一次数据
+  setInterval(fetchPalletData, 500); 
+});
+
+function fetchPalletData() {
+  $.ajax({
+    url: 'http://127.0.0.1:7002/api/rafcon/send_pallet_data',
+    method: 'POST',
+    success: function(response) {
+      // 假设response是已经解析的JSON对象
+      updateTable('#data-table tbody', response.pallet_tote_data,9);
+      updateTable('#data-table-1 tbody', response.cache_pallet_tote_data,9);
+    },
+    error: function(error) {
+      console.log('获取数据失败:', error);
+    }
+  });
+}
+
+// 新增一个函数来更新表格
+function updateTable(tableSelector, data,layer_num) {
+  var $tableBody = $(tableSelector);
+  // 循环现有的行，更新数据或者添加新行
+  for (var id in data) {
+    var $row = $tableBody.find('tr[data-id="' + id + '"]');
+    if ($row.length === 0) {
+      // 如果行不存在，则创建新的行
+      $row = $('<tr data-id="' + id + '"></tr>');
+      $row.append('<td class="editable" data-id="' + id + '">' + '第' + calculateLayer(id,layer_num) + '层' + calculateNumberInLayer(id,layer_num) + '号' + '</td>');
+      $row.append('<td class="editable" contenteditable="true">' + data[id].barcode + '</td>');
+      $row.append('<td><button onclick="updatePalletData(this, ' + id + ')">更新</button></td>');
+      $tableBody.append($row);
+    } else {
+      // 如果行存在，则更新数据
+      $row.find('td.editable').eq(1).text(data[id].barcode);
+    }
+  }
+}
+
+// 计算层数
+function calculateLayer(id,layer_num) {
+  var idInt = parseInt(id);
+  return Math.ceil(idInt / layer_num);
+}
+
+// 计算当前层的编号
+function calculateNumberInLayer(id,layer_num) {
+  var idInt = parseInt(id);
+  var numberInLayer = idInt % layer_num === 0 ? layer_num : idInt % layer_num;
+  return numberInLayer;
+}
+
+
+function updatePalletData(btn, id) {
+  var barcode = $(btn).closest('tr').find('td.editable').text();
+  var updateData = {
+    pallet_tote_data: {}
+  };
+  updateData.pallet_tote_data[id] = { barcode: barcode };
+
+  $.ajax({
+    url: '/update_pallet_data',
+    method: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify(updateData),
+    success: function(response) {
+      alert('数据更新成功!');
+    },
+    error: function(error) {
+      alert('数据更新失败!');
+    }
+  });
+}
+</script>
+
+</body>
+</html>
+

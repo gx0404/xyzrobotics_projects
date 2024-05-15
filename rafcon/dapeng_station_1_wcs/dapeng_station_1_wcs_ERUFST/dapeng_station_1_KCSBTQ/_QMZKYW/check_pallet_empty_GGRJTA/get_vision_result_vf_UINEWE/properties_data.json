@@ -1,0 +1,342 @@
+{
+    "data_source": {
+        "check_dimension": false, 
+        "comment": "get_vision_result_vf", 
+        "data_folder": {
+            "data_source_path": ""
+        }, 
+        "eye_in_hand": true, 
+        "flag_capture_image": true, 
+        "flag_check_primitives_change": false, 
+        "local_helper_mode": "DP", 
+        "mix_depalletize_minimal_sku_height": 0.0, 
+        "mode": "RELEASE", 
+        "modify_Z_axis": {
+            "enable": true, 
+            "fraction": 1.0
+        }, 
+        "robot_id": "0", 
+        "shrunk_size": 0.001, 
+        "time_out": 100.0, 
+        "tri-color_light_setting": {
+            "device_id": "2", 
+            "port": 124, 
+            "value_green": 2, 
+            "value_red": 3
+        }, 
+        "vision_service": "calculate_object_poses_3", 
+        "workspace_id": "0"
+    }, 
+    "data_source_translation": {
+        "/check_dimension": "是否打开尺寸检查", 
+        "/comment": "模块注释，显示在图形界面中", 
+        "/data_folder": "视觉数据", 
+        "/data_folder/data_source_path": "离线视觉数据来源", 
+        "/eye_in_hand": "是否为眼在手上", 
+        "/flag_capture_image": "混拆一拍多算时，若此模块连接在获取视觉物体尺寸模块后面则不需要拍照", 
+        "/flag_check_primitives_change": "", 
+        "/local_helper_mode": "local helper选择DP或者SBM两种模式", 
+        "/mix_depalletize_minimal_sku_height": "混拆中所有sku的最小高度; 如果是单拆就不用管", 
+        "/mode": "模式， （RELEASE 或者 DEBUG）", 
+        "/modify_Z_axis": "改变视觉得出的物体z轴偏移程度， 以工作空间z轴平行为最大偏移", 
+        "/modify_Z_axis/enable": "是否开启", 
+        "/modify_Z_axis/fraction": "偏移系数，范围[0, 1]， 0为不修改视觉， 1为修改至与工作空间z轴平行", 
+        "/robot_id": "机器人ID号", 
+        "/shrunk_size": "视觉缩小尺寸，把sku视觉结果缩小该尺寸用于计算", 
+        "/time_out": "连接相机拍照超时时限", 
+        "/tri-color_light_setting": "三色灯设置", 
+        "/tri-color_light_setting/device_id": "设备号", 
+        "/tri-color_light_setting/port": "寄存器起始地址", 
+        "/tri-color_light_setting/value_green": "绿灯值", 
+        "/tri-color_light_setting/value_red": "红灯值", 
+        "/vision_service": "视觉服务名称，从xvf中调用", 
+        "/workspace_id": "工作空间id"
+    }, 
+    "data_source_type": {
+        "check_dimension": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": [
+                    true, 
+                    false
+                ]
+            }
+        }, 
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "data_folder": {
+            "data_source_path": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "eye_in_hand": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": [
+                    true, 
+                    false
+                ]
+            }
+        }, 
+        "flag_capture_image": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "flag_check_primitives_change": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": [
+                    true, 
+                    false
+                ]
+            }
+        }, 
+        "local_helper_mode": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": [
+                    "DP", 
+                    "SBM"
+                ]
+            }
+        }, 
+        "mix_depalletize_minimal_sku_height": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "mode": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": [
+                    "RELEASE", 
+                    "DEBUG"
+                ]
+            }
+        }, 
+        "modify_Z_axis": {
+            "enable": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {
+                        "false": [
+                            "/modify_Z_axis/fraction"
+                        ], 
+                        "true": []
+                    }, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }, 
+            "fraction": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "robot_id": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "shrunk_size": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "time_out": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "tri-color_light_setting": {
+            "device_id": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "port": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }, 
+            "value_green": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "value_red": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }, 
+        "vision_service": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "workspace_id": {
+            "type_config": {
+                "current_type": "INPUT_PORT", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }
+    }
+}

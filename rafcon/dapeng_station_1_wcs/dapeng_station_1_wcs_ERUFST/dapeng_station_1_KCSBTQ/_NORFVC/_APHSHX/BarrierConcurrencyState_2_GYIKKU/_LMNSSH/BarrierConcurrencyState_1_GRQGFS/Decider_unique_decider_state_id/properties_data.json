@@ -1,0 +1,57 @@
+{
+    "data_source": {
+        "outcome_transitions": {
+            "GCDOYG_execute_traj_by_name:0_success --and-- VIPQJA_HierarchyState 2:0_success": 0, 
+            "GCDOYG_execute_traj_by_name:0_success --and-- VIPQJA_HierarchyState 2:1_task_finish": 1
+        }
+    }, 
+    "data_source_translation": {
+        "/outcome_transitions": "", 
+        "/outcome_transitions/GCDOYG_execute_traj_by_name:0_success --and-- VIPQJA_HierarchyState 2:0_success": "", 
+        "/outcome_transitions/GCDOYG_execute_traj_by_name:0_success --and-- VIPQJA_HierarchyState 2:1_task_finish": ""
+    }, 
+    "data_source_type": {
+        "outcome_transitions": {
+            "GCDOYG_execute_traj_by_name:0_success --and-- VIPQJA_HierarchyState 2:0_success": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "GCDOYG_execute_traj_by_name:0_success --and-- VIPQJA_HierarchyState 2:1_task_finish": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }
+    }
+}

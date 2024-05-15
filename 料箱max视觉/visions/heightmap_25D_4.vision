@@ -1,0 +1,641 @@
+nodes:
+  - id: "{03409e79-c08c-4bac-bd4b-6ca188d7e540}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudLoader
+      params:
+        mode: input filename
+        file: ""
+        directory: stl_models
+        num_points: 10000
+        cache: true
+        frame_type: World
+        frame_id: ""
+    position:
+      x: 2201.9517309100197
+      y: -684.71136840053896
+  - id: "{187fc97b-068d-40f3-8e30-008c2b6d2d0d}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: InputInfo
+      params:
+        source: request
+        info: ""
+    position:
+      x: 875.07444453661549
+      y: -1307.4585228769013
+  - id: "{2039a38c-b8af-48da-b00e-bdd4896ad047}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudPub
+      params:
+        topic: ui_cloud
+    position:
+      x: 2813.3236033825851
+      y: -607.80988265449707
+  - id: "{24b4bb8a-1a60-44b4-a5be-25dbaf722daa}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ProjectToPlane
+      params:
+        source: input_plane
+        flip_z: false
+        axis_scale: 0.05
+        cal_dim: false
+    position:
+      x: 1842.87500658366
+      y: -688.13636603042164
+  - id: "{28bc6810-00f7-4f26-9672-daf4e7f9df12}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: Primitive3DPub
+      params:
+        topic: primitives3d
+    position:
+      x: 3079.0767013665109
+      y: -703.2478784517732
+  - id: "{30dbb683-12cf-4f5f-bef2-0055b39cc60d}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudROIExtract
+      params:
+        output_organized: true
+        using_mask: true
+    position:
+      x: 1856.4531307607022
+      y: -865.8096601383096
+  - id: "{33fba866-7432-4e37-8086-d2c2d9c87252}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: FetchElement
+      params:
+        element_index:
+          - 0
+        input_type: DoubleVector
+    position:
+      x: 579.87444453661567
+      y: -1448.1806797233808
+  - id: "{3ae25399-d2ee-4d49-bfae-643002dc59fc}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ConstructHeightMap
+      params:
+        pixel_size: 0.002
+        pixel_value: 0.005
+    position:
+      x: 924.96337514220704
+      y: -880.12227389078498
+  - id: "{3d3d0a16-154e-4f8c-a737-5697511b5f7f}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ImageShowModel
+      params: ~
+    position:
+      x: 2245.9498246370526
+      y: -185.75290080251921
+    embedded_widget_rect:
+      w: 696
+      h: 424
+  - id: "{4bff9589-c53d-42c8-94fb-f373d973988c}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ImageShowModel
+      params: ~
+    position:
+      x: 1491.7890666666656
+      y: -1108.8981333333331
+    embedded_widget_rect:
+      w: 200
+      h: 200
+  - id: "{562b94db-7dde-473c-b65c-dff78d353655}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: XYZCamera
+      params:
+        type: XYZ
+        id: L340XP043090009
+        cfg: camera_configs/ls_eye_on_hand.json
+        capture_timeout: 5000
+        retake_num: 5
+        logger: false
+        debug: false
+    position:
+      x: -948.89177599999994
+      y: -1130.0341759999997
+  - id: "{58697ec4-7ecc-45fd-8218-056254f6fc99}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: GeneratePrimitivesMask
+      params:
+        dilate_size: 1
+        load_mask: true
+        directory: masks
+    position:
+      x: 1587.59364334471
+      y: -775.68227389078493
+  - id: "{59871dad-107c-4d2a-94e4-c463c5404b00}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: OutputPub
+      params:
+        mode: Predefined
+        ports: ""
+    position:
+      x: 951.75967330562867
+      y: -1537.4051110926769
+  - id: "{6211f759-d046-4878-9ef7-5b485e4f0c43}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: LoadWorkspaceInfo
+      params:
+        calib_file: calibration/workspace/cache_pallet_4.yml
+    position:
+      x: -308.20806533887401
+      y: -1135.2631807999999
+  - id: "{6634169c-7da2-425b-8318-7c557479cdb1}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ToplayerCompletenessCheck
+      params:
+        mode: points_num
+        z_tolerance: 0.04
+        xy_tolerance: 0.035
+        min_uncovered_points_ratio: 0.4
+        max_uncovered_points_num: 6000
+    position:
+      x: 1112.181150428728
+      y: -1146.4829542461976
+  - id: "{8983f54f-5025-4fe0-b83e-8d713f2f08fd}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudCutByTote
+      params:
+        mode: Organized
+        x_margin: 0
+        y_margin: 0
+        bottom_margin: 0
+        top_margin: 0
+    position:
+      x: 361.79324843703915
+      y: -1051.0880000000002
+  - id: "{89d10a47-2075-4982-b5fd-bffe0bd7fee4}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: DataShow
+      params: ~
+    position:
+      x: 3056.831999999999
+      y: -556.41599999999994
+    embedded_widget_rect:
+      w: 256
+      h: 211
+  - id: "{8d98cc3d-3aab-4e11-9824-9e2a58e27c43}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudTrans
+      params:
+        transform_frame: Workspace
+        transform_frame_id: ""
+    position:
+      x: 56.884483706758658
+      y: -1096.5227385615497
+  - id: "{90400463-3ac5-4891-bbf8-d2fb5eea496f}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: OutputPub
+      params:
+        mode: Predefined
+        ports: ""
+    position:
+      x: 3075.555692911475
+      y: -958.35665529010259
+  - id: "{9a634af6-1acb-437b-88ee-739cfeb445ac}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: PrimitiveTransformation
+      params:
+        mode: Common
+        transform_frame: World
+        transform_frame_id: ""
+    position:
+      x: 2781.2559726962459
+      y: -836.35665529010248
+  - id: "{9c602607-213d-42a3-86bf-46d186848882}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: Primitive3DPub
+      params:
+        topic: ui_primitives3d
+    position:
+      x: 2786.8548265442555
+      y: -465.21849039210161
+  - id: "{abd40a59-fef5-49b5-af0c-4766584654b4}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudTrans
+      params:
+        transform_frame: World
+        transform_frame_id: ""
+    position:
+      x: 892.87927460577021
+      y: -1080.9318169847893
+  - id: "{b3172aba-2d0f-48a5-8dd7-61b1bca2f336}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudBasedEmptyToteChecker
+      params:
+        max_points: 500
+    position:
+      x: 2772.0684746713432
+      y: -1032.927674875174
+  - id: "{b8c17d55-5579-4502-85a4-c10f6a45709b}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: DataShow
+      params: ~
+    position:
+      x: 728.33279999999968
+      y: -1732.3391999999992
+    embedded_widget_rect:
+      w: 256
+      h: 211
+  - id: "{b8d58b19-42b0-4a6a-9024-baf9ceb8971e}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: FindCloudPlane
+      params:
+        mode: Single
+        dist_threshold: 0.01
+        max_iteration: 50
+        probability: 0.99
+        Multiple:
+          min_points: 5000
+    position:
+      x: 1319.8400106666668
+      y: -510.72054399999951
+  - id: "{bbe0f2c3-bbe8-43cd-94fe-db4f08faa920}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ImagePub
+      params:
+        topic: ui_image
+    position:
+      x: 2313.6153276971181
+      y: -482.15173046384473
+  - id: "{cccf33b9-53ad-4d3b-b8f7-d4868e15f251}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: LoadCameraCalibInfo
+      params:
+        calib_file: calibration/camera/eye_on_hand/camera_extrinsic.yml
+    position:
+      x: -605.25696000000016
+      y: -1144.1303039999989
+  - id: "{dacc09b8-3688-47c9-b60d-ecc35d75f2b7}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CalculateTopLayerHeight
+      params:
+        layer_min_points: 2000
+        output_height_frame: Tote
+        enable_downsample: true
+        leaf_size_downsample: 0.002
+        layer_z_tolerance: 0.01
+        cloud_extract_radius: 0.05
+        output_cloud_type: Organized
+    position:
+      x: 682.40349029041818
+      y: -1000.8322156846483
+  - id: "{eab6679e-aad7-44f5-9dad-2c5181b02da4}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: SBMEstimator
+      params:
+        dataset_folder: xyz_pose_estimator_dataset
+        spread_and_pyr:
+          - 4
+          - 8
+        detection_targets:
+          - pallet
+        detection_weak_contrast: -1
+        detection_min_contrast: 30
+        min_detection_score: 65
+        nms_score: 0.40000000000000002
+        nms_across_all: true
+        top_n: 1
+        show_points: true
+        show_score: true
+        show_edge: false
+        global_pose: true
+        use_rotated_nms: false
+        use_icp: true
+        use_fusion: false
+        train_params:
+          projection_type: orthographic
+          cut_from_top: -1
+          angle_start: -50.0
+          angle_end: 50.0
+          angle_zero: 0.0
+          angle_step: 1.0
+          scale_start: 1.0
+          scale_end: 1.0
+          scale_step: 1.0
+          num_features: 200
+          contrast: 30
+          min_contrast: -1
+    position:
+      x: 1267.6597289283375
+      y: -779.23730024254212
+  - id: "{ee90cc53-fc7f-40c8-b469-a72f6752561d}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ImageShowModel
+      params: ~
+    position:
+      x: -874.94284799999991
+      y: -1571.8022399999993
+    embedded_widget_rect:
+      w: 379
+      h: 294
+  - id: "{f6db6f7c-e90a-4af8-a0e8-ee1cbd3fbc52}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ImageShowModel
+      params: ~
+    position:
+      x: 1758.2399999999998
+      y: -300.96000000000009
+    embedded_widget_rect:
+      w: 200
+      h: 200
+  - id: "{fc5cedf4-7b10-4ed6-a02b-34801af448fb}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudICP
+      params:
+        mode: 3D
+        top_k: 60
+        min_score: 50
+        max_matching_dist: 0.005
+        max_fitness_dist: 0.005
+        max_iteration_num: 50
+        reciprocal: false
+        cloud2d_plane: XY
+        knn: 5
+    position:
+      x: 2497.1218832954119
+      y: -840.25210940462659
+connections:
+  - id: "{00f8e183-3e56-4bef-8301-4d00eea87c45}"
+    in_id: "{9c602607-213d-42a3-86bf-46d186848882}"
+    in_index: 0
+    out_id: "{fc5cedf4-7b10-4ed6-a02b-34801af448fb}"
+    out_index: 0
+  - id: "{0a55b5dd-d570-4230-89d4-0cfab4d98179}"
+    in_id: "{f6db6f7c-e90a-4af8-a0e8-ee1cbd3fbc52}"
+    in_index: 0
+    out_id: "{24b4bb8a-1a60-44b4-a5be-25dbaf722daa}"
+    out_index: 1
+  - id: "{0bab5bb1-5bc8-49ff-82c6-49a74b0d2bc5}"
+    in_id: "{6634169c-7da2-425b-8318-7c557479cdb1}"
+    in_index: 1
+    out_id: "{abd40a59-fef5-49b5-af0c-4766584654b4}"
+    out_index: 0
+  - id: "{16f8dd38-4028-4fe4-8ac5-c430db578355}"
+    in_id: "{30dbb683-12cf-4f5f-bef2-0055b39cc60d}"
+    in_index: 0
+    out_id: "{3ae25399-d2ee-4d49-bfae-643002dc59fc}"
+    out_index: 2
+  - id: "{180fee30-b64c-42d7-9424-ba0886042021}"
+    in_id: "{b8d58b19-42b0-4a6a-9024-baf9ceb8971e}"
+    in_index: 0
+    out_id: "{3ae25399-d2ee-4d49-bfae-643002dc59fc}"
+    out_index: 2
+  - id: "{283ab132-af53-4c8e-8f41-3059e95a0a4e}"
+    in_id: "{fc5cedf4-7b10-4ed6-a02b-34801af448fb}"
+    in_index: 0
+    out_id: "{24b4bb8a-1a60-44b4-a5be-25dbaf722daa}"
+    out_index: 0
+  - id: "{2a66085b-20b6-4857-807c-07bc7d22e692}"
+    in_id: "{9a634af6-1acb-437b-88ee-739cfeb445ac}"
+    in_index: 0
+    out_id: "{fc5cedf4-7b10-4ed6-a02b-34801af448fb}"
+    out_index: 0
+  - id: "{2aac2203-041f-40f8-b42d-628d1390a0bb}"
+    in_id: "{abd40a59-fef5-49b5-af0c-4766584654b4}"
+    in_index: 0
+    out_id: "{dacc09b8-3688-47c9-b60d-ecc35d75f2b7}"
+    out_index: 1
+  - id: "{3d210481-cc5c-47f9-9265-c4f5cd350502}"
+    in_id: "{24b4bb8a-1a60-44b4-a5be-25dbaf722daa}"
+    in_index: 0
+    out_id: "{58697ec4-7ecc-45fd-8218-056254f6fc99}"
+    out_index: 0
+  - id: "{40265a9d-6082-4935-bb4c-8da7f5aab44d}"
+    in_id: "{58697ec4-7ecc-45fd-8218-056254f6fc99}"
+    in_index: 1
+    out_id: "{eab6679e-aad7-44f5-9dad-2c5181b02da4}"
+    out_index: 1
+  - id: "{456ae776-51a8-496f-bb9f-7a477a5db225}"
+    in_id: "{59871dad-107c-4d2a-94e4-c463c5404b00}"
+    in_index: 2
+    out_id: "{33fba866-7432-4e37-8086-d2c2d9c87252}"
+    out_index: 0
+  - id: "{4d5972e7-ec14-4467-b222-6b53ec842c30}"
+    in_id: "{6211f759-d046-4878-9ef7-5b485e4f0c43}"
+    in_index: 1
+    out_id: "{cccf33b9-53ad-4d3b-b8f7-d4868e15f251}"
+    out_index: 1
+  - id: "{4f7822c2-f4b9-4ede-aa65-874b0a69dfef}"
+    in_id: "{30dbb683-12cf-4f5f-bef2-0055b39cc60d}"
+    in_index: 1
+    out_id: "{58697ec4-7ecc-45fd-8218-056254f6fc99}"
+    out_index: 0
+  - id: "{5159e189-9af8-4018-b705-14b6eea41f7c}"
+    in_id: "{b3172aba-2d0f-48a5-8dd7-61b1bca2f336}"
+    in_index: 1
+    out_id: "{fc5cedf4-7b10-4ed6-a02b-34801af448fb}"
+    out_index: 0
+  - id: "{55637321-32fb-4c93-b706-97c9d7b5eff0}"
+    in_id: "{fc5cedf4-7b10-4ed6-a02b-34801af448fb}"
+    in_index: 1
+    out_id: "{03409e79-c08c-4bac-bd4b-6ca188d7e540}"
+    out_index: 0
+  - id: "{5d56d60c-7ba3-467b-b4e6-4753b9dbd04a}"
+    in_id: "{33fba866-7432-4e37-8086-d2c2d9c87252}"
+    in_index: 0
+    out_id: "{dacc09b8-3688-47c9-b60d-ecc35d75f2b7}"
+    out_index: 0
+  - id: "{690c7fec-c78a-4450-af98-bed8aa2dcec6}"
+    in_id: "{cccf33b9-53ad-4d3b-b8f7-d4868e15f251}"
+    in_index: 1
+    out_id: "{562b94db-7dde-473c-b65c-dff78d353655}"
+    out_index: 1
+  - id: "{6ee7a6fb-cd3c-4689-9dc7-a43a00f97784}"
+    in_id: "{3ae25399-d2ee-4d49-bfae-643002dc59fc}"
+    in_index: 0
+    out_id: "{dacc09b8-3688-47c9-b60d-ecc35d75f2b7}"
+    out_index: 1
+  - id: "{728d27a7-5421-4fee-81c3-afafd94fd826}"
+    in_id: "{6211f759-d046-4878-9ef7-5b485e4f0c43}"
+    in_index: 0
+    out_id: "{cccf33b9-53ad-4d3b-b8f7-d4868e15f251}"
+    out_index: 0
+  - id: "{79055aa9-527f-4859-ae1b-02fb3ab1470b}"
+    in_id: "{dacc09b8-3688-47c9-b60d-ecc35d75f2b7}"
+    in_index: 0
+    out_id: "{8983f54f-5025-4fe0-b83e-8d713f2f08fd}"
+    out_index: 0
+  - id: "{7d164cad-39be-483a-98b2-24b1857a50d9}"
+    in_id: "{fc5cedf4-7b10-4ed6-a02b-34801af448fb}"
+    in_index: 2
+    out_id: "{30dbb683-12cf-4f5f-bef2-0055b39cc60d}"
+    out_index: 0
+  - id: "{858f43d7-4eea-44ca-9160-0bdff3bbbf93}"
+    in_id: "{90400463-3ac5-4891-bbf8-d2fb5eea496f}"
+    in_index: 0
+    out_id: "{9a634af6-1acb-437b-88ee-739cfeb445ac}"
+    out_index: 0
+  - id: "{86286fd6-6d23-4dab-9042-accf7fa6f987}"
+    in_id: "{cccf33b9-53ad-4d3b-b8f7-d4868e15f251}"
+    in_index: 0
+    out_id: "{562b94db-7dde-473c-b65c-dff78d353655}"
+    out_index: 0
+  - id: "{926abce0-f29a-4e51-bd9c-58ea516a661d}"
+    in_id: "{89d10a47-2075-4982-b5fd-bffe0bd7fee4}"
+    in_index: 0
+    out_id: "{9a634af6-1acb-437b-88ee-739cfeb445ac}"
+    out_index: 0
+  - id: "{98c5985f-18e1-451c-8a30-025a1e7cf78e}"
+    in_id: "{cccf33b9-53ad-4d3b-b8f7-d4868e15f251}"
+    in_index: 2
+    out_id: "{562b94db-7dde-473c-b65c-dff78d353655}"
+    out_index: 2
+  - id: "{99972626-6233-48b7-a358-015b45a1bbb4}"
+    in_id: "{4bff9589-c53d-42c8-94fb-f373d973988c}"
+    in_index: 0
+    out_id: "{eab6679e-aad7-44f5-9dad-2c5181b02da4}"
+    out_index: 1
+  - id: "{a3d5f202-8dde-4bc1-8b5e-cbf5d680e088}"
+    in_id: "{b3172aba-2d0f-48a5-8dd7-61b1bca2f336}"
+    in_index: 0
+    out_id: "{dacc09b8-3688-47c9-b60d-ecc35d75f2b7}"
+    out_index: 1
+  - id: "{aaa53ac9-6cc2-498b-a80d-5b7300b06988}"
+    in_id: "{28bc6810-00f7-4f26-9672-daf4e7f9df12}"
+    in_index: 0
+    out_id: "{9a634af6-1acb-437b-88ee-739cfeb445ac}"
+    out_index: 0
+  - id: "{af088a93-c955-49ea-9afb-6df0c21033c1}"
+    in_id: "{b8c17d55-5579-4502-85a4-c10f6a45709b}"
+    in_index: 0
+    out_id: "{33fba866-7432-4e37-8086-d2c2d9c87252}"
+    out_index: 0
+  - id: "{b07486bc-9556-4cf7-a6b2-27cbc2a74ec5}"
+    in_id: "{bbe0f2c3-bbe8-43cd-94fe-db4f08faa920}"
+    in_index: 0
+    out_id: "{24b4bb8a-1a60-44b4-a5be-25dbaf722daa}"
+    out_index: 1
+  - id: "{b07f77c8-0378-49d8-b0f9-379abf23cb2a}"
+    in_id: "{eab6679e-aad7-44f5-9dad-2c5181b02da4}"
+    in_index: 0
+    out_id: "{3ae25399-d2ee-4d49-bfae-643002dc59fc}"
+    out_index: 1
+  - id: "{b41bae23-c583-4b1b-83d6-292caf2dfec2}"
+    in_id: "{6211f759-d046-4878-9ef7-5b485e4f0c43}"
+    in_index: 2
+    out_id: "{cccf33b9-53ad-4d3b-b8f7-d4868e15f251}"
+    out_index: 2
+  - id: "{b85aa952-e09d-49ab-9ec8-d4d19974c41a}"
+    in_id: "{3d3d0a16-154e-4f8c-a737-5697511b5f7f}"
+    in_index: 0
+    out_id: "{24b4bb8a-1a60-44b4-a5be-25dbaf722daa}"
+    out_index: 1
+  - id: "{c9f0f8a1-48d7-4eca-9e63-a956a78094d2}"
+    in_id: "{03409e79-c08c-4bac-bd4b-6ca188d7e540}"
+    in_index: 0
+    out_id: "{24b4bb8a-1a60-44b4-a5be-25dbaf722daa}"
+    out_index: 0
+  - id: "{cc577e3b-5fbd-4351-ac6f-3f2c3c802f0c}"
+    in_id: "{24b4bb8a-1a60-44b4-a5be-25dbaf722daa}"
+    in_index: 1
+    out_id: "{58697ec4-7ecc-45fd-8218-056254f6fc99}"
+    out_index: 1
+  - id: "{d3f13456-4e39-4ca1-a089-6127c984bcb5}"
+    in_id: "{58697ec4-7ecc-45fd-8218-056254f6fc99}"
+    in_index: 0
+    out_id: "{eab6679e-aad7-44f5-9dad-2c5181b02da4}"
+    out_index: 0
+  - id: "{d5802bb3-a579-4c09-9b51-695ec1c99df0}"
+    in_id: "{2039a38c-b8af-48da-b00e-bdd4896ad047}"
+    in_index: 0
+    out_id: "{fc5cedf4-7b10-4ed6-a02b-34801af448fb}"
+    out_index: 1
+  - id: "{db07aff0-51c6-4b9d-a1bc-f74f9d04be65}"
+    in_id: "{24b4bb8a-1a60-44b4-a5be-25dbaf722daa}"
+    in_index: 2
+    out_id: "{b8d58b19-42b0-4a6a-9024-baf9ceb8971e}"
+    out_index: 2
+  - id: "{dc9dc1e3-2248-4437-954c-b525c97158fe}"
+    in_id: "{ee90cc53-fc7f-40c8-b469-a72f6752561d}"
+    in_index: 0
+    out_id: "{562b94db-7dde-473c-b65c-dff78d353655}"
+    out_index: 1
+  - id: "{ebd489c8-d90d-4f7a-bb4b-82099be3661e}"
+    in_id: "{8983f54f-5025-4fe0-b83e-8d713f2f08fd}"
+    in_index: 0
+    out_id: "{8d98cc3d-3aab-4e11-9824-9e2a58e27c43}"
+    out_index: 0
+  - id: "{ef31329f-a216-4acd-b4ef-de4a99726b5d}"
+    in_id: "{6634169c-7da2-425b-8318-7c557479cdb1}"
+    in_index: 0
+    out_id: "{187fc97b-068d-40f3-8e30-008c2b6d2d0d}"
+    out_index: 1
+  - id: "{fe9374ac-4c43-4003-b700-fb85928b698c}"
+    in_id: "{8d98cc3d-3aab-4e11-9824-9e2a58e27c43}"
+    in_index: 0
+    out_id: "{6211f759-d046-4878-9ef7-5b485e4f0c43}"
+    out_index: 2
+service:
+  enable: true
+  cmds:
+    calculate_object_poses_3:
+      enable: true
+      root_nodes: ["{cccf33b9-53ad-4d3b-b8f7-d4868e15f251}"]
+      leaf_nodes: ["{bbe0f2c3-bbe8-43cd-94fe-db4f08faa920}", "{b3172aba-2d0f-48a5-8dd7-61b1bca2f336}", "{9c602607-213d-42a3-86bf-46d186848882}", "{2039a38c-b8af-48da-b00e-bdd4896ad047}", "{28bc6810-00f7-4f26-9672-daf4e7f9df12}", "{90400463-3ac5-4891-bbf8-d2fb5eea496f}"]
+      parallel: false
+    capture_images_1:
+      enable: true
+      root_nodes: ["{562b94db-7dde-473c-b65c-dff78d353655}"]
+      leaf_nodes: ["{562b94db-7dde-473c-b65c-dff78d353655}"]
+      parallel: false
+    check_primitive_cloud:
+      enable: true
+      root_nodes: ["{187fc97b-068d-40f3-8e30-008c2b6d2d0d}", "{dacc09b8-3688-47c9-b60d-ecc35d75f2b7}"]
+      leaf_nodes: ["{6634169c-7da2-425b-8318-7c557479cdb1}"]
+      parallel: false
+    check_tote_empty:
+      enable: true
+      root_nodes: ["{dacc09b8-3688-47c9-b60d-ecc35d75f2b7}", "{fc5cedf4-7b10-4ed6-a02b-34801af448fb}"]
+      leaf_nodes: ["{b3172aba-2d0f-48a5-8dd7-61b1bca2f336}"]
+      parallel: false
+    get_safe_height:
+      enable: true
+      root_nodes: ["{cccf33b9-53ad-4d3b-b8f7-d4868e15f251}"]
+      leaf_nodes: ["{59871dad-107c-4d2a-94e4-c463c5404b00}"]
+      parallel: false
+    load_calibration_info:
+      enable: true
+      root_nodes: ["{6211f759-d046-4878-9ef7-5b485e4f0c43}"]
+      leaf_nodes: ["{6211f759-d046-4878-9ef7-5b485e4f0c43}"]
+      parallel: false
+    load_camera_info:
+      enable: true
+      root_nodes: ["{cccf33b9-53ad-4d3b-b8f7-d4868e15f251}"]
+      leaf_nodes: ["{cccf33b9-53ad-4d3b-b8f7-d4868e15f251}"]
+      parallel: false
+    load_workspace_info:
+      enable: true
+      root_nodes: ["{6211f759-d046-4878-9ef7-5b485e4f0c43}"]
+      leaf_nodes: ["{6211f759-d046-4878-9ef7-5b485e4f0c43}"]
+      parallel: false

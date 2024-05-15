@@ -1,0 +1,69 @@
+{
+    "data_source": {
+        "comment": "复位报警", 
+        "device_id": "2", 
+        "ports": [
+            65031, 
+            65032, 
+            65033, 
+            65034
+        ], 
+        "value_list": [
+            0, 
+            1, 
+            0, 
+            0
+        ]
+    }, 
+    "data_source_translation": {
+        "/comment": "模块注释，显示在图形界面中", 
+        "/device_id": "设备号的ID, 启动io服务时的io_server.json的配置", 
+        "/ports": "设备的端口号列表， 端口号对PLC就是寄存器起始地址", 
+        "/value_list": "该设备的端口号输出值列表"
+    }, 
+    "data_source_type": {
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "device_id": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "ports": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ]
+        }, 
+        "value_list": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }
+    }
+}

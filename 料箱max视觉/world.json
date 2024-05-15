@@ -1,0 +1,4544 @@
+{
+    "nodes": [
+        {
+            "_CLASS_": "Node",
+            "name": "root",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "parent_uuid": "",
+            "uuid": "{d31bdb25-e9fe-4931-8ebb-e7561d31ec99}",
+            "visible": true
+        },
+        {
+            "_CLASS_": "WorldFrame",
+            "active_robot_path": {
+                "is_absolute": false,
+                "path": null
+            },
+            "collision_config": {
+                "collisiontype_distance_threshold_map": null,
+                "distance_threshold": 5e-05,
+                "flag_calculate_contact_points": false,
+                "flag_calculate_distance": false,
+                "flag_calculate_env_collision": true,
+                "flag_calculate_self_collision": true,
+                "num_contacts_threshold": 1,
+                "num_max_contacts": 1,
+                "pointcloud_num_contacts_threshold": 1,
+                "self_distance_threshold": 0.001
+            },
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": true,
+            "from_workspace_path": {
+                "is_absolute": true,
+                "path": [
+                    "root",
+                    "WorldFrame",
+                    "托盘",
+                    "工作空间_0",
+                    "WorkspaceBody",
+                    "Workspace"
+                ]
+            },
+            "name": "WorldFrame",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{d31bdb25-e9fe-4931-8ebb-e7561d31ec99}",
+            "time": 0.0,
+            "time_step": 0.001,
+            "to_workspace_path": {
+                "is_absolute": true,
+                "path": [
+                    "root",
+                    "WorldFrame",
+                    "托盘",
+                    "工作空间_0",
+                    "WorkspaceBody",
+                    "Workspace"
+                ]
+            },
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{d31fbc09-757e-4d27-a393-e1905077b6d7}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "Initialize": true,
+            "_CLASS_": "Tray",
+            "bottom_length": 1.2,
+            "bottom_width": 1.0,
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "height": 0.3,
+            "load_bearing": 9999.9999,
+            "name": "托盘",
+            "name_editable": true,
+            "need_init": false,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{d31fbc09-757e-4d27-a393-e1905077b6d7}",
+            "thickness": 0.15,
+            "top_length": 1.2,
+            "top_width": 1.0,
+            "transform": {
+                "position": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "use_special_tote": false,
+            "uuid": "{e62a3943-9bf7-441f-9c3e-ce21e5caa686}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "wall_available": [
+                "Valid",
+                "Invalid",
+                "Invalid",
+                "Invalid",
+                "Invalid",
+                "Invalid"
+            ],
+            "world_transform_editable": true
+        },
+        {
+            "Initialize": true,
+            "_CLASS_": "Conveyor",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "front_side_available": false,
+            "front_side_height": 0.05,
+            "front_side_width": 0.05,
+            "height": 0.5,
+            "left_side_available": true,
+            "left_side_height": 0.05,
+            "left_side_width": 0.05,
+            "length": 1.5,
+            "load_bearing": 9999.9999,
+            "name": "输送线",
+            "name_editable": true,
+            "need_init": false,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{d31fbc09-757e-4d27-a393-e1905077b6d7}",
+            "right_side_available": true,
+            "right_side_height": 0.05,
+            "right_side_width": 0.05,
+            "speed": 1.0,
+            "transform": {
+                "position": {
+                    "x": 1.0,
+                    "y": 0.9288071627406728,
+                    "z": -1.5807985422739368e-17
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{ea84181a-529e-44cf-8a0d-8d65e931a8ef}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "width": 0.5,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "Robot",
+            "actual_dofs": 4,
+            "constraints": [
+                {
+                    "coeff": [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "lower_bound": 0.0,
+                    "upper_bound": 0.0
+                },
+                {
+                    "coeff": [
+                        0.0,
+                        1.0,
+                        0.0,
+                        1.0,
+                        1.0,
+                        0.0
+                    ],
+                    "lower_bound": 0.0,
+                    "upper_bound": 0.0
+                }
+            ],
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "ik_max_iteration": 20,
+            "is_activated": true,
+            "is_modified_dh": true,
+            "name": "KUKA-KR-180-R3200-PA",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{d31fbc09-757e-4d27-a393-e1905077b6d7}",
+            "robot_id": 0,
+            "robot_joint_limits": {
+                "hard_lower_limits": [
+                    -3.2288591161895095,
+                    -2.443460952792061,
+                    -0.0,
+                    -6.1086523819801535
+                ],
+                "hard_upper_limits": [
+                    3.2288591161895095,
+                    -0.08726646259971647,
+                    2.705260340591211,
+                    6.1086523819801535
+                ],
+                "joint_type": [
+                    "kRevoluteJoint",
+                    "kRevoluteJoint",
+                    "kRevoluteJoint",
+                    "kRevoluteJoint"
+                ],
+                "soft_lower_limits": [
+                    -3.2288591161895095,
+                    -2.443460952792061,
+                    -0.0,
+                    -6.1086523819801535
+                ],
+                "soft_upper_limits": [
+                    3.2288591161895095,
+                    -0.08726646259971647,
+                    2.705260340591211,
+                    6.1086523819801535
+                ]
+            },
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{1e93a160-27f8-4512-8827-8c612559f789}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kEnv",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 1.0
+            },
+            "is_collidable": true,
+            "name": "ContainerBodyNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{e62a3943-9bf7-441f-9c3e-ce21e5caa686}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{15efc386-b683-40b9-aacc-b4a92c6d4c66}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "Capture image and get vision result": true,
+            "Generate/Update Items": true,
+            "Generate/Update Place Slots": true,
+            "Initialize": true,
+            "X-size": 1.2,
+            "Y-size": 1.0,
+            "Z-size": 1.5,
+            "_CLASS_": "WorkspaceSkeleton",
+            "add_item_palletize_type": "Manually",
+            "add_place_slot_palletize_type": "Manually",
+            "all_frames_path": null,
+            "all_item_relative_pose": null,
+            "all_items_path": null,
+            "all_place_slots_path": null,
+            "all_slot_relative_pose": null,
+            "color": {
+                "a": 0.2,
+                "b": 1.0,
+                "g": 0.55,
+                "r": 0.1
+            },
+            "container": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "depalletize_file_path": "",
+            "euler_rotation_order_clone": "kRXYZ",
+            "external_id": "0",
+            "frame_visible": true,
+            "had_padding": false,
+            "hide parent node path": true,
+            "hide_transform_params": false,
+            "is_body_visible": true,
+            "is_collidable": false,
+            "item_pose_from": "Manually",
+            "mass": 0.0,
+            "min_sku_height": -0.001,
+            "name": "工作空间_0",
+            "name readonly": false,
+            "name_editable": true,
+            "need_init": false,
+            "need_point_cloud": false,
+            "node_validity": "kUndefined",
+            "number_of_item": 0,
+            "number_of_place_slot": 0,
+            "only_pose_visible": true,
+            "origin_item": {
+                "is_absolute": false,
+                "path": null
+            },
+            "origin_item_from": "Create manually",
+            "origin_item_type": "kUndefined",
+            "origin_place_slot_from": "No required",
+            "origin_slot": {
+                "is_absolute": false,
+                "path": null
+            },
+            "palletize_file_path": "",
+            "parent node": {
+                "is_absolute": false,
+                "path": null
+            },
+            "parent_uuid": "{e62a3943-9bf7-441f-9c3e-ce21e5caa686}",
+            "point_cloud": {
+                "is_absolute": false,
+                "path": null
+            },
+            "project_file_path": "C:\\Users\\guoxi\\Documents\\XYZRobotics\\料箱单拆-眼在手上_1",
+            "registered_item": {
+                "is_absolute": false,
+                "path": null
+            },
+            "set_padding": "No padding",
+            "shape_type": "kCuboid",
+            "size_read_only": false,
+            "slot_pose_from": "Manually",
+            "tf_container_body": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.75
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "transparency": 0.2,
+            "uuid": "{704d2a55-dcbd-4229-9780-76fb93a1fb24}",
+            "visible": true,
+            "vision_flow": "",
+            "vision_id": 0,
+            "vision_service": "",
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "workspace_id": 0,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kEnv",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 1.0
+            },
+            "is_collidable": true,
+            "name": "ContainerBodyNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{ea84181a-529e-44cf-8a0d-8d65e931a8ef}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{5b466fb5-1f7f-408e-998c-f3bcf113c031}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "Capture image and get vision result": true,
+            "Generate/Update Items": true,
+            "Generate/Update Place Slots": true,
+            "Initialize": true,
+            "X-size": 1.5,
+            "Y-size": 0.5,
+            "Z-size": 0.6,
+            "_CLASS_": "WorkspaceSkeleton",
+            "add_item_palletize_type": "Manually",
+            "add_place_slot_palletize_type": "Manually",
+            "all_frames_path": null,
+            "all_item_relative_pose": null,
+            "all_items_path": null,
+            "all_place_slots_path": null,
+            "all_slot_relative_pose": null,
+            "color": {
+                "a": 0.2,
+                "b": 1.0,
+                "g": 0.55,
+                "r": 0.1
+            },
+            "container": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "depalletize_file_path": "",
+            "euler_rotation_order_clone": "kRXYZ",
+            "external_id": "1",
+            "frame_visible": true,
+            "had_padding": false,
+            "hide parent node path": true,
+            "hide_transform_params": false,
+            "is_body_visible": true,
+            "is_collidable": false,
+            "item_pose_from": "Manually",
+            "mass": 0.0,
+            "min_sku_height": -0.001,
+            "name": "工作空间_1",
+            "name readonly": false,
+            "name_editable": true,
+            "need_init": false,
+            "need_point_cloud": false,
+            "node_validity": "kUndefined",
+            "number_of_item": 0,
+            "number_of_place_slot": 0,
+            "only_pose_visible": true,
+            "origin_item": {
+                "is_absolute": false,
+                "path": null
+            },
+            "origin_item_from": "Create manually",
+            "origin_item_type": "kUndefined",
+            "origin_place_slot_from": "No required",
+            "origin_slot": {
+                "is_absolute": false,
+                "path": null
+            },
+            "palletize_file_path": "",
+            "parent node": {
+                "is_absolute": false,
+                "path": null
+            },
+            "parent_uuid": "{ea84181a-529e-44cf-8a0d-8d65e931a8ef}",
+            "point_cloud": {
+                "is_absolute": false,
+                "path": null
+            },
+            "project_file_path": "C:\\Users\\guoxi\\Documents\\XYZRobotics\\料箱单拆-眼在手上_1",
+            "registered_item": {
+                "is_absolute": false,
+                "path": null
+            },
+            "set_padding": "No padding",
+            "shape_type": "kCuboid",
+            "size_read_only": false,
+            "slot_pose_from": "Manually",
+            "tf_container_body": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.3
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "transparency": 0.2,
+            "uuid": "{73803367-3cf8-4397-9839-a89cfd5ad015}",
+            "visible": true,
+            "vision_flow": "",
+            "vision_id": 0,
+            "vision_service": "",
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "workspace_id": 1,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kRobotBase",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 1.0
+            },
+            "is_collidable": true,
+            "name": "base_link",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{1e93a160-27f8-4512-8827-8c612559f789}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{7d1a310f-4ab6-4969-95b6-bffcdc1f1158}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "Initialize": true,
+            "X-size": 1.2,
+            "Y-size": 1.0,
+            "Z-size": 0.15,
+            "_CLASS_": "CuboidEnvObject",
+            "color": {
+                "a": 1.0,
+                "b": 0.471,
+                "g": 0.678,
+                "r": 0.859
+            },
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "hide parent node path": true,
+            "hide_transform_params": false,
+            "is_body_visible": true,
+            "is_collidable": true,
+            "mass": 1.0,
+            "name": "BottomFace",
+            "name readonly": false,
+            "name_editable": false,
+            "need_init": false,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent node": {
+                "is_absolute": false,
+                "path": null
+            },
+            "parent_uuid": "{15efc386-b683-40b9-aacc-b4a92c6d4c66}",
+            "shape_type": "kCuboid",
+            "size_read_only": true,
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "transparency": 1.0,
+            "uuid": "{aa8a0f42-c7f5-4872-80b0-c44bc9743fca}",
+            "visible": true,
+            "vision_id": 0,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kEnv",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 0.0
+            },
+            "is_collidable": false,
+            "name": "WorkspaceBody",
+            "name_editable": false,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{704d2a55-dcbd-4229-9780-76fb93a1fb24}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{2bd97fbc-b150-4099-a02e-43f9b3606856}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "Initialize": true,
+            "X-size": 1.5,
+            "Y-size": 0.05,
+            "Z-size": 0.05,
+            "_CLASS_": "CuboidEnvObject",
+            "color": {
+                "a": 1.0,
+                "b": 0.7049973296711681,
+                "g": 0.7049973296711681,
+                "r": 0.7049973296711681
+            },
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "hide parent node path": true,
+            "hide_transform_params": false,
+            "is_body_visible": true,
+            "is_collidable": true,
+            "mass": 1.0,
+            "name": "LeftSide",
+            "name readonly": false,
+            "name_editable": false,
+            "need_init": false,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent node": {
+                "is_absolute": false,
+                "path": null
+            },
+            "parent_uuid": "{5b466fb5-1f7f-408e-998c-f3bcf113c031}",
+            "shape_type": "kCuboid",
+            "size_read_only": true,
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "transparency": 1.0,
+            "uuid": "{e1a1a705-2464-4fb5-8034-1620dd59ebd4}",
+            "visible": true,
+            "vision_id": 0,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "Initialize": true,
+            "X-size": 1.5,
+            "Y-size": 0.05,
+            "Z-size": 0.05,
+            "_CLASS_": "CuboidEnvObject",
+            "color": {
+                "a": 1.0,
+                "b": 0.7049973296711681,
+                "g": 0.7049973296711681,
+                "r": 0.7049973296711681
+            },
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "hide parent node path": true,
+            "hide_transform_params": false,
+            "is_body_visible": true,
+            "is_collidable": true,
+            "mass": 1.0,
+            "name": "RightSide",
+            "name readonly": false,
+            "name_editable": false,
+            "need_init": false,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent node": {
+                "is_absolute": false,
+                "path": null
+            },
+            "parent_uuid": "{5b466fb5-1f7f-408e-998c-f3bcf113c031}",
+            "shape_type": "kCuboid",
+            "size_read_only": true,
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "transparency": 1.0,
+            "uuid": "{5eb8858f-a825-49db-a4bc-1aee64c21239}",
+            "visible": true,
+            "vision_id": 0,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "Initialize": true,
+            "X-size": 1.5,
+            "Y-size": 0.6000000000000001,
+            "Z-size": 0.5,
+            "_CLASS_": "CuboidEnvObject",
+            "color": {
+                "a": 1.0,
+                "b": 0.705,
+                "g": 0.705,
+                "r": 0.705
+            },
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "hide parent node path": true,
+            "hide_transform_params": false,
+            "is_body_visible": true,
+            "is_collidable": true,
+            "mass": 1.0,
+            "name": "Base",
+            "name readonly": false,
+            "name_editable": false,
+            "need_init": false,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent node": {
+                "is_absolute": false,
+                "path": null
+            },
+            "parent_uuid": "{5b466fb5-1f7f-408e-998c-f3bcf113c031}",
+            "shape_type": "kCuboid",
+            "size_read_only": true,
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "transparency": 1.0,
+            "uuid": "{4af01705-29d1-4afa-b384-a9aec8afcec0}",
+            "visible": true,
+            "vision_id": 0,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kEnv",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 0.0
+            },
+            "is_collidable": false,
+            "name": "WorkspaceBody",
+            "name_editable": false,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{73803367-3cf8-4397-9839-a89cfd5ad015}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{55344cf7-bf68-4b81-aab7-51afef04d8dd}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "VisualShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "VisualShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{7d1a310f-4ab6-4969-95b6-bffcdc1f1158}",
+            "shape_rid": "{beacfce1-9320-47f1-9964-57201e4b6121}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{d1eaddad-53b6-496d-831b-a88465b72f40}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "CollisionShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "CollisionShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{7d1a310f-4ab6-4969-95b6-bffcdc1f1158}",
+            "shape_rid": "{3b3f3d08-c976-434e-8541-64da164cb8d4}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{6bc47d71-856b-4317-b4f2-65039cd7b792}",
+            "visible": false,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "RevoluteJoint",
+            "axis": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -1.0
+            },
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "dofs": 1,
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "joint_id": 0,
+            "joint_type": "kRevoluteJoint",
+            "lower_limits": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        -3.2288591161895095
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "name": "joint1",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{7d1a310f-4ab6-4969-95b6-bffcdc1f1158}",
+            "positions": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        0.1748819910498318
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.675
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "upper_limits": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        3.2288591161895095
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "uuid": "{17a0fdad-26d0-43aa-8bd0-0a7d390d4976}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true,
+            "zero_positions": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        0.0
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            }
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kEnv",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 1.0
+            },
+            "is_collidable": true,
+            "name": "bottom_face_body",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{aa8a0f42-c7f5-4872-80b0-c44bc9743fca}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": -0.075
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{2a675d1b-eea2-4e9e-8702-1b9ce38d56b4}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "VisualShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "VisualShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{2bd97fbc-b150-4099-a02e-43f9b3606856}",
+            "shape_rid": "{69d7d51c-43b4-471e-a1e9-754c225c3397}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.75
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{652f1851-9317-42e5-acb3-1b4f1ee4ddda}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "CollisionShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "CollisionShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{2bd97fbc-b150-4099-a02e-43f9b3606856}",
+            "shape_rid": "{52475d84-5620-4ffa-a817-01bf767e846d}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.75
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{3fa89706-1e81-4053-9b8d-2892dbf7b01a}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "Workspace",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "dimensions": {
+                "x": 1.2,
+                "y": 1.0,
+                "z": 1.5
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "Workspace",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{2bd97fbc-b150-4099-a02e-43f9b3606856}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{bc17868e-bf8c-44c9-8520-53eae68e5e3f}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kEnv",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 1.0
+            },
+            "is_collidable": true,
+            "name": "left_side_body",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{e1a1a705-2464-4fb5-8034-1620dd59ebd4}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": -0.275,
+                    "z": 0.025
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{1655ef4f-dede-40d9-bf9b-b5970f69d6f1}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kEnv",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 1.0
+            },
+            "is_collidable": true,
+            "name": "right_side_body",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{5eb8858f-a825-49db-a4bc-1aee64c21239}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.275,
+                    "z": 0.025
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{84a018cc-abda-4a3e-812d-ad4daec6d75d}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kEnv",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 1.0
+            },
+            "is_collidable": true,
+            "name": "base_body",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{4af01705-29d1-4afa-b384-a9aec8afcec0}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": -0.25
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{8e418322-d6ee-43aa-a15e-0bac5e4accb5}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "VisualShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "VisualShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{55344cf7-bf68-4b81-aab7-51afef04d8dd}",
+            "shape_rid": "{118eac5a-df3c-4d35-950d-3ca64428cbec}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.3
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{038a25d0-9531-40ae-a648-772835785934}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "CollisionShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "CollisionShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{55344cf7-bf68-4b81-aab7-51afef04d8dd}",
+            "shape_rid": "{fe2bdced-5414-45ea-8585-a15f0239e588}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.3
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{7bd009ff-cbbd-433a-b466-dccc185bbace}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "Workspace",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "dimensions": {
+                "x": 1.5,
+                "y": 0.5,
+                "z": 0.6
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "Workspace",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{55344cf7-bf68-4b81-aab7-51afef04d8dd}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{aeeb617a-0743-4736-a8c9-bdca53875eda}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kRobotUpperArm",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 1.0
+            },
+            "is_collidable": true,
+            "name": "link_1",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{17a0fdad-26d0-43aa-8bd0-0a7d390d4976}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{0ef9e80f-e006-4d0e-a53d-2c48314602ef}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "VisualShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "VisualShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{2a675d1b-eea2-4e9e-8702-1b9ce38d56b4}",
+            "shape_rid": "{dcd8681a-94b3-4d15-aa7a-f16fa1110347}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{477f64c6-ee0b-4411-94d7-046a3c692541}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "CollisionShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "CollisionShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{2a675d1b-eea2-4e9e-8702-1b9ce38d56b4}",
+            "shape_rid": "{a4316e66-fc35-45b7-b181-270ac2be9865}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{4228c618-b1e2-4551-a01d-96e38669b445}",
+            "visible": false,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "Frame",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": true,
+            "name": "ContainerGroup",
+            "name_editable": false,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{bc17868e-bf8c-44c9-8520-53eae68e5e3f}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{0145acdb-2d35-436a-b4a9-912e40bc220f}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "Frame",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": true,
+            "name": "PlannedGroup",
+            "name_editable": false,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{bc17868e-bf8c-44c9-8520-53eae68e5e3f}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{4ba1170d-1ca4-40d2-8100-706e1654b8d9}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "VisualShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "VisualShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{1655ef4f-dede-40d9-bf9b-b5970f69d6f1}",
+            "shape_rid": "{a0512d8e-8681-4b3a-b488-61e59639d106}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{0d896e5a-c2b1-44ca-931b-29cd29cc1139}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "CollisionShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "CollisionShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{1655ef4f-dede-40d9-bf9b-b5970f69d6f1}",
+            "shape_rid": "{9b7c912c-8882-4577-8ce7-080f4893ad26}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{f2cd62e8-c800-4add-a69b-e12952287fee}",
+            "visible": false,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "VisualShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "VisualShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{84a018cc-abda-4a3e-812d-ad4daec6d75d}",
+            "shape_rid": "{f29ea254-e87a-4094-8d0f-6f1669c1fc5f}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{0e0058a9-f9cf-40e5-8219-0bab8f59385c}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "CollisionShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "CollisionShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{84a018cc-abda-4a3e-812d-ad4daec6d75d}",
+            "shape_rid": "{f1d52787-6905-4e47-b651-c63ed2622840}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{d3654f87-95de-4eb3-8d6d-d43aa904f90f}",
+            "visible": false,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "VisualShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "VisualShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{8e418322-d6ee-43aa-a15e-0bac5e4accb5}",
+            "shape_rid": "{4ba3b015-919e-4c6f-a3c1-99e3492d958c}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{c007d1f4-8ab5-4155-a0cd-67ad3396e555}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "CollisionShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "CollisionShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{8e418322-d6ee-43aa-a15e-0bac5e4accb5}",
+            "shape_rid": "{e5d0d5ca-c0dd-4feb-a1aa-4e3cf0ea405b}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{c97bdcf1-1301-47bc-a4f5-725ff6c186d1}",
+            "visible": false,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "Frame",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": true,
+            "name": "ContainerGroup",
+            "name_editable": false,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{aeeb617a-0743-4736-a8c9-bdca53875eda}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{622d86fe-9184-47c1-915a-24814d10eea9}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "Frame",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": true,
+            "name": "PlannedGroup",
+            "name_editable": false,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{aeeb617a-0743-4736-a8c9-bdca53875eda}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{78d8982f-55f3-457f-b361-0d7fc9006b29}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "VisualShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "VisualShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{0ef9e80f-e006-4d0e-a53d-2c48314602ef}",
+            "shape_rid": "{8b3b5a46-29c7-4208-b760-7a842dc3e913}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": -0.675
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{49d78d8c-c395-444f-9d71-cd919214b5c3}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "CollisionShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "CollisionShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{0ef9e80f-e006-4d0e-a53d-2c48314602ef}",
+            "shape_rid": "{23bafc84-3b90-45a4-abf5-e7cc3a58af16}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": -0.675
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{6dc0fdcf-c4d1-4a75-810f-6c50bb8a5bad}",
+            "visible": false,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "RevoluteJoint",
+            "axis": {
+                "x": 0.0,
+                "y": 1.0,
+                "z": 0.0
+            },
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "dofs": 1,
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "joint_id": 1,
+            "joint_type": "kRevoluteJoint",
+            "lower_limits": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        -2.443460952792061
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "name": "joint2",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{0ef9e80f-e006-4d0e-a53d-2c48314602ef}",
+            "positions": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        -1.2966051013065873
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "transform": {
+                "position": {
+                    "x": 0.35,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 0.7071067811865476,
+                    "x": 0.0,
+                    "y": 0.7071067811865475,
+                    "z": 0.0
+                }
+            },
+            "upper_limits": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        -0.08726646259971647
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "uuid": "{a50fa22f-ca35-4b93-b1ce-277d177a0134}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true,
+            "zero_positions": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        0.0
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            }
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kRobotUpperArm",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 1.0
+            },
+            "is_collidable": true,
+            "name": "link_2",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{a50fa22f-ca35-4b93-b1ce-277d177a0134}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{4a61df18-91db-4dcb-b8be-3544086edaf9}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "VisualShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "VisualShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{4a61df18-91db-4dcb-b8be-3544086edaf9}",
+            "shape_rid": "{76b06654-3c44-4e12-a8bf-3d1d2810455e}",
+            "transform": {
+                "position": {
+                    "x": -0.35,
+                    "y": 0.0,
+                    "z": -0.675
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{6e60771d-f00a-4caf-8842-ec35770f1f54}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "CollisionShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "CollisionShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{4a61df18-91db-4dcb-b8be-3544086edaf9}",
+            "shape_rid": "{7661ef61-9ba1-422d-9eb2-1c3af5b15207}",
+            "transform": {
+                "position": {
+                    "x": -0.35,
+                    "y": 0.0,
+                    "z": -0.675
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{649a0876-16a0-440a-aefa-83ed879a3d9f}",
+            "visible": false,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "RevoluteJoint",
+            "axis": {
+                "x": 0.0,
+                "y": 1.0,
+                "z": 0.0
+            },
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "dofs": 1,
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "joint_id": 2,
+            "joint_type": "kRevoluteJoint",
+            "lower_limits": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        -0.0
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "name": "joint3",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{4a61df18-91db-4dcb-b8be-3544086edaf9}",
+            "positions": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        0.0
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 1.35
+                },
+                "quaternion": {
+                    "w": 0.7071067811865476,
+                    "x": 0.0,
+                    "y": -0.7071067811865475,
+                    "z": 0.0
+                }
+            },
+            "upper_limits": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        0.0
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "uuid": "{eff973b9-425a-4aa9-83da-ad7d277c4eb3}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true,
+            "zero_positions": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        0.0
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            }
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kRobotForearm",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 1.0
+            },
+            "is_collidable": true,
+            "name": "link_3",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{eff973b9-425a-4aa9-83da-ad7d277c4eb3}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{64e57e69-cb48-4704-a9b1-8485c67c5147}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "VisualShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "VisualShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{64e57e69-cb48-4704-a9b1-8485c67c5147}",
+            "shape_rid": "{27579d80-e9da-411e-a912-8223f9b4d833}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{0c6a5bce-0567-420a-8972-63aea75cf18e}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "CollisionShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "CollisionShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{64e57e69-cb48-4704-a9b1-8485c67c5147}",
+            "shape_rid": "{37217519-cb2f-45bc-84b4-253b384f3329}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{94303bee-d6b3-4e78-8af7-9d0275bfbd57}",
+            "visible": false,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "RevoluteJoint",
+            "axis": {
+                "x": 0.0,
+                "y": 1.0,
+                "z": 0.0
+            },
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "dofs": 1,
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "joint_id": 3,
+            "joint_type": "kRevoluteJoint",
+            "lower_limits": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        -0.0
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "name": "joint4",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{64e57e69-cb48-4704-a9b1-8485c67c5147}",
+            "positions": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        2.1802653015913167
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "upper_limits": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        2.705260340591211
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "uuid": "{b77de805-8826-4bb3-8839-1aee004242a9}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true,
+            "zero_positions": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        0.0
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            }
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kRobotForearm",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 1.0
+            },
+            "is_collidable": true,
+            "name": "link_4",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{b77de805-8826-4bb3-8839-1aee004242a9}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{ceefa882-801b-4185-85ca-94e067dbabc7}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "VisualShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "VisualShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{ceefa882-801b-4185-85ca-94e067dbabc7}",
+            "shape_rid": "{3bd3aeab-e749-45a8-8cdf-e37855941e4d}",
+            "transform": {
+                "position": {
+                    "x": -0.35,
+                    "y": 0.0,
+                    "z": -2.025
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{212ae3fa-7501-4426-be82-f0d32b8b9736}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "CollisionShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "CollisionShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{ceefa882-801b-4185-85ca-94e067dbabc7}",
+            "shape_rid": "{73adc92b-97ab-4924-806a-95a821fc317f}",
+            "transform": {
+                "position": {
+                    "x": -0.35,
+                    "y": 0.0,
+                    "z": -2.025
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{a79d8d7c-60a5-4842-b199-908893eb8562}",
+            "visible": false,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "RevoluteJoint",
+            "axis": {
+                "x": 0.0,
+                "y": 1.0,
+                "z": 0.0
+            },
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "dofs": 1,
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "joint_id": 4,
+            "joint_type": "kRevoluteJoint",
+            "lower_limits": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        -2.2689280275926285
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "name": "joint5",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{ceefa882-801b-4185-85ca-94e067dbabc7}",
+            "positions": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        -0.8836602002847294
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "transform": {
+                "position": {
+                    "x": 1.22,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "upper_limits": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        1.0471975511965976
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "uuid": "{bf3dd838-36a9-4203-b2e6-efac0a9f729f}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true,
+            "zero_positions": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        0.0
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            }
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kRobotWrist",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 1.0
+            },
+            "is_collidable": true,
+            "name": "link_5",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{bf3dd838-36a9-4203-b2e6-efac0a9f729f}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{987c6af5-e426-42fc-9058-cc84f4996945}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "VisualShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "VisualShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{987c6af5-e426-42fc-9058-cc84f4996945}",
+            "shape_rid": "{4d74e9a0-2b43-428a-99f9-e6ff5b1b588a}",
+            "transform": {
+                "position": {
+                    "x": -1.57,
+                    "y": 0.0,
+                    "z": -2.025
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{761f28f8-c8f5-42f1-9a07-1555f0282d99}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "CollisionShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "CollisionShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{987c6af5-e426-42fc-9058-cc84f4996945}",
+            "shape_rid": "{73cad7f1-2744-48d7-8206-8c82f7a13d7a}",
+            "transform": {
+                "position": {
+                    "x": -1.57,
+                    "y": 0.0,
+                    "z": -2.025
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{7559dd7d-1923-4eaa-a623-20c3b7cc5307}",
+            "visible": false,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "RevoluteJoint",
+            "axis": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -1.0
+            },
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "dofs": 1,
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "joint_id": 5,
+            "joint_type": "kRevoluteJoint",
+            "lower_limits": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        -6.1086523819801535
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "name": "joint6",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{987c6af5-e426-42fc-9058-cc84f4996945}",
+            "positions": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        1.2409290981679681
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "transform": {
+                "position": {
+                    "x": 0.28,
+                    "y": 0.0,
+                    "z": -0.25
+                },
+                "quaternion": {
+                    "w": 0.0,
+                    "x": 0.0,
+                    "y": 1.0,
+                    "z": 0.0
+                }
+            },
+            "upper_limits": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        6.1086523819801535
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            },
+            "uuid": "{2c841f4e-10e1-4379-bf9e-e5bf4f865311}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true,
+            "zero_positions": {
+                "cols": 1,
+                "data": {
+                    "cols": 1,
+                    "data": [
+                        0.0
+                    ],
+                    "rows": 1
+                },
+                "rows": 1
+            }
+        },
+        {
+            "_CLASS_": "BodyNode",
+            "collision_object_type": "kRobotWrist",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "inertia": {
+                "Ixx": 1.0,
+                "Ixy": 0.0,
+                "Ixz": 0.0,
+                "Iyy": 1.0,
+                "Iyz": 0.0,
+                "Izz": 1.0,
+                "center_of_mass": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "mI": {
+                    "cols": 6,
+                    "data": {
+                        "cols": 6,
+                        "data": [
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0,
+                            0.0,
+                            0.0,
+                            -0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "rows": 6
+                    },
+                    "rows": 6
+                },
+                "mass": 1.0
+            },
+            "is_collidable": true,
+            "name": "link_6",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": false,
+            "parent_uuid": "{2c841f4e-10e1-4379-bf9e-e5bf4f865311}",
+            "transform": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "quaternion": {
+                    "w": 1.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{f79fb650-a3f8-4927-bd4c-0ce4efab3b51}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "VisualShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "VisualShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{f79fb650-a3f8-4927-bd4c-0ce4efab3b51}",
+            "shape_rid": "{1d3fd81b-399f-487b-8778-d660dd467972}",
+            "transform": {
+                "position": {
+                    "x": -1.85,
+                    "y": 0.0,
+                    "z": 1.775
+                },
+                "quaternion": {
+                    "w": 0.0,
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{9f98dce5-efa2-4932-a41a-00230865d749}",
+            "visible": true,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        },
+        {
+            "_CLASS_": "CollisionShapeNode",
+            "control_frame": {
+                "is_absolute": false,
+                "path": null
+            },
+            "euler_rotation_order_clone": "kRXYZ",
+            "frame_visible": false,
+            "name": "CollisionShapeNode",
+            "name_editable": true,
+            "node_validity": "kUndefined",
+            "only_pose_visible": true,
+            "parent_node_path": {
+                "is_absolute": false,
+                "path": [
+                    ".."
+                ]
+            },
+            "parent_uuid": "{f79fb650-a3f8-4927-bd4c-0ce4efab3b51}",
+            "shape_rid": "{4bede19f-4b17-496b-bad4-c46abd67fe87}",
+            "transform": {
+                "position": {
+                    "x": -1.85,
+                    "y": 0.0,
+                    "z": 1.775
+                },
+                "quaternion": {
+                    "w": 0.0,
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                }
+            },
+            "uuid": "{ab6b9a81-fb6e-4e7b-b097-2d0a21e46e7f}",
+            "visible": false,
+            "visual_length": 0.1,
+            "visual_radius": 0.001,
+            "world_transform_editable": true
+        }
+    ],
+    "resources": {
+        "_CLASS_": "ResourceManagerSerializeHelper",
+        "path2rid": null,
+        "resources": [
+            {
+                "key": "{f1d52787-6905-4e47-b651-c63ed2622840}",
+                "value": {
+                    "_RESOURCE_": "BoxShape",
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.7049973296711681,
+                        "g": 0.7049973296711681,
+                        "r": 0.7049973296711681
+                    },
+                    "hide_vhacd": false,
+                    "size": {
+                        "x": 1.5,
+                        "y": 0.05,
+                        "z": 0.05
+                    },
+                    "transparency": 1.0
+                }
+            },
+            {
+                "key": "{3b3f3d08-c976-434e-8541-64da164cb8d4}",
+                "value": {
+                    "_RESOURCE_": "ConvexShape",
+                    "acd_done": false,
+                    "acd_params": {
+                        "enable_async": true,
+                        "export_series_stl": false,
+                        "find_best_plane": false,
+                        "max_vertices_per_convex_hull": 64,
+                        "min_edge_length": 2,
+                        "min_volume_percent_error": 1.0,
+                        "num_of_convex_hull": 16,
+                        "recursion_depth": 10,
+                        "show_detail_log": false,
+                        "voxel_resolution": 400000
+                    },
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.5,
+                        "g": 0.5,
+                        "r": 0.5
+                    },
+                    "enable_acd": false,
+                    "file_path": "",
+                    "hide_vhacd": false,
+                    "transparency": 1.0,
+                    "triangle_count": 0,
+                    "vertex_count": 0
+                }
+            },
+            {
+                "key": "{3bd3aeab-e749-45a8-8cdf-e37855941e4d}",
+                "value": {
+                    "_RESOURCE_": "MeshShape",
+                    "acd_done": false,
+                    "acd_params": {
+                        "enable_async": true,
+                        "export_series_stl": false,
+                        "find_best_plane": false,
+                        "max_vertices_per_convex_hull": 64,
+                        "min_edge_length": 2,
+                        "min_volume_percent_error": 1.0,
+                        "num_of_convex_hull": 16,
+                        "recursion_depth": 10,
+                        "show_detail_log": false,
+                        "voxel_resolution": 400000
+                    },
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.1568627450980392,
+                        "g": 0.47058823529411764,
+                        "r": 0.9647058823529412
+                    },
+                    "enable_acd": false,
+                    "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/link_4.stl",
+                    "hide_vhacd": false,
+                    "transparency": 1.0,
+                    "triangle_count": 7999,
+                    "vertex_count": 4045
+                }
+            },
+            {
+                "key": "{9b7c912c-8882-4577-8ce7-080f4893ad26}",
+                "value": {
+                    "_RESOURCE_": "BoxShape",
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.7049973296711681,
+                        "g": 0.7049973296711681,
+                        "r": 0.7049973296711681
+                    },
+                    "hide_vhacd": false,
+                    "size": {
+                        "x": 1.5,
+                        "y": 0.05,
+                        "z": 0.05
+                    },
+                    "transparency": 1.0
+                }
+            },
+            {
+                "key": "{a4316e66-fc35-45b7-b181-270ac2be9865}",
+                "value": {
+                    "_RESOURCE_": "BoxShape",
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.471,
+                        "g": 0.678,
+                        "r": 0.859
+                    },
+                    "hide_vhacd": false,
+                    "size": {
+                        "x": 1.2,
+                        "y": 1.0,
+                        "z": 0.15
+                    },
+                    "transparency": 1.0
+                }
+            },
+            {
+                "key": "{fe2bdced-5414-45ea-8585-a15f0239e588}",
+                "value": {
+                    "_RESOURCE_": "BoxShape",
+                    "color": {
+                        "a": 0.2,
+                        "b": 1.0,
+                        "g": 0.55,
+                        "r": 0.1
+                    },
+                    "hide_vhacd": false,
+                    "size": {
+                        "x": 1.5,
+                        "y": 0.5,
+                        "z": 0.6
+                    },
+                    "transparency": 0.2
+                }
+            },
+            {
+                "key": "{118eac5a-df3c-4d35-950d-3ca64428cbec}",
+                "value": {
+                    "_RESOURCE_": "BoxShape",
+                    "color": {
+                        "a": 0.2,
+                        "b": 1.0,
+                        "g": 0.55,
+                        "r": 0.1
+                    },
+                    "hide_vhacd": false,
+                    "size": {
+                        "x": 1.5,
+                        "y": 0.5,
+                        "z": 0.6
+                    },
+                    "transparency": 0.2
+                }
+            },
+            {
+                "key": "{a0512d8e-8681-4b3a-b488-61e59639d106}",
+                "value": {
+                    "_RESOURCE_": "BoxShape",
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.7049973296711681,
+                        "g": 0.7049973296711681,
+                        "r": 0.7049973296711681
+                    },
+                    "hide_vhacd": false,
+                    "size": {
+                        "x": 1.5,
+                        "y": 0.05,
+                        "z": 0.05
+                    },
+                    "transparency": 1.0
+                }
+            },
+            {
+                "key": "{dcd8681a-94b3-4d15-aa7a-f16fa1110347}",
+                "value": {
+                    "_RESOURCE_": "BoxShape",
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.471,
+                        "g": 0.678,
+                        "r": 0.859
+                    },
+                    "hide_vhacd": false,
+                    "size": {
+                        "x": 1.2,
+                        "y": 1.0,
+                        "z": 0.15
+                    },
+                    "transparency": 1.0
+                }
+            },
+            {
+                "key": "{e5d0d5ca-c0dd-4feb-a1aa-4e3cf0ea405b}",
+                "value": {
+                    "_RESOURCE_": "BoxShape",
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.705,
+                        "g": 0.705,
+                        "r": 0.705
+                    },
+                    "hide_vhacd": false,
+                    "size": {
+                        "x": 1.5,
+                        "y": 0.6000000000000001,
+                        "z": 0.5
+                    },
+                    "transparency": 1.0
+                }
+            },
+            {
+                "key": "{52475d84-5620-4ffa-a817-01bf767e846d}",
+                "value": {
+                    "_RESOURCE_": "BoxShape",
+                    "color": {
+                        "a": 0.2,
+                        "b": 1.0,
+                        "g": 0.55,
+                        "r": 0.1
+                    },
+                    "hide_vhacd": false,
+                    "size": {
+                        "x": 1.2,
+                        "y": 1.0,
+                        "z": 1.5
+                    },
+                    "transparency": 0.2
+                }
+            },
+            {
+                "key": "{7661ef61-9ba1-422d-9eb2-1c3af5b15207}",
+                "value": {
+                    "_RESOURCE_": "ConvexShape",
+                    "acd_done": false,
+                    "acd_params": {
+                        "enable_async": true,
+                        "export_series_stl": false,
+                        "find_best_plane": false,
+                        "max_vertices_per_convex_hull": 64,
+                        "min_edge_length": 2,
+                        "min_volume_percent_error": 1.0,
+                        "num_of_convex_hull": 16,
+                        "recursion_depth": 10,
+                        "show_detail_log": false,
+                        "voxel_resolution": 400000
+                    },
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.5,
+                        "g": 0.5,
+                        "r": 0.5
+                    },
+                    "enable_acd": false,
+                    "file_path": "",
+                    "hide_vhacd": false,
+                    "transparency": 1.0,
+                    "triangle_count": 0,
+                    "vertex_count": 0
+                }
+            },
+            {
+                "key": "{4bede19f-4b17-496b-bad4-c46abd67fe87}",
+                "value": {
+                    "_RESOURCE_": "ConvexShape",
+                    "acd_done": false,
+                    "acd_params": {
+                        "enable_async": true,
+                        "export_series_stl": false,
+                        "find_best_plane": false,
+                        "max_vertices_per_convex_hull": 64,
+                        "min_edge_length": 2,
+                        "min_volume_percent_error": 1.0,
+                        "num_of_convex_hull": 16,
+                        "recursion_depth": 10,
+                        "show_detail_log": false,
+                        "voxel_resolution": 400000
+                    },
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.5,
+                        "g": 0.5,
+                        "r": 0.5
+                    },
+                    "enable_acd": false,
+                    "file_path": "",
+                    "hide_vhacd": false,
+                    "transparency": 1.0,
+                    "triangle_count": 0,
+                    "vertex_count": 0
+                }
+            },
+            {
+                "key": "{27579d80-e9da-411e-a912-8223f9b4d833}",
+                "value": {
+                    "_RESOURCE_": "MeshShape",
+                    "acd_done": false,
+                    "acd_params": {
+                        "enable_async": true,
+                        "export_series_stl": false,
+                        "find_best_plane": false,
+                        "max_vertices_per_convex_hull": 64,
+                        "min_edge_length": 2,
+                        "min_volume_percent_error": 1.0,
+                        "num_of_convex_hull": 16,
+                        "recursion_depth": 10,
+                        "show_detail_log": false,
+                        "voxel_resolution": 400000
+                    },
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.1568627450980392,
+                        "g": 0.47058823529411764,
+                        "r": 0.9647058823529412
+                    },
+                    "enable_acd": false,
+                    "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/link_3.stl",
+                    "hide_vhacd": false,
+                    "transparency": 1.0,
+                    "triangle_count": 12,
+                    "vertex_count": 8
+                }
+            },
+            {
+                "key": "{69d7d51c-43b4-471e-a1e9-754c225c3397}",
+                "value": {
+                    "_RESOURCE_": "BoxShape",
+                    "color": {
+                        "a": 0.2,
+                        "b": 1.0,
+                        "g": 0.55,
+                        "r": 0.1
+                    },
+                    "hide_vhacd": false,
+                    "size": {
+                        "x": 1.2,
+                        "y": 1.0,
+                        "z": 1.5
+                    },
+                    "transparency": 0.2
+                }
+            },
+            {
+                "key": "{1d3fd81b-399f-487b-8778-d660dd467972}",
+                "value": {
+                    "_RESOURCE_": "MeshShape",
+                    "acd_done": false,
+                    "acd_params": {
+                        "enable_async": true,
+                        "export_series_stl": false,
+                        "find_best_plane": false,
+                        "max_vertices_per_convex_hull": 64,
+                        "min_edge_length": 2,
+                        "min_volume_percent_error": 1.0,
+                        "num_of_convex_hull": 16,
+                        "recursion_depth": 10,
+                        "show_detail_log": false,
+                        "voxel_resolution": 400000
+                    },
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.38823529411764707,
+                        "g": 0.47058823529411764,
+                        "r": 0.5058823529411764
+                    },
+                    "enable_acd": false,
+                    "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/link_6.stl",
+                    "hide_vhacd": false,
+                    "transparency": 1.0,
+                    "triangle_count": 5000,
+                    "vertex_count": 2433
+                }
+            },
+            {
+                "key": "{4ba3b015-919e-4c6f-a3c1-99e3492d958c}",
+                "value": {
+                    "_RESOURCE_": "BoxShape",
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.705,
+                        "g": 0.705,
+                        "r": 0.705
+                    },
+                    "hide_vhacd": false,
+                    "size": {
+                        "x": 1.5,
+                        "y": 0.6000000000000001,
+                        "z": 0.5
+                    },
+                    "transparency": 1.0
+                }
+            },
+            {
+                "key": "{37217519-cb2f-45bc-84b4-253b384f3329}",
+                "value": {
+                    "_RESOURCE_": "ConvexShape",
+                    "acd_done": false,
+                    "acd_params": {
+                        "enable_async": true,
+                        "export_series_stl": false,
+                        "find_best_plane": false,
+                        "max_vertices_per_convex_hull": 64,
+                        "min_edge_length": 2,
+                        "min_volume_percent_error": 1.0,
+                        "num_of_convex_hull": 16,
+                        "recursion_depth": 10,
+                        "show_detail_log": false,
+                        "voxel_resolution": 400000
+                    },
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.5,
+                        "g": 0.5,
+                        "r": 0.5
+                    },
+                    "enable_acd": false,
+                    "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/collision/link_3.stl",
+                    "hide_vhacd": false,
+                    "transparency": 1.0,
+                    "triangle_count": 12,
+                    "vertex_count": 8
+                }
+            },
+            {
+                "key": "{73cad7f1-2744-48d7-8206-8c82f7a13d7a}",
+                "value": {
+                    "_RESOURCE_": "ConvexShape",
+                    "acd_done": false,
+                    "acd_params": {
+                        "enable_async": true,
+                        "export_series_stl": false,
+                        "find_best_plane": false,
+                        "max_vertices_per_convex_hull": 64,
+                        "min_edge_length": 2,
+                        "min_volume_percent_error": 1.0,
+                        "num_of_convex_hull": 16,
+                        "recursion_depth": 10,
+                        "show_detail_log": false,
+                        "voxel_resolution": 400000
+                    },
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.5,
+                        "g": 0.5,
+                        "r": 0.5
+                    },
+                    "enable_acd": false,
+                    "file_path": "",
+                    "hide_vhacd": false,
+                    "transparency": 1.0,
+                    "triangle_count": 0,
+                    "vertex_count": 0
+                }
+            },
+            {
+                "key": "{23bafc84-3b90-45a4-abf5-e7cc3a58af16}",
+                "value": {
+                    "_RESOURCE_": "ConvexShape",
+                    "acd_done": false,
+                    "acd_params": {
+                        "enable_async": true,
+                        "export_series_stl": false,
+                        "find_best_plane": false,
+                        "max_vertices_per_convex_hull": 64,
+                        "min_edge_length": 2,
+                        "min_volume_percent_error": 1.0,
+                        "num_of_convex_hull": 16,
+                        "recursion_depth": 10,
+                        "show_detail_log": false,
+                        "voxel_resolution": 400000
+                    },
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.5,
+                        "g": 0.5,
+                        "r": 0.5
+                    },
+                    "enable_acd": false,
+                    "file_path": "",
+                    "hide_vhacd": false,
+                    "transparency": 1.0,
+                    "triangle_count": 0,
+                    "vertex_count": 0
+                }
+            },
+            {
+                "key": "{76b06654-3c44-4e12-a8bf-3d1d2810455e}",
+                "value": {
+                    "_RESOURCE_": "MeshShape",
+                    "acd_done": false,
+                    "acd_params": {
+                        "enable_async": true,
+                        "export_series_stl": false,
+                        "find_best_plane": false,
+                        "max_vertices_per_convex_hull": 64,
+                        "min_edge_length": 2,
+                        "min_volume_percent_error": 1.0,
+                        "num_of_convex_hull": 16,
+                        "recursion_depth": 10,
+                        "show_detail_log": false,
+                        "voxel_resolution": 400000
+                    },
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.1568627450980392,
+                        "g": 0.47058823529411764,
+                        "r": 0.9647058823529412
+                    },
+                    "enable_acd": false,
+                    "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/link_2.stl",
+                    "hide_vhacd": false,
+                    "transparency": 1.0,
+                    "triangle_count": 8000,
+                    "vertex_count": 4004
+                }
+            },
+            {
+                "key": "{73adc92b-97ab-4924-806a-95a821fc317f}",
+                "value": {
+                    "_RESOURCE_": "ConvexShape",
+                    "acd_done": false,
+                    "acd_params": {
+                        "enable_async": true,
+                        "export_series_stl": false,
+                        "find_best_plane": false,
+                        "max_vertices_per_convex_hull": 64,
+                        "min_edge_length": 2,
+                        "min_volume_percent_error": 1.0,
+                        "num_of_convex_hull": 16,
+                        "recursion_depth": 10,
+                        "show_detail_log": false,
+                        "voxel_resolution": 400000
+                    },
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.5,
+                        "g": 0.5,
+                        "r": 0.5
+                    },
+                    "enable_acd": false,
+                    "file_path": "",
+                    "hide_vhacd": false,
+                    "transparency": 1.0,
+                    "triangle_count": 0,
+                    "vertex_count": 0
+                }
+            },
+            {
+                "key": "{8b3b5a46-29c7-4208-b760-7a842dc3e913}",
+                "value": {
+                    "_RESOURCE_": "MeshShape",
+                    "acd_done": false,
+                    "acd_params": {
+                        "enable_async": true,
+                        "export_series_stl": false,
+                        "find_best_plane": false,
+                        "max_vertices_per_convex_hull": 64,
+                        "min_edge_length": 2,
+                        "min_volume_percent_error": 1.0,
+                        "num_of_convex_hull": 16,
+                        "recursion_depth": 10,
+                        "show_detail_log": false,
+                        "voxel_resolution": 400000
+                    },
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.1568627450980392,
+                        "g": 0.47058823529411764,
+                        "r": 0.9647058823529412
+                    },
+                    "enable_acd": false,
+                    "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/link_1.stl",
+                    "hide_vhacd": false,
+                    "transparency": 1.0,
+                    "triangle_count": 7999,
+                    "vertex_count": 3920
+                }
+            },
+            {
+                "key": "{f29ea254-e87a-4094-8d0f-6f1669c1fc5f}",
+                "value": {
+                    "_RESOURCE_": "BoxShape",
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.7049973296711681,
+                        "g": 0.7049973296711681,
+                        "r": 0.7049973296711681
+                    },
+                    "hide_vhacd": false,
+                    "size": {
+                        "x": 1.5,
+                        "y": 0.05,
+                        "z": 0.05
+                    },
+                    "transparency": 1.0
+                }
+            },
+            {
+                "key": "{beacfce1-9320-47f1-9964-57201e4b6121}",
+                "value": {
+                    "_RESOURCE_": "MeshShape",
+                    "acd_done": false,
+                    "acd_params": {
+                        "enable_async": true,
+                        "export_series_stl": false,
+                        "find_best_plane": false,
+                        "max_vertices_per_convex_hull": 64,
+                        "min_edge_length": 2,
+                        "min_volume_percent_error": 1.0,
+                        "num_of_convex_hull": 16,
+                        "recursion_depth": 10,
+                        "show_detail_log": false,
+                        "voxel_resolution": 400000
+                    },
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.06274509803921569,
+                        "g": 0.054901960784313725,
+                        "r": 0.054901960784313725
+                    },
+                    "enable_acd": false,
+                    "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/base_link.stl",
+                    "hide_vhacd": false,
+                    "transparency": 1.0,
+                    "triangle_count": 5000,
+                    "vertex_count": 2355
+                }
+            },
+            {
+                "key": "{4d74e9a0-2b43-428a-99f9-e6ff5b1b588a}",
+                "value": {
+                    "_RESOURCE_": "MeshShape",
+                    "acd_done": false,
+                    "acd_params": {
+                        "enable_async": true,
+                        "export_series_stl": false,
+                        "find_best_plane": false,
+                        "max_vertices_per_convex_hull": 64,
+                        "min_edge_length": 2,
+                        "min_volume_percent_error": 1.0,
+                        "num_of_convex_hull": 16,
+                        "recursion_depth": 10,
+                        "show_detail_log": false,
+                        "voxel_resolution": 400000
+                    },
+                    "color": {
+                        "a": 1.0,
+                        "b": 0.1568627450980392,
+                        "g": 0.47058823529411764,
+                        "r": 0.9647058823529412
+                    },
+                    "enable_acd": false,
+                    "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/link_5.stl",
+                    "hide_vhacd": false,
+                    "transparency": 1.0,
+                    "triangle_count": 4999,
+                    "vertex_count": 2386
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,168 @@
+{
+    "data_source": {
+        "clear_all_padding": true, 
+        "clear_all_workspaces": false, 
+        "clear_motion_payload": true, 
+        "clear_pickable": {
+            "enable": true, 
+            "robot_id": "0"
+        }, 
+        "comment": "clear_env_collision", 
+        "is_workspace_list": true, 
+        "un_workspaces": [], 
+        "workspace": "1", 
+        "workspaces": []
+    }, 
+    "data_source_translation": {
+        "/clear_all_padding": "是否清空工作空间障碍物", 
+        "/clear_all_workspaces": "是否清空所有workspace的物体和规划物体", 
+        "/clear_motion_payload": "是否清空motion_payload", 
+        "/clear_pickable": "是否清空机器人上的物体", 
+        "/clear_pickable/enable": "是否清空机器人上的抓取物体", 
+        "/clear_pickable/robot_id": "机器人的ID号码", 
+        "/comment": "模块注释，显示在图形界面中", 
+        "/is_workspace_list": "清空的工作空间是一个列表还是单个字符串", 
+        "/un_workspaces": "", 
+        "/workspace": "需要清空的工作空间编号", 
+        "/workspaces": "需要清空的所有工作空间编号列表"
+    }, 
+    "data_source_type": {
+        "clear_all_padding": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "clear_all_workspaces": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "clear_motion_payload": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "clear_pickable": {
+            "enable": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "robot_id": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "is_workspace_list": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {
+                    "false": [
+                        "workspaces"
+                    ], 
+                    "true": [
+                        "workspace"
+                    ]
+                }, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }, 
+        "un_workspaces": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "workspace": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "workspaces": {
+            "type_config": {
+                "current_type": "INPUT_PORT", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }
+    }
+}

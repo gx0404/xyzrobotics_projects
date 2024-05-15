@@ -1,0 +1,14 @@
+<launch>
+  
+  <arg name="have_robot" default="true" />
+  <param name="have_robot" value="$(arg have_robot)" />
+
+  <rosparam command="load" file="$(env CODE_BASE)/app/robot_config/robot_config.yaml" />
+  <rosparam command="load" file="$(env CODE_BASE)/app/motion/speed_rules.yaml" />
+  <include file="$(find kuka_kr180_support)/launch/load_kr180_r3200_pa.launch" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="false" />
+    <rosparam param="source_list">["robot_0_joint_states_rviz"]</rosparam>
+  </node>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" /> 
+</launch>

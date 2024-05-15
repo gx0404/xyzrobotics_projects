@@ -1,0 +1,100 @@
+# Japanese translations for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-12-15 14:17+0800\n"
+"PO-Revision-Date: 2022-10-08 15:12+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: wcs_adaptor/piece_picking/wcs.py:178
+msgid "接收的订单校验失败: {0}"
+msgstr "受信したオーダーの検証に失敗しました: {0}"
+
+#: wcs_adaptor/piece_picking/wcs.py:220
+msgid "添加订单【{0}】"
+msgstr "オーダー【{0}】追加"
+
+#: wcs_adaptor/piece_picking/wcs.py:257
+msgid "订单【{0}】正在被执行，不允许删除，如需删除，请先暂停服务"
+msgstr "オーダー【{0}】実行中、削除してはいけない、削除する必要がある場合は、まずサービスを停止してください"
+
+#: wcs_adaptor/piece_picking/wcs.py:267
+msgid "删除订单中的任务【{0}】"
+msgstr "オーダーからのタスク【{0}】の削除"
+
+#: wcs_adaptor/piece_picking/wcs.py:270
+msgid "删除订单【{0}】"
+msgstr "オーダー【{0}】削除"
+
+#: wcs_adaptor/piece_picking/wcs.py:389
+msgid "订单列表，任务列表，工作空间列表被清空"
+msgstr "オーダーリスト、タスクリスト、ワークスペースリストがクリアになりました。"
+
+#: wcs_adaptor/piece_picking/wcs.py:407
+msgid "数据校验失败: {0}"
+msgstr "受信したオーダーの検証に失敗しました: {0}"
+
+#: wcs_adaptor/piece_picking/xtf.py:271
+msgid "任务【{0}】开始执行，所在订单【{1}】"
+msgstr "タスク【{0}】実行開始、所在のオーダー【{1}】"
+
+#: wcs_adaptor/piece_picking/xtf.py:326
+msgid "当前任务【{0}】，机械臂准备抓取物体..."
+msgstr "現在のタスク【{0}】、ロボットアームが対象物を掴もうとします..."
+
+#: wcs_adaptor/piece_picking/xtf.py:373 wcs_adaptor/piece_picking/xtf.py:422
+msgid "当前任务【{0}】，机械臂准备移动至放置位置..."
+msgstr "現在のタスク【{0}】、ロボットアームが放置位置に移動します..."
+
+#: wcs_adaptor/piece_picking/xtf.py:480 wcs_adaptor/piece_picking/xtf.py:528
+msgid "互换抓取空间和放置空间[ {0} <-> {1} ]，并重置任务数量"
+msgstr "ピックスペースとプレーススペースを交換 [ {0} <-> {1} ]、タスク数リセット。"
+
+#: wcs_adaptor/piece_picking/xtf.py:492
+msgid "当前任务【{0}】，任务进度【{1}/{2}】订单进度【{3}/{4}】"
+msgstr "現在のタスク【{0}】、タスク推進状況【{1}/{2}】、オーダー推進状況【{3}/{4}】"
+
+#: wcs_adaptor/piece_picking/xtf.py:506
+msgid "订单已完成，从订单管理器中删除订单【{0}】"
+msgstr "オーダーが完了し、オーダー管理からオーダー【{0}】を削除"
+
+#: wcs_adaptor/piece_picking/xtf.py:516
+msgid "当前任务【{0}】，任务进度【{1}/{2}】，订单进度【{3}/{4}】"
+msgstr "現在のタスク【{0}】、タスク推進状況【{1}/{2}】、オーダー推進状況【{3}/{4}】"
+
+#: wcs_adaptor/piece_picking/xtf.py:541
+msgid "抓取空间已清空，订单完成，从订单管理器中删除订单【{0}】"
+msgstr "ピックスペースクリア、オーダーが完了し、オーダー管理からオーダー【{0}】を削除"
+
+#: wcs_adaptor/piece_picking/xtf.py:545
+msgid "当前任务【{0}】，机械臂分拣过程发生空框事件，机械臂停止抓取，等待人工处理"
+msgstr "現在のタスク【{0}】、ロボットアームによる仕分け作業中に空枠が発生した場合、ロボットアームはピッキングを停止し、手動処理待ち"
+
+#: wcs_adaptor/piece_picking/xtf.py:556
+msgid "当前任务【{0}】，机械臂分拣过程发生满框事件，机械臂停止抓取，等待人工处理"
+msgstr "現在のタスク【{0}】、ロボットアームによる仕分け作業中に満載が発生した場合、ロボットアームはピッキングを停止し、手動処理待ち"
+
+#: wcs_adaptor/piece_picking/xtf.py:567
+msgid "当前任务【{0}】，机械臂分拣过程发生掉落事件，机械臂停止抓取，等待人工处理"
+msgstr "現在のタスク【{0}】、ロボットアームによる仕分け作業中に落下が発生した場合、ロボットアームはピッキングを停止し、手動処理待ち"
+
+#: wcs_adaptor/piece_picking/xtf.py:628
+msgid "错误码【{0}】任务执行出现异常【{1}】操作提示【{2}】"
+msgstr "エラーコード【{0}】タスク実行で例外が発生【{1}】操作ヒント【{2}】"
+
+#: wcs_adaptor/override_views.py:36
+msgid "已清空任务"
+msgstr "タスクをクリア"
+

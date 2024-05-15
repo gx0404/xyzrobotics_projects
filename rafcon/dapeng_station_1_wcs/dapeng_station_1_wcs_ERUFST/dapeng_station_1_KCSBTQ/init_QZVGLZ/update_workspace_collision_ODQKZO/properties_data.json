@@ -1,0 +1,49 @@
+{
+    "data_source": {
+        "comment": "update_workspace_collision", 
+        "other_collision_workspace_ids": [], 
+        "other_non_collision_workspace_ids": []
+    }, 
+    "data_source_translation": {
+        "/comment": "", 
+        "/other_collision_workspace_ids": "其他指定的作为障碍物的工作空间", 
+        "/other_non_collision_workspace_ids": "", 
+        "other_non_collision_workspace_ids": "除了本次抓取和放置空间之外，其他不作为障碍物的工作空间"
+    }, 
+    "data_source_type": {
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "other_collision_workspace_ids": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "other_non_collision_workspace_ids": {
+            "type_config": {
+                "current_type": "INPUT_PORT", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ]
+        }
+    }
+}

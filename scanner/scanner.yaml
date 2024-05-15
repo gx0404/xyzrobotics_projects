@@ -1,0 +1,37 @@
+scanner_sku:
+    type: keyence
+    timeout: 10 #  seconds
+    MasterConnection:
+        IP: 192.168.37.54
+        PORT: 9003
+    SlaveConnection:
+        IP: []
+        PORT: []
+    OperationConfiguration:
+        TIMING_MODE: 1              # setting level trigger(0) or one-shot trigger(1)
+        TIMING_DURATION: 1000        # one-shot trigger duration (10 ms, ex: 150 = 1500 ms)
+        READING_MODE: 0             # reading mode from (0:single, 1:continous, 3:burst, 4:script)
+        MULTIPLE_READIND_TIME: 2    # multi reading duplicate reading prevention interval (100 ms, ex: 5 = 500 ms)
+        READING_SAME_CODE: 0        # read multiple of the same code, disable(0), enable(1)
+        READING_CODE_NUM: 1         # the num of code to read (0 - 128)
+        ALLOWED_REDUCE_DETECTION: 0 # allow reduce detection num. not_allow(0), allow(1)
+        # CODE_TYPE_APENDING: 0       # append code type in data, disable(0), enable(1)
+        # SYMBOL_ID_APENDING: 0       # append symbol in data, disable(0), enable(1)
+        # BANK_NUMBER_APPENDING: 0    # append bank number in data, disable(0), enable(1)
+        # SCAN_COUNT_APPENDING: 0     # append scan count in data, disable(0), enable(1)
+        # READ_TIME_APPENDING: 0      # append reading time in data, disable(0), enable(1)
+        # CODE_CENTER_APPENDING: 0    # append code center in data, disable(0), enable(1)
+
+    ParameterBankConfiguration:     # This is used for setting bank parameter, set bank_{number}
+        bank_1:
+            ALTERNATE: 1                    # bank enable, disable(0), enable(1)
+            # INTERNAL_BANK_RETRY_COUNT: 0    # internal bank retry count
+            #DECODE_TIMEOUT_DURATION: 20     # decode timeout(units of 10 ms)
+                                            # if the code num is many or the code is far, this param shoubld be large. ex: 50(500ms)
+                                            # if the code num is one and easy to decode, this param should be small. ex: 10(100ms)
+            #CODE_TYPE: 600                  # this number is hard to set, need to see SR2000 manual. Need to convert bit value to hex value
+                                            # 6th bit: CODE 39, 10th bit: JAN/EAN/UPC, 11th bit: CODE 128
+                                            # CODE128 + EAN = 600(hex)
+            #BANK_EAN_QUIET_ZONE_FACTOR: 1         # tunning EAN quiet zone scale factor (1 to 11)
+            #BANK_CODE128_QUIET_ZONE_FACTOR: 1     # tunning CODE128 quiet zone scale factor (1 to 11)
+            # BANK_CODE39_QUIET_ZONE_FACTOR:  1     # tunning CODE39 quiet zone scale factor (1 to 11)

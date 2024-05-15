@@ -1,0 +1,34 @@
+{
+    "__classtype__": "xyz_io_server.io_server.IOServer",
+    "devices": {
+            "0":{
+                    "__classtype__": "xyz_io_server.virtual_io_device.VirtualDevice",
+                    "name": "VirtualDevice",
+                    "register_bits": 16,
+                    "id": "0"
+                },
+            "1":{
+                    "__classtype__": "xyz_io_server.adam6017.Adam6017",
+                    "name": "Adam6017",
+                    "id": "1",
+                    "register_bits": 16,
+                    "protocol":
+                    {
+                        "__classtype__": "xyz_io_server.modbus_tcp_protocol.ModbusTCPProtocol",
+                        "ip": "192.168.37.30" 
+                    }
+                },
+            "2":{
+                    "__classtype__": "xyz_io_server.plc.PLC",
+                    "name": "PLC",
+                    "id": "2",
+                    "register_bits": 16,
+                    "protocol":
+                    {
+                        "__classtype__": "xyz_io_server.modbus_tcp_protocol.ModbusTCPProtocol",
+                        "ip": "15.12.225.100" 
+                    }
+                }
+    },
+    "simulation": false
+}

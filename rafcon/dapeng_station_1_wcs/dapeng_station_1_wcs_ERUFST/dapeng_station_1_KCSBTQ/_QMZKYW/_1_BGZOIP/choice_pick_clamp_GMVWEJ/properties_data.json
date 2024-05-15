@@ -1,0 +1,278 @@
+{
+    "data_source": {
+        "clamp_name_io": {
+            "+y": {
+                "close_open": [
+                    3, 
+                    15
+                ], 
+                "close_open_value": [
+                    0, 
+                    1
+                ], 
+                "up_down": [
+                    9, 
+                    10
+                ], 
+                "up_down_value": [
+                    1, 
+                    0
+                ]
+            }, 
+            "-y": {
+                "close_open": [
+                    4, 
+                    16
+                ], 
+                "close_open_value": [
+                    0, 
+                    1
+                ], 
+                "up_down": [
+                    7, 
+                    8
+                ], 
+                "up_down_value": [
+                    1, 
+                    0
+                ]
+            }, 
+            "x": {
+                "close_open": [
+                    2, 
+                    14
+                ], 
+                "close_open_value": [
+                    1, 
+                    0
+                ], 
+                "up_down": [
+                    5, 
+                    6
+                ], 
+                "up_down_value": [
+                    1, 
+                    0
+                ]
+            }
+        }, 
+        "comment": "选择信号"
+    }, 
+    "data_source_translation": {
+        "/clamp_name_io": "", 
+        "/clamp_name_io/+y": "", 
+        "/clamp_name_io/+y/close_open": "", 
+        "/clamp_name_io/+y/close_open_value": "", 
+        "/clamp_name_io/+y/up_down": "", 
+        "/clamp_name_io/+y/up_down_value": "", 
+        "/clamp_name_io/-y": "", 
+        "/clamp_name_io/-y/close_open": "", 
+        "/clamp_name_io/-y/close_open_value": "", 
+        "/clamp_name_io/-y/up_down": "", 
+        "/clamp_name_io/-y/up_down_value": "", 
+        "/clamp_name_io/x": "", 
+        "/clamp_name_io/x/close_open": "", 
+        "/clamp_name_io/x/close_open_value": "", 
+        "/clamp_name_io/x/up_down": "", 
+        "/clamp_name_io/x/up_down_value": "", 
+        "/comment": ""
+    }, 
+    "data_source_type": {
+        "clamp_name_io": {
+            "+y": {
+                "close_open": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }, 
+                "close_open_value": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }, 
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }, 
+                "up_down": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }, 
+                "up_down_value": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }
+            }, 
+            "-y": {
+                "close_open": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }, 
+                "close_open_value": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }, 
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }, 
+                "up_down": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }, 
+                "up_down_value": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }, 
+            "x": {
+                "close_open": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }, 
+                "close_open_value": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }, 
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }, 
+                "up_down": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }, 
+                "up_down_value": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }
+            }
+        }, 
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }
+    }
+}
