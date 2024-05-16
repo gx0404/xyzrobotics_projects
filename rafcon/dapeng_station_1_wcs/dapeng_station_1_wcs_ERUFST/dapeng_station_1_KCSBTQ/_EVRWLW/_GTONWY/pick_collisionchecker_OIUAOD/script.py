@@ -399,15 +399,17 @@ def execute(self, inputs, outputs, gvm):
         else:
             self.logger.info(f"夹具{un_clamp_collision_name}后验成功")
             break
-        
+    
+    if not use_slide:
+        raise "无有效的抓取点"    
     if use_slide[0]>0:
-        use_slide[0] = 0.045
+        use_slide[0] = 0.035
     else:
-        use_slide[0] = -0.045    
+        use_slide[0] = -0.035    
     if use_slide[1]>0:
-        use_slide[1] = 0.045
+        use_slide[1] = 0.035
     else:
-        use_slide[1] = -0.045
+        use_slide[1] = -0.035
     use_slide[2] = 0.03                   
     outputs["slide"] = [use_slide]  
     self.logger.info(use_slide)

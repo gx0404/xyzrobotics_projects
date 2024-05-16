@@ -30,6 +30,7 @@ REPORT_EXCEPTION = "request/wcs/report_exception"
 TURN_AGV_API = "request/wcs/turn_agv"
 REPORT_ROBOT_STATUS = "request/wcs/robot_status"
 INIT_ERROR_API = "request/wcs/init_error"
+SEND_LOG_WCS_API = "request/wcs/send_log"
 
 """拣配任务接口"""
 #拣配放置通知放满
@@ -137,7 +138,12 @@ def report_init_error():
     send_request(INIT_ERROR_API, data)
     mp.order.info(f"通知wcs异常复位")
     
-
+def seng_log(message):
+    data = {
+        message:message
+    }
+    send_request(SEND_LOG_WCS_API,data)
+    
 
 """拣配任务接口"""
 @backup_manager_wrapper()

@@ -235,19 +235,19 @@ def execute(self, inputs, outputs, gvm):
                 row_id = int(box_id)%row
                 lay_id = int(box_id)//row
                 if row_id in [1,2]:
-                    tf_base_box_real = tf_base_box_real*SE3([0.004,0.0015,0,0,0,0,1]) 
+                    tf_base_box_real = tf_base_box_real*SE3([0.002,0.002,0,0,0,0,1]) 
                 elif row_id in [3,4]:     
-                    tf_base_box_real = tf_base_box_real*SE3([0.004,0.0015,0,0,0,0,1]) 
+                    tf_base_box_real = tf_base_box_real*SE3([0.0015,0.0015,0,0,0,0,1]) 
                 elif row_id in [5,6]: 
-                    tf_base_box_real = tf_base_box_real*SE3([-0.001,0.00,0,0,0,0,1])                           
+                    tf_base_box_real = tf_base_box_real*SE3([-0.002,0.00,0,0,0,0,1])                           
                 elif row_id in [7]:
                     tf_base_box_real = tf_base_box_real*SE3([0.001,-0.003,0,0,0,0,1])   
                 elif row_id in [8]:
                     tf_base_box_real = tf_base_box_real*SE3([0.001,0.001,0,0,0,0,1])                       
                 elif row_id in [0]:
-                    tf_base_box_real = tf_base_box_real*SE3([0.001,0.001,0,0,0,0,1])                    
+                    tf_base_box_real = tf_base_box_real*SE3([0.001,-0.00,0,0,0,0,1])                    
             else:
-                raise "无效的row"    
+                raise "无效的row"   
  
             container_item.origin = Pose(*tf_base_box_real.xyz_quat)                   
         else:

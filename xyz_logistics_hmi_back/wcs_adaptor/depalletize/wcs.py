@@ -371,7 +371,8 @@ def depal_task(body: SingleTaskCreateSchema):
         pallet_tote_data=body.pallet_tote_data,
         pick_tote_data=body.pick_tote_data,
         pallet_clear_list = pallet_clear_list,
-        customized_data = body.pick_tote_data
+        customized_data = body.pick_tote_data,
+        lower_layer = body.lower_layer,
     )
     task_manager.append(task)
 
