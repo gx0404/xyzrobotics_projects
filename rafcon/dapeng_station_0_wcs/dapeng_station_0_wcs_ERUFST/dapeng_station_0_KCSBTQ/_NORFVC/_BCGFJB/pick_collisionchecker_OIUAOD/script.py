@@ -394,7 +394,8 @@ def execute(self, inputs, outputs, gvm):
         use_slide[1] = 0.06
     else:
         use_slide[1] = -0.06 
-    use_slide[2] = 0.03                   
+    use_slide[2] = 0.03      
+                 
     outputs["slide"] = [use_slide]  
     self.logger.info(use_slide)
     post_slide = copy.deepcopy(use_slide)
