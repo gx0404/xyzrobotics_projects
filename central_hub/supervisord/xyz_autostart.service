@@ -1,0 +1,16 @@
+[Unit]
+Description=xyz_autostart
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/supervisord -c /home/xyz/xyz_app/central_hub/supervisord/supervisord.conf
+ExecStop=/usr/local/bin/supervisorctl shutdown
+ExecReload=/usr/local/bin/supervisorctl reload
+TimeoutSec=0
+KillMode=process
+Restart=on-failure
+RestartSec=42s
+
+[Install]
+WantedBy=multi-user.target

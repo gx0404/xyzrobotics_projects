@@ -6,7 +6,7 @@ folder_path2="/home/xyz/xyz_log/mf_log"
 folder_path3="/home/xyz/xyz_log/smart_planner_log"
  
 # Set the maximum age (in days) for files to be deleted
-max_age=2
+max_age=3
  
 # Function to perform cleanup
 perform_cleanup() {
