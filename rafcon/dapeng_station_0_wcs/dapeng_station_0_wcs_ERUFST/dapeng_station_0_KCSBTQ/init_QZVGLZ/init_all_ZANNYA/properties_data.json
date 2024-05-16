@@ -1,0 +1,53 @@
+{
+    "data_source": {
+        "comment": "init_all", 
+        "robot_id": "0", 
+        "simulation_start_joints": [
+            0, 
+            -1.57, 
+            1.4, 
+            0
+        ]
+    }, 
+    "data_source_translation": {
+        "/comment": "模块注释，显示在图形界面中", 
+        "/robot_id": "机器人id", 
+        "/simulation_start_joints": "当机器人处于仿真状态时，机器人仿真开始的各关节角度，弧度制"
+    }, 
+    "data_source_type": {
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "robot_id": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "simulation_start_joints": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ]
+        }
+    }
+}

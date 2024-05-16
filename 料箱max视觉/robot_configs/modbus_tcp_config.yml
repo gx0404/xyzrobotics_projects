@@ -1,0 +1,124 @@
+%YAML 1.2
+---
+byte_order:
+  word: # also known as "holding register"
+    signed: True            # True: signed word/holding register, False: unsigned word/holding register
+    byte_order: 0           # 0: Big-endian, 1: Little-endian, 2: Big-endian byte swap, 3: Little-endian byte swap
+  dword:
+    signed: True
+    byte_order: 0
+  lword:
+    signed: True
+    byte_order: 0
+  float:
+    byte_order: 0
+  double:
+    byte_order: 0
+holding_registers: # totally 800 holding registers: 0~799
+  register_offset: 0
+  communication_flags:
+    range: [ 0, 10 ]        # starting_holding_address=0, count=10, that is, from 0 to 9
+    heart_beat_flag: [ 0, 1 ]
+    max_ready_flag: [ 1, 1 ]
+    max_done_flag: [ 2, 1 ]
+    plc_request_flag: [ 3, 1 ]
+  recv_from_plc:
+    range: [ 10, 120 ]      # from 10 to 129
+    cmd: [ 10, 1 ]
+    token: [ 11, 1 ]
+    vs_id: [ 12, 1 ]
+    tool_id: [ 13, 1 ]
+    task_codename: [ 14, 1 ]
+    item_codename: [ 15, 1 ]
+    vision_codename: [ 16, 1 ]
+    # 17~24: system-reserved
+    usr_cmd_in:
+      range: [ 25, 35 ]
+      str_5: [ 25, 5 ]     # 5 word
+      int_10: [ 30, 10 ]   # 10 int
+      float_10: [ 40, 20 ] # 2 dword represents 1 float
+    cart_pose:
+      range: [ 60, 14 ]
+      x: [ 60, 2 ]
+      y: [ 62, 2 ]
+      z: [ 64, 2 ]
+      a: [ 66, 2 ]
+      b: [ 68, 2 ]
+      c: [ 70, 2 ]
+      d: [ 72, 2 ]
+    joints:
+      range: [ 74, 12 ]
+      j1: [ 74, 2 ]
+      j2: [ 76, 2 ]
+      j3: [ 78, 2 ]
+      j4: [ 80, 2 ]
+      j5: [ 82, 2 ]
+      j6: [ 84, 2 ]
+    # 100~129: custom defined area
+    user_defined_data: [ 100, 30 ]
+  send_to_plc:
+    range: [ 130, 670 ]     # from 130 ~799
+    return_error:
+      range: [ 130, 3 ]
+      error: [ 130, 1 ]     # 0: no error, 1: error occurred
+      error_code: [ 131, 2 ]
+    token: [ 133, 1 ]
+    pose_num: [ 134, 1 ]
+    pipeline_num: [ 135, 1 ]
+    register_num: [ 136, 1 ]
+    object_name: [ 137, 1 ]
+    dint_value_6: [ 138, 12 ]  # 2 word represents 1 dint
+    # 150~159: system-reserved
+    cart_pose:
+      range: [ 160, 14 ] # make sure xyzabcd are consecutive
+      x: [ 160, 2 ]
+      y: [ 162, 2 ]
+      z: [ 164, 2 ]
+      a: [ 166, 2 ]
+      b: [ 168, 2 ]
+      c: [ 170, 2 ]
+      d: [ 172, 2 ]
+    joints: # useless at present
+      range: [ 174, 12 ] # make sure j1~j6 are consecutive
+      j1: [ 174, 2 ]
+      j2: [ 176, 2 ]
+      j3: [ 178, 2 ]
+      j4: [ 180, 2 ]
+      j5: [ 182, 2 ]
+      j6: [ 184, 2 ]
+    trajectory: # assume one trajectory contains 30 way-points at most
+      range: [ 186, 394 ] # 394=1+3(backup)+30+360
+      way_point_num: [ 186, 1 ]
+      way_points:
+        wp_type: [ 190, 30 ]
+        wp: [ 220, 360 ]    # 360 = 12 word * 30 way_points, from 220 to 579
+        #
+        #  Explanation:
+        #
+        #  wp1_type: [190, 1]
+        #  wp1:
+        #    data1: [220, 2]
+        #    data2: [222, 2]
+        #    data3: [224, 2]
+        #    data4: [226, 2]
+        #    data5: [228, 2]
+        #    data6: [230, 2]
+        #  wp2_type: [191, 1]
+        #  wp2:
+        #    data1: [232, 2]
+        #    data2: [234, 2]
+        #    data3: [236, 2]
+        #    data4: [238, 2]
+        #    data5: [240, 2]
+        #    data6: [242, 2]
+        #  ...
+    # 580~584: system reserved
+    usr_cmd_out:
+      range: [ 585, 35 ]
+      str_5: [ 585, 5 ]
+      int_10: [ 590, 10 ]
+      float_10: [ 600, 20 ] # 2 dword represents 1 float
+    # 620~799: custom defined area
+    user_defined_data: [ 620, 180 ]
+
+

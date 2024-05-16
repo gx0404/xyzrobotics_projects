@@ -1,0 +1,4 @@
+<launch>
+    <rosparam param="/enable_simulation">false</rosparam>
+    <node pkg="xyz_bin_packing" name="xyz_bin_packing_server" type="xyz_bin_packing_server" output="screen"></node>
+</launch>

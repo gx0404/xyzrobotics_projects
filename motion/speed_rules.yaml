@@ -1,0 +1,9 @@
+speed_rules:
+  default_speed: 1.0
+  default_acc: 1.0
+  rules:
+    - {min_weight: 0 , max_weight: 10, speed_scale: 1.0, acc_scale: 1.0}
+    - {min_weight: 10, max_weight: 15, speed_scale: 0.8, acc_scale: 0.8}
+    - {min_weight: 15, max_weight: 20, speed_scale: 0.4, acc_scale: 0.4}
+    - {min_weight: 20, max_weight: 25, speed_scale: 0.3, acc_scale: 0.2}
+    - {min_weight: 25, max_weight: 30, speed_scale: 0.2, acc_scale: 0.2}

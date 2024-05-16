@@ -1,0 +1,64 @@
+{
+    "tool0":{
+                "tp_1":
+                    {
+                        "pick_ios":
+                            {
+                                "enable": false,
+                                "device_type": "ROBOT",
+                                "device_id": "0",
+                                "io_ports": [0, 1, 2, 3],
+                                "io_values": [1, 1, 1, 1],
+                                "io_interval": [1.0, 1.0, 1.0, 1.0]
+                            },
+                        "place_ios":
+                            {
+                                "enable": false,
+                                "device_type": "ROBOT",
+                                "device_id": "0",
+                                "io_ports": [0, 1, 2, 3],
+                                "io_values": [0, 0, 0, 0],
+                                "io_interval": [1.0, 1.0, 1.0, 1.0]
+                            },
+                        "check_ios":
+                            {
+                                "enable": false,
+                                "device_type": "ROBOT",
+                                "device_id": "0",
+                                "io_ports": [0, 1, 2, 3],
+                                "io_values": [true, true, true, true],
+                                "io_position" :[[0.1, 0.1], [-0.1, 0.1], [0.1, -0.1], [-0.1, -0.1]]
+                            }
+                    },
+                "tp_2":
+                    {
+                        "pick_ios":
+                            {
+                                "enable": false,
+                                "device_type": "EXTERN_DEVICE",
+                                "device_id": "2",
+                                "io_ports": [0, 1, 2, 3],
+                                "io_values": [1, 1, 1, 1],
+                                "io_interval": [1.0, 1.0, 1.0, 1.0]
+                            },
+                        "place_ios":
+                            {
+                                "enable": false,
+                                "device_type": "EXTERN_DEVICE",
+                                "device_id": "2",
+                                "io_ports": [0, 1, 2, 3],
+                                "io_values": [0, 0, 0, 0],
+                                "io_interval": [1.0, 1.0, 1.0, 1.0]
+                            },
+                        "check_ios":
+                            {
+                                "enable": false,
+                                "device_type": "EXTERN_DEVICE",
+                                "device_id": "2",
+                                "io_ports": [0, 1, 2, 3],
+                                "io_values": [true, true, true, true],
+                                "io_position" :[[0.1, 0.1], [-0.1, 0.1], [0.1, -0.1], [-0.1, -0.1]]
+                            }
+                    }
+            }
+}

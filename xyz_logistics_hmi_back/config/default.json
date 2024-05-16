@@ -1,0 +1,55 @@
+{
+    "project_type": "dpt",
+    "language": 1,
+    "home": "/home/xyz",
+    "code_base": "/home/xyz/xyz_app",
+    "logo_filename": null,
+    "debug": false,
+    "default_pallet_id": 1,
+    "supervisor_port": 9001,
+    "upload_folder": "/home/xyz/xyz_log/system_manager/depalletize_bridge_image",
+    "rafcon_debug": false,
+    "stop_robot_if_error": true,
+    "stop_robot_if_stop": false,
+    "state_machine_path": [
+        "/home/xyz/xyz_app/app/rafcon/dapeng_station_0_wcs"
+    ],
+    "heartbeat_timeout": 3,
+    "heartbeat_enable": false,
+    "plc_thread_enable": true,
+    "plc_device_id": "2",
+    "plc_address_dict": {
+        "grating": 130,
+        "buzzer": 65034,
+        "red": 65031,
+        "yellow": 65032,
+        "green": 65033,
+        "estop": 65011
+    },
+    "robot_status_thread_enable": false,
+    "screen_lock_password": "123456",
+    "sqlalchemy_track_modifications": false,
+    "sqlalchemy_database_uri": "mysql+pymysql://root:xyz123456@127.0.0.1:3306/hmi?charset:utf8mb4",
+    "general_config_dir": "/home/xyz/xyz_app/app/xyz_logistics_hmi_back/config",
+    "cmct_log_path": "/home/xyz/xyz_log/xyz_logistics_hmi_back",
+    "wcs_addr": {
+        "host": "15.12.225.102",
+        "port": 89
+    },
+    "sock_addr": {
+        "host": "127.0.0.1",
+        "port": 7001
+    },
+    "xyz_http_port": 7002,
+    "robot_model": [
+        "kuka_kr180_support",
+        "kr180_r3200"
+    ],
+    "topic_list": [
+        "/real_planning_environment_marker_topic",
+        "/booked_items_marker_topic",
+        "/tool_marker_robot_topic"
+    ],
+    "static_folder": "/home/xyz/xyz_app/app/xyz_logistics_hmi_back/static",
+    "custom_hmi_cg": "/home/xyz/xyz_app/app/xyz_logistics_hmi_back/config/custom_hmi.json"
+}

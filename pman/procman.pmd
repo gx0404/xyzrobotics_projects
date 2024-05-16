@@ -1,0 +1,86 @@
+group "hmi" {
+    cmd "3-hmi_frontend" {
+        exec = "npm start --prefix ~/xyz-xrs-hmi";
+        host = "localhost";
+    }
+    cmd "2-hmi_backend" {
+        exec = "python $CODE_BASE/catkin_ws/src/xyz-depalletize-bridge/src/http_app.py";
+        host = "localhost";
+    }
+    cmd "1-socket-app" {
+        exec = "python $CODE_BASE/catkin_ws/src/xyz-depalletize-bridge/src/sock_app.py";
+        host = "localhost";
+    }
+}
+
+group "calibration(标定节点)" {
+    cmd "4-setup-tool-backend" {
+        exec = "python /opt/xyz_standalone_setup/app.pyc";
+        host = "localhost";
+    }
+    cmd "3-rosbridge" {
+        exec = "roslaunch xyz_vision_sensor rosbridge.launch";
+        host = "localhost";
+    }
+    cmd "2-calibration" {
+        exec = "rosrun xyz_calibration xyz_calibration_node  $CODE_BASE/app/vision/calibration_config.yml online";
+        host = "localhost";
+    }
+    cmd "1-fake-signaler" {
+        exec = "python $CODE_BASE/app/fake_signaler.py";
+        host = "localhost";
+    }
+}
+cmd "0-roscore" {
+    auto_respawn = "true";
+    exec = "roscore";
+    host = "localhost";
+}
+cmd "1-robotconfig-real(用机器人必开)" {
+    exec = "roslaunch $CODE_BASE/app/launch/system_config.launch have_robot:=true";
+    host = "localhost";
+}
+cmd "1-robotconfig-sim" {
+    exec = "roslaunch $CODE_BASE/app/launch/system_config.launch have_robot:=false";
+    host = "localhost";
+}
+cmd "0-rviz" {
+    exec = "rosrun rviz rviz -d $CODE_BASE/app/rviz/rvizconfig.rviz";
+    host = "localhost";
+}
+cmd "2-robot" {
+    exec = "python /home/xyz/xyz_app/app/robot_config/start_robot_node.py";
+    host = "localhost";
+}
+cmd "3-barcode-scanner" {
+    exec = "roslaunch $CODE_BASE/app/launch/scanner.launch";
+    host = "localhost";
+}
+cmd "2-env-manager" {
+    exec = "rosrun xyz_env_manager xyz_env_manager_node";
+    host = "localhost";
+}
+cmd "data_uploader" {
+    exec = "roslaunch data_uploader main.launch upload_cg:=$CODE_BASE/uploader/uploader_config.yml";
+    host = "localhost";
+}
+cmd "5-io" {
+    exec = "rosrun xyz_io io_server.py -d $CODE_BASE/app/io/io_server.json";
+    host = "localhost";
+}
+cmd "4-mix-palletize" {
+    exec = "roslaunch $CODE_BASE/app/launch/mix_palletize.launch ";
+    host = "localhost";
+}
+
+script "calibration" {
+    start cmd "0-roscore";
+    wait ms 3000;
+    start cmd "1-robotconfig-sim";
+    wait ms 2000;
+    start cmd "3-rosbridge";
+    wait ms 500;
+    start cmd "4-setup-tool-backend";
+    wait ms 500;
+    start cmd "2-calibration";
+}

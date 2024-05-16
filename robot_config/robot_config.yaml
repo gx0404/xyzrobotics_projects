@@ -1,0 +1,30 @@
+%YAML 1.2
+---
+# A template of robot_config.yaml
+# The robot_config.yaml file should be placed in $CODE_BASE/app/robot_config/robot_config.yaml 
+# @TODO more detail about robot_config.yaml
+# https://161.189.84.82:8003/xyz-release-doc/ubuntu2004/motion/xyz-motion-base_0.10.0/xyz_robot.html
+
+robot_list:
+  - robot_type: "kuka"
+    model_id: "kr180_r3200_pa"
+    robot_id: 0
+    simulation: false
+    motion_socket: [tcp_server, 192.168.36.100, 54609]
+    status_socket: [tcp_server, 192.168.36.100, 54610]
+    stream_motion: false
+
+# Attention Please:
+# The following parameters are forbidden to be modified by non-professionals
+
+default:
+    motoman_cycle: 0.004
+
+
+# Central Hub Config
+central_hub:
+    node_name: robot_node
+    notice: false
+    socket: [tcp_client, 127.0.0.1, 10001]
+
+auto_enable: true

@@ -1,0 +1,80 @@
+{
+  "type": "page",
+  "data": {
+    "xyz_host": "127.0.0.1",
+    "xyz_port": 7002
+  },
+  "body": {
+    "type": "anchor-nav",
+    "direction": "vertical",
+    "links": [
+      {
+        "title": "视觉图片查看",
+        "body": [
+          {
+            "type": "form",
+            "id": "u:04c8d9ba19a4",
+            "title": "视觉图片（可点击图片查看大图）",
+            "initApi": {
+              "method": "post",
+              "url": "http://${xyz_host}:${xyz_port}/api/lowcode/latest_pictures",
+              "data": {
+                "host": "${xyz_host}",
+                "port": "${xyz_port}"
+              }
+            },
+            "body": [
+              {
+                "type": "service",
+                "body": [
+                  {
+                    "type": "images",
+                    "label": "",
+                    "enlargeAble": true,
+                    "source": "${image_list}"
+                  }
+                ]
+              }
+            ],
+            "actions": [
+              {
+                "type": "button",
+                "icon": "fa fa-refresh",
+                "label": "刷新视觉图片",
+                "level": "primary",
+                "onEvent": {
+                  "click": {
+                    "actions": [
+                      {
+                        "args": {
+                          "api": {
+                            "method": "post",
+                            "data": {
+                              "host": "${xyz_host}",
+                              "port": "${xyz_port}"
+                            },
+                            "url": "http://${xyz_host}:${xyz_port}/api/lowcode/latest_pictures",
+                            "dataType": "json"
+                          }
+                        },
+                        "outputVar": "responseResult",
+                        "actionType": "ajax"
+                      },
+                      {
+                        "actionType": "setValue",
+                        "componentId": "u:04c8d9ba19a4",
+                        "args": {
+                          "value": "${event.data.responseResult}"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

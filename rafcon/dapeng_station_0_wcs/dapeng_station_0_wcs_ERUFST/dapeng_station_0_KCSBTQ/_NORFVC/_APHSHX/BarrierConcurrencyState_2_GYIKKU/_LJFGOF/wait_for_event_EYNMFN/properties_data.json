@@ -1,0 +1,48 @@
+{
+    "data_source": {
+        "comment": "wait_for_event", 
+        "event_name": "camera", 
+        "timeout": 20.0
+    }, 
+    "data_source_translation": {
+        "/comment": "等待事件信号", 
+        "/event_name": "事件信号的名字， 与释放事件信号的对应的属性值相同", 
+        "/timeout": "超时时间"
+    }, 
+    "data_source_type": {
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "event_name": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "timeout": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ]
+        }
+    }
+}

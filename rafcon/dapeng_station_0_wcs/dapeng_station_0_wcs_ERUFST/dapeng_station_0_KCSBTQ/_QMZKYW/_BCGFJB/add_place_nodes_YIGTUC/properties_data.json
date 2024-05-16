@@ -1,0 +1,376 @@
+{
+    "data_source": {
+        "0-pre_place": {
+            "pick_conveyor_collision": false, 
+            "relative_poses": [
+                [
+                    0, 
+                    0, 
+                    0.3, 
+                    0, 
+                    0, 
+                    0, 
+                    1
+                ]
+            ], 
+            "use": true
+        }, 
+        "1-slide_start": {
+            "extended_object_dsafe": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "relative_poses": [
+                [
+                    0.05, 
+                    0.05, 
+                    0.08, 
+                    0, 
+                    0, 
+                    0, 
+                    1
+                ], 
+                [
+                    0.05, 
+                    -0.05, 
+                    0.08, 
+                    0, 
+                    0, 
+                    0, 
+                    1
+                ], 
+                [
+                    -0.05, 
+                    0.05, 
+                    0.08, 
+                    0, 
+                    0, 
+                    0, 
+                    1
+                ], 
+                [
+                    -0.05, 
+                    -0.05, 
+                    0.08, 
+                    0, 
+                    0, 
+                    0, 
+                    1
+                ]
+            ], 
+            "use": true
+        }, 
+        "2-near_place": {
+            "relative_poses": [
+                [
+                    0, 
+                    0, 
+                    0.02, 
+                    0, 
+                    0, 
+                    0, 
+                    1
+                ]
+            ], 
+            "use": true
+        }, 
+        "3-place": {
+            "place_drop_buffer": 0.005
+        }, 
+        "4-post_place": {
+            "inverse_pre_place": false, 
+            "relative_poses": [
+                [
+                    0, 
+                    0, 
+                    -0.04, 
+                    0, 
+                    0, 
+                    0, 
+                    1
+                ]
+            ], 
+            "use": true
+        }, 
+        "comment": "add_place_nodes"
+    }, 
+    "data_source_translation": {
+        "/0-pre_place": "标准运动策略中的pre_place点", 
+        "/0-pre_place/pick_conveyor_collision": "是否在抓取空间为输送线时，在路径post_pick到pre_place之间把抓取空间设为障碍物避障", 
+        "/0-pre_place/relative_poses": "相对姿态", 
+        "/0-pre_place/use": "是否使用这个点。在所有点都使用的情况下，相对关系为0->1->2->place，且4->place。不使用的点会从上述相对关系中移除。", 
+        "/1-slide_start": "标准运动策略中的slide_start点", 
+        "/1-slide_start/extended_object_dsafe": "手上物体的滑动安全距离，将作用于该点至下一个点的斜插轨迹", 
+        "/1-slide_start/relative_poses": "相对姿态", 
+        "/1-slide_start/use": "是否使用这个点。在所有点都使用的情况下，相对关系为0->1->2->place，且4->place。不使用的点会从上述相对关系中移除。", 
+        "/2-near_place": "标准运动策略中的near_place点", 
+        "/2-near_place/relative_poses": "相对姿态", 
+        "/2-near_place/use": "是否使用这个点。在所有点都使用的情况下，相对关系为0->1->2->place，且4->place。不使用的点会从上述相对关系中移除", 
+        "/2-near_pre_place": "标准运动策略中的near_pre_place点", 
+        "/2-near_pre_place/relative_poses": "相对姿态", 
+        "/2-near_pre_place/use": "是否使用这个点。在所有点都使用的情况下，相对关系为0->1->2->place，且4->place。不使用的点会从上述相对关系中移除。", 
+        "/3-place": "标准运动策略中的place点", 
+        "/3-place/place_drop_buffer": "物体放置时的掉落高度", 
+        "/4-post_place": "标准运动策略中的post_place点", 
+        "/4-post_place/inverse_pre_place": "是否在post_place点回到pre_place相同的位置", 
+        "/4-post_place/relative_poses": "相对姿态", 
+        "/4-post_place/use": "是否使用这个点。在所有点都使用的情况下，相对关系为0->1->2->place，且4->place。不使用的点会从上述相对关系中移除。", 
+        "/comment": "备注"
+    }, 
+    "data_source_type": {
+        "0-pre_place": {
+            "pick_conveyor_collision": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }, 
+            "relative_poses": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }, 
+            "use": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {
+                        "false": [
+                            "/0-pre_place/relative_poses", 
+                            "/0-pre_place/pick_conveyor_collision"
+                        ], 
+                        "true": []
+                    }, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }
+        }, 
+        "1-slide_start": {
+            "extended_object_dsafe": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "relative_poses": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }, 
+            "use": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {
+                        "false": [
+                            "/1-slide_start/extended_object_dsafe", 
+                            "/1-slide_start/relative_poses"
+                        ], 
+                        "true": []
+                    }, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }
+        }, 
+        "2-near_place": {
+            "relative_poses": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }, 
+            "use": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {
+                        "false": [
+                            "/2-near_place/relative_poses"
+                        ], 
+                        "true": []
+                    }, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }
+        }, 
+        "3-place": {
+            "place_drop_buffer": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "4-post_place": {
+            "inverse_pre_place": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {
+                        "false": [], 
+                        "true": [
+                            "/4-post_place/relative_poses"
+                        ]
+                    }, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }, 
+            "relative_poses": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }, 
+            "use": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {
+                        "false": [
+                            "/4-post_place/inverse_pre_place", 
+                            "/4-post_place/relative_poses"
+                        ], 
+                        "true": []
+                    }, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }
+        }, 
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }
+    }
+}
