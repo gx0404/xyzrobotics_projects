@@ -73,7 +73,7 @@ def check_pick_slide_move(checker,kinematic_solver,joints):
 #后验
 def check_place_slide_move(checker,kinematic_solver,joints):
     use_slide = None
-    slide_list = [[0.052, 0.052, 0.05, 0, 0, 0, 1], [0.052, -0.052, 0.05, 0, 0, 0, 1], [-0.052, 0.052, 0.05, 0, 0, 0, 1], [-0.052, -0.052, 0.05, 0, 0, 0, 1]]
+    slide_list = [[0.042, 0.042, 0.1, 0, 0, 0, 1], [0.052, -0.052, 0.1, 0, 0, 0, 1], [-0.052, 0.052, 0.1, 0, 0, 0, 1], [-0.052, -0.052, 0.1, 0, 0, 0, 1]]
     joints = kinematic_solver.convert_six_dof_to_four(joints)
     tf_map_flange_list_out = kinematic_solver.compute_fk(joints)
     for slide in slide_list:
@@ -237,17 +237,20 @@ class SEARCH_ASYNC():
                     #添加碰撞检测器
                     checker = CollisionChecker(check_robot, planning_env)   
                     if checker.check_point_collision(check_joint):
-                        if pick_path_key==1:
-                            pass
-                            #import ipdb;ipdb.set_trace()
+                        # if plan_item.additional_info.values[-3]=="25":
+                        #     pass
+                        #     import ipdb;ipdb.set_trace()
                         continue
                     else:
                         if pick_path_key==8:
                             pass
                             #import ipdb;ipdb.set_trace()
                         self.logger(f"放置开始后验,{plan_item.additional_info.values[-3]}")    
-                        # if plan_item.additional_info.values[-3]=="33":
+                        # if plan_item.additional_info.values[-3]=="25":
+                        #     pass
                         #     import ipdb;ipdb.set_trace()
+                        # collision_flag = False
+                        # break    
                         if check_place_slide_move(checker,kinematic_solver,check_joint):     
                             collision_flag = False   
                             break  
@@ -309,6 +312,9 @@ class SEARCH_ASYNC():
                         if pick_path_key==8:
                             pass
                             #import ipdb;ipdb.set_trace()
+                        self.logger(f"放置开始后验180,{plan_item.additional_info.values[-3]}")        
+                        # collision_flag = False 
+                        # break
                         if check_place_slide_move(checker,kinematic_solver,check_joint):     
                             collision_flag = False   
                             break  
@@ -434,7 +440,8 @@ class SEARCH_ASYNC():
             check_planning_env.add_container_items("0", plan_path_list) 
             #清除当前路径下缓存区箱子环境
             check_planning_env.clear_container_items("1", [i.name for i in pick_path_list]) 
-
+            # if len(path)>5:
+            #     import ipdb;ipdb.set_trace()
             #过滤掉缓存区已完成的箱子
             remaining_pick_items = list(filter(lambda x:x.name not in [i.name for i in pick_path_list],container_items))
             #过滤缓存区非顶层箱子+最高层
@@ -519,8 +526,8 @@ def execute(self, inputs, outputs, gvm):
             
    #相机扩大一点
     for i in init_clamp_collision:
-        # if i.name == "camera":
-        #     i.primitives[0].dimensions = [0.6, 0.33+0.05, 0.25] 
+        if i.name == "camera":
+            i.primitives[0].dimensions = [0.55, 0.3+0.03, 0.2]
         if i.name == "body":
             i.primitives[0].dimensions = [0.38, 0.58, 0.65]    
                    

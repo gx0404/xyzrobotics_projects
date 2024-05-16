@@ -1,0 +1,46 @@
+
+
+[unix_http_server]
+file=/tmp/supervisor.sock   ; (the path to the socket file)
+chmod=0700                 ; socket file mode (default 0700)
+
+
+[inet_http_server]         ; inet (TCP) server disabled by default
+port=0.0.0.0:9001
+username=
+password=
+
+[supervisord]
+logfile=/home/xyz/xyz_log/central_hub/supervisor-log.txt ; (main log file;default $CWD/supervisord.log)
+logfile_maxbytes=50MB        ; (max main logfile bytes b4 rotation;default 50MB)
+logfile_backups=10           ; (num of main logfile rotation backups;default 10)
+loglevel=warn                ; (log level;default info; others: debug,warn,trace)
+pidfile=/tmp/supervisord.pid ; (supervisord pidfile;default supervisord.pid)
+nodaemon=false               ; (start in foreground if true;default false)
+minfds=1024                  ; (min. avail startup file descriptors;default 1024)
+minprocs=200                 ; (min. avail process descriptors;default 200)
+environment = PATH="/home/xyz/.local/bin:/usr/local/cuda-10.1/bin:/usr/local/cuda-10.1/NsightCompute-2019.3:/opt/ros/noetic/bin:/home/xyz/.local/bin:/usr/local/cuda-10.1/bin:/usr/local/cuda-10.1/NsightCompute-2019.3:/usr/local/lib/nodejs/node-v10.15.3-linux-x64/bin:/home/xyz/bin:/home/xyz/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/xyz/xyz_app/software/build/bin:/home/xyz/xyz_app/software/build/bin",
+	      LD_LIBRARY_PATH="/opt/vcpkg/installed/x64-linux/lib:/usr/lib:/usr/libx86_64_linux_gnu:/usr/local/lib:/usr/local/torch/lib:/usr/local/cuda-10.1/lib64:/home/xyz/xyz_app/catkin_ws/devel/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu:/usr/lib:/usr/libx86_64_linux_gnu:/usr/local/lib:/usr/local/torch/lib:/usr/local/cuda-10.1/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32",
+	      PYTHONPATH="/opt/ros/noetic/lib/python3/dist-packages",
+	      ROS_MASTER_URI="http://localhost:11311",
+	      ROS_DISTRO="noetic",
+	      ROS_ETC_DIR="/opt/ros/noetic/etc/ros",
+	      ROS_PACKAGE_PATH="/home/xyz/xyz_app/catkin_ws/src:/opt/ros/noetic/share",
+	      ROS_ROOT="/opt/ros/noetic/share/ros",
+	      ROS_VERSION="1",
+	      CMAKE_PREFIX_PATH = "/home/xyz/xyz_app/catkin_ws/devel:/opt/ros/noetic",
+	      HOME = "/home/xyz",
+	      DATA_BASE = "/home/xyz/xyz_log",
+	      CODE_BASE = "/home/xyz/xyz_app",
+	      USER = "xyz"
+strip_ansi=false
+
+[rpcinterface:supervisor]
+supervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface
+
+[supervisorctl]
+serverurl=unix:///tmp/supervisor.sock ; use a unix:// URL  for a unix socket
+
+
+[include]
+files = /home/xyz/xyz_app/central_hub/node/*.ini

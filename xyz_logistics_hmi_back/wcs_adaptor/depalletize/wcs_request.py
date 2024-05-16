@@ -137,12 +137,13 @@ def report_init_error():
     }
     send_request(INIT_ERROR_API, data)
     mp.order.info(f"通知wcs异常复位")
-    
+
+#发送hmi信息给wcs    
 def seng_log(message):
     data = {
         message:message
     }
-    send_request(SEND_LOG_WCS_API,data)
+    #send_request(SEND_LOG_WCS_API,data)
     
 
 """拣配任务接口"""

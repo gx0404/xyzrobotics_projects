@@ -194,13 +194,6 @@
             }
         }
     }, 
-    "transition2": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
     "transition22": {
         "gui": {
             "editor_gaphas": {
@@ -236,18 +229,47 @@
                     {
                         "__jsonqualname__": "__builtin__.tuple", 
                         "items": [
-                            46.68567967584614, 
-                            5.052639050920044
+                            62.94894976910883, 
+                            4.574307577588735
                         ]
                     }, 
                     {
                         "__jsonqualname__": "__builtin__.tuple", 
                         "items": [
-                            36.4840313854608, 
-                            5.052639050920044
+                            52.74730147872349, 
+                            4.574307577588735
                         ]
                     }
                 ]
+            }
+        }
+    }, 
+    "transition6": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": [
+                    {
+                        "__jsonqualname__": "__builtin__.tuple", 
+                        "items": [
+                            25.614707568975422, 
+                            5.551213528134561
+                        ]
+                    }, 
+                    {
+                        "__jsonqualname__": "__builtin__.tuple", 
+                        "items": [
+                            9.456559454507328, 
+                            5.551213528134561
+                        ]
+                    }
+                ]
+            }
+        }
+    }, 
+    "transition7": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
             }
         }
     }, 
@@ -255,6 +277,13 @@
         "gui": {
             "editor_gaphas": {
                 "waypoints": []
+            }
+        }
+    }, 
+    "transition8": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
             }
         }
     }

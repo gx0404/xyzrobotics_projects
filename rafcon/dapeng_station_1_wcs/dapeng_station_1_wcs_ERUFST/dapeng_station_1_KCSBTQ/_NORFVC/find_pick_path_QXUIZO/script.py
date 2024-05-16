@@ -88,6 +88,8 @@ def check_collision(our_robot,check_robot_list,planning_env,init_joints,containe
                #import ipdb;ipdb.set_trace()
             continue
          else:
+            if show_flag:
+               import ipdb;ipdb.set_trace()            
             if container_item.additional_info.values[-3]=="78":
                pass
                #import ipdb;ipdb.set_trace()
@@ -552,7 +554,7 @@ class A_STAR():
 
    def path_check(self,path,container_items,our_robot,check_robot_list,planning_env,init_joints):
       #偏置
-      slide_list = [[0.08, 0.08, 0.1, 0, 0, 0, 1], [0.08, -0.08, 0.1, 0, 0, 0, 1], [-0.08, 0.08, 0.1, 0, 0, 0, 1], [-0.08, -0.08, 0.1, 0, 0, 0, 1]]
+      slide_list = [[0.08, 0.08, 0.07, 0, 0, 0, 1], [0.08, -0.08, 0.07, 0, 0, 0, 1], [-0.08, 0.08, 0.07, 0, 0, 0, 1], [-0.08, -0.08, 0.07, 0, 0, 0, 1]]
       # 遍历路径
       self.logger(f"开始后验路径{path}")
       for node in path:
@@ -594,7 +596,14 @@ class A_STAR():
             continue
          else:
             self.logger(f"{node}验证失败")
-            return False         
+            our_robot.detach_object()   
+            for check_robot in check_robot_list:
+               check_robot.detach_object()              
+            return False 
+          
+      our_robot.detach_object()   
+      for check_robot in check_robot_list:
+         check_robot.detach_object()                 
       return True       
 
 
@@ -627,7 +636,8 @@ class A_STAR():
       # copy了一份初始解的环境，便于后续环境里箱子的操作
       init_planning_env = copy.copy(planning_env)
 
-
+      self.logger(f"计算初始可抓取箱子为{[i.additional_info.values[-3] for i in filtered_items]}")
+      
       # 预先计算所有可能的起始点到目标点的代价
       for init_node in filtered_items:
          for target_item in pick_items:
@@ -655,6 +665,7 @@ class A_STAR():
                
                # 如果箱子在目标箱子里，则添加到所有路径里
                if current_node in pick_items:
+                  self.logger(f"优先队列剩余数量{open_set.qsize()}")
                   # 搜索结束，回溯路径
                   all_paths.append(retrieved_item.reconstruct_path())
                   # 设置标志变量，告知找到最短路径

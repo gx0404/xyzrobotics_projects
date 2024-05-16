@@ -80,9 +80,9 @@ def execute(self, inputs, outputs, gvm):
         container_items = planning_env.get_container_items(place_workspace_id)
         if container_items:
             check_items = filter_layer_items(container_items)
-            space_pose_obj_z = check_items[0].origin.z+tip_pose_z+self.smart_data["sku_max_height"]+0.05
+            space_pose_obj_z = check_items[0].origin.z+tip_pose_z+self.smart_data["sku_max_height"]+0.2
         else:
-            space_pose_obj_z = work_space_pose[2]+tip_pose_z+self.smart_data["sku_max_height"]+0.05
+            space_pose_obj_z = work_space_pose[2]+tip_pose_z+self.smart_data["sku_max_height"]+0.2
             
         pose_base_flange = tf_base_flange_list[0].xyz_quat
                 

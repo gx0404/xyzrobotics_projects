@@ -19,6 +19,43 @@ from wcs_adaptor.manager import order_manager, task_manager
 from apps import mp,cached_app
 import subprocess
 from datetime import datetime
+from xyz_motion import PlanningEnvironmentRos
+
+
+#可视化拣配任务托盘
+@custom_hmi_bp.route("/example/workspace_show", methods=["POST","GET"])
+@req_log(log=wcs_log)
+def workspace_show():
+    """通过HMI【辅助功能】界面发送请求到本接口, 可视化拣配任务托盘
+    本接口的路径是: api/custom/example/workspace_show
+
+    Examples:
+        {
+            "code": 0,
+            "msg": "success",
+          }
+    """
+    from xyz_motion import PlanningEnvironmentRos
+    planning_env = PlanningEnvironmentRos.from_json_file("/home/xyz/xyz_app/projects/dapeng_station_0/wcs_pallet_json/planning_env.json")
+    for i in range(1,7):
+        planning_env.remove_workspace(str(i))
+        
+    primitive_name_list = []
+    primitive_map = planning_env.get_primitive_group_map()
+     
+    for i in primitive_map.keys():
+        primitive_name_list.append(i)
+    for i in primitive_name_list:
+        planning_env.remove_primitive_group(i)
+    # planning_env.remove_primitive_group("col_1")
+    # planning_env.remove_primitive_group("col_2")
+    # planning_env.remove_primitive_group("col_3")
+    # planning_env.remove_primitive_group("col_4")
+    # planning_env.remove_primitive_group("col_13")
+    planning_env.show()
+    return make_json_response(msg="")
+
+
 #中欧网页打开
 @custom_hmi_bp.route("/example/open_html_0", methods=["POST","GET"])
 @req_log(log=wcs_log)
@@ -79,13 +116,13 @@ def clear_cache_environment():
                     clear_container_all_items,
                     clear_planned_items,
                 )
-                workspace_id = "2"
+                workspace_id = "1"
                 remove_bottom_padding_workspace(workspace_id)
                 clear_container_all_items(workspace_id)
                 clear_planned_items(workspace_id)
-                return make_json_response("清除缓存区环境成功")
+                return make_json_response(msg="清除缓存区环境成功")
             except ImportError as err:
-                return make_json_response("失败，请检查环境节点是否打开")
+                return make_json_response(msg="失败，请检查环境节点是否打开")
 
 @custom_hmi_bp.route("/example/code_wcs_log", methods=["POST"])
 @req_log(log=wcs_log)

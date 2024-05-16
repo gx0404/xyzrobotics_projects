@@ -401,7 +401,8 @@ def execute(self, inputs, outputs, gvm):
             break
     
     if not use_slide:
-        raise "无有效的抓取点"    
+        self.logger.info("无有效的抓取点")
+        return "fail"   
     if use_slide[0]>0:
         use_slide[0] = 0.035
     else:

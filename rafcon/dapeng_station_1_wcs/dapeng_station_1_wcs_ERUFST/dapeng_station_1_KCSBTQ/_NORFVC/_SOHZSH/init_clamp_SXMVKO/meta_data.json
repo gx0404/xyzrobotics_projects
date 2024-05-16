@@ -28,7 +28,7 @@
             "rel_pos": {
                 "__jsonqualname__": "__builtin__.tuple", 
                 "items": [
-                    89.68867732344916, 
+                    89.6886773234487, 
                     32.420851869075705
                 ]
             }, 
@@ -173,10 +173,32 @@
             }
         }
     }, 
-    "transition2": {
+    "transition20": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": []
+                "waypoints": [
+                    {
+                        "__jsonqualname__": "__builtin__.tuple", 
+                        "items": [
+                            18.909493401092263, 
+                            8.534444133486097
+                        ]
+                    }, 
+                    {
+                        "__jsonqualname__": "__builtin__.tuple", 
+                        "items": [
+                            10.120771458374847, 
+                            8.534444133486097
+                        ]
+                    }
+                ]
+            }
+        }
+    }, 
+    "transition21": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
             }
         }
     }, 
@@ -184,6 +206,13 @@
         "gui": {
             "editor_gaphas": {
                 "waypoints": []
+            }
+        }
+    }, 
+    "transition23": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
             }
         }
     }, 
@@ -215,15 +244,15 @@
                     {
                         "__jsonqualname__": "__builtin__.tuple", 
                         "items": [
-                            46.68567967584614, 
-                            5.052639050920044
+                            61.9868135747388, 
+                            4.813558833749704
                         ]
                     }, 
                     {
                         "__jsonqualname__": "__builtin__.tuple", 
                         "items": [
-                            36.4840313854608, 
-                            5.052639050920044
+                            51.78516528435346, 
+                            4.813558833749704
                         ]
                     }
                 ]

@@ -2,7 +2,7 @@
 import copy,time,dill,math
 from xyz_motion import CollisionChecker,SE3,RobotRos,PlanningEnvironmentRos
 from xyz_env_manager.msg import AttachedCollisionObject,Pose
-from queue import PriorityQueue
+from queue import PriorityQueue,Empty
 import multiprocessing
 import queue
 import threading
@@ -698,7 +698,7 @@ class A_STAR_ASYNC():
                   open_set.put(cost_item) 
          return True 
       except Exception as e:
-            self.logger(f"check_all_collisions error:{e}")
+            self.logger(f"check_all_collisions error:{str(e)}")
             if stop_event.is_set():
                self.logger(f"stop_event")   
             else:   
@@ -708,7 +708,7 @@ class A_STAR_ASYNC():
    def path_check(self,current_process_id,path,container_items,our_robot,check_robot_list,planning_env,init_joints,stop_event):
       current_process_id
       #偏置
-      slide_list = [[0.07, 0.07, 0.12, 0, 0, 0, 1], [0.07, -0.07, 0.12, 0, 0, 0, 1], [-0.07, 0.07, 0.12, 0, 0, 0, 1], [-0.07, -0.07, 0.12, 0, 0, 0, 1]]
+      slide_list = [[0.08, 0.08, 0.07, 0, 0, 0, 1], [0.08, -0.08, 0.07, 0, 0, 0, 1], [-0.08, 0.08, 0.07, 0, 0, 0, 1], [-0.08, -0.08, 0.07, 0, 0, 0, 1]]
       # 遍历路径
       self.logger(f"进程{current_process_id},开始后验路径{path}")
       for node in path:
@@ -750,7 +750,14 @@ class A_STAR_ASYNC():
             continue
          else:
             self.logger(f"进程{current_process_id},{node}验证失败")
-            return False         
+            our_robot.detach_object()   
+            for check_robot in check_robot_list:
+               check_robot.detach_object()              
+            return False 
+         
+      our_robot.detach_object()   
+      for check_robot in check_robot_list:
+         check_robot.detach_object()                    
       return True
                                          
 
@@ -786,7 +793,8 @@ class A_STAR_ASYNC():
          container_items = dill.loads(container_items_msg)
          pick_items = dill.loads(pick_items_msg)
          filtered_items = dill.loads(filtered_items_msg)
-
+         
+         self.logger(f"{current_process_id}进程,计算初始可抓取箱子为{[i.additional_info.values[-3] for i in filtered_items]}")
          # 初始化优先队列
          open_set = PriorityQueue() 
 
@@ -834,6 +842,7 @@ class A_STAR_ASYNC():
                   
                   # 如果箱子在目标箱子里，则添加到所有路径里
                   if current_node in pick_items:
+                     self.logger(f"{current_process_id}进程,优先队列剩余数量{open_set.qsize()}")
                      #TODO 添加回溯判断，避免后续运动规划无解 
                      # 搜索结束，回溯路径
                      all_paths.append(retrieved_item.reconstruct_path())
@@ -853,7 +862,7 @@ class A_STAR_ASYNC():
                         all_paths = []
                         continue
 
-
+                  #TODO 重复访问过滤会导致后验失效，先关闭            
                   #将路径节点ID当成键值
                   current_state_key = tuple(sorted(state_key))
                   # 判断是否已经访问过这个状态
@@ -882,10 +891,12 @@ class A_STAR_ASYNC():
                      overall_cost = self.next_overall_cost(next_item,finished_items,1)
                      executor.submit(self.check_all_collisions, our_robot, check_robot_list, planning_env, 
                      init_joints, next_item,overall_cost,open_set,state_key,pick_items,current_node,retrieved_item,g_cost,open_set_lock,stop_event)
-               except Exception as e:
-                  self.logger(f"{current_process_id}进程,{e}")
+               except Empty:
                   self.logger(f"{current_process_id}进程,队列已为空,但未搜索到路径")
-                  break   
+                  break    
+               except Exception as e:
+                  self.logger(f"{current_process_id}进程,异常信息{str(e)}")
+                  break  
          # 关闭线程池，不再接受新任务
          executor.shutdown(wait=True)   
             #open_set.task_done()  
@@ -907,4 +918,4 @@ class A_STAR_ASYNC():
             self.calculation_queue.put(calculation_dict)    
             return calculation_dict
       except Exception as e:
-         self.logger(f"{current_process_id}进程,{direction}面计算异常,异常信息{e}")
+         self.logger(f"{current_process_id}进程,{direction}面计算异常,异常信息{str(e)}")

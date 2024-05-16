@@ -180,6 +180,28 @@
             }
         }
     }, 
+    "transition11": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": [
+                    {
+                        "__jsonqualname__": "__builtin__.tuple", 
+                        "items": [
+                            21.638197309871874, 
+                            9.145873184298797
+                        ]
+                    }, 
+                    {
+                        "__jsonqualname__": "__builtin__.tuple", 
+                        "items": [
+                            5.4800491954037795, 
+                            9.145873184298797
+                        ]
+                    }
+                ]
+            }
+        }
+    }, 
     "transition12": {
         "gui": {
             "editor_gaphas": {
@@ -187,14 +209,21 @@
             }
         }
     }, 
-    "transition15": {
+    "transition13": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": []
+                "waypoints": {}
             }
         }
     }, 
-    "transition2": {
+    "transition14": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
+            }
+        }
+    }, 
+    "transition15": {
         "gui": {
             "editor_gaphas": {
                 "waypoints": []
@@ -236,15 +265,15 @@
                     {
                         "__jsonqualname__": "__builtin__.tuple", 
                         "items": [
-                            46.68567967584614, 
-                            5.052639050920044
+                            63.90561271577145, 
+                            4.382974988256757
                         ]
                     }, 
                     {
                         "__jsonqualname__": "__builtin__.tuple", 
                         "items": [
-                            36.4840313854608, 
-                            5.052639050920044
+                            53.70396442538611, 
+                            4.382974988256757
                         ]
                     }
                 ]
