@@ -55,19 +55,19 @@ pallet_5 = build_pallet(name="pallet_5", top_origin=[-0.5, -2.4, -1.121-0.04, 0.
 ws5.pallet = pallet_5
 
 #输送线6
-ws6 = build_workspace(workspace_id="6", bottom_pose=[1.116, -1.818+0.035, -1-0.005, 0.0, 0.0, 0.707, 0.707], dimensions=[0.61, 0.41, 0.6], ws_type="conveyor")
-conveyor_6 = build_conveyor(name="conveyor_6", top_origin=[1.116, -2.221, -1-0.005, 0.0, 0.0, 0.707, 0.707], dimensions=[2, 0.45, 0.5], side_height=0.12, side_width=0.01)
+ws6 = build_workspace(workspace_id="6", bottom_pose=[1.139, -1.818+0.035, -1-0.005, 0.0, 0.0, 0.707, 0.707], dimensions=[0.61, 0.41, 0.6], ws_type="conveyor")
+conveyor_6 = build_conveyor(name="conveyor_6", top_origin=[1.139, -2.221, -1-0.005, 0.0, 0.0, 0.707, 0.707], dimensions=[2, 0.45, 0.5], side_height=0.12, side_width=0.01)
 ws6.conveyor = conveyor_6
 
 
 #混码缓存位7
-ws7 = build_workspace(workspace_id="7", bottom_pose=[1.205-0.41-0.07, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[0.4, 0.3, 0.4], ws_type="pallet")
-pallet_7 = build_pallet(name="pallet_7", top_origin=[1.205-0.41-0.07, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[1, 0.3, 0.11])
+ws7 = build_workspace(workspace_id="7", bottom_pose=[1.228-0.41-0.07, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[0.4, 0.3, 0.4], ws_type="pallet")
+pallet_7 = build_pallet(name="pallet_7", top_origin=[1.228-0.41-0.07, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[1, 0.3, 0.11])
 ws7.pallet = pallet_7
 
 #混码缓存位8
-ws8 = build_workspace(workspace_id="8", bottom_pose=[1.205, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[0.4, 0.3, 0.4], ws_type="pallet")
-pallet_8 = build_pallet(name="pallet_8", top_origin=[1.205, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[1, 0.3, 0.11])
+ws8 = build_workspace(workspace_id="8", bottom_pose=[1.228, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[0.4, 0.3, 0.4], ws_type="pallet")
+pallet_8 = build_pallet(name="pallet_8", top_origin=[1.228, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[1, 0.3, 0.11])
 ws8.pallet = pallet_8
 
 
@@ -81,7 +81,7 @@ collision_pallet_3 = build_collision(name="collision_pallet_3", origin=[2, -0.3+
 
 
 #前围栏
-collision_1 = build_collision(name="col_1", origin=[2.705+0.04, 0, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6.59,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
+collision_1 = build_collision(name="col_1", origin=[2.705+0.07, 0, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6.59,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
 
 # #后围栏
 # collision_2 = build_collision(name="col_2", origin=[-2.82+0.12, 0-5.25/2, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6.59-5.25,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
@@ -463,6 +463,6 @@ from xyz_motion import save_env_version
 save_env_version("env_manager")
 
 # 查看工作空间和吸盘的参考命令
-# workspace_env.show()
+#workspace_env.show()
 # all_robots_ros.get_active_tool("0").show()
 import ipdb;ipdb.set_trace()

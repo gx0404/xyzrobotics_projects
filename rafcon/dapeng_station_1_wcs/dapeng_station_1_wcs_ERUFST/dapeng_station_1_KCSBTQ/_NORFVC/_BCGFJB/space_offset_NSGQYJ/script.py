@@ -56,7 +56,10 @@ def execute(self, inputs, outputs, gvm):
     elif row==9:
         outputs["near_relative_poses"] = [[0, 0, 0.08, 0, 0, 0, 1]]
         self.logger.info("row is 9")    
-        outputs["place_drop_buffer"] = 0.01
+        if place_workspace_id == "1":
+            outputs["place_drop_buffer"] = 0.003
+        else:
+            outputs["place_drop_buffer"] = 0.01    
     else:
         raise "无效的row"        
     
@@ -79,10 +82,10 @@ def execute(self, inputs, outputs, gvm):
         # else:
         #     raise "无效的place ID"                                        
     else:    
-        place_relative_poses = [[0.1, 0.1, 0.07, 0, 0, 0, 1], 
-                          [0.1, -0.1, 0.07, 0, 0, 0, 1], 
-                          [-0.1, 0.1, 0.07, 0, 0, 0, 1], 
-                          [-0.1, -0.1, 0.07, 0, 0, 0, 1]]  
+        place_relative_poses = [[0.06, 0.06, 0.07, 0, 0, 0, 1], 
+                          [0.06, -0.06, 0.07, 0, 0, 0, 1], 
+                          [-0.06, 0.06, 0.07, 0, 0, 0, 1], 
+                          [-0.06, -0.06, 0.07, 0, 0, 0, 1]] 
     outputs["place_relative_poses"] = place_relative_poses    
     if not grasp_plan:
         raise "需要连接grasp plan"

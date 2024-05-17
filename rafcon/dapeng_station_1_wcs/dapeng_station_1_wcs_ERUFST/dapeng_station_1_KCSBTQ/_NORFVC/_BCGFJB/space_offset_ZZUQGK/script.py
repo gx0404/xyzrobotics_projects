@@ -1,6 +1,26 @@
 from xyz_motion import SE3,pose_to_list,create_kinesolver
 from xyz_env_manager.client import get_planning_environment
 from xyz_motion import PlanningEnvironmentRos
+
+#过滤得到顶层箱子
+def filter_layer_items(items):
+
+    combined_data = {}
+    for item in items:
+        #建立x,y坐标的键，同一列箱子xy坐标一致
+        key = (round(item.origin.x,2), round(item.origin.y,2))
+        if key not in combined_data.keys():
+            combined_data[key] = item
+        else:   
+            # 只保留Z最大的类实例
+            if item.origin.z > combined_data[key].origin.z:
+                combined_data[key] = item
+
+    new_items = list(combined_data.values())
+    max_z = max(i.origin.z for i in items)
+    new_items = list(filter(lambda x:abs(x.origin.z-max_z)<0.1,items))
+    return new_items
+
 def execute(self, inputs, outputs, gvm):
     self.logger.info("Hello {}".format(self.name))
     grasp_plan = inputs.get("grasp_plan", None)
@@ -40,10 +60,23 @@ def execute(self, inputs, outputs, gvm):
         tip_pose_z = tf_flange_tip.xyz_quat[2]
         space_pose_obj_z = work_space_pose[2]+work_space_dimensions[2]+tip_pose_z+self.smart_data["sku_max_height"]
         pose_base_flange = tf_base_flange_list[0].xyz_quat
-                
-        pose_xyz = pose_base_flange[0:2] + [space_pose_obj_z]        
+
+        #通过现有最高的箱子计算偏移
+        container_items = planning_env.get_container_items(pick_workspace_id)
+        if container_items:
+            check_items = filter_layer_items(container_items)
+            space_pose_obj_z = check_items[0].origin.z+tip_pose_z+self.smart_data["sku_max_height"]+0.2
+        else:
+            space_pose_obj_z = work_space_pose[2]+tip_pose_z+self.smart_data["sku_max_height"]+0.2
+        if space_pose_obj_z<1.1:
+            space_pose_obj_z = 1.1   
+            
+        relative_pose_list = []
+        pose_xyz = pose_base_flange[0:2] + [space_pose_obj_z]
         relative_pose = []        
         for index,item in enumerate(pose_xyz):
-            relative_pose.append(item-pose_base_flange[index])
-        outputs["relative_poses"] = [relative_pose+[0,0,0,1]]                   
+            relative_pose.append(item-pose_base_flange[index])         
+        relative_pose+=[0,0,0,1] 
+        relative_pose_list.append(relative_pose)
+        outputs["relative_poses"] = relative_pose_list                         
         return "success"

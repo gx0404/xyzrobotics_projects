@@ -9,8 +9,8 @@
     "supervisor_port": 9001,
     "upload_folder": "/home/xyz/xyz_log/system_manager/depalletize_bridge_image",
     "rafcon_debug": false,
-    "stop_robot_if_error": false,
-    "stop_robot_if_stop": false,
+    "stop_robot_if_error": true,
+    "stop_robot_if_stop": true,
     "state_machine_path": [
         "/home/xyz/xyz_app/app/rafcon/dapeng_station_0"
     ],

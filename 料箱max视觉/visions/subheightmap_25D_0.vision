@@ -112,8 +112,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 2212.1296112965297
-      y: 2802.8817310211525
+      x: 2197.1996912965301
+      y: 2720.7671710211521
     embedded_widget_rect:
       w: 877
       h: 607
@@ -2065,7 +2065,7 @@ nodes:
           - 400_300_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 80
+        min_detection_score: 85
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
