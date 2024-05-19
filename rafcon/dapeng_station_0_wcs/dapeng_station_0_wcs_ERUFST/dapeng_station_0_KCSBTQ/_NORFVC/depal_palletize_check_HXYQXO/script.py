@@ -230,10 +230,13 @@ def execute(self, inputs, outputs, gvm):
                  
                     
             if row==5:
-                tf_base_box_real = SE3([0.00,0.001,0,0,0,0,1])*tf_base_box_real
+                tf_base_box_real = SE3([0.00,0.000,0,0,0,0,1])*tf_base_box_real
                 row_id = int(box_id)%row
                 lay_id = int(box_id)//row
-                tf_base_box_real = tf_base_box_real*SE3([0.0025,0,0,0,0,0,1]) 
+                if row_id in [0]:
+                    tf_base_box_real = tf_base_box_real*SE3([0.003,0,0,0,0,0,1]) 
+                else:
+                    tf_base_box_real = tf_base_box_real*SE3([0.0015,0.001,0,0,0,0,1])
             elif row==9:
                 # tf_base_box_real = SE3([0.003,-0.0015,0,0,0,0,1])*tf_base_box_real 
                 row_id = int(box_id)%row

@@ -246,15 +246,13 @@ class SEARCH_ASYNC():
                             pass
                             #import ipdb;ipdb.set_trace()
                         self.logger(f"放置开始后验,{plan_item.additional_info.values[-3]}")    
-                        # if plan_item.additional_info.values[-3]=="25":
-                        #     pass
-                        #     import ipdb;ipdb.set_trace()
                         # collision_flag = False
                         # break    
                         if check_place_slide_move(checker,kinematic_solver,check_joint):     
                             collision_flag = False   
                             break  
                         else:
+                            #import ipdb;ipdb.set_trace()                            
                             continue 
             #判断是否碰撞        
             if not collision_flag:            

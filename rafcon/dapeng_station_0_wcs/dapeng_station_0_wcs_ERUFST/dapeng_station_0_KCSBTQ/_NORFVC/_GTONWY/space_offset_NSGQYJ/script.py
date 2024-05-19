@@ -89,12 +89,12 @@ def execute(self, inputs, outputs, gvm):
         tip_pose_z = tf_flange_tip.xyz_quat[2]
         
         #通过现有最高的箱子计算偏移
-        container_items = planning_env.get_container_items(pick_workspace_id)
+        container_items = planning_env.get_container_items(place_workspace_id)
         if container_items:
             check_items = filter_layer_items(container_items)
             space_pose_obj_z = check_items[0].origin.z+tip_pose_z+self.smart_data["sku_max_height"]+0.05
         else:
-            space_pose_obj_z = work_space_pose[2]+tip_pose_z+self.smart_data["sku_max_height"]+0.05
+            space_pose_obj_z = work_space_pose[2]+workspace_ros.get_dimensions()[2]+tip_pose_z+self.smart_data["sku_max_height"]+0.05
         
         relative_pose_list = []
         pose_base_flange = tf_map_flange_list[0]
@@ -106,5 +106,6 @@ def execute(self, inputs, outputs, gvm):
         
         relative_pose_list.append(relative_pose)
         outputs["relative_poses"] = relative_pose_list
+        
         return "success"   
        

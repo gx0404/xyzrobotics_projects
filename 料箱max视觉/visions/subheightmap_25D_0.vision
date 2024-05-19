@@ -1765,7 +1765,7 @@ nodes:
           - 400_300_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 82
+        min_detection_score: 81
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9

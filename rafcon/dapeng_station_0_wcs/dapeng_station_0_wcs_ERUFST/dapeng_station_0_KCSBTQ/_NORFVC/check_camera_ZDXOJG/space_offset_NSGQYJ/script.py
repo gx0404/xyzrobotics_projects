@@ -113,7 +113,7 @@ def execute(self, inputs, outputs, gvm):
         outputs["move_joints"] = move_joints    
         
         #添加旋转180的姿态，避免无解
-        offset_camera = SE3([-0.4, 0, 0, 0, 0, 1, 0])
+        offset_camera = SE3([-0.45, 0, 0, 0, 0, 1, 0])
         tf_base_flange = SE3(tf_map_flange_list[0])   
         new_base_flange = tf_base_flange*offset_camera
         
