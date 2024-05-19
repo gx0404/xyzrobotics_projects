@@ -51,7 +51,7 @@ def get_latest_pictures():
         if item.endswith(('jpg', 'png', )):
             data["image_list"].append(f"{base_url}/{item}")
             # 允许展示的最大图片数量，数量过大会影响前端加载
-            if len(data["image_list"]) == 10:
+            if len(data["image_list"]) == 30:
                 break
 
     return make_json_response(data=data)

@@ -421,6 +421,14 @@
     "scoped_variables": {}, 
     "state_id": "VWGRSF", 
     "transitions": {
+        "1": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 1, 
+            "from_state": "SSEKIP", 
+            "to_outcome": null, 
+            "to_state": "SSEKIP", 
+            "transition_id": 1
+        }, 
         "9": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 

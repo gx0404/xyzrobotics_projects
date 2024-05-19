@@ -338,7 +338,7 @@ nodes:
         pixel_value: 0.001
     position:
       x: 1154.5951143996606
-      y: 2262.7971269082309
+      y: 2263.1427269082305
   - id: "{20edd028-a921-4cfd-9dab-42b629678640}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -596,8 +596,8 @@ nodes:
           cluster_max_pts: 50000
           cluster_min_pts: 500
     position:
-      x: 3456.3822119996616
-      y: 2209.7624235482299
+      x: 3456.3822119996612
+      y: 2208.0344235482303
   - id: "{3d5210ef-967c-4648-b79f-d35f229e2554}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -639,8 +639,8 @@ nodes:
         bottom_margin: 0.25
         top_margin: 0
     position:
-      x: -1119.4924032000004
-      y: 49.954214399999977
+      x: -1226.6284032000005
+      y: 183.01021439999994
   - id: "{40a53c12-5275-4830-b53d-96ac13918811}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -872,14 +872,14 @@ nodes:
       params:
         method: Radius
         Radius:
-          num_neighbor: 10
+          num_neighbor: 15
           radius: 0.003
         Statistical:
           num_neighbor: 10
           std_dev_threshold: 0.8
     position:
-      x: 664.45814159966005
-      y: 2267.6429739482305
+      x: 664.45814159965994
+      y: 2263.8413739482312
   - id: "{54169f6d-8b5c-4331-ae4f-3e434751a2e7}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1319,11 +1319,11 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 1739.8728089351441
-      y: 3767.2691025305367
+      x: 1578.1320089351439
+      y: 3700.0844625305363
     embedded_widget_rect:
-      w: 519
-      h: 455
+      w: 630
+      h: 531
   - id: "{95e6fcfc-b793-47a3-9f2d-471a54c5c353}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1517,7 +1517,7 @@ nodes:
         frame_id: ""
     position:
       x: 3750.2621223996603
-      y: 2236.4291179482311
+      y: 2234.7011179482311
   - id: "{af17eb67-4b6d-4f59-af51-bd9caffc4366}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1597,7 +1597,7 @@ nodes:
         max_points: 0
     position:
       x: 234.94191736946578
-      y: 2262.8600292232381
+      y: 2264.9336292232379
   - id: "{b796d578-18d7-4e83-9973-46cb72b18eac}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1648,7 +1648,7 @@ nodes:
           min_contrast: -1
     position:
       x: 1885.5218183996617
-      y: 2123.704904614895
+      y: 2121.9769046148949
   - id: "{b92b3f3c-dd2a-4896-ac0a-848fc7a2ab47}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1803,11 +1803,11 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 3094.2789487046348
-      y: 3800.2021745891907
+      x: 3177.1615709268572
+      y: 3704.1373597743759
     embedded_widget_rect:
-      w: 543
-      h: 329
+      w: 724
+      h: 476
   - id: "{c66bcc5a-84fa-4909-873d-79d6f9135efb}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1827,8 +1827,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: -5065.2241919999979
-      y: 50.960793600000017
+      x: -5195.4462719999974
+      y: 145.93167360000001
     embedded_widget_rect:
       w: 1168
       h: 655
@@ -2065,7 +2065,7 @@ nodes:
           - 400_300_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 85
+        min_detection_score: 80
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -2090,8 +2090,8 @@ nodes:
           contrast: 30
           min_contrast: -1
     position:
-      x: 2110.7480821465624
-      y: 4307.4584138543642
+      x: 2109.5480821465635
+      y: 4309.8584138543638
   - id: "{ef6e3e52-0a02-4fbd-94ce-57a8b8695c44}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -2160,8 +2160,8 @@ nodes:
         bottom_margin: 0.25
         top_margin: 0
     position:
-      x: -1100.7475199999999
-      y: -99.203788799999757
+      x: -1249.0675199999998
+      y: -43.043788799999788
   - id: "{f54ee299-5097-4986-bd73-153f87a2ef64}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:

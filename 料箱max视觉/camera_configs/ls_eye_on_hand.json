@@ -21,7 +21,7 @@
     "depth_scale": 1.0,
     "enable_calibration_mode": false,
     "image_param": {
-        "ExposureTime": 15360.0,
+        "ExposureTime": 10240.0,
         "ExposureTime2D": 20000.0,
         "Gain": 12.0
     },
@@ -54,9 +54,9 @@
         "method": "rg",
         "post_enable": true,
         "rg": {
-            "max_xy_diff": 0.004999999888241291,
-            "max_z_diff": 0.003000000026077032,
-            "min_region_size": 500
+            "max_xy_diff": 0.001999999888241291,
+            "max_z_diff": 0.002000000026077032,
+            "min_region_size": 600
         }
     },
     "stream_param": {
