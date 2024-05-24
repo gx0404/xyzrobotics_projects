@@ -32,6 +32,7 @@ def execute(self, inputs, outputs, gvm):
     planning_env_msg = get_planning_environment()
     planning_env = PlanningEnvironmentRos.from_ros_msg(planning_env_msg)
     pick_workspace_id = grasp_plan.from_workspace_id
+    place_workspace_id = grasp_plan.to_workspace_id
     workspace_ros = planning_env.get_workspace_ros(pick_workspace_id)
     
     
@@ -54,29 +55,14 @@ def execute(self, inputs, outputs, gvm):
             for tf_tip_object in tf_tip_object_list:
                 tf_base_flange = (tf_base_object*tf_tip_object.inv())*tf_flange_tip.inv()
                 tf_base_flange_list.append(tf_base_flange)
-                
         work_space_dimensions = workspace_ros.get_dimensions()
         work_space_pose = workspace_ros.get_bottom_pose().xyz_quat
         tip_pose_z = tf_flange_tip.xyz_quat[2]
         space_pose_obj_z = work_space_pose[2]+work_space_dimensions[2]+tip_pose_z+self.smart_data["sku_max_height"]
         pose_base_flange = tf_base_flange_list[0].xyz_quat
-
-        #通过现有最高的箱子计算偏移
-        container_items = planning_env.get_container_items(pick_workspace_id)
-        if container_items:
-            check_items = filter_layer_items(container_items)
-            space_pose_obj_z = check_items[0].origin.z+tip_pose_z+self.smart_data["sku_max_height"]+0.2
-        else:
-            space_pose_obj_z = work_space_pose[2]+tip_pose_z+self.smart_data["sku_max_height"]+0.2
-        if space_pose_obj_z<1.1:
-            space_pose_obj_z = 1.1   
-            
-        relative_pose_list = []
-        pose_xyz = pose_base_flange[0:2] + [space_pose_obj_z]
+        pose_xyz = pose_base_flange[0:2] + [space_pose_obj_z]        
         relative_pose = []        
         for index,item in enumerate(pose_xyz):
-            relative_pose.append(item-pose_base_flange[index])         
-        relative_pose+=[0,0,0,1] 
-        relative_pose_list.append(relative_pose)
-        outputs["relative_poses"] = relative_pose_list                         
+            relative_pose.append(item-pose_base_flange[index])
+        outputs["relative_poses"] = [relative_pose+[0,0,0,1]]                   
         return "success"

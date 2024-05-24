@@ -432,6 +432,7 @@ def get_task_info():
         output_data.clear_to_ws = place_ws.is_ready if place_ws else False
 
         output_data.customized_data = task.customized_data
+        output_data.lower_layer = task.lower_layer
 
         if task.order_id:
             # order存在且开始时间为None, 则说明当前任务是该订单的第一个任务, 即更新开始时间.

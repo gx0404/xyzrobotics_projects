@@ -833,6 +833,14 @@
             "to_key": 4, 
             "to_state": "FJMOHH"
         }, 
+        "105": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 105, 
+            "from_key": 4, 
+            "from_state": "NORFVC", 
+            "to_key": 0, 
+            "to_state": "DECMLC"
+        }, 
         "108": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 108, 
@@ -938,6 +946,15 @@
             }, 
             "default_value": null, 
             "name": "pallet_clear_list"
+        }, 
+        "4": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 4, 
+            "data_type": {
+                "__type__": "__builtin__.bool"
+            }, 
+            "default_value": null, 
+            "name": "lower_layer"
         }
     }, 
     "name": "拣配流程", 

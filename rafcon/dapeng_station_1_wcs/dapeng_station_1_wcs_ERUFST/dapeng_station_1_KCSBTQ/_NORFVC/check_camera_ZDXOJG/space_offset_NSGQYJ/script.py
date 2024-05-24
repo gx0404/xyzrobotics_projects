@@ -94,7 +94,7 @@ def execute(self, inputs, outputs, gvm):
 
         tf_map_flange_list[0][2]=offset_z   
              
-        offset_camera = SE3([0.66, 0, 0, 0, 0, 0, 1])
+        offset_camera = SE3([0.6, 0, 0, 0, 0, 0, 1])
         tf_base_flange = SE3(tf_map_flange_list[0])   
         new_base_flange = tf_base_flange*offset_camera
 

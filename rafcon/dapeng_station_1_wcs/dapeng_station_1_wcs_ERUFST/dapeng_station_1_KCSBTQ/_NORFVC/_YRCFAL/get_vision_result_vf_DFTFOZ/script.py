@@ -218,7 +218,7 @@ def execute(self, inputs, outputs, gvm):
     vision_result_raw = vision_bridge.run(int(vision_id), vision_service)
     height = vision_result_raw.info
     self.logger.info(f"height is {height}")
-    if float(height)<0.15:
+    if float(height)<0.2:
         return "empty"
     
     def construct_vision_result(vision_result_raw, ts):

@@ -130,6 +130,15 @@
             }, 
             "default_value": null, 
             "name": "pallet_clear_list"
+        }, 
+        "9": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.OutputDataPort", 
+            "data_port_id": 9, 
+            "data_type": {
+                "__type__": "__builtin__.bool"
+            }, 
+            "default_value": null, 
+            "name": "lower_layer"
         }
     }, 
     "source_file_path": "new_extern_service/get_task_info/get_task_info_WWCUID/script.py", 

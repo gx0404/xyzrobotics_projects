@@ -305,7 +305,7 @@ nodes:
           min_contrast: -1
     position:
       x: 1779.0690395573988
-      y: -201.86078154308245
+      y: -202.86078154308245
   - id: "{1ae9eff0-dfee-4b80-9df7-f6512d068fab}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -327,8 +327,8 @@ nodes:
         leaf_size: 0.001
         max_points: 0
     position:
-      x: 682.55999999999983
-      y: -195.83999999999992
+      x: 724.31999999999982
+      y: -97.919999999999931
   - id: "{1d9a109e-ee8f-4b92-b0c4-98cfad4bd0f0}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -889,8 +889,8 @@ nodes:
         using_mask: true
         output_organized: true
     position:
-      x: 2705.8896021465616
-      y: 4232.4070005210278
+      x: 2714.529602146562
+      y: 4246.8070005210275
   - id: "{5535cdae-04e8-46d1-8e6a-9f69d1b9e267}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1036,8 +1036,8 @@ nodes:
         frame_type: World
         frame_id: ""
     position:
-      x: 3514.2015808132264
-      y: 4267.6197898543605
+      x: 3435.0015808132257
+      y: 4277.6997898543596
   - id: "{70f5c445-0d64-4001-8e5f-36f95a013847}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1296,8 +1296,8 @@ nodes:
         pixel_size: 0.001
         pixel_value: 0.001
     position:
-      x: 1062.1890475929533
-      y: -286.95488174428624
+      x: 1062.1890475929531
+      y: -288.68288174428631
   - id: "{9398aa0a-be23-4577-b23e-945d43ae851a}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1311,8 +1311,8 @@ nodes:
         cloud_extract_radius: 0.05
         output_cloud_type: Organized
     position:
-      x: 2915.5882688132278
-      y: 4499.9355338543592
+      x: 2986.1482688132273
+      y: 4517.2155338543598
   - id: "{953c0478-a7c0-4868-b969-53047ab8ecf0}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1803,8 +1803,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 3177.1615709268572
-      y: 3704.1373597743759
+      x: 3231.4015709268565
+      y: 3549.5773597743755
     embedded_widget_rect:
       w: 724
       h: 476
@@ -1881,8 +1881,8 @@ nodes:
           cluster_max_pts: 50000
           cluster_min_pts: 500
     position:
-      x: 3173.7310528132293
-      y: 4213.6524618543617
+      x: 3146.3710528132292
+      y: 4158.9324618543596
   - id: "{d20c946f-4444-4904-849d-240fb6fa4308}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -2297,11 +2297,6 @@ connections:
     in_index: 0
     out_id: "{8d98cc3d-3aab-4e11-9824-9e2a58e27c43}"
     out_index: 0
-  - id: "{1ab3a7a4-ead1-4b3d-aacc-a0e1360c01aa}"
-    in_id: "{8f390862-87e2-427b-ac57-31d50bba206e}"
-    in_index: 0
-    out_id: "{1c2d9ba0-7bab-4aec-b7fa-941910345433}"
-    out_index: 0
   - id: "{1bad309d-b62e-425c-8bf5-e44cc876b64c}"
     in_id: "{7839e1b6-261c-401b-86be-bb9c4c06666a}"
     in_index: 0
@@ -2486,6 +2481,11 @@ connections:
     in_id: "{852acb97-7aed-430c-8c36-35ac574b6cef}"
     in_index: 0
     out_id: "{49f616f5-3071-4afa-acc2-37e654f725f7}"
+    out_index: 0
+  - id: "{4395a78e-d45d-47f3-b478-a8b201aa192c}"
+    in_id: "{8f390862-87e2-427b-ac57-31d50bba206e}"
+    in_index: 0
+    out_id: "{778971e4-92f7-48eb-a1a4-3c2e15c742b2}"
     out_index: 0
   - id: "{447c37c9-e7da-4f51-b38e-82b958326757}"
     in_id: "{49f2a4af-429e-4c8b-a245-c28362792e5b}"
@@ -2736,11 +2736,6 @@ connections:
     in_id: "{ef6e3e52-0a02-4fbd-94ce-57a8b8695c44}"
     in_index: 2
     out_id: "{4801586f-0056-4d8c-a5da-5472189e2092}"
-    out_index: 0
-  - id: "{6b479a6b-ff6a-4aec-a959-35d08c9d0b59}"
-    in_id: "{1c2d9ba0-7bab-4aec-b7fa-941910345433}"
-    in_index: 0
-    out_id: "{778971e4-92f7-48eb-a1a4-3c2e15c742b2}"
     out_index: 0
   - id: "{6c45a246-c9c2-4578-a634-69c6c50d90cf}"
     in_id: "{9f48717d-e5a3-4578-a527-18313457de02}"

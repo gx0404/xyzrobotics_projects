@@ -196,7 +196,7 @@ def execute(self, inputs, outputs, gvm):
     else:
         check_un_clamp_collision = [all_un_clamp_collision]        
         
-        
+    use_slide = None    
     for un_clamp_collision in check_un_clamp_collision:
         un_clamp_collision_name = [i.name for i in un_clamp_collision]
         #选择检测使用偏移值

@@ -57,6 +57,14 @@
             "to_key": 0, 
             "to_state": "NORFVC"
         }, 
+        "17": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 17, 
+            "from_key": 9, 
+            "from_state": "WWCUID", 
+            "to_key": 4, 
+            "to_state": "NORFVC"
+        }, 
         "18": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 18, 

@@ -889,10 +889,374 @@
             "ignore_collision": false,
             "container_items": [
                 {
-                    "name": "RealBox-1-1716104619",
+                    "name": "RealBox-1-1716536401",
                     "origin": {
-                        "x": 0.2549999999999999,
-                        "y": 1.665,
+                        "x": 0.3032554847841473,
+                        "y": 2.1750000000000003,
+                        "z": -0.891,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.706893202702886,
+                        "qw": 0.7073202951792465
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.4,
+                                0.3,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-10-1716536401",
+                    "origin": {
+                        "x": 0.3032554847841473,
+                        "y": 2.1750000000000003,
+                        "z": -0.673,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.706893202702886,
+                        "qw": 0.7073202951792465
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.4,
+                                0.3,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-11-1716536401",
+                    "origin": {
+                        "x": 0.0032554847841475,
+                        "y": 2.1750000000000003,
+                        "z": -0.673,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.706893202702886,
+                        "qw": 0.7073202951792465
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.4,
+                                0.3,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-14-1716536401",
+                    "origin": {
+                        "x": 0.2532554847841476,
+                        "y": 1.8250000000000002,
+                        "z": -0.673,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.4,
+                                0.3,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-16-1716536401",
+                    "origin": {
+                        "x": -0.16726472374013363,
+                        "y": 1.5750000000000002,
+                        "z": -0.673,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.706893202702886,
+                        "qw": 0.7073202951792465
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.4,
+                                0.3,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-17-1716536401",
+                    "origin": {
+                        "x": -0.555,
+                        "y": 1.8250000000000002,
+                        "z": -0.673,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.4,
+                                0.3,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-18-1716536401",
+                    "origin": {
+                        "x": -0.555,
+                        "y": 1.5150000000000001,
+                        "z": -0.673,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.4,
+                                0.3,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-2-1716536401",
+                    "origin": {
+                        "x": 0.0032554847841475,
+                        "y": 2.1750000000000003,
                         "z": -0.891,
                         "qx": 0.0,
                         "qy": 0.0,
@@ -903,8 +1267,8 @@
                         {
                             "type": 1,
                             "dimensions": [
-                                0.6,
                                 0.4,
+                                0.3,
                                 0.23
                             ],
                             "absolute_mesh_paths": "",
@@ -941,11 +1305,63 @@
                     "timestamp": ""
                 },
                 {
-                    "name": "RealBox-10-1716104619",
+                    "name": "RealBox-20-1716536401",
                     "origin": {
-                        "x": 0.15499999999999983,
+                        "x": 0.0032554847841475,
                         "y": 2.1750000000000003,
-                        "z": -0.671,
+                        "z": -0.45499999999999996,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.706893202702886,
+                        "qw": 0.7073202951792465
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.4,
+                                0.3,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-23-1716536401",
+                    "origin": {
+                        "x": 0.2532554847841476,
+                        "y": 1.8250000000000002,
+                        "z": -0.45499999999999996,
                         "qx": 0.0,
                         "qy": 0.0,
                         "qz": 0.0,
@@ -955,8 +1371,8 @@
                         {
                             "type": 1,
                             "dimensions": [
-                                0.6,
                                 0.4,
+                                0.3,
                                 0.23
                             ],
                             "absolute_mesh_paths": "",
@@ -993,11 +1409,11 @@
                     "timestamp": ""
                 },
                 {
-                    "name": "RealBox-11-1716104619",
+                    "name": "RealBox-25-1716536401",
                     "origin": {
-                        "x": 0.2549999999999999,
-                        "y": 1.665,
-                        "z": -0.45099999999999996,
+                        "x": -0.16726472374013363,
+                        "y": 1.5750000000000002,
+                        "z": -0.45499999999999996,
                         "qx": 0.0,
                         "qy": 0.0,
                         "qz": 0.706893202702886,
@@ -1007,8 +1423,8 @@
                         {
                             "type": 1,
                             "dimensions": [
-                                0.6,
                                 0.4,
+                                0.3,
                                 0.23
                             ],
                             "absolute_mesh_paths": "",
@@ -1045,126 +1461,22 @@
                     "timestamp": ""
                 },
                 {
-                    "name": "RealBox-12-1716104619",
+                    "name": "RealBox-3-1716536401",
                     "origin": {
-                        "x": -0.15451426836672752,
-                        "y": 1.665,
-                        "z": -0.45099999999999996,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.706893202702886,
-                        "qw": 0.7073202951792465
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-13-1716104619",
-                    "origin": {
-                        "x": -0.5545142683667276,
-                        "y": 1.665,
-                        "z": -0.45099999999999996,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.706893202702886,
-                        "qw": 0.7073202951792465
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-14-1716104619",
-                    "origin": {
-                        "x": -0.4545142683667276,
+                        "x": -0.30499999999999994,
                         "y": 2.1750000000000003,
-                        "z": -0.45099999999999996,
+                        "z": -0.891,
                         "qx": 0.0,
                         "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
+                        "qz": 0.706893202702886,
+                        "qw": 0.7073202951792465
                     },
                     "primitives": [
                         {
                             "type": 1,
                             "dimensions": [
-                                0.6,
                                 0.4,
+                                0.3,
                                 0.23
                             ],
                             "absolute_mesh_paths": "",
@@ -1201,270 +1513,10 @@
                     "timestamp": ""
                 },
                 {
-                    "name": "RealBox-15-1716104619",
+                    "name": "RealBox-4-1716536401",
                     "origin": {
-                        "x": 0.15499999999999983,
+                        "x": -0.605,
                         "y": 2.1750000000000003,
-                        "z": -0.45099999999999996,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-16-1716104619",
-                    "origin": {
-                        "x": 0.2549999999999999,
-                        "y": 1.665,
-                        "z": -0.23099999999999998,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.706893202702886,
-                        "qw": 0.7073202951792465
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-17-1716104619",
-                    "origin": {
-                        "x": -0.15451426836672752,
-                        "y": 1.665,
-                        "z": -0.23099999999999998,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.706893202702886,
-                        "qw": 0.7073202951792465
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-18-1716104619",
-                    "origin": {
-                        "x": -0.5545142683667276,
-                        "y": 1.665,
-                        "z": -0.23099999999999998,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.706893202702886,
-                        "qw": 0.7073202951792465
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-19-1716104619",
-                    "origin": {
-                        "x": -0.4545142683667276,
-                        "y": 2.1750000000000003,
-                        "z": -0.23099999999999998,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-2-1716104619",
-                    "origin": {
-                        "x": -0.15451426836672752,
-                        "y": 1.665,
                         "z": -0.891,
                         "qx": 0.0,
                         "qy": 0.0,
@@ -1475,8 +1527,8 @@
                         {
                             "type": 1,
                             "dimensions": [
-                                0.6,
                                 0.4,
+                                0.3,
                                 0.23
                             ],
                             "absolute_mesh_paths": "",
@@ -1513,738 +1565,10 @@
                     "timestamp": ""
                 },
                 {
-                    "name": "RealBox-20-1716104619",
+                    "name": "RealBox-5-1716536401",
                     "origin": {
-                        "x": 0.15499999999999983,
-                        "y": 2.1750000000000003,
-                        "z": -0.23099999999999998,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-21-1716104619",
-                    "origin": {
-                        "x": 0.2549999999999999,
-                        "y": 1.665,
-                        "z": -0.010999999999999899,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.706893202702886,
-                        "qw": 0.7073202951792465
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-22-1716104619",
-                    "origin": {
-                        "x": -0.15451426836672752,
-                        "y": 1.665,
-                        "z": -0.010999999999999899,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.706893202702886,
-                        "qw": 0.7073202951792465
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-23-1716104619",
-                    "origin": {
-                        "x": -0.5545142683667276,
-                        "y": 1.665,
-                        "z": -0.010999999999999899,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.706893202702886,
-                        "qw": 0.7073202951792465
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-24-1716104619",
-                    "origin": {
-                        "x": -0.4545142683667276,
-                        "y": 2.1750000000000003,
-                        "z": -0.010999999999999899,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-25-1716104619",
-                    "origin": {
-                        "x": 0.15499999999999983,
-                        "y": 2.1750000000000003,
-                        "z": -0.010999999999999899,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-26-1716104619",
-                    "origin": {
-                        "x": 0.2549999999999999,
-                        "y": 1.665,
-                        "z": 0.20900000000000007,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.706893202702886,
-                        "qw": 0.7073202951792465
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-27-1716104619",
-                    "origin": {
-                        "x": -0.15451426836672752,
-                        "y": 1.665,
-                        "z": 0.20900000000000007,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.706893202702886,
-                        "qw": 0.7073202951792465
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-28-1716104619",
-                    "origin": {
-                        "x": -0.5545142683667276,
-                        "y": 1.665,
-                        "z": 0.20900000000000007,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.706893202702886,
-                        "qw": 0.7073202951792465
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-29-1716104619",
-                    "origin": {
-                        "x": -0.4545142683667276,
-                        "y": 2.1750000000000003,
-                        "z": 0.20900000000000007,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-3-1716104619",
-                    "origin": {
-                        "x": -0.5545142683667276,
-                        "y": 1.665,
-                        "z": -0.891,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.706893202702886,
-                        "qw": 0.7073202951792465
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-30-1716104619",
-                    "origin": {
-                        "x": 0.15499999999999983,
-                        "y": 2.1750000000000003,
-                        "z": 0.20900000000000007,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-34-1716104619",
-                    "origin": {
-                        "x": -0.4545142683667276,
-                        "y": 2.1750000000000003,
-                        "z": 0.42900000000000005,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-35-1716104619",
-                    "origin": {
-                        "x": 0.15499999999999983,
-                        "y": 2.1750000000000003,
-                        "z": 0.42900000000000005,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-4-1716104619",
-                    "origin": {
-                        "x": -0.4545142683667276,
-                        "y": 2.1750000000000003,
+                        "x": 0.2532554847841476,
+                        "y": 1.8250000000000002,
                         "z": -0.891,
                         "qx": 0.0,
                         "qy": 0.0,
@@ -2255,8 +1579,8 @@
                         {
                             "type": 1,
                             "dimensions": [
-                                0.6,
                                 0.4,
+                                0.3,
                                 0.23
                             ],
                             "absolute_mesh_paths": "",
@@ -2293,10 +1617,10 @@
                     "timestamp": ""
                 },
                 {
-                    "name": "RealBox-5-1716104619",
+                    "name": "RealBox-6-1716536401",
                     "origin": {
-                        "x": 0.15499999999999983,
-                        "y": 2.1750000000000003,
+                        "x": 0.2532554847841475,
+                        "y": 1.5150000000000001,
                         "z": -0.891,
                         "qx": 0.0,
                         "qy": 0.0,
@@ -2307,8 +1631,8 @@
                         {
                             "type": 1,
                             "dimensions": [
-                                0.6,
                                 0.4,
+                                0.3,
                                 0.23
                             ],
                             "absolute_mesh_paths": "",
@@ -2345,11 +1669,11 @@
                     "timestamp": ""
                 },
                 {
-                    "name": "RealBox-6-1716104619",
+                    "name": "RealBox-7-1716536401",
                     "origin": {
-                        "x": 0.2549999999999999,
-                        "y": 1.665,
-                        "z": -0.671,
+                        "x": -0.16726472374013363,
+                        "y": 1.5750000000000002,
+                        "z": -0.891,
                         "qx": 0.0,
                         "qy": 0.0,
                         "qz": 0.706893202702886,
@@ -2359,8 +1683,8 @@
                         {
                             "type": 1,
                             "dimensions": [
-                                0.6,
                                 0.4,
+                                0.3,
                                 0.23
                             ],
                             "absolute_mesh_paths": "",
@@ -2397,115 +1721,11 @@
                     "timestamp": ""
                 },
                 {
-                    "name": "RealBox-7-1716104619",
+                    "name": "RealBox-8-1716536401",
                     "origin": {
-                        "x": -0.15451426836672752,
-                        "y": 1.665,
-                        "z": -0.671,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.706893202702886,
-                        "qw": 0.7073202951792465
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-8-1716104619",
-                    "origin": {
-                        "x": -0.5545142683667276,
-                        "y": 1.665,
-                        "z": -0.671,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.706893202702886,
-                        "qw": 0.7073202951792465
-                    },
-                    "primitives": [
-                        {
-                            "type": 1,
-                            "dimensions": [
-                                0.6,
-                                0.4,
-                                0.23
-                            ],
-                            "absolute_mesh_paths": "",
-                            "meshes": {
-                                "triangles": [],
-                                "vertices": []
-                            },
-                            "use_convex": false,
-                            "relative_pose": {
-                                "x": 0.0,
-                                "y": 0.0,
-                                "z": -0.115,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.0,
-                                "qw": 1.0
-                            }
-                        }
-                    ],
-                    "tfs": [],
-                    "color": {
-                        "r": 0.10000000149011612,
-                        "g": 0.5,
-                        "b": 0.20000000298023224,
-                        "a": 1.0
-                    },
-                    "additional_info": {
-                        "type": "box",
-                        "keys": [],
-                        "values": [],
-                        "descriptions": []
-                    },
-                    "ignore_collision": false,
-                    "timestamp": ""
-                },
-                {
-                    "name": "RealBox-9-1716104619",
-                    "origin": {
-                        "x": -0.4545142683667276,
-                        "y": 2.1750000000000003,
-                        "z": -0.671,
+                        "x": -0.555,
+                        "y": 1.8250000000000002,
+                        "z": -0.891,
                         "qx": 0.0,
                         "qy": 0.0,
                         "qz": 0.0,
@@ -2515,8 +1735,60 @@
                         {
                             "type": 1,
                             "dimensions": [
-                                0.6,
                                 0.4,
+                                0.3,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [],
+                        "values": [],
+                        "descriptions": []
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-9-1716536401",
+                    "origin": {
+                        "x": -0.555,
+                        "y": 1.5150000000000001,
+                        "z": -0.891,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.4,
+                                0.3,
                                 0.23
                             ],
                             "absolute_mesh_paths": "",
@@ -2722,8 +1994,8 @@
                     "z": -1.161,
                     "qx": 0.0,
                     "qy": 0.0,
-                    "qz": 0.707106781186571,
-                    "qw": 0.7071067811865241
+                    "qz": 0.7071067811866336,
+                    "qw": 0.7071067811864615
                 },
                 "pallet_collision": {
                     "name": "pallet_1",
@@ -2733,8 +2005,8 @@
                         "z": -1.403,
                         "qx": 0.0,
                         "qy": 0.0,
-                        "qz": 0.707106781186571,
-                        "qw": 0.7071067811865241
+                        "qz": 0.7071067811866336,
+                        "qw": 0.7071067811864615
                     },
                     "primitives": [
                         {
@@ -2955,13 +2227,13 @@
             "workspace_id": "2",
             "type": 2,
             "bottom_pose": {
-                "x": 1.7000000000000002,
-                "y": 1.65,
+                "x": 1.7125010907649993,
+                "y": 1.6461769133806228,
                 "z": -1.282,
-                "qx": 0.0,
-                "qy": 0.0,
-                "qz": 0.707106781186571,
-                "qw": 0.7071067811865241
+                "qx": -0.002909291320647116,
+                "qy": -0.005467869413495647,
+                "qz": 0.7139500890091544,
+                "qw": 0.7001692001451572
             },
             "dimensions": [
                 1.22,
@@ -3025,8 +2297,8 @@
                     "z": -1.282,
                     "qx": 0.0,
                     "qy": 0.0,
-                    "qz": 0.707106781186571,
-                    "qw": 0.7071067811865241
+                    "qz": 0.7071067811866424,
+                    "qw": 0.7071067811864528
                 },
                 "pallet_collision": {
                     "name": "pallet_2",
@@ -3036,8 +2308,8 @@
                         "z": -1.447,
                         "qx": 0.0,
                         "qy": 0.0,
-                        "qz": 0.707106781186571,
-                        "qw": 0.7071067811865241
+                        "qz": 0.7071067811866424,
+                        "qw": 0.7071067811864528
                     },
                     "primitives": [
                         {
@@ -3258,13 +2530,13 @@
             "workspace_id": "3",
             "type": 2,
             "bottom_pose": {
-                "x": 2.0,
-                "y": -0.3,
+                "x": 2.0028358697891235,
+                "y": -0.3006461888551712,
                 "z": -1.282,
-                "qx": 0.0,
-                "qy": 0.0,
-                "qz": 0.707106781186571,
-                "qw": 0.7071067811865241
+                "qx": 0.0008376571411051994,
+                "qy": -0.00703779442018851,
+                "qz": 0.7180569821392766,
+                "qw": 0.6959482295266277
             },
             "dimensions": [
                 1.22,
@@ -3328,8 +2600,8 @@
                     "z": -1.282,
                     "qx": 0.0,
                     "qy": 0.0,
-                    "qz": 0.707106781186571,
-                    "qw": 0.7071067811865241
+                    "qz": 0.7071067811866413,
+                    "qw": 0.7071067811864539
                 },
                 "pallet_collision": {
                     "name": "pallet_3",
@@ -3339,8 +2611,8 @@
                         "z": -1.447,
                         "qx": 0.0,
                         "qy": 0.0,
-                        "qz": 0.707106781186571,
-                        "qw": 0.7071067811865241
+                        "qz": 0.7071067811866413,
+                        "qw": 0.7071067811864539
                     },
                     "primitives": [
                         {
@@ -3631,8 +2903,8 @@
                     "z": -1.161,
                     "qx": 0.0,
                     "qy": 0.0,
-                    "qz": 0.707106781186571,
-                    "qw": 0.7071067811865241
+                    "qz": 0.7071067811866336,
+                    "qw": 0.7071067811864615
                 },
                 "pallet_collision": {
                     "name": "pallet_4",
@@ -3642,8 +2914,8 @@
                         "z": -1.403,
                         "qx": 0.0,
                         "qy": 0.0,
-                        "qz": 0.707106781186571,
-                        "qw": 0.7071067811865241
+                        "qz": 0.7071067811866336,
+                        "qw": 0.7071067811864615
                     },
                     "primitives": [
                         {

@@ -119,7 +119,9 @@ class SEARCH_ASYNC():
         self.logger = None
         #垛型列数
         self.row = None
-
+        #是否需要降低层
+        self.lower_layer = None
+        
     def check_pick_collision(self,our_robot,check_robot_list,planning_env,init_joints,container_item,pick_path_key):
         #获取当前抓取箱子坐标
         tf_map_object = SE3(pose_to_list(container_item.origin))
@@ -328,21 +330,26 @@ class SEARCH_ASYNC():
         return return_collision_flag,return_collision_flag_180  
 
     def cost_estimate(self,plan_item,cost_z,pick_box_id_row,from_pick_id):
-        #还原原先顺序的代价
-        if plan_item.additional_info.values[-3]==from_pick_id:
-            from_cost = 0
+        if not self.lower_layer:
+            #还原原先顺序的代价
+            if plan_item.additional_info.values[-3]==from_pick_id:
+                from_cost = 0
+            else:
+                from_cost = 20     
+                
+            #还原回原来那一列的代价
+            if int(plan_item.additional_info.values[-3])%self.row==pick_box_id_row:
+                row_cost = 0
+            else:
+                row_cost = 50  
+                        
+            #填充高度的代价
+            #z_cost = round((plan_item.origin.z - cost_z)/0.23)
+            z_cost = 0
         else:
-            from_cost = 20     
-               
-        #还原回原来那一列的代价
-        if int(plan_item.additional_info.values[-3])%self.row==pick_box_id_row:
+            z_cost = round((plan_item.origin.z - cost_z)/0.23)      
             row_cost = 0
-        else:
-            row_cost = 50  
-                      
-        #填充高度的代价
-        #z_cost = round((plan_item.origin.z - cost_z)/0.23)
-        z_cost = 0
+            from_cost = 0  
         return z_cost+row_cost+from_cost
 
     def search_path(self,our_robot,check_robot_list,planning_env,init_joints,cache_pallet_tote_data,\
@@ -589,12 +596,12 @@ def execute(self, inputs, outputs, gvm):
     container_items = planning_env.get_container_items("1")     
     #获取拣配托盘上放置规划箱子,并只得到最底层的规划
     plan_items = planning_env.get_unfinished_planned_items("0")
-
+    lower_layer = inputs["lower_layer"]
     search_async = SEARCH_ASYNC()
     search_async.preempted = self.preempted
     search_async.logger = self.logger.info
     search_async.row = gvm.get_variable("row", per_reference=False, default=None)
-
+    search_async.lower_layer = lower_layer
     path = []
     pick_path = []
     for pick_path_key in sort_pick_path_key:
