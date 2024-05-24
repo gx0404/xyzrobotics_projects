@@ -43,43 +43,7 @@ def execute(self, inputs, outputs, gvm):
         raise "需要连接grasp plan"
     if not((object_poses and not tf_map_flange_list) or (tf_map_flange_list and not object_poses)):
         raise "object_poses 和 tf_map_flange_list 必须连接并且只能连接一个"
-    if object_poses:
-        workspace_ros = planning_env.get_workspace_ros(place_workspace_id)          
-                          
-        tf_flange_tip = SE3(pose_to_list(grasp_plan.tip.tip_pose))
-        tf_tip_object_list = []
-        tf_base_object_list = []
-        for tf_tip_object in grasp_plan.object_tip_transforms:
-                tf_tip_object = SE3(pose_to_list(tf_tip_object))
-                tf_tip_object_list.append(tf_tip_object)
-        for pose_base_object in object_poses:
-            tf_base_object = SE3(pose_base_object)
-            tf_base_object_list.append(tf_base_object) 
-        tf_base_flange_list = []
-        for tf_base_object in tf_base_object_list:
-            for tf_tip_object in tf_tip_object_list:
-                tf_base_flange = (tf_base_object*tf_tip_object.inv())*tf_flange_tip.inv()
-                tf_base_flange_list.append(tf_base_flange)
-                
-        work_space_dimensions = workspace_ros.get_dimensions()
-        work_space_pose = workspace_ros.get_bottom_pose().xyz_quat
-        
-        tip_pose_z = tf_flange_tip.xyz_quat[2]
-        #通过现有最高的箱子计算偏移
-        container_items = planning_env.get_container_items(place_workspace_id)
-        if container_items:
-            check_items = filter_layer_items(container_items)
-            space_pose_obj_z = check_items[0].origin.z+tip_pose_z+self.smart_data["sku_max_height"]+0.05
-        else:
-            space_pose_obj_z = work_space_pose[2]+tip_pose_z+self.smart_data["sku_max_height"]+0.05
-            
-        pose_base_flange = tf_base_flange_list[0].xyz_quat
-                
-        pose_xyz = pose_base_flange[0:2] + [space_pose_obj_z]        
-        relative_pose = []        
-        for index,item in enumerate(pose_xyz):
-            relative_pose.append(item-pose_base_flange[index])
-        outputs["relative_poses"] = [relative_pose+[0,0,0,1]]                   
+    if object_poses:                
         return "success"
     elif tf_map_flange_list:
         workspace_ros = planning_env.get_workspace_ros(pick_workspace_id)
@@ -89,12 +53,20 @@ def execute(self, inputs, outputs, gvm):
         tip_pose_z = tf_flange_tip.xyz_quat[2]
         
         #通过现有最高的箱子计算偏移
-        container_items = planning_env.get_container_items(place_workspace_id)
-        if container_items:
-            check_items = filter_layer_items(container_items)
-            space_pose_obj_z = check_items[0].origin.z+tip_pose_z+self.smart_data["sku_max_height"]+0.05
+        pick_container_items = planning_env.get_container_items(pick_workspace_id)
+        pick_check_items = filter_layer_items(pick_container_items)
+              
+        place_container_items = planning_env.get_container_items(place_workspace_id)
+        
+        if place_container_items:
+            place_check_items = filter_layer_items(place_container_items)
+            if pick_check_items[0].origin.z > place_check_items[0].origin.z:
+                space_pose_obj_z = pick_check_items[0].origin.z+tip_pose_z+self.smart_data["sku_max_height"]+0.05   
+            else:
+                space_pose_obj_z = place_check_items[0].origin.z+tip_pose_z+self.smart_data["sku_max_height"]+0.05   
         else:
-            space_pose_obj_z = work_space_pose[2]+workspace_ros.get_dimensions()[2]+tip_pose_z+self.smart_data["sku_max_height"]+0.05
+            space_pose_obj_z = pick_check_items[0].origin.z+tip_pose_z+self.smart_data["sku_max_height"]+0.05                          
+        self.logger.info(f"space_pose_obj_z is {space_pose_obj_z}")
         
         relative_pose_list = []
         pose_base_flange = tf_map_flange_list[0]
@@ -106,6 +78,5 @@ def execute(self, inputs, outputs, gvm):
         
         relative_pose_list.append(relative_pose)
         outputs["relative_poses"] = relative_pose_list
-        
         return "success"   
        

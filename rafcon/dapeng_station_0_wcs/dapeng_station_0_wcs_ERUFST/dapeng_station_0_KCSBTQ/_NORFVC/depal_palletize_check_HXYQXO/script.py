@@ -235,6 +235,8 @@ def execute(self, inputs, outputs, gvm):
                 lay_id = int(box_id)//row
                 if row_id in [0]:
                     tf_base_box_real = tf_base_box_real*SE3([0.003,0,0,0,0,0,1]) 
+                elif row_id in [1]:    
+                    tf_base_box_real = tf_base_box_real*SE3([0.003,0,0,0,0,0,1])     
                 else:
                     tf_base_box_real = tf_base_box_real*SE3([0.0015,0.001,0,0,0,0,1])
             elif row==9:

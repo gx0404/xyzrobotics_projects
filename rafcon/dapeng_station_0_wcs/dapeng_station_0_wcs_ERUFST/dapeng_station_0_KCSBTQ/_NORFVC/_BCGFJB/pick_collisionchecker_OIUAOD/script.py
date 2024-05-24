@@ -263,17 +263,17 @@ def execute(self, inputs, outputs, gvm):
             new_slide_y = []
             for i in range(1,abs(split_x_length)+1):
                 if split_x_length>0:
-                    if i*precision>=0.012:
+                    if i*precision>=0.014:
                         new_slide_x.append(i*precision)
                 else:
-                    if -i*precision<=-0.012:
+                    if -i*precision<=-0.014:
                         new_slide_x.append(-i*precision)        
             for i in range(1,abs(split_y_length)+1):
                 if split_y_length>0:
-                    if i*precision>=0.012:
+                    if i*precision>=0.014:
                         new_slide_y.append(i*precision)
                 else:
-                    if -i*precision<=-0.012:
+                    if -i*precision<=-0.014:
                         new_slide_y.append(-i*precision)   
             return_list = [[x,y]+slide[2:7] for x,y in zip(new_slide_x,new_slide_y)]                               
             return return_list        
@@ -281,6 +281,7 @@ def execute(self, inputs, outputs, gvm):
             
                 
         #偏移检测
+        use_slide = None
         use_slide_list = []
         for check_slide in check_slide_list:
             # 指定精度
