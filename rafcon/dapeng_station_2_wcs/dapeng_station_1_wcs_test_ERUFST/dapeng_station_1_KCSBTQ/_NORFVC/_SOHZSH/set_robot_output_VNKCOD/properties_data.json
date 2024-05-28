@@ -1,0 +1,73 @@
+{
+    "data_source": {
+        "comment": "夹具夹紧打开", 
+        "port_ids": [
+            2, 
+            14, 
+            3, 
+            15, 
+            4, 
+            16
+        ], 
+        "robot_id": "0", 
+        "values": [
+            0, 
+            1, 
+            1, 
+            0, 
+            1, 
+            0
+        ]
+    }, 
+    "data_source_translation": {
+        "/comment": "模块注释，显示在图形界面中", 
+        "/port_ids": "机器人的输出端口号列表", 
+        "/robot_id": "机器人的ID号", 
+        "/values": "端口号对应的值列表"
+    }, 
+    "data_source_type": {
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "port_ids": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "robot_id": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ]
+        }, 
+        "values": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }
+    }
+}

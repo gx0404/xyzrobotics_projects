@@ -1,0 +1,136 @@
+{
+    "data_source": {
+        "acc": [
+            10, 
+            10
+        ], 
+        "comment": "move_relative_q0", 
+        "current_tip": [
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            0, 
+            1
+        ], 
+        "move_type": "moveL", 
+        "relative_frame": "base_link", 
+        "relative_pose": [
+            0, 
+            0, 
+            0.5, 
+            0, 
+            0, 
+            0, 
+            1
+        ], 
+        "robot_id": "0", 
+        "speed": [
+            60, 
+            60
+        ], 
+        "zone": 0
+    }, 
+    "data_source_translation": {
+        "/acc": "运行到该点， 加速度的比率: [0, 100]", 
+        "/comment": "模块注释，显示在图形界面中", 
+        "/current_tip": "指定当前tip现对于法兰的的坐标转换， 当运动类型是moveL时, tip为参考插值点", 
+        "/move_type": "moveL: 笛卡尔空间直线运动， moveJ: 关节空间直线运动", 
+        "/relative_frame": "相对坐标系，相对移动发生在什么坐标系下", 
+        "/relative_pose": "相对于目标点的坐标系， 目前只支持robot_base, end_flange和world", 
+        "/robot_id": "机器人的ID号", 
+        "/speed": "运行到该点， 速度的比率: [0, 100]", 
+        "/zone": "目标点的平滑程度: [0, 100], 当zone为零是是该模块阻塞的， 非零是非阻塞的， 会影响后面的IO操作"
+    }, 
+    "data_source_type": {
+        "acc": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "current_tip": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "move_type": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "relative_frame": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "relative_pose": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "robot_id": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "speed": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ]
+        }, 
+        "zone": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }
+    }
+}

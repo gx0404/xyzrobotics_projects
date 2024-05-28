@@ -1,0 +1,84 @@
+{
+    "__jsonqualname__": "rafcon.core.states.execution_state.ExecutionState", 
+    "description": null, 
+    "different_from_lib": true, 
+    "income": {
+        "__jsonqualname__": "rafcon.core.state_elements.logical_port.Income"
+    }, 
+    "input_data_ports": {
+        "0": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 0, 
+            "data_type": {
+                "__type__": "__builtin__.dict"
+            }, 
+            "default_value": null, 
+            "name": "sku_info"
+        }, 
+        "3": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 3, 
+            "data_type": {
+                "__type__": "__builtin__.str"
+            }, 
+            "default_value": null, 
+            "name": "/pick_workspace_id"
+        }
+    }, 
+    "name": "generate_tote_grasp_plan", 
+    "outcomes": {
+        "-2": {
+            "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
+            "name": "preempted", 
+            "outcome_id": -2
+        }, 
+        "-1": {
+            "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
+            "name": "aborted", 
+            "outcome_id": -1
+        }, 
+        "0": {
+            "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
+            "name": "success", 
+            "outcome_id": 0
+        }, 
+        "1": {
+            "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
+            "name": "vision_exhausted", 
+            "outcome_id": 1
+        }, 
+        "2": {
+            "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
+            "name": "place_workspace_full", 
+            "outcome_id": 2
+        }, 
+        "3": {
+            "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
+            "name": "place_plan_empty", 
+            "outcome_id": 3
+        }
+    }, 
+    "output_data_ports": {
+        "1": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.OutputDataPort", 
+            "data_port_id": 1, 
+            "data_type": {
+                "__type__": "xyz_env_manager.msg._GraspPlan.GraspPlan"
+            }, 
+            "default_value": null, 
+            "name": "grasp_plan"
+        }, 
+        "2": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.OutputDataPort", 
+            "data_port_id": 2, 
+            "data_type": {
+                "__type__": "__builtin__.list"
+            }, 
+            "default_value": null, 
+            "name": "object_poses"
+        }
+    }, 
+    "source_file_path": "palletize/generate_tote_grasp_plan/generate_tote_grasp_plan_YCPCRV/script.py", 
+    "state_id": "YCPCRV", 
+    "version": "1.8.0"
+}

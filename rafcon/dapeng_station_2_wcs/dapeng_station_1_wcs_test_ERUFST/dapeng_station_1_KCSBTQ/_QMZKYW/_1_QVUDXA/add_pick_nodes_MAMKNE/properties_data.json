@@ -1,0 +1,269 @@
+{
+    "data_source": {
+        "0-pre_pick": {
+            "place_conveyor_collision": false, 
+            "relative_poses": [
+                [
+                    0.0, 
+                    0, 
+                    0.2, 
+                    0, 
+                    0, 
+                    0, 
+                    1
+                ]
+            ], 
+            "use": true
+        }, 
+        "1-near_pre_pick": {
+            "relative_poses": [
+                [
+                    0, 
+                    0, 
+                    0.25, 
+                    0, 
+                    0, 
+                    0, 
+                    1
+                ]
+            ], 
+            "use": true
+        }, 
+        "2-near_post_pick": {
+            "relative_poses": [], 
+            "use": true
+        }, 
+        "3-post_pick": {
+            "relative_poses": [
+                [
+                    0, 
+                    0, 
+                    0.55, 
+                    0, 
+                    0, 
+                    0, 
+                    1
+                ]
+            ], 
+            "use": true
+        }, 
+        "comment": "add_pick_nodes"
+    }, 
+    "data_source_translation": {
+        "/0-pre_pick": "标准运动策略中的pre_pick点", 
+        "/0-pre_pick/place_conveyor_collision": "是否在放置空间为输送线时，在路径post_place到pre_pick之间把放置空间设为障碍物避障", 
+        "/0-pre_pick/relative_poses": "相对姿态", 
+        "/0-pre_pick/use": "是否使用这个点。在所有点都使用的情况下，相对关系为0->1->pick，且3->2->pick。不使用的点会从上述相对关系中移除。", 
+        "/1-near_pre_pick": "标准运动策略中的near_pre_pick点", 
+        "/1-near_pre_pick/relative_poses": "相对姿态", 
+        "/1-near_pre_pick/use": "是否使用这个点。在所有点都使用的情况下，相对关系为0->1->pick，且3->2->pick。不使用的点会从上述相对关系中移除。", 
+        "/2-near_post_pick": "标准运动策略中的near_post_pick点", 
+        "/2-near_post_pick/relative_poses": "相对姿态", 
+        "/2-near_post_pick/use": "是否使用这个点。在所有点都使用的情况下，相对关系为0->1->pick，且3->2->pick。不使用的点会从上述相对关系中移除。", 
+        "/3-post_pick": "标准运动策略中的post_pick点", 
+        "/3-post_pick/relative_poses": "相对姿态", 
+        "/3-post_pick/use": "是否使用这个点。在所有点都使用的情况下，相对关系为0->1->pick，且3->2->pick。不使用的点会从上述相对关系中移除。", 
+        "/comment": "备注"
+    }, 
+    "data_source_type": {
+        "0-pre_pick": {
+            "place_conveyor_collision": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }, 
+            "relative_poses": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }, 
+            "use": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {
+                        "false": [
+                            "/0-pre_pick/place_conveyor_collision", 
+                            "/0-pre_pick/relative_poses"
+                        ], 
+                        "true": []
+                    }, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }
+        }, 
+        "1-near_pre_pick": {
+            "relative_poses": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }, 
+            "use": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {
+                        "false": [
+                            "/1-near_pre_pick/relative_poses"
+                        ], 
+                        "true": []
+                    }, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }
+        }, 
+        "2-near_post_pick": {
+            "relative_poses": {
+                "type_config": {
+                    "current_type": "INPUT_PORT", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }, 
+            "use": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {
+                        "false": [
+                            "/2-near_post_pick/relative_poses"
+                        ], 
+                        "true": []
+                    }, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }
+        }, 
+        "3-post_pick": {
+            "relative_poses": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }, 
+            "use": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {
+                        "false": [
+                            "/3-post_pick/relative_poses"
+                        ], 
+                        "true": []
+                    }, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }
+        }, 
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }
+    }
+}

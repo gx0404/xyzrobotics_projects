@@ -86,7 +86,7 @@ collision_1 = build_collision(name="col_1", origin=[2.705+0.07, 0, -0.32+1.5/2, 
 # #后围栏
 # collision_2 = build_collision(name="col_2", origin=[-2.82+0.12, 0-5.25/2, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6.59-5.25,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
 #后围栏
-collision_15 = build_collision(name="col_15", origin=[-2.85, 0, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6,5.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
+collision_15 = build_collision(name="col_15", origin=[-2.85-0.032, 0, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6,5.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
 # #后围栏
 # collision_16 = build_collision(name="col_16", origin=[-2.82+0.12, 0+5.25/2, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6.59-5.25,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
 

@@ -226,7 +226,7 @@ def execute(self, inputs, outputs, gvm):
         else:
             capture_res = inputs["capture_res"]
             
-        vision_bridge.run(int(vision_id), "merge_cloud_3")    
+        vision_bridge.run(int(vision_id), "merge_cloud_1")    
         vision_result_raw = vision_bridge.run(int(vision_id), vision_service)
         
         def construct_vision_result(vision_result_raw, ts):

@@ -1,0 +1,174 @@
+{
+    "data_source": {
+        "comment": "拣配拍照位", 
+        "pose_1": [
+            -1.6576521308749115, 
+            -1.3214287098181925, 
+            1.3139397637972725, 
+            -1.6727393328878033
+        ], 
+        "pose_1_A": [
+            -1.6497006027890426, 
+            -1.1465386553472166, 
+            1.0751139355026142, 
+            -1.6647878048019351
+        ], 
+        "pose_2": [
+            -1.7858291460479598, 
+            -1.8387084684997683, 
+            1.6880754188520297, 
+            -1.800916348060852
+        ], 
+        "pose_2_A": [
+            -1.7858291460479598, 
+            -1.8387084684997683, 
+            1.6880754188520297, 
+            -1.800916348060852
+        ], 
+        "pose_3": [
+            -2.0238033583874, 
+            -1.0535547908239395, 
+            0.8623159754501447, 
+            -2.0388905604002923
+        ], 
+        "pose_3_A": [
+            -2.0030420211631044, 
+            -0.9248975308539121, 
+            0.6220358690095547, 
+            -2.0181292231759964
+        ], 
+        "pose_4": [
+            -2.2386100702358678, 
+            -1.6589397649838626, 
+            1.5309391851448981, 
+            -2.253697150075712
+        ], 
+        "pose_4_A": [
+            -2.2702888957169933, 
+            -1.6170379875684453, 
+            1.4114564752807817, 
+            -2.2853759755568377
+        ]
+    }, 
+    "data_source_translation": {
+        "/comment": "", 
+        "/pose_1": "", 
+        "/pose_1_A": "", 
+        "/pose_2": "", 
+        "/pose_2_A": "", 
+        "/pose_3": "", 
+        "/pose_3_A": "", 
+        "/pose_4": "", 
+        "/pose_4_A": ""
+    }, 
+    "data_source_type": {
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "pose_1": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "pose_1_A": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "pose_2": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "pose_2_A": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "pose_3": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "pose_3_A": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "pose_4": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "pose_4_A": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }
+    }
+}
