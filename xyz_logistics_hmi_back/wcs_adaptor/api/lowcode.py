@@ -56,6 +56,24 @@ def get_latest_pictures():
 
     return make_json_response(data=data)
 
+@bp.route("/layout_pictures", methods=["POST"])
+@req_log(log=wcs_log)
+@validator()
+def get_layout_pictures():
+    """获取布局图片
+    
+    Inputs:
+        host: str, 对于客户端本服务的主机地址
+        port: Union[str, int], (可选)返回的端口号地址，默认是本服务端口号
+        date_format: str, (可选)视觉日志文件命名的日期格式
+    
+    """
+
+    data = { "image_list": [] }
+    
+    data["image_list"].append(f"/home/xyz/xyz_app/app/xyz_logistics_hmi_back/static/layout.png")
+
+    return make_json_response(data=data)
 
 @bp.route("/robot_status", methods=["GET"])
 @req_log(log=wcs_log)

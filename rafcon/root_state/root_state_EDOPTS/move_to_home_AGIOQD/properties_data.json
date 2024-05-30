@@ -2,11 +2,10 @@
     "data_source": {
         "0-config-basic": {
             "dump_failure": true, 
-            "dump_success": false, 
             "enable_early_check": false, 
-            "log_level": "Debug", 
+            "log_level": "Verbose", 
             "robot_id": "0", 
-            "timeout": 60.0
+            "timeout": 10.0
         }, 
         "1-config-interp": {
             "coarse_angle_rez": 0.25, 
@@ -14,38 +13,38 @@
             "fine_angle_rez": 0.1, 
             "fine_distance_rez": 0.025
         }, 
-        "2-config-solver": {
+        "2-config-wopt": {
             "dcheck": 0.075, 
-            "dsafe": {
-                "at_goal": 0.018, 
-                "at_start": 0.02, 
-                "midway": 0.05
-            }, 
+            "dsafe": 0.05, 
             "simplify": true, 
             "step_num": 10
         }, 
-        "3-config-robot": {
-            "active_tip_name": "", 
-            "initial_pickable": false, 
-            "moving_base": {
-                "enable": false, 
-                "tf_base_robot": [
-                    0.0, 
-                    0.0, 
-                    0.0, 
-                    0.0, 
-                    0.0, 
-                    0.0, 
-                    1.0
-                ]
-            }
+        "3-config-node": {
+            "force_vertical": false, 
+            "target_joints": [
+                -1.6970372133221228, 
+                -1.2105876835860605, 
+                1.0575976540499665, 
+                -1.7120426641128517
+            ]
         }, 
-        "comment": "motion_planner"
+        "4-config-execute": {
+            "acc": [
+                30, 
+                30
+            ], 
+            "mid_zone": 25, 
+            "speed": [
+                100, 
+                100
+            ], 
+            "zone": 0
+        }, 
+        "comment": "move_to_home"
     }, 
     "data_source_translation": {
         "/0-config-basic": "基本参数设置", 
         "/0-config-basic/dump_failure": "保存失败记录", 
-        "/0-config-basic/dump_success": "保存成功记录", 
         "/0-config-basic/enable_early_check": "是否使能早期检查。早期碰撞检查可以过滤一些工具和环境碰撞的点，减少计算轨迹个数，但会增加计算的固定时间消耗。", 
         "/0-config-basic/log_level": "保存信息详略等级(Release, Debug, Verbose)", 
         "/0-config-basic/robot_id": "机器人编号", 
@@ -55,20 +54,19 @@
         "/1-config-interp/coarse_distance_rez": "利用法兰距离进行MoveType插值时的粗分辨率，单位m", 
         "/1-config-interp/fine_angle_rez": "利用角度进行MoveType插值时的精分辨率，单位rad", 
         "/1-config-interp/fine_distance_rez": "利用法兰距离进行MoveType插值时的精分辨率，单位m", 
-        "/2-config-solver": "运动规划器设置", 
-        "/2-config-solver/dcheck": "检查距离", 
-        "/2-config-solver/dsafe": "认为两物体不会碰撞的安全距离", 
-        "/2-config-solver/dsafe/at_goal": "终点认为两物体不会碰撞的安全距离", 
-        "/2-config-solver/dsafe/at_start": "起始点认为两物体不会碰撞的安全距离", 
-        "/2-config-solver/dsafe/midway": "中间点认为两物体不会碰撞的安全距离", 
-        "/2-config-solver/simplify": "是否简化生成的轨迹", 
-        "/2-config-solver/step_num": "轨迹插值分段数量", 
-        "/3-config-robot": "机器人设置", 
-        "/3-config-robot/active_tip_name": "激活的Tip", 
-        "/3-config-robot/initial_pickable": "存在初始抓取物体", 
-        "/3-config-robot/moving_base": "移动轴机器人", 
-        "/3-config-robot/moving_base/enable": "是否为移动轴机器人", 
-        "/3-config-robot/moving_base/tf_base_robot": "机器人基座坐标", 
+        "/2-config-wopt": "Wopt设置", 
+        "/2-config-wopt/dcheck": "检查距离", 
+        "/2-config-wopt/dsafe": "认为两物体不会碰撞的安全距离", 
+        "/2-config-wopt/simplify": "是否需要轨迹简化", 
+        "/2-config-wopt/step_num": "轨迹插值分段数量", 
+        "/3-config-node": "", 
+        "/3-config-node/force_vertical": "解算中强制法兰轴线垂直于机器人基座水平面", 
+        "/3-config-node/target_joints": "机器人的目标关节位置", 
+        "/4-config-execute": "运行设置", 
+        "/4-config-execute/acc": "运行到该点， 加速度的比率: [0, 100]", 
+        "/4-config-execute/mid_zone": "", 
+        "/4-config-execute/speed": "运行到该点， 速度的比率: [0, 100]", 
+        "/4-config-execute/zone": "", 
         "/comment": "模块注释，显示在图形界面中"
     }, 
     "data_source_type": {
@@ -76,18 +74,14 @@
             "dump_failure": {
                 "type_config": {
                     "current_type": "STATIC", 
+                    "excluded_keys": {}, 
                     "optional_types": [
                         "STATIC", 
                         "INPUT_PORT"
-                    ]
-                }
-            }, 
-            "dump_success": {
-                "type_config": {
-                    "current_type": "STATIC", 
-                    "optional_types": [
-                        "STATIC", 
-                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
                     ]
                 }
             }, 
@@ -180,7 +174,7 @@
                 ]
             }
         }, 
-        "2-config-solver": {
+        "2-config-wopt": {
             "dcheck": {
                 "type_config": {
                     "current_type": "STATIC", 
@@ -191,39 +185,6 @@
                 }
             }, 
             "dsafe": {
-                "at_goal": {
-                    "type_config": {
-                        "current_type": "STATIC", 
-                        "excluded_keys": {}, 
-                        "optional_types": [
-                            "STATIC", 
-                            "INPUT_PORT"
-                        ], 
-                        "value_options": []
-                    }
-                }, 
-                "at_start": {
-                    "type_config": {
-                        "current_type": "STATIC", 
-                        "excluded_keys": {}, 
-                        "optional_types": [
-                            "STATIC", 
-                            "INPUT_PORT"
-                        ], 
-                        "value_options": []
-                    }
-                }, 
-                "midway": {
-                    "type_config": {
-                        "current_type": "STATIC", 
-                        "excluded_keys": {}, 
-                        "optional_types": [
-                            "STATIC", 
-                            "INPUT_PORT"
-                        ], 
-                        "value_options": []
-                    }
-                }, 
                 "type_config": {
                     "current_type": "STATIC", 
                     "optional_types": [
@@ -235,9 +196,14 @@
             "simplify": {
                 "type_config": {
                     "current_type": "STATIC", 
+                    "excluded_keys": {}, 
                     "optional_types": [
                         "STATIC", 
                         "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
                     ]
                 }
             }, 
@@ -258,8 +224,8 @@
                 ]
             }
         }, 
-        "3-config-robot": {
-            "active_tip_name": {
+        "3-config-node": {
+            "force_vertical": {
                 "type_config": {
                     "current_type": "STATIC", 
                     "optional_types": [
@@ -268,34 +234,7 @@
                     ]
                 }
             }, 
-            "initial_pickable": {
-                "type_config": {
-                    "current_type": "STATIC", 
-                    "optional_types": [
-                        "STATIC", 
-                        "INPUT_PORT"
-                    ]
-                }
-            }, 
-            "moving_base": {
-                "enable": {
-                    "type_config": {
-                        "current_type": "STATIC", 
-                        "optional_types": [
-                            "STATIC", 
-                            "INPUT_PORT"
-                        ]
-                    }
-                }, 
-                "tf_base_robot": {
-                    "type_config": {
-                        "current_type": "STATIC", 
-                        "optional_types": [
-                            "STATIC", 
-                            "INPUT_PORT"
-                        ]
-                    }
-                }, 
+            "target_joints": {
                 "type_config": {
                     "current_type": "STATIC", 
                     "optional_types": [
@@ -310,6 +249,51 @@
                     "STATIC", 
                     "INPUT_PORT"
                 ]
+            }
+        }, 
+        "4-config-execute": {
+            "acc": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "mid_zone": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "speed": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }, 
+            "zone": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
             }
         }, 
         "comment": {

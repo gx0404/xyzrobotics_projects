@@ -47,6 +47,14 @@
     "scoped_variables": {}, 
     "state_id": "EDOPTS", 
     "transitions": {
+        "10": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": null, 
+            "from_state": null, 
+            "to_outcome": null, 
+            "to_state": "AGIOQD", 
+            "transition_id": 10
+        }, 
         "16": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
@@ -54,14 +62,6 @@
             "to_outcome": null, 
             "to_state": "ACBSNS", 
             "transition_id": 16
-        }, 
-        "48": {
-            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
-            "from_outcome": null, 
-            "from_state": null, 
-            "to_outcome": null, 
-            "to_state": "TIUOIH", 
-            "transition_id": 48
         }, 
         "60": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 

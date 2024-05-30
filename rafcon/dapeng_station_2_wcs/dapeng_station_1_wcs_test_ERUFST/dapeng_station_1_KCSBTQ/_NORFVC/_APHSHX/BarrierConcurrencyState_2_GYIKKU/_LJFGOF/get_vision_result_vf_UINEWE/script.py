@@ -151,6 +151,7 @@ def execute(self, inputs, outputs, gvm):
     self.logger.info("Running {}({})({})".format(self.name, self.unique_id, self.smart_data["comment"]))
     DEFAULT_OFFLINE_VISION_PATH = "/home/xyz/xyz_app/app/vision_offline/"
     EPSILON = 1e-4
+    return "success"
     ## TODO remove vision bridge
     if not gvm.get_variable("vision_bridge", per_reference=True, default=None):
 

@@ -12,8 +12,8 @@ nodes:
         logger: true
         debug: false
     position:
-      x: -3423.098200794454
-      y: 288.78466524159984
+      x: -3425.5865207944544
+      y: 288.78466524159978
   - id: "{04a7db87-7813-404b-885e-212c6b45b1d0}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -258,6 +258,16 @@ nodes:
     embedded_widget_rect:
       w: 200
       h: 200
+  - id: "{151bccac-784c-4f19-952f-c5d34b026cc3}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ImageSaveModel
+      params:
+        keyword: viz
+        suffix: .jpg
+    position:
+      x: 3454.2719999999986
+      y: 3499.1999999999985
   - id: "{19e37e3c-6112-43f5-8a02-4b4be2952d1b}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -515,8 +525,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 53.890177416263896
-      y: -4297.0437539625982
+      x: -234.34022258373602
+      y: -4243.1301539625983
     embedded_widget_rect:
       w: 1950
       h: 1343
@@ -678,6 +688,16 @@ nodes:
     embedded_widget_rect:
       w: 1201
       h: 1101
+  - id: "{41a7c594-adb6-4332-9db5-580e8f38731f}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ImageSaveModel
+      params:
+        keyword: viz
+        suffix: .jpg
+    position:
+      x: -4059.7438463999979
+      y: 2956.124159999998
   - id: "{427b4f54-69b4-4ee7-85e9-0a2fc83f8890}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -805,11 +825,11 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: -4677.0524109824
-      y: 1231.9515591338659
+      x: -4653.9042628342522
+      y: 1044.4515591338657
     embedded_widget_rect:
-      w: 1174
-      h: 776
+      w: 1422
+      h: 963
   - id: "{4c5f6056-b3ec-4517-8633-15fc382b7fb5}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -872,13 +892,13 @@ nodes:
       params:
         method: Radius
         Radius:
-          num_neighbor: 15
+          num_neighbor: 5
           radius: 0.003
         Statistical:
           num_neighbor: 10
           std_dev_threshold: 0.8
     position:
-      x: 664.45814159965994
+      x: 665.65814159965976
       y: 2263.8413739482312
   - id: "{54169f6d-8b5c-4331-ae4f-3e434751a2e7}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
@@ -1493,6 +1513,16 @@ nodes:
     position:
       x: 2363.5761763438295
       y: -2478.1608941679497
+  - id: "{a4813e54-49af-4ca0-9dd8-0fe4e6ba5db3}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ImageSaveModel
+      params:
+        keyword: viz
+        suffix: .jpg
+    position:
+      x: 3475.1999999999994
+      y: 4048.079999999999
   - id: "{abac4729-371a-438d-a16d-e900716997a0}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1803,8 +1833,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 3231.4015709268565
-      y: 3549.5773597743755
+      x: 3317.9951069268568
+      y: 4508.0782237743742
     embedded_widget_rect:
       w: 724
       h: 476
@@ -1838,8 +1868,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 2194.8917923106715
-      y: -828.17452487497656
+      x: 2333.8229923106719
+      y: -890.38252487497653
     embedded_widget_rect:
       w: 880
       h: 587
@@ -2092,6 +2122,16 @@ nodes:
     position:
       x: 2109.5480821465635
       y: 4309.8584138543638
+  - id: "{ed0d920e-297f-4834-99ea-90cf37fac95b}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ImageSaveModel
+      params:
+        keyword: viz
+        suffix: .jpg
+    position:
+      x: 3095.9999999999995
+      y: 33.119999999999891
   - id: "{ef6e3e52-0a02-4fbd-94ce-57a8b8695c44}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -2168,8 +2208,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: -6198.7342574469094
-      y: -2733.7381855641588
+      x: -6152.2962342789087
+      y: -3022.6858852761588
     embedded_widget_rect:
       w: 2794
       h: 1525
@@ -2184,6 +2224,16 @@ nodes:
     embedded_widget_rect:
       w: 722
       h: 456
+  - id: "{fd965227-997d-414b-b6c2-f5b9c9f17f7e}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ImageSaveModel
+      params:
+        keyword: viz
+        suffix: .jpg
+    position:
+      x: 3243.1679999999988
+      y: -1417.8239999999996
   - id: "{ff1ab3c0-977b-4a02-8bce-f21a5cc15109}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -2212,11 +2262,21 @@ nodes:
       x: 2978.6855438104953
       y: -2124.7570819012844
 connections:
+  - id: "{0463acdc-3502-4971-a79d-268930f111d0}"
+    in_id: "{151bccac-784c-4f19-952f-c5d34b026cc3}"
+    in_index: 0
+    out_id: "{05378c69-8e8b-46ae-ac55-a3d509883578}"
+    out_index: 1
   - id: "{0557fc7a-a863-4779-9b37-6936b417904a}"
     in_id: "{10a4c3c0-c4a9-4216-b1fc-b374394da1d1}"
     in_index: 2
     out_id: "{00b13418-af61-4278-9745-15c4cc54ed6b}"
     out_index: 2
+  - id: "{05adc994-2539-40cf-93a4-f89a898c2608}"
+    in_id: "{a4813e54-49af-4ca0-9dd8-0fe4e6ba5db3}"
+    in_index: 0
+    out_id: "{d186ff25-7c1c-4345-bb44-d6488394c933}"
+    out_index: 1
   - id: "{07ab80cd-94f3-4759-941c-8e1a7a5bd56f}"
     in_id: "{49f616f5-3071-4afa-acc2-37e654f725f7}"
     in_index: 1
@@ -2442,6 +2502,11 @@ connections:
     in_index: 2
     out_id: "{54169f6d-8b5c-4331-ae4f-3e434751a2e7}"
     out_index: 0
+  - id: "{383fdb37-4386-4c24-8547-b204ed867c18}"
+    in_id: "{41a7c594-adb6-4332-9db5-580e8f38731f}"
+    in_index: 0
+    out_id: "{3de5e08f-0699-450b-8e4a-e2a478c729da}"
+    out_index: 1
   - id: "{3d74c128-6e29-482d-bf0e-f199389ddcae}"
     in_id: "{0c767a02-701d-4150-894c-0020133f1841}"
     in_index: 0
@@ -3062,6 +3127,11 @@ connections:
     in_index: 0
     out_id: "{427b4f54-69b4-4ee7-85e9-0a2fc83f8890}"
     out_index: 1
+  - id: "{ba70d7c9-5ea0-499a-b9bb-f8e73a629492}"
+    in_id: "{fd965227-997d-414b-b6c2-f5b9c9f17f7e}"
+    in_index: 0
+    out_id: "{e1f005b4-2ce6-48ce-b126-0c27d67bd2b8}"
+    out_index: 1
   - id: "{bc1cef89-1ebc-4406-9dc5-6d8caefd2f76}"
     in_id: "{5018f7e8-b2eb-469a-aab3-81cba7277373}"
     in_index: 0
@@ -3227,6 +3297,11 @@ connections:
     in_index: 0
     out_id: "{5018f7e8-b2eb-469a-aab3-81cba7277373}"
     out_index: 0
+  - id: "{dd3c3606-b2aa-49a7-bca0-7d3b3a70284d}"
+    in_id: "{ed0d920e-297f-4834-99ea-90cf37fac95b}"
+    in_index: 0
+    out_id: "{2a065fcc-7597-49a9-a4dc-7d96cbedf14d}"
+    out_index: 1
   - id: "{ddd8cfab-a3f3-4a19-ba0c-63b4d5b29eaf}"
     in_id: "{8657c2ca-47ef-4c9d-9d1f-7b28c8d1ae38}"
     in_index: 0
@@ -3403,12 +3478,12 @@ service:
     calculate_object_poses_1_1:
       enable: true
       root_nodes: ["{cedc0d57-add8-4259-a864-fed8fba8c975}"]
-      leaf_nodes: ["{125c6bfd-2dbe-4cc3-b7be-6a3a1fa42ea2}"]
+      leaf_nodes: ["{151bccac-784c-4f19-952f-c5d34b026cc3}", "{125c6bfd-2dbe-4cc3-b7be-6a3a1fa42ea2}"]
       parallel: false
     calculate_object_poses_1_2:
       enable: true
       root_nodes: ["{10a4c3c0-c4a9-4216-b1fc-b374394da1d1}"]
-      leaf_nodes: ["{bbfabe64-50fc-4011-a2dc-7bd47e4b8b32}"]
+      leaf_nodes: ["{a4813e54-49af-4ca0-9dd8-0fe4e6ba5db3}", "{bbfabe64-50fc-4011-a2dc-7bd47e4b8b32}"]
       parallel: false
     calculate_object_poses_2_0:
       enable: true
@@ -3418,17 +3493,17 @@ service:
     calculate_object_poses_2_1:
       enable: true
       root_nodes: ["{cedc0d57-add8-4259-a864-fed8fba8c975}"]
-      leaf_nodes: ["{e5ac3f81-35d6-4bb0-881e-feed5c43f3ba}"]
+      leaf_nodes: ["{fd965227-997d-414b-b6c2-f5b9c9f17f7e}", "{e5ac3f81-35d6-4bb0-881e-feed5c43f3ba}"]
       parallel: false
     calculate_object_poses_2_2:
       enable: true
       root_nodes: ["{10a4c3c0-c4a9-4216-b1fc-b374394da1d1}"]
-      leaf_nodes: ["{2162117c-3813-48a2-b921-2c52d7f88e5b}"]
+      leaf_nodes: ["{ed0d920e-297f-4834-99ea-90cf37fac95b}", "{2162117c-3813-48a2-b921-2c52d7f88e5b}"]
       parallel: false
     calculate_object_poses_3:
       enable: true
       root_nodes: ["{10a4c3c0-c4a9-4216-b1fc-b374394da1d1}"]
-      leaf_nodes: ["{215a2b87-1667-4982-8bc3-943cfa428d92}", "{7842f8b1-f483-4d7d-a85c-7fef4eb08980}"]
+      leaf_nodes: ["{41a7c594-adb6-4332-9db5-580e8f38731f}", "{215a2b87-1667-4982-8bc3-943cfa428d92}", "{7842f8b1-f483-4d7d-a85c-7fef4eb08980}"]
       parallel: false
     capture_images:
       enable: true

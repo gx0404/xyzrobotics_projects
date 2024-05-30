@@ -15,8 +15,8 @@
     },
     "decoder_param": {
         "ContrastThreshold": 0.0020000000949949026,
-        "DataThreshold": 0.10000000149011612,
-        "DecoderMethod": "XYZ_LASER_DGP16"
+        "DataThreshold": 0.004000001586973667,
+        "DecoderMethod": "XYZ_LASER_DGNP16"
     },
     "depth_scale": 1.0,
     "enable_calibration_mode": false,
@@ -44,7 +44,7 @@
         }
     },
     "occlusion_optimization": {
-        "OcclusionOptimizationEnable": false
+        "OcclusionOptimizationEnable": true
     },
     "partition_exposure": {
         "PartitionExposureEnable": false,
