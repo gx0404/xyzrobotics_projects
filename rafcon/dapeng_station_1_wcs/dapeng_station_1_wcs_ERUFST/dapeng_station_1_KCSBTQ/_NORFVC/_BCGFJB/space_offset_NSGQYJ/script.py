@@ -42,7 +42,7 @@ def execute(self, inputs, outputs, gvm):
     if row==5:
         #大欧
         self.logger.info("row is 5")
-        outputs["near_relative_poses"] = [[0, 0, 0.1, 0, 0, 0, 1]]
+        outputs["near_relative_poses"] = [[0, 0, 0.11, 0, 0, 0, 1]]
         #缓存区
         if place_workspace_id == "1":
             outputs["place_drop_buffer"] = 0.02  

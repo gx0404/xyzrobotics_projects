@@ -99,13 +99,6 @@
             }
         }
     }, 
-    "transition10": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": {}
-            }
-        }
-    }, 
     "transition16": {
         "gui": {
             "editor_gaphas": {
@@ -131,6 +124,13 @@
         "gui": {
             "editor_gaphas": {
                 "waypoints": []
+            }
+        }
+    }, 
+    "transition8": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
             }
         }
     }

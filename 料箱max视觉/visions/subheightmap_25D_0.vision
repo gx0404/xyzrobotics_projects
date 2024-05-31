@@ -290,9 +290,9 @@ nodes:
           - 8
         detection_targets:
           - 600_400_230
-        detection_weak_contrast: 20
-        detection_min_contrast: 20
-        min_detection_score: 80
+        detection_weak_contrast: 30
+        detection_min_contrast: 30
+        min_detection_score: 85
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -314,7 +314,7 @@ nodes:
           contrast: 30
           min_contrast: -1
     position:
-      x: 1779.0690395573988
+      x: 1782.7573595573986
       y: -202.86078154308245
   - id: "{1ae9eff0-dfee-4b80-9df7-f6512d068fab}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
@@ -672,11 +672,11 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 1202.9885292211741
-      y: 1192.4617775362149
+      x: 1184.9329736656184
+      y: 1277.1839997584368
     embedded_widget_rect:
-      w: 1012
-      h: 666
+      w: 1044
+      h: 661
   - id: "{411a557c-2470-4c3e-a02f-5ef0bfe5dc64}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -761,7 +761,7 @@ nodes:
         load_mask: true
         directory: masks
     position:
-      x: 2479.1619264060605
+      x: 2481.561926406061
       y: 3371.5736115059899
   - id: "{49f616f5-3071-4afa-acc2-37e654f725f7}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
@@ -883,8 +883,8 @@ nodes:
           contrast: 30
           min_contrast: -1
     position:
-      x: 2037.6706144060611
-      y: 3311.8286621726565
+      x: 2037.6706144060608
+      y: 3310.6286621726567
   - id: "{518a1307-ed07-4f9b-9a79-8a867258f60b}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1677,8 +1677,8 @@ nodes:
           contrast: 30
           min_contrast: -1
     position:
-      x: 1885.5218183996617
-      y: 2121.9769046148949
+      x: 1887.5954183996614
+      y: 2121.9769046148945
   - id: "{b92b3f3c-dd2a-4896-ac0a-848fc7a2ab47}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:

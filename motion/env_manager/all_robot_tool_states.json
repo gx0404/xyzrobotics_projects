@@ -73,14 +73,14 @@
             "have_stream_motion": true,
             "is_virtual_robot": true,
             "joint_position": [
-                0.0,
-                -1.5700000377769665,
-                1.3999999420844733,
-                0.0
+                -2.777920701186347,
+                -0.5172148149801091,
+                1.9595711054836815,
+                -2.794807529644263
             ],
             "has_tool": true,
             "tool": {
-                "name": "tool2",
+                "name": "tool1",
                 "tool_collisions": {
                     "name": "tool_collision",
                     "origin": {
@@ -176,7 +176,7 @@
                             },
                             "use_convex": false,
                             "relative_pose": {
-                                "x": -0.269,
+                                "x": -0.12000000000000001,
                                 "y": 0.0,
                                 "z": 0.61,
                                 "qx": 0.0,
@@ -388,7 +388,7 @@
                                 "use_convex": false,
                                 "relative_pose": {
                                     "x": -0.021570000000000006,
-                                    "y": -0.0009011965213759901,
+                                    "y": 0.0,
                                     "z": 0.395,
                                     "qx": 0.0,
                                     "qy": 0.0,
@@ -543,7 +543,7 @@
                                 },
                                 "use_convex": false,
                                 "relative_pose": {
-                                    "x": -0.269,
+                                    "x": -0.12000000000000001,
                                     "y": 0.0,
                                     "z": 0.61,
                                     "qx": 0.0,
@@ -585,13 +585,13 @@
                     {
                         "name": "tip_0",
                         "tip_pose": {
-                            "x": 0.13064,
-                            "y": -0.00096,
-                            "z": 0.7646,
+                            "x": 0.128433,
+                            "y": 0.0,
+                            "z": 0.782879,
                             "qx": 0.0,
-                            "qy": -0.0,
-                            "qz": -0.0,
-                            "qw": 1.0
+                            "qy": 0.0,
+                            "qz": -0.7071,
+                            "qw": 0.7071
                         },
                         "child_primitives_ids": [
                             "tp_1"
@@ -601,17 +601,17 @@
                         "bounding_box": {
                             "type": 1,
                             "origin": {
-                                "x": 0.13064,
-                                "y": -0.00096,
-                                "z": 0.7646,
+                                "x": 0.128433,
+                                "y": 0.0,
+                                "z": 0.782879,
                                 "qx": 0.0,
-                                "qy": -0.0,
-                                "qz": -0.0,
-                                "qw": 1.0
+                                "qy": 0.0,
+                                "qz": -0.7071,
+                                "qw": 0.7071
                             },
                             "dimensions": [
-                                0.6,
-                                0.4,
+                                0.4000000000000002,
+                                0.3000000000000001,
                                 2.2250738585072014e-308
                             ],
                             "points": []
@@ -625,17 +625,17 @@
                             {
                                 "type": 1,
                                 "origin": {
-                                    "x": 0.13064,
-                                    "y": -0.00096,
-                                    "z": 0.7646,
+                                    "x": 0.128433,
+                                    "y": 0.0,
+                                    "z": 0.782879,
                                     "qx": 0.0,
-                                    "qy": -0.0,
-                                    "qz": -0.0,
-                                    "qw": 1.0
+                                    "qy": 0.0,
+                                    "qz": -0.7071,
+                                    "qw": 0.7071
                                 },
                                 "dimensions": [
-                                    0.6,
-                                    0.4
+                                    0.4,
+                                    0.3
                                 ],
                                 "points": []
                             }
@@ -655,23 +655,115 @@
             "robot_tool_state": {
                 "robot_id": "0",
                 "has_tool": true,
-                "tool_name": "tool2",
-                "has_attached_collision_object": false,
+                "tool_name": "tool1",
+                "has_attached_collision_object": true,
                 "attached_collision_object": {
-                    "reference_tip_name": "",
-                    "reference_object_name": "",
-                    "from_workspace_id": "",
-                    "to_workspace_id": "",
+                    "reference_tip_name": "tip_0",
+                    "reference_object_name": "RealBox-5-1717139296",
+                    "from_workspace_id": "1",
+                    "to_workspace_id": "0",
                     "origin_tip_transform": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.0,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 0.0
+                        "x": -3.3306690738754696e-16,
+                        "y": -2.220446049250313e-16,
+                        "z": 2.220446049250313e-16,
+                        "qx": 1.0000000000000002,
+                        "qy": -1.0755285551056202e-16,
+                        "qz": 6.28262327402098e-17,
+                        "qw": -1.85589500812562e-18
                     },
-                    "objects": []
+                    "objects": [
+                        {
+                            "name": "RealBox-5-1717139296",
+                            "origin": {
+                                "x": -1.9599311869740486,
+                                "y": 0.699245624780655,
+                                "z": -0.9003071725368499,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": -0.7130518949124649,
+                                "qw": 0.7011112573349134
+                            },
+                            "primitives": [
+                                {
+                                    "type": 1,
+                                    "dimensions": [
+                                        0.3991,
+                                        0.2991,
+                                        0.2301
+                                    ],
+                                    "absolute_mesh_paths": "",
+                                    "meshes": {
+                                        "triangles": [],
+                                        "vertices": []
+                                    },
+                                    "use_convex": false,
+                                    "relative_pose": {
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": -0.11505,
+                                        "qx": 0.0,
+                                        "qy": 0.0,
+                                        "qz": 0.0,
+                                        "qw": 1.0
+                                    }
+                                }
+                            ],
+                            "tfs": [],
+                            "color": {
+                                "r": 0.10000000149011612,
+                                "g": 0.5,
+                                "b": 0.20000000298023224,
+                                "a": 1.0
+                            },
+                            "additional_info": {
+                                "type": "box",
+                                "keys": [
+                                    "barcode_direction",
+                                    "height",
+                                    "length",
+                                    "weight",
+                                    "width",
+                                    "overlapping_heihgt",
+                                    "row",
+                                    "timestamp",
+                                    "vision_id",
+                                    "box_id",
+                                    "barcode",
+                                    "to_ws"
+                                ],
+                                "values": [
+                                    "4",
+                                    "0.2301",
+                                    "0.3991",
+                                    "5.0",
+                                    "0.2991",
+                                    "0.012",
+                                    "9",
+                                    "1717139293752",
+                                    "5",
+                                    "8",
+                                    "JYS524052506320005",
+                                    ""
+                                ],
+                                "descriptions": [
+                                    "barcode_direction",
+                                    "height",
+                                    "length",
+                                    "weight",
+                                    "width",
+                                    "overlapping_heihgt",
+                                    "row",
+                                    "timestamp",
+                                    "vision_id",
+                                    "box_id",
+                                    "barcode",
+                                    "to_ws"
+                                ]
+                            },
+                            "ignore_collision": false,
+                            "timestamp": ""
+                        }
+                    ]
                 },
                 "ignored_objects": []
             }
@@ -1827,40 +1919,40 @@
         {
             "robot_id": "0",
             "has_tool": true,
-            "tool_name": "tool2",
-            "has_attached_collision_object": false,
+            "tool_name": "tool1",
+            "has_attached_collision_object": true,
             "attached_collision_object": {
                 "reference_tip_name": "tip_0",
-                "reference_object_name": "RealBox-173-1717049035",
-                "from_workspace_id": "0",
-                "to_workspace_id": "2",
+                "reference_object_name": "RealBox-5-1717139296",
+                "from_workspace_id": "1",
+                "to_workspace_id": "0",
                 "origin_tip_transform": {
-                    "x": 2.220446049250313e-16,
-                    "y": -1.6653345369377348e-16,
-                    "z": -3.0184188481996443e-16,
-                    "qx": 1.0,
-                    "qy": -4.40619762898109e-16,
-                    "qz": -5.0560299420790476e-17,
-                    "qw": 6.32735681826159e-17
+                    "x": -3.3306690738754696e-16,
+                    "y": -2.220446049250313e-16,
+                    "z": 2.220446049250313e-16,
+                    "qx": 1.0000000000000002,
+                    "qy": -1.0755285551056202e-16,
+                    "qz": 6.28262327402098e-17,
+                    "qw": -1.85589500812562e-18
                 },
                 "objects": [
                     {
-                        "name": "RealBox-173-1717049035",
+                        "name": "RealBox-5-1717139296",
                         "origin": {
-                            "x": -0.539504075050354,
-                            "y": 1.6598554897308349,
-                            "z": -0.023650982475280663,
+                            "x": -1.9599311869740486,
+                            "y": 0.699245624780655,
+                            "z": -0.9003071725368499,
                             "qx": 0.0,
                             "qy": 0.0,
-                            "qz": 0.7158023647867598,
-                            "qw": 0.6983029246435121
+                            "qz": -0.7130518949124649,
+                            "qw": 0.7011112573349134
                         },
                         "primitives": [
                             {
                                 "type": 1,
                                 "dimensions": [
-                                    0.5991,
                                     0.3991,
+                                    0.2991,
                                     0.2301
                                 ],
                                 "absolute_mesh_paths": "",
@@ -1882,9 +1974,9 @@
                         ],
                         "tfs": [],
                         "color": {
-                            "r": 1.0,
-                            "g": 1.0,
-                            "b": 1.0,
+                            "r": 0.10000000149011612,
+                            "g": 0.5,
+                            "b": 0.20000000298023224,
                             "a": 1.0
                         },
                         "additional_info": {
@@ -1906,16 +1998,16 @@
                             "values": [
                                 "4",
                                 "0.2301",
-                                "0.5991",
-                                "5.0",
                                 "0.3991",
-                                "0.01",
+                                "5.0",
+                                "0.2991",
+                                "0.012",
+                                "9",
+                                "1717139293752",
                                 "5",
-                                "1717049035",
-                                "4",
-                                "23",
-                                "XTS024052319400505",
-                                "2"
+                                "8",
+                                "JYS524052506320005",
+                                ""
                             ],
                             "descriptions": [
                                 "barcode_direction",

@@ -47,13 +47,13 @@
     "scoped_variables": {}, 
     "state_id": "EDOPTS", 
     "transitions": {
-        "10": {
+        "8": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": null, 
             "from_state": null, 
             "to_outcome": null, 
-            "to_state": "AGIOQD", 
-            "transition_id": 10
+            "to_state": "VZCCLS", 
+            "transition_id": 8
         }, 
         "16": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
