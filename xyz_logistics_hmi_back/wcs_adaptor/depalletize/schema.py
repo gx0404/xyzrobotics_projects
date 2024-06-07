@@ -43,6 +43,7 @@ class GetTaskInfoOutputSchema(BaseModel):
     pallet_clear_list: list = Field(default=[], description="已更换的托盘")
     from_pallet_tote_data: Optional[dict] = Field(default={},description="合托任务拼托副（被拆）数据")
     to_pallet_tote_data: Optional[dict] = Field(default={},description="合托任务拼托主（码）工作空间数据")
+    lower_layer: bool = Field(description="是否降层",default=False)
     
 class GetSingleClassTaskInfoSchema(Schema):
     """WCS获取单拆单码任务信息"""
@@ -64,6 +65,7 @@ class TaskCreateSchema(BaseModel):
     pallet_clear_list: list = Field(default=[], description="拣配任务已更换的托盘")
     from_pallet_tote_data: Optional[dict] = Field(default={},description="合托任务拼托副（被拆）数据")
     to_pallet_tote_data: Optional[dict] = Field(default={},description="合托任务拼托主（码）工作空间数据")
+    lower_layer: bool = Field(description="是否降层",default=False)
     
     @pydantic.validator("target_num")
     def validate_target_num(cls, num: int) -> int:

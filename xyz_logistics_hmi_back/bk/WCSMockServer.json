@@ -1,0 +1,212 @@
+{
+  "uuid": "fcde547a-9a0b-49c3-b4f6-fd46557f5bd9",
+  "lastMigration": 32,
+  "name": "Wcs (copy)",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 12000,
+  "hostname": "",
+  "routes": [
+    {
+      "uuid": "2881e245-030b-46c7-bd26-e1c58bc0dfe7",
+      "documentation": "notice_system_is_ready",
+      "method": "post",
+      "endpoint": "request/wcs/notice_system_is_ready",
+      "responses": [
+        {
+          "uuid": "3cbb3514-c006-4b78-ba06-54658e1412e9",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "9287c92a-6f2c-420e-942f-468b114e60df",
+      "documentation": "report_exception",
+      "method": "post",
+      "endpoint": "request/wcs/report_exception",
+      "responses": [
+        {
+          "uuid": "da584675-7f11-430c-bfe1-073aac2cd646",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "623f54c5-290a-4666-8852-a009a0067974",
+      "documentation": "报告拣配单次动作状态",
+      "method": "post",
+      "endpoint": "request/wcs/depal_task/report_action_status",
+      "responses": [
+        {
+          "uuid": "d5a2fda6-1587-423c-a698-d19a3f7ffa75",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "463aca56-f58a-4758-a748-8ab6efa4a7fa",
+      "documentation": "报告拣配任务状态",
+      "method": "post",
+      "endpoint": "request/wcs/depal_task/report_task_status",
+      "responses": [
+        {
+          "uuid": "88fa7ed9-5b21-42c6-b9ff-8f4389dfc432",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "c76fb032-b46f-4236-a7d2-3615f80d08ac",
+      "type": "http",
+      "documentation": "拣配任务通知码满",
+      "method": "post",
+      "endpoint": "request/wcs/depal_task/place_is_full",
+      "responses": [
+        {
+          "uuid": "cbad97f3-c013-41af-a00e-f412e537f5a0",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "folders": [],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "2881e245-030b-46c7-bd26-e1c58bc0dfe7"
+    },
+    {
+      "type": "route",
+      "uuid": "9287c92a-6f2c-420e-942f-468b114e60df"
+    },
+    {
+      "type": "route",
+      "uuid": "623f54c5-290a-4666-8852-a009a0067974"
+    },
+    {
+      "type": "route",
+      "uuid": "463aca56-f58a-4758-a748-8ab6efa4a7fa"
+    },
+    {
+      "type": "route",
+      "uuid": "c76fb032-b46f-4236-a7d2-3615f80d08ac"
+    }
+  ],
+  "callbacks": []
+}

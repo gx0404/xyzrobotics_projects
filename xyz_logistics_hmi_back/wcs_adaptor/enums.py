@@ -17,8 +17,13 @@ class TaskStatus(IntEnum):
     
     #拣配拣选完成
     DEPALFINISHED = 11
-    #180还原
+    #拣配180还原
     CHANGE_180 = 12
+    
+    #输送线空箱回收正常状态
+    MULTI_NORMAL = 13
+    #输送线空箱回收处理缓存区
+    MULTI_CACHE = 14
             
     FINISHED = 2  # 已完成
     ERROR = 3  # 发生异常

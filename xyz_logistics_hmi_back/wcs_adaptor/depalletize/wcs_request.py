@@ -30,6 +30,7 @@ REPORT_EXCEPTION = "request/wcs/report_exception"
 TURN_AGV_API = "request/wcs/turn_agv"
 REPORT_ROBOT_STATUS = "request/wcs/robot_status"
 INIT_ERROR_API = "request/wcs/init_error"
+SEND_LOG_WCS_API = "request/wcs/send_log"
 
 """拣配任务接口"""
 #拣配放置通知放满
@@ -44,6 +45,13 @@ REPORT_MERGE_TASK_STATUS_API = "request/wcs/merge_task/report_task_status"
 REPORT_MULTI_ACTION_STATUS_API = "/request/wcs/conveyor_pal_task/report_action_status"
 REPORT_MULTI_TASK_STATUS_API = "/request/wcs/conveyor_pal_task/report_task_status"
 NOTICE_MULTI_PLACE_WS_IS_FULL_API = "request/wcs/conveyor_pal_task/place_is_full"
+NOTICE_PICK_COMPLETE = "request/wcs/pick_complete"
+GET_CONVEYOR_TOTE_TYPE_ONLINE = "request/wcs/conveyor_pal_task/pick_ws"
+"""笼车空箱回收任务接口"""
+REPORT_PAL_ACTION_STATUS_API = "request/wcs/pallet_pal_task/report_action_status"
+REPORT_PAL_TASK_STATUS_API = "request/wcs/pallet_pal_task/report_task_status"
+NOTICE_PALLET_PLACE_WS_IS_FULL_API = "request/wcs/pallet_pal_task/place_is_full"
+GET_CONVEYOR_TOTE_TYPE_PAL = "request/wcs/pallet_pal_task/pick_ws"
 # 配置API地址选择接口类型
 # Options:
 # 單拆： "request/wcs/single_class_depal_task/report_action_status"
@@ -129,8 +137,14 @@ def report_init_error():
     }
     send_request(INIT_ERROR_API, data)
     mp.order.info(f"通知wcs异常复位")
-    
 
+#发送hmi信息给wcs    
+def seng_log(message):
+    data = {
+        message:message
+    }
+    #send_request(SEND_LOG_WCS_API,data)
+    
 
 """拣配任务接口"""
 @backup_manager_wrapper()
@@ -187,6 +201,7 @@ def report_depal_task_finish(task: Task,pallet_tote_data,agv_direction,error):
     send_request(REPORT_DEPAL_TASK_STATUS_API, data)
     mp.order.info(_("回报拣配任务{0}已完成").format(task.task_id))
 
+"""合托任务接口"""
 @backup_manager_wrapper()
 def report_merge_task_finish(task: Task,pallet_tote_data,error):
     """回报WCS任务完成"""
@@ -219,6 +234,20 @@ def report_multi_pal_action_status(task: Task, pick_num: int,to_ws):
     send_request(REPORT_MULTI_ACTION_STATUS_API, data)
     mp.order.info(_("回报输送线空箱回收任务{0}单次动作,已放置到{1}空间").format(task.task_id,to_ws))
 
+#获取输送线物料信息
+def get_conveyor_tote_type_online(task: Task):
+    data = {
+        "task_id": task.task_id
+    }
+    return_data = send_request(GET_CONVEYOR_TOTE_TYPE_ONLINE, data)
+    return return_data
+
+def notice_pick_complete(task: Task):
+    data = {
+        "task_id": task.task_id
+    }   
+    return_data = send_request(NOTICE_PICK_COMPLETE, data)
+    return return_data
 
 @backup_manager_wrapper()
 def report_multi_pal_task_finish(task: Task,error):
@@ -255,9 +284,24 @@ def notice_multi_pal_place_ws_is_full(place_id):
     mp.order.info(msg)
 
 
-"""合托任务接口"""
+"""笼车码垛任务接口"""
+
+#笼车码垛单次动作完成
+def report_pallet_action_status(task: Task, pick_num: int,to_ws):
+    """回报WCS一次抓取结果"""
+    data = {
+        "task_id": task.task_id,
+        "pick_num": pick_num,
+        "action_status": 0,
+        "to_ws":to_ws,
+        "customized_result": {},
+        "message": "",
+    }
+    send_request(REPORT_PAL_ACTION_STATUS_API, data)
+
+#笼车码垛任务完成
 @backup_manager_wrapper()
-def report_merge_task_finish(task: Task,pallet_tote_data,error):
+def report_pallet_task_finish(task: Task,error):
     """回报WCS任务完成"""
     # 仅当状态为 已完成 或 已终止 才回报
     if not (task.is_finished() or task.is_terminated() or task.is_ended()):
@@ -265,13 +309,39 @@ def report_merge_task_finish(task: Task,pallet_tote_data,error):
     data = {
         "task_id": task.task_id,
         "task_status": error,
-        "pallet_tote_data":pallet_tote_data,
+        "pick_num":task.done_num,
         "message": task.task_status.name,
         "customized_result": {},
     }
-    send_request(REPORT_MERGE_TASK_STATUS_API, data)
-    mp.order.info(_("回报任务{0}已完成").format(task.task_id))
+    send_request(REPORT_PAL_TASK_STATUS_API, data)
+    mp.order.info(_("笼车空箱回收任务{0}已完成").format(task.task_id))
 
+#获取输送线物料信息
+def get_conveyor_tote_type_pal(task: Task):
+    data = {
+        "task_id": task.task_id
+    }
+    return_data = send_request(GET_CONVEYOR_TOTE_TYPE_PAL, data,timeout=20)
+    return return_data
+
+@backup_manager_wrapper()
+def notice_pallet_pal_place_ws_is_full(place_id):
+    """通知WCS托盘已满"""
+    data = {
+        "to_ws": place_id,
+    }
+    # 获取工作空间对象.
+    ws = workspace_manager.get(ws_id=place_id)
+    # 设置当前工作空间状态为未就绪
+    ws.not_ready()
+    if ws.has_pallet():
+        pallet_id = ws.last_item.id
+        data["pallet_id"] = pallet_id
+        msg = _("已回报输送线空箱回收任务放置位工作空间({0})已满, 托盘号({1})").format(place_id, pallet_id)
+    else:
+        msg = _("已回报笼车空箱回收任务放置位工作空间({0})已满").format(place_id)
+    send_request(NOTICE_PALLET_PLACE_WS_IS_FULL_API, data)
+    mp.order.info(msg)
 
 
 # ---------

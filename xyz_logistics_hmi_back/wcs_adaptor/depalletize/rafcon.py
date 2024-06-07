@@ -33,6 +33,9 @@ from wcs_adaptor.depalletize.wcs_request import (
     report_init_error,
     report_order_finish_offline,
     report_task_finish_offline,
+    
+    notice_pick_complete,    
+    
     #拣配任务
     report_depal_action_status,
     notice_depal_place_ws_is_full,
@@ -43,6 +46,12 @@ from wcs_adaptor.depalletize.wcs_request import (
     report_multi_pal_action_status,
     report_multi_pal_task_finish,
     notice_multi_pal_place_ws_is_full,
+    get_conveyor_tote_type_online,
+    #笼车码垛
+    report_pallet_action_status,
+    report_pallet_task_finish,
+    notice_pallet_pal_place_ws_is_full,
+    get_conveyor_tote_type_pal,
     
 )
 from wcs_adaptor.enums import TaskType,TaskStatus
@@ -54,6 +63,7 @@ from wcs_adaptor.zh_msg import ALL_ERROR, DEFAULT_ERROR
 
 from wcs_adaptor.models import PalletData
 from apps.models import db
+from datetime import datetime
 
 bp = Blueprint("rafcon", __name__, url_prefix="/api/rafcon")
 
@@ -146,9 +156,10 @@ def rafcon_turn_agv():
 @openapi.api_doc(tags=["XTF"])
 def clear_pallet_clear_list():
     task = task_manager.first()
+    data = request.get_json()
     if task:
-        task.pallet_clear_list = []
-        return make_json_response(error=0,msg="已清除任务待删除工作空间")    
+        task.pallet_clear_list = data["pallet_clear_list"]
+        return make_json_response(error=0,msg=f"已更新任务待删除工作空间{data['pallet_clear_list']}")    
     else:
         return make_json_response(error=0,msg="no task")    
 
@@ -247,14 +258,68 @@ def update_pallet_data():
         if "pallet_tote_data_3" in data.keys():
             model.pallet_tote_data_3 = data["pallet_tote_data_3"]    
         if "pallet_tote_data_7" in data.keys():
-            model.pallet_tote_data_2 = data["pallet_tote_data_7"] 
+            model.pallet_tote_data_7 = data["pallet_tote_data_7"] 
         if "pallet_tote_data_8" in data.keys():
-            model.pallet_tote_data_3 = data["pallet_tote_data_8"]                                        
+            model.pallet_tote_data_8 = data["pallet_tote_data_8"]                                        
         db.session.add(model)
         db.session.commit()
         return make_json_response(error=0)
     except:
         return make_json_response(error=-1)    
+
+
+
+#更改历史指令时间
+def change_datatime(task:dict):
+    for key,item in task.items():
+        if type(item)==datetime:
+            task[key] = item.strftime('%Y-%m-%d %H:%M:%S')
+    return task
+
+#查询上一次任务类型
+@bp.route("/get_last_task_type", methods=["POST"])
+@req_log(log=xtf_log)
+@backup_manager_wrapper()
+@openapi.api_doc(tags=["XTF"])
+def get_last_task_type(): 
+    from wcs_adaptor.models import HistoryTaskModel
+    model = HistoryTaskModel.query.all()
+    last_task_0 = change_datatime(model[-1].to_dict())
+    last_task_1 = change_datatime(model[-2].to_dict())
+    output_data = { 
+                    "0":last_task_0,
+                    "1":last_task_1}
+    return output_data      
+    
+#获取输送线物料信息
+@bp.route("/get_conveyor_tote", methods=["POST"])
+@req_log(log=xtf_log)
+@backup_manager_wrapper()
+@openapi.api_doc(tags=["XTF"])
+def get_conveyor_tote(): 
+    task = task_manager.first()
+    if not task:
+        return make_json_response(error=1,error_msg="无任务")
+    else:
+        if task.task_type == TaskType.MULTI_PAL_ONLINE:
+            data = get_conveyor_tote_type_online(task).json()
+            return make_json_response(error=data["error"],data=data)  
+        elif task.task_type == TaskType.SINGLE_PAL:
+            data = get_conveyor_tote_type_pal(task).json()
+            return make_json_response(error=data["error"],data=data)              
+         
+#获取输送线物料信息
+@bp.route("/pick_complete", methods=["POST"])
+@req_log(log=xtf_log)
+@backup_manager_wrapper()
+@openapi.api_doc(tags=["XTF"])
+def pick_complete(): 
+    task = task_manager.first()
+    if not task:
+        return make_json_response(error=1,error_msg="无任务")
+    else:
+        data = notice_pick_complete(task).json()
+        return make_json_response(error=data["error"],data=data)  
 
 
 @bp.route("/get_task_info", methods=["GET", "POST"])
@@ -367,6 +432,7 @@ def get_task_info():
         output_data.clear_to_ws = place_ws.is_ready if place_ws else False
 
         output_data.customized_data = task.customized_data
+        output_data.lower_layer = task.lower_layer
 
         if task.order_id:
             # order存在且开始时间为None, 则说明当前任务是该订单的第一个任务, 即更新开始时间.
@@ -470,6 +536,7 @@ def report_depal_full():
     # 设置当前工作空间状态为未就绪
     ws.not_ready()
     return make_json_response(error=0)   
+    
         
 #输送线空箱回收任务回报托盘放满
 @bp.route("/report_multi_pal_full", methods=["POST"])
@@ -485,6 +552,79 @@ def report_multi_pal_full():
     # 设置当前工作空间状态为未就绪
     ws.not_ready()
     return make_json_response(error=0)  
+
+#输送线空箱回收任务更新任务状态
+@bp.route("/update_multi_task_status", methods=["POST"])
+@req_log(log=xtf_log)
+@backup_manager_wrapper()
+@validator()
+@openapi.api_doc(tags=["XTF"])
+def update_multi_task_status():
+    data = request.get_json()
+    task_status = data["task_status"]
+    task = task_manager.first()
+    if task_status == 13:
+        task.ignore_mutation(task.multi_normal)()
+    elif task_status == 14:
+        task.ignore_mutation(task.multi_cache)()        
+    return make_json_response(error=0)  
+
+#获取输送线空箱回收任务任务状态
+@bp.route("/get_multi_task_status", methods=["POST"])
+@req_log(log=xtf_log)
+@backup_manager_wrapper()
+@validator()
+@openapi.api_doc(tags=["XTF"])
+def get_multi_task_status():
+    task = task_manager.first()     
+    if task:
+        return make_json_response(error=0,task_status=task.task_status.value)  
+    else:
+        return make_json_response(error=0)    
+
+#输送线空箱回收仿真测试
+@bp.route("/sim_test", methods=["POST"])
+@req_log(log=xtf_log)
+@backup_manager_wrapper()
+def sim_test():
+    """
+    更新托盘数据
+    """
+    try:
+        data = request.get_json()
+        model = PalletData.query.first()
+        if not model:
+            model = PalletData(current_direction="",pallet_tote_data={},pick_tote_data={},\
+                cache_pallet_tote_data={},path={},pallet_tote_data_2={},pallet_tote_data_3={}\
+                ,pallet_tote_data_7={},pallet_tote_data_8={})
+            db.session.add(model)
+            db.session.commit()
+        model.path = {
+            "place_id":data["place_id"],
+            "tote_type":data["tote_type"],
+        }                                       
+        db.session.add(model)
+        db.session.commit()
+        return make_json_response(error=0)
+    except:
+        return make_json_response(error=-1)   
+
+
+#笼车空箱回收任务回报托盘放满
+@bp.route("/report_pallet_pal_full", methods=["POST"])
+@req_log(log=xtf_log)
+@backup_manager_wrapper()
+@validator()
+@openapi.api_doc(tags=["XTF"])
+def report_pallet_pal_full():
+    data = request.get_json()
+    notice_pallet_pal_place_ws_is_full(data["place_id"])
+    # 获取工作空间对象.
+    ws = workspace_manager.get(ws_id=data["place_id"])
+    # 设置当前工作空间状态为未就绪
+    ws.not_ready()
+    return make_json_response(error=0)  
+
 
 
 @bp.route("/report_task_status", methods=["POST"])
@@ -550,11 +690,11 @@ def report_task_status(body: ReportTaskStatusInputSchema):
     #         notice_depal_place_ws_is_full(body.place_id)
     
 
-    # 回报拆垛已空
-    if data.is_depal_pallet_empty:
-        # 回报抓取垛盘已满, 并且会清除放置工作空间就位状态
-        outside_log.info("report wcs depal pallet empty")
-        notice_pick_ws_is_empty(task)
+    # # 回报拆垛已空
+    # if data.is_depal_pallet_empty:
+    #     # 回报抓取垛盘已满, 并且会清除放置工作空间就位状态
+    #     outside_log.info("report wcs depal pallet empty")
+    #     notice_pick_ws_is_empty(task)
 
     # 上报本次抓取的数量
     if data.pick_num:
@@ -564,9 +704,11 @@ def report_task_status(body: ReportTaskStatusInputSchema):
             report_depal_action_status(task, data.pick_num,body.pick_id,body.place_id,\
                 body.pick_tote_data,body.place_tote_data)
         #输送线混码
-        if task.task_type == TaskType.MULTI_PAL_ONLINE:
+        elif task.task_type == TaskType.MULTI_PAL_ONLINE:
             report_multi_pal_action_status(task, data.pick_num,body.place_id)
-            
+        #笼车码垛
+        elif task.task_type == TaskType.SINGLE_PAL:
+            report_pallet_action_status(task, data.pick_num,body.place_id)            
             
 
 
@@ -601,6 +743,15 @@ def report_task_status(body: ReportTaskStatusInputSchema):
     #输送线混码                        
     elif task.task_type == TaskType.MULTI_PAL_ONLINE:
         task_type = "输送线混码"  
+    #笼车码垛
+    elif task.task_type == TaskType.SINGLE_PAL:
+        task_type = "笼车码垛" 
+        if data.is_depal_pallet_empty:
+            mp.order.info(f"笼车拆空,笼车码垛任务{task.task_id}完成")   
+            task.finish(auto_remove=False)
+            
+            
+        
     
     if task.is_terminated():
         mp.order.info(f"当前{task_type}任务终止完成") 
@@ -668,7 +819,12 @@ def report_task_ending(body: ReportTaskEndingInputSchema):
         elif task.task_type == TaskType.MULTI_PAL_ONLINE:
             report_multi_pal_task_finish(task,error=0)   
             task.end() 
-            clear_all_pallet_data()                            
+            clear_all_pallet_data()     
+        #笼车空箱回收任务完成    
+        elif task.task_type == TaskType.SINGLE_PAL:
+            report_pallet_task_finish(task,error=0)   
+            task.end() 
+            clear_all_pallet_data()                                     
         return make_json_response(error=0)
 
 @bp.route("error_handle_nostop", methods=["POST"])

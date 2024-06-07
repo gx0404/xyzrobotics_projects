@@ -1,0 +1,526 @@
+{
+  "uuid": "a071812f-04ea-4b3a-a5fe-18f19f32a086",
+  "lastMigration": 27,
+  "name": "Wcs",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 12000,
+  "hostname": "",
+  "routes": [
+    {
+      "uuid": "c008f13c-44d3-494f-a8c2-369ddee2c08f",
+      "documentation": "notice_system_is_ready",
+      "method": "post",
+      "endpoint": "request/wcs/notice_system_is_ready",
+      "responses": [
+        {
+          "uuid": "8b85e697-ec39-4fe8-9035-a94d6d5b8786",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "e83de0b5-e4f4-41e5-bb6c-e50fa5ed2b7e",
+      "documentation": "notice_place_ws_is_full",
+      "method": "post",
+      "endpoint": "request/wcs/notice_place_ws_is_full",
+      "responses": [
+        {
+          "uuid": "efb8bfe7-fb3d-4076-b130-fe6157b2b75f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "e80107e4-a354-43ff-bf7d-97b4db754c3c",
+      "documentation": "notice_pick_ws_is_empty",
+      "method": "post",
+      "endpoint": "request/wcs/notice_pick_ws_is_empty",
+      "responses": [
+        {
+          "uuid": "b66cb13c-731c-4f06-bf53-77d4bf3646c4",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "47a95473-b22a-41d3-882c-d13c902ead61",
+      "documentation": "get_sku_info",
+      "method": "post",
+      "endpoint": "request/wcs/get_sku_info",
+      "responses": [
+        {
+          "uuid": "44c94cf1-5577-45cb-998e-026f3a002379",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "1219010d-74a8-4c87-a985-cc3e75079702",
+      "documentation": "report_exception",
+      "method": "post",
+      "endpoint": "request/wcs/report_exception",
+      "responses": [
+        {
+          "uuid": "fd6e0a28-0c0a-4107-a3d3-543a4ea35a14",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "621e2a4a-ce0c-4292-9b76-735e362046d1",
+      "documentation": "note_pallet_is_full",
+      "method": "post",
+      "endpoint": "request/wcs/multi_class_pal_task/note_pallet_is_full",
+      "responses": [
+        {
+          "uuid": "8e408b96-9735-462b-8f38-22f0afe9c767",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "a9f66071-15c2-43eb-9e77-d3f28ffe2f15",
+      "documentation": "报告单拆动作状态",
+      "method": "post",
+      "endpoint": "request/wcs/single_class_depal_task/report_action_status",
+      "responses": [
+        {
+          "uuid": "8b59bc7e-f86d-4da6-a71f-9f72d1b4a747",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "cc7b646b-2b73-4c05-88ed-d10652663b04",
+      "documentation": "报告单拆任务状态",
+      "method": "post",
+      "endpoint": "request/wcs/single_class_depal_task/report_task_status",
+      "responses": [
+        {
+          "uuid": "43bb7429-9a6e-4504-8ceb-0641436049a6",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "e4993ff0-049b-4d00-950e-e778f664eacb",
+      "documentation": "报告单码动作状态",
+      "method": "post",
+      "endpoint": "request/wcs/single_class_pal_task/report_action_status",
+      "responses": [
+        {
+          "uuid": "46e92824-5f15-4fcc-bd2c-a878fe1943ad",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "858f7bff-0799-4296-972d-71f9204faa9e",
+      "documentation": "报告单码任务状态",
+      "method": "post",
+      "endpoint": "request/wcs/single_class_pal_task/report_task_status",
+      "responses": [
+        {
+          "uuid": "6c8a48a7-f5c9-45ed-8a15-6ee5ee2790c7",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "cf25b361-21e5-490b-be5f-5ee31951984e",
+      "documentation": "报告混拆动作状态",
+      "method": "post",
+      "endpoint": "request/wcs/multi_class_depal_task/report_action_status",
+      "responses": [
+        {
+          "uuid": "61f86a58-1e8c-4043-8962-456fa26eea15",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "6f2bda91-8814-462d-863f-5f52edb5587d",
+      "documentation": "报告混拆任务状态",
+      "method": "post",
+      "endpoint": "request/wcs/multi_class_depal_task/report_task_status",
+      "responses": [
+        {
+          "uuid": "cf4a4cc4-c5c2-4cf3-bc6d-f1554160acb4",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "67cf9bf4-256e-4997-8000-7f1bc58e4996",
+      "documentation": "报告混码规划结果",
+      "method": "post",
+      "endpoint": "request/wcs/multi_class_pal_task/report_plan_result",
+      "responses": [
+        {
+          "uuid": "75556957-4443-49c4-85f2-2426a6ee1dc7",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "764cf1f3-86e8-43f6-9ae3-ebb639e6dbba",
+      "documentation": "报告混码动作状态",
+      "method": "post",
+      "endpoint": "request/wcs/multi_class_pal_task/report_action_status",
+      "responses": [
+        {
+          "uuid": "339717b2-2fb6-4f5f-bed0-639a3d72b87a",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    },
+    {
+      "uuid": "4fd7ea81-2ea2-43b1-bc07-1cb0a90108ee",
+      "documentation": "报告混码任务状态",
+      "method": "post",
+      "endpoint": "request/wcs/multi_class_pal_task/report_task_status",
+      "responses": [
+        {
+          "uuid": "d05105b5-35d9-4ab4-b5df-5c4ec18be4ac",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "databucketID": "",
+          "bodyType": "INLINE"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null,
+      "type": "http"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "folders": [],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "c008f13c-44d3-494f-a8c2-369ddee2c08f"
+    },
+    {
+      "type": "route",
+      "uuid": "e83de0b5-e4f4-41e5-bb6c-e50fa5ed2b7e"
+    },
+    {
+      "type": "route",
+      "uuid": "e80107e4-a354-43ff-bf7d-97b4db754c3c"
+    },
+    {
+      "type": "route",
+      "uuid": "47a95473-b22a-41d3-882c-d13c902ead61"
+    },
+    {
+      "type": "route",
+      "uuid": "1219010d-74a8-4c87-a985-cc3e75079702"
+    },
+    {
+      "type": "route",
+      "uuid": "621e2a4a-ce0c-4292-9b76-735e362046d1"
+    },
+    {
+      "type": "route",
+      "uuid": "a9f66071-15c2-43eb-9e77-d3f28ffe2f15"
+    },
+    {
+      "type": "route",
+      "uuid": "cc7b646b-2b73-4c05-88ed-d10652663b04"
+    },
+    {
+      "type": "route",
+      "uuid": "e4993ff0-049b-4d00-950e-e778f664eacb"
+    },
+    {
+      "type": "route",
+      "uuid": "858f7bff-0799-4296-972d-71f9204faa9e"
+    },
+    {
+      "type": "route",
+      "uuid": "cf25b361-21e5-490b-be5f-5ee31951984e"
+    },
+    {
+      "type": "route",
+      "uuid": "6f2bda91-8814-462d-863f-5f52edb5587d"
+    },
+    {
+      "type": "route",
+      "uuid": "67cf9bf4-256e-4997-8000-7f1bc58e4996"
+    },
+    {
+      "type": "route",
+      "uuid": "764cf1f3-86e8-43f6-9ae3-ebb639e6dbba"
+    },
+    {
+      "type": "route",
+      "uuid": "4fd7ea81-2ea2-43b1-bc07-1cb0a90108ee"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find kuka_kr180_support)/launch/load_kr180_r3200_pa.launch" />
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui">
+    
+    <rosparam param="source_list">["robot_0_joint_states_rviz"]</rosparam>
+  </node>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find kuka_kr180_support)/config/rviz.rviz" required="true" />
+</launch>

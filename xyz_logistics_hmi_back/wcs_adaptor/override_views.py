@@ -27,13 +27,35 @@ app = cached_app()
 @backup_manager_wrapper()
 @openapi.api_doc(tags=["WCS", "订单管理"], summary="清空当前任务和订单")
 def remove_task():
+    # """结束并清除现有的任务"""
+    # task_manager.terminate(error="触发清空任务")
+    # task_manager.clear()
+    # order_manager.terminate(error="触发清空订单")
+    # order_manager.clear()
+    # outside_log.info("Remove all task")
+    # mp.order.info(_("已清空任务"))
     """结束并清除现有的任务"""
-    task_manager.terminate(error="触发清空任务")
-    task_manager.clear()
-    order_manager.terminate(error="触发清空订单")
-    order_manager.clear()
-    outside_log.info("Remove all task")
-    mp.order.info(_("已清空任务"))
+    # task_manager.terminate(error="触发清空任务")
+    # task_manager.clear()
+    # order_manager.terminate(error="触发清空订单")
+    # order_manager.clear()
+    task = task_manager.first()
+    if task:
+        task.finish()
+        task.end()
+        task_manager.terminate(error="触发清空任务")
+        task_manager.clear()
+        order_manager.terminate(error="触发清空订单")
+        order_manager.clear()
+        outside_log.info("Remove all task")
+        mp.order.info(_("已清空任务"))
+    else:
+        task_manager.terminate(error="触发清空任务")
+        task_manager.clear()
+        order_manager.terminate(error="触发清空订单")
+        order_manager.clear()
+        outside_log.info("Remove all task")        
+        mp.order.info("无任务，无需清空任务")      
     return {"error": 0, "code": 0, "msg": "", "error_message": "", "data": {}}
 
 

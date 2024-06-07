@@ -1,0 +1,68 @@
+{
+    "data_source": {
+        "comment": "选择拍照位", 
+        "pose_1": [
+            -0.960923709702368, 
+            -1.315614232681636, 
+            1.1423416446416532, 
+            -0.9744785998984717
+        ], 
+        "pose_2": [
+            0.10482443996819439, 
+            -1.8167292579767234, 
+            1.5707963267948966, 
+            0.10482443996819439
+        ]
+    }, 
+    "data_source_translation": {
+        "/comment": "", 
+        "/pose_1": "", 
+        "/pose_2": "", 
+        "/pose_3": "", 
+        "/pose_4": ""
+    }, 
+    "data_source_type": {
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "pose_1": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "pose_2": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }
+    }
+}

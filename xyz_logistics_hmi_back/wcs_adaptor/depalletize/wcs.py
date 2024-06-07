@@ -35,8 +35,18 @@ from wcs_adaptor.manager import order_manager, task_manager, workspace_manager
 from wcs_adaptor.settings import wcs_settings
 from wcs_adaptor.models import PalletData
 from apps.models import db
+from wcs_adaptor.depalletize.rafcon import get_last_task_type
 
 bp = Blueprint("wcs", __name__, url_prefix="/api/wcs")
+  
+
+# 任务类型定义，便于打印信息
+TASK_TYPE_DESC = {
+    0:"拣配任务",
+    10:"合托任务",
+    1:"笼车空箱回收任务",
+    3:"输送线空箱回收任务",
+}
 
 # ---------
 #  基础功能
@@ -338,7 +348,18 @@ def depal_task(body: SingleTaskCreateSchema):
         if body.sku_type==1:
             if item["to_ws"] not in ["2","3","6"]:
                 mp.order.error(f"大欧箱目标箱终点必须为笼车或者输送线")    
-                return make_json_response(error=4,error_message="大欧箱目标箱终点必须为笼车或者输送线")              
+                return make_json_response(error=4,error_message="大欧箱目标箱终点必须为笼车或者输送线")        
+    
+    
+    #判断上一次任务类型
+    last_data = get_last_task_type()
+    last_task = last_data["0"]
+    if last_task['task_type'] != TaskType.SINGLE_DEPAL.value:
+        mp.order.info(f"上次任务类型为{TASK_TYPE_DESC[last_task['task_type'].value]},需要清空所有环境")  
+        pallet_clear_list = ["0","1","2","3","4","5","6","7","8"]
+    else:
+        pallet_clear_list = body.pallet_clear_list              
+                  
     # 创建新任务
     task = Task(
         task_id=body.task_id,
@@ -349,8 +370,9 @@ def depal_task(body: SingleTaskCreateSchema):
         to_ws=body.to_ws,
         pallet_tote_data=body.pallet_tote_data,
         pick_tote_data=body.pick_tote_data,
-        pallet_clear_list = body.pallet_clear_list,
-        customized_data = body.pick_tote_data
+        pallet_clear_list = pallet_clear_list,
+        customized_data = body.pick_tote_data,
+        lower_layer = body.lower_layer,
     )
     task_manager.append(task)
 
@@ -445,7 +467,17 @@ def merge_task(body: SingleTaskCreateSchema):
                 } 
     else:
         return make_json_response(error=0,error_message="sku_type error")        
-        
+
+    #判断上一次任务类型
+    last_data = get_last_task_type()
+    last_task = last_data["0"]
+ 
+    if last_task['task_type'] != TaskType.MERGE_TASK.value:
+        mp.order.info(f"上次任务类型为{TASK_TYPE_DESC[last_task['task_type'].value]},需要清空所有环境")  
+        pallet_clear_list = ["0","1","2","3","4","5","6","7","8"]
+    else:
+        pallet_clear_list = body.pallet_clear_list       
+                
     # 创建新任务
     task = Task(
         task_id=body.task_id,
@@ -455,7 +487,8 @@ def merge_task(body: SingleTaskCreateSchema):
         from_ws=body.from_ws,
         to_ws=body.to_ws,
         from_pallet_tote_data=body.from_pallet_tote_data,
-        to_pallet_tote_data=body.to_pallet_tote_data
+        to_pallet_tote_data=body.to_pallet_tote_data,
+        pallet_clear_list = pallet_clear_list,
     )
     task_manager.append(task)
 
@@ -522,6 +555,17 @@ def conveyor_pal_task(body: SingleTaskCreateSchema):
         "weight": 5,
         "sku_num": -1
         } 
+
+    #判断上一次任务类型
+    last_data = get_last_task_type()
+    last_task = last_data["0"]
+    
+    if last_task['task_type'] != TaskType.MULTI_PAL_ONLINE.value:
+        mp.order.info(f"上次任务类型为{TASK_TYPE_DESC[last_task['task_type'].value]},需要清空所有环境")  
+        pallet_clear_list = ["0","1","2","3","4","5","6","7","8"]
+    else:
+        pallet_clear_list = body.pallet_clear_list    
+            
     # 创建新任务
     task = Task(
         task_id=body.task_id,
@@ -529,7 +573,8 @@ def conveyor_pal_task(body: SingleTaskCreateSchema):
         target_num=-1,
         sku_info=sku_info,
         from_ws=body.from_ws,
-        to_ws=body.to_ws
+        to_ws=body.to_ws,
+        pallet_clear_list = pallet_clear_list  
     )
     task_manager.append(task)
 
@@ -542,7 +587,75 @@ def conveyor_pal_task(body: SingleTaskCreateSchema):
     
     message = _("已收到输送线混码任务({0})，任务数量: {1}").format(task.task_id, -1)
     mp.order.info(message)
-        
+    
+    model = PalletData.query.first()
+    if not model:
+        model = PalletData(current_direction="",pallet_tote_data={},pick_tote_data={},\
+            cache_pallet_tote_data={},path={},pallet_tote_data_2={},pallet_tote_data_3={}\
+            ,pallet_tote_data_7={},pallet_tote_data_8={})
+        db.session.add(model)
+        db.session.commit()
+    else:    
+        model.current_direction = ""
+        model.pallet_tote_data = body.to_pallet_tote_data
+        model.pick_tote_data = {}
+        model.cache_pallet_tote_data = body.from_pallet_tote_data
+        model.path = {}
+        model.pallet_tote_data_2 = {}
+        model.pallet_tote_data_3 = {}
+        model.pallet_tote_data_7 = {}
+        model.pallet_tote_data_8 = {}
+        db.session.add(model)
+        db.session.commit()   
+             
+    return make_json_response(error=0)
+
+@bp.route("/conveyor_pal_task/finish", methods=["GET", "POST"])
+@req_log(log=wcs_log)
+@backup_manager_wrapper()
+@openapi.api_doc(tags=["WCS", "任务管理"])
+def conveyor_pal_task_finish():
+    """WCS请求提前结束任务.
+
+    Query:
+        pass
+
+    Body:
+        ---
+        {
+            "task_id": "task_1",
+        }
+        ---
+
+    Returns:
+        ---
+        {
+            "code": 0,
+            "msg": "success",
+            "data": {}
+        }
+        ---
+
+    Raises:
+        ValidationError: 参数输入异常.
+        TaskNotFoundError: 任务不存在异常.
+
+    """
+    data = request.args if request.method == "GET" else request.get_json()
+    if "task_id" not in data:
+        raise ValidationError(error_message="Input format is wrong: no task id")
+
+    task_id = data["task_id"]
+    task = task_manager.get_task_by_id(task_id)
+
+    if not task:
+        raise TaskNotFoundError(task_id=task_id)
+    if task.task_type!=TaskType.MULTI_PAL_ONLINE:
+        return make_json_response(error=99,error_message="任务类型错误")
+    #import ipdb;ipdb.set_trace()
+    task.terminate(auto_remove=False)
+    mp.order.error("wcs下发输送线空箱回收任务结束")
+    #task_manager.remove(task)
     return make_json_response(error=0)
 
 
@@ -579,6 +692,20 @@ def pallet_pal_task(body: SingleTaskCreateSchema):
         "weight": 5,
         "sku_num": -1
         } 
+    if body.from_ws not in ["2","3"]:
+        mp.order.error(f"笼车空箱回收任务来料位只支持2,3,但实际为{body.from_ws}")
+        return make_json_response(error=99,error_message=f"笼车空箱回收任务来料位只支持2,3,但实际为{body.from_ws}")
+
+    #判断上一次任务类型
+    last_data = get_last_task_type()
+    last_task = last_data["0"]
+        
+    if last_task['task_type'] != TaskType.SINGLE_PAL.value:
+        mp.order.info(f"上次任务类型为{TASK_TYPE_DESC[last_task['task_type'].value]},需要清空所有环境")  
+        pallet_clear_list = ["0","1","2","3","4","5","6","7","8"]
+    else:
+        pallet_clear_list = body.pallet_clear_list 
+            
     # 创建新任务
     task = Task(
         task_id=body.task_id,
@@ -586,7 +713,8 @@ def pallet_pal_task(body: SingleTaskCreateSchema):
         target_num=-1,
         sku_info=sku_info,
         from_ws=body.from_ws,
-        to_ws=body.to_ws
+        to_ws=body.to_ws,
+        pallet_clear_list = pallet_clear_list
     )
     task_manager.append(task)
 

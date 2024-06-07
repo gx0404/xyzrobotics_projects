@@ -1,0 +1,332 @@
+{
+    "data_source": {
+        "0-config-basic": {
+            "dump_failure": true, 
+            "dump_success": false, 
+            "enable_early_check": false, 
+            "log_level": "Debug", 
+            "robot_id": "0", 
+            "timeout": 10.0
+        }, 
+        "1-config-interp": {
+            "coarse_angle_rez": 0.25, 
+            "coarse_distance_rez": 0.25, 
+            "fine_angle_rez": 0.1, 
+            "fine_distance_rez": 0.025
+        }, 
+        "2-config-solver": {
+            "dcheck": 0.075, 
+            "dsafe": {
+                "at_goal": 0.02, 
+                "at_start": 0.02, 
+                "midway": 0.06
+            }, 
+            "simplify": true, 
+            "step_num": 10
+        }, 
+        "3-config-robot": {
+            "active_tip_name": "", 
+            "initial_pickable": false, 
+            "moving_base": {
+                "enable": false, 
+                "tf_base_robot": [
+                    0.0, 
+                    0.0, 
+                    0.0, 
+                    0.0, 
+                    0.0, 
+                    0.0, 
+                    1.0
+                ]
+            }
+        }, 
+        "comment": "motion_planner"
+    }, 
+    "data_source_translation": {
+        "/0-config-basic": "基本参数设置", 
+        "/0-config-basic/dump_failure": "保存失败记录", 
+        "/0-config-basic/dump_success": "保存成功记录", 
+        "/0-config-basic/enable_early_check": "是否使能早期检查。早期碰撞检查可以过滤一些工具和环境碰撞的点，减少计算轨迹个数，但会增加计算的固定时间消耗。", 
+        "/0-config-basic/log_level": "保存信息详略等级(Release, Debug, Verbose)", 
+        "/0-config-basic/robot_id": "机器人编号", 
+        "/0-config-basic/timeout": "Movement flow超时时间", 
+        "/1-config-interp": "插值精度设置", 
+        "/1-config-interp/coarse_angle_rez": "利用角度进行MoveType插值时的粗分辨率，单位rad", 
+        "/1-config-interp/coarse_distance_rez": "利用法兰距离进行MoveType插值时的粗分辨率，单位m", 
+        "/1-config-interp/fine_angle_rez": "利用角度进行MoveType插值时的精分辨率，单位rad", 
+        "/1-config-interp/fine_distance_rez": "利用法兰距离进行MoveType插值时的精分辨率，单位m", 
+        "/2-config-solver": "运动规划器设置", 
+        "/2-config-solver/dcheck": "检查距离", 
+        "/2-config-solver/dsafe": "认为两物体不会碰撞的安全距离", 
+        "/2-config-solver/dsafe/at_goal": "终点认为两物体不会碰撞的安全距离", 
+        "/2-config-solver/dsafe/at_start": "起始点认为两物体不会碰撞的安全距离", 
+        "/2-config-solver/dsafe/midway": "中间点认为两物体不会碰撞的安全距离", 
+        "/2-config-solver/simplify": "是否简化生成的轨迹", 
+        "/2-config-solver/step_num": "轨迹插值分段数量", 
+        "/3-config-robot": "机器人设置", 
+        "/3-config-robot/active_tip_name": "激活的Tip", 
+        "/3-config-robot/initial_pickable": "存在初始抓取物体", 
+        "/3-config-robot/moving_base": "移动轴机器人", 
+        "/3-config-robot/moving_base/enable": "是否为移动轴机器人", 
+        "/3-config-robot/moving_base/tf_base_robot": "机器人基座坐标", 
+        "/comment": "模块注释，显示在图形界面中"
+    }, 
+    "data_source_type": {
+        "0-config-basic": {
+            "dump_failure": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "dump_success": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "enable_early_check": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "log_level": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "robot_id": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "timeout": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "1-config-interp": {
+            "coarse_angle_rez": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "coarse_distance_rez": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "fine_angle_rez": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "fine_distance_rez": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "2-config-solver": {
+            "dcheck": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "dsafe": {
+                "at_goal": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }, 
+                "at_start": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }, 
+                "midway": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }, 
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "simplify": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "step_num": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "3-config-robot": {
+            "active_tip_name": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "initial_pickable": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "moving_base": {
+                "enable": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ]
+                    }
+                }, 
+                "tf_base_robot": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ]
+                    }
+                }, 
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ]
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ]
+        }
+    }
+}

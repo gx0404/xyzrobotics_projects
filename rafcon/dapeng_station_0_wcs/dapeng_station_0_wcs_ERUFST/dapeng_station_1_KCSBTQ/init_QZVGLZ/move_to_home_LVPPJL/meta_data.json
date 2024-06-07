@@ -1,0 +1,114 @@
+{
+    "gui": {
+        "editor_gaphas": {
+            "name": {
+                "rel_pos": {
+                    "__jsonqualname__": "__builtin__.tuple", 
+                    "items": [
+                        1.2049450921103926, 
+                        1.5785728310015656
+                    ]
+                }, 
+                "size": {
+                    "__jsonqualname__": "__builtin__.tuple", 
+                    "items": [
+                        26.46426749543458, 
+                        13.48922300543328
+                    ]
+                }
+            }, 
+            "rel_pos": {
+                "__jsonqualname__": "__builtin__.tuple", 
+                "items": [
+                    301.3772198375291, 
+                    65.78083120758492
+                ]
+            }, 
+            "size": {
+                "__jsonqualname__": "__builtin__.tuple", 
+                "items": [
+                    30.122129242516422, 
+                    38.540637158380804
+                ]
+            }
+        }
+    }, 
+    "income": {
+        "gui": {
+            "editor_gaphas": {
+                "rel_pos": {
+                    "__jsonqualname__": "__builtin__.tuple", 
+                    "items": [
+                        0.6024425848503284, 
+                        3.083250972670464
+                    ]
+                }
+            }
+        }
+    }, 
+    "input_data_port1": {
+        "gui": {
+            "editor_gaphas": {
+                "rel_pos": {
+                    "__jsonqualname__": "__builtin__.tuple", 
+                    "items": [
+                        0.6024425848503286, 
+                        35.45738618571035
+                    ]
+                }
+            }
+        }
+    }, 
+    "outcome-1": {
+        "gui": {
+            "editor_gaphas": {
+                "rel_pos": {
+                    "__jsonqualname__": "__builtin__.tuple", 
+                    "items": [
+                        27.712358903115106, 
+                        0.6024425848503284
+                    ]
+                }
+            }
+        }
+    }, 
+    "outcome-2": {
+        "gui": {
+            "editor_gaphas": {
+                "rel_pos": {
+                    "__jsonqualname__": "__builtin__.tuple", 
+                    "items": [
+                        25.302588563713794, 
+                        0.6024425848503284
+                    ]
+                }
+            }
+        }
+    }, 
+    "outcome0": {
+        "gui": {
+            "editor_gaphas": {
+                "rel_pos": {
+                    "__jsonqualname__": "__builtin__.tuple", 
+                    "items": [
+                        29.519686657666092, 
+                        3.083250972670464
+                    ]
+                }
+            }
+        }
+    }, 
+    "output_data_port0": {
+        "gui": {
+            "editor_gaphas": {
+                "rel_pos": {
+                    "__jsonqualname__": "__builtin__.tuple", 
+                    "items": [
+                        29.519686657666092, 
+                        35.45738618571035
+                    ]
+                }
+            }
+        }
+    }
+}

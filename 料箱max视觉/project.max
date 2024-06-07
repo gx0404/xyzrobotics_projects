@@ -24,6 +24,12 @@ flows:
     workspace_id: 4
   subheightmap_25D_5.vision:
     workspace_id: 5
+  heightmap_25D_5.vision:
+    workspace_id: 5
+  heightmap_25D_4.vision:
+    workspace_id: 4
+  bk_0.vision:
+    workspace_id: 6
 workspace:
   0:
     flow: subheightmap_25D_0.vision
@@ -34,9 +40,11 @@ workspace:
   3:
     flow: subheightmap_25D_3.vision
   4:
-    flow: subheightmap_25D_4.vision
+    flow: heightmap_25D_4.vision
   5:
-    flow: subheightmap_25D_5.vision
+    flow: heightmap_25D_5.vision
+  6:
+    flow: bk_0.vision
 motions: ~
 tasks: ~
 communications: ~

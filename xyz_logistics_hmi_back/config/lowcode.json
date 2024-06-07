@@ -74,6 +74,37 @@
             ]
           }
         ]
+      },
+      {
+        "title": "布局图片查看",
+        "body": [
+          {
+            "type": "form",
+            "id": "u:04c8d9ba19a1",
+            "title": "布局图片（可点击图片查看大图）",
+            "initApi": {
+              "method": "post",
+              "url": "http://${xyz_host}:${xyz_port}/api/lowcode/layout_pictures",
+              "data": {
+                "host": "${xyz_host}",
+                "port": "${xyz_port}"
+              }
+            },
+            "body": [
+              {
+                "type": "service",
+                "body": [
+                  {
+                    "type": "images",
+                    "label": "",
+                    "enlargeAble": true,
+                    "source": "${image_list}"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   }

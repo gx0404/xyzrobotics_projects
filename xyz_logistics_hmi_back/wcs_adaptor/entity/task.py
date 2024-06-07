@@ -154,6 +154,12 @@ class LiteBaseTask(ABCLiteTask):
 
     def depal_change_180(self) -> bool:
         self.task_status = TaskStatus.CHANGE_180
+        
+    def multi_normal(self) -> bool:
+        self.task_status = TaskStatus.MULTI_NORMAL
+    def multi_cache(self) -> bool:
+        self.task_status = TaskStatus.MULTI_CACHE
+        
             
     def finish(self, auto_remove: bool = True) -> None:
         """标记该任务已完成并从manager中移除任务.

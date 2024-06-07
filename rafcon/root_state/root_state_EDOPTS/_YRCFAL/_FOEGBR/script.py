@@ -37,7 +37,7 @@ def execute(self, inputs, outputs, gvm):
     for i in range(3):
         self.logger.info(f"{aixs_list[i]}方向偏差为{pallet_pose[i]-check_pose[i]}")  
     pallet_pose[2]+=0.017    
-    if abs(pallet_pose[0]-check_pose[0])>0.05:
+    if abs(pallet_pose[0]-check_pose[0])>0.06:
         raise "x方向偏差过大"     
     if abs(pallet_pose[1]-check_pose[1])>0.05:
         raise "y方向偏差过大" 
@@ -61,37 +61,37 @@ def execute(self, inputs, outputs, gvm):
     self.logger.info("更新码垛托盘到环境")
     
 
-    #通过笼车工作空间更新障碍物
-    check_flag = False
-    for collision_objcet in pl.collision_objects:
-        if collision_objcet.name == update_collision_name:
-            self.logger.info(f"更新笼车障碍物{update_collision_name}")
-            collision_objcet.origin.x = pallet_pose[0]-0.815/2-0.12/2-0.03-0.015 
-            collision_objcet.origin.y = pallet_pose[1]
-            collision_objcet.origin.z = pallet_pose[2]+0.1  
-            modify_primitive_group_of_environment(collision_objcet)   
-            check_flag = True
-    if not check_flag:        
-        #笼车干涉物
-        self.logger.info(f"添加笼车障碍物")
-        update_collision_pose = [pallet_pose[0]-0.815/2-0.12/2-0.015,pallet_pose[1],pallet_pose[2]+0.07]+undate_rotation
-        update_collision = build_collision(name=update_collision_name, origin=update_collision_pose, dimensions=[1.2, 0.11,0.3], geometric_type=GeometricPrimitive.BOX, alpha=0.6)            
-        add_primitive_group_of_environment([update_collision])    
+    # #通过笼车工作空间更新障碍物
+    # check_flag = False
+    # for collision_objcet in pl.collision_objects:
+    #     if collision_objcet.name == update_collision_name:
+    #         self.logger.info(f"更新笼车障碍物{update_collision_name}")
+    #         collision_objcet.origin.x = pallet_pose[0]-0.815/2-0.12/2-0.03-0.015 
+    #         collision_objcet.origin.y = pallet_pose[1]
+    #         collision_objcet.origin.z = pallet_pose[2]+0.1  
+    #         modify_primitive_group_of_environment(collision_objcet)   
+    #         check_flag = True
+    # if not check_flag:        
+    #     #笼车干涉物
+    #     self.logger.info(f"添加笼车障碍物")
+    #     update_collision_pose = [pallet_pose[0]-0.815/2-0.12/2-0.015,pallet_pose[1],pallet_pose[2]+0.07]+undate_rotation
+    #     update_collision = build_collision(name=update_collision_name, origin=update_collision_pose, dimensions=[1.2, 0.11,0.3], geometric_type=GeometricPrimitive.BOX, alpha=0.6)            
+    #     add_primitive_group_of_environment([update_collision])    
     
     
-    collision_pose = inputs["collision_pose"]
-    self.logger.info(f"笼车围栏实际位置为{collision_pose}")
-    self.logger.info(f"通过托盘判断的位置为{pallet_pose[0],pallet_pose[1]+1.22/2+0.05/2,pallet_pose[2]+1.7/2}")
-    if abs(collision_pose[0]-pallet_pose[0])>0.05\
-    or abs(collision_pose[1]-(pallet_pose[1]+1.22/2+0.05/2))>0.05:
-        raise "笼车围栏偏差过大"
+    # collision_pose = inputs["collision_pose"]
+    # self.logger.info(f"笼车围栏实际位置为{collision_pose}")
+    # self.logger.info(f"通过托盘判断的位置为{pallet_pose[0],pallet_pose[1]+1.22/2+0.05/2,pallet_pose[2]+1.7/2}")
+    # if abs(collision_pose[0]-pallet_pose[0])>0.05\
+    # or abs(collision_pose[1]-(pallet_pose[1]+1.22/2+0.05/2))>0.05:
+    #     raise "笼车围栏偏差过大"
     
-    #通过笼车工作空间更新笼车围栏障碍物
-    for collision_objcet in pl.collision_objects:
-        if collision_objcet.name == check_objcet_name:
-            self.logger.info(f"更新笼车围栏障碍物{check_objcet_name}")
-            collision_objcet.origin = Pose(*collision_pose)  
-            collision_objcet.origin.y+=0.025
-            collision_objcet.origin.z=-1.2+1.7/2
-            modify_primitive_group_of_environment(collision_objcet)   
+    # #通过笼车工作空间更新笼车围栏障碍物
+    # for collision_objcet in pl.collision_objects:
+    #     if collision_objcet.name == check_objcet_name:
+    #         self.logger.info(f"更新笼车围栏障碍物{check_objcet_name}")
+    #         collision_objcet.origin = Pose(*collision_pose)  
+    #         collision_objcet.origin.y+=0.025
+    #         collision_objcet.origin.z=-1.2+1.7/2
+    #         modify_primitive_group_of_environment(collision_objcet)   
     return "success"

@@ -22,11 +22,21 @@ nodes:
         mode: Organized
         x_margin: 0
         y_margin: 0
-        bottom_margin: 0.05
+        bottom_margin: 0.25
         top_margin: 0
     position:
       x: -1222.4947102875635
       y: 2515.4242072805373
+  - id: "{029e7873-f5a9-4f08-8258-8ae535c4ee19}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: InputInfo
+      params:
+        source: request
+        info: ""
+    position:
+      x: -6903.3999999999996
+      y: 1781.8000000000002
   - id: "{0377e495-78e6-4356-b698-25798b8e476a}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -52,6 +62,16 @@ nodes:
     position:
       x: 2140.4160354404326
       y: 2545.9983111021884
+  - id: "{05f7635c-7b88-49ed-9181-196e64f3512d}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: OutputPub
+      params:
+        mode: Predefined
+        ports: ""
+    position:
+      x: -6427.9199999999992
+      y: 1198.0799999999997
   - id: "{0a3bdc0d-5686-48e0-8e6b-dd76b2d4b011}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -75,8 +95,18 @@ nodes:
         cloud_extract_radius: 0.05
         output_cloud_type: Organized
     position:
-      x: 1144.5637704607732
-      y: -554.18932977650366
+      x: 1113.4597704607734
+      y: -550.73332977650352
+  - id: "{0b6bbd1f-4d41-4c13-a257-5214915c2c6f}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ConstructHeightMap
+      params:
+        pixel_size: 0.002
+        pixel_value: 0.005
+    position:
+      x: -6595.3034065919946
+      y: 1523.0089523199993
   - id: "{0d075159-6995-41a7-b6e6-dffb9f7f6a3a}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -121,6 +151,15 @@ nodes:
     position:
       x: 473.95745840824418
       y: 1211.8912946425844
+  - id: "{1588ba0b-bd35-4e22-8460-e0e92750961b}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudBasedEmptyToteChecker
+      params:
+        max_points: 500
+    position:
+      x: -4616.6630399999976
+      y: 1255.8551040000002
   - id: "{15dacc42-fe29-4b45-a0b8-ae61343f1f2c}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -179,7 +218,7 @@ nodes:
           min_contrast: -1
     position:
       x: -736.61170959175604
-      y: 1296.7226333092531
+      y: 1295.2826333092528
   - id: "{1b2dacf0-6ebc-40e8-8ca4-3bd79c0c5f93}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -207,17 +246,34 @@ nodes:
     position:
       x: 2108.4765171274407
       y: -826.81309510983692
+  - id: "{1bda13c7-14b1-459a-92b5-c71f13f9781f}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudICP
+      params:
+        mode: 3D
+        top_k: 60
+        min_score: 68
+        max_matching_dist: 0.005
+        max_fitness_dist: 0.005
+        max_iteration_num: 200
+        reciprocal: true
+        cloud2d_plane: XY
+        knn: 5
+    position:
+      x: -4574.006909337596
+      y: 1792.8969319594644
   - id: "{1d134443-8bd8-4a19-992e-e3c8ed030ef3}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
       name: ImageShowModel
       params: ~
     position:
-      x: 1624.7130123888091
-      y: -501.59502053142887
+      x: 1645.623732388809
+      y: -409.7940605314289
     embedded_widget_rect:
-      w: 338
-      h: 213
+      w: 660
+      h: 520
   - id: "{1e6bd79c-cc09-4784-bdae-b677fd4caa51}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -254,6 +310,27 @@ nodes:
     position:
       x: 1917.2627614285802
       y: -2092.9018502361096
+  - id: "{2a457e84-b54a-43bc-8a86-80d9293090ff}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudPub
+      params:
+        topic: cloud
+    position:
+      x: -4538.2079999999987
+      y: 1529.8639999999996
+  - id: "{2a6dacc2-58b8-4873-be6b-783cac11c2ec}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudROIExtract
+      params:
+        mode: 2D Primitives
+        using_mask: true
+        using_offset: false
+        output_organized: true
+    position:
+      x: -5386.4279226709314
+      y: 1504.1169639594652
   - id: "{2a7fc339-3b0b-4c84-8c8b-ee128f3e08b7}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -320,6 +397,25 @@ nodes:
     position:
       x: 1389.1695714404325
       y: 2560.480455102188
+  - id: "{31aec71e-d56f-43b4-a707-92b4fe18b85d}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: LoadCameraCalibInfo
+      params:
+        calib_file: calibration/camera/眼在手上/camera_extrinsic.yml
+    position:
+      x: -5133.3381365759969
+      y: -24.681369599999925
+  - id: "{3537d5bb-99bc-42a1-88e8-2d3010d52b87}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudTrans
+      params:
+        transform_frame: Workspace
+        transform_frame_id: ""
+    position:
+      x: -7620.1914875903949
+      y: 1459.4280800255992
   - id: "{358213fb-05f4-4183-8b60-3a34aef722b1}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -350,6 +446,17 @@ nodes:
     position:
       x: -1991.2737212596221
       y: 444.51325547642887
+  - id: "{3c805a3b-9144-4e54-94ea-01b03254abb3}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: GeneratePrimitivesMask
+      params:
+        dilate_size: 2
+        load_mask: true
+        directory: masks
+    position:
+      x: -5926.8036560042628
+      y: 1455.4158972927976
   - id: "{3c820f3d-956d-461a-9fd0-b4f53c7cbf23}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -377,11 +484,11 @@ nodes:
         mode: Dense
         x_margin: 0
         y_margin: 0
-        bottom_margin: 0.1
+        bottom_margin: 0.25
         top_margin: 0
     position:
       x: -2557.1238395903988
-      y: 74.219883724799871
+      y: 75.947883724799851
   - id: "{408d57b4-402b-4da9-a460-791083bf47da}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -393,6 +500,17 @@ nodes:
     embedded_widget_rect:
       w: 256
       h: 211
+  - id: "{4268b5b3-0194-4735-aa18-180bf4c727db}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ImageShowModel
+      params: ~
+    position:
+      x: -5424.5375999999978
+      y: 1866.3667199999998
+    embedded_widget_rect:
+      w: 200
+      h: 200
   - id: "{4302c9f4-543c-4ebf-947c-25d03349b2f2}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -406,7 +524,7 @@ nodes:
           - 600_400_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 75
+        min_detection_score: 80
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -428,8 +546,8 @@ nodes:
           contrast: 30
           min_contrast: -1
     position:
-      x: 286.43990379410849
-      y: -804.67786310983661
+      x: 292.19990379410854
+      y: -807.5578631098366
   - id: "{4473415d-c276-4fa9-b014-04ebb7bb5d27}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -443,18 +561,8 @@ nodes:
           num_neighbor: 10
           std_dev_threshold: 0.8
     position:
-      x: -254.18204419522601
-      y: -833.87760168263731
-  - id: "{46eb1455-723b-4241-ad07-0f3076d6a390}"
-    parent_id: "{00000000-0000-0000-0000-000000000000}"
-    model:
-      name: CloudSample
-      params:
-        leaf_size: 0.002
-        max_points: 0
-    position:
-      x: -3217.8907520000012
-      y: 482.20775680000008
+      x: -331.30332419522608
+      y: -719.86256168263708
   - id: "{4a121848-d721-43d8-836b-4e1d3b86aa5e}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -485,6 +593,46 @@ nodes:
     position:
       x: 1992.783749608242
       y: 1594.2844850425845
+  - id: "{4ff95498-df08-4e7e-aa0e-dd9368e12e6a}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: SBMEstimator
+      params:
+        dataset_folder: xyz_pose_estimator_dataset
+        spread_and_pyr:
+          - 4
+          - 8
+        detection_targets:
+          - pallet
+        detection_weak_contrast: 30
+        detection_min_contrast: 30
+        min_detection_score: 65
+        nms_score: 0.20000000000000001
+        nms_across_all: true
+        top_n: 1
+        show_points: true
+        show_score: true
+        show_edge: false
+        global_pose: true
+        use_rotated_nms: false
+        use_icp: true
+        use_fusion: false
+        train_params:
+          projection_type: orthographic
+          cut_from_top: -1
+          angle_start: -50.0
+          angle_end: 50.0
+          angle_zero: 0.0
+          angle_step: 1.0
+          scale_start: 1.0
+          scale_end: 1.0
+          scale_step: 1.0
+          num_features: 200
+          contrast: 30
+          min_contrast: -1
+    position:
+      x: -6231.0248133375962
+      y: 1447.626510626133
   - id: "{57a20d40-5859-489f-942b-019a43e0a76b}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -503,6 +651,21 @@ nodes:
     position:
       x: 825.54576942858228
       y: -2132.3870342361106
+  - id: "{5a649345-dbf5-4ae6-bce4-8d0a38d5a6ac}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudLoader
+      params:
+        mode: input filename
+        file: ""
+        directory: stl_models
+        num_points: 10000
+        cache: false
+        frame_type: World
+        frame_id: ""
+    position:
+      x: -4934.6541840042655
+      y: 1801.5773888483532
   - id: "{5afcce79-5893-4296-a0ae-93ba721bad53}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -555,7 +718,7 @@ nodes:
         mode: Dense
         x_margin: 0
         y_margin: 0
-        bottom_margin: 0.1
+        bottom_margin: 0.25
         top_margin: 0
     position:
       x: -2598.7359227903989
@@ -585,7 +748,7 @@ nodes:
           cluster_max_pts: 50000
           cluster_min_pts: 500
     position:
-      x: 1403.1673544607754
+      x: 1401.9673544607756
       y: -836.32520177650372
   - id: "{7377a925-561b-4e74-9204-74f718d192a0}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
@@ -659,6 +822,19 @@ nodes:
     embedded_widget_rect:
       w: 200
       h: 200
+  - id: "{7d601fe9-5688-43c5-aa37-062bde53026a}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudCutByTote
+      params:
+        mode: Dense
+        x_margin: 0
+        y_margin: 0
+        bottom_margin: 0.25
+        top_margin: 0
+    position:
+      x: -2621.3759999999988
+      y: 516.6719999999998
   - id: "{7e758f6f-9a48-430b-8f72-f2397f1a236b}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -682,8 +858,8 @@ nodes:
           num_neighbor: 10
           std_dev_threshold: 0.8
     position:
-      x: -725.00235521556499
-      y: 2576.3527271960565
+      x: -802.00235521556488
+      y: 2686.3527271960565
   - id: "{87432e36-14f1-483d-a468-43b2687b6b38}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -692,8 +868,8 @@ nodes:
         leaf_size: 0.001
         max_points: 0
     position:
-      x: -532.38408820162624
-      y: -833.65966324039573
+      x: -531.03208820162627
+      y: -756.64366324039611
   - id: "{88347563-0219-4771-94d9-2ef49283963e}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -702,11 +878,20 @@ nodes:
         mode: Organized
         x_margin: 0
         y_margin: 0
-        bottom_margin: 0.05
+        bottom_margin: 0.25
         top_margin: 0
     position:
-      x: -780.05039926722486
-      y: -827.41412159815582
+      x: -759.31439926722487
+      y: -839.51012159815582
+  - id: "{8956e080-0288-493c-a6f8-cdf9b7b2e39a}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: LoadWorkspaceInfo
+      params:
+        calib_file: calibration/workspace/cache_pallt_1.yml
+    position:
+      x: -4737.1051376639971
+      y: -38.223360000000071
   - id: "{8b4ab9d0-a9d2-46d4-982e-32e4e80c9d81}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -728,7 +913,29 @@ nodes:
         directory: masks
     position:
       x: -392.41972559175701
-      y: 1323.5735666425844
+      y: 1322.1335666425841
+  - id: "{92a18f50-8d48-4787-99b8-b965833bae8a}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: OutputPub
+      params:
+        mode: Predefined
+        ports: ""
+    position:
+      x: -3844.6327627775963
+      y: 1609.2439216127991
+  - id: "{96a9d00d-2fb9-4023-a07b-230bef3ec0b9}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: FetchElement
+      params:
+        alert: true
+        element_index:
+          - 0
+        input_type: DoubleVector
+    position:
+      x: -6665.2079999999987
+      y: 1242.6751999999997
   - id: "{9830665b-4d8a-4413-8588-fbed892bbafb}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -748,6 +955,17 @@ nodes:
     position:
       x: -3623.4551960348408
       y: 48.897619191467228
+  - id: "{9a1d128f-52d7-4ef0-86a1-1de993151f67}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: DataShow
+      params: ~
+    position:
+      x: -6588.2975999999981
+      y: 811.95071999999959
+    embedded_widget_rect:
+      w: 256
+      h: 211
   - id: "{9b267b17-964b-415e-b71f-b854f2e6a599}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -826,8 +1044,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 889.95665183723713
-      y: -2960.2338216133867
+      x: 681.23751603476785
+      y: -2936.6998709961035
     embedded_widget_rect:
       w: 761
       h: 546
@@ -842,6 +1060,17 @@ nodes:
     position:
       x: 315.76230276191512
       y: -1886.0065115694422
+  - id: "{a6f8e191-3930-4141-a7b4-832e2f0e32ec}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: DataShow
+      params: ~
+    position:
+      x: -4323.7048319999976
+      y: 1421.3283839999995
+    embedded_widget_rect:
+      w: 256
+      h: 211
   - id: "{a854eccb-4c4e-4ea9-a56c-47d2bd973518}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -874,18 +1103,31 @@ nodes:
     position:
       x: 2610.3493261071012
       y: 2527.2324551021884
-  - id: "{b955ddb6-94d0-4562-87bf-4814aefb9760}"
+  - id: "{b14c1786-0272-44b9-8eaf-5075b1f353a7}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
-      name: LoadCalibrationInfo
+      name: ProjectToPlane
       params:
-        camera:
-          calib_file: calibration/camera/眼在手上/camera_extrinsic.yml
-        workspace:
-          calib_file: calibration/workspace/cache_pallt_1.yml
+        source: input_plane
+        flip_z: false
+        axis_scale: 0.05
+        cal_dim: false
     position:
-      x: -5043.20243104563
-      y: -39.042948931584263
+      x: -5661.3311999999969
+      y: 1687.4015999999997
+  - id: "{bac9e6f1-ba05-4dcb-ac56-fb5da115da6d}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudCutByTote
+      params:
+        mode: Organized
+        x_margin: 0
+        y_margin: 0
+        bottom_margin: 0
+        top_margin: 0
+    position:
+      x: -7310.1005402111987
+      y: 1485.0361516031994
   - id: "{bc1bd645-2ce8-4fe4-931e-9be79a6939de}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -902,13 +1144,13 @@ nodes:
       params:
         dataset_folder: xyz_pose_estimator_dataset
         spread_and_pyr:
-          - 4
+          - 6
           - 8
         detection_targets:
           - 600_400_230
-        detection_weak_contrast: 30
-        detection_min_contrast: 30
-        min_detection_score: 75
+        detection_weak_contrast: 20
+        detection_min_contrast: 20
+        min_detection_score: 80
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -945,6 +1187,19 @@ nodes:
     position:
       x: 2492.0043464607716
       y: -796.84001777650474
+  - id: "{c26dcbcc-3beb-4027-830f-cbb8afc421a3}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ToplayerCompletenessCheck
+      params:
+        mode: points_num
+        z_tolerance: 0.04
+        xy_tolerance: 0.035
+        min_uncovered_points_ratio: 0.4
+        max_uncovered_points_num: 6000
+    position:
+      x: -6595.1999999999998
+      y: 1894.8
   - id: "{c3160422-29f7-4923-908b-30fcfcf18ee7}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1004,6 +1259,21 @@ nodes:
     position:
       x: 2919.1136456607728
       y: -452.49201137650516
+  - id: "{d04e85de-3186-474c-a2f3-ded378012d49}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CalculateTopLayerHeight
+      params:
+        layer_min_points: 2000
+        output_height_frame: Tote
+        enable_downsample: true
+        leaf_size_downsample: 0.002
+        layer_z_tolerance: 0.01
+        cloud_extract_radius: 0.05
+        output_cloud_type: Organized
+    position:
+      x: -6909.9011665919961
+      y: 1463.459512319999
   - id: "{d140ec67-a0d7-4217-aad9-5e6d372d3e1c}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1082,19 +1352,6 @@ nodes:
     embedded_widget_rect:
       w: 256
       h: 211
-  - id: "{e2db0ba4-a022-4d20-8aca-30fe09ab899f}"
-    parent_id: "{00000000-0000-0000-0000-000000000000}"
-    model:
-      name: CloudCutByTote
-      params:
-        mode: Dense
-        x_margin: 0
-        y_margin: 0
-        bottom_margin: 0.1
-        top_margin: 0
-    position:
-      x: -2963.8203899903988
-      y: 531.71410452479995
   - id: "{e36cf5ca-c76c-48c3-9227-52dbd899cc1f}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1106,6 +1363,17 @@ nodes:
     embedded_widget_rect:
       w: 325
       h: 248
+  - id: "{e5ad2dad-05ce-4ec4-a549-1502c62c42db}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ImageShowModel
+      params: ~
+    position:
+      x: -6124.331519999997
+      y: 1057.9737599999999
+    embedded_widget_rect:
+      w: 409
+      h: 306
   - id: "{e753ac52-ec95-4757-b976-eb092a0dc114}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1124,7 +1392,7 @@ nodes:
         method: Radius
         Radius:
           num_neighbor: 6
-          radius: 0.005
+          radius: 0.003
         Statistical:
           num_neighbor: 10
           std_dev_threshold: 0.8
@@ -1146,6 +1414,31 @@ nodes:
     position:
       x: 705.8845854285828
       y: -1860.1215622361094
+  - id: "{eba19344-6305-4199-bc16-b39e62d3f3d1}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: PrimitiveTransformation
+      params:
+        mode: Common
+        transform_frame: World
+        transform_frame_id: ""
+    position:
+      x: -4196.6557200042625
+      y: 1785.7736892927983
+  - id: "{ebd34ed2-2ba7-4c7b-8bcd-8553633e828f}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: FindCloudPlane
+      params:
+        mode: Single
+        dist_threshold: 0.01
+        max_iteration: 50
+        probability: 0.99
+        Multiple:
+          min_points: 5000
+    position:
+      x: -6091.7203199999976
+      y: 1802.2406399999995
   - id: "{edeb758b-6d28-4c6f-b0c8-e21dd137cdf0}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1156,7 +1449,7 @@ nodes:
         output_organized: true
     position:
       x: -10.674392258423325
-      y: 1313.3498333092521
+      y: 1311.9098333092518
   - id: "{f229eb06-5fe6-4cd2-b0c7-19f200ca817a}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1192,8 +1485,8 @@ nodes:
           contrast: 30
           min_contrast: -1
     position:
-      x: -24.28259585556475
-      y: 2514.2549210648567
+      x: -23.482595855564767
+      y: 2513.0549210648564
   - id: "{f276d5a7-5697-41ef-93c2-e465684dac42}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1213,7 +1506,7 @@ nodes:
         mode: Dense
         x_margin: 0
         y_margin: 0
-        bottom_margin: 0.1
+        bottom_margin: 0.25
         top_margin: 0
     position:
       x: -2871.6958715903984
@@ -1242,6 +1535,16 @@ nodes:
     embedded_widget_rect:
       w: 461
       h: 357
+  - id: "{f4b8db45-4d9f-4707-bb76-cd5b85f814dc}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: CloudTrans
+      params:
+        transform_frame: World
+        transform_frame_id: ""
+    position:
+      x: -6945.9133333333302
+      y: 2140.2799999999997
   - id: "{f90345ba-13a2-4800-8c6c-77249551b4da}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1251,15 +1554,6 @@ nodes:
     position:
       x: 1604.9744077415774
       y: 1074.3114333092508
-  - id: "{fcc422ce-8313-4af9-8280-c30e2bc8942a}"
-    parent_id: "{00000000-0000-0000-0000-000000000000}"
-    model:
-      name: CloudTrans
-      params:
-        transform_frame: Workspace
-    position:
-      x: -3676.7670911999999
-      y: 444.02399999999977
 connections:
   - id: "{00129499-5419-4031-9299-d0fcf542643c}"
     in_id: "{6bb28b68-b79c-4f5f-8cf7-9573e470e4fe}"
@@ -1276,11 +1570,16 @@ connections:
     in_index: 0
     out_id: "{27601311-1690-48fd-ac98-1f2009bad701}"
     out_index: 0
-  - id: "{07badc47-6f0e-42a4-9cf1-b3b327ee489b}"
-    in_id: "{e2db0ba4-a022-4d20-8aca-30fe09ab899f}"
+  - id: "{02fd3747-c8ad-45b1-b9c1-6b934d85fb15}"
+    in_id: "{4473415d-c276-4fa9-b014-04ebb7bb5d27}"
     in_index: 0
-    out_id: "{46eb1455-723b-4241-ad07-0f3076d6a390}"
+    out_id: "{87432e36-14f1-483d-a468-43b2687b6b38}"
     out_index: 0
+  - id: "{064291d3-bb4e-4869-ac04-63f517cc7c95}"
+    in_id: "{b14c1786-0272-44b9-8eaf-5075b1f353a7}"
+    in_index: 2
+    out_id: "{ebd34ed2-2ba7-4c7b-8bcd-8553633e828f}"
+    out_index: 2
   - id: "{07d7fb30-35d7-4aa8-b66a-61ac0eb4138a}"
     in_id: "{0377e495-78e6-4356-b698-25798b8e476a}"
     in_index: 0
@@ -1306,11 +1605,16 @@ connections:
     in_index: 0
     out_id: "{9df2652b-28bd-4816-914a-59d8c84f8acd}"
     out_index: 0
-  - id: "{0ce1dce6-20d5-41da-974d-7ef5e4c7153e}"
+  - id: "{0d42916e-5db6-4f86-8f7a-a709fd1b1366}"
     in_id: "{bc1bd645-2ce8-4fe4-931e-9be79a6939de}"
     in_index: 0
-    out_id: "{b955ddb6-94d0-4562-87bf-4814aefb9760}"
+    out_id: "{8956e080-0288-493c-a6f8-cdf9b7b2e39a}"
     out_index: 2
+  - id: "{0e052b8a-eb01-4648-a636-c1ddfc68b78f}"
+    in_id: "{b14c1786-0272-44b9-8eaf-5075b1f353a7}"
+    in_index: 0
+    out_id: "{3c805a3b-9144-4e54-94ea-01b03254abb3}"
+    out_index: 0
   - id: "{0f706bdc-4035-4c7d-807e-619aa3724545}"
     in_id: "{9df2652b-28bd-4816-914a-59d8c84f8acd}"
     in_index: 1
@@ -1321,6 +1625,16 @@ connections:
     in_index: 2
     out_id: "{e753ac52-ec95-4757-b976-eb092a0dc114}"
     out_index: 1
+  - id: "{105967d5-a345-4d2a-8b19-ad5d0e77f422}"
+    in_id: "{5a649345-dbf5-4ae6-bce4-8d0a38d5a6ac}"
+    in_index: 0
+    out_id: "{b14c1786-0272-44b9-8eaf-5075b1f353a7}"
+    out_index: 0
+  - id: "{106adcf7-22fd-4f9b-9f6c-ba5a95278c68}"
+    in_id: "{9a1d128f-52d7-4ef0-86a1-1de993151f67}"
+    in_index: 0
+    out_id: "{96a9d00d-2fb9-4023-a07b-230bef3ec0b9}"
+    out_index: 0
   - id: "{129f2b1e-aa86-44a5-8684-9409c666c9af}"
     in_id: "{3930054e-237c-479e-bc8e-da6925b022a3}"
     in_index: 1
@@ -1341,11 +1655,26 @@ connections:
     in_index: 0
     out_id: "{4302c9f4-543c-4ebf-947c-25d03349b2f2}"
     out_index: 1
+  - id: "{14ff4e1a-a7e6-4252-b0c6-fdf3471702ac}"
+    in_id: "{3940e524-c928-4126-b328-fe7e47327e1f}"
+    in_index: 0
+    out_id: "{7d601fe9-5688-43c5-aa37-062bde53026a}"
+    out_index: 0
   - id: "{15f97339-a815-4de5-a1d4-051d60ba83d2}"
     in_id: "{0d075159-6995-41a7-b6e6-dffb9f7f6a3a}"
     in_index: 1
     out_id: "{bfa2dbcc-db09-4cf9-8ca3-c94b5bbf8b2a}"
     out_index: 1
+  - id: "{16af6eb0-f7ae-40e6-a4ef-dfe6dcdb939e}"
+    in_id: "{62b50792-340b-4646-9ff5-bd73deb7ad77}"
+    in_index: 1
+    out_id: "{4473415d-c276-4fa9-b014-04ebb7bb5d27}"
+    out_index: 0
+  - id: "{1728c5dc-7b07-4176-8ff8-a714c08b6340}"
+    in_id: "{8956e080-0288-493c-a6f8-cdf9b7b2e39a}"
+    in_index: 0
+    out_id: "{31aec71e-d56f-43b4-a707-92b4fe18b85d}"
+    out_index: 0
   - id: "{183f9b4f-2199-44e5-95ba-95dccc8854ae}"
     in_id: "{1b87f5f9-c1c3-4b62-973a-49fd20b07846}"
     in_index: 0
@@ -1355,11 +1684,6 @@ connections:
     in_id: "{91678970-6e93-4b7f-9aba-44e02168c408}"
     in_index: 0
     out_id: "{1a26f129-c392-4536-a37c-908eaf401940}"
-    out_index: 0
-  - id: "{1a8cfca7-ff32-4daa-8571-d498164cb978}"
-    in_id: "{4473415d-c276-4fa9-b014-04ebb7bb5d27}"
-    in_index: 0
-    out_id: "{87432e36-14f1-483d-a468-43b2687b6b38}"
     out_index: 0
   - id: "{1acfb4d3-f747-470e-8c13-56c48a550c1e}"
     in_id: "{e18d78b3-d67d-484f-a9da-146e181d2869}"
@@ -1376,11 +1700,16 @@ connections:
     in_index: 0
     out_id: "{57a20d40-5859-489f-942b-019a43e0a76b}"
     out_index: 1
-  - id: "{1f8c4924-d630-459f-811f-99e3b4d1659a}"
-    in_id: "{b955ddb6-94d0-4562-87bf-4814aefb9760}"
+  - id: "{2149d0ec-20a1-4edd-91b0-d79d6281a17d}"
+    in_id: "{a6f8e191-3930-4141-a7b4-832e2f0e32ec}"
     in_index: 0
-    out_id: "{00b13418-af61-4278-9745-15c4cc54ed6b}"
+    out_id: "{eba19344-6305-4199-bc16-b39e62d3f3d1}"
     out_index: 0
+  - id: "{246636ac-b949-4563-b0ae-9334beea1bea}"
+    in_id: "{0b6bbd1f-4d41-4c13-a257-5214915c2c6f}"
+    in_index: 0
+    out_id: "{d04e85de-3186-474c-a2f3-ded378012d49}"
+    out_index: 1
   - id: "{24b1f223-9228-4b36-815b-688e1125c727}"
     in_id: "{dcedace5-c32d-437c-bd6e-70fdb7a4dc00}"
     in_index: 0
@@ -1396,40 +1725,55 @@ connections:
     in_index: 0
     out_id: "{62b50792-340b-4646-9ff5-bd73deb7ad77}"
     out_index: 1
-  - id: "{279ea9fe-86af-42e5-ae3d-f90f47fb121a}"
-    in_id: "{2a7fc339-3b0b-4c84-8c8b-ee128f3e08b7}"
-    in_index: 0
-    out_id: "{832e723f-3879-4879-b944-3aeae4d75d4e}"
-    out_index: 0
   - id: "{27c89a71-4d22-452f-ad41-d62b42f8b014}"
     in_id: "{4bbeabf0-a39b-462a-9a0d-6ab310c9c855}"
     in_index: 0
     out_id: "{00b13418-af61-4278-9745-15c4cc54ed6b}"
     out_index: 1
-  - id: "{299362f4-a279-4657-918b-4b20960a31fa}"
-    in_id: "{9980c591-6de1-4000-90f9-2ae956de5d99}"
+  - id: "{2884be70-5cbd-4519-8042-a79d7eff64a9}"
+    in_id: "{3c805a3b-9144-4e54-94ea-01b03254abb3}"
+    in_index: 1
+    out_id: "{4ff95498-df08-4e7e-aa0e-dd9368e12e6a}"
+    out_index: 1
+  - id: "{2ab0c00d-7b86-45b6-aa04-7ddde797c832}"
+    in_id: "{05f7635c-7b88-49ed-9181-196e64f3512d}"
+    in_index: 2
+    out_id: "{96a9d00d-2fb9-4023-a07b-230bef3ec0b9}"
+    out_index: 0
+  - id: "{2bf5d367-3788-451b-883e-5d2f80989030}"
+    in_id: "{bac9e6f1-ba05-4dcb-ac56-fb5da115da6d}"
     in_index: 0
-    out_id: "{b955ddb6-94d0-4562-87bf-4814aefb9760}"
-    out_index: 2
+    out_id: "{3537d5bb-99bc-42a1-88e8-2d3010d52b87}"
+    out_index: 0
   - id: "{2d25c2b5-1bb8-42cf-83ec-fa7fa571f229}"
     in_id: "{12c310c9-5b1d-487b-af98-d190d7deff0c}"
     in_index: 1
     out_id: "{1e6bd79c-cc09-4784-bdae-b677fd4caa51}"
+    out_index: 1
+  - id: "{2d734711-ae19-4821-8c25-f063652f838c}"
+    in_id: "{2a457e84-b54a-43bc-8a86-80d9293090ff}"
+    in_index: 0
+    out_id: "{1bda13c7-14b1-459a-92b5-c71f13f9781f}"
     out_index: 1
   - id: "{2e2bf1dd-a1d6-4e5e-8bbb-74fb6240c711}"
     in_id: "{0a3bdc0d-5686-48e0-8e6b-dd76b2d4b011}"
     in_index: 0
     out_id: "{1b2dacf0-6ebc-40e8-8ca4-3bd79c0c5f93}"
     out_index: 0
-  - id: "{30004c1b-fb5f-4d7f-bde7-b262ca42bff1}"
-    in_id: "{87432e36-14f1-483d-a468-43b2687b6b38}"
-    in_index: 0
-    out_id: "{88347563-0219-4771-94d9-2ef49283963e}"
-    out_index: 0
   - id: "{32399665-c9e2-4caf-97cc-ed64c4c1d5bf}"
     in_id: "{76b8f3f2-c781-41a3-973d-04a23adca60c}"
     in_index: 0
     out_id: "{c1901a6b-56e3-4332-bcf5-2771c776af4c}"
+    out_index: 0
+  - id: "{341f0ed7-f426-46dc-809e-0c1f4197db29}"
+    in_id: "{185886bd-924b-473a-999d-00f1dabded7d}"
+    in_index: 0
+    out_id: "{8956e080-0288-493c-a6f8-cdf9b7b2e39a}"
+    out_index: 2
+  - id: "{386b0517-24ac-429b-b39d-a0492c572dc2}"
+    in_id: "{2a7fc339-3b0b-4c84-8c8b-ee128f3e08b7}"
+    in_index: 0
+    out_id: "{15dacc42-fe29-4b45-a0b8-ae61343f1f2c}"
     out_index: 0
   - id: "{39e736a5-eee3-4514-8db2-6b4282181a04}"
     in_id: "{9daa00e6-0ce0-4eb8-8dab-5c4cf5839bc7}"
@@ -1461,16 +1805,6 @@ connections:
     in_index: 0
     out_id: "{185886bd-924b-473a-999d-00f1dabded7d}"
     out_index: 0
-  - id: "{44cbaefc-c858-404f-b5dc-fd72d3f3aa31}"
-    in_id: "{9e5533e9-9e20-499b-ae3f-1b824ed306c1}"
-    in_index: 0
-    out_id: "{4473415d-c276-4fa9-b014-04ebb7bb5d27}"
-    out_index: 0
-  - id: "{46bae875-6100-4a85-91b6-4c3f9e532d7b}"
-    in_id: "{185886bd-924b-473a-999d-00f1dabded7d}"
-    in_index: 0
-    out_id: "{b955ddb6-94d0-4562-87bf-4814aefb9760}"
-    out_index: 2
   - id: "{47eb1f1f-767d-418b-8911-f6ab94b801be}"
     in_id: "{7b6ee0b4-9080-4263-9c95-1f02299332b7}"
     in_index: 0
@@ -1491,6 +1825,16 @@ connections:
     in_index: 0
     out_id: "{57a20d40-5859-489f-942b-019a43e0a76b}"
     out_index: 1
+  - id: "{51fb8861-37fc-44b9-a1c6-f86d6ac84d2a}"
+    in_id: "{8956e080-0288-493c-a6f8-cdf9b7b2e39a}"
+    in_index: 2
+    out_id: "{31aec71e-d56f-43b4-a707-92b4fe18b85d}"
+    out_index: 2
+  - id: "{53c86688-741a-4b2f-9377-b83be5a90763}"
+    in_id: "{3537d5bb-99bc-42a1-88e8-2d3010d52b87}"
+    in_index: 0
+    out_id: "{8956e080-0288-493c-a6f8-cdf9b7b2e39a}"
+    out_index: 2
   - id: "{53fa34e7-6840-4eee-84fd-648d6ec8d635}"
     in_id: "{64f4aa62-8dc2-419d-9377-5a662eb4bff9}"
     in_index: 0
@@ -1501,16 +1845,16 @@ connections:
     in_index: 0
     out_id: "{6c25bff4-c60d-4ea0-a893-af73af38fd48}"
     out_index: 0
-  - id: "{5a23d460-8a43-4ac0-8ae6-af71acb2d15e}"
-    in_id: "{fcc422ce-8313-4af9-8280-c30e2bc8942a}"
-    in_index: 0
-    out_id: "{b955ddb6-94d0-4562-87bf-4814aefb9760}"
-    out_index: 2
   - id: "{5f647af5-f597-4b0c-aadf-5bd569cd2020}"
     in_id: "{408d57b4-402b-4da9-a460-791083bf47da}"
     in_index: 0
     out_id: "{76db1606-9b84-403c-b9c0-2622c31bb86b}"
     out_index: 0
+  - id: "{5f9771f8-663f-46d1-abbb-02505fa1e3b7}"
+    in_id: "{4268b5b3-0194-4735-aa18-180bf4c727db}"
+    in_index: 0
+    out_id: "{b14c1786-0272-44b9-8eaf-5075b1f353a7}"
+    out_index: 1
   - id: "{60c0a758-406d-4131-b8de-8f9764be4719}"
     in_id: "{a4a21583-16ab-438d-aced-2a6bdd71af39}"
     in_index: 0
@@ -1551,16 +1895,31 @@ connections:
     in_index: 2
     out_id: "{f35791c5-8dd5-4c3a-b239-7940cbbdecb6}"
     out_index: 0
+  - id: "{68f0867a-f1c0-4ae9-bcb4-fb5f83ecf7a4}"
+    in_id: "{1bda13c7-14b1-459a-92b5-c71f13f9781f}"
+    in_index: 1
+    out_id: "{5a649345-dbf5-4ae6-bce4-8d0a38d5a6ac}"
+    out_index: 0
   - id: "{6aa0905d-4cc2-4786-a4de-8c6ab8900e7d}"
     in_id: "{5afcce79-5893-4296-a0ae-93ba721bad53}"
     in_index: 0
     out_id: "{d140ec67-a0d7-4217-aad9-5e6d372d3e1c}"
+    out_index: 1
+  - id: "{6e0a73fb-8b56-4ddd-9589-9eb1a4f57ce9}"
+    in_id: "{8956e080-0288-493c-a6f8-cdf9b7b2e39a}"
+    in_index: 1
+    out_id: "{31aec71e-d56f-43b4-a707-92b4fe18b85d}"
     out_index: 1
   - id: "{6fb9ce50-2939-411a-9d4e-d9137937f662}"
     in_id: "{9df2652b-28bd-4816-914a-59d8c84f8acd}"
     in_index: 2
     out_id: "{edeb758b-6d28-4c6f-b0c8-e21dd137cdf0}"
     out_index: 0
+  - id: "{706ce839-d191-40e7-bcd1-0fe76089b974}"
+    in_id: "{9980c591-6de1-4000-90f9-2ae956de5d99}"
+    in_index: 0
+    out_id: "{8956e080-0288-493c-a6f8-cdf9b7b2e39a}"
+    out_index: 2
   - id: "{70c9f0b6-ffbf-48b3-8632-27ec0bc6adeb}"
     in_id: "{8b4ab9d0-a9d2-46d4-982e-32e4e80c9d81}"
     in_index: 1
@@ -1571,10 +1930,20 @@ connections:
     in_index: 0
     out_id: "{a8599eb4-5baf-4e28-90d9-9795b5701555}"
     out_index: 0
-  - id: "{782618b6-3868-4d1a-9ece-6be8f104e35f}"
-    in_id: "{d140ec67-a0d7-4217-aad9-5e6d372d3e1c}"
+  - id: "{72042d1b-0914-4f8e-977f-3c8493a27f47}"
+    in_id: "{c26dcbcc-3beb-4027-830f-cbb8afc421a3}"
     in_index: 1
-    out_id: "{832e723f-3879-4879-b944-3aeae4d75d4e}"
+    out_id: "{f4b8db45-4d9f-4707-bb76-cd5b85f814dc}"
+    out_index: 0
+  - id: "{73827b9c-ee85-4c0e-bed1-b6df2a6d01ff}"
+    in_id: "{2a6dacc2-58b8-4873-be6b-783cac11c2ec}"
+    in_index: 0
+    out_id: "{0b6bbd1f-4d41-4c13-a257-5214915c2c6f}"
+    out_index: 2
+  - id: "{79021934-cbe3-4ebf-b5bf-01d54c2ab99a}"
+    in_id: "{d04e85de-3186-474c-a2f3-ded378012d49}"
+    in_index: 0
+    out_id: "{bac9e6f1-ba05-4dcb-ac56-fb5da115da6d}"
     out_index: 0
   - id: "{7ae457e5-f183-44ef-adb2-c48c66ac1b01}"
     in_id: "{1b87f5f9-c1c3-4b62-973a-49fd20b07846}"
@@ -1590,6 +1959,11 @@ connections:
     in_id: "{f2f50302-679e-47de-961f-b04f7e59b1bc}"
     in_index: 0
     out_id: "{6bb28b68-b79c-4f5f-8cf7-9573e470e4fe}"
+    out_index: 0
+  - id: "{84cbc528-318b-4343-80b0-6c97bde37dcf}"
+    in_id: "{2a6dacc2-58b8-4873-be6b-783cac11c2ec}"
+    in_index: 1
+    out_id: "{3c805a3b-9144-4e54-94ea-01b03254abb3}"
     out_index: 0
   - id: "{8609ac2f-f050-4dec-a47a-5ab923dbbe47}"
     in_id: "{77af6941-d5f5-4520-9971-1ff3dfbbb6a9}"
@@ -1636,6 +2010,11 @@ connections:
     in_index: 1
     out_id: "{0a484cf1-fb98-4c24-98ef-b61bd5b7bcac}"
     out_index: 1
+  - id: "{8f3782f9-2be3-45b9-bbd4-82bfb5bbce45}"
+    in_id: "{4ff95498-df08-4e7e-aa0e-dd9368e12e6a}"
+    in_index: 0
+    out_id: "{0b6bbd1f-4d41-4c13-a257-5214915c2c6f}"
+    out_index: 1
   - id: "{901b8bd7-96e7-49f5-85d7-2ebf2fd947c6}"
     in_id: "{9df2652b-28bd-4816-914a-59d8c84f8acd}"
     in_index: 0
@@ -1661,6 +2040,11 @@ connections:
     in_index: 1
     out_id: "{9b267b17-964b-415e-b71f-b854f2e6a599}"
     out_index: 0
+  - id: "{93421971-b28d-4495-b936-c518c244e1a9}"
+    in_id: "{eba19344-6305-4199-bc16-b39e62d3f3d1}"
+    in_index: 0
+    out_id: "{1bda13c7-14b1-459a-92b5-c71f13f9781f}"
+    out_index: 0
   - id: "{94654214-fbf9-471b-aaaf-b78e7f293ca3}"
     in_id: "{1a26f129-c392-4536-a37c-908eaf401940}"
     in_index: 0
@@ -1681,6 +2065,11 @@ connections:
     in_index: 0
     out_id: "{e753ac52-ec95-4757-b976-eb092a0dc114}"
     out_index: 1
+  - id: "{9e3bdcd5-40de-416c-85b9-1b320c6e91ee}"
+    in_id: "{7d601fe9-5688-43c5-aa37-062bde53026a}"
+    in_index: 0
+    out_id: "{6bb28b68-b79c-4f5f-8cf7-9573e470e4fe}"
+    out_index: 0
   - id: "{a0349280-cb8c-4330-8137-b86497e19cea}"
     in_id: "{7377a925-561b-4e74-9204-74f718d192a0}"
     in_index: 0
@@ -1701,6 +2090,11 @@ connections:
     in_index: 0
     out_id: "{1b87f5f9-c1c3-4b62-973a-49fd20b07846}"
     out_index: 1
+  - id: "{a40df17e-5792-4d22-a794-6e2d868480b5}"
+    in_id: "{92a18f50-8d48-4787-99b8-b965833bae8a}"
+    in_index: 0
+    out_id: "{eba19344-6305-4199-bc16-b39e62d3f3d1}"
+    out_index: 0
   - id: "{a817dd24-f26e-44da-b380-748f14ae1a6e}"
     in_id: "{d54bb3c3-2e91-45d0-9c19-be58479a0209}"
     in_index: 0
@@ -1710,6 +2104,11 @@ connections:
     in_id: "{7640ce02-acc2-4a64-ba97-1d5fddafc309}"
     in_index: 1
     out_id: "{d3df6345-51b1-42ae-a748-13667cd30c19}"
+    out_index: 0
+  - id: "{ae5fb98d-f3da-42d1-aeac-1df5f6efa284}"
+    in_id: "{9e5533e9-9e20-499b-ae3f-1b824ed306c1}"
+    in_index: 0
+    out_id: "{4473415d-c276-4fa9-b014-04ebb7bb5d27}"
     out_index: 0
   - id: "{afe7fb69-3f42-4ba3-96a3-e421ec5a7177}"
     in_id: "{bfa2dbcc-db09-4cf9-8ca3-c94b5bbf8b2a}"
@@ -1751,25 +2150,35 @@ connections:
     in_index: 0
     out_id: "{1b87f5f9-c1c3-4b62-973a-49fd20b07846}"
     out_index: 0
+  - id: "{b97f1bd0-5ee7-4960-84ed-46e389af8093}"
+    in_id: "{3c805a3b-9144-4e54-94ea-01b03254abb3}"
+    in_index: 0
+    out_id: "{4ff95498-df08-4e7e-aa0e-dd9368e12e6a}"
+    out_index: 0
   - id: "{b9893dd6-99ab-4126-98d3-a9571cbe5f19}"
     in_id: "{57a20d40-5859-489f-942b-019a43e0a76b}"
     in_index: 0
     out_id: "{0d075159-6995-41a7-b6e6-dffb9f7f6a3a}"
     out_index: 0
-  - id: "{bd87e94b-4651-4f4b-8a99-b9080d8e858d}"
-    in_id: "{b955ddb6-94d0-4562-87bf-4814aefb9760}"
-    in_index: 2
-    out_id: "{00b13418-af61-4278-9745-15c4cc54ed6b}"
-    out_index: 2
+  - id: "{bbd75bf5-0127-43e0-8d13-7fce9bf13963}"
+    in_id: "{f4b8db45-4d9f-4707-bb76-cd5b85f814dc}"
+    in_index: 0
+    out_id: "{d04e85de-3186-474c-a2f3-ded378012d49}"
+    out_index: 1
+  - id: "{bd14e1aa-069b-43e2-9ba4-2dd37ecb709b}"
+    in_id: "{1588ba0b-bd35-4e22-8460-e0e92750961b}"
+    in_index: 0
+    out_id: "{d04e85de-3186-474c-a2f3-ded378012d49}"
+    out_index: 1
+  - id: "{c0a58cb3-bdb1-453a-9240-75c0400416e3}"
+    in_id: "{b14c1786-0272-44b9-8eaf-5075b1f353a7}"
+    in_index: 1
+    out_id: "{3c805a3b-9144-4e54-94ea-01b03254abb3}"
+    out_index: 1
   - id: "{c1e841b1-b04d-4e26-b2af-386252f9fd1a}"
     in_id: "{2ddc8368-0b79-49a2-bd77-7fdd1c2d3a37}"
     in_index: 1
     out_id: "{0377e495-78e6-4356-b698-25798b8e476a}"
-    out_index: 0
-  - id: "{c203560b-ad92-476b-9250-e83f5e347b67}"
-    in_id: "{3940e524-c928-4126-b328-fe7e47327e1f}"
-    in_index: 0
-    out_id: "{e2db0ba4-a022-4d20-8aca-30fe09ab899f}"
     out_index: 0
   - id: "{c5871edd-de2e-4ff8-b201-b20290f79575}"
     in_id: "{7377a925-561b-4e74-9204-74f718d192a0}"
@@ -1786,6 +2195,11 @@ connections:
     in_index: 2
     out_id: "{a6f5c6a1-bdf7-4e1c-a725-000574db2acd}"
     out_index: 0
+  - id: "{c9d4b4b1-f910-4b7f-8f7d-6306f0c88696}"
+    in_id: "{31aec71e-d56f-43b4-a707-92b4fe18b85d}"
+    in_index: 2
+    out_id: "{00b13418-af61-4278-9745-15c4cc54ed6b}"
+    out_index: 2
   - id: "{c9f4d646-6753-46de-b766-bfcec5cb5416}"
     in_id: "{a6f5c6a1-bdf7-4e1c-a725-000574db2acd}"
     in_index: 0
@@ -1806,20 +2220,25 @@ connections:
     in_index: 0
     out_id: "{64f4aa62-8dc2-419d-9377-5a662eb4bff9}"
     out_index: 0
+  - id: "{d1a90902-9af8-4575-824c-ee881f19021f}"
+    in_id: "{31aec71e-d56f-43b4-a707-92b4fe18b85d}"
+    in_index: 0
+    out_id: "{00b13418-af61-4278-9745-15c4cc54ed6b}"
+    out_index: 0
   - id: "{d372f01f-5a4c-492b-8757-3d30e05376e9}"
     in_id: "{1b87f5f9-c1c3-4b62-973a-49fd20b07846}"
     in_index: 1
     out_id: "{0f205c39-fa5f-487b-a5db-8692730e54b2}"
     out_index: 0
-  - id: "{d614ad32-8b6a-49ee-9444-1cda5d01cd7e}"
-    in_id: "{46eb1455-723b-4241-ad07-0f3076d6a390}"
-    in_index: 0
-    out_id: "{fcc422ce-8313-4af9-8280-c30e2bc8942a}"
-    out_index: 0
   - id: "{d7ea7457-ff14-4b7e-be4b-d91cec784691}"
     in_id: "{edeb758b-6d28-4c6f-b0c8-e21dd137cdf0}"
     in_index: 1
     out_id: "{91678970-6e93-4b7f-9aba-44e02168c408}"
+    out_index: 0
+  - id: "{d9ac906b-30d1-4897-8f56-f22d37fb308b}"
+    in_id: "{d140ec67-a0d7-4217-aad9-5e6d372d3e1c}"
+    in_index: 1
+    out_id: "{15dacc42-fe29-4b45-a0b8-ae61343f1f2c}"
     out_index: 0
   - id: "{dbcfcb37-606e-44fc-973a-4b4699c40e4e}"
     in_id: "{0a3bdc0d-5686-48e0-8e6b-dd76b2d4b011}"
@@ -1831,10 +2250,25 @@ connections:
     in_index: 0
     out_id: "{0377e495-78e6-4356-b698-25798b8e476a}"
     out_index: 0
+  - id: "{dd97ab6a-31ee-44cb-a502-a7559ff9c78e}"
+    in_id: "{e5ad2dad-05ce-4ec4-a549-1502c62c42db}"
+    in_index: 0
+    out_id: "{4ff95498-df08-4e7e-aa0e-dd9368e12e6a}"
+    out_index: 1
+  - id: "{e0c0d2f0-69c8-4fb2-a02d-38790c120c37}"
+    in_id: "{31aec71e-d56f-43b4-a707-92b4fe18b85d}"
+    in_index: 1
+    out_id: "{00b13418-af61-4278-9745-15c4cc54ed6b}"
+    out_index: 1
   - id: "{e3e533db-c6af-4692-905e-3542b2ef908d}"
     in_id: "{c5f7eaa9-88a2-4d4b-a44e-0d261a1e1bd7}"
     in_index: 2
     out_id: "{3c820f3d-956d-461a-9fd0-b4f53c7cbf23}"
+    out_index: 0
+  - id: "{e443a459-4625-448f-9fe3-1685aa0a56f6}"
+    in_id: "{87432e36-14f1-483d-a468-43b2687b6b38}"
+    in_index: 0
+    out_id: "{88347563-0219-4771-94d9-2ef49283963e}"
     out_index: 0
   - id: "{e4a78a7d-391c-4589-bd62-1102a0278588}"
     in_id: "{57a20d40-5859-489f-942b-019a43e0a76b}"
@@ -1891,6 +2325,16 @@ connections:
     in_index: 0
     out_id: "{9e5533e9-9e20-499b-ae3f-1b824ed306c1}"
     out_index: 2
+  - id: "{efcb5489-da64-4f29-a849-7bcaff4034c5}"
+    in_id: "{96a9d00d-2fb9-4023-a07b-230bef3ec0b9}"
+    in_index: 0
+    out_id: "{d04e85de-3186-474c-a2f3-ded378012d49}"
+    out_index: 0
+  - id: "{f0ec1239-d8b2-45cc-8b3a-fdd869275abf}"
+    in_id: "{1bda13c7-14b1-459a-92b5-c71f13f9781f}"
+    in_index: 2
+    out_id: "{2a6dacc2-58b8-4873-be6b-783cac11c2ec}"
+    out_index: 0
   - id: "{f1f2834b-26d6-4e6c-a6a0-2f25947184d7}"
     in_id: "{f276d5a7-5697-41ef-93c2-e465684dac42}"
     in_index: 0
@@ -1900,6 +2344,11 @@ connections:
     in_id: "{a854eccb-4c4e-4ea9-a56c-47d2bd973518}"
     in_index: 0
     out_id: "{c3160422-29f7-4923-908b-30fcfcf18ee7}"
+    out_index: 1
+  - id: "{f3d2ab8b-604c-4df8-9eac-442a1492a607}"
+    in_id: "{c26dcbcc-3beb-4027-830f-cbb8afc421a3}"
+    in_index: 0
+    out_id: "{029e7873-f5a9-4f08-8258-8ae535c4ee19}"
     out_index: 1
   - id: "{f4122bba-7c2f-4aa8-81e8-b1350b62046e}"
     in_id: "{5be46e00-d2bb-4629-9a47-7a7b549e52f7}"
@@ -1926,20 +2375,25 @@ connections:
     in_index: 0
     out_id: "{2ddc8368-0b79-49a2-bd77-7fdd1c2d3a37}"
     out_index: 1
+  - id: "{f97cd384-2818-4c57-9c8d-797874e94696}"
+    in_id: "{ebd34ed2-2ba7-4c7b-8bcd-8553633e828f}"
+    in_index: 0
+    out_id: "{0b6bbd1f-4d41-4c13-a257-5214915c2c6f}"
+    out_index: 2
+  - id: "{f9e76949-bad2-4d07-885b-5bd7d0469eee}"
+    in_id: "{1bda13c7-14b1-459a-92b5-c71f13f9781f}"
+    in_index: 0
+    out_id: "{b14c1786-0272-44b9-8eaf-5075b1f353a7}"
+    out_index: 0
   - id: "{fbc81027-158e-4bae-a8b0-b9f80fae008e}"
     in_id: "{4a121848-d721-43d8-836b-4e1d3b86aa5e}"
     in_index: 0
     out_id: "{c5f7eaa9-88a2-4d4b-a44e-0d261a1e1bd7}"
     out_index: 1
-  - id: "{fc6f4ae5-c70e-4e3f-8933-f4b274c5029c}"
-    in_id: "{b955ddb6-94d0-4562-87bf-4814aefb9760}"
+  - id: "{fef4d397-3531-4cd2-9cc5-41dd4ae7fdc7}"
+    in_id: "{1588ba0b-bd35-4e22-8460-e0e92750961b}"
     in_index: 1
-    out_id: "{00b13418-af61-4278-9745-15c4cc54ed6b}"
-    out_index: 1
-  - id: "{fd29903b-52cf-4013-beb4-cb51a561bd83}"
-    in_id: "{62b50792-340b-4646-9ff5-bd73deb7ad77}"
-    in_index: 1
-    out_id: "{4473415d-c276-4fa9-b014-04ebb7bb5d27}"
+    out_id: "{1bda13c7-14b1-459a-92b5-c71f13f9781f}"
     out_index: 0
 service:
   enable: true
@@ -1947,11 +2401,11 @@ service:
     calculate_object_poses_1_0:
       enable: true
       root_nodes: ["{3940e524-c928-4126-b328-fe7e47327e1f}"]
-      leaf_nodes: ["{7e758f6f-9a48-430b-8f72-f2397f1a236b}", "{0a3bdc0d-5686-48e0-8e6b-dd76b2d4b011}"]
+      leaf_nodes: ["{0a3bdc0d-5686-48e0-8e6b-dd76b2d4b011}"]
       parallel: false
     calculate_object_poses_1_1:
       enable: true
-      root_nodes: ["{b955ddb6-94d0-4562-87bf-4814aefb9760}"]
+      root_nodes: ["{31aec71e-d56f-43b4-a707-92b4fe18b85d}"]
       leaf_nodes: ["{a4a21583-16ab-438d-aced-2a6bdd71af39}", "{d140ec67-a0d7-4217-aad9-5e6d372d3e1c}", "{adc90993-1aa1-44f2-9b35-754fec95d2d9}"]
       parallel: false
     calculate_object_poses_2_0:
@@ -1961,14 +2415,24 @@ service:
       parallel: false
     calculate_object_poses_2_1:
       enable: true
-      root_nodes: ["{b955ddb6-94d0-4562-87bf-4814aefb9760}"]
+      root_nodes: ["{31aec71e-d56f-43b4-a707-92b4fe18b85d}"]
       leaf_nodes: ["{dcedace5-c32d-437c-bd6e-70fdb7a4dc00}", "{62b50792-340b-4646-9ff5-bd73deb7ad77}", "{76b8f3f2-c781-41a3-973d-04a23adca60c}"]
+      parallel: false
+    calculate_object_poses_3:
+      enable: true
+      root_nodes: ["{31aec71e-d56f-43b4-a707-92b4fe18b85d}"]
+      leaf_nodes: ["{1588ba0b-bd35-4e22-8460-e0e92750961b}", "{92a18f50-8d48-4787-99b8-b965833bae8a}"]
       parallel: false
     capture_images_1:
       enable: true
       root_nodes: ["{00b13418-af61-4278-9745-15c4cc54ed6b}"]
       leaf_nodes: ["{00b13418-af61-4278-9745-15c4cc54ed6b}"]
       parallel: true
+    check_primitive_cloud:
+      enable: true
+      root_nodes: ["{029e7873-f5a9-4f08-8258-8ae535c4ee19}", "{31aec71e-d56f-43b4-a707-92b4fe18b85d}"]
+      leaf_nodes: ["{c26dcbcc-3beb-4027-830f-cbb8afc421a3}"]
+      parallel: false
     check_tote_empty:
       enable: true
       root_nodes: ~
@@ -1976,8 +2440,8 @@ service:
       parallel: false
     get_safe_height:
       enable: true
-      root_nodes: ~
-      leaf_nodes: ~
+      root_nodes: ["{31aec71e-d56f-43b4-a707-92b4fe18b85d}"]
+      leaf_nodes: ["{05f7635c-7b88-49ed-9181-196e64f3512d}"]
       parallel: false
     load_calibration_info:
       enable: true
@@ -1986,21 +2450,21 @@ service:
       parallel: false
     merge_cloud_0:
       enable: true
-      root_nodes: ["{b955ddb6-94d0-4562-87bf-4814aefb9760}"]
+      root_nodes: ["{31aec71e-d56f-43b4-a707-92b4fe18b85d}"]
       leaf_nodes: ["{d3df6345-51b1-42ae-a748-13667cd30c19}"]
       parallel: false
     merge_cloud_1:
       enable: true
-      root_nodes: ["{b955ddb6-94d0-4562-87bf-4814aefb9760}", "{d3df6345-51b1-42ae-a748-13667cd30c19}"]
+      root_nodes: ["{31aec71e-d56f-43b4-a707-92b4fe18b85d}", "{d3df6345-51b1-42ae-a748-13667cd30c19}"]
       leaf_nodes: ["{7640ce02-acc2-4a64-ba97-1d5fddafc309}"]
       parallel: false
     merge_cloud_2:
       enable: true
-      root_nodes: ["{b955ddb6-94d0-4562-87bf-4814aefb9760}", "{7640ce02-acc2-4a64-ba97-1d5fddafc309}"]
+      root_nodes: ["{31aec71e-d56f-43b4-a707-92b4fe18b85d}", "{7640ce02-acc2-4a64-ba97-1d5fddafc309}"]
       leaf_nodes: ["{4032b9f2-dec1-436f-a075-7720af3ba50b}"]
       parallel: false
     merge_cloud_3:
       enable: true
-      root_nodes: ["{b955ddb6-94d0-4562-87bf-4814aefb9760}", "{4032b9f2-dec1-436f-a075-7720af3ba50b}"]
+      root_nodes: ["{31aec71e-d56f-43b4-a707-92b4fe18b85d}", "{4032b9f2-dec1-436f-a075-7720af3ba50b}"]
       leaf_nodes: ["{3940e524-c928-4126-b328-fe7e47327e1f}"]
       parallel: false

@@ -61,27 +61,27 @@ ws6.conveyor = conveyor_6
 
 
 #混码缓存位7
-ws7 = build_workspace(workspace_id="7", bottom_pose=[1.205-0.41, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[0.4, 0.3, 0.4], ws_type="pallet")
-pallet_7 = build_pallet(name="pallet_7", top_origin=[1.205-0.41, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[1, 0.3, 0.11])
+ws7 = build_workspace(workspace_id="7", bottom_pose=[1.205-0.41+0.10, -2.638, -0.456-0.1+0.077, 0.0, 0.0, 0, 1], dimensions=[0.4, 0.3, 0.4], ws_type="pallet")
+pallet_7 = build_pallet(name="pallet_7", top_origin=[1.205-0.41+0.10, -2.638, -0.456-0.1+0.077, 0.0, 0.0, 0, 1], dimensions=[1, 0.3, 0.11])
 ws7.pallet = pallet_7
 
 #混码缓存位8
-ws8 = build_workspace(workspace_id="8", bottom_pose=[1.205, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[0.4, 0.3, 0.4], ws_type="pallet")
-pallet_8 = build_pallet(name="pallet_8", top_origin=[1.205, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[1, 0.3, 0.11])
+ws8 = build_workspace(workspace_id="8", bottom_pose=[1.205+0.10, -2.638, -0.456-0.1+0.077, 0.0, 0.0, 0, 1], dimensions=[0.4, 0.3, 0.4], ws_type="pallet")
+pallet_8 = build_pallet(name="pallet_8", top_origin=[1.205+0.10, -2.638, -0.456-0.1+0.077, 0.0, 0.0, 0, 1], dimensions=[1, 0.3, 0.11])
 ws8.pallet = pallet_8
 
 
 # 创建简单障碍物(安全网、相机支架、控制柜、机器人自碰撞等)
 
-#笼车工作空间障碍物
-collision_pallet_2 = build_collision(name="collision_pallet_2", origin=[1.6+0.1,1.65+1.22/2+0.11/2, -1.267+1.7/2, 0, 0, 0, 1], dimensions=[0.87+0.1, 0.11,1.8], geometric_type=GeometricPrimitive.BOX, alpha=0.5)
+# #笼车工作空间障碍物
+# collision_pallet_2 = build_collision(name="collision_pallet_2", origin=[1.6+0.1,1.65+1.22/2+0.11/2, -1.267+1.7/2, 0, 0, 0, 1], dimensions=[0.87+0.1, 0.11,1.8], geometric_type=GeometricPrimitive.BOX, alpha=0.5)
 
-#笼车工作空间障碍物
-collision_pallet_3 = build_collision(name="collision_pallet_3", origin=[2, -0.3+1.22/2+0.11/2, -1.267+1.7/2, 0, 0, 0, 1], dimensions=[0.87+0.1, 0.11,1.8], geometric_type=GeometricPrimitive.BOX, alpha=0.5)
+# #笼车工作空间障碍物
+# collision_pallet_3 = build_collision(name="collision_pallet_3", origin=[2, -0.3+1.22/2+0.11/2, -1.267+1.7/2, 0, 0, 0, 1], dimensions=[0.87+0.1, 0.11,1.8], geometric_type=GeometricPrimitive.BOX, alpha=0.5)
 
 
 #前围栏
-collision_1 = build_collision(name="col_1", origin=[2.705+0.05, 0, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6.59,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
+collision_1 = build_collision(name="col_1", origin=[2.705+0.1, 0, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6.59,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
 
 #后围栏
 collision_2 = build_collision(name="col_2", origin=[-2.82-0.02, 0, -0.32+1.5/2, 0, 0, 0, 1], dimensions=[0.11, 6.59,2.3+1.5], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
@@ -105,7 +105,7 @@ collision_6 = build_collision(name="col_6", origin=[-0.08, 1.75, 2.43+0.04, 0, 0
 collision_7 = build_collision(name="col_7", origin=[0.05, 2.4, 2.3,  0.08682408, -0.49240388,  0.15038371,  0.85286854], dimensions=[1.5, 0.11], geometric_type=GeometricPrimitive.CYLINDER, alpha=0.2)
 
 #电气柜
-collision_8 = build_collision(name="col_8", origin=[2.05, -2.654, -0.47+1/2, 0, 0, 0.707, 0.707], dimensions=[1.54, 0.71,2+1], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
+collision_8 = build_collision(name="col_8", origin=[2.05+0.06, -2.654, -0.47+1/2, 0, 0, 0.707, 0.707], dimensions=[1.54, 0.71,2+1], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
 
 #机器人底座
 collision_9 = build_collision(name="col_9", origin=[0, 0, -0.8, 0, 0, 0, 1], dimensions=[1.25, 1.25,1.47], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
@@ -160,8 +160,8 @@ pe.collision_objects.append(collision_11)
 pe.collision_objects.append(collision_12)
 pe.collision_objects.append(collision_13)
 pe.collision_objects.append(collision_14)
-pe.collision_objects.append(collision_pallet_2)
-pe.collision_objects.append(collision_pallet_3)
+# pe.collision_objects.append(collision_pallet_2)
+# pe.collision_objects.append(collision_pallet_3)
 # pe.collision_objects.append(combined_collision)
 
 workspace_env = PlanningEnvironmentRos.from_ros_msg(pe)

@@ -337,6 +337,22 @@ ALL_ERROR["10018"] = {
     "de_tip": "已自动回报WCS虚拟储位匹配失败",
 }
 
+
+ALL_ERROR["10019"] = {
+    "error_code": "10019",
+    "error_msg": "scan code fault",
+    "zh_msg": "笼车空箱回收影像异常,无法获取空箱信息,重新连接机器人节点，然后点开始运行程序",
+    "tip": "请检查输送线以及JCS系统,将料箱放回到原先笼车,",
+    "ja_msg": "位置号匹配失败",
+    "ja_tip": "已自动回报WCS虚拟储位匹配失败",
+    "en_msg": "位置号匹配失败",
+    "en_tip": "已自动回报WCS虚拟储位匹配失败",
+    "de_msg": "位置号匹配失败",
+    "de_tip": "已自动回报WCS虚拟储位匹配失败",
+}
+
+
+
 ALL_ERROR["20000"] = {
     "error_code": "20000",
     "error_msg": "NoValidObjects",

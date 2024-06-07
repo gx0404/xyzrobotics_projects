@@ -1,0 +1,125 @@
+# Translations template for PROJECT.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-12-15 14:17+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: wcs_adaptor/depalletize/rafcon.py:288
+msgid "发生掉箱，本次掉箱的数目为: {0}，本次成功抓取的数目为: {1}"
+msgstr ""
+
+#: wcs_adaptor/depalletize/rafcon.py:309 wcs_adaptor/depalletize/rafcon.py:560
+msgid "任务进度: {0}/{1}"
+msgstr ""
+
+#: wcs_adaptor/depalletize/rafcon.py:564
+msgid "任务已结束"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:126
+msgid "抓取位({0})已到位"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:164
+msgid "放置位({0})已到位"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:208
+msgid "托盘({0})已清空"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:361 wcs_adaptor/depalletize/wcs.py:414
+#: wcs_adaptor/depalletize/wcs.py:509
+msgid "必须指定 target_num 或 sku_info.sku_num"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:379
+msgid "已收到单拆任务({0})，任务数量: {1}"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:431
+msgid "已收到单码任务({0})，任务数量: {1}"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:474
+msgid "已收到混拆任务({0})，任务数量: {1}"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:524
+msgid "已收到混码任务({0})，任务数量: {1}"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:659
+msgid "混码规划订单({0})规划完成，一共创建({1})个任务"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:666
+msgid "混码规划订单({0})规划失败，该订单已被删除"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:669
+msgid "收到混码规划订单({0})，正在规划中..."
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:691
+msgid "混码规划订单({0})规划失败"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:759
+msgid "收到混码任务({0})"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:787
+msgid "所有订单被清空"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs.py:789
+msgid "机器人运行中，订单删除失败"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs_request.py:131
+msgid "已回报放置位工作空间({0})已满, 托盘号({1})"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs_request.py:133
+msgid "已回报放置位工作空间({0})已满"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs_request.py:150
+msgid "已回报抓取位工作空间({0})已空, 托盘号({1})"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs_request.py:152
+msgid "已回报抓取位工作空间({0})已空"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs_request.py:187
+msgid "异常信息({0})已回报至WCS."
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs_request.py:227
+#: wcs_adaptor/depalletize/wcs_request.py:306
+msgid "回报任务{0}已完成"
+msgstr ""
+
+#: wcs_adaptor/depalletize/wcs_request.py:334
+msgid "回报订单{0}已完成"
+msgstr ""
+
+#: wcs_adaptor/override_views.py:36
+msgid "已清空任务"
+msgstr ""
+

@@ -1,6 +1,6 @@
 {
   "uuid": "a071812f-04ea-4b3a-a5fe-18f19f32a086",
-  "lastMigration": 27,
+  "lastMigration": 32,
   "name": "Wcs",
   "endpointPrefix": "",
   "latency": 0,
@@ -28,10 +28,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     },
@@ -56,10 +57,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     },
@@ -84,10 +86,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     },
@@ -112,10 +115,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     },
@@ -140,10 +144,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     },
@@ -168,10 +173,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     },
@@ -196,10 +202,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     },
@@ -224,10 +231,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     },
@@ -252,10 +260,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     },
@@ -280,10 +289,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     },
@@ -308,10 +318,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     },
@@ -336,10 +347,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     },
@@ -364,10 +376,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     },
@@ -392,10 +405,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     },
@@ -420,10 +434,11 @@
           "fallbackTo404": false,
           "default": true,
           "databucketID": "",
-          "bodyType": "INLINE"
+          "bodyType": "INLINE",
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
-      "enabled": true,
       "responseMode": null,
       "type": "http"
     }
@@ -522,5 +537,6 @@
       "type": "route",
       "uuid": "4fd7ea81-2ea2-43b1-bc07-1cb0a90108ee"
     }
-  ]
+  ],
+  "callbacks": []
 }
