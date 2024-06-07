@@ -3,10 +3,47 @@ from xyz_env_manager.msg import Pose
 from xyz_env_manager.client import modify_workspace_of_environment,get_planning_environment,modify_primitive_group_of_environment
 from xyz_motion import PlanningEnvironmentRos
 import tf.transformations as tfm
-from xyz_motion import SE3
+from xyz_motion import SE3,pose_to_list
 from xyz_env_manager.msg import PrimitiveGroup,Pose
 from xyz_env_manager.msg import GeometricPrimitive
 from xyz_env_manager.client import add_primitive_group_of_environment
+import numpy as np
+
+# modify vision result z axis
+def modify_z_axis(update_pose, fraction, tf_world_tote):
+    """
+    this is a funciton to modify the vision result z axis
+
+    Args:
+        update_pose: original vision result
+        fraction: the fraction between [0, 1], 0 means dont modify, and 1 means vision z axis parallel to workspace z axis
+        worskspace_id: vision workspace id
+    Returns:
+        new vision result
+    Exception:
+
+    """
+    quat_old = update_pose[3:]
+    tf_world_obj = SE3(update_pose).homogeneous
+    obj_x_axis_world = tf_world_obj[0:3, 0]
+
+    new_obj_z_axis = tf_world_tote[0:3, 2]
+    new_obj_y_axis = tfm.unit_vector(np.cross(new_obj_z_axis, obj_x_axis_world))
+    new_obj_x_axis = tfm.unit_vector(np.cross(new_obj_y_axis, new_obj_z_axis))
+
+    new_rot = np.array([new_obj_x_axis, new_obj_y_axis, new_obj_z_axis]).T
+    
+    pose_se3 = SE3(update_pose)
+    pose_se3.rotation = new_rot
+
+    quat_new = pose_se3.xyz_quat[3:7]
+
+    new_obj_quat = tfm.quaternion_slerp(quat0=quat_old, quat1=quat_new, fraction=fraction)
+
+    update_pose[3:] = new_obj_quat
+
+    return update_pose
+
 
 def build_collision(name, origin, dimensions, geometric_type, alpha):
     collision = PrimitiveGroup(name=name, origin=Pose(origin[0], origin[1], origin[2], origin[3], origin[4], origin[5], origin[6]))
@@ -56,6 +93,13 @@ def execute(self, inputs, outputs, gvm):
     #更新笼车工作空间
     update_pose = pallet_pose[0:3] +  undate_rotation   
     space_env_ros = space_env.to_ros_msg()
+    
+    #z轴垂直向上
+    fraction = 1.0
+    #work_space_ros = list(filter(lambda x:x.workspace_id==space_id,pl.workspaces))[0]
+    tf_world_tote = SE3(pose_to_list(space_env_ros.pallet.top_origin)).homogeneous
+    update_pose = modify_z_axis(update_pose, fraction, tf_world_tote)
+    
     space_env_ros.bottom_pose = Pose(*update_pose)
     modify_workspace_of_environment(space_env_ros)  
     self.logger.info("更新码垛托盘到环境")

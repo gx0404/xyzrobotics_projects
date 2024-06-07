@@ -47,8 +47,11 @@ def execute(self, inputs, outputs, gvm):
         if place_workspace_id == "1":
             outputs["place_drop_buffer"] = 0.02  
         #笼车     
-        elif place_workspace_id in ["2","3"]:
+        elif place_workspace_id in ["2"]:
             outputs["place_drop_buffer"] = 0.005   
+        #笼车     
+        elif place_workspace_id in ["3"]:
+            outputs["place_drop_buffer"] = 0.005              
         #其他           
         else:
             outputs["place_drop_buffer"] = 0.01         

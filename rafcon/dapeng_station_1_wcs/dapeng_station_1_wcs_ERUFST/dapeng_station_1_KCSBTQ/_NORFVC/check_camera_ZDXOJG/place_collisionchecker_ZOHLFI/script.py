@@ -93,7 +93,10 @@ def execute(self, inputs, outputs, gvm):
             init_tool_collisions.append(i)
         else:
             init_clamp_collision.append(i)            
-
+   #相机扩大一点
+    for i in init_clamp_collision:
+        if i.name == "body":
+            i.primitives[0].dimensions = [0.38, 0.58, 0.65]   
     #our robot
     our_robot_msg = check_our_robot.to_ros_msg()
 

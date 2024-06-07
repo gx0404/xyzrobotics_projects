@@ -437,7 +437,13 @@ def execute(self, inputs, outputs, gvm):
         self.logger.info(f"视觉未获取到下次抓取的箱子")
         raise f"视觉未获取到下次抓取的箱子"     
     update_items = list(filter(lambda x:x.additional_info.values[-3]==next_box_id,update_items))   
+    #更新grasp_plan要抓取的箱子
+    grasp_plan = inputs["grasp_plan"]
+    grasp_plan.objects[0].origin = update_items[0].origin
+    outputs["grasp_plan"] = grasp_plan
+    #更新环境要抓取的箱子      
     clear_container_items(vision_id,[i.name for i in update_items])
-    add_container_items(vision_id,update_items)    
+    add_container_items(vision_id,update_items)   
+    gvm.set_variable("motion_payload", None, per_reference=True) 
     return "success"
 

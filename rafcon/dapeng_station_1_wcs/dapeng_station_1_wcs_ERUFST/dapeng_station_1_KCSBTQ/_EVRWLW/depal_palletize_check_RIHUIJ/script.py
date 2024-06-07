@@ -33,21 +33,25 @@ class Stack:
   
 #过滤得到底层箱子
 def filter_bottom_items(items):
-
     combined_data = {}
     for item in items:
         #建立x,y坐标的键，同一列箱子xy坐标一致
         key = (round(item.origin.x,2), round(item.origin.y,2))
         if key not in combined_data.keys():
-            combined_data[key] = item
+            check_key_flag = False
+            for check_key in combined_data.keys():
+                #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
+                if abs(item.origin.x-check_key[0])<0.015 and abs(item.origin.y-check_key[1])<0.015:    
+                    check_key_flag = True
+            if not check_key_flag:                    
+                combined_data[key] = item
         else:   
             # 只保留Z最小的类实例
             if item.origin.z < combined_data[key].origin.z:
                 combined_data[key] = item
-
+ 
     new_items = list(combined_data.values())
     return new_items
-
 def all_direction_items(planning_env,container_items,current_direction):
     """
     获取所有转向的信息

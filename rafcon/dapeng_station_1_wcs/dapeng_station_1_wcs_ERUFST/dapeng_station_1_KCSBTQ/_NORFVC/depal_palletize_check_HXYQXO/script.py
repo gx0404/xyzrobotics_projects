@@ -33,18 +33,23 @@ class Stack:
   
 #过滤得到底层箱子
 def filter_bottom_items(items):
-
     combined_data = {}
     for item in items:
         #建立x,y坐标的键，同一列箱子xy坐标一致
         key = (round(item.origin.x,2), round(item.origin.y,2))
         if key not in combined_data.keys():
-            combined_data[key] = item
+            check_key_flag = False
+            for check_key in combined_data.keys():
+                #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
+                if abs(item.origin.x-check_key[0])<0.015 and abs(item.origin.y-check_key[1])<0.015:    
+                    check_key_flag = True
+            if not check_key_flag:                    
+                combined_data[key] = item
         else:   
             # 只保留Z最小的类实例
             if item.origin.z < combined_data[key].origin.z:
                 combined_data[key] = item
-
+ 
     new_items = list(combined_data.values())
     return new_items
 
@@ -245,22 +250,25 @@ def execute(self, inputs, outputs, gvm):
                 elif row_id in [5]: 
                     tf_base_box_real = tf_base_box_real*SE3([-0.0025,0.001,0,0,0,0,1])    
                     if lay_id<2:
-                        tf_base_box_real = tf_base_box_real*SE3([-0.0025,0.00,0,0,0,0,1]) 
+                        tf_base_box_real = tf_base_box_real*SE3([-0.0025,0.0015,0,0,0,0,1]) 
                     else:
                         tf_base_box_real = tf_base_box_real*SE3([-0.0025,0.001,0,0,0,0,1])                       
-                elif row_id in [6]: 
-                    tf_base_box_real = tf_base_box_real*SE3([-0.0025,0.0025,0,0,0,0,1])                                             
+                elif row_id in [6]:  
+                    if lay_id<2:
+                        tf_base_box_real = tf_base_box_real*SE3([-0.0025,0.0042,0,0,0,0,1]) 
+                    else:
+                        tf_base_box_real = tf_base_box_real*SE3([-0.0025,0.0028,0,0,0,0,1])                                                                
                 elif row_id in [7]:
                     if lay_id<2:
                         tf_base_box_real = tf_base_box_real*SE3([-0.001,-0.003,0,0,0,0,1]) 
                     else:
-                        tf_base_box_real = tf_base_box_real*SE3([0.001,-0.003,0,0,0,0,1])                      
+                        tf_base_box_real = tf_base_box_real*SE3([-0.001,-0.001,0,0,0,0,1])                      
                     tf_base_box_real = tf_base_box_real*SE3([0.001,-0.003,0,0,0,0,1])   
                 elif row_id in [8]:
                     tf_base_box_real = tf_base_box_real*SE3([0.001,0.001,0,0,0,0,1])                       
                 elif row_id in [0]:
                     if lay_id<2:
-                        tf_base_box_real = tf_base_box_real*SE3([0.00,0.00,0,0,0,0,1])  
+                        tf_base_box_real = tf_base_box_real*SE3([0.00,-0.002,0,0,0,0,1])  
                     else:
                         tf_base_box_real = tf_base_box_real*SE3([0.00,0.00,0,0,0,0,1])                            
             else:

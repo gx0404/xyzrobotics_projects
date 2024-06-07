@@ -12,8 +12,8 @@ nodes:
         logger: true
         debug: false
     position:
-      x: -3425.5865207944544
-      y: 288.78466524159978
+      x: -3428.0748407944538
+      y: 333.57442524159978
   - id: "{04a7db87-7813-404b-885e-212c6b45b1d0}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -112,8 +112,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 2197.1996912965301
-      y: 2720.7671710211521
+      x: 2385.5996912965297
+      y: 2631.2471710211521
     embedded_widget_rect:
       w: 877
       h: 607
@@ -292,7 +292,7 @@ nodes:
           - 600_400_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 85
+        min_detection_score: 83
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -489,16 +489,6 @@ nodes:
     position:
       x: 4031.8902758168942
       y: -1288.0865083435222
-  - id: "{30ad1509-55ba-43ec-be9f-65e37025d928}"
-    parent_id: "{00000000-0000-0000-0000-000000000000}"
-    model:
-      name: CloudSample
-      params:
-        leaf_size: 0.001
-        max_points: 0
-    position:
-      x: 765.92138381049847
-      y: -1020.0437805679493
   - id: "{31acc5f2-d06b-44d8-8240-2b34e8893d51}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -525,8 +515,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: -234.34022258373602
-      y: -4243.1301539625983
+      x: -293.0922225837362
+      y: -3937.274153962599
     embedded_widget_rect:
       w: 1950
       h: 1343
@@ -858,7 +848,7 @@ nodes:
           - 400_300_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 82
+        min_detection_score: 85
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -883,8 +873,8 @@ nodes:
           contrast: 30
           min_contrast: -1
     position:
-      x: 2037.6706144060608
-      y: 3310.6286621726567
+      x: 2037.6706144060604
+      y: 3312.0686621726572
   - id: "{518a1307-ed07-4f9b-9a79-8a867258f60b}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1652,7 +1642,7 @@ nodes:
           - 400_300_230
         detection_weak_contrast: 10
         detection_min_contrast: 10
-        min_detection_score: 80
+        min_detection_score: 82
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -1868,8 +1858,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 2333.8229923106719
-      y: -890.38252487497653
+      x: 2441.3184163106712
+      y: -911.2844128749764
     embedded_widget_rect:
       w: 880
       h: 587
@@ -2147,8 +2137,8 @@ nodes:
         cloud2d_plane: XY
         knn: 5
     position:
-      x: 4073.0622397329953
-      y: 2265.8110699482295
+      x: 4093.7982397329952
+      y: 2346.6814699482297
   - id: "{f10dd7ee-6dfb-494d-97f0-913437aab4bc}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -2219,8 +2209,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 1327.1070356003008
-      y: -737.65566127947022
+      x: 1399.6830356003011
+      y: -865.52766127947018
     embedded_widget_rect:
       w: 722
       h: 456
@@ -2772,6 +2762,11 @@ connections:
     in_index: 1
     out_id: "{7640ce02-acc2-4a64-ba97-1d5fddafc309}"
     out_index: 0
+  - id: "{65e6d1fa-6d3c-4073-a36c-6fc605b2279c}"
+    in_id: "{ea9974c7-d3b7-45c7-8dce-894819e7e5c6}"
+    in_index: 0
+    out_id: "{34cb6b26-45b4-49bf-a49a-b5f298ece61e}"
+    out_index: 0
   - id: "{66d9da02-f487-4071-85c8-b3f1ce4c4552}"
     in_id: "{05e165a0-a3e6-4e4c-8854-f95e82971886}"
     in_index: 0
@@ -2992,11 +2987,6 @@ connections:
     in_index: 0
     out_id: "{05378c69-8e8b-46ae-ac55-a3d509883578}"
     out_index: 1
-  - id: "{96ba0668-6757-4ca6-8e2e-339fab752180}"
-    in_id: "{ea9974c7-d3b7-45c7-8dce-894819e7e5c6}"
-    in_index: 0
-    out_id: "{30ad1509-55ba-43ec-be9f-65e37025d928}"
-    out_index: 0
   - id: "{96e7ac02-6ebe-4c67-8cc8-a4b8e91f64f6}"
     in_id: "{8d2c24a2-1ee6-4ab4-b06c-0ba1be36004c}"
     in_index: 0
@@ -3177,11 +3167,6 @@ connections:
     in_index: 0
     out_id: "{b86f19e4-af40-45bf-97c5-2ef0941d0fc0}"
     out_index: 1
-  - id: "{c525c59d-590e-4d47-aabb-03660e6b7525}"
-    in_id: "{30ad1509-55ba-43ec-be9f-65e37025d928}"
-    in_index: 0
-    out_id: "{34cb6b26-45b4-49bf-a49a-b5f298ece61e}"
-    out_index: 0
   - id: "{c5a11d5a-6f6f-4f48-be76-e86b9151b4ed}"
     in_id: "{0ebc2e72-2c32-4b78-879b-c39ab36f474e}"
     in_index: 0

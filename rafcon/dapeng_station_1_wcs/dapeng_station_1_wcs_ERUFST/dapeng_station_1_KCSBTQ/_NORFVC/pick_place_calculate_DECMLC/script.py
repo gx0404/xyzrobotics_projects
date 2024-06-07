@@ -247,7 +247,7 @@ class SEARCH_ASYNC():
                         if pick_path_key==8:
                             pass
                             #import ipdb;ipdb.set_trace()
-                        self.logger(f"放置开始后验,{plan_item.additional_info.values[-3]}")    
+                        #self.logger(f"放置开始后验,{plan_item.additional_info.values[-3]}")    
                         # if plan_item.additional_info.values[-3]=="25":
                         #     pass
                         #     import ipdb;ipdb.set_trace()
@@ -314,7 +314,7 @@ class SEARCH_ASYNC():
                         if pick_path_key==8:
                             pass
                             #import ipdb;ipdb.set_trace()
-                        self.logger(f"放置开始后验180,{plan_item.additional_info.values[-3]}")        
+                        #self.logger(f"放置开始后验180,{plan_item.additional_info.values[-3]}")        
                         # collision_flag = False 
                         # break
                         if check_place_slide_move(checker,kinematic_solver,check_joint):     

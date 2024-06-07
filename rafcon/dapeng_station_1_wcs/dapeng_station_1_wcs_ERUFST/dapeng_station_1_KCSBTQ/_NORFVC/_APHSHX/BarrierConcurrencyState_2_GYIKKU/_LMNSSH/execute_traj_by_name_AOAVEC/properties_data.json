@@ -45,7 +45,7 @@
     "data_source_type": {
         "acc": {
             "type_config": {
-                "current_type": "STATIC", 
+                "current_type": "INPUT_PORT", 
                 "optional_types": [
                     "STATIC", 
                     "INPUT_PORT"
@@ -117,7 +117,7 @@
         }, 
         "speed": {
             "type_config": {
-                "current_type": "STATIC", 
+                "current_type": "INPUT_PORT", 
                 "optional_types": [
                     "STATIC", 
                     "INPUT_PORT"

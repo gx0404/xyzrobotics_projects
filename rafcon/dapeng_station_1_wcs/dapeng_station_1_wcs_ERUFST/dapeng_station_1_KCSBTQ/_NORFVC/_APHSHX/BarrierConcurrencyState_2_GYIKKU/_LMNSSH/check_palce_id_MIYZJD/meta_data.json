@@ -110,5 +110,31 @@
                 }
             }
         }
+    }, 
+    "output_data_port1": {
+        "gui": {
+            "editor_gaphas": {
+                "rel_pos": {
+                    "__jsonqualname__": "__builtin__.tuple", 
+                    "items": [
+                        15.15967483150775, 
+                        21.138667252245092
+                    ]
+                }
+            }
+        }
+    }, 
+    "output_data_port2": {
+        "gui": {
+            "editor_gaphas": {
+                "rel_pos": {
+                    "__jsonqualname__": "__builtin__.tuple", 
+                    "items": [
+                        15.15967483150775, 
+                        19.925893265724472
+                    ]
+                }
+            }
+        }
     }
 }

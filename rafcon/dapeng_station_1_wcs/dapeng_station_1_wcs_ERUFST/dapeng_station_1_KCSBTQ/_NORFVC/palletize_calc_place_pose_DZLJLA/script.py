@@ -220,14 +220,25 @@ def execute(self, inputs, outputs, gvm):
 
         dropped_poses = []
         drop_buffer_list = []
+        place_id = str(self.smart_data["place_workspace_id"])
+        first_offset = False
         for i in range(1, palletize_layers+1, 1):
-            if i % 2 == 1:
+            if i % 2 == 1:            
+                if place_id in ["2","3"] and i==3:
+                    pass
+                    #import ipdb;ipdb.set_trace()  
+                    odd_poses[:, 1] -=0.003    
                 odd_poses[:, 2] = h + (i-1) * (h - overlapping_heihgt)
                 odd_tf = np.array([SE3(p).homogeneous for p in odd_poses])
+                
                 tf_base = np.matmul(pallet_tf, odd_tf)
                 if odd_layer_drop_buffer:
                     drop_buffer_list.extend(odd_layer_drop_buffer)
             else:
+                if place_id in ["2","3"] and i==2:
+                    pass
+                    #import ipdb;ipdb.set_trace()   
+                    even_poses[:, 1] -=0.003              
                 even_poses[:, 2] = h + (i-1) * (h - overlapping_heihgt)
                 even_tf = np.array([SE3(p).homogeneous for p in even_poses])
                 tf_base = np.matmul(pallet_tf, even_tf)

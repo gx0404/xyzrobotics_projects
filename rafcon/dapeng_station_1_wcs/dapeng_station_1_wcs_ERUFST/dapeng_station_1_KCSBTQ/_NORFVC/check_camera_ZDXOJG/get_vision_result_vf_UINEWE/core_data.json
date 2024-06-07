@@ -32,6 +32,15 @@
             }, 
             "default_value": null, 
             "name": "pick_box_id"
+        }, 
+        "6": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 6, 
+            "data_type": {
+                "__type__": "xyz_env_manager.msg._GraspPlan.GraspPlan"
+            }, 
+            "default_value": null, 
+            "name": "grasp_plan"
         }
     }, 
     "name": "get_vision_result_vf", 
@@ -75,6 +84,15 @@
             }, 
             "default_value": null, 
             "name": "collision_cloud"
+        }, 
+        "5": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.OutputDataPort", 
+            "data_port_id": 5, 
+            "data_type": {
+                "__type__": "xyz_env_manager.msg._GraspPlan.GraspPlan"
+            }, 
+            "default_value": null, 
+            "name": "grasp_plan"
         }
     }, 
     "source_file_path": "vision/get_vision_result_vf/get_vision_result_vf_DGGYIU/script.py", 
