@@ -3,7 +3,26 @@
     "path2rid": null,
     "resources": [
         {
-            "key": "{9b7c912c-8882-4577-8ce7-080f4893ad26}",
+            "key": "{fe2bdced-5414-45ea-8585-a15f0239e588}",
+            "value": {
+                "_RESOURCE_": "BoxShape",
+                "color": {
+                    "a": 0.2,
+                    "b": 1.0,
+                    "g": 0.55,
+                    "r": 0.1
+                },
+                "hide_vhacd": false,
+                "size": {
+                    "x": 1.5,
+                    "y": 0.5,
+                    "z": 0.6
+                },
+                "transparency": 0.2
+            }
+        },
+        {
+            "key": "{a0512d8e-8681-4b3a-b488-61e59639d106}",
             "value": {
                 "_RESOURCE_": "BoxShape",
                 "color": {
@@ -22,9 +41,47 @@
             }
         },
         {
-            "key": "{3bd3aeab-e749-45a8-8cdf-e37855941e4d}",
+            "key": "{dcd8681a-94b3-4d15-aa7a-f16fa1110347}",
             "value": {
-                "_RESOURCE_": "MeshShape",
+                "_RESOURCE_": "BoxShape",
+                "color": {
+                    "a": 1.0,
+                    "b": 0.471,
+                    "g": 0.678,
+                    "r": 0.859
+                },
+                "hide_vhacd": false,
+                "size": {
+                    "x": 1.2,
+                    "y": 1.0,
+                    "z": 0.15
+                },
+                "transparency": 1.0
+            }
+        },
+        {
+            "key": "{e5d0d5ca-c0dd-4feb-a1aa-4e3cf0ea405b}",
+            "value": {
+                "_RESOURCE_": "BoxShape",
+                "color": {
+                    "a": 1.0,
+                    "b": 0.705,
+                    "g": 0.705,
+                    "r": 0.705
+                },
+                "hide_vhacd": false,
+                "size": {
+                    "x": 1.5,
+                    "y": 0.6000000000000001,
+                    "z": 0.5
+                },
+                "transparency": 1.0
+            }
+        },
+        {
+            "key": "{7661ef61-9ba1-422d-9eb2-1c3af5b15207}",
+            "value": {
+                "_RESOURCE_": "ConvexShape",
                 "acd_done": false,
                 "acd_params": {
                     "enable_async": true,
@@ -40,16 +97,54 @@
                 },
                 "color": {
                     "a": 1.0,
-                    "b": 0.1568627450980392,
-                    "g": 0.47058823529411764,
-                    "r": 0.9647058823529412
+                    "b": 0.5,
+                    "g": 0.5,
+                    "r": 0.5
                 },
                 "enable_acd": false,
-                "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/link_4.stl",
+                "file_path": "",
                 "hide_vhacd": false,
                 "transparency": 1.0,
-                "triangle_count": 7999,
-                "vertex_count": 4045
+                "triangle_count": 0,
+                "vertex_count": 0
+            }
+        },
+        {
+            "key": "{52475d84-5620-4ffa-a817-01bf767e846d}",
+            "value": {
+                "_RESOURCE_": "BoxShape",
+                "color": {
+                    "a": 0.2,
+                    "b": 1.0,
+                    "g": 0.55,
+                    "r": 0.1
+                },
+                "hide_vhacd": false,
+                "size": {
+                    "x": 1.2,
+                    "y": 1.0,
+                    "z": 1.5
+                },
+                "transparency": 0.2
+            }
+        },
+        {
+            "key": "{a4316e66-fc35-45b7-b181-270ac2be9865}",
+            "value": {
+                "_RESOURCE_": "BoxShape",
+                "color": {
+                    "a": 1.0,
+                    "b": 0.471,
+                    "g": 0.678,
+                    "r": 0.859
+                },
+                "hide_vhacd": false,
+                "size": {
+                    "x": 1.2,
+                    "y": 1.0,
+                    "z": 0.15
+                },
+                "transparency": 1.0
             }
         },
         {
@@ -103,66 +198,9 @@
             }
         },
         {
-            "key": "{118eac5a-df3c-4d35-950d-3ca64428cbec}",
+            "key": "{3bd3aeab-e749-45a8-8cdf-e37855941e4d}",
             "value": {
-                "_RESOURCE_": "BoxShape",
-                "color": {
-                    "a": 0.2,
-                    "b": 1.0,
-                    "g": 0.55,
-                    "r": 0.1
-                },
-                "hide_vhacd": false,
-                "size": {
-                    "x": 1.5,
-                    "y": 0.5,
-                    "z": 0.6
-                },
-                "transparency": 0.2
-            }
-        },
-        {
-            "key": "{a4316e66-fc35-45b7-b181-270ac2be9865}",
-            "value": {
-                "_RESOURCE_": "BoxShape",
-                "color": {
-                    "a": 1.0,
-                    "b": 0.471,
-                    "g": 0.678,
-                    "r": 0.859
-                },
-                "hide_vhacd": false,
-                "size": {
-                    "x": 1.2,
-                    "y": 1.0,
-                    "z": 0.15
-                },
-                "transparency": 1.0
-            }
-        },
-        {
-            "key": "{52475d84-5620-4ffa-a817-01bf767e846d}",
-            "value": {
-                "_RESOURCE_": "BoxShape",
-                "color": {
-                    "a": 0.2,
-                    "b": 1.0,
-                    "g": 0.55,
-                    "r": 0.1
-                },
-                "hide_vhacd": false,
-                "size": {
-                    "x": 1.2,
-                    "y": 1.0,
-                    "z": 1.5
-                },
-                "transparency": 0.2
-            }
-        },
-        {
-            "key": "{7661ef61-9ba1-422d-9eb2-1c3af5b15207}",
-            "value": {
-                "_RESOURCE_": "ConvexShape",
+                "_RESOURCE_": "MeshShape",
                 "acd_done": false,
                 "acd_params": {
                     "enable_async": true,
@@ -178,35 +216,16 @@
                 },
                 "color": {
                     "a": 1.0,
-                    "b": 0.5,
-                    "g": 0.5,
-                    "r": 0.5
+                    "b": 0.1568627450980392,
+                    "g": 0.47058823529411764,
+                    "r": 0.9647058823529412
                 },
                 "enable_acd": false,
-                "file_path": "",
+                "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/link_4.stl",
                 "hide_vhacd": false,
                 "transparency": 1.0,
-                "triangle_count": 0,
-                "vertex_count": 0
-            }
-        },
-        {
-            "key": "{e5d0d5ca-c0dd-4feb-a1aa-4e3cf0ea405b}",
-            "value": {
-                "_RESOURCE_": "BoxShape",
-                "color": {
-                    "a": 1.0,
-                    "b": 0.705,
-                    "g": 0.705,
-                    "r": 0.705
-                },
-                "hide_vhacd": false,
-                "size": {
-                    "x": 1.5,
-                    "y": 0.6000000000000001,
-                    "z": 0.5
-                },
-                "transparency": 1.0
+                "triangle_count": 7999,
+                "vertex_count": 4045
             }
         },
         {
@@ -229,45 +248,7 @@
             }
         },
         {
-            "key": "{dcd8681a-94b3-4d15-aa7a-f16fa1110347}",
-            "value": {
-                "_RESOURCE_": "BoxShape",
-                "color": {
-                    "a": 1.0,
-                    "b": 0.471,
-                    "g": 0.678,
-                    "r": 0.859
-                },
-                "hide_vhacd": false,
-                "size": {
-                    "x": 1.2,
-                    "y": 1.0,
-                    "z": 0.15
-                },
-                "transparency": 1.0
-            }
-        },
-        {
-            "key": "{a0512d8e-8681-4b3a-b488-61e59639d106}",
-            "value": {
-                "_RESOURCE_": "BoxShape",
-                "color": {
-                    "a": 1.0,
-                    "b": 0.7049973296711681,
-                    "g": 0.7049973296711681,
-                    "r": 0.7049973296711681
-                },
-                "hide_vhacd": false,
-                "size": {
-                    "x": 1.5,
-                    "y": 0.05,
-                    "z": 0.05
-                },
-                "transparency": 1.0
-            }
-        },
-        {
-            "key": "{fe2bdced-5414-45ea-8585-a15f0239e588}",
+            "key": "{118eac5a-df3c-4d35-950d-3ca64428cbec}",
             "value": {
                 "_RESOURCE_": "BoxShape",
                 "color": {
@@ -286,38 +267,45 @@
             }
         },
         {
-            "key": "{8b3b5a46-29c7-4208-b760-7a842dc3e913}",
+            "key": "{9b7c912c-8882-4577-8ce7-080f4893ad26}",
             "value": {
-                "_RESOURCE_": "MeshShape",
-                "acd_done": false,
-                "acd_params": {
-                    "enable_async": true,
-                    "export_series_stl": false,
-                    "find_best_plane": false,
-                    "max_vertices_per_convex_hull": 64,
-                    "min_edge_length": 2,
-                    "min_volume_percent_error": 1.0,
-                    "num_of_convex_hull": 16,
-                    "recursion_depth": 10,
-                    "show_detail_log": false,
-                    "voxel_resolution": 400000
-                },
+                "_RESOURCE_": "BoxShape",
                 "color": {
                     "a": 1.0,
-                    "b": 0.1568627450980392,
-                    "g": 0.47058823529411764,
-                    "r": 0.9647058823529412
+                    "b": 0.7049973296711681,
+                    "g": 0.7049973296711681,
+                    "r": 0.7049973296711681
                 },
-                "enable_acd": false,
-                "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/link_1.stl",
                 "hide_vhacd": false,
-                "transparency": 1.0,
-                "triangle_count": 7999,
-                "vertex_count": 3920
+                "size": {
+                    "x": 1.5,
+                    "y": 0.05,
+                    "z": 0.05
+                },
+                "transparency": 1.0
             }
         },
         {
-            "key": "{73adc92b-97ab-4924-806a-95a821fc317f}",
+            "key": "{4ba3b015-919e-4c6f-a3c1-99e3492d958c}",
+            "value": {
+                "_RESOURCE_": "BoxShape",
+                "color": {
+                    "a": 1.0,
+                    "b": 0.705,
+                    "g": 0.705,
+                    "r": 0.705
+                },
+                "hide_vhacd": false,
+                "size": {
+                    "x": 1.5,
+                    "y": 0.6000000000000001,
+                    "z": 0.5
+                },
+                "transparency": 1.0
+            }
+        },
+        {
+            "key": "{37217519-cb2f-45bc-84b4-253b384f3329}",
             "value": {
                 "_RESOURCE_": "ConvexShape",
                 "acd_done": false,
@@ -340,15 +328,46 @@
                     "r": 0.5
                 },
                 "enable_acd": false,
-                "file_path": "",
+                "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/collision/link_3.stl",
                 "hide_vhacd": false,
                 "transparency": 1.0,
-                "triangle_count": 0,
-                "vertex_count": 0
+                "triangle_count": 12,
+                "vertex_count": 8
             }
         },
         {
-            "key": "{76b06654-3c44-4e12-a8bf-3d1d2810455e}",
+            "key": "{beacfce1-9320-47f1-9964-57201e4b6121}",
+            "value": {
+                "_RESOURCE_": "MeshShape",
+                "acd_done": false,
+                "acd_params": {
+                    "enable_async": true,
+                    "export_series_stl": false,
+                    "find_best_plane": false,
+                    "max_vertices_per_convex_hull": 64,
+                    "min_edge_length": 2,
+                    "min_volume_percent_error": 1.0,
+                    "num_of_convex_hull": 16,
+                    "recursion_depth": 10,
+                    "show_detail_log": false,
+                    "voxel_resolution": 400000
+                },
+                "color": {
+                    "a": 1.0,
+                    "b": 0.06274509803921569,
+                    "g": 0.054901960784313725,
+                    "r": 0.054901960784313725
+                },
+                "enable_acd": false,
+                "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/base_link.stl",
+                "hide_vhacd": false,
+                "transparency": 1.0,
+                "triangle_count": 5000,
+                "vertex_count": 2355
+            }
+        },
+        {
+            "key": "{4d74e9a0-2b43-428a-99f9-e6ff5b1b588a}",
             "value": {
                 "_RESOURCE_": "MeshShape",
                 "acd_done": false,
@@ -371,11 +390,11 @@
                     "r": 0.9647058823529412
                 },
                 "enable_acd": false,
-                "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/link_2.stl",
+                "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/link_5.stl",
                 "hide_vhacd": false,
                 "transparency": 1.0,
-                "triangle_count": 8000,
-                "vertex_count": 4004
+                "triangle_count": 4999,
+                "vertex_count": 2386
             }
         },
         {
@@ -491,6 +510,99 @@
             }
         },
         {
+            "key": "{73adc92b-97ab-4924-806a-95a821fc317f}",
+            "value": {
+                "_RESOURCE_": "ConvexShape",
+                "acd_done": false,
+                "acd_params": {
+                    "enable_async": true,
+                    "export_series_stl": false,
+                    "find_best_plane": false,
+                    "max_vertices_per_convex_hull": 64,
+                    "min_edge_length": 2,
+                    "min_volume_percent_error": 1.0,
+                    "num_of_convex_hull": 16,
+                    "recursion_depth": 10,
+                    "show_detail_log": false,
+                    "voxel_resolution": 400000
+                },
+                "color": {
+                    "a": 1.0,
+                    "b": 0.5,
+                    "g": 0.5,
+                    "r": 0.5
+                },
+                "enable_acd": false,
+                "file_path": "",
+                "hide_vhacd": false,
+                "transparency": 1.0,
+                "triangle_count": 0,
+                "vertex_count": 0
+            }
+        },
+        {
+            "key": "{76b06654-3c44-4e12-a8bf-3d1d2810455e}",
+            "value": {
+                "_RESOURCE_": "MeshShape",
+                "acd_done": false,
+                "acd_params": {
+                    "enable_async": true,
+                    "export_series_stl": false,
+                    "find_best_plane": false,
+                    "max_vertices_per_convex_hull": 64,
+                    "min_edge_length": 2,
+                    "min_volume_percent_error": 1.0,
+                    "num_of_convex_hull": 16,
+                    "recursion_depth": 10,
+                    "show_detail_log": false,
+                    "voxel_resolution": 400000
+                },
+                "color": {
+                    "a": 1.0,
+                    "b": 0.1568627450980392,
+                    "g": 0.47058823529411764,
+                    "r": 0.9647058823529412
+                },
+                "enable_acd": false,
+                "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/link_2.stl",
+                "hide_vhacd": false,
+                "transparency": 1.0,
+                "triangle_count": 8000,
+                "vertex_count": 4004
+            }
+        },
+        {
+            "key": "{8b3b5a46-29c7-4208-b760-7a842dc3e913}",
+            "value": {
+                "_RESOURCE_": "MeshShape",
+                "acd_done": false,
+                "acd_params": {
+                    "enable_async": true,
+                    "export_series_stl": false,
+                    "find_best_plane": false,
+                    "max_vertices_per_convex_hull": 64,
+                    "min_edge_length": 2,
+                    "min_volume_percent_error": 1.0,
+                    "num_of_convex_hull": 16,
+                    "recursion_depth": 10,
+                    "show_detail_log": false,
+                    "voxel_resolution": 400000
+                },
+                "color": {
+                    "a": 1.0,
+                    "b": 0.1568627450980392,
+                    "g": 0.47058823529411764,
+                    "r": 0.9647058823529412
+                },
+                "enable_acd": false,
+                "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/link_1.stl",
+                "hide_vhacd": false,
+                "transparency": 1.0,
+                "triangle_count": 7999,
+                "vertex_count": 3920
+            }
+        },
+        {
             "key": "{73cad7f1-2744-48d7-8206-8c82f7a13d7a}",
             "value": {
                 "_RESOURCE_": "ConvexShape",
@@ -550,118 +662,6 @@
                 "transparency": 1.0,
                 "triangle_count": 0,
                 "vertex_count": 0
-            }
-        },
-        {
-            "key": "{beacfce1-9320-47f1-9964-57201e4b6121}",
-            "value": {
-                "_RESOURCE_": "MeshShape",
-                "acd_done": false,
-                "acd_params": {
-                    "enable_async": true,
-                    "export_series_stl": false,
-                    "find_best_plane": false,
-                    "max_vertices_per_convex_hull": 64,
-                    "min_edge_length": 2,
-                    "min_volume_percent_error": 1.0,
-                    "num_of_convex_hull": 16,
-                    "recursion_depth": 10,
-                    "show_detail_log": false,
-                    "voxel_resolution": 400000
-                },
-                "color": {
-                    "a": 1.0,
-                    "b": 0.06274509803921569,
-                    "g": 0.054901960784313725,
-                    "r": 0.054901960784313725
-                },
-                "enable_acd": false,
-                "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/base_link.stl",
-                "hide_vhacd": false,
-                "transparency": 1.0,
-                "triangle_count": 5000,
-                "vertex_count": 2355
-            }
-        },
-        {
-            "key": "{4d74e9a0-2b43-428a-99f9-e6ff5b1b588a}",
-            "value": {
-                "_RESOURCE_": "MeshShape",
-                "acd_done": false,
-                "acd_params": {
-                    "enable_async": true,
-                    "export_series_stl": false,
-                    "find_best_plane": false,
-                    "max_vertices_per_convex_hull": 64,
-                    "min_edge_length": 2,
-                    "min_volume_percent_error": 1.0,
-                    "num_of_convex_hull": 16,
-                    "recursion_depth": 10,
-                    "show_detail_log": false,
-                    "voxel_resolution": 400000
-                },
-                "color": {
-                    "a": 1.0,
-                    "b": 0.1568627450980392,
-                    "g": 0.47058823529411764,
-                    "r": 0.9647058823529412
-                },
-                "enable_acd": false,
-                "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/visual/link_5.stl",
-                "hide_vhacd": false,
-                "transparency": 1.0,
-                "triangle_count": 4999,
-                "vertex_count": 2386
-            }
-        },
-        {
-            "key": "{37217519-cb2f-45bc-84b4-253b384f3329}",
-            "value": {
-                "_RESOURCE_": "ConvexShape",
-                "acd_done": false,
-                "acd_params": {
-                    "enable_async": true,
-                    "export_series_stl": false,
-                    "find_best_plane": false,
-                    "max_vertices_per_convex_hull": 64,
-                    "min_edge_length": 2,
-                    "min_volume_percent_error": 1.0,
-                    "num_of_convex_hull": 16,
-                    "recursion_depth": 10,
-                    "show_detail_log": false,
-                    "voxel_resolution": 400000
-                },
-                "color": {
-                    "a": 1.0,
-                    "b": 0.5,
-                    "g": 0.5,
-                    "r": 0.5
-                },
-                "enable_acd": false,
-                "file_path": "resources/robots/models/KUKA-KR-180-R3200-PA/meshes/collision/link_3.stl",
-                "hide_vhacd": false,
-                "transparency": 1.0,
-                "triangle_count": 12,
-                "vertex_count": 8
-            }
-        },
-        {
-            "key": "{4ba3b015-919e-4c6f-a3c1-99e3492d958c}",
-            "value": {
-                "_RESOURCE_": "BoxShape",
-                "color": {
-                    "a": 1.0,
-                    "b": 0.705,
-                    "g": 0.705,
-                    "r": 0.705
-                },
-                "hide_vhacd": false,
-                "size": {
-                    "x": 1.5,
-                    "y": 0.6000000000000001,
-                    "z": 0.5
-                },
-                "transparency": 1.0
             }
         }
     ]

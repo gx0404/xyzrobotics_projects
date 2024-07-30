@@ -377,8 +377,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 686.80686512096088
-      y: -1451.6023227497151
+      x: 529.9781614172573
+      y: -1490.9541746015673
     embedded_widget_rect:
       w: 756
       h: 470
@@ -524,7 +524,7 @@ nodes:
           - 600_400_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 75
+        min_detection_score: 78
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -1091,7 +1091,7 @@ nodes:
         using_mask: true
         output_organized: true
     position:
-      x: 906.50590379410687
+      x: 907.94590379410693
       y: -778.17066310983819
   - id: "{adc90993-1aa1-44f2-9b35-754fec95d2d9}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"

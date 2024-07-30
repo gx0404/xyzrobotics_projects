@@ -152,7 +152,7 @@ def execute(self, inputs, outputs, gvm):
     #添加一个放置姿态的机器人
     our_robot_msg.tool.tool_collisions.primitives = []
     our_robot_msg.tool.tool_collisions.primitives.append(GeometricPrimitive(type=GeometricPrimitive.BOX, dimensions=[0.55, 0.3, 0.2], relative_pose=Pose(-0.352-0.209/2, 0, 0.0835, 0, 0, 0.707, 0.707)))
-    our_robot_msg.tool.tool_collisions.primitives.append(GeometricPrimitive(type=GeometricPrimitive.BOX, dimensions=[0.700-0.08, 0.5-0.04, 0.7], relative_pose=Pose(0, 0, 0.08+0.7/2+0.07, 0, 0, 0, 1)))
+    our_robot_msg.tool.tool_collisions.primitives.append(GeometricPrimitive(type=GeometricPrimitive.BOX, dimensions=[0.700-0.1, 0.5-0.04, 0.7], relative_pose=Pose(0, 0, 0.08+0.7/2+0.07, 0, 0, 0, 1)))
     for clamp_collision in un_clamp_collision:
         our_robot_msg.tool.tool_collisions.primitives.append(clamp_collision.primitives[0]) 
     gvm.set_variable("our_robot_msg", our_robot_msg, per_reference=True)         

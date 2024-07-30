@@ -239,7 +239,7 @@ class SEARCH_ASYNC():
                     if checker.check_point_collision(check_joint):
                         continue
                     else:
-                        self.logger(f"放置开始后验,{plan_item.additional_info.values[-3]}")    
+                        #self.logger(f"放置开始后验,{plan_item.additional_info.values[-3]}")    
                         # if plan_item.additional_info.values[-3]=="33":
                         #     import ipdb;ipdb.set_trace()
                         if check_place_slide_move(checker,kinematic_solver,check_joint):     

@@ -180,8 +180,8 @@ class SEARCH_ASYNC():
             #添加碰撞检测器
                 checker = CollisionChecker(check_robot, planning_env)   
                 if checker.check_point_collision(check_joint[0]):
-                    if pick_path_key==8:
-                        pass
+                    #if container_item.additional_info.values[-3]=="24":
+                        #pass
                         #import ipdb;ipdb.set_trace() 
                     continue
                 else:
@@ -239,9 +239,9 @@ class SEARCH_ASYNC():
                     #添加碰撞检测器
                     checker = CollisionChecker(check_robot, planning_env)   
                     if checker.check_point_collision(check_joint):
-                        # if plan_item.additional_info.values[-3]=="25":
-                        #     pass
-                        #     import ipdb;ipdb.set_trace()
+                        if plan_item.additional_info.values[-3]=="2":
+                            pass
+                            #import ipdb;ipdb.set_trace()
                         continue
                     else:
                         if pick_path_key==8:
@@ -534,7 +534,7 @@ def execute(self, inputs, outputs, gvm):
    #相机扩大一点
     for i in init_clamp_collision:
         if i.name == "camera":
-            i.primitives[0].dimensions = [0.55, 0.3+0.03, 0.2]
+            i.primitives[0].dimensions = [0.55, 0.33, 0.2]
         if i.name == "body":
             i.primitives[0].dimensions = [0.38, 0.58, 0.65]    
                    
