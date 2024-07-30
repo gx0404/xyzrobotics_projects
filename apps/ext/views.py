@@ -20,8 +20,7 @@ bp = Blueprint("ext", __name__, url_prefix="/api/ext")
 @openapi.api_doc(tags=["XLHB", "扩展接口"], summary="获取当前任务")
 def get_current_task():
     """获取正在执行的任务.""" 
-    
-    
+     
     try:
         #import ipdb;ipdb.set_trace() 
         all_history_tasks = HistoryTaskModel.query.all()
@@ -30,8 +29,8 @@ def get_current_task():
         today_tasks = []
         for history_task in all_history_tasks:
             if history_task.end_time.strftime("%Y-%m-%d")==now_day:   
-                if history_task.task_id not in [i.task_id for i in today_tasks]: 
-                    today_tasks.append(history_task)
+                today_tasks.append(history_task)
+                    
                 
         #import ipdb;ipdb.set_trace()
         running_time = 0
@@ -48,41 +47,52 @@ def get_current_task():
         
         check_tasks_0 = []
         check_tasks_1 = []
+        
+        #点击的时间
         #白班
         if datetime.now().hour < 20 and datetime.now().hour >= 8:
             for history_task in all_history_tasks:
                 if history_task.end_time.strftime("%Y-%m-%d")==now_day: 
                     if history_task.end_time.hour >= 8 and history_task.end_time.hour <20:
-                        check_tasks_0.append(history_task) 
+                        if history_task.task_id not in [i.task_id for i in check_tasks_0]: 
+                            check_tasks_0.append(history_task) 
                     if history_task.end_time.hour>=0 and history_task.end_time.hour <8:
-                        check_tasks_1.append(history_task)
+                        if history_task.task_id not in [i.task_id for i in check_tasks_1]:                        
+                            check_tasks_1.append(history_task)
                                   
                 if history_task.end_time.day==datetime.now().day-1 and\
-                    history_task.end_time.hour <= 23 and history_task.end_time.hour >=20: 
-                    check_tasks_1.append(history_task)  
+                    history_task.end_time.hour <= 23 and history_task.end_time.hour >=20:  
+                    if history_task.task_id not in [i.task_id for i in check_tasks_1]:                        
+                        check_tasks_1.append(history_task)                    
                                
         #夜班             
         elif datetime.now().hour >= 20 and datetime.now().hour <= 23:
             for history_task in all_history_tasks:
                 if history_task.end_time.strftime("%Y-%m-%d")==now_day and history_task.end_time.hour >= 8\
                     and history_task.end_time.hour <20:
-                        check_tasks_0.append(history_task)  
+                    if history_task.task_id not in [i.task_id for i in check_tasks_0]: 
+                        check_tasks_0.append(history_task)                         
                 if history_task.end_time.strftime("%Y-%m-%d")==now_day and history_task.end_time.hour >= 20\
                 and history_task.end_time.hour <= 23:
-                    check_tasks_1.append(history_task)   
+                    if history_task.task_id not in [i.task_id for i in check_tasks_1]:                        
+                        check_tasks_1.append(history_task)                       
+
                                   
         
         elif datetime.now().hour >= 0 and datetime.now().hour < 8:
             for history_task in all_history_tasks:
                 if history_task.end_time.day==datetime.now().day-1 and history_task.end_time.hour >=8\
                     and history_task.end_time.hour <20:
-                    check_tasks_0.append(history_task)  
+                    if history_task.task_id not in [i.task_id for i in check_tasks_0]: 
+                        check_tasks_0.append(history_task) 
                 if history_task.end_time.day==datetime.now().day-1 and history_task.end_time.hour >=20\
                     and history_task.end_time.hour<=23:
-                    check_tasks_1.append(history_task)                            
+                    if history_task.task_id not in [i.task_id for i in check_tasks_1]:                        
+                        check_tasks_1.append(history_task)                                                    
                 if history_task.end_time.strftime("%Y-%m-%d")==now_day and history_task.end_time.hour >= 0\
                     and history_task.end_time.hour <8:
-                    check_tasks_1.append(history_task)   
+                    if history_task.task_id not in [i.task_id for i in check_tasks_1]:                        
+                        check_tasks_1.append(history_task)   
         
         #import ipdb;ipdb.set_trace()               
                                     

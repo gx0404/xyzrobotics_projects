@@ -907,7 +907,7 @@ class A_STAR_ASYNC():
          else:           
             if current_direction!=direction:
                self.logger(f"{current_process_id}进程,{direction}面计算得到{all_paths},但是转向,等待中")
-               wait_time = 60
+               wait_time = 120
                current_time = time.time()
                while True:
                   if time.time()-current_time>wait_time or self.termination_event.is_set():

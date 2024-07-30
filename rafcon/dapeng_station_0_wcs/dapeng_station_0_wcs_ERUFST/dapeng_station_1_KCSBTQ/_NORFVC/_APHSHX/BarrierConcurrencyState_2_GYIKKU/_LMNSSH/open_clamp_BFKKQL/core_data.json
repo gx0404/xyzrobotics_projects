@@ -28,6 +28,14 @@
     "scoped_variables": {}, 
     "state_id": "BFKKQL", 
     "transitions": {
+        "22": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 1, 
+            "from_state": "QNOXPP", 
+            "to_outcome": -1, 
+            "to_state": "BFKKQL", 
+            "transition_id": 22
+        }, 
         "26": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
@@ -51,14 +59,6 @@
             "to_outcome": null, 
             "to_state": "QNOXPP", 
             "transition_id": 104
-        }, 
-        "106": {
-            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
-            "from_outcome": 1, 
-            "from_state": "QNOXPP", 
-            "to_outcome": -1, 
-            "to_state": "BFKKQL", 
-            "transition_id": 106
         }, 
         "107": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 

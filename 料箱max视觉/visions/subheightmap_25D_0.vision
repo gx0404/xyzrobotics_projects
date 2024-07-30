@@ -1583,7 +1583,7 @@ nodes:
           - 600_400_230
         detection_weak_contrast: 20
         detection_min_contrast: 20
-        min_detection_score: 85
+        min_detection_score: 83
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -1608,8 +1608,8 @@ nodes:
           contrast: 30
           min_contrast: -1
     position:
-      x: 1961.3653767704973
-      y: -2463.3884632346171
+      x: 1961.3653767704971
+      y: -2466.2684632346177
   - id: "{b3fb55db-f657-4650-8172-e498d84f2915}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:

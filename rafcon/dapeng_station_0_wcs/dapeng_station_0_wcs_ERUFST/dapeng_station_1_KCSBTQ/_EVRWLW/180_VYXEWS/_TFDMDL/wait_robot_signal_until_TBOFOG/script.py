@@ -91,6 +91,7 @@ def execute(self, inputs, outputs, gvm):
         if gvm.variable_exist("ERROR"):
             return "timeout"
         if (time.time() - start_time) > self.smart_data["timeout"]:
+            from xyz_logistics_hmi_back.utils.utils import send_order_log
             msg = f"等待夹紧打开信号超时,信号地址为{port_ids}"
             send_order_log(message=msg, status=False)
             from xyz_io_client.io_client import set_digit_output

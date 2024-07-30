@@ -107,8 +107,8 @@ def close_buzzer():
     """
     try:
         plc.close_buzzer()
-        from wcs_adaptor.depalletize.rafcon import init_error
-        init_error()
+        # from wcs_adaptor.depalletize.rafcon import init_error
+        # init_error()
     except rospy.service.ServiceException as exc:
         raise XYZBaseError(error_message="蜂鸣器关闭失败, io_node 服务不可用") from exc
     except Exception as exc:

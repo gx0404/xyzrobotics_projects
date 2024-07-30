@@ -72,7 +72,7 @@ def execute(self, inputs, outputs, gvm):
     for i in range(3):
         self.logger.info(f"{aixs_list[i]}方向偏差为{pallet_pose[i]-check_pose[i]}")  
     pallet_pose[2]+=0.01    
-    pallet_pose[0]-=0.012 
+    pallet_pose[0]-=0.018
     if abs(pallet_pose[0]-check_pose[0])>0.05:
         raise "x方向偏差过大"  
     else:
