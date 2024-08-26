@@ -41,7 +41,7 @@ def filter_bottom_items(items):
             check_key_flag = False
             for check_key in combined_data.keys():
                 #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
-                if abs(item.origin.x-check_key[0])<0.018 and abs(item.origin.y-check_key[1])<0.018:    
+                if abs(item.origin.x-check_key[0])<0.02 and abs(item.origin.y-check_key[1])<0.02:    
                     check_key_flag = True
             if not check_key_flag:                    
                 combined_data[key] = item
@@ -132,8 +132,8 @@ def all_direction_items(planning_env,container_items,current_direction):
 #求角点坐标
 def get_rect_corners(item):
     l,w,h = item.primitives[0].dimensions
-    l-=0.0025
-    w-=0.0025
+    l-=0.0023
+    w-=0.0023
     tfs_box_vertices = [[l/2, w/2, 0, 0, 0, 0, 1], [-l/2, w/2, 0, 0, 0, 0, 1], [-l/2, -w/2, 0, 0, 0, 0, 1], [l/2, -w/2, 0, 0, 0, 0, 1]]
     tf_world_box = SE3(pose_to_list(item.origin))
     tfs_world_vertices = [(tf_world_box * SE3(tf)).xyz_quat for tf in tfs_box_vertices]

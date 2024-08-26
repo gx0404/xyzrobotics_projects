@@ -553,6 +553,14 @@
             "to_state": "VNKCOD", 
             "transition_id": 36
         }, 
+        "38": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 1, 
+            "from_state": "CEPGTI", 
+            "to_outcome": null, 
+            "to_state": "CEPGTI", 
+            "transition_id": 38
+        }, 
         "40": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
@@ -720,14 +728,6 @@
             "to_outcome": null, 
             "to_state": "TFDMDL", 
             "transition_id": 96
-        }, 
-        "97": {
-            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
-            "from_outcome": 1, 
-            "from_state": "CEPGTI", 
-            "to_outcome": null, 
-            "to_state": "CEPGTI", 
-            "transition_id": 97
         }, 
         "98": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 

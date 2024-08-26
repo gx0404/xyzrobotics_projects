@@ -239,9 +239,9 @@ class SEARCH_ASYNC():
                     #添加碰撞检测器
                     checker = CollisionChecker(check_robot, planning_env)   
                     if checker.check_point_collision(check_joint):
-                        if plan_item.additional_info.values[-3]=="2":
+                        if plan_item.additional_info.values[-3]=="4":
                             pass
-                            #import ipdb;ipdb.set_trace()
+                            # import ipdb;ipdb.set_trace()
                         continue
                     else:
                         if pick_path_key==8:

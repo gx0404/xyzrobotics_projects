@@ -1237,10 +1237,10 @@
         }, 
         "32": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
-            "from_outcome": -1, 
-            "from_state": "HXYQXO", 
+            "from_outcome": 1, 
+            "from_state": "DECMLC", 
             "to_outcome": null, 
-            "to_state": "AKGPZH", 
+            "to_state": "UGQBVZ", 
             "transition_id": 32
         }, 
         "33": {
@@ -1507,6 +1507,14 @@
             "to_state": "WTOEBN", 
             "transition_id": 65
         }, 
+        "66": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": -1, 
+            "from_state": "HXYQXO", 
+            "to_outcome": null, 
+            "to_state": "AKGPZH", 
+            "transition_id": 66
+        }, 
         "67": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
@@ -1714,14 +1722,6 @@
             "to_outcome": null, 
             "to_state": "XYBVCV", 
             "transition_id": 92
-        }, 
-        "93": {
-            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
-            "from_outcome": 1, 
-            "from_state": "DECMLC", 
-            "to_outcome": null, 
-            "to_state": "UGQBVZ", 
-            "transition_id": 93
         }, 
         "95": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
