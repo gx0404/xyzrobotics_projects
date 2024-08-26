@@ -332,14 +332,15 @@ def execute(self, inputs, outputs, gvm):
             check_items = filter_layer_items(container_items)
             space_pose_obj_z = check_items[0].origin.z+tip_pose_z+sku_max_height+0.2
         else:
-            space_pose_obj_z = work_space_pose[2]+tip_pose_z+sku_max_height+0.2              
-        if space_pose_obj_z<1.1:
-            space_pose_obj_z = 1.1 
+            space_pose_obj_z = work_space_pose[2]+tip_pose_z+sku_max_height+0.2     
+                     
+        if space_pose_obj_z<1:
+            space_pose_obj_z = 1 
             offset_z = space_pose_obj_z
         else:     
             pose_base_flange = copy.deepcopy(tf_map_flange_list_out[0])
             offset_z = space_pose_obj_z- pose_base_flange[2]
-            self.logger.info(f"offset_z为{offset_z}")
+        self.logger.info(f"offset_z为{offset_z}")
         
         z_precision = 0.03
             
