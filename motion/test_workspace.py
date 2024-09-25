@@ -103,7 +103,7 @@ collision_13 = build_collision(name="col_13", origin=[0, 0 ,3, 0, 0, 0, 1], dime
 collision_5 = build_collision(name="col_5", origin=[0.893, 2.824, 0.730, 0, 0, 0, 1], dimensions=[4.4, 0.2+0.02], geometric_type=GeometricPrimitive.CYLINDER, alpha=0.2)
 
 #相机
-collision_6 = build_collision(name="col_6", origin=[-0.08, 1.75, 2.43+0.04, 0, 0, 0, 1], dimensions=[1,1,0.2], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
+collision_6 = build_collision(name="col_6", origin=[-0.04, 1.9, 2.43+0.04, 0, 0, 0, 1], dimensions=[1.5,1.5,0.25], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
 
 #相机斜杆
 collision_7 = build_collision(name="col_7", origin=[0.05, 2.4, 2.3,  0.08682408, -0.49240388,  0.15038371,  0.85286854], dimensions=[1.5, 0.11], geometric_type=GeometricPrimitive.CYLINDER, alpha=0.2)
@@ -179,7 +179,7 @@ workspace_env = PlanningEnvironmentRos.from_ros_msg(pe)
 ## 例如这里可以使用 roscd fanuc_r2000ic_support 进入目录
 all_robots = AllRobotToolStates()
 robot_config = set_robot_config(robot_id="0", robot_description_name="kuka_kr180", child_model="r3200_pa", \
-                                base_transform=[0, 0, 0, 0, 0, 0, 1], upper_limit=[185, -5, 154.5, 350], lower_limit=[-185, -140, 0, -350])
+                                base_transform=[0, 0, 0, 0, 0, 0, 1], upper_limit=[185, -5.05, 154.5, 350], lower_limit=[-185, -139.95, 0, -350])
 all_robots.robot_configs.append(robot_config)
 
 
@@ -189,7 +189,7 @@ all_robots.robot_configs.append(robot_config)
 
 tool_name = "tool1"
 
-tip_primitive_1 = bulid_tip_primitive(tool_name = tool_name, id="tp_1", tf_tool_region=([0.128433,
+tip_primitive_1 = bulid_tip_primitive(tool_name = tool_name, id="tp_1", tf_tool_region=([0.128433+0.002,
  0.0,
  0.782879,
  0.0,

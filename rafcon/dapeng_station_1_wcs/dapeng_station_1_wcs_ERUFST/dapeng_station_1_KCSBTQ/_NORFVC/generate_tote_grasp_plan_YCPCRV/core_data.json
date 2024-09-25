@@ -14,15 +14,6 @@
             }, 
             "default_value": null, 
             "name": "sku_info"
-        }, 
-        "5": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
-            "data_port_id": 5, 
-            "data_type": {
-                "__type__": "__builtin__.list"
-            }, 
-            "default_value": null, 
-            "name": "shortest_path"
         }
     }, 
     "name": "generate_tote_grasp_plan", 
@@ -90,15 +81,6 @@
             }, 
             "default_value": null, 
             "name": "pick_box_id"
-        }, 
-        "6": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_port.OutputDataPort", 
-            "data_port_id": 6, 
-            "data_type": {
-                "__type__": "__builtin__.list"
-            }, 
-            "default_value": null, 
-            "name": "check_object_poses"
         }, 
         "7": {
             "__jsonqualname__": "rafcon.core.state_elements.data_port.OutputDataPort", 

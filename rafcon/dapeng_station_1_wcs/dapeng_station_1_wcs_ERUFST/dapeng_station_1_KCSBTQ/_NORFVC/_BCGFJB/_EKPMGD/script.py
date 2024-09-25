@@ -68,13 +68,13 @@ def execute(self, inputs, outputs, gvm):
             
     if not len(check_collision):
         self.logger.info(f"未检测到机械臂在检测的空间内")
-        other_non_collision_workspace_ids = []+["7","8"]
+        outputs["other_non_collision_workspace_ids"] = []+["7","8"]
     elif len(check_collision)==1:
         self.logger.info(f"检测到机械臂在空间{list(check_collision.keys())[0]}内")
-        other_non_collision_workspace_ids = [str(list(check_collision.keys())[0])]+["7","8"]
+        #outputs["space_id"] = str(list(check_collision.keys())[0])
+        outputs["other_non_collision_workspace_ids"] = [str(list(check_collision.keys())[0])]+["7","8"]
     else: 
         self.logger.info(f"检测到机械臂在多个空间内，或已经碰撞，无法自动回home")
         self.logger.info(f"空间为{check_collision}")               
         raise f"检测到机械臂在多个空间内，或已经碰撞，无法自动回home"
-    outputs["other_non_collision_workspace_ids"] = other_non_collision_workspace_ids     
     return "success"

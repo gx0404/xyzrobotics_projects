@@ -1,0 +1,27 @@
+one_camera_[2]:
+- id: '{5167e216-0bee-45c0-bcde-4330f578a7b3}'
+  model:
+    name: XYZCamera
+    params:
+      cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043090015.json
+      id: L340XP043090015
+  parent_id: '{00000000-0000-0000-0000-000000000000}'
+- id: '{5018f7e8-b2eb-469a-aab3-81cba7277373}'
+  model:
+    name: SBMEstimator
+    params:
+      detection_targets:
+      - '400_300_230_1'
+  parent_id: '{00000000-0000-0000-0000-000000000000}'
+- id: '{87e22c96-a7f9-4daa-92ac-6639e791a3ac}'
+  model:
+    name: CalculateTopLayerHeight
+    params:
+      layer_min_points: 2500
+  parent_id: '{00000000-0000-0000-0000-000000000000}'
+- id: '{78bd81ce-19ef-435b-9a99-869dc3fd09d0}'
+  model:
+    name: LoadCameraCalibInfo
+    params:
+      calib_file: calibration/camera/L340XP043090015/camera_extrinsic.yml
+  parent_id: '{00000000-0000-0000-0000-000000000000}'

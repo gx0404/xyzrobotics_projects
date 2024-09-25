@@ -12,22 +12,39 @@ from xyz_env_manager.msg import Pose
 
 
 #过滤得到顶层箱子
-def filter_layer_items(items):
+def filter_layer_items(items,row_flag=True):
+    #两种模式,一种只取最高层，另一种则是每列箱子的最高层
+    if row_flag:
+        combined_data = {}
+        for item in items:
+            #建立x,y坐标的键，同一列箱子xy坐标一致
+            key = (round(item.origin.x,2), round(item.origin.y,2))
+            if key not in combined_data.keys():
+                #判断原先字典是否有xy近似的key的标志flag
+                check_key_flag = False
+                for check_key in combined_data.keys():
+                    #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
+                    if abs(item.origin.x-check_key[0])<0.015 and abs(item.origin.y-check_key[1])<0.015:    
+                        check_key_flag = True
+                        break      
+                #如果不存在标志,则说明是个新列                   
+                if not check_key_flag:                    
+                    combined_data[key] = item
+                #如果存在,则说明是老列,则需要判断是否保留z最大的实例   
+                else:
+                    if item.origin.z > combined_data[check_key].origin.z:
+                        combined_data[check_key] = item        
+            else:   
+                # 只保留Z最大的类实例
+                if item.origin.z > combined_data[key].origin.z:
+                    combined_data[key] = item
 
-    combined_data = {}
-    for item in items:
-        #建立x,y坐标的键，同一列箱子xy坐标一致
-        key = (round(item.origin.x,2), round(item.origin.y,2))
-        if key not in combined_data.keys():
-            combined_data[key] = item
-        else:   
-            # 只保留Z最大的类实例
-            if item.origin.z > combined_data[key].origin.z:
-                combined_data[key] = item
-
-    new_items = list(combined_data.values())
-    max_z = max(i.origin.z for i in items)
-    new_items = list(filter(lambda x:abs(x.origin.z-max_z)<0.1,items))
+        new_items = list(combined_data.values())
+        
+    #只考虑最高列,不考虑每列层数不同   
+    else:
+        max_z = max(i.origin.z for i in items)
+        new_items = list(filter(lambda x:abs(x.origin.z-max_z)<0.1,items))
     return new_items
 
 
@@ -99,9 +116,8 @@ def execute(self, inputs, outputs, gvm):
              
     if not check_joints:   
         self.logger.info("放置点ik无解")                     
-        return "fail"  
-
-    
+        return "fail"
+     
     """
     根据tool 生成需要判断的挡板碰撞体
     tool0:400*300*230  
@@ -116,8 +132,15 @@ def execute(self, inputs, outputs, gvm):
         if i.name in tool_check_collision_list:
             init_tool_collisions.append(i)
         else:
-            init_clamp_collision.append(i)            
-
+            init_clamp_collision.append(i)     
+                   
+    #夹具本体缩小一点
+    for i in init_clamp_collision:
+        if i.name == "body":
+            i.primitives[0].dimensions = [0.382, 0.582, 0.65] 
+        if i.name == "camera":
+            i.primitives[0].dimensions = [0.6, 0.33+0.05, 0.25]     
+            
     #our robot
     our_robot_msg = check_our_robot.to_ros_msg()
 
@@ -196,25 +219,21 @@ def execute(self, inputs, outputs, gvm):
     else:
         check_un_clamp_collision = [all_un_clamp_collision]        
         
-    use_slide = None    
+        
     for un_clamp_collision in check_un_clamp_collision:
         un_clamp_collision_name = [i.name for i in un_clamp_collision]
         #选择检测使用偏移值
         slide_list = self.smart_data["slide_move"]   
+        #初始化机器人msg
+        check_our_robot_msg = copy.copy(our_robot_msg)        
         #添加一个抓取姿态的机器人
-        our_robot_msg.tool.tool_collisions.primitives = []
-
-        #缩小相机
-        for i in init_clamp_collision:
-            if i.name == "camera":
-                i.primitives[0].dimensions = [0.55, 0.33, 0.2]
-                        
-        our_robot_msg.tool.tool_collisions.primitives=[i.primitives[0] for i in init_clamp_collision]
+        check_our_robot_msg.tool.tool_collisions.primitives = []                        
+        check_our_robot_msg.tool.tool_collisions.primitives=[i.primitives[0] for i in init_clamp_collision]
         for clamp_collision in un_clamp_collision:
-            our_robot_msg.tool.tool_collisions.primitives.append(clamp_collision.primitives[0])     
+            check_our_robot_msg.tool.tool_collisions.primitives.append(clamp_collision.primitives[0])     
 
         #检测哪个偏移点不干涉    
-        check_slide_robot = RobotRos.from_ros_msg(our_robot_msg)
+        check_slide_robot = RobotRos.from_ros_msg(check_our_robot_msg)
         attached_collision_object = gvm.get_variable("attached_collision_object", per_reference=False, default=None)
         attached_collision_object.origin_tip_transform = Pose(0,0,0,1,0,0,0)
         check_slide_robot.attach_object(attached_collision_object,[])
@@ -262,17 +281,17 @@ def execute(self, inputs, outputs, gvm):
             new_slide_y = []
             for i in range(1,abs(split_x_length)+1):
                 if split_x_length>0:
-                    if i*precision>=0.012:
+                    if i*precision>=0.014:
                         new_slide_x.append(i*precision)
                 else:
-                    if -i*precision<=-0.012:
+                    if -i*precision<=-0.014:
                         new_slide_x.append(-i*precision)        
             for i in range(1,abs(split_y_length)+1):
                 if split_y_length>0:
-                    if i*precision>=0.012:
+                    if i*precision>=0.014:
                         new_slide_y.append(i*precision)
                 else:
-                    if -i*precision<=-0.012:
+                    if -i*precision<=-0.014:
                         new_slide_y.append(-i*precision)   
             return_list = [[x,y]+slide[2:7] for x,y in zip(new_slide_x,new_slide_y)]                               
             return return_list        
@@ -280,6 +299,7 @@ def execute(self, inputs, outputs, gvm):
             
                 
         #偏移检测
+        use_slide = None
         use_slide_list = []
         for check_slide in check_slide_list:
             # 指定精度
@@ -330,7 +350,7 @@ def execute(self, inputs, outputs, gvm):
         sku_max_height = 0.3
         
         if container_items:
-            check_items = filter_layer_items(container_items)
+            check_items = filter_layer_items(container_items,False)
             space_pose_obj_z = check_items[0].origin.z+tip_pose_z+sku_max_height+0.2
         else:
             space_pose_obj_z = work_space_pose[2]+tip_pose_z+sku_max_height+0.2              
@@ -414,11 +434,11 @@ def execute(self, inputs, outputs, gvm):
         use_slide[1] = 0.06
     else:
         use_slide[1] = -0.06 
-    use_slide[2] = 0.03                  
+    use_slide[2] = 0.03                   
     outputs["slide"] = [use_slide]  
     self.logger.info(use_slide)
     post_slide = copy.deepcopy(use_slide)
-    post_slide[2] = -0.01
+    post_slide[2] = 0.04
     outputs["post_slide"] = [post_slide] 
      
     outputs["un_clamp_collision"] = un_clamp_collision

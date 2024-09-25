@@ -98,8 +98,13 @@ def execute(self, inputs, outputs, gvm):
         if i.name in tool_check_collision_list:
             init_tool_collisions.append(i)
         else:
-            init_clamp_collision.append(i)            
-
+            init_clamp_collision.append(i)     
+                   
+    #夹具本体缩小一点
+    #for i in init_clamp_collision:
+        #if i.name == "body":
+            #i.primitives[0].dimensions = [0.38, 0.58, 0.65] 
+            
     #our robot
     our_robot_msg = check_our_robot.to_ros_msg()
 
@@ -156,7 +161,7 @@ def execute(self, inputs, outputs, gvm):
         our_robot_msg.tool.tool_collisions.primitives.append(clamp_collision.primitives[0]) 
     for clamp_collision in init_clamp_collision:
         our_robot_msg.tool.tool_collisions.primitives.append(clamp_collision.primitives[0])         
-    gvm.set_variable("our_robot_msg", our_robot_msg, per_reference=True)         
+    gvm.set_variable("our_robot_msg", our_robot_msg, per_reference=True)          
 
     tf_flange_jonits = list(map(lambda x:kinematic_solver.convert_six_dof_to_four(x),tf_flange_jonits))
                   

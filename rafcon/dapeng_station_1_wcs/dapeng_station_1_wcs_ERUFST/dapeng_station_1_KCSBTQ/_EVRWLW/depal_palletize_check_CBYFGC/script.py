@@ -32,25 +32,38 @@ class Stack:
       return self.top is None
   
 #过滤得到底层箱子
-def filter_bottom_items(items):
-    combined_data = {}
-    for item in items:
-        #建立x,y坐标的键，同一列箱子xy坐标一致
-        key = (round(item.origin.x,2), round(item.origin.y,2))
-        if key not in combined_data.keys():
-            check_key_flag = False
-            for check_key in combined_data.keys():
-                #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
-                if abs(item.origin.x-check_key[0])<0.015 and abs(item.origin.y-check_key[1])<0.015:    
-                    check_key_flag = True
-            if not check_key_flag:                    
-                combined_data[key] = item
-        else:   
-            # 只保留Z最小的类实例
-            if item.origin.z < combined_data[key].origin.z:
-                combined_data[key] = item
- 
-    new_items = list(combined_data.values())
+def filter_bottom_items(items,row_flag=True):
+    #两种模式,一种只取最低层，另一种则是每列箱子的最低层
+    if row_flag:
+        combined_data = {}
+        for item in items:
+            #建立x,y坐标的键，同一列箱子xy坐标一致
+            key = (round(item.origin.x,2), round(item.origin.y,2))
+            if key not in combined_data.keys():
+                #判断原先字典是否有xy近似的key的标志flag
+                check_key_flag = False
+                for check_key in combined_data.keys():
+                    #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
+                    if abs(item.origin.x-check_key[0])<0.015 and abs(item.origin.y-check_key[1])<0.015:    
+                        check_key_flag = True
+                        break
+                #如果不存在标志,则说明是个新列         
+                if not check_key_flag:                    
+                    combined_data[key] = item
+                #如果存在,则说明是老列,则需要判断是否保留z最小的实例   
+                else:
+                    if item.origin.z < combined_data[check_key].origin.z:
+                        combined_data[check_key] = item                  
+            else:   
+                # 只保留Z最小的类实例
+                if item.origin.z < combined_data[key].origin.z:
+                    combined_data[key] = item
+
+        new_items = list(combined_data.values())
+    #只考虑最低列,不考虑每列层数不同      
+    else:    
+        min_z = min(i.origin.z for i in items)
+        new_items = list(filter(lambda x:abs(x.origin.z-min_z)<0.1,items))    
     return new_items
 
 def all_direction_items(planning_env,container_items,current_direction):
@@ -231,33 +244,47 @@ def execute(self, inputs, outputs, gvm):
                 container_item.additional_info.keys.append("to_ws")
                 container_item.additional_info.values.append("")   
                 
-            if row==5:
-                row_id = int(box_id)%row
-                lay_id = int(box_id)//row                  
-                if row_id in [1,2,3]:                    
-                    tf_base_box_real = SE3([0.002,-0.002,0,0,0,0,1])*tf_base_box_real
-                elif row_id in [0,4]:
-                    tf_base_box_real = tf_base_box_real*SE3([0.00,0.00,0,0,0,0,1])     
-            elif row==9:
-                row_id = int(box_id)%row
-                lay_id = int(box_id)//row
-                if row_id in [1,2]:
-                    tf_base_box_real = tf_base_box_real*SE3([0.002,0.002,0,0,0,0,1]) 
-                elif row_id in [3,4]:     
-                    tf_base_box_real = tf_base_box_real*SE3([0.0015,0.0015,0,0,0,0,1]) 
-                elif row_id in [5]: 
-                    tf_base_box_real = tf_base_box_real*SE3([-0.0025,0.001,0,0,0,0,1])    
-                elif row_id in [6]: 
-                    tf_base_box_real = tf_base_box_real*SE3([-0.0025,0.0025,0,0,0,0,1])                                             
-                elif row_id in [7]:
-                    tf_base_box_real = tf_base_box_real*SE3([-0.001,-0.001,0,0,0,0,1])   
-                elif row_id in [8]:
-                    tf_base_box_real = tf_base_box_real*SE3([0.001,0.001,0,0,0,0,1])                       
-                elif row_id in [0]:
-                    tf_base_box_real = tf_base_box_real*SE3([0.00,-0.00,0,0,0,0,1])                    
-            else:
-                raise "无效的row" 
-            container_item.origin = Pose(*tf_base_box_real.xyz_quat)                                          
+                    
+            # if row==5:
+            #     tf_base_box_real = SE3([0.00,0.000,0,0,0,0,1])*tf_base_box_real
+            #     row_id = int(box_id)%row
+            #     lay_id = int(box_id)//row
+            #     if row_id in [0]:
+            #         tf_base_box_real = tf_base_box_real*SE3([0.003,0,0,0,0,0,1]) 
+            #     elif row_id in [1]:    
+            #         tf_base_box_real = tf_base_box_real*SE3([0.003,0,0,0,0,0,1])     
+            #     else:
+            #         tf_base_box_real = tf_base_box_real*SE3([0.0015,0.001,0,0,0,0,1])
+            # elif row==9:
+            #     # tf_base_box_real = SE3([0.003,-0.0015,0,0,0,0,1])*tf_base_box_real 
+            #     row_id = int(box_id)%row
+            #     lay_id = int(box_id)//row
+            #     if row_id in [1,2]:
+            #         tf_base_box_real = tf_base_box_real*SE3([0.0015,0.0005,0,0,0,0,1]) 
+            #     elif row_id in [3,4]:     
+            #         tf_base_box_real = tf_base_box_real*SE3([0.0015,0.002,0,0,0,0,1]) 
+            #     elif row_id in [5]: 
+            #         tf_base_box_real = tf_base_box_real*SE3([-0.0015,0.001,0,0,0,0,1])       
+            #     elif row_id in [6]: 
+            #         if lay_id <2:
+            #             tf_base_box_real = tf_base_box_real*SE3([-0.0015,0.002,0,0,0,0,1])       
+            #         else:
+            #             tf_base_box_real = tf_base_box_real*SE3([-0.0015,0.001,0,0,0,0,1])                                                               
+            #     elif row_id in [7]:
+            #         tf_base_box_real = tf_base_box_real*SE3([-0.002,-0.001,0,0,0,0,1])   
+            #     elif row_id in [8]:
+            #         if lay_id <2:
+            #             tf_base_box_real = tf_base_box_real*SE3([0.0025,0.002,0,0,0,0,1])    
+            #         else:
+            #             tf_base_box_real = tf_base_box_real*SE3([0.0025,0.003,0,0,0,0,1])                         
+            #     elif row_id in [0]:
+            #         if lay_id <2:
+            #             tf_base_box_real = tf_base_box_real*SE3([0.0025,0.001,0,0,0,0,1])   
+            #         else:
+            #             tf_base_box_real = tf_base_box_real*SE3([0.0025,0.002,0,0,0,0,1])                                    
+            # else:
+            #     raise "无效的row"       
+            # container_item.origin = Pose(*tf_base_box_real.xyz_quat)                   
         else:
             self.logger.info(f"托盘数据缺少位置号{box_id}")
             raise f"托盘数据缺少位置号"               

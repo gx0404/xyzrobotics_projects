@@ -70,8 +70,8 @@ def execute(self, inputs, outputs, gvm):
         raise Exception("最大等待时间应大于最大监测持续时间")
 
     while not self.preempted:
-        if gvm.variable_exist("ERROR"):
-            return "timeout"
+        #if gvm.variable_exist("ERROR"):
+            #return "timeout"
         if (time.time() - start_time) > self.smart_data["timeout"]:
             return "timeout"
         if rob_driver.get_robotstatus()["simulation"]:

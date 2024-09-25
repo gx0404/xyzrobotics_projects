@@ -2,9 +2,9 @@
     "data_source": {
         "outcome_transitions": {
             "LMNSSH_放置执行:0_success --and-- LJFGOF_视觉更新:0_success": 0, 
-            "LMNSSH_放置执行:0_success --and-- LJFGOF_视觉更新:1_move_camera": 1, 
+            "LMNSSH_放置执行:0_success --and-- LJFGOF_视觉更新:2_pick_complete": 1, 
             "LMNSSH_放置执行:1_task_finish --and-- LJFGOF_视觉更新:0_success": 2, 
-            "LMNSSH_放置执行:1_task_finish --and-- LJFGOF_视觉更新:1_move_camera": 3
+            "LMNSSH_放置执行:1_task_finish --and-- LJFGOF_视觉更新:2_pick_complete": 3
         }
     }, 
     "data_source_translation": {
@@ -12,8 +12,14 @@
         "/outcome_transitions/LMNSSH_HierarchyState 3:0_success": "", 
         "/outcome_transitions/LMNSSH_放置执行:0_success --and-- LJFGOF_视觉更新:0_success": "", 
         "/outcome_transitions/LMNSSH_放置执行:0_success --and-- LJFGOF_视觉更新:1_move_camera": "", 
+        "/outcome_transitions/LMNSSH_放置执行:0_success --and-- LJFGOF_视觉更新:1_task_finish": "", 
+        "/outcome_transitions/LMNSSH_放置执行:0_success --and-- LJFGOF_视觉更新:2_box_empty": "", 
+        "/outcome_transitions/LMNSSH_放置执行:0_success --and-- LJFGOF_视觉更新:2_pick_complete": "", 
         "/outcome_transitions/LMNSSH_放置执行:1_task_finish --and-- LJFGOF_视觉更新:0_success": "", 
-        "/outcome_transitions/LMNSSH_放置执行:1_task_finish --and-- LJFGOF_视觉更新:1_move_camera": ""
+        "/outcome_transitions/LMNSSH_放置执行:1_task_finish --and-- LJFGOF_视觉更新:1_move_camera": "", 
+        "/outcome_transitions/LMNSSH_放置执行:1_task_finish --and-- LJFGOF_视觉更新:1_task_finish": "", 
+        "/outcome_transitions/LMNSSH_放置执行:1_task_finish --and-- LJFGOF_视觉更新:2_box_empty": "", 
+        "/outcome_transitions/LMNSSH_放置执行:1_task_finish --and-- LJFGOF_视觉更新:2_pick_complete": ""
     }, 
     "data_source_type": {
         "outcome_transitions": {
@@ -28,7 +34,7 @@
                     "value_options": []
                 }
             }, 
-            "LMNSSH_放置执行:0_success --and-- LJFGOF_视觉更新:1_move_camera": {
+            "LMNSSH_放置执行:0_success --and-- LJFGOF_视觉更新:2_pick_complete": {
                 "type_config": {
                     "current_type": "STATIC", 
                     "excluded_keys": {}, 
@@ -50,7 +56,7 @@
                     "value_options": []
                 }
             }, 
-            "LMNSSH_放置执行:1_task_finish --and-- LJFGOF_视觉更新:1_move_camera": {
+            "LMNSSH_放置执行:1_task_finish --and-- LJFGOF_视觉更新:2_pick_complete": {
                 "type_config": {
                     "current_type": "STATIC", 
                     "excluded_keys": {}, 

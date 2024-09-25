@@ -11,6 +11,7 @@ nodes:
         retake_num: 5
         logger: true
         debug: false
+        use_organized: true
     position:
       x: -5731.1572228437299
       y: -59.190907323733285
@@ -59,6 +60,7 @@ nodes:
       params:
         mode: Common
         transform_frame: World
+        transform_frame_id: ""
     position:
       x: 2140.4160354404326
       y: 2545.9983111021884
@@ -139,6 +141,7 @@ nodes:
       name: CalculateInstancePrimitivePose
       params:
         mode: polygon
+        using_largest_connection: false
         object_min_points: 2000
         plane_min_inlier_ratio: 0.5
         plane_max_z_angle: 15
@@ -176,6 +179,7 @@ nodes:
       name: CloudTrans
       params:
         transform_frame: Workspace
+        transform_frame_id: ""
     position:
       x: -1511.1849399764533
       y: 2494.3983140064629
@@ -226,6 +230,7 @@ nodes:
       params:
         mode: Common
         transform_frame: World
+        transform_frame_id: ""
     position:
       x: 1565.6744504082419
       y: 1249.9364786425849
@@ -307,6 +312,7 @@ nodes:
       params:
         mode: Common
         transform_frame: World
+        transform_frame_id: ""
     position:
       x: 1917.2627614285802
       y: -2092.9018502361096
@@ -328,6 +334,7 @@ nodes:
         using_mask: true
         using_offset: false
         output_organized: true
+        shrink_prop: 1.0
     position:
       x: -5386.4279226709314
       y: 1504.1169639594652
@@ -464,7 +471,9 @@ nodes:
       params:
         mode: 2D Primitives
         using_mask: true
+        using_offset: false
         output_organized: true
+        shrink_prop: 1.0
     position:
       x: 580.85759277376837
       y: 2525.2676657688553
@@ -532,6 +541,9 @@ nodes:
         show_score: true
         show_edge: false
         global_pose: true
+        use_rotated_nms: false
+        use_icp: true
+        use_fusion: false
         train_params:
           projection_type: orthographic
           cut_from_top: -1
@@ -639,6 +651,7 @@ nodes:
       name: CalculateInstancePrimitivePose
       params:
         mode: polygon
+        using_largest_connection: false
         object_min_points: 2000
         plane_min_inlier_ratio: 0.5
         plane_max_z_angle: 15
@@ -729,6 +742,7 @@ nodes:
       name: CloudTrans
       params:
         transform_frame: Workspace
+        transform_frame_id: ""
     position:
       x: -3252.3473403903977
       y: 19.609029324800176
@@ -738,6 +752,7 @@ nodes:
       name: CalculateInstancePrimitivePose
       params:
         mode: polygon
+        using_largest_connection: false
         object_min_points: 2000
         plane_min_inlier_ratio: 0.5
         plane_max_z_angle: 15
@@ -756,6 +771,7 @@ nodes:
       name: CalculateInstancePrimitivePose
       params:
         mode: polygon
+        using_largest_connection: false
         object_min_points: 2000
         plane_min_inlier_ratio: 0.5
         plane_max_z_angle: 15
@@ -1047,8 +1063,8 @@ nodes:
       x: 889.95665183723713
       y: -2960.2338216133867
     embedded_widget_rect:
-      w: 761
-      h: 546
+      w: 888
+      h: 687
   - id: "{a6f5c6a1-bdf7-4e1c-a725-000574db2acd}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1056,7 +1072,9 @@ nodes:
       params:
         mode: 2D Primitives
         using_mask: true
+        using_offset: false
         output_organized: true
+        shrink_prop: 1.0
     position:
       x: 315.76230276191512
       y: -1886.0065115694422
@@ -1089,7 +1107,9 @@ nodes:
       params:
         mode: 2D Primitives
         using_mask: true
+        using_offset: false
         output_organized: true
+        shrink_prop: 1.0
     position:
       x: 907.94590379410693
       y: -778.17066310983819
@@ -1134,6 +1154,7 @@ nodes:
       name: CloudTrans
       params:
         transform_frame: Workspace
+        transform_frame_id: ""
     position:
       x: -1029.5966289561147
       y: -815.10668153889583
@@ -1184,6 +1205,7 @@ nodes:
       params:
         mode: Common
         transform_frame: World
+        transform_frame_id: ""
     position:
       x: 2492.0043464607716
       y: -796.84001777650474
@@ -1216,11 +1238,11 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: -415.08737535115381
-      y: -3568.9937590637373
+      x: -686.72897535115351
+      y: -3471.5345590637389
     embedded_widget_rect:
-      w: 935
-      h: 1044
+      w: 1226
+      h: 1305
   - id: "{c4194923-86b8-4b0e-8fdd-d1a2f10a7319}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1446,7 +1468,9 @@ nodes:
       params:
         mode: 2D Primitives
         using_mask: true
+        using_offset: false
         output_organized: true
+        shrink_prop: 1.0
     position:
       x: -10.674392258423325
       y: 1311.9098333092518
@@ -1471,6 +1495,9 @@ nodes:
         show_score: true
         show_edge: false
         global_pose: true
+        use_rotated_nms: false
+        use_icp: true
+        use_fusion: false
         train_params:
           projection_type: orthographic
           cut_from_top: -1

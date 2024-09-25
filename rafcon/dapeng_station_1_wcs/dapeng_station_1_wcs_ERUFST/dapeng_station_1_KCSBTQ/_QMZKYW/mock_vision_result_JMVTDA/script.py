@@ -281,15 +281,15 @@ def execute(self, inputs, outputs, gvm):
                 layout[i][0:3] = layout[i][0:3]+[-x_diff, y_diff, 0]
                 row = gvm.get_variable("row", per_reference=False, default=None)
                 if row ==9:
-                    layout[i][0] = layout[i][0]+[L-w]-0.032
-                    layout[i][1]-=0.008
-                    layout[i][2]-=0.01
+                    layout[i][0] = layout[i][0]+[L-w]-0.027
+                    layout[i][1]-=0.016
+                    layout[i][2]-=0.0
                 elif row ==5:
-                    layout[i][0] = layout[i][0]+[L-l]-0.031  
-                    layout[i][1]-=0.008
-                    layout[i][2]-=0.01
+                    layout[i][0] = layout[i][0]+[L-l]-0.028  
+                    layout[i][1]-=0.016
+                    layout[i][2]-=0.0
                 else:
-                    raise "无效的row"         
+                    raise "无效的row"          
                 layout[i][3:7] = sku_quat
             elif alignment == u"upper_right":
                 layout[i][0:3] = layout[i][0:3]+[x_diff, y_diff, 0]

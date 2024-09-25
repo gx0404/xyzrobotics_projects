@@ -47,7 +47,7 @@
                 "__type__": "__builtin__.list"
             }, 
             "default_value": null, 
-            "name": "acc"
+            "name": "speed"
         }, 
         "2": {
             "__jsonqualname__": "rafcon.core.state_elements.data_port.OutputDataPort", 
@@ -56,7 +56,7 @@
                 "__type__": "__builtin__.list"
             }, 
             "default_value": null, 
-            "name": "speed"
+            "name": "acc"
         }
     }, 
     "source_file_path": "", 

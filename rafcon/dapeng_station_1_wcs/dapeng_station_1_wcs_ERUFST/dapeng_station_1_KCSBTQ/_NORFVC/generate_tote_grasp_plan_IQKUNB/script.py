@@ -272,9 +272,24 @@ def execute(self, inputs, outputs, gvm):
     if not items:
         return "vision_exhausted"
 
-    #通过pick id 指定抓取和放置的箱子
-    pick_box_id = inputs["pick_box_id"]
+    #通过抓取计算得到的路径，指定抓取箱子
+    cache_restore_path = gvm.get_variable("cache_restore_path", per_reference=False, default=None)
+    if not cache_restore_path:
+        raise Exception("奇怪的bug,不应该path not found")
+    
+    #通过pick place plan 指定抓取和放置的箱子
+    pick_plan_item = cache_restore_path[0]
+    #拿到plan中最后一个元素，判断是否需要转向180度
+    return_collision_flag_180 = pick_plan_item[-1]
+    if not return_collision_flag_180:
+        raise Exception("奇怪的bug,不应该不是旋转180度的标志位")
+    
+    pick_box_id= pick_plan_item[0]
+    outputs["pick_box_id"] = pick_box_id
     items = list(filter(lambda x:x.additional_info.values[-3]==pick_box_id, items))
+    #通过pick place plan 指定抓取和放置的箱子
+    place_box_id = pick_plan_item[1]
+    outputs["place_box_id"] = place_box_id
     
     all_robot_states_msg = get_all_robot_tool_states()
     all_robot_states = AllRobotToolStatesRos.from_ros_msg(all_robot_states_msg)
@@ -475,5 +490,7 @@ def execute(self, inputs, outputs, gvm):
 
     outputs["grasp_plan"] = grasp_plans[0]
     outputs["object_poses"] = object_poses[0]
-
+    
+    cache_restore_path.pop(0)
+    gvm.set_variable("cache_restore_path", cache_restore_path, per_reference=False)
     return "success"

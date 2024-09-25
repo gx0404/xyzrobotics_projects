@@ -1,0 +1,67 @@
+{
+    "acquisition_param": {
+        "TriggerMode": "On",
+        "TriggerSource": "Software"
+    },
+    "adjust_light_intensity": {
+        "AdjustLightIntensityBias": 12818,
+        "AdjustLightIntensityRatio": 1.0
+    },
+    "calibrate_time": "",
+    "cloud_complete": {
+        "CloudCompleteEnable": false,
+        "FitPlaneDistanceThreshold": 2.0,
+        "FitPlaneSizeThreshold": 0.30000001192092896
+    },
+    "decoder_param": {
+        "ContrastThreshold": 0.0020000000949949026,
+        "DataThreshold": 0.010000001639127731,
+        "DecoderMethod": "XYZ_LASER_DINP16"
+    },
+    "depth_scale": 1.0,
+    "enable_calibration_mode": false,
+    "image_param": {
+        "ExposureTime": 15360.0,
+        "ExposureTime2D": 45364.0,
+        "Gain": 1.0
+    },
+    "intrinsic_calibrated": false,
+    "meta": {
+        "type": "ls",
+        "version": 1.0
+    },
+    "multi_exposure": {
+        "ExposureNumber": 2,
+        "MultiExposureEnable": false,
+        "OverexposureThreshold": 0,
+        "image_param": {
+            "MutilExposureTime1": 40960.0,
+            "MutilExposureTime2": 10240.0,
+            "MutilExposureTime3": 10240.0,
+            "MutilGain1": 18.0,
+            "MutilGain2": 12.0,
+            "MutilGain3": 12.0
+        }
+    },
+    "occlusion_optimization": {
+        "OcclusionOptimizationEnable": true
+    },
+    "partition_exposure": {
+        "PartitionExposureEnable": false,
+        "PartitionNumber": 4
+    },
+    "post_processing": {
+        "method": "rg",
+        "post_enable": true,
+        "rg": {
+            "max_xy_diff": 0.0029999997932463884,
+            "max_z_diff": 0.004000000189989805,
+            "min_region_size": 400
+        }
+    },
+    "stream_param": {
+        "raw": {
+            "enable_stream": false
+        }
+    }
+}

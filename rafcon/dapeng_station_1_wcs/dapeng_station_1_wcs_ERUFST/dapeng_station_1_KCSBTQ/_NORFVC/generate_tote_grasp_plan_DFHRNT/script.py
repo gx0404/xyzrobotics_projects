@@ -280,6 +280,12 @@ def execute(self, inputs, outputs, gvm):
     
     #通过pick place plan 指定抓取和放置的箱子
     pick_plan_item = cache_restore_path[0]
+    #拿到plan中最后一个元素，判断是否需要转向180度
+    return_collision_flag_180 = pick_plan_item[-1]
+    if return_collision_flag_180:
+        self.logger.info("需要转向180度")
+        return "turn_180"
+    
     pick_box_id= pick_plan_item[0]
     outputs["pick_box_id"] = pick_box_id
     items = list(filter(lambda x:x.additional_info.values[-3]==pick_box_id, items))

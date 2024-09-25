@@ -1,8 +1,8 @@
 {
     "data_source": {
         "acc": [
-            70, 
-            70
+            15, 
+            15
         ], 
         "allow_movedo": {
             "enable": false, 
@@ -15,13 +15,13 @@
         }, 
         "blocked": true, 
         "comment": "MoveToPostPick", 
-        "mid_zone": 25, 
+        "mid_zone": 5, 
         "speed": [
-            100, 
-            100
+            70, 
+            70
         ], 
-        "target_name": "post_pick", 
-        "zone": 0
+        "target_name": "near_post_pick_1", 
+        "zone": 15
     }, 
     "data_source_translation": {
         "/acc": "运行到该点， 加速度的比率: [0, 100]", 

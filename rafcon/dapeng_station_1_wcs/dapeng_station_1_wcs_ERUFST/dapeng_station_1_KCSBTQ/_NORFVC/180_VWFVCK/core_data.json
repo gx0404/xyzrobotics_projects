@@ -9,14 +9,6 @@
             "to_key": 0, 
             "to_state": "YIGTUC"
         }, 
-        "4": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
-            "data_flow_id": 4, 
-            "from_key": 6, 
-            "from_state": "NSGQYJ", 
-            "to_key": 0, 
-            "to_state": "LSTNCF"
-        }, 
         "5": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 5, 
@@ -169,9 +161,9 @@
             "to_key": 0, 
             "to_state": "EQNWBR"
         }, 
-        "109": {
+        "106": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
-            "data_flow_id": 109, 
+            "data_flow_id": 106, 
             "from_key": 0, 
             "from_state": "BKOIGX", 
             "to_key": 0, 
@@ -377,6 +369,14 @@
             "to_state": "QVQYEU", 
             "transition_id": 34
         }, 
+        "36": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 1, 
+            "from_state": "EQNWBR", 
+            "to_outcome": null, 
+            "to_state": "HKKAXN", 
+            "transition_id": 36
+        }, 
         "40": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
@@ -441,21 +441,21 @@
             "to_state": "NWROWW", 
             "transition_id": 91
         }, 
-        "195": {
+        "99": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
             "from_state": "BKOIGX", 
             "to_outcome": null, 
             "to_state": "UIYOJP", 
-            "transition_id": 195
+            "transition_id": 99
         }, 
-        "196": {
+        "100": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
             "from_state": "UIYOJP", 
             "to_outcome": 0, 
             "to_state": "VWFVCK", 
-            "transition_id": 196
+            "transition_id": 100
         }
     }
 }

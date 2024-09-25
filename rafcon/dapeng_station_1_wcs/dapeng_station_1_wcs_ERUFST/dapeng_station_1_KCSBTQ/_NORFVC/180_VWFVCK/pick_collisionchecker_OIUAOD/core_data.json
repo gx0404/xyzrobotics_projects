@@ -102,15 +102,6 @@
             }, 
             "default_value": null, 
             "name": "tf_flange_object"
-        }, 
-        "8": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_port.OutputDataPort", 
-            "data_port_id": 8, 
-            "data_type": {
-                "__type__": "__builtin__.list"
-            }, 
-            "default_value": null, 
-            "name": "post_slide"
         }
     }, 
     "source_file_path": "", 

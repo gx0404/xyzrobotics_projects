@@ -12,28 +12,80 @@ import multiprocessing
 from queue import PriorityQueue
    
 #过滤得到顶层箱子
-def filter_layer_items(items):
+def filter_layer_items(items,row_flag=True):
+    #两种模式,一种只取最高层，另一种则是每列箱子的最高层
+    if row_flag:
+        combined_data = {}
+        for item in items:
+            #建立x,y坐标的键，同一列箱子xy坐标一致
+            key = (round(item.origin.x,2), round(item.origin.y,2))
+            if key not in combined_data.keys():
+                #判断原先字典是否有xy近似的key的标志flag
+                check_key_flag = False
+                for check_key in combined_data.keys():
+                    #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
+                    if abs(item.origin.x-check_key[0])<0.015 and abs(item.origin.y-check_key[1])<0.015:    
+                        check_key_flag = True
+                        break      
+                #如果不存在标志,则说明是个新列                   
+                if not check_key_flag:                    
+                    combined_data[key] = item
+                #如果存在,则说明是老列,则需要判断是否保留z最大的实例   
+                else:
+                    if item.origin.z > combined_data[check_key].origin.z:
+                        combined_data[check_key] = item        
+            else:   
+                # 只保留Z最大的类实例
+                if item.origin.z > combined_data[key].origin.z:
+                    combined_data[key] = item
 
-    combined_data = {}
-    for item in items:
-        #建立x,y坐标的键，同一列箱子xy坐标一致
-        key = (round(item.origin.x,2), round(item.origin.y,2))
-        if key not in combined_data.keys():
-            combined_data[key] = item
-        else:   
-            # 只保留Z最大的类实例
-            if item.origin.z > combined_data[key].origin.z:
-                combined_data[key] = item
+        new_items = list(combined_data.values())
+        
+    #只考虑最高列,不考虑每列层数不同   
+    else:
+        max_z = max(i.origin.z for i in items)
+        new_items = list(filter(lambda x:abs(x.origin.z-max_z)<0.1,items))
+    return new_items
 
-    new_items = list(combined_data.values())
-    max_z = max(i.origin.z for i in items)
-    new_items = list(filter(lambda x:abs(x.origin.z-max_z)<0.1,items))
+#过滤得到底层箱子
+def filter_bottom_items(items,row_flag=True):
+    #两种模式,一种只取最低层，另一种则是每列箱子的最低层
+    if row_flag:
+        combined_data = {}
+        for item in items:
+            #建立x,y坐标的键，同一列箱子xy坐标一致
+            key = (round(item.origin.x,2), round(item.origin.y,2))
+            if key not in combined_data.keys():
+                #判断原先字典是否有xy近似的key的标志flag
+                check_key_flag = False
+                for check_key in combined_data.keys():
+                    #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
+                    if abs(item.origin.x-check_key[0])<0.015 and abs(item.origin.y-check_key[1])<0.015:    
+                        check_key_flag = True
+                        break
+                #如果不存在标志,则说明是个新列         
+                if not check_key_flag:                    
+                    combined_data[key] = item
+                #如果存在,则说明是老列,则需要判断是否保留z最小的实例   
+                else:
+                    if item.origin.z < combined_data[check_key].origin.z:
+                        combined_data[check_key] = item                  
+            else:   
+                # 只保留Z最小的类实例
+                if item.origin.z < combined_data[key].origin.z:
+                    combined_data[key] = item
+
+        new_items = list(combined_data.values())
+    #只考虑最低列,不考虑每列层数不同      
+    else:    
+        min_z = min(i.origin.z for i in items)
+        new_items = list(filter(lambda x:abs(x.origin.z-min_z)<0.1,items))    
     return new_items
 
 #后验
 def check_place_slide_move(checker,kinematic_solver,joints):
     use_slide = None
-    slide_list = [[0.052, 0.052, 0.05, 0, 0, 0, 1], [0.052, -0.052, 0.05, 0, 0, 0, 1], [-0.052, 0.052, 0.05, 0, 0, 0, 1], [-0.052, -0.052, 0.05, 0, 0, 0, 1]]
+    slide_list = [[0.052, 0.052, 0.08, 0, 0, 0, 1], [0.052, -0.052, 0.08, 0, 0, 0, 1], [-0.052, 0.052, 0.08, 0, 0, 0, 1], [-0.052, -0.052, 0.08, 0, 0, 0, 1]]
     joints = kinematic_solver.convert_six_dof_to_four(joints)
     tf_map_flange_list_out = kinematic_solver.compute_fk(joints)
     for slide in slide_list:
@@ -73,25 +125,6 @@ def check_pick_slide_move(checker,kinematic_solver,joints):
         return False
     else:
         return True   
-
-#过滤得到底层箱子
-def filter_bottom_items(items):
-
-    combined_data = {}
-    for item in items:
-        #建立x,y坐标的键，同一列箱子xy坐标一致
-        key = (round(item.origin.x,2), round(item.origin.y,2))
-        if key not in combined_data.keys():
-            combined_data[key] = item
-        else:   
-            # 只保留Z最小的类实例
-            if item.origin.z < combined_data[key].origin.z:
-                combined_data[key] = item
-
-    new_items = list(combined_data.values())
-    min_z = min(i.origin.z for i in items)
-    new_items = list(filter(lambda x:abs(x.origin.z-min_z)<0.1,items))    
-    return new_items
 
 
 
@@ -325,9 +358,9 @@ class SEARCH_ASYNC():
         #初始化环境   
         init_planning_env = copy.copy(planning_env)   
 
-        remaining_plan_items = filter_bottom_items(plan_items)
+        remaining_plan_items = filter_bottom_items(plan_items,False)
 
-        remaining_pick_items = filter_layer_items(all_container_items)                 
+        remaining_pick_items = filter_layer_items(all_container_items,False)                 
         # 初始化优先队列
         open_set = PriorityQueue() 
         visited_states = {}
@@ -366,7 +399,7 @@ class SEARCH_ASYNC():
             state_key = retrieved_item.state_key
             if len(path)==10:
                 pass
-                #import ipdb;ipdb.set_trace()
+            #import ipdb;ipdb.set_trace()
             if len(path)==len(all_container_items):
                 self.logger(f"已找到可以还原的路径")       
                 #判断一层能否码满
@@ -383,7 +416,7 @@ class SEARCH_ASYNC():
                     
                 #过滤掉拣配托盘已放置的箱子
                 remaining_plan_items = list(filter(lambda x:x not in plan_path_list,plan_items))   
-                new_remaining_plan_items = filter_bottom_items(remaining_plan_items)
+                new_remaining_plan_items = filter_bottom_items(remaining_plan_items,False)
                 max_z = max([i.origin.z for i in plan_path_list])
                 if abs(new_remaining_plan_items[0].origin.z-max_z)<0.1:
                     #初始化环境   
@@ -433,7 +466,7 @@ class SEARCH_ASYNC():
             #过滤掉已完成的箱子
             remaining_pick_items = list(filter(lambda x:x.name not in [i.name for i in pick_path_list],all_container_items))
             #过滤非顶层箱子+最高层
-            remaining_pick_items = filter_layer_items(remaining_pick_items)
+            remaining_pick_items = filter_layer_items(remaining_pick_items,False)
 
             #过滤掉拣配托盘已放置的箱子
             remaining_plan_items = list(filter(lambda x:x not in plan_path_list,plan_items))
@@ -447,7 +480,7 @@ class SEARCH_ASYNC():
                     #通过数据库找到之前在拣配箱的位置号
                     pick_box_id = pick_item.additional_info.values[-3]
                     #找到需要放置的箱子
-                    new_remaining_plan_items = filter_bottom_items(remaining_plan_items)
+                    new_remaining_plan_items = filter_bottom_items(remaining_plan_items,False)
 
                     for plan_item in new_remaining_plan_items:
                         #获取到放置是否干涉，以及旋转180放置是否干涉

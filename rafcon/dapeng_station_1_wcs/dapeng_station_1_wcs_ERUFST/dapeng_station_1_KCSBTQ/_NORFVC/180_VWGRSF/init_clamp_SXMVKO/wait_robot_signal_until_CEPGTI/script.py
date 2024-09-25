@@ -87,7 +87,7 @@ def execute(self, inputs, outputs, gvm):
             set_digit_output("2",65034,1)        
             return "timeout"
         if rob_driver.get_robotstatus()["simulation"]:
-            expected_values = self.smart_data["expected_values"]
+            expected_values = self.smart_data["target_values"]
             if expected_values == self.smart_data["target_values"]:
                 return "success"
         else:

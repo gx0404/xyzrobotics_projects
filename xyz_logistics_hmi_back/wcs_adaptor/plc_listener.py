@@ -43,6 +43,7 @@ def plc_monitor_scram_signal(interval: int = 0.5):
     """
     app = cached_app()
     while True:
+        time.sleep(0.7)
         with app.app_context():
             if app.status == "ready":
                 #import ipdb;ipdb.set_trace()

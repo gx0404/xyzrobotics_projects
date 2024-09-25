@@ -25,12 +25,9 @@ from xyz_motion import FormattedPlanBox, FormattedRealBox, SE3
 from xyz_motion import RobotDriver
 from xyz_io_client.io_client import set_digit_output
 
-
 from sensor_msgs.msg import PointCloud2, PointField
 from std_msgs.msg import Header
 from rospy import Time
-
-
 
 # modify group x axis
 # barcode direction: 4: -x; 2: -y
@@ -169,10 +166,6 @@ def execute(self, inputs, outputs, gvm):
         
     workspace_id = self.smart_data["workspace_id"]
     
-    sku_info = inputs["sku_info"]
-    sku_dimension = [sku_info["length"],sku_info["width"],sku_info["height"]]
-    sku_dimension = list(map(lambda x:round(x,3),sku_dimension))
-    
     vision_id = workspace_id    
     
     mode = self.smart_data["mode"]
@@ -186,47 +179,57 @@ def execute(self, inputs, outputs, gvm):
     if mode not in ["RELEASE", "DEBUG"]:
         raise Exception("please input correct mode(请输入正确的模式名字 RELEASE 或者 DEBUG)")
     
+    
     sku_info = inputs["sku_info"]
-    sku_dimension = [sku_info["length"],sku_info["width"],sku_info["height"]]
-    sku_dimension = list(map(lambda x:round(x,3),sku_dimension))
-    if sku_dimension==[0.405,0.303,0.16]:
-        vision_service = "calculate_object_poses_0_1"
-    elif sku_dimension==[0.4,0.3,0.23]:
-        vision_service = "calculate_object_poses_1_1"
-    elif sku_dimension==[0.6,0.4,0.23]:
-        vision_service = "calculate_object_poses_2_1"
+    camera_num = inputs["camera_num"]
+    if camera_num == 1:
+        capture_service_list = ["one_camera_capture"]
+    elif camera_num == 2:
+        capture_service_list = ["two_camera_capture_0","two_camera_capture_1"]
+    elif camera_num == 3:
+        capture_service_list = ["three_camera_capture_0","three_camera_capture_1","three_camera_capture_2"]
     else:
-        raise "无效的尺寸"      
-
-    if flag_capture_image:
+        raise Exception("错误的相机数量")
+    
+    for index,capture_service in enumerate(capture_service_list):
         start_time = time.time()
-        eye_in_hand = self.smart_data["eye_in_hand"]  
+        self.logger.info(f"拍照service: {capture_service}开始")
         while not self.preempted:
-            if eye_in_hand:
-                r = RobotDriver(0)
-                scan_pose = r.get_cartpose().xyz_quat
-                ftr = vision_bridge.async_run(int(vision_id),"capture_images",info=json.dumps({"tf_world_hand":scan_pose}))
-                #capture_res = vision_bridge.run(int(vision_id), "capture_images",info=json.dumps({"tf_world_hand":scan_pose}))
+            if index>=2:                 
+                ftr = vision_bridge.async_run(int(vision_id),capture_service)    
+                #capture_res = vision_bridge.run(int(vision_id),capture_service)   
+
             else:
-                ftr = vision_bridge.async_run(int(vision_id),"capture_images")
-                #capture_res = vision_bridge.run(int(vision_id), "capture_images")                  
-            if gvm.variable_exist("ERROR"):
-                return "empty"
-            
+                ftr = vision_bridge.async_run(int(vision_id),capture_service) 
+                #capture_res = vision_bridge.run(int(vision_id),capture_service)   
+                                                       
             #获取异步结果
             current_time = time.time()
             while not self.preempted:
-                if time.time()-current_time>30:
+                if time.time()-current_time>10:
                     self.logger.info(f"异步获取视觉结果超时")
-                    break
+                    raise XYZExceptionBase("20010", "OpenCameraFailed")
                 try:
-                    capture_res = ftr.get(int(vision_id))
+                    capture_res = ftr.get()
+                    if index>=2: 
+                        if camera_num == 2:
+                            merge_ftr = vision_bridge.async_run(int(vision_id), "two_camera_merge_"+str(index-2)) 
+                            self.logger.info(f"调用合并service: {'two_camera_merge_'+str(index-2)}")          
+                            merge_ftr.get()                
+                        else:    
+                            merge_ftr = vision_bridge.async_run(int(vision_id), "three_camera_merge_"+str(index-2)) 
+                            self.logger.info(f"调用合并service: {'three_camera_merge_'+str(index-2)}")    
+                            merge_ftr.get()    
                     break
-                except:
-                    self.logger.info(f"异步拍照结果还未出现,重新获取")
-                    self.preemptive_wait(0.3)
+                except Exception as e:
+                    self.logger.info(f"拍照service: {capture_service},异步拍照结果还未出现,重新获取")
+                    self.logger.info(f"{e}")
+                    self.preemptive_wait(0.1)
                     continue
+            
+            #capture_res = ftr
             if (time.time()-start_time) > self.smart_data["time_out"]:
+                self.logger.info(f"拍照service: {capture_service}超时")
                 raise XYZExceptionBase("20010", "OpenCameraFailed")
             try:
                 capture_res = MessageToDict(capture_res)
@@ -234,15 +237,28 @@ def execute(self, inputs, outputs, gvm):
                     break
                 else:
                     self.logger.warning("Try to re-connect camera, Please wait!")   
+                    self.logger.info(f"拍照service: {capture_service},拍照失败,重新拍照")
                     self.logger.warning(capture_res)  
                     self.preemptive_wait(2) 
             except:
                 self.preemptive_wait(2)
-                
-    else:
-        capture_res = inputs["capture_res"]
-        
-    ftr = vision_bridge.async_run(int(vision_id),vision_service)    
+              
+    if camera_num==2:
+        merge_ftr = vision_bridge.async_run(int(vision_id), "two_camera_merge_0")    
+        self.logger.info(f"调用合并service: two_camera_merge_0")     
+        merge_ftr.get()    
+    elif camera_num==3:                
+        merge_ftr = vision_bridge.async_run(int(vision_id), "three_camera_merge_1")    
+        self.logger.info(f"调用合并service: three_camera_merge_1")  
+        merge_ftr.get()
+    vision_service_dict = {
+        1:"one_camera_calculate_object_poses",
+        2:"two_camera_calculate_object_poses",
+        3:"three_camera_calculate_object_poses"
+    }    
+    
+    ftr = vision_bridge.async_run(int(vision_id),vision_service_dict[camera_num])    
+    #vision_result_raw = vision_bridge.run(int(vision_id),vision_service_dict[camera_num]) 
     #获取异步结果
     current_time = time.time()
     while not self.preempted:
@@ -250,13 +266,14 @@ def execute(self, inputs, outputs, gvm):
             self.logger.info(f"异步获取识别结果超时")
             raise "异步获取识别结果超时"
         try:
-            vision_result_raw = ftr.get(int(vision_id))
+            vision_result_raw = ftr.get()
             break
-        except:
+        except Exception as e:
             self.logger.info(f"异步识别结果还未出现,重新获取")
-            self.preemptive_wait(0.3)
-            continue        
-   
+            self.logger.info(f"{e}")
+            self.preemptive_wait(0.1)
+            continue     
+
     def construct_vision_result(vision_result_raw, ts):
         def convert_cloud(cloud_proto):
             header = Header(
@@ -319,8 +336,11 @@ def execute(self, inputs, outputs, gvm):
         return vision_result
 
     ts = capture_res.get("timestamp")
+    
     vision_result = construct_vision_result(vision_result_raw, ts)        
-
+    if vision_result.get("error"):
+        self.logger.info(f"获取视觉结果失败")
+        raise XYZExceptionBase("10001", "获取视觉结果失败")   
     # camera_ids = vision_bridge.get_camera_ids(vision_id).get('results')
     camera_ids = ["-1"]
     results = copy.copy(vision_result.get("results"))
@@ -370,17 +390,10 @@ def execute(self, inputs, outputs, gvm):
     if not (shrunk_size >= 0 and shrunk_size <= 0.05):
             raise XYZExceptionBase(error_code="E9998",
                         error_msg="shrunk_size[{}] should be between 0m and 0.05m".format(shrunk_size))
-    #通过抓取计算得到的路径，指定抓取箱子        
-    plan_path = gvm.get_variable("plan_path", per_reference=False, default=None)
+                 
     if len(results) == 0:
-        self.logger.info(f"视觉未识别到箱子")
-        if not plan_path:
-            self.logger.info("Plan path not found")
-            gvm.set_variable("move_camera_flag", True, per_reference=False)
-            return "success"
-        else:
-            gvm.set_variable("move_camera_flag", True, per_reference=False)    
-            return "calculate"              
+        self.logger.info(f"视觉识别为空,但是存在抓取搜索的路径")
+        raise XYZExceptionBase("10001", "获取视觉结果失败")          
 
     
     minimal_sku_height = self.smart_data["mix_depalletize_minimal_sku_height"]
@@ -437,6 +450,7 @@ def execute(self, inputs, outputs, gvm):
     init_results = copy.deepcopy(results)
     box_id = int(time.time()/10000000)    
     overlapping_heihgt = inputs["sku_info"]["overlapping_heihgt"]    
+    
     for result in init_results:
         tf_space_box_real = (tf_base_space.inv())*SE3(result["pose"])
         layer = round(tf_space_box_real.xyz_quat[2]/(sku_info["height"]-overlapping_heihgt))
@@ -451,40 +465,42 @@ def execute(self, inputs, outputs, gvm):
              
     items = planning_env.get_container_items(vision_id)
     if not items:
-        self.logger.info("环境已无箱子,无需视觉更新")
-        #gvm.set_variable("move_camera_flag", True, per_reference=False) 
-        return "success"  
+        raise Exception("环境已无箱子")
+    
+    #在单独日志文件记录识别结果，避免xtf日志过长
+    f = open('/home/xyz/xyz_app/app/rafcon/eye_to_hand_vison_check.log', 'w')
+    #更新环境中的箱子,并做匹配
     update_items = []      
     for item in items:
         tf_base_box_old = SE3(pose_to_list(item.origin))
         for result in results:
             tf_base_box_new = SE3(result["pose"])
-            check_list = list(filter(lambda x:abs(tf_base_box_old.xyz_quat[x]-tf_base_box_new.xyz_quat[x])<0.08,[0,1]))
+            check_list = list(filter(lambda x:abs(tf_base_box_old.xyz_quat[x]-tf_base_box_new.xyz_quat[x])<0.05,[0,1]))
             check_list_z = list(filter(lambda x:abs(tf_base_box_old.xyz_quat[x]-tf_base_box_new.xyz_quat[x])<0.05,[2])) 
             if len(check_list)==2 and check_list_z:
                 item.origin = Pose(*result["pose"])
                 update_items.append(item)
-                self.logger.info(f"视觉pose为{result['pose']}")
-                self.logger.info(f"环境pose为{tf_base_box_old.xyz_quat}")
+                f.write(f"视觉pose为{result['pose']}\n")
+                f.write(f"环境pose为{tf_base_box_old.xyz_quat}\n")
                 break
+            
     update_box_ids = [i.additional_info.values[-3] for i in update_items]    
     self.logger.info(f"顶置相机更新的箱子为{update_box_ids}") 
-    gvm.set_variable("update_box_ids",update_box_ids, per_reference=False)      
+    f.close()
+    
+    #视觉识别结果和环境中箱子数量不一致，说明识别偏差过大
     if len(results)!=len(update_items):
         self.logger.info(f"匹配到环境的箱子和视觉箱子数量不一致,可能二次识别偏差值过大")  
+        
     clear_container_items(vision_id,[i.name for i in update_items])
     add_container_items(vision_id,update_items)    
-
-    if not plan_path:
-        self.logger.info("Plan path not found")
-        gvm.set_variable("move_camera_flag", True, per_reference=False)
-        return "success"    
-    #通过抓取计算得到的路径，指定抓取箱子
-    pick_item_id = plan_path[0]   
-    if pick_item_id in [i.additional_info.values[-3] for i in update_items]:
-        self.logger.info(f"顶置相机视觉结果存在目标抓取点{pick_item_id},无需眼在手上相机拍照更新")              
+    
+    #通过输入拿到下次抓取的箱子id
+    next_pick_item_id = inputs["next_pick_item_id"]
+       
+    if next_pick_item_id in [i.additional_info.values[-3] for i in update_items]:
+        self.logger.info(f"顶置相机视觉结果已识别到目标抓取箱{next_pick_item_id}")              
         return "success"
     else:
-        self.logger.info(f"顶置相机视觉结果不存在目标抓取点{pick_item_id},需要眼在手上相机拍照更新") 
-        gvm.set_variable("move_camera_flag", True, per_reference=False) 
-        return "calculate"    
+        self.logger.info(f"顶置相机视觉结果未识别到目标抓取箱{next_pick_item_id}")  
+        raise XYZExceptionBase("10001", "获取视觉结果失败") 

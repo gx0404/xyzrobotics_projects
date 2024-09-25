@@ -1,0 +1,53 @@
+three_camera_[1, 2, 3]:
+- id: '{bb22c145-40c3-477b-baa4-505cc179f8e3}'
+  model:
+    name: XYZCamera
+    params:
+      cfg: /home/xyz/Downloads/dapeng_station_0_20240829095843/L340XP043110024/1724925188909_L340XP043110024_0_camera.json
+      id: L340XP043110024
+  parent_id: '{00000000-0000-0000-0000-000000000000}'
+- id: '{626dee08-21f7-4752-abe8-858e842c9403}'
+  model:
+    name: XYZCamera
+    params:
+      cfg: /home/xyz/Downloads/dapeng_station_0_20240829095843/L340XP043110024/1724925188909_L340XP043110024_0_camera.json
+      id: L340XP043110024
+  parent_id: '{00000000-0000-0000-0000-000000000000}'
+- id: '{04da14bd-afef-46fa-bf6c-9b61ac715857}'
+  model:
+    name: XYZCamera
+    params:
+      cfg: /home/xyz/Downloads/dapeng_station_0_20240829095843/L340XP043110024/1724925188909_L340XP043110024_0_camera.json
+      id: L340XP043110024
+  parent_id: '{00000000-0000-0000-0000-000000000000}'
+- id: '{1b8d0c00-49f8-4c64-8092-39b36b98c100}'
+  model:
+    name: SBMEstimator
+    params:
+      detection_targets:
+      - '400_300_230'
+  parent_id: '{00000000-0000-0000-0000-000000000000}'
+- id: '{fcec4402-4351-4ea0-8967-b2a8fc2c5265}'
+  model:
+    name: CalculateTopLayerHeight
+    params:
+      layer_min_points: 4000
+  parent_id: '{00000000-0000-0000-0000-000000000000}'
+- id: '{b7ad046b-c208-496b-abf5-2f51741337a7}'
+  model:
+    name: LoadCameraCalibInfo
+    params:
+      calib_file: calibration/camera/L340XP043110024/camera_extrinsic.yml
+  parent_id: '{00000000-0000-0000-0000-000000000000}'
+- id: '{562400dd-f1d1-417e-8852-b3a549371932}'
+  model:
+    name: LoadCameraCalibInfo
+    params:
+      calib_file: calibration/camera/L340XP043110024/camera_extrinsic.yml
+  parent_id: '{00000000-0000-0000-0000-000000000000}'
+- id: '{ac3ab389-7317-4c2d-9053-0b7595477352}'
+  model:
+    name: LoadCameraCalibInfo
+    params:
+      calib_file: calibration/camera/L340XP043110024/camera_extrinsic.yml
+  parent_id: '{00000000-0000-0000-0000-000000000000}'

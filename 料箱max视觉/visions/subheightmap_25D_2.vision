@@ -11,6 +11,7 @@ nodes:
         retake_num: 5
         logger: true
         debug: false
+        use_organized: true
     position:
       x: -4847.8965201237315
       y: -124.49630827520011
@@ -70,6 +71,7 @@ nodes:
       params:
         mode: Common
         transform_frame: World
+        transform_frame_id: ""
     position:
       x: 1472.8973152143335
       y: -446.83940602907359
@@ -82,6 +84,7 @@ nodes:
         using_mask: true
         using_offset: false
         output_organized: true
+        shrink_prop: 1.0
     position:
       x: -6458.4473361066639
       y: 1915.1292305066677
@@ -199,6 +202,7 @@ nodes:
       name: CloudTrans
       params:
         transform_frame: Workspace
+        transform_frame_id: ""
     position:
       x: -3702.5904314025511
       y: -167.20439939146536
@@ -328,6 +332,7 @@ nodes:
       params:
         mode: Common
         transform_frame: World
+        transform_frame_id: ""
     position:
       x: 607.14071169945464
       y: 1911.8712984036661
@@ -527,6 +532,7 @@ nodes:
       name: CloudTrans
       params:
         transform_frame: World
+        transform_frame_id: ""
     position:
       x: 87.292500769517574
       y: 3991.8283979639473
@@ -552,7 +558,9 @@ nodes:
       params:
         mode: 2D Primitives
         using_mask: true
+        using_offset: false
         output_organized: true
+        shrink_prop: 1.0
     position:
       x: -86.66112745233022
       y: -467.57005136240667
@@ -588,6 +596,9 @@ nodes:
         show_score: true
         show_edge: false
         global_pose: true
+        use_rotated_nms: false
+        use_icp: true
+        use_fusion: false
         train_params:
           projection_type: orthographic
           cut_from_top: -1
@@ -654,6 +665,7 @@ nodes:
       name: CloudTrans
       params:
         transform_frame: Workspace
+        transform_frame_id: ""
     position:
       x: -3321.6258008678383
       y: 4714.126683144189
@@ -723,6 +735,7 @@ nodes:
         using_mask: true
         using_offset: false
         output_organized: true
+        shrink_prop: 1.0
     position:
       x: -447.63713576720875
       y: 1191.6444098703341
@@ -753,6 +766,7 @@ nodes:
       params:
         mode: Common
         transform_frame: World
+        transform_frame_id: ""
     position:
       x: 600.61987913564008
       y: 3357.3196963676146
@@ -958,6 +972,7 @@ nodes:
       name: CloudTrans
       params:
         transform_frame: World
+        transform_frame_id: ""
     position:
       x: 26.824828433215998
       y: 5381.6797674280833
@@ -1011,6 +1026,7 @@ nodes:
       name: CalculateInstancePrimitivePose
       params:
         mode: polygon
+        using_largest_connection: false
         object_min_points: 2000
         plane_min_inlier_ratio: 0.5
         plane_max_z_angle: 15
@@ -1038,6 +1054,7 @@ nodes:
       name: CalculateInstancePrimitivePose
       params:
         mode: polygon
+        using_largest_connection: false
         object_min_points: 2000
         plane_min_inlier_ratio: 0.5
         plane_max_z_angle: 15
@@ -1140,6 +1157,7 @@ nodes:
       name: CloudTrans
       params:
         transform_frame: World
+        transform_frame_id: ""
     position:
       x: 93.813333333332452
       y: 2546.3799999999987
@@ -1344,6 +1362,7 @@ nodes:
       name: CloudTrans
       params:
         transform_frame: Workspace
+        transform_frame_id: ""
     position:
       x: -3147.6119524214309
       y: 1955.7369897132749
@@ -1499,7 +1518,9 @@ nodes:
       params:
         mode: 2D Primitives
         using_mask: true
+        using_offset: false
         output_organized: true
+        shrink_prop: 1.0
     position:
       x: -428.41950317533872
       y: -2921.2257898844155
@@ -1656,6 +1677,7 @@ nodes:
       params:
         mode: Common
         transform_frame: World
+        transform_frame_id: ""
     position:
       x: 540.1522067993385
       y: 4747.1710658317506
@@ -1666,7 +1688,9 @@ nodes:
       params:
         mode: 2D Primitives
         using_mask: true
+        using_offset: false
         output_organized: true
+        shrink_prop: 1.0
     position:
       x: -696.85856353102508
       y: 3922.6690510342814
@@ -1677,6 +1701,7 @@ nodes:
       params:
         mode: Common
         transform_frame: World
+        transform_frame_id: ""
     position:
       x: 1159.9389394913264
       y: -2920.6551445510822
@@ -1704,7 +1729,9 @@ nodes:
       params:
         mode: 2D Primitives
         using_mask: true
+        using_offset: false
         output_organized: true
+        shrink_prop: 1.0
     position:
       x: -690.33773096720984
       y: 2477.2206530703334
@@ -1794,6 +1821,7 @@ nodes:
       name: CloudTrans
       params:
         transform_frame: Workspace
+        transform_frame_id: ""
     position:
       x: -3159.1014623612468
       y: 3347.6526665252236
@@ -2143,6 +2171,9 @@ nodes:
         show_score: true
         show_edge: false
         global_pose: true
+        use_rotated_nms: false
+        use_icp: true
+        use_fusion: false
         train_params:
           projection_type: orthographic
           cut_from_top: -1
@@ -2201,7 +2232,9 @@ nodes:
       params:
         mode: 2D Primitives
         using_mask: true
+        using_offset: false
         output_organized: true
+        shrink_prop: 1.0
     position:
       x: -757.3262358673262
       y: 5312.5204204984157

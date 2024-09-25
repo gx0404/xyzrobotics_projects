@@ -130,7 +130,7 @@ def execute(self, inputs, outputs, gvm):
     wopt_config.dcheck = [self.smart_data["2-config-solver"]["dcheck"]]
     wopt_config.dsafe = [self.smart_data["2-config-solver"]["dsafe"]["midway"]]
     wopt_config.limit_joint = True
-    wopt_config.merit_error_coeff = 1.0
+    wopt_config.merit_error_coeff = 5.0
     wopt_config.number_of_swept_interpolations = 4
     wopt_config.trust_box_size = 0.5
     wopt_config.do_log = True

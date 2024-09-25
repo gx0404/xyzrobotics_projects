@@ -59,8 +59,11 @@ nodes:
     model:
       name: CloudROIExtract
       params:
-        output_organized: true
+        mode: 2D Primitives
         using_mask: true
+        using_offset: false
+        output_organized: true
+        shrink_prop: 1.0
     position:
       x: 1856.4531307607022
       y: -865.8096601383096
@@ -69,6 +72,7 @@ nodes:
     model:
       name: FetchElement
       params:
+        alert: true
         element_index:
           - 0
         input_type: DoubleVector
@@ -119,6 +123,7 @@ nodes:
         retake_num: 5
         logger: false
         debug: false
+        use_organized: true
     position:
       x: -948.89177599999994
       y: -1130.0341759999997

@@ -48,7 +48,7 @@ def execute(self, inputs, outputs, gvm):
         pass
 
     movement_flow = motion_payload["movement_flow"]
-    movement_flow.set_solver_cache(solver_cache)
+    #movement_flow.set_solver_cache(solver_cache)
 
     if self.smart_data["flange_sort"]:
         sorter_config = {"rotation": 1.0}

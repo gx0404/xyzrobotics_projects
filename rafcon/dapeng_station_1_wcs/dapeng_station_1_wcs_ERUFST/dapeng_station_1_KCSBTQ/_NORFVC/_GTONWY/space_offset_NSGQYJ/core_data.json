@@ -84,15 +84,6 @@
             }, 
             "default_value": null, 
             "name": "offset_joints"
-        }, 
-        "6": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_port.OutputDataPort", 
-            "data_port_id": 6, 
-            "data_type": {
-                "__type__": "__builtin__.list"
-            }, 
-            "default_value": null, 
-            "name": "near_relative_poses"
         }
     }, 
     "source_file_path": "", 

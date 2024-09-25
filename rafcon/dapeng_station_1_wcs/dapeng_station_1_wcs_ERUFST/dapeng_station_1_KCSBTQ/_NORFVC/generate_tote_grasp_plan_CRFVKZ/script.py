@@ -353,6 +353,7 @@ def execute(self, inputs, outputs, gvm):
 
     #通过pick place id 指定抓取和放置的箱子
     place_box_id = inputs["place_box_id"]
+    outputs["place_box_id"] = place_box_id    
     slots = list(filter(lambda x:x.additional_info.values[-3]==place_box_id, slots))    
        
     ## only keep the bottom place slots

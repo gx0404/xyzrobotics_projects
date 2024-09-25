@@ -59,6 +59,8 @@ def execute(self, inputs, outputs, gvm):
     barcode = item.additional_info.values[-2]
     #获取抓取的位置号
     pick_box_id = item.additional_info.values[-3]
+    #获取抓取箱子的位置
+    pick_box_pose = pose_to_list(item.origin)
     #输出给后端此次抓取数据
     pick_data  = {pick_box_id:barcode}
     outputs["pick_data"] = pick_data
@@ -75,6 +77,12 @@ def execute(self, inputs, outputs, gvm):
     path[path_key]["pick_path"].append(pick_box_id)
     if pick_box_id in pick_tote_data.keys(): 
         path[path_key]["target_box"] = pick_box_id   
+        
+    #添加原先抓取箱子在拣配托盘上的姿态    
+    if "from_pick_pose_dict" not in path.keys():
+        path["from_pick_pose_dict"] = {}
+    else:
+        path["from_pick_pose_dict"][pick_box_id] = pick_box_pose
     outputs["path"] = path
                
     if place_id=="1":

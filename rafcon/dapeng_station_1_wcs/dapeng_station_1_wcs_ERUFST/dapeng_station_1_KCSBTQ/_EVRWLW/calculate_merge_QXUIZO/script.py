@@ -73,41 +73,77 @@ def check_collision(our_robot,check_robot_list,planning_env,init_joints,containe
 
 
 #过滤得到顶层箱子
-def filter_layer_items(items):
-
-   combined_data = {}
-   for item in items:
-      #建立x,y坐标的键，同一列箱子xy坐标一致
-      key = (round(item.origin.x,2), round(item.origin.y,2))
-      if key not in combined_data.keys():
-         combined_data[key] = item
-      else:   
-         # 只保留Z最大的类实例
-         if item.origin.z > combined_data[key].origin.z:
+def filter_layer_items(items,row_flag=True):
+   #两种模式,一种只取最高层，另一种则是每列箱子的最高层
+   if row_flag:
+      combined_data = {}
+      for item in items:
+         #建立x,y坐标的键，同一列箱子xy坐标一致
+         key = (round(item.origin.x,2), round(item.origin.y,2))
+         if key not in combined_data.keys():
+            #判断原先字典是否有xy近似的key的标志flag
+            check_key_flag = False
+            for check_key in combined_data.keys():
+               #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
+               if abs(item.origin.x-check_key[0])<0.015 and abs(item.origin.y-check_key[1])<0.015:    
+                  check_key_flag = True
+                  break      
+                #如果不存在标志,则说明是个新列                   
+            if not check_key_flag:                    
+               combined_data[key] = item
+            #如果存在,则说明是老列,则需要判断是否保留z最大的实例   
+            else:
+               if item.origin.z > combined_data[check_key].origin.z:
+                  combined_data[check_key] = item        
+         else:   
+            # 只保留Z最大的类实例
+            if item.origin.z > combined_data[key].origin.z:
                combined_data[key] = item
 
-   new_items = list(combined_data.values())
+      new_items = list(combined_data.values())
+        
+   #只考虑最高列,不考虑每列层数不同   
+   else:
+      max_z = max(i.origin.z for i in items)
+      new_items = list(filter(lambda x:abs(x.origin.z-max_z)<0.1,items))
    return new_items
 
 
 
 #过滤得到底层箱子
-def filter_bottom_items(items):
-
-    combined_data = {}
-    for item in items:
-        #建立x,y坐标的键，同一列箱子xy坐标一致
-        key = (round(item.origin.x,2), round(item.origin.y,2))
-        if key not in combined_data.keys():
-            combined_data[key] = item
-        else:   
+def filter_bottom_items(items,row_flag=True):
+   #两种模式,一种只取最低层，另一种则是每列箱子的最低层
+   if row_flag:
+      combined_data = {}
+      for item in items:
+         #建立x,y坐标的键，同一列箱子xy坐标一致
+         key = (round(item.origin.x,2), round(item.origin.y,2))
+         if key not in combined_data.keys():
+            #判断原先字典是否有xy近似的key的标志flag
+            check_key_flag = False
+            for check_key in combined_data.keys():
+               #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
+               if abs(item.origin.x-check_key[0])<0.015 and abs(item.origin.y-check_key[1])<0.015:    
+                  check_key_flag = True
+                  break
+            #如果不存在标志,则说明是个新列         
+            if not check_key_flag:                    
+               combined_data[key] = item
+            #如果存在,则说明是老列,则需要判断是否保留z最小的实例   
+            else:
+               if item.origin.z < combined_data[check_key].origin.z:
+                  combined_data[check_key] = item                  
+         else:   
             # 只保留Z最小的类实例
             if item.origin.z < combined_data[key].origin.z:
-                combined_data[key] = item
-    new_items = list(combined_data.values())            
-    min_z = min(i.origin.z for i in items)
-    new_items = list(filter(lambda x:abs(x.origin.z-min_z)<0.1,items))
-    return new_items
+               combined_data[key] = item
+
+      new_items = list(combined_data.values())
+   #只考虑最低列,不考虑每列层数不同      
+   else:    
+      min_z = min(i.origin.z for i in items)
+      new_items = list(filter(lambda x:abs(x.origin.z-min_z)<0.1,items))    
+   return new_items
 
 class CostItem:
 
@@ -268,8 +304,8 @@ class A_STAR():
       return collision_flag
    
    
-   def path_check(self,path,container_items,our_robot,check_robot_list,planning_env,init_joints):
-      #偏置
+   def path_check(self,path,container_items,our_robot,check_robot_list,planning_env,init_joints,stop_event):
+      #偏置列表
       slide_list = [[0.08, 0.08, 0.1, 0, 0, 0, 1], [0.08, -0.08, 0.1, 0, 0, 0, 1], [-0.08, 0.08, 0.1, 0, 0, 0, 1], [-0.08, -0.08, 0.1, 0, 0, 0, 1]]
       # 遍历路径
       self.logger(f"开始后验路径{path}")
@@ -294,26 +330,105 @@ class A_STAR():
          for check_robot in check_robot_list:
             check_robot.detach_object()  
             check_robot.attach_object(attached_collision_object,[])          
+         
+         #拆分xy偏移精度
+         def split_slide(slide,precision):
+            split_x_length = int(slide[0]/precision)
+            split_y_length = int(slide[1]/precision)
+            new_slide_x = []
+            new_slide_y = []
+            for i in range(1,abs(split_x_length)+1):
+               if split_x_length>0:
+                  if i*precision>=0.014:
+                     new_slide_x.append(i*precision)
+               else:
+                  if -i*precision<=-0.014:
+                     new_slide_x.append(-i*precision)        
+            for i in range(1,abs(split_y_length)+1):
+               if split_y_length>0:
+                  if i*precision>=0.014:
+                     new_slide_y.append(i*precision)
+               else:
+                  if -i*precision<=-0.014:
+                     new_slide_y.append(-i*precision)   
+            return_list = [[x,y]+slide[2:7] for x,y in zip(new_slide_x,new_slide_y)]                               
+            return return_list  
+         
+         def divide_float_into_list(value, precision):
+            # 计算需要多少步骤来从0达到目标值，加1是为了包含最终值本身
+            steps = int(value / precision) + 1
+            # 生成列表，使用round确保浮点数精度问题不会影响结果
+            result = [round(i * precision, 2) for i in range(1, steps)]
+            return result 
+                                   
+         #遍历偏置列表
          slide_flag = False
-         #遍历偏置
          for slide in slide_list:
-            #更新偏置
-            check_item = copy.deepcopy(pick_item)
-            check_item.origin.x = check_item.origin.x+slide[0]
-            check_item.origin.y = check_item.origin.y+slide[1]
-            check_item.origin.z = check_item.origin.z+slide[2]
-            if not check_collision(our_robot,check_robot_list,planning_env,init_joints,check_item,False):
-               slide_flag = True
-               break     
-            else:
-               continue 
+            #xy偏移拆分精度
+            precision = 0.001
+            check_offset_xy_list = split_slide(slide,precision)
+            self.logger(f"check_offset_xy_list is {check_offset_xy_list}")
+            xy_check_collision = False
+            for check_slide_xy in check_offset_xy_list:
+               #更新偏移
+               check_item = copy.deepcopy(pick_item)
+               check_item.origin = Pose(*((SE3(check_slide_xy)*SE3(pose_to_list(check_item.origin))).xyz_quat))
+               if self.check_collision(our_robot,check_robot_list,planning_env,init_joints,check_item,stop_event):
+                  self.logger(f"后验xy拆分{check_slide_xy}检测到碰撞")
+                  xy_check_collision = True
+                  break
+               else:
+                  continue
+            if xy_check_collision:
+               self.logger(f"偏移点{slide}在XY方向上检测到碰撞")   
+               continue
+            else:                                  
+               #如果xy偏置无干涉,开始后验z方向的偏置   
+               #z方向偏移拆分精度
+               offset_z = slide[2]+0.23
+               z_precision = 0.03
+               offset_list = divide_float_into_list(offset_z,z_precision)
+               self.logger(f"offset_list为{offset_list}")
+               offset_check_slide_list = []
+               for offset in offset_list:
+                  append_check_slide = copy.deepcopy(slide)
+                  append_check_slide[2] = offset 
+                  offset_check_slide_list.append(append_check_slide)    
+               self.logger(f"检查偏移点向上偏移,偏移列表为{offset_check_slide_list}")      
+               z_check_collision = False    
+               for check_slide_z in offset_check_slide_list:  
+                  #更新偏移
+                  check_item = copy.deepcopy(pick_item)
+                  check_item.origin = Pose(*((SE3(check_slide_z)*SE3(pose_to_list(check_item.origin))).xyz_quat))
+                  check_item.origin.z+=0.035                     
+                  if self.check_collision(our_robot,check_robot_list,planning_env,init_joints,check_item,stop_event):
+                     self.logger(f"后验z拆分{check_slide_z}检测到碰撞")
+                     z_check_collision = True
+                     break     
+                  else:
+                     continue     
+               if z_check_collision:
+                  self.logger(f"偏移点{slide}在Z方向上检测到碰撞")   
+                  continue     
+               else:   
+                  self.logger(f"偏移点{slide}XYZ后验无碰撞")
+                  slide_flag = True
+                  break
+                                                      
          if slide_flag:
             self.logger(f"{node}验证ok,偏置{slide}无碰撞,继续搜索")
             continue
          else:
             self.logger(f"{node}验证失败")
-            return False         
-      return True   
+            our_robot.detach_object()   
+            for check_robot in check_robot_list:
+               check_robot.detach_object()              
+            return False 
+         
+      our_robot.detach_object()   
+      for check_robot in check_robot_list:
+         check_robot.detach_object()                    
+      return True 
      
    
    def check_all_collisions(self,our_robot, check_robot_list, planning_env, 
@@ -564,7 +679,7 @@ def execute(self, inputs, outputs, gvm):
       filtered_items = list(filter(filter_check_collision_container, filtered_items))  
 
       #将放置碰撞的箱子当做计算的目标箱子
-      collision_items = filter_bottom_items(collision_items)
+      collision_items = filter_bottom_items(collision_items,False)
       target_item = collision_items[0]
       
       #添加函数参数       

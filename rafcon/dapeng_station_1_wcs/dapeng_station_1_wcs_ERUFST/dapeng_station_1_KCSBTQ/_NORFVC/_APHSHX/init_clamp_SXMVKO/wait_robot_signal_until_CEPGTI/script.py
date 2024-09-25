@@ -70,8 +70,8 @@ def execute(self, inputs, outputs, gvm):
         raise Exception("最大等待时间应大于最大监测持续时间")
 
     while not self.preempted:
-        if gvm.variable_exist("ERROR"):
-            return "timeout"
+        #if gvm.variable_exist("ERROR"):
+            #return "timeout"
         if (time.time() - start_time) > self.smart_data["timeout"]:
             from xyz_logistics_hmi_back.utils.utils import send_order_log
             msg = f"等待挡边缩回信号超时,信号地址为{self.smart_data['port_ids']}"
@@ -87,7 +87,7 @@ def execute(self, inputs, outputs, gvm):
             set_digit_output("2",65034,1)        
             return "timeout"
         if rob_driver.get_robotstatus()["simulation"]:
-            expected_values = self.smart_data["expected_values"]
+            expected_values = self.smart_data["target_values"]
             if expected_values == self.smart_data["target_values"]:
                 return "success"
         else:

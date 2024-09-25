@@ -344,7 +344,7 @@ def execute(self, inputs, outputs, gvm):
         barcode_direction = inputs["sku_info"]["barcode_direction"]
     
     #通过放置位置更新条码朝向    
-    if place_ws_id == "6" or  place_ws_id == "2" or  place_ws_id == "3":
+    if place_ws_id == "6" or place_ws_id in ["2","3"]:
         barcode_direction = 4      
     else:
         barcode_direction = 0

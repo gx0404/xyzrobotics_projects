@@ -116,5 +116,5 @@ def execute(self, inputs, outputs, gvm):
     outputs["sku_info"] = sku_info_default 
     from xyz_env_manager.client import clear_planned_items
     gvm.set_variable("motion_payload", None, per_reference=True)
-    clear_planned_items("0")       
+    #clear_planned_items("0")       
     return "success"

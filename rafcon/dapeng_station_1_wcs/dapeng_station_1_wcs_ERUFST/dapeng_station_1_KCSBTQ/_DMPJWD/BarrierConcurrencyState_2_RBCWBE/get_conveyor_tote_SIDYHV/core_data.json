@@ -163,6 +163,14 @@
             "to_state": "SIDYHV", 
             "transition_id": 16
         }, 
+        "18": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 1, 
+            "from_state": "PXVYMK", 
+            "to_outcome": null, 
+            "to_state": "PXVYMK", 
+            "transition_id": 18
+        }, 
         "32": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
@@ -194,14 +202,6 @@
             "to_outcome": null, 
             "to_state": "NESNYM", 
             "transition_id": 36
-        }, 
-        "148": {
-            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
-            "from_outcome": 1, 
-            "from_state": "PXVYMK", 
-            "to_outcome": null, 
-            "to_state": "PXVYMK", 
-            "transition_id": 148
         }, 
         "150": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 

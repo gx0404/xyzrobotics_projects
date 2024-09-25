@@ -10,19 +10,10 @@
             "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
             "data_port_id": 0, 
             "data_type": {
-                "__type__": "__builtin__.str"
+                "__type__": "__builtin__.dict"
             }, 
-            "default_value": "0", 
-            "name": "pick_id"
-        }, 
-        "1": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
-            "data_port_id": 1, 
-            "data_type": {
-                "__type__": "__builtin__.str"
-            }, 
-            "default_value": "1", 
-            "name": "place_id"
+            "default_value": null, 
+            "name": "path"
         }, 
         "2": {
             "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 

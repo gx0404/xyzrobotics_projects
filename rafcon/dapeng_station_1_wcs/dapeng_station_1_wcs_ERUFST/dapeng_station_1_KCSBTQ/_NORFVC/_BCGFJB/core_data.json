@@ -241,9 +241,9 @@
             "to_key": 0, 
             "to_state": "EQNWBR"
         }, 
-        "106": {
+        "107": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
-            "data_flow_id": 106, 
+            "data_flow_id": 107, 
             "from_key": 8, 
             "from_state": "NSGQYJ", 
             "to_key": 3, 
@@ -272,15 +272,6 @@
             }, 
             "default_value": null, 
             "name": "object_poses"
-        }, 
-        "5": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
-            "data_port_id": 5, 
-            "data_type": {
-                "__type__": "__builtin__.dict"
-            }, 
-            "default_value": null, 
-            "name": "place_box_id"
         }
     }, 
     "name": "拣配运动规划", 
@@ -299,11 +290,6 @@
             "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
             "name": "success", 
             "outcome_id": 0
-        }, 
-        "1": {
-            "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
-            "name": "exhausted", 
-            "outcome_id": 1
         }
     }, 
     "output_data_ports": {
@@ -394,6 +380,14 @@
             "to_outcome": null, 
             "to_state": "EQNWBR", 
             "transition_id": 16
+        }, 
+        "17": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 2, 
+            "from_state": "AQOYVH", 
+            "to_outcome": null, 
+            "to_state": "ZZUQGK", 
+            "transition_id": 17
         }, 
         "18": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
@@ -658,14 +652,6 @@
             "to_outcome": null, 
             "to_state": "BKOIGX", 
             "transition_id": 99
-        }, 
-        "188": {
-            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
-            "from_outcome": 2, 
-            "from_state": "AQOYVH", 
-            "to_outcome": null, 
-            "to_state": "ZZUQGK", 
-            "transition_id": 188
         }
     }
 }

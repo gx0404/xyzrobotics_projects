@@ -5,10 +5,10 @@ def execute(self, inputs, outputs, gvm):
     place_id = trajectory["grasp_plan"].to_workspace_id
     if place_id =="2" or place_id =="3":
         self.logger.info(f"正在笼车,准备去扫码")
-        outputs["acc"] = [10, 10]
-        outputs["speed"] = [50, 50]
+        outputs["acc"] = [10,10]
+        outputs["speed"] = [50,50]
         return "other_pallet"
     else:   
-        outputs["acc"] = [100, 100]
-        outputs["speed"] = [100, 100]     
+        outputs["acc"] = [100,100]
+        outputs["speed"] = [100,100]    
         return "success"

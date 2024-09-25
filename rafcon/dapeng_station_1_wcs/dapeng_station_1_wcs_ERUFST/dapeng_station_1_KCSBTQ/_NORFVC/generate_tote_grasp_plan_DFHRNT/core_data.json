@@ -52,6 +52,11 @@
             "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
             "name": "find_path", 
             "outcome_id": 4
+        }, 
+        "5": {
+            "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
+            "name": "turn_180", 
+            "outcome_id": 5
         }
     }, 
     "output_data_ports": {

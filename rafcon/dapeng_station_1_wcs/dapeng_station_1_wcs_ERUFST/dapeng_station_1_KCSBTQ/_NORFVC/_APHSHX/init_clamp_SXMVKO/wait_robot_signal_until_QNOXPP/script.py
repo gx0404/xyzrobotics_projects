@@ -88,8 +88,8 @@ def execute(self, inputs, outputs, gvm):
     expected_values = target_values
                     
     while not self.preempted:
-        if gvm.variable_exist("ERROR"):
-            return "timeout"
+        #if gvm.variable_exist("ERROR"):
+            #return "timeout"
         if (time.time() - start_time) > self.smart_data["timeout"]:
             from xyz_logistics_hmi_back.utils.utils import send_order_log
             msg = f"等待伸缩向下信号超时,信号地址为{port_ids}"

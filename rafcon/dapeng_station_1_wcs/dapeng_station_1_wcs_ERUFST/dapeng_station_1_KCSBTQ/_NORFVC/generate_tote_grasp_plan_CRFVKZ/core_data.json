@@ -76,6 +76,15 @@
             }, 
             "default_value": null, 
             "name": "object_poses"
+        }, 
+        "3": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.OutputDataPort", 
+            "data_port_id": 3, 
+            "data_type": {
+                "__type__": "__builtin__.str"
+            }, 
+            "default_value": null, 
+            "name": "place_box_id"
         }
     }, 
     "source_file_path": "palletize/generate_tote_grasp_plan/generate_tote_grasp_plan_YCPCRV/script.py", 

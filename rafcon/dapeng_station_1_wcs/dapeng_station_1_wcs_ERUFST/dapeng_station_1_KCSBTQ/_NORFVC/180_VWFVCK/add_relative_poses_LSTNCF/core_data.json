@@ -5,17 +5,7 @@
     "income": {
         "__jsonqualname__": "rafcon.core.state_elements.logical_port.Income"
     }, 
-    "input_data_ports": {
-        "0": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
-            "data_port_id": 0, 
-            "data_type": {
-                "__type__": "__builtin__.list"
-            }, 
-            "default_value": null, 
-            "name": "/relative_poses"
-        }
-    }, 
+    "input_data_ports": {}, 
     "name": "add_relative_poses", 
     "outcomes": {
         "-2": {

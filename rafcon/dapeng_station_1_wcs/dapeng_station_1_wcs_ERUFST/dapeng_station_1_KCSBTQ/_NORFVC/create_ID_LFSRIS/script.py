@@ -346,10 +346,11 @@ def execute(self, inputs, outputs, gvm):
         self.logger.info(f"拣配来料垛型ID为:{new_pose_dict}")
         gvm.set_variable("all_pose_dict", all_pose_dict, per_reference=False)     
         pallet_tote_data = inputs["pallet_tote_data"]
-        if pallet_tote_data:        
-            return "depal"
-        else:
-            return "empty"
+        return "depal"
+        # if pallet_tote_data:        
+        #     return "depal"
+        # else:
+        #     return "empty"
     elif self.smart_data["space_id"]=="1":
         outputs["pose_dict"] = new_pose_dict
         return "cache"  

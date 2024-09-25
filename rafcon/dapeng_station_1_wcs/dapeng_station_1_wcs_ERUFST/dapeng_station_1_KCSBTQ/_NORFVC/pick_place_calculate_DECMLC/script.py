@@ -12,39 +12,74 @@ import multiprocessing
 from queue import PriorityQueue
    
 #过滤得到顶层箱子
-def filter_layer_items(items):
+def filter_layer_items(items,row_flag=True):
+    #两种模式,一种只取最高层，另一种则是每列箱子的最高层
+    if row_flag:
+        combined_data = {}
+        for item in items:
+            #建立x,y坐标的键，同一列箱子xy坐标一致
+            key = (round(item.origin.x,2), round(item.origin.y,2))
+            if key not in combined_data.keys():
+                #判断原先字典是否有xy近似的key的标志flag
+                check_key_flag = False
+                for check_key in combined_data.keys():
+                    #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
+                    if abs(item.origin.x-check_key[0])<0.015 and abs(item.origin.y-check_key[1])<0.015:    
+                        check_key_flag = True
+                        break      
+                #如果不存在标志,则说明是个新列                   
+                if not check_key_flag:                    
+                    combined_data[key] = item
+                #如果存在,则说明是老列,则需要判断是否保留z最大的实例   
+                else:
+                    if item.origin.z > combined_data[check_key].origin.z:
+                        combined_data[check_key] = item        
+            else:   
+                # 只保留Z最大的类实例
+                if item.origin.z > combined_data[key].origin.z:
+                    combined_data[key] = item
 
-    combined_data = {}
-    for item in items:
-        #建立x,y坐标的键，同一列箱子xy坐标一致
-        key = (round(item.origin.x,2), round(item.origin.y,2))
-        if key not in combined_data.keys():
-            combined_data[key] = item
-        else:   
-            # 只保留Z最大的类实例
-            if item.origin.z > combined_data[key].origin.z:
-                combined_data[key] = item
-
-    new_items = list(combined_data.values())
-    # max_z = max(i.origin.z for i in items)
-    # new_items = list(filter(lambda x:abs(x.origin.z-max_z)<0.1,items))
+        new_items = list(combined_data.values())
+        
+    #只考虑最高列,不考虑每列层数不同   
+    else:
+        max_z = max(i.origin.z for i in items)
+        new_items = list(filter(lambda x:abs(x.origin.z-max_z)<0.1,items))
     return new_items
 
 #过滤得到底层箱子
-def filter_bottom_items(items):
+def filter_bottom_items(items,row_flag=True):
+    #两种模式,一种只取最低层，另一种则是每列箱子的最低层
+    if row_flag:
+        combined_data = {}
+        for item in items:
+            #建立x,y坐标的键，同一列箱子xy坐标一致
+            key = (round(item.origin.x,2), round(item.origin.y,2))
+            if key not in combined_data.keys():
+                #判断原先字典是否有xy近似的key的标志flag
+                check_key_flag = False
+                for check_key in combined_data.keys():
+                    #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
+                    if abs(item.origin.x-check_key[0])<0.015 and abs(item.origin.y-check_key[1])<0.015:    
+                        check_key_flag = True
+                        break
+                #如果不存在标志,则说明是个新列         
+                if not check_key_flag:                    
+                    combined_data[key] = item
+                #如果存在,则说明是老列,则需要判断是否保留z最小的实例   
+                else:
+                    if item.origin.z < combined_data[check_key].origin.z:
+                        combined_data[check_key] = item                  
+            else:   
+                # 只保留Z最小的类实例
+                if item.origin.z < combined_data[key].origin.z:
+                    combined_data[key] = item
 
-    combined_data = {}
-    for item in items:
-        #建立x,y坐标的键，同一列箱子xy坐标一致
-        key = (round(item.origin.x,2), round(item.origin.y,2))
-        if key not in combined_data.keys():
-            combined_data[key] = item
-        else:   
-            # 只保留Z最小的类实例
-            if item.origin.z < combined_data[key].origin.z:
-                combined_data[key] = item
-
-    new_items = list(combined_data.values())
+        new_items = list(combined_data.values())
+    #只考虑最低列,不考虑每列层数不同      
+    else:    
+        min_z = min(i.origin.z for i in items)
+        new_items = list(filter(lambda x:abs(x.origin.z-min_z)<0.1,items))    
     return new_items
 
 
@@ -180,8 +215,8 @@ class SEARCH_ASYNC():
             #添加碰撞检测器
                 checker = CollisionChecker(check_robot, planning_env)   
                 if checker.check_point_collision(check_joint[0]):
-                    #if container_item.additional_info.values[-3]=="24":
-                        #pass
+                    if pick_path_key==8:
+                        pass
                         #import ipdb;ipdb.set_trace() 
                     continue
                 else:
@@ -239,9 +274,9 @@ class SEARCH_ASYNC():
                     #添加碰撞检测器
                     checker = CollisionChecker(check_robot, planning_env)   
                     if checker.check_point_collision(check_joint):
-                        if plan_item.additional_info.values[-3]=="4":
-                            pass
-                            # import ipdb;ipdb.set_trace()
+                        # if plan_item.additional_info.values[-3]=="25":
+                        #     pass
+                        #     import ipdb;ipdb.set_trace()
                         continue
                     else:
                         if pick_path_key==8:
@@ -399,10 +434,13 @@ class SEARCH_ASYNC():
                     place_collision_flag,change_180_no_collision = self.check_place_collision(our_robot,check_robot_list,init_planning_env,pick_joints,plan_item,pick_path_key) 
                
                     if not place_collision_flag:
-                        cost_item = CostItem(self.cost_estimate(plan_item,0,pick_box_id_row,from_pick_id),old_path+[[pick_item,plan_item,False]],[plan_item.name]+[i.name for i in plan_path_list]) 
+                        cost_item = CostItem(self.cost_estimate(plan_item,0,pick_box_id_row,from_pick_id),\
+                        old_path+[[pick_item,plan_item,False]],[plan_item.name]+[i.name for i in plan_path_list]) 
+                        
                         open_set.put(cost_item)
                     if  change_180_no_collision:
-                        cost_item = CostItem(self.cost_estimate(plan_item,0,pick_box_id_row,from_pick_id),old_path+[[pick_item,plan_item,True]],[plan_item.name]+[i.name for i in plan_path_list])        
+                        cost_item = CostItem(self.cost_estimate(plan_item,0,pick_box_id_row,from_pick_id),\
+                        old_path+[[pick_item,plan_item,True]],[plan_item.name]+[i.name for i in plan_path_list])        
                         open_set.put(cost_item)             
                               
         #建立代价
@@ -488,7 +526,7 @@ class SEARCH_ASYNC():
                             new_state_key = state_key + [plan_item.name]
                             new_path = copy.copy(path)
                             new_path.append([pick_item,plan_item,True])   
-                            cost_item = CostItem(f_cost+self.cost_estimate(plan_item,cost_z,pick_box_id_row,from_pick_id),new_path,new_state_key) 
+                            cost_item = CostItem(f_cost+self.cost_estimate(plan_item,cost_z,pick_box_id_row,from_pick_id)+1,new_path,new_state_key) 
                             open_set.put(cost_item)
         # if not all_path:
         #     raise "fault"                    
@@ -534,7 +572,7 @@ def execute(self, inputs, outputs, gvm):
    #相机扩大一点
     for i in init_clamp_collision:
         if i.name == "camera":
-            i.primitives[0].dimensions = [0.55, 0.33, 0.2]
+            i.primitives[0].dimensions = [0.55, 0.3+0.03, 0.2]
         if i.name == "body":
             i.primitives[0].dimensions = [0.38, 0.58, 0.65]    
                    

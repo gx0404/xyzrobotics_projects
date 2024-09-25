@@ -1,0 +1,57 @@
+{
+    "data_source": {
+        "outcome_transitions": {
+            "DACEHR_HierarchyState 1:0_success --and-- TMCSGV_HierarchyState 2:0_success": 0, 
+            "DACEHR_HierarchyState 1:0_success --and-- TMCSGV_HierarchyState 2:2_fault_task": 1
+        }
+    }, 
+    "data_source_translation": {
+        "/outcome_transitions": "", 
+        "/outcome_transitions/DACEHR_HierarchyState 1:0_success --and-- TMCSGV_HierarchyState 2:0_success": "", 
+        "/outcome_transitions/DACEHR_HierarchyState 1:0_success --and-- TMCSGV_HierarchyState 2:2_fault_task": ""
+    }, 
+    "data_source_type": {
+        "outcome_transitions": {
+            "DACEHR_HierarchyState 1:0_success --and-- TMCSGV_HierarchyState 2:0_success": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "DACEHR_HierarchyState 1:0_success --and-- TMCSGV_HierarchyState 2:2_fault_task": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }
+    }
+}

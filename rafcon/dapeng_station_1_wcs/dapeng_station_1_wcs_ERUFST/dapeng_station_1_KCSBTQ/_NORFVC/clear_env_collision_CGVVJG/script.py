@@ -4,6 +4,8 @@ import rospy
 from xyz_env_manager.client import get_planning_environment, clear_container_all_items, clear_planned_items, remove_all_full_padding
 from xyz_env_manager.client import clear_attached_collision_object, remove_bottom_padding_workspace, remove_full_padding_workspace
 from xyz_motion import PlanningEnvironmentRos
+from xyz_env_manager.msg import Pose
+from xyz_env_manager.client import modify_primitive_group_of_environment
 
 def execute(self, inputs, outputs, gvm):
     """ 
@@ -52,10 +54,28 @@ def execute(self, inputs, outputs, gvm):
             remove_all_full_padding()
         workspace_env_msg = get_planning_environment()
         for workspace_msg in workspace_env_msg.workspaces:
-            workspace_id = workspace_msg.workspace_id
+            workspace_id = workspace_msg.workspace_id                     
+                          
             if self.smart_data['clear_all_padding']:
                 remove_bottom_padding_workspace(workspace_id)
             if self.smart_data["clear_all_workspaces"] or workspace_id in target_workspaces:
+                if workspace_id == "2":
+                    #通过笼车工作空间更新笼车围栏障碍物
+                    for collision_objcet in workspace_env_msg.collision_objects:
+                        if collision_objcet.name == "collision_pallet_2":
+                            self.logger.info(f"更新笼车围栏障碍物collision_pallet_2")
+                            collision_objcet.origin = Pose(*[1.70, 2.315, -0.417, 0, 0, 0, 1])  
+                            collision_objcet.origin.z+=0.1
+                            modify_primitive_group_of_environment(collision_objcet)  
+                if workspace_id == "3":
+                    #通过笼车工作空间更新笼车围栏障碍物
+                    for collision_objcet in workspace_env_msg.collision_objects:
+                        if collision_objcet.name == "collision_pallet_3":
+                            self.logger.info(f"更新笼车围栏障碍物collision_pallet_3")
+                            collision_objcet.origin = Pose(*[2, 0.365, -0.417, 0, 0, 0, 1])  
+                            collision_objcet.origin.y+=0.05
+                            collision_objcet.origin.z+=0.1
+                            modify_primitive_group_of_environment(collision_objcet)                    
                 if workspace_id in self.smart_data["un_workspaces"]:
                     pass
                 else:

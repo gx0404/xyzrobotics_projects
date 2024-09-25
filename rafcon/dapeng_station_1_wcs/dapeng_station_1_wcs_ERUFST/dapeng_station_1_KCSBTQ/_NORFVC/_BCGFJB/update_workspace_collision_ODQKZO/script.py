@@ -79,7 +79,7 @@ def execute(self, inputs, outputs, gvm):
                                                         0.0,
                                                         0,
                                                         1))  
-                collision_object.primitives.append(append_primitive)  
+                collision_object.primitives.append(append_primitive)   
                 
         check_padding_list = [f"workspace_{i}_full_padding_pg" for i in range(2,3)]
         for collision_object in planning_env_msg.collision_objects:
