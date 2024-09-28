@@ -13,17 +13,12 @@
         "frame_name": "${ef}", 
         "frame_poses": [], 
         "ignored_objects": [], 
-        "move_type": "MoveL", 
+        "move_type": "SmartPlanner", 
         "node_name": "scan", 
         "pick_place_flag": 0, 
         "place_drop_buffer": 0.0, 
         "target_joints": [
-            [
-                1.0459640422776504, 
-                -0.5128475302197821, 
-                1.6949960941435993, 
-                -0.5196512222728238
-            ]
+            []
         ]
     }, 
     "data_source_translation": {
@@ -188,7 +183,7 @@
         }, 
         "target_joints": {
             "type_config": {
-                "current_type": "STATIC", 
+                "current_type": "INPUT_PORT", 
                 "excluded_keys": {}, 
                 "optional_types": [
                     "STATIC", 

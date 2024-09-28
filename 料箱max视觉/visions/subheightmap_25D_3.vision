@@ -866,7 +866,7 @@ nodes:
       name: CalculateTopLayerHeight
       params:
         layer_min_points: 2000
-        output_height_frame: World
+        output_height_frame: Tote
         enable_downsample: true
         leaf_size_downsample: 0.002
         layer_z_tolerance: 0.01
@@ -1115,7 +1115,7 @@ nodes:
       name: CalculateTopLayerHeight
       params:
         layer_min_points: 15000
-        output_height_frame: World
+        output_height_frame: Tote
         enable_downsample: true
         leaf_size_downsample: 0.002
         layer_z_tolerance: 0.01
@@ -1661,7 +1661,7 @@ nodes:
       name: CalculateTopLayerHeight
       params:
         layer_min_points: 15000
-        output_height_frame: World
+        output_height_frame: Tote
         enable_downsample: true
         leaf_size_downsample: 0.002
         layer_z_tolerance: 0.01
@@ -1795,8 +1795,8 @@ nodes:
           - 0
         input_type: DoubleVector
     position:
-      x: -2301.5999999999999
-      y: 1701.6000000000001
+      x: -2299.8719999999998
+      y: 1701.6000000000004
   - id: "{c595b090-64f1-49d3-b393-137ed8268be7}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -2158,7 +2158,7 @@ nodes:
         pixel_value: 0.001
     position:
       x: -1918.7158079754686
-      y: 3278.8074818984787
+      y: 3281.2958018984787
   - id: "{f19d6ed6-9d41-42ae-8629-cc64cfe55994}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:

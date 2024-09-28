@@ -78,7 +78,7 @@ def change_recipe(self,camera_quadrant_list,sku_type,vision_bridge):
                         if model["id"]!='{87e22c96-a7f9-4daa-92ac-6639e791a3ac}':
                             raise Exception("计算最高层高度模块id错误")    
                         if sku_type == 0:
-                            layer_min_points = 2500
+                            layer_min_points = 2000
                         else:
                             layer_min_points = 4000        
                         model["model"]["params"]["layer_min_points"] = layer_min_points  
@@ -126,7 +126,7 @@ def change_recipe(self,camera_quadrant_list,sku_type,vision_bridge):
                         if model["id"]!="{50df878c-7926-4142-b82b-6283bc19748a}":
                             raise Exception("计算最高层高度模块id错误") 
                         if sku_type == 0:
-                            layer_min_points = 2500
+                            layer_min_points = 2000
                         else:
                             layer_min_points = 4000        
                         model["model"]["params"]["layer_min_points"] = layer_min_points  

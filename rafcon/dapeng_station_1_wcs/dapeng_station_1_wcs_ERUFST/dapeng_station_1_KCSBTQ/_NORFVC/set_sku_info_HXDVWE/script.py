@@ -133,6 +133,7 @@ def execute(self, inputs, outputs, gvm):
         gvm.set_variable("depal_scan_code", 1, per_reference=False)
         gvm.set_variable("cache_scan_code", 2, per_reference=False)
         gvm.set_variable("merge_cache_scan_code", 3, per_reference=False)
+        gvm.set_variable("cage_scan_code", [12,13], per_reference=False)
         sku_info_default["row"] = 9
         switch_tool("0","tool1")
         rob_driver.set_digital_output(1,0)
@@ -142,6 +143,7 @@ def execute(self, inputs, outputs, gvm):
         gvm.set_variable("depal_scan_code", 4, per_reference=False)
         gvm.set_variable("cache_scan_code", 5, per_reference=False)
         gvm.set_variable("merge_cache_scan_code", 6, per_reference=False)
+        gvm.set_variable("cage_scan_code", 5, per_reference=False)
         sku_info_default["row"] = 5
         switch_tool("0","tool2")
         rob_driver.set_digital_output(1,1)

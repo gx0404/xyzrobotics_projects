@@ -12,7 +12,8 @@ def execute(self, inputs, outputs, gvm):
     planning_env_msg = get_planning_environment()
     planning_env = PlanningEnvironmentRos.from_ros_msg(planning_env_msg)
     pick_workspace_id = grasp_plan.from_workspace_id
-    workspace_ros = planning_env.get_workspace_ros(pick_workspace_id)
+    place_workspace_id = grasp_plan.to_workspace_id
+    workspace_ros = planning_env.get_workspace_ros(place_workspace_id)
     
     
     if not grasp_plan:
@@ -38,7 +39,7 @@ def execute(self, inputs, outputs, gvm):
         work_space_dimensions = workspace_ros.get_dimensions()
         work_space_pose = workspace_ros.get_bottom_pose().xyz_quat
         tip_pose_z = tf_flange_tip.xyz_quat[2]
-        space_pose_obj_z = work_space_pose[2]+work_space_dimensions[2]+tip_pose_z+self.smart_data["sku_max_height"]-0.1
+        space_pose_obj_z = work_space_pose[2]+work_space_dimensions[2]+tip_pose_z+self.smart_data["sku_max_height"]+0.1
         pose_base_flange = tf_base_flange_list[0].xyz_quat
                 
         pose_xyz = pose_base_flange[0:2] + [space_pose_obj_z]        

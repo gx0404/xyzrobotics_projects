@@ -497,6 +497,14 @@
             "to_state": "LCLETC", 
             "transition_id": 10
         }, 
+        "11": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 1, 
+            "from_state": "CEPGTI", 
+            "to_outcome": null, 
+            "to_state": "CEPGTI", 
+            "transition_id": 11
+        }, 
         "12": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 

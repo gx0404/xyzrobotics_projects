@@ -1,8 +1,8 @@
 {
     "data_source": {
         "acc": [
-            40, 
-            40
+            70, 
+            70
         ], 
         "allow_movedo": {
             "enable": false, 
@@ -17,11 +17,11 @@
         "comment": "MoveToPlace", 
         "mid_zone": 25, 
         "speed": [
-            70, 
-            70
+            100, 
+            100
         ], 
         "target_name": "place", 
-        "zone": 0
+        "zone": 1
     }, 
     "data_source_translation": {
         "/acc": "运行到该点， 加速度的比率: [0, 100]", 

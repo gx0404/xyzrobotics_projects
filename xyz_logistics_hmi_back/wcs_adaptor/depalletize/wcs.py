@@ -333,6 +333,33 @@ def depal_task(body: SingleTaskCreateSchema):
     else:
         mp.order.error(f"wcs下发拣配任务sku类型错误")        
         return make_json_response(error=1,error_message="sku_type error")
+    
+    #判断上一次任务类型
+    last_data = get_last_task_type()
+    last_task = last_data["0"]
+    if last_task['task_type'] != TaskType.SINGLE_DEPAL.value:
+        mp.order.info(f"上次任务类型为{TASK_TYPE_DESC[last_task['task_type'].value]},需要清空所有环境")  
+        pallet_clear_list = ["0","1","2","3","4","5","6","7","8"]
+    else:
+        pallet_clear_list = body.pallet_clear_list      
+    
+    
+    try:
+        from xyz_env_manager.client import get_planning_environment
+        from xyz_motion import PlanningEnvironmentRos
+        pl = get_planning_environment()
+        planning_env = PlanningEnvironmentRos.from_ros_msg(pl)
+        container_items_2 = planning_env.get_container_items("2")
+        container_items_3 = planning_env.get_container_items("3")
+        if container_items_2:
+            sku_dimension_2 = container_items_2[0].primitives[0].dimensions
+            sku_dimension_2 = list(map(lambda x:round(x,2),sku_dimension_2))
+        if container_items_3:
+            sku_dimension_3 = container_items_2[0].primitives[0].dimensions
+            sku_dimension_3 = list(map(lambda x:round(x,2),sku_dimension_3))                
+    except ImportError as err:
+        return make_json_response(error=5,error_message="环境节点未启动,请在HMI中启动环境节点") 
+    
     #检查wcs下发的托盘条码是否和目标条码一致
     for key,item in body.pick_tote_data.items():
         if key not in body.pallet_tote_data.keys():
@@ -342,23 +369,39 @@ def depal_task(body: SingleTaskCreateSchema):
             mp.order.error(f"wcs下发拣配任务目标箱条码和托盘对应条码不一致")
             return make_json_response(error=2,error_message="目标箱条码和托盘对应条码不一致")
         if body.sku_type==0:
-            if item["to_ws"] != "6":
-                mp.order.error(f"中欧箱目标箱终点必须为输送线")    
-                return make_json_response(error=3,error_message="中欧箱目标箱终点必须为输送线") 
+            if item["to_ws"]=="2":
+                if container_items_2:
+                    if sku_dimension_2!=[0.4,0.3,0.23] and ("2" not in pallet_clear_list):
+                        mp.order.error(f"当前空间2环境已存在大欧箱,订单却下发空间2中欧箱")  
+                        return make_json_response(error=6,error_message="当前空间2环境已存在大欧箱,订单却下发空间2中欧箱")   
+            elif item["to_ws"]=="3":
+                if container_items_3:
+                    if sku_dimension_3!=[0.4,0.3,0.23] and ("3" not in pallet_clear_list):
+                        mp.order.error(f"当前空间3环境已存在大欧箱,订单却下发空间2中欧箱")  
+                        return make_json_response(error=6,error_message="当前空间3环境已存在大欧箱,订单却下发空间2中欧箱")  
+            elif item["to_ws"]=="6":
+                pass
+            else:
+                mp.order.error(f"中欧箱目标箱终点必须为笼车或者输送线")     
+                return make_json_response(error=3,error_message="中欧箱目标箱终点必须为笼车或者输送线")          
+                                       
         if body.sku_type==1:
-            if item["to_ws"] not in ["2","3","6"]:
-                mp.order.error(f"大欧箱目标箱终点必须为笼车或者输送线")    
-                return make_json_response(error=4,error_message="大欧箱目标箱终点必须为笼车或者输送线")        
-    
-    
-    #判断上一次任务类型
-    last_data = get_last_task_type()
-    last_task = last_data["0"]
-    if last_task['task_type'] != TaskType.SINGLE_DEPAL.value:
-        mp.order.info(f"上次任务类型为{TASK_TYPE_DESC[last_task['task_type'].value]},需要清空所有环境")  
-        pallet_clear_list = ["0","1","2","3","4","5","6","7","8"]
-    else:
-        pallet_clear_list = body.pallet_clear_list              
+            if item["to_ws"]=="2":
+                if container_items_2:
+                    if sku_dimension_2!=[0.6,0.4,0.23] and ("2" not in pallet_clear_list):
+                        mp.order.error(f"当前空间2环境已存在中欧箱,订单却下发空间2大欧箱")  
+                        return make_json_response(error=6,error_message="当前空间2环境已存在中欧箱,订单却下发空间2大欧箱")   
+            elif item["to_ws"]=="3":
+                if container_items_3:
+                    if sku_dimension_3!=[0.6,0.4,0.23]and ("3" not in pallet_clear_list):
+                        mp.order.error(f"当前空间3环境已存在中欧箱,订单却下发空间2大欧箱")  
+                        return make_json_response(error=6,error_message="当前空间3环境已存在中欧箱,订单却下发空间2大欧箱")  
+            elif item["to_ws"]=="6":
+                pass
+            else:
+                mp.order.error(f"大欧箱目标箱终点必须为笼车或者输送线")     
+                return make_json_response(error=3,error_message="大欧箱目标箱终点必须为笼车或者输送线")               
+                              
                   
     # 创建新任务
     task = Task(

@@ -344,8 +344,16 @@ def execute(self, inputs, outputs, gvm):
         barcode_direction = inputs["sku_info"]["barcode_direction"]
     
     #通过放置位置更新条码朝向    
-    if place_ws_id == "6" or place_ws_id in ["2","3"]:
-        barcode_direction = 4      
+    if place_ws_id == "6":
+        barcode_direction = 4 
+    elif place_ws_id in ["2","3"]:
+        # sku_dimension = [inputs["sku_info"]["length"],inputs["sku_info"]["width"],inputs["sku_info"]["height"]]
+        # sku_dimension = list(map(lambda x:round(x,3),sku_dimension))   
+        # if sku_dimension==[0.400,0.300,0.23]:
+        #     barcode_direction = 0
+        # else:
+        #     barcode_direction = 4      
+        barcode_direction = 4               
     else:
         barcode_direction = 0
         
@@ -505,8 +513,8 @@ def execute(self, inputs, outputs, gvm):
 
     outputs["grasp_plan"] = grasp_plans[0]
     outputs["object_poses"] = object_poses[0]
-    self.logger.info(f"grasp plan 已规划出指定箱子{plan_path[0][0]},更新路径")
-    self.logger.info(f"抓取箱子ID为{plan_path[0][0]}")
+    self.logger.info(f"grasp plan 已规划出指定箱子{plan_path[0]},更新路径")
+    self.logger.info(f"抓取箱子ID为{plan_path[0]}")
     plan_path.pop(0)
     gvm.set_variable("plan_path", plan_path, per_reference=False)
     return "success"

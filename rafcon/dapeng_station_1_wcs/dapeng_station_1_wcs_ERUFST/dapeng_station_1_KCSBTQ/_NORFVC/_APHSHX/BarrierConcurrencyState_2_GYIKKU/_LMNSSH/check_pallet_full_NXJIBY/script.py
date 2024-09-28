@@ -10,12 +10,25 @@ def execute(self, inputs, outputs, gvm):
     place_id = trajectory["grasp_plan"].to_workspace_id  
     unfinished_items = planning_env.get_unfinished_planned_items(place_id)
     container_items = planning_env.get_container_items(place_id)
+    
+    sku_dimension = trajectory["grasp_plan"].objects[0].primitives[0].dimensions
+    sku_dimension = list(map(lambda x:round(x,2),sku_dimension))
+    
     self.logger.info(f"当前位置{place_id}存在实际料箱{len(container_items)}个，规划箱子{len(unfinished_items)}个")
-    if len(container_items)==24 and (place_id=="2" or place_id=="3"):
-        self.logger.info(f"笼车码垛无规划箱子,已码满")
-        outputs["is_pal_pallet_full"] = True
-        outputs["place_id"] = place_id
-        return "full"
+    if place_id=="2" or place_id=="3":
+        if len(container_items)==24 and sku_dimension==[0.6,0.4,0.23]:
+            self.logger.info(f"笼车码垛无规划箱子,已码满")
+            outputs["is_pal_pallet_full"] = True
+            outputs["place_id"] = place_id
+            return "full"
+        elif len(container_items)==48 and sku_dimension==[0.4,0.3,0.23]:
+            self.logger.info(f"笼车码垛无规划箱子,已码满")
+            outputs["is_pal_pallet_full"] = True
+            outputs["place_id"] = place_id
+            return "full"   
+        else:
+            outputs["is_pal_pallet_full"] = False        
+            return "success"                     
     else:
         outputs["is_pal_pallet_full"] = False        
         return "success"

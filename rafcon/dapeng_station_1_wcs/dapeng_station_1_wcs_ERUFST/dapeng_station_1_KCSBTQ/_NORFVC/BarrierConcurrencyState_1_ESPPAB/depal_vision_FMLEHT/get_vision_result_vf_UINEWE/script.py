@@ -571,18 +571,18 @@ def execute(self, inputs, outputs, gvm):
             return container_items   
         current_time = time.time()         
         row = gvm.get_variable("row", per_reference=False, default=None)
-        wcs_container_items =build_primitive_planning_wcs_env(pallet_tote_data,all_pose_dict,row)
+        # wcs_container_items =build_primitive_planning_wcs_env(pallet_tote_data,all_pose_dict,row)
         
         
-        wcs_planning_env = copy.deepcopy(planning_env)
-        for clear_id in ["0","1","2","3","4","5","6"]:           
-            wcs_planning_env.remove_bottom_padding_workspace(clear_id)
-            wcs_planning_env.clear_container_all_items(clear_id)
-            wcs_planning_env.remove_full_padding_workspace(clear_id)
-            wcs_planning_env.remove_bottom_padding_workspace(clear_id)
+        # wcs_planning_env = copy.deepcopy(planning_env)
+        # for clear_id in ["0","1","2","3","4","5","6"]:           
+        #     wcs_planning_env.remove_bottom_padding_workspace(clear_id)
+        #     wcs_planning_env.clear_container_all_items(clear_id)
+        #     wcs_planning_env.remove_full_padding_workspace(clear_id)
+        #     wcs_planning_env.remove_bottom_padding_workspace(clear_id)
             
-        wcs_planning_env.add_container_items(workspace_id, wcs_container_items)
-        wcs_planning_env.to_json_file("/home/xyz/xyz_app/projects/dapeng_station_0/wcs_pallet_json/planning_env.json")
+        # wcs_planning_env.add_container_items(workspace_id, wcs_container_items)
+        # wcs_planning_env.to_json_file("/home/xyz/xyz_app/projects/dapeng_station_1/wcs_pallet_json/planning_env.json")
         self.logger.info(f"load time is {time.time()-current_time}")
                 
         from xyz_logistics_hmi_back.utils.utils import send_order_log

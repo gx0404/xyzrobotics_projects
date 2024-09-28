@@ -55,6 +55,38 @@
     "scoped_variables": {}, 
     "state_id": "IGVPUR", 
     "transitions": {
+        "2": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 0, 
+            "from_state": "GIIUDV", 
+            "to_outcome": null, 
+            "to_state": "POHQUH", 
+            "transition_id": 2
+        }, 
+        "4": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 0, 
+            "from_state": "POHQUH", 
+            "to_outcome": null, 
+            "to_state": "YAOZOZ", 
+            "transition_id": 4
+        }, 
+        "5": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 0, 
+            "from_state": "YAOZOZ", 
+            "to_outcome": null, 
+            "to_state": "VDOFXJ", 
+            "transition_id": 5
+        }, 
+        "7": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 1, 
+            "from_state": "POHQUH", 
+            "to_outcome": null, 
+            "to_state": "POHQUH", 
+            "transition_id": 7
+        }, 
         "43": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": null, 
@@ -70,22 +102,6 @@
             "to_outcome": null, 
             "to_state": "GIIUDV", 
             "transition_id": 44
-        }, 
-        "45": {
-            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
-            "from_outcome": 0, 
-            "from_state": "GIIUDV", 
-            "to_outcome": null, 
-            "to_state": "SSEKIP", 
-            "transition_id": 45
-        }, 
-        "46": {
-            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
-            "from_outcome": 0, 
-            "from_state": "SSEKIP", 
-            "to_outcome": null, 
-            "to_state": "VDOFXJ", 
-            "transition_id": 46
         }, 
         "47": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 

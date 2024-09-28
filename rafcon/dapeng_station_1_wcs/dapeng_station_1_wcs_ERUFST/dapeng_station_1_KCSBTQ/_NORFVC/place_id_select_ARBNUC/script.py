@@ -22,8 +22,13 @@ def execute(self, inputs, outputs, gvm):
         sku_info["barcode_direction"] = 0
         outputs["sku_info"] = sku_info        
     elif place_id == "2" or place_id == "3":
+        if sku_dimension==[0.400,0.300,0.23]:
+            sku_info["barcode_direction"] = 4
+        elif sku_dimension==[0.600,0.400,0.23]:
+            sku_info["barcode_direction"] = 4      
+        else:
+            raise "无效的尺寸"         
         outputs["place_pose_by_scan_code"] = True
-        sku_info["barcode_direction"] = 4
         outputs["sku_info"] = sku_info    
         return "other_pallet"      
     else:

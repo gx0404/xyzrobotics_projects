@@ -1119,14 +1119,14 @@ nodes:
       name: CalculateTopLayerHeight
       params:
         layer_min_points: 15000
-        output_height_frame: World
+        output_height_frame: Tote
         enable_downsample: true
         leaf_size_downsample: 0.002
         layer_z_tolerance: 0.01
         cloud_extract_radius: 0.05
         output_cloud_type: Organized
     position:
-      x: -2556.71632
+      x: -2561.0161369600005
       y: 1909.0156800000004
   - id: "{7d6e86c2-e92c-48e8-83a9-ea02e6b7adec}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
@@ -1632,7 +1632,7 @@ nodes:
       name: CalculateTopLayerHeight
       params:
         layer_min_points: 15000
-        output_height_frame: World
+        output_height_frame: Tote
         enable_downsample: true
         leaf_size_downsample: 0.002
         layer_z_tolerance: 0.01

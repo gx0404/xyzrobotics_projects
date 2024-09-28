@@ -123,7 +123,11 @@ def execute(self, inputs, outputs, gvm):
         scan_code = inputs["scan_code"]
         if self.smart_data["space_id"]=="2" or self.smart_data["space_id"]=="3":
             pallet_hmi_id = "2"
-            scan_code = gvm.get_variable("cache_scan_code", per_reference=False, default=None)
+            scan_code = gvm.get_variable("cage_scan_code", per_reference=False, default=None)
+            sku_dimension = [sku_info["length"],sku_info["width"],sku_info["height"]]
+            sku_dimension = list(map(lambda x:round(x,2),sku_dimension))
+            if sku_dimension==[0.4,0.3,0.23]:
+                scan_code = scan_code[0]                
         else:    
             pallet_hmi_id = "1"
             scan_code = gvm.get_variable("depal_scan_code", per_reference=False, default=None)

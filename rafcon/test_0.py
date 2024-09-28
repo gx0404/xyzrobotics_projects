@@ -1,4 +1,4 @@
-box_row_num = {1:5,2:2,3:7,4:1,5:2,6:5,7:5,8:6,9:6}
+box_row_num = {1:6,2:6,3:6,4:5,5:5,6:5,7:5,8:5,9:5}
 pallet_tote_data = {}
 for key,item in box_row_num.items():
    for i in range(item):

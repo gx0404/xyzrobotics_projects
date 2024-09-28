@@ -70,6 +70,8 @@ def execute(self, inputs, outputs, gvm):
     l = float(sku_info['length'])
     w = float(sku_info['width'])
     h = float(sku_info['height'])
+    sku_dimension = [sku_info["length"],sku_info["width"],sku_info["height"]]
+    sku_dimension = list(map(lambda x:round(x,2),sku_dimension))    
     # 内嵌型料箱的卡槽高度：
     overlapping_heihgt = 0.0
     if inputs["extra"]:  # inputs["extra"]值的形式：{'extra1': {'key': 'overlapping_heihgt', 'value': '20'}}
@@ -172,8 +174,13 @@ def execute(self, inputs, outputs, gvm):
         elif enable_place_pose_from_hmi['place_pose_by_scan_code']:
             scan_code = inputs["scan_code"]
             if self.smart_data["place_workspace_id"] == "2" or self.smart_data["place_workspace_id"] == "3":
-                scan_code = gvm.get_variable("cache_scan_code", per_reference=False, default=None)
+                scan_code = gvm.get_variable("cage_scan_code", per_reference=False, default=None)
                 hmi_pallet_id = "2"
+                if sku_dimension==[0.4,0.3,0.23]:                
+                    if self.smart_data["place_workspace_id"] == "2":
+                        scan_code = scan_code[0] 
+                    else:
+                        scan_code = scan_code[1]            
             else:        
                 scan_code = gvm.get_variable("depal_scan_code", per_reference=False, default=None)
                 hmi_pallet_id = "1"
@@ -223,11 +230,12 @@ def execute(self, inputs, outputs, gvm):
         place_id = str(self.smart_data["place_workspace_id"])
         first_offset = False
         for i in range(1, palletize_layers+1, 1):
-            if i % 2 == 1:            
-                if place_id in ["2","3"] and i==3:
-                    pass
-                    #import ipdb;ipdb.set_trace()  
-                    odd_poses[:, 1] -=0.003    
+            if i % 2 == 1:  
+                #判断是否为笼车以及类型          
+                if place_id in ["2","3"]:
+                    #大欧添加偏置
+                    if sku_dimension==[0.6,0.4,0.23] and i==3: 
+                        odd_poses[:, 1] -=0.003    
                 odd_poses[:, 2] = h + (i-1) * (h - overlapping_heihgt)
                 odd_tf = np.array([SE3(p).homogeneous for p in odd_poses])
                 
@@ -235,10 +243,11 @@ def execute(self, inputs, outputs, gvm):
                 if odd_layer_drop_buffer:
                     drop_buffer_list.extend(odd_layer_drop_buffer)
             else:
-                if place_id in ["2","3"] and i==2:
-                    pass
-                    #import ipdb;ipdb.set_trace()   
-                    even_poses[:, 1] -=0.003              
+                #判断是否为笼车以及类型
+                if place_id in ["2","3"]:
+                    #大欧添加偏置
+                    if sku_dimension==[0.6,0.4,0.23] and i==2:                   
+                        even_poses[:, 1] -=0.003              
                 even_poses[:, 2] = h + (i-1) * (h - overlapping_heihgt)
                 even_tf = np.array([SE3(p).homogeneous for p in even_poses])
                 tf_base = np.matmul(pallet_tf, even_tf)

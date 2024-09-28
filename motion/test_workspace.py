@@ -61,13 +61,13 @@ ws6.conveyor = conveyor_6
 
 
 #混码缓存位7
-ws7 = build_workspace(workspace_id="7", bottom_pose=[1.228-0.41-0.07, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[0.4, 0.3, 0.4], ws_type="pallet")
-pallet_7 = build_pallet(name="pallet_7", top_origin=[1.228-0.41-0.07, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[1, 0.3, 0.11])
+ws7 = build_workspace(workspace_id="7", bottom_pose=[1.298-0.41-0.07, -2.645, -0.456-0.02, 0.0, 0.0, 0, 1], dimensions=[0.4, 0.3, 0.4], ws_type="pallet")
+pallet_7 = build_pallet(name="pallet_7", top_origin=[1.298-0.41-0.07, -2.645, -0.456-0.02, 0.0, 0.0, 0, 1], dimensions=[1, 0.3, 0.11])
 ws7.pallet = pallet_7
 
 #混码缓存位8
-ws8 = build_workspace(workspace_id="8", bottom_pose=[1.228, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[0.4, 0.3, 0.4], ws_type="pallet")
-pallet_8 = build_pallet(name="pallet_8", top_origin=[1.228, -2.638, -0.456-0.1, 0.0, 0.0, 0, 1], dimensions=[1, 0.3, 0.11])
+ws8 = build_workspace(workspace_id="8", bottom_pose=[1.298, -2.638, -0.456-0.02, 0.0, 0.0, 0, 1], dimensions=[0.4, 0.3, 0.4], ws_type="pallet")
+pallet_8 = build_pallet(name="pallet_8", top_origin=[1.298, -2.638, -0.456-0.02, 0.0, 0.0, 0, 1], dimensions=[1, 0.3, 0.11])
 ws8.pallet = pallet_8
 
 
@@ -100,7 +100,7 @@ collision_4 = build_collision(name="col_4", origin=[0.052, -3.5, -0.32+1.5/2, 0,
 collision_13 = build_collision(name="col_13", origin=[0, 0 ,3, 0, 0, 0, 1], dimensions=[5, 5,0.11], geometric_type=GeometricPrimitive.BOX, alpha=0.1)
 
 #相机立柱
-collision_5 = build_collision(name="col_5", origin=[0.893, 2.824, 0.730, 0, 0, 0, 1], dimensions=[4.4, 0.2+0.02], geometric_type=GeometricPrimitive.CYLINDER, alpha=0.2)
+collision_5 = build_collision(name="col_5", origin=[0.893+0.07, 2.824, 0.730, 0, 0, 0, 1], dimensions=[4.4, 0.2+0.02], geometric_type=GeometricPrimitive.CYLINDER, alpha=0.2)
 
 #相机
 collision_6 = build_collision(name="col_6", origin=[-0.04, 1.9, 2.43+0.04, 0, 0, 0, 1], dimensions=[1.5,1.5,0.25], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
