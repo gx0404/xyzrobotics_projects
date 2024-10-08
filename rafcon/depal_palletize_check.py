@@ -229,10 +229,10 @@ class CALCU_PALLETIZE_ASYNC():
                         y_length = init_collision_item.origin.y-from_pick_pose[1]
                                 
                         #添加偏移点
-                        new_slide_list = split_slide([0.085-x_length,0.085-y_length],0.005)  
-                        new_slide_list+= split_slide([0.085-x_length,-0.085-y_length],0.005) 
-                        new_slide_list+= split_slide([-0.085-x_length,0.085-y_length],0.005) 
-                        new_slide_list+= split_slide([-0.085-x_length,-0.085-y_length],0.005) 
+                        new_slide_list = split_slide([0.08-x_length,0.08-y_length],0.005)  
+                        new_slide_list+= split_slide([0.08-x_length,-0.08-y_length],0.005) 
+                        new_slide_list+= split_slide([-0.08-x_length,0.08-y_length],0.005) 
+                        new_slide_list+= split_slide([-0.08-x_length,-0.08-y_length],0.005) 
                         new_slide_list = sorted(new_slide_list,key=lambda x:abs(x[0])+abs(x[1]))
                         old_collision_item = copy.deepcopy(init_collision_item)                       
                         old_collision_item.origin = Pose(*from_pick_pose)

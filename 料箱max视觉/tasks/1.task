@@ -1,0 +1,23 @@
+{
+  "dataConnections": null,
+  "milestoneNodes": [
+    {
+      "group_name": "流图初始化"
+    },
+    {
+      "group_name": "任务初始化"
+    },
+    {
+      "group_name": "运动规划"
+    },
+    {
+      "group_name": "运动执行"
+    }
+  ],
+  "nodes": null,
+  "robotGlobalSpeedScales": null,
+  "service": {
+    "enable": false
+  },
+  "usergroup_z": -2.99999
+}

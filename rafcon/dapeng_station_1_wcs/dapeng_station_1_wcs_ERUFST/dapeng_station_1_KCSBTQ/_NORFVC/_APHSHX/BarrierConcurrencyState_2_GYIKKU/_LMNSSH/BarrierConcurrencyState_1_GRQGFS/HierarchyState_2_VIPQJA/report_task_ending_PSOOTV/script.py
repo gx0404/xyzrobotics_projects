@@ -1,7 +1,7 @@
 import requests
 import json
 from rafcon.xyz_exception_base import XYZExceptionBase
-
+import time
 
 def execute(self, inputs, outputs, gvm):
     """ 
@@ -29,7 +29,7 @@ def execute(self, inputs, outputs, gvm):
         -2: preempted
     """
     self.logger.info("Running {}({})({})".format(self.name, self.unique_id, self.smart_data["comment"]))
-
+    time.sleep(1)
     url = "http://127.0.0.1:7002/api/rafcon/report_task_ending"
     data = {
         "task_id": self.smart_data["task_id"],

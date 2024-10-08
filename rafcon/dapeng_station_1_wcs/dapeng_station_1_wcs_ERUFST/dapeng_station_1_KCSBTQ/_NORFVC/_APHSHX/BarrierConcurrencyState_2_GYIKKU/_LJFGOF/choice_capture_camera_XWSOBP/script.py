@@ -14,7 +14,7 @@ def change_recipe(self,camera_quadrant_list,sku_type,vision_bridge):
         3:"/home/xyz/xyz_app/app/料箱max视觉/visions/three_camera.yml",
     }
     sku_type_dict = {
-        0:["400_300_230_1"],
+        0:["400_300_230"],
         1:["600_400_230"],
     }
     
@@ -35,7 +35,7 @@ def change_recipe(self,camera_quadrant_list,sku_type,vision_bridge):
     #判断是否需要新增配方
     recipes_list_res = vision_bridge.run(0,"get_recipes_list")
     recipes_list = recipes_list_res.info
-    recipe_name = recipe_name_dict[camera_num]+"_"+f"{camera_quadrant_list}"
+    recipe_name = recipe_name_dict[camera_num]+"_"+f"{camera_quadrant_list}"+"_"+sku_type_dict[sku_type][0]
 
     self.logger.info(f"当前vision存在配方列表为{recipes_list}")
     self.logger.info(f"配方名称为{recipe_name}")
@@ -256,40 +256,44 @@ def execute(self, inputs, outputs, gvm):
             self.logger.info("下次抓取的箱子在拣配区第一象限")
             camera_quadrant_list.append(0)
                         
-            if next_item_x<0.2:
-                self.logger.info("下次抓取的箱子在拣配区第一象限,靠近第二象限")
-                camera_quadrant_list.append(1)
-            if next_item_y<0.2:
+            # if next_item_x<0.2:
+            #     self.logger.info("下次抓取的箱子在拣配区第一象限,靠近第二象限")
+            #     camera_quadrant_list.append(1)
+            camera_quadrant_list.append(1)
+            if next_item_y<0.25:
                 self.logger.info("下次抓取的箱子在拣配区第一象限,靠近第四象限")
                 camera_quadrant_list.append(3)      
                  
         elif next_item_x<=0 and next_item_y>=0:
             self.logger.info("下次抓取的箱子在拣配区第二象限")
             camera_quadrant_list.append(1)
-            if next_item_x>-0.2:
-                self.logger.info("下次抓取的箱子在拣配区第二象限,靠近第一象限")
-                camera_quadrant_list.append(0)
-            if next_item_y<0.2:
+            # if next_item_x>-0.2:
+            #     self.logger.info("下次抓取的箱子在拣配区第二象限,靠近第一象限")
+            #     camera_quadrant_list.append(0)
+            camera_quadrant_list.append(0)
+            if next_item_y<0.25:
                 self.logger.info("下次抓取的箱子在拣配区第二象限,靠近第三象限")
                 camera_quadrant_list.append(2)  
  
         elif next_item_x<=0 and next_item_y<=0:
             self.logger.info("下次抓取的箱子在拣配区第三象限")
             camera_quadrant_list.append(2)
-            if next_item_x>-0.2:
-                self.logger.info("下次抓取的箱子在拣配区第三象限,靠近第四象限")
-                camera_quadrant_list.append(3)
-            if next_item_y>-0.2:
+            # if next_item_x>-0.25:
+            #     self.logger.info("下次抓取的箱子在拣配区第三象限,靠近第四象限")
+            #     camera_quadrant_list.append(3)
+            camera_quadrant_list.append(3)
+            if next_item_y>-0.25:
                 self.logger.info("下次抓取的箱子在拣配区第三象限,靠近第二象限")
                 camera_quadrant_list.append(1)
                 
         elif next_item_x>=0 and next_item_y<=0:
             self.logger.info("下次抓取的箱子在拣配区第四象限")
             camera_quadrant_list.append(3)
-            if next_item_x<0.2:
-                self.logger.info("下次抓取的箱子在拣配区第四象限,靠近第三象限")
-                camera_quadrant_list.append(2)
-            if next_item_y>-0.2:
+            # if next_item_x<0.25:
+            #     self.logger.info("下次抓取的箱子在拣配区第四象限,靠近第三象限")
+            #     camera_quadrant_list.append(2)
+            camera_quadrant_list.append(2)
+            if next_item_y>-0.25:
                 self.logger.info("下次抓取的箱子在拣配区第四象限,靠近第一象限")
                 camera_quadrant_list.append(0)  
                 

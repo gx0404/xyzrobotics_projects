@@ -139,7 +139,7 @@ def execute(self, inputs, outputs, gvm):
         if i.name == "body":
             i.primitives[0].dimensions = [0.382, 0.582, 0.65] 
         if i.name == "camera":
-            i.primitives[0].dimensions = [0.6, 0.33+0.05, 0.25]     
+            i.primitives[0].dimensions = [0.55, 0.33, 0.25]     
             
     #our robot
     our_robot_msg = check_our_robot.to_ros_msg()
@@ -438,7 +438,7 @@ def execute(self, inputs, outputs, gvm):
     outputs["slide"] = [use_slide]  
     self.logger.info(use_slide)
     post_slide = copy.deepcopy(use_slide)
-    post_slide[2] = 0.04
+    post_slide[2] = 0.01
     outputs["post_slide"] = [post_slide] 
      
     outputs["un_clamp_collision"] = un_clamp_collision

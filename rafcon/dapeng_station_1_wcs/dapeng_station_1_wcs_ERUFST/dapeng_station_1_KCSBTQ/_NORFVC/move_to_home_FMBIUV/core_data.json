@@ -1,7 +1,7 @@
 {
     "__jsonqualname__": "rafcon.core.states.execution_state.ExecutionState", 
     "description": null, 
-    "different_from_lib": false, 
+    "different_from_lib": true, 
     "income": {
         "__jsonqualname__": "rafcon.core.state_elements.logical_port.Income"
     }, 

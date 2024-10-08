@@ -26,8 +26,8 @@ nodes:
         bottom_margin: 0.25
         top_margin: 0
     position:
-      x: -1222.4947102875635
-      y: 2515.4242072805373
+      x: -1581.2275102875631
+      y: 2465.6578072805373
   - id: "{029e7873-f5a9-4f08-8258-8ae535c4ee19}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -38,6 +38,19 @@ nodes:
     position:
       x: -6903.3999999999996
       y: 1781.8000000000002
+  - id: "{02df84da-fe57-4fca-bcaf-fa9a3e00124f}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: VisualizePrimitives3D
+      params:
+        show_axes: true
+        cloud_model_file_path: ""
+        render_cloud_method: mask
+        viz_color: green
+        thickness: 1
+    position:
+      x: 1263.2255999999993
+      y: -1854.0057599999991
   - id: "{0377e495-78e6-4356-b698-25798b8e476a}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -51,8 +64,8 @@ nodes:
           num_neighbor: 10
           std_dev_threshold: 0.8
     position:
-      x: -1471.8258375917567
-      y: 1556.7025586425843
+      x: -1428.5298375917564
+      y: 855.95055864258461
   - id: "{057fd152-810f-460c-aa21-8ee0641be712}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -89,10 +102,10 @@ nodes:
     model:
       name: CalculateTopLayerHeight
       params:
-        layer_min_points: 6000
+        layer_min_points: 4000
         output_height_frame: Tote
         enable_downsample: true
-        leaf_size_downsample: 0.001
+        leaf_size_downsample: 0.002
         layer_z_tolerance: 0.01
         cloud_extract_radius: 0.05
         output_cloud_type: Organized
@@ -120,6 +133,16 @@ nodes:
     position:
       x: 51.36058542858234
       y: -2049.4167622361101
+  - id: "{0d2f0934-b1a3-4b80-bd2f-772d4237c8da}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ConstructHeightMap
+      params:
+        pixel_size: 0.001
+        pixel_value: 0.001
+    position:
+      x: -968.75903999999969
+      y: 2189.6294399999983
   - id: "{0f205c39-fa5f-487b-a5db-8692730e54b2}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -171,8 +194,8 @@ nodes:
         leaf_size: 0.001
         max_points: 0
     position:
-      x: -961.73239922196478
-      y: 2535.0986656382975
+      x: -1212.2923992219648
+      y: 2464.2506656382975
   - id: "{185886bd-924b-473a-999d-00f1dabded7d}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -181,8 +204,8 @@ nodes:
         transform_frame: Workspace
         transform_frame_id: ""
     position:
-      x: -1511.1849399764533
-      y: 2494.3983140064629
+      x: -1998.4809399764531
+      y: 2442.5583140064637
   - id: "{1a26f129-c392-4536-a37c-908eaf401940}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -196,7 +219,7 @@ nodes:
           - 400_300_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 80
+        min_detection_score: 90
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -249,7 +272,7 @@ nodes:
         cloud2d_plane: XY
         knn: 5
     position:
-      x: 2108.4765171274407
+      x: 2110.5501171274404
       y: -826.81309510983692
   - id: "{1bda13c7-14b1-459a-92b5-c71f13f9781f}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
@@ -274,8 +297,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 1624.7130123888091
-      y: -501.59502053142887
+      x: 2020.6784523888089
+      y: -121.2046205314291
     embedded_widget_rect:
       w: 338
       h: 213
@@ -284,10 +307,10 @@ nodes:
     model:
       name: CalculateTopLayerHeight
       params:
-        layer_min_points: 5000
+        layer_min_points: 2500
         output_height_frame: Tote
         enable_downsample: true
-        leaf_size_downsample: 0.001
+        leaf_size_downsample: 0.002
         layer_z_tolerance: 0.01
         cloud_extract_radius: 0.05
         output_cloud_type: Organized
@@ -374,10 +397,10 @@ nodes:
         z_tolerance: 10
         xy_tolerance: 0.03
         min_uncovered_points_ratio: 0.1
-        max_uncovered_points_num: 6000
+        max_uncovered_points_num: 2500
     position:
-      x: 1449.6617067282434
-      y: 1585.3962828025851
+      x: 1491.9631467282438
+      y: 1508.2583628025852
   - id: "{3024533b-f764-4285-92b4-62d08378cf34}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -509,6 +532,19 @@ nodes:
     embedded_widget_rect:
       w: 256
       h: 211
+  - id: "{423775b1-6128-45fb-977e-f17c1e3e988f}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: VisualizePrimitives3D
+      params:
+        show_axes: true
+        cloud_model_file_path: ""
+        render_cloud_method: mask
+        viz_color: green
+        thickness: 1
+    position:
+      x: 1089.5538666666666
+      y: 2808.6415999999986
   - id: "{4268b5b3-0194-4735-aa18-180bf4c727db}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -533,7 +569,7 @@ nodes:
           - 600_400_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 78
+        min_detection_score: 85
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -558,8 +594,8 @@ nodes:
           contrast: 30
           min_contrast: -1
     position:
-      x: 286.43990379410849
-      y: -804.67786310983661
+      x: 290.02308459410847
+      y: -804.67786310983672
   - id: "{4473415d-c276-4fa9-b014-04ebb7bb5d27}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -573,8 +609,18 @@ nodes:
           num_neighbor: 10
           std_dev_threshold: 0.8
     position:
-      x: -254.18204419522601
-      y: -833.87760168263731
+      x: -441.86204419522613
+      y: -1049.6184016826373
+  - id: "{461ffc30-10ef-414f-9594-e94c2c6eac4d}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ConstructHeightMap
+      params:
+        pixel_size: 0.001
+        pixel_value: 0.001
+    position:
+      x: -1776.4246400000002
+      y: -1928.9817599999994
   - id: "{4a121848-d721-43d8-836b-4e1d3b86aa5e}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -689,6 +735,19 @@ nodes:
     position:
       x: 2567.5253346404338
       y: 2890.346317502188
+  - id: "{5b42538d-55f0-4348-bd21-78e80603df44}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: VisualizePrimitives3D
+      params:
+        show_axes: true
+        cloud_model_file_path: ""
+        render_cloud_method: mask
+        viz_color: green
+        thickness: 1
+    position:
+      x: 1647.2885759999999
+      y: -406.00857599999995
   - id: "{5be46e00-d2bb-4629-9a47-7a7b549e52f7}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -700,6 +759,19 @@ nodes:
     embedded_widget_rect:
       w: 200
       h: 200
+  - id: "{5df16547-1735-4815-810a-e6980216899d}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: FilterByClustering
+      params:
+        min_size: 500
+        max_size: 700000
+        xy_tolerance: 0.003
+        z_tolerance: 0.003
+        neighbor: 24
+    position:
+      x: -1527.0799999999997
+      y: -1920.9599999999996
   - id: "{5e3db01a-f068-4235-b8e9-68fb2c25f0a9}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -736,6 +808,19 @@ nodes:
     position:
       x: -2598.7359227903989
       y: 295.06381332479987
+  - id: "{6937f9a9-2cd9-41da-bb94-dcc136dda770}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: FilterByClustering
+      params:
+        min_size: 500
+        max_size: 500000
+        xy_tolerance: 0.003
+        z_tolerance: 0.003
+        neighbor: 24
+    position:
+      x: -481.20000000000005
+      y: -826.79999999999939
   - id: "{6bb28b68-b79c-4f5f-8cf7-9573e470e4fe}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -859,23 +944,21 @@ nodes:
         keyword: viz
         suffix: .jpg
     position:
-      x: 1143.8045919313913
-      y: 1530.4707960864762
-  - id: "{832e723f-3879-4879-b944-3aeae4d75d4e}"
+      x: 1197.0845919313908
+      y: 1582.3107960864763
+  - id: "{7f4676e1-55cd-41b8-b25b-6091129a27c7}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
-      name: CloudNoiseRemoval
+      name: FilterByClustering
       params:
-        method: Radius
-        Radius:
-          num_neighbor: 1
-          radius: 0.005
-        Statistical:
-          num_neighbor: 10
-          std_dev_threshold: 0.8
+        min_size: 500
+        max_size: 500000
+        xy_tolerance: 0.003
+        z_tolerance: 0.003
+        neighbor: 24
     position:
-      x: -802.00235521556488
-      y: 2686.3527271960565
+      x: -716.77439999999979
+      y: 2213.2511999999988
   - id: "{87432e36-14f1-483d-a468-43b2687b6b38}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -884,8 +967,8 @@ nodes:
         leaf_size: 0.001
         max_points: 0
     position:
-      x: -532.38408820162624
-      y: -833.65966324039573
+      x: -1079.5840882016259
+      y: -1007.6596632403955
   - id: "{88347563-0219-4771-94d9-2ef49283963e}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -897,14 +980,16 @@ nodes:
         bottom_margin: 0.25
         top_margin: 0
     position:
-      x: -780.05039926722486
-      y: -827.41412159815582
+      x: -1299.6503992672242
+      y: -983.41412159815582
   - id: "{8956e080-0288-493c-a6f8-cdf9b7b2e39a}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
       name: LoadWorkspaceInfo
       params:
         calib_file: calibration/workspace/cache_pallt_1.yml
+        log_frame_tree: false
+        clear_all_data: false
     position:
       x: -4737.1051376639971
       y: -38.223360000000071
@@ -1012,8 +1097,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: -423.22988948260434
-      y: 530.54723840754832
+      x: -599.9006094826043
+      y: 346.41155840754845
     embedded_widget_rect:
       w: 933
       h: 692
@@ -1042,8 +1127,8 @@ nodes:
         pixel_size: 0.001
         pixel_value: 0.001
     position:
-      x: -33.331340650336756
-      y: -780.70583224564029
+      x: -18.56467398367009
+      y: -828.70583224564029
   - id: "{a4a21583-16ab-438d-aced-2a6bdd71af39}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1052,19 +1137,19 @@ nodes:
         keyword: viz
         suffix: .jpg
     position:
-      x: 1555.953327931391
-      y: 2310.7250040864747
+      x: 1338.7453279313913
+      y: 3019.6530040864745
   - id: "{a4b564e6-ede5-4f64-b9f1-bf01c767fbdc}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
       name: ImageShowModel
       params: ~
     position:
-      x: 889.95665183723713
-      y: -2960.2338216133867
+      x: 1279.7934518372367
+      y: -2759.0946216133866
     embedded_widget_rect:
-      w: 888
-      h: 687
+      w: 680
+      h: 489
   - id: "{a6f5c6a1-bdf7-4e1c-a725-000574db2acd}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1113,6 +1198,19 @@ nodes:
     position:
       x: 907.94590379410693
       y: -778.17066310983819
+  - id: "{aa16e927-d00e-40dd-b264-a1eb4442f6bd}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: FilterByClustering
+      params:
+        min_size: 500
+        max_size: 700000
+        xy_tolerance: 0.003
+        z_tolerance: 0.003
+        neighbor: 24
+    position:
+      x: -1684.8575999999994
+      y: 1113.6575999999993
   - id: "{adc90993-1aa1-44f2-9b35-754fec95d2d9}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1156,8 +1254,8 @@ nodes:
         transform_frame: Workspace
         transform_frame_id: ""
     position:
-      x: -1029.5966289561147
-      y: -815.10668153889583
+      x: -1580.3966289561151
+      y: -998.70668153889551
   - id: "{bfa2dbcc-db09-4cf9-8ca3-c94b5bbf8b2a}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1165,13 +1263,13 @@ nodes:
       params:
         dataset_folder: xyz_pose_estimator_dataset
         spread_and_pyr:
-          - 4
+          - 6
           - 8
         detection_targets:
           - 600_400_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 75
+        min_detection_score: 85
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -1209,6 +1307,16 @@ nodes:
     position:
       x: 2492.0043464607716
       y: -796.84001777650474
+  - id: "{c1c76e92-1581-4d9b-8125-1dfe090d6ffc}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ConstructHeightMap
+      params:
+        pixel_size: 0.001
+        pixel_value: 0.001
+    position:
+      x: -760.78464000000019
+      y: -932.02175999999929
   - id: "{c26dcbcc-3beb-4027-830f-cbb8afc421a3}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1238,8 +1346,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: -686.72897535115351
-      y: -3471.5345590637389
+      x: 230.56530944884634
+      y: -3951.6807862637388
     embedded_widget_rect:
       w: 1226
       h: 1305
@@ -1249,8 +1357,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 745.7763593354166
-      y: 723.77265541345605
+      x: 1494.3113993354168
+      y: 1721.0820954134558
     embedded_widget_rect:
       w: 575
       h: 394
@@ -1305,7 +1413,7 @@ nodes:
         z_tolerance: 10
         xy_tolerance: 0.03
         min_uncovered_points_ratio: 0.1
-        max_uncovered_points_num: 4000
+        max_uncovered_points_num: 2500
     position:
       x: 2024.4032917604345
       y: 2881.4581152621886
@@ -1317,29 +1425,39 @@ nodes:
     position:
       x: -2467.0172159999993
       y: -331.42487039999992
+  - id: "{d47407d5-3727-49e6-a34d-121a46e69d2b}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: ConstructHeightMap
+      params:
+        pixel_size: 0.001
+        pixel_value: 0.001
+    position:
+      x: -2036.4422399999994
+      y: 1084.0358399999996
   - id: "{d54bb3c3-2e91-45d0-9c19-be58479a0209}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
       name: CalculateTopLayerHeight
       params:
-        layer_min_points: 5000
+        layer_min_points: 2500
         output_height_frame: Tote
         enable_downsample: true
-        leaf_size_downsample: 0.001
+        leaf_size_downsample: 0.002
         layer_z_tolerance: 0.01
         cloud_extract_radius: 0.05
         output_cloud_type: Organized
     position:
       x: 792.97545944043441
-      y: 2788.648999102189
+      y: 2794.6209671021898
   - id: "{da9dc3f3-88cb-4c54-bc59-1cc07130b52d}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
       name: ImageShowModel
       params: ~
     position:
-      x: -542.53508559175646
-      y: 1536.8927666425843
+      x: -973.33508559175652
+      y: 1552.4927666425845
     embedded_widget_rect:
       w: 200
       h: 200
@@ -1351,8 +1469,8 @@ nodes:
         keyword: viz
         suffix: .jpg
     position:
-      x: 1910.3735888216052
-      y: -1033.7640574353402
+      x: 2149.4135888216051
+      y: -342.56405743534037
   - id: "{df6401e7-a1ff-46fb-b85f-8db6ec284ff5}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1380,8 +1498,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 1273.1247013684697
-      y: 2841.2433083472642
+      x: 1561.6047013684695
+      y: 3013.1601083472642
     embedded_widget_rect:
       w: 325
       h: 248
@@ -1406,21 +1524,6 @@ nodes:
     position:
       x: -1237.0532367028677
       y: 1235.3026641734486
-  - id: "{e80ffbc2-a400-4e22-a263-0691b2b0d67c}"
-    parent_id: "{00000000-0000-0000-0000-000000000000}"
-    model:
-      name: CloudNoiseRemoval
-      params:
-        method: Radius
-        Radius:
-          num_neighbor: 6
-          radius: 0.005
-        Statistical:
-          num_neighbor: 10
-          std_dev_threshold: 0.8
-    position:
-      x: -1520.5997665714167
-      y: -2066.3290502361087
   - id: "{e8ac34f1-c0f6-49e9-9536-d51365038c1b}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1429,7 +1532,7 @@ nodes:
         layer_min_points: 4000
         output_height_frame: Tote
         enable_downsample: true
-        leaf_size_downsample: 0.001
+        leaf_size_downsample: 0.002
         layer_z_tolerance: 0.01
         cloud_extract_radius: 0.05
         output_cloud_type: Organized
@@ -1474,6 +1577,19 @@ nodes:
     position:
       x: -10.674392258423325
       y: 1311.9098333092518
+  - id: "{f0573b04-db61-42a0-80e1-ca213ed4a5a2}"
+    parent_id: "{00000000-0000-0000-0000-000000000000}"
+    model:
+      name: VisualizePrimitives3D
+      params:
+        show_axes: true
+        cloud_model_file_path: ""
+        render_cloud_method: mask
+        viz_color: green
+        thickness: 1
+    position:
+      x: 890.68031999999971
+      y: 1756.7308799999994
   - id: "{f229eb06-5fe6-4cd2-b0c7-19f200ca817a}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1485,9 +1601,9 @@ nodes:
           - 8
         detection_targets:
           - 400_300_230
-        detection_weak_contrast: 10
-        detection_min_contrast: 10
-        min_detection_score: 80
+        detection_weak_contrast: 30
+        detection_min_contrast: 30
+        min_detection_score: 90
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -1547,7 +1663,7 @@ nodes:
         z_tolerance: 10
         xy_tolerance: 0.035
         min_uncovered_points_ratio: 0.1
-        max_uncovered_points_num: 6500
+        max_uncovered_points_num: 4000
     position:
       x: 1801.2500177485826
       y: -1757.4420460761091
@@ -1597,16 +1713,21 @@ connections:
     in_index: 0
     out_id: "{27601311-1690-48fd-ac98-1f2009bad701}"
     out_index: 0
+  - id: "{045c033c-2a13-4e2f-8716-3d741e10fd69}"
+    in_id: "{f0573b04-db61-42a0-80e1-ca213ed4a5a2}"
+    in_index: 0
+    out_id: "{e753ac52-ec95-4757-b976-eb092a0dc114}"
+    out_index: 3
   - id: "{064291d3-bb4e-4869-ac04-63f517cc7c95}"
     in_id: "{b14c1786-0272-44b9-8eaf-5075b1f353a7}"
     in_index: 2
     out_id: "{ebd34ed2-2ba7-4c7b-8bcd-8553633e828f}"
     out_index: 2
-  - id: "{07d7fb30-35d7-4aa8-b66a-61ac0eb4138a}"
-    in_id: "{0377e495-78e6-4356-b698-25798b8e476a}"
-    in_index: 0
-    out_id: "{3940e524-c928-4126-b328-fe7e47327e1f}"
-    out_index: 0
+  - id: "{076bb483-9770-4b41-bf51-a7e586d82f80}"
+    in_id: "{2ddc8368-0b79-49a2-bd77-7fdd1c2d3a37}"
+    in_index: 1
+    out_id: "{e753ac52-ec95-4757-b976-eb092a0dc114}"
+    out_index: 2
   - id: "{08d0c90a-f75c-4f38-b52f-b18f2483a5bc}"
     in_id: "{a6f5c6a1-bdf7-4e1c-a725-000574db2acd}"
     in_index: 1
@@ -1616,11 +1737,6 @@ connections:
     in_id: "{310710a3-ac71-4470-8a77-f7111ae86be5}"
     in_index: 0
     out_id: "{7377a925-561b-4e74-9204-74f718d192a0}"
-    out_index: 0
-  - id: "{0a5eb950-2410-4370-9495-6b89ea017544}"
-    in_id: "{c3160422-29f7-4923-908b-30fcfcf18ee7}"
-    in_index: 0
-    out_id: "{e80ffbc2-a400-4e22-a263-0691b2b0d67c}"
     out_index: 0
   - id: "{0b98b646-4ad6-459f-92d1-f4d0d463c647}"
     in_id: "{1b2dacf0-6ebc-40e8-8ca4-3bd79c0c5f93}"
@@ -1642,11 +1758,6 @@ connections:
     in_index: 1
     out_id: "{77af6941-d5f5-4520-9971-1ff3dfbbb6a9}"
     out_index: 0
-  - id: "{1042883f-31a6-45ed-a848-a92255c8251e}"
-    in_id: "{12c310c9-5b1d-487b-af98-d190d7deff0c}"
-    in_index: 2
-    out_id: "{e753ac52-ec95-4757-b976-eb092a0dc114}"
-    out_index: 1
   - id: "{105967d5-a345-4d2a-8b19-ad5d0e77f422}"
     in_id: "{5a649345-dbf5-4ae6-bce4-8d0a38d5a6ac}"
     in_index: 0
@@ -1657,6 +1768,11 @@ connections:
     in_index: 0
     out_id: "{96a9d00d-2fb9-4023-a07b-230bef3ec0b9}"
     out_index: 0
+  - id: "{127af94e-fc77-4abf-9070-6d7e78170d21}"
+    in_id: "{e36cf5ca-c76c-48c3-9227-52dbd899cc1f}"
+    in_index: 0
+    out_id: "{423775b1-6128-45fb-977e-f17c1e3e988f}"
+    out_index: 0
   - id: "{129f2b1e-aa86-44a5-8684-9409c666c9af}"
     in_id: "{3930054e-237c-479e-bc8e-da6925b022a3}"
     in_index: 1
@@ -1666,11 +1782,6 @@ connections:
     in_id: "{c5f7eaa9-88a2-4d4b-a44e-0d261a1e1bd7}"
     in_index: 0
     out_id: "{7377a925-561b-4e74-9204-74f718d192a0}"
-    out_index: 0
-  - id: "{14d639a0-881a-43c1-b17b-474679659003}"
-    in_id: "{f35791c5-8dd5-4c3a-b239-7940cbbdecb6}"
-    in_index: 1
-    out_id: "{e80ffbc2-a400-4e22-a263-0691b2b0d67c}"
     out_index: 0
   - id: "{14e697b5-d641-419d-8129-20748aae7f1f}"
     in_id: "{3024533b-f764-4285-92b4-62d08378cf34}"
@@ -1702,26 +1813,26 @@ connections:
     in_index: 0
     out_id: "{1a26f129-c392-4536-a37c-908eaf401940}"
     out_index: 0
-  - id: "{1a8cfca7-ff32-4daa-8571-d498164cb978}"
-    in_id: "{4473415d-c276-4fa9-b014-04ebb7bb5d27}"
-    in_index: 0
-    out_id: "{87432e36-14f1-483d-a468-43b2687b6b38}"
-    out_index: 0
   - id: "{1acfb4d3-f747-470e-8c13-56c48a550c1e}"
     in_id: "{e18d78b3-d67d-484f-a9da-146e181d2869}"
     in_index: 0
     out_id: "{057fd152-810f-460c-aa21-8ee0641be712}"
+    out_index: 0
+  - id: "{1c2ad308-2565-48bb-9e2f-1a0a768a56c1}"
+    in_id: "{62b50792-340b-4646-9ff5-bd73deb7ad77}"
+    in_index: 1
+    out_id: "{6937f9a9-2cd9-41da-bb94-dcc136dda770}"
+    out_index: 0
+  - id: "{1c42edc9-2094-4fc2-b6a8-a62af91e391f}"
+    in_id: "{5b42538d-55f0-4348-bd21-78e80603df44}"
+    in_index: 1
+    out_id: "{6c25bff4-c60d-4ea0-a893-af73af38fd48}"
     out_index: 0
   - id: "{1d261136-a11b-4ba4-81c5-db1f042ec027}"
     in_id: "{c956010f-9879-43a9-95ab-b273765098db}"
     in_index: 1
     out_id: "{62b50792-340b-4646-9ff5-bd73deb7ad77}"
     out_index: 2
-  - id: "{1f06d648-9159-407e-9c1a-475e131743bc}"
-    in_id: "{a4b564e6-ede5-4f64-b9f1-bf01c767fbdc}"
-    in_index: 0
-    out_id: "{57a20d40-5859-489f-942b-019a43e0a76b}"
-    out_index: 1
   - id: "{2149d0ec-20a1-4edd-91b0-d79d6281a17d}"
     in_id: "{a6f8e191-3930-4141-a7b4-832e2f0e32ec}"
     in_index: 0
@@ -1732,11 +1843,11 @@ connections:
     in_index: 0
     out_id: "{d04e85de-3186-474c-a2f3-ded378012d49}"
     out_index: 1
-  - id: "{24b1f223-9228-4b36-815b-688e1125c727}"
-    in_id: "{dcedace5-c32d-437c-bd6e-70fdb7a4dc00}"
+  - id: "{255a134f-206c-469c-9248-585058fa584f}"
+    in_id: "{df6401e7-a1ff-46fb-b85f-8db6ec284ff5}"
     in_index: 0
-    out_id: "{6c25bff4-c60d-4ea0-a893-af73af38fd48}"
-    out_index: 1
+    out_id: "{02df84da-fe57-4fca-bcaf-fa9a3e00124f}"
+    out_index: 0
   - id: "{25e09cb4-72aa-4fd4-8072-7db9cfc7279f}"
     in_id: "{1e8cb48a-aa30-470a-8d79-47284f00a554}"
     in_index: 0
@@ -1797,8 +1908,8 @@ connections:
     in_index: 0
     out_id: "{8956e080-0288-493c-a6f8-cdf9b7b2e39a}"
     out_index: 2
-  - id: "{386b0517-24ac-429b-b39d-a0492c572dc2}"
-    in_id: "{2a7fc339-3b0b-4c84-8c8b-ee128f3e08b7}"
+  - id: "{355fbdf0-45c3-4e62-ae91-4590dbf17bef}"
+    in_id: "{0d2f0934-b1a3-4b80-bd2f-772d4237c8da}"
     in_index: 0
     out_id: "{15dacc42-fe29-4b45-a0b8-ae61343f1f2c}"
     out_index: 0
@@ -1832,31 +1943,26 @@ connections:
     in_index: 0
     out_id: "{185886bd-924b-473a-999d-00f1dabded7d}"
     out_index: 0
-  - id: "{44cbaefc-c858-404f-b5dc-fd72d3f3aa31}"
-    in_id: "{9e5533e9-9e20-499b-ae3f-1b824ed306c1}"
-    in_index: 0
-    out_id: "{4473415d-c276-4fa9-b014-04ebb7bb5d27}"
-    out_index: 0
-  - id: "{47eb1f1f-767d-418b-8911-f6ab94b801be}"
-    in_id: "{7b6ee0b4-9080-4263-9c95-1f02299332b7}"
-    in_index: 0
-    out_id: "{9e5533e9-9e20-499b-ae3f-1b824ed306c1}"
-    out_index: 1
   - id: "{487a3cff-7f1b-4bc6-95ae-cbaa3dd04414}"
     in_id: "{f4663c9d-4cfa-40b3-81d7-b11b3dec2e5a}"
     in_index: 0
     out_id: "{f229eb06-5fe6-4cd2-b0c7-19f200ca817a}"
     out_index: 1
+  - id: "{48d15603-27b3-49f0-8bd8-017ab4b0d71c}"
+    in_id: "{da9dc3f3-88cb-4c54-bc59-1cc07130b52d}"
+    in_index: 0
+    out_id: "{e753ac52-ec95-4757-b976-eb092a0dc114}"
+    out_index: 3
   - id: "{4ad0d810-fd08-4c76-93b2-153c1b035c62}"
     in_id: "{27601311-1690-48fd-ac98-1f2009bad701}"
     in_index: 0
     out_id: "{2af10e30-2d7d-449f-9e5b-b0f3c8c15691}"
     out_index: 0
-  - id: "{4ae10b3d-7ca2-4da4-bbc8-0b9b25dc2964}"
-    in_id: "{df6401e7-a1ff-46fb-b85f-8db6ec284ff5}"
+  - id: "{4c91ffaa-300d-4a15-9ceb-1d0a3c8a95c8}"
+    in_id: "{7e758f6f-9a48-430b-8f72-f2397f1a236b}"
     in_index: 0
-    out_id: "{57a20d40-5859-489f-942b-019a43e0a76b}"
-    out_index: 1
+    out_id: "{f0573b04-db61-42a0-80e1-ca213ed4a5a2}"
+    out_index: 0
   - id: "{51fb8861-37fc-44b9-a1c6-f86d6ac84d2a}"
     in_id: "{8956e080-0288-493c-a6f8-cdf9b7b2e39a}"
     in_index: 2
@@ -1877,6 +1983,11 @@ connections:
     in_index: 0
     out_id: "{6c25bff4-c60d-4ea0-a893-af73af38fd48}"
     out_index: 0
+  - id: "{5b7e6999-63cc-424d-a8d0-506c2e17c240}"
+    in_id: "{7f4676e1-55cd-41b8-b25b-6091129a27c7}"
+    in_index: 0
+    out_id: "{0d2f0934-b1a3-4b80-bd2f-772d4237c8da}"
+    out_index: 2
   - id: "{5f647af5-f597-4b0c-aadf-5bd569cd2020}"
     in_id: "{408d57b4-402b-4da9-a460-791083bf47da}"
     in_index: 0
@@ -1887,11 +1998,16 @@ connections:
     in_index: 0
     out_id: "{b14c1786-0272-44b9-8eaf-5075b1f353a7}"
     out_index: 1
-  - id: "{60c0a758-406d-4131-b8de-8f9764be4719}"
-    in_id: "{a4a21583-16ab-438d-aced-2a6bdd71af39}"
+  - id: "{61b50d5e-9019-4a85-b387-29b6ed9e008a}"
+    in_id: "{5b42538d-55f0-4348-bd21-78e80603df44}"
     in_index: 0
-    out_id: "{7377a925-561b-4e74-9204-74f718d192a0}"
-    out_index: 1
+    out_id: "{9e5533e9-9e20-499b-ae3f-1b824ed306c1}"
+    out_index: 3
+  - id: "{6294c8ae-792d-48ee-9eb4-240f9bf9c559}"
+    in_id: "{f35791c5-8dd5-4c3a-b239-7940cbbdecb6}"
+    in_index: 1
+    out_id: "{5df16547-1735-4815-810a-e6980216899d}"
+    out_index: 0
   - id: "{62c7d4cc-e3ac-491b-913f-3341fbb0e4f6}"
     in_id: "{6c25bff4-c60d-4ea0-a893-af73af38fd48}"
     in_index: 0
@@ -1902,6 +2018,11 @@ connections:
     in_index: 0
     out_id: "{f229eb06-5fe6-4cd2-b0c7-19f200ca817a}"
     out_index: 0
+  - id: "{631de551-c3fa-4332-a603-754faed37492}"
+    in_id: "{6937f9a9-2cd9-41da-bb94-dcc136dda770}"
+    in_index: 0
+    out_id: "{c1c76e92-1581-4d9b-8125-1dfe090d6ffc}"
+    out_index: 2
   - id: "{63d0e2f9-f2d2-42a6-8e7b-3d1c29d50652}"
     in_id: "{0d075159-6995-41a7-b6e6-dffb9f7f6a3a}"
     in_index: 0
@@ -1916,6 +2037,11 @@ connections:
     in_id: "{4032b9f2-dec1-436f-a075-7720af3ba50b}"
     in_index: 1
     out_id: "{7640ce02-acc2-4a64-ba97-1d5fddafc309}"
+    out_index: 0
+  - id: "{64d8e882-7c81-42d6-ae6c-45db6f3ba740}"
+    in_id: "{423775b1-6128-45fb-977e-f17c1e3e988f}"
+    in_index: 1
+    out_id: "{7377a925-561b-4e74-9204-74f718d192a0}"
     out_index: 0
   - id: "{6663ca43-eba7-465c-9e46-5000fb99f460}"
     in_id: "{76db1606-9b84-403c-b9c0-2622c31bb86b}"
@@ -1932,20 +2058,40 @@ connections:
     in_index: 1
     out_id: "{5a649345-dbf5-4ae6-bce4-8d0a38d5a6ac}"
     out_index: 0
+  - id: "{6a99b7be-721c-424a-98f3-677591eba317}"
+    in_id: "{9e5533e9-9e20-499b-ae3f-1b824ed306c1}"
+    in_index: 0
+    out_id: "{6937f9a9-2cd9-41da-bb94-dcc136dda770}"
+    out_index: 0
   - id: "{6aa0905d-4cc2-4786-a4de-8c6ab8900e7d}"
     in_id: "{5afcce79-5893-4296-a0ae-93ba721bad53}"
     in_index: 0
     out_id: "{d140ec67-a0d7-4217-aad9-5e6d372d3e1c}"
     out_index: 1
+  - id: "{6ddc621a-3daf-47ec-8a33-c73a13f23151}"
+    in_id: "{a4b564e6-ede5-4f64-b9f1-bf01c767fbdc}"
+    in_index: 0
+    out_id: "{02df84da-fe57-4fca-bcaf-fa9a3e00124f}"
+    out_index: 0
   - id: "{6e0a73fb-8b56-4ddd-9589-9eb1a4f57ce9}"
     in_id: "{8956e080-0288-493c-a6f8-cdf9b7b2e39a}"
     in_index: 1
     out_id: "{31aec71e-d56f-43b4-a707-92b4fe18b85d}"
     out_index: 1
+  - id: "{6e88558f-1fb7-48bc-92c4-0c14c8ee22f4}"
+    in_id: "{d140ec67-a0d7-4217-aad9-5e6d372d3e1c}"
+    in_index: 1
+    out_id: "{7f4676e1-55cd-41b8-b25b-6091129a27c7}"
+    out_index: 0
   - id: "{6fb9ce50-2939-411a-9d4e-d9137937f662}"
     in_id: "{9df2652b-28bd-4816-914a-59d8c84f8acd}"
     in_index: 2
     out_id: "{edeb758b-6d28-4c6f-b0c8-e21dd137cdf0}"
+    out_index: 0
+  - id: "{6fccb13b-2853-462e-8b09-c28f3b7d8ed0}"
+    in_id: "{dcedace5-c32d-437c-bd6e-70fdb7a4dc00}"
+    in_index: 0
+    out_id: "{5b42538d-55f0-4348-bd21-78e80603df44}"
     out_index: 0
   - id: "{706ce839-d191-40e7-bcd1-0fe76089b974}"
     in_id: "{9980c591-6de1-4000-90f9-2ae956de5d99}"
@@ -1972,6 +2118,11 @@ connections:
     in_index: 0
     out_id: "{0b6bbd1f-4d41-4c13-a257-5214915c2c6f}"
     out_index: 2
+  - id: "{776fca7b-d01a-471d-b759-69b3cf49b616}"
+    in_id: "{12c310c9-5b1d-487b-af98-d190d7deff0c}"
+    in_index: 2
+    out_id: "{e753ac52-ec95-4757-b976-eb092a0dc114}"
+    out_index: 1
   - id: "{79021934-cbe3-4ebf-b5bf-01d54c2ab99a}"
     in_id: "{d04e85de-3186-474c-a2f3-ded378012d49}"
     in_index: 0
@@ -1981,6 +2132,16 @@ connections:
     in_id: "{1b87f5f9-c1c3-4b62-973a-49fd20b07846}"
     in_index: 2
     out_id: "{a8599eb4-5baf-4e28-90d9-9795b5701555}"
+    out_index: 0
+  - id: "{7aefefd9-b16d-40b0-b9e8-5104d9956336}"
+    in_id: "{02df84da-fe57-4fca-bcaf-fa9a3e00124f}"
+    in_index: 0
+    out_id: "{c3160422-29f7-4923-908b-30fcfcf18ee7}"
+    out_index: 3
+  - id: "{824a496e-da90-47d4-bf11-e0a372dfd7c5}"
+    in_id: "{c1c76e92-1581-4d9b-8125-1dfe090d6ffc}"
+    in_index: 0
+    out_id: "{87432e36-14f1-483d-a468-43b2687b6b38}"
     out_index: 0
   - id: "{831c337d-2a86-4ca5-8359-a34acdba1eee}"
     in_id: "{2af10e30-2d7d-449f-9e5b-b0f3c8c15691}"
@@ -2002,16 +2163,16 @@ connections:
     in_index: 0
     out_id: "{12c310c9-5b1d-487b-af98-d190d7deff0c}"
     out_index: 0
+  - id: "{8621fad6-6be6-49cc-bde4-3646755700db}"
+    in_id: "{a4a21583-16ab-438d-aced-2a6bdd71af39}"
+    in_index: 0
+    out_id: "{423775b1-6128-45fb-977e-f17c1e3e988f}"
+    out_index: 0
   - id: "{86bf5089-8d8e-4e7b-a968-f401db0c04e4}"
     in_id: "{057fd152-810f-460c-aa21-8ee0641be712}"
     in_index: 0
     out_id: "{c5f7eaa9-88a2-4d4b-a44e-0d261a1e1bd7}"
     out_index: 0
-  - id: "{89076439-3591-4de4-9434-3c70223bd29f}"
-    in_id: "{e36cf5ca-c76c-48c3-9227-52dbd899cc1f}"
-    in_index: 0
-    out_id: "{7377a925-561b-4e74-9204-74f718d192a0}"
-    out_index: 1
   - id: "{89bb97ee-cb36-4c5b-8bc7-bab1287659c3}"
     in_id: "{3930054e-237c-479e-bc8e-da6925b022a3}"
     in_index: 0
@@ -2027,16 +2188,6 @@ connections:
     in_index: 0
     out_id: "{40447b94-7e37-4685-b27a-f2ebb0f224fe}"
     out_index: 0
-  - id: "{8d4ffad3-5ba4-4a2f-a51d-83fe004aa1c2}"
-    in_id: "{e80ffbc2-a400-4e22-a263-0691b2b0d67c}"
-    in_index: 0
-    out_id: "{3940e524-c928-4126-b328-fe7e47327e1f}"
-    out_index: 0
-  - id: "{8d60e906-6424-4228-be76-4959f5d74a14}"
-    in_id: "{1d134443-8bd8-4a19-992e-e3c8ed030ef3}"
-    in_index: 0
-    out_id: "{6c25bff4-c60d-4ea0-a893-af73af38fd48}"
-    out_index: 1
   - id: "{8d8c8e2a-0e03-430f-bf3c-f9d029f0ab56}"
     in_id: "{6c25bff4-c60d-4ea0-a893-af73af38fd48}"
     in_index: 1
@@ -2092,11 +2243,21 @@ connections:
     in_index: 0
     out_id: "{91678970-6e93-4b7f-9aba-44e02168c408}"
     out_index: 0
-  - id: "{95e43ddd-8a8d-4562-abac-41f6a0ea04e3}"
-    in_id: "{da9dc3f3-88cb-4c54-bc59-1cc07130b52d}"
+  - id: "{98306c7b-492b-4902-ab54-a5fb3c47cac9}"
+    in_id: "{02df84da-fe57-4fca-bcaf-fa9a3e00124f}"
+    in_index: 1
+    out_id: "{57a20d40-5859-489f-942b-019a43e0a76b}"
+    out_index: 0
+  - id: "{996022f3-f479-468e-9eb4-4768ec3fcd4f}"
+    in_id: "{423775b1-6128-45fb-977e-f17c1e3e988f}"
     in_index: 0
-    out_id: "{e753ac52-ec95-4757-b976-eb092a0dc114}"
-    out_index: 1
+    out_id: "{2a7fc339-3b0b-4c84-8c8b-ee128f3e08b7}"
+    out_index: 3
+  - id: "{9c30859a-52b5-479a-a97d-616f095f6a06}"
+    in_id: "{c3160422-29f7-4923-908b-30fcfcf18ee7}"
+    in_index: 0
+    out_id: "{5df16547-1735-4815-810a-e6980216899d}"
+    out_index: 0
   - id: "{9e3bdcd5-40de-416c-85b9-1b320c6e91ee}"
     in_id: "{7d601fe9-5688-43c5-aa37-062bde53026a}"
     in_index: 0
@@ -2122,11 +2283,21 @@ connections:
     in_index: 0
     out_id: "{1b87f5f9-c1c3-4b62-973a-49fd20b07846}"
     out_index: 1
+  - id: "{a3f4ddc2-97dc-428f-a939-aaa4198aacbe}"
+    in_id: "{c4194923-86b8-4b0e-8fdd-d1a2f10a7319}"
+    in_index: 0
+    out_id: "{f0573b04-db61-42a0-80e1-ca213ed4a5a2}"
+    out_index: 0
   - id: "{a40df17e-5792-4d22-a794-6e2d868480b5}"
     in_id: "{92a18f50-8d48-4787-99b8-b965833bae8a}"
     in_index: 0
     out_id: "{eba19344-6305-4199-bc16-b39e62d3f3d1}"
     out_index: 0
+  - id: "{a4af8a8a-e8a7-403e-bc13-0fadfc17b1ba}"
+    in_id: "{7b6ee0b4-9080-4263-9c95-1f02299332b7}"
+    in_index: 0
+    out_id: "{9e5533e9-9e20-499b-ae3f-1b824ed306c1}"
+    out_index: 3
   - id: "{a817dd24-f26e-44da-b380-748f14ae1a6e}"
     in_id: "{d54bb3c3-2e91-45d0-9c19-be58479a0209}"
     in_index: 0
@@ -2147,15 +2318,15 @@ connections:
     in_index: 1
     out_id: "{f2f50302-679e-47de-961f-b04f7e59b1bc}"
     out_index: 0
-  - id: "{b15ce6e2-37d9-4084-93bb-db232968c277}"
-    in_id: "{832e723f-3879-4879-b944-3aeae4d75d4e}"
-    in_index: 0
-    out_id: "{15dacc42-fe29-4b45-a0b8-ae61343f1f2c}"
-    out_index: 0
   - id: "{b23fa1a2-b9a0-407a-aaf5-84bab22d9c11}"
     in_id: "{4c6a6cec-806c-4ac8-b81f-a5fb48981e18}"
     in_index: 1
     out_id: "{2ddc8368-0b79-49a2-bd77-7fdd1c2d3a37}"
+    out_index: 2
+  - id: "{b265644b-a615-4c8f-8b07-b8b30395e5a6}"
+    in_id: "{5df16547-1735-4815-810a-e6980216899d}"
+    in_index: 0
+    out_id: "{461ffc30-10ef-414f-9594-e94c2c6eac4d}"
     out_index: 2
   - id: "{b3917d44-72f3-45ec-87ff-3967150214e4}"
     in_id: "{c5f7eaa9-88a2-4d4b-a44e-0d261a1e1bd7}"
@@ -2202,11 +2373,6 @@ connections:
     in_index: 1
     out_id: "{3c805a3b-9144-4e54-94ea-01b03254abb3}"
     out_index: 1
-  - id: "{c1e841b1-b04d-4e26-b2af-386252f9fd1a}"
-    in_id: "{2ddc8368-0b79-49a2-bd77-7fdd1c2d3a37}"
-    in_index: 1
-    out_id: "{0377e495-78e6-4356-b698-25798b8e476a}"
-    out_index: 0
   - id: "{c5871edd-de2e-4ff8-b201-b20290f79575}"
     in_id: "{7377a925-561b-4e74-9204-74f718d192a0}"
     in_index: 2
@@ -2232,6 +2398,11 @@ connections:
     in_index: 0
     out_id: "{c3160422-29f7-4923-908b-30fcfcf18ee7}"
     out_index: 2
+  - id: "{ca9d3c23-d9ba-41e4-b4c3-a1b1ccc81e6b}"
+    in_id: "{2a7fc339-3b0b-4c84-8c8b-ee128f3e08b7}"
+    in_index: 0
+    out_id: "{7f4676e1-55cd-41b8-b25b-6091129a27c7}"
+    out_index: 0
   - id: "{ccd81b9c-3ee2-4ce9-8b26-3a4df3d4ce6a}"
     in_id: "{f229eb06-5fe6-4cd2-b0c7-19f200ca817a}"
     in_index: 0
@@ -2252,30 +2423,30 @@ connections:
     in_index: 0
     out_id: "{00b13418-af61-4278-9745-15c4cc54ed6b}"
     out_index: 0
+  - id: "{d2ea55ba-f0e1-408e-b62f-018db9932fa0}"
+    in_id: "{461ffc30-10ef-414f-9594-e94c2c6eac4d}"
+    in_index: 0
+    out_id: "{3940e524-c928-4126-b328-fe7e47327e1f}"
+    out_index: 0
   - id: "{d372f01f-5a4c-492b-8757-3d30e05376e9}"
     in_id: "{1b87f5f9-c1c3-4b62-973a-49fd20b07846}"
     in_index: 1
     out_id: "{0f205c39-fa5f-487b-a5db-8692730e54b2}"
+    out_index: 0
+  - id: "{d3aaaac0-b234-4cc0-b8b3-06f79a2ea70a}"
+    in_id: "{0377e495-78e6-4356-b698-25798b8e476a}"
+    in_index: 0
+    out_id: "{aa16e927-d00e-40dd-b264-a1eb4442f6bd}"
     out_index: 0
   - id: "{d7ea7457-ff14-4b7e-be4b-d91cec784691}"
     in_id: "{edeb758b-6d28-4c6f-b0c8-e21dd137cdf0}"
     in_index: 1
     out_id: "{91678970-6e93-4b7f-9aba-44e02168c408}"
     out_index: 0
-  - id: "{d9ac906b-30d1-4897-8f56-f22d37fb308b}"
-    in_id: "{d140ec67-a0d7-4217-aad9-5e6d372d3e1c}"
-    in_index: 1
-    out_id: "{15dacc42-fe29-4b45-a0b8-ae61343f1f2c}"
-    out_index: 0
   - id: "{dbcfcb37-606e-44fc-973a-4b4699c40e4e}"
     in_id: "{0a3bdc0d-5686-48e0-8e6b-dd76b2d4b011}"
     in_index: 2
     out_id: "{2ddc8368-0b79-49a2-bd77-7fdd1c2d3a37}"
-    out_index: 0
-  - id: "{dbf8d6b5-f4bb-4cb7-a965-a2a81c31b550}"
-    in_id: "{e753ac52-ec95-4757-b976-eb092a0dc114}"
-    in_index: 0
-    out_id: "{0377e495-78e6-4356-b698-25798b8e476a}"
     out_index: 0
   - id: "{dd97ab6a-31ee-44cb-a502-a7559ff9c78e}"
     in_id: "{e5ad2dad-05ce-4ec4-a549-1502c62c42db}"
@@ -2312,6 +2483,16 @@ connections:
     in_index: 0
     out_id: "{f2f50302-679e-47de-961f-b04f7e59b1bc}"
     out_index: 0
+  - id: "{e7cd6e44-5850-494e-b858-b1992b4465d0}"
+    in_id: "{1d134443-8bd8-4a19-992e-e3c8ed030ef3}"
+    in_index: 0
+    out_id: "{5b42538d-55f0-4348-bd21-78e80603df44}"
+    out_index: 0
+  - id: "{ea0109f9-5800-44da-b4ed-e35288117071}"
+    in_id: "{e753ac52-ec95-4757-b976-eb092a0dc114}"
+    in_index: 0
+    out_id: "{aa16e927-d00e-40dd-b264-a1eb4442f6bd}"
+    out_index: 0
   - id: "{eac130cb-85dc-4669-b0fb-19f796cc2104}"
     in_id: "{15dacc42-fe29-4b45-a0b8-ae61343f1f2c}"
     in_index: 0
@@ -2322,21 +2503,11 @@ connections:
     in_index: 0
     out_id: "{57a20d40-5859-489f-942b-019a43e0a76b}"
     out_index: 0
-  - id: "{eb74a3c8-506e-4ad4-9176-4c5c4e14e030}"
-    in_id: "{c4194923-86b8-4b0e-8fdd-d1a2f10a7319}"
-    in_index: 0
-    out_id: "{12c310c9-5b1d-487b-af98-d190d7deff0c}"
-    out_index: 1
   - id: "{ed895041-8ae3-452a-bf38-f04c87770cef}"
     in_id: "{1e6bd79c-cc09-4784-bdae-b677fd4caa51}"
     in_index: 0
     out_id: "{edeb758b-6d28-4c6f-b0c8-e21dd137cdf0}"
     out_index: 0
-  - id: "{ee43e596-17ab-4a31-946a-6fbc335109b7}"
-    in_id: "{7e758f6f-9a48-430b-8f72-f2397f1a236b}"
-    in_index: 0
-    out_id: "{12c310c9-5b1d-487b-af98-d190d7deff0c}"
-    out_index: 1
   - id: "{ef182c05-5bc2-424f-936a-e76b6e332598}"
     in_id: "{6c25bff4-c60d-4ea0-a893-af73af38fd48}"
     in_index: 2
@@ -2367,6 +2538,11 @@ connections:
     in_index: 0
     out_id: "{c3160422-29f7-4923-908b-30fcfcf18ee7}"
     out_index: 1
+  - id: "{f2d6e8d6-564f-45c3-96d0-08d7d5e086c9}"
+    in_id: "{d47407d5-3727-49e6-a34d-121a46e69d2b}"
+    in_index: 0
+    out_id: "{3940e524-c928-4126-b328-fe7e47327e1f}"
+    out_index: 0
   - id: "{f3d2ab8b-604c-4df8-9eac-442a1492a607}"
     in_id: "{c26dcbcc-3beb-4027-830f-cbb8afc421a3}"
     in_index: 0
@@ -2397,6 +2573,11 @@ connections:
     in_index: 0
     out_id: "{2ddc8368-0b79-49a2-bd77-7fdd1c2d3a37}"
     out_index: 1
+  - id: "{f90e2501-cc73-4175-b2bf-654c20a88dc9}"
+    in_id: "{aa16e927-d00e-40dd-b264-a1eb4442f6bd}"
+    in_index: 0
+    out_id: "{d47407d5-3727-49e6-a34d-121a46e69d2b}"
+    out_index: 2
   - id: "{f97cd384-2818-4c57-9c8d-797874e94696}"
     in_id: "{ebd34ed2-2ba7-4c7b-8bcd-8553633e828f}"
     in_index: 0
@@ -2407,16 +2588,16 @@ connections:
     in_index: 0
     out_id: "{b14c1786-0272-44b9-8eaf-5075b1f353a7}"
     out_index: 0
+  - id: "{fb9cff28-bbd0-4457-ba42-6d44b053e0c3}"
+    in_id: "{f0573b04-db61-42a0-80e1-ca213ed4a5a2}"
+    in_index: 1
+    out_id: "{12c310c9-5b1d-487b-af98-d190d7deff0c}"
+    out_index: 0
   - id: "{fbc81027-158e-4bae-a8b0-b9f80fae008e}"
     in_id: "{4a121848-d721-43d8-836b-4e1d3b86aa5e}"
     in_index: 0
     out_id: "{c5f7eaa9-88a2-4d4b-a44e-0d261a1e1bd7}"
     out_index: 1
-  - id: "{fd29903b-52cf-4013-beb4-cb51a561bd83}"
-    in_id: "{62b50792-340b-4646-9ff5-bd73deb7ad77}"
-    in_index: 1
-    out_id: "{4473415d-c276-4fa9-b014-04ebb7bb5d27}"
-    out_index: 0
   - id: "{fef4d397-3531-4cd2-9cc5-41dd4ae7fdc7}"
     in_id: "{1588ba0b-bd35-4e22-8460-e0e92750961b}"
     in_index: 1
@@ -2424,11 +2605,14 @@ connections:
     out_index: 0
 service:
   enable: true
+  proxy:
+    enable: false
+    script_file: ""
   cmds:
     calculate_object_poses_1_0:
       enable: true
       root_nodes: ["{3940e524-c928-4126-b328-fe7e47327e1f}"]
-      leaf_nodes: ["{0a3bdc0d-5686-48e0-8e6b-dd76b2d4b011}"]
+      leaf_nodes: ["{7e758f6f-9a48-430b-8f72-f2397f1a236b}", "{0a3bdc0d-5686-48e0-8e6b-dd76b2d4b011}"]
       parallel: false
     calculate_object_poses_1_1:
       enable: true

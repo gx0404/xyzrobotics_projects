@@ -43,6 +43,15 @@
             }, 
             "default_value": null, 
             "name": "sku_info"
+        }, 
+        "2": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.OutputDataPort", 
+            "data_port_id": 2, 
+            "data_type": {
+                "__type__": "__builtin__.str"
+            }, 
+            "default_value": null, 
+            "name": "barcode_point_to"
         }
     }, 
     "source_file_path": "basic/set_sku_info/set_sku_info_HXDVWE/script.py", 

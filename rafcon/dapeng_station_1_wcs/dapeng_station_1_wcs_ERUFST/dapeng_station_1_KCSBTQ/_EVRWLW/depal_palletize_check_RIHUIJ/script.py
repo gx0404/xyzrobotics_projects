@@ -310,9 +310,9 @@ def execute(self, inputs, outputs, gvm):
 
 
     #耦合抓取箱子和放置规划的箱子
-    bottom_plan_items = filter_bottom_items(pick_plan_items)
+    bottom_plan_items = filter_bottom_items(pick_plan_items,False)
 
-    bottom_container_items = filter_bottom_items(pick_container_items)
+    bottom_container_items = filter_bottom_items(pick_container_items,False)
     init_no_overlap_plan_items = []
 
     if len(bottom_container_items)==row:

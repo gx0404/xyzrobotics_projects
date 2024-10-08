@@ -43,8 +43,8 @@
             "rel_pos": {
                 "__jsonqualname__": "__builtin__.tuple", 
                 "items": [
-                    309.31991103156906, 
-                    790.1062485655207
+                    275.13758065686307, 
+                    1099.8836175862862
                 ]
             }, 
             "size": {
@@ -62,8 +62,8 @@
                 "rel_pos": {
                     "__jsonqualname__": "__builtin__.tuple", 
                     "items": [
-                        6.8967620012707345, 
-                        78.92068675532454
+                        94.06506939678567, 
+                        6.8967620012707345
                     ]
                 }
             }
@@ -224,7 +224,22 @@
     "transition16": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": {}
+                "waypoints": [
+                    {
+                        "__jsonqualname__": "__builtin__.tuple", 
+                        "items": [
+                            271.3107060424172, 
+                            168.78582893964813
+                        ]
+                    }, 
+                    {
+                        "__jsonqualname__": "__builtin__.tuple", 
+                        "items": [
+                            235.31070604241722, 
+                            168.78582893964813
+                        ]
+                    }
+                ]
             }
         }
     }, 
@@ -287,22 +302,7 @@
     "transition24": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": [
-                    {
-                        "__jsonqualname__": "__builtin__.tuple", 
-                        "items": [
-                            270.515898217508, 
-                            168.89661062502273
-                        ]
-                    }, 
-                    {
-                        "__jsonqualname__": "__builtin__.tuple", 
-                        "items": [
-                            234.51589821750798, 
-                            168.89661062502273
-                        ]
-                    }
-                ]
+                "waypoints": {}
             }
         }
     }, 

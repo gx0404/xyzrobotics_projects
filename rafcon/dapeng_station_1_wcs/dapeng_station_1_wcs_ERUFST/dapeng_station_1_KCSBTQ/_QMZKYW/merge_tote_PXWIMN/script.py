@@ -53,38 +53,20 @@ def merge_items(slot_items):
     return new_item
 
 #过滤得到底层箱子
-def filter_bottom_items(items,row_flag=True):
-    #两种模式,一种只取最低层，另一种则是每列箱子的最低层
-    if row_flag:
-        combined_data = {}
-        for item in items:
-            #建立x,y坐标的键，同一列箱子xy坐标一致
-            key = (round(item.origin.x,2), round(item.origin.y,2))
-            if key not in combined_data.keys():
-                #判断原先字典是否有xy近似的key的标志flag
-                check_key_flag = False
-                for check_key in combined_data.keys():
-                    #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
-                    if abs(item.origin.x-check_key[0])<0.015 and abs(item.origin.y-check_key[1])<0.015:    
-                        check_key_flag = True
-                        break
-                #如果不存在标志,则说明是个新列         
-                if not check_key_flag:                    
-                    combined_data[key] = item
-                #如果存在,则说明是老列,则需要判断是否保留z最小的实例   
-                else:
-                    if item.origin.z < combined_data[check_key].origin.z:
-                        combined_data[check_key] = item                  
-            else:   
-                # 只保留Z最小的类实例
-                if item.origin.z < combined_data[key].origin.z:
-                    combined_data[key] = item
+def filter_bottom_items(items):
 
-        new_items = list(combined_data.values())
-    #只考虑最低列,不考虑每列层数不同      
-    else:    
-        min_z = min(i.origin.z for i in items)
-        new_items = list(filter(lambda x:abs(x.origin.z-min_z)<0.1,items))    
+    combined_data = {}
+    for item in items:
+        #建立x,y坐标的键，同一列箱子xy坐标一致
+        key = (round(item.origin.x,2), round(item.origin.y,2))
+        if key not in combined_data.keys():
+            combined_data[key] = item
+        else:   
+            # 只保留Z最小的类实例
+            if item.origin.z < combined_data[key].origin.z:
+                combined_data[key] = item
+
+    new_items = list(combined_data.values())
     return new_items
 
 def execute(self, inputs, outputs, gvm):

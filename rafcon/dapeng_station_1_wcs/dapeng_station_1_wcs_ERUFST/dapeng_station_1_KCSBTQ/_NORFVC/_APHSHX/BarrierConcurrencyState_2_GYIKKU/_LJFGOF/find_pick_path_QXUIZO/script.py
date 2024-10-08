@@ -18,7 +18,7 @@ import threading
 import concurrent.futures
 
 from find_pick_path_thread import A_STAR_ASYNC,DFS_ASYNC
-
+from rafcon.xyz_exception_base import XYZExceptionBase
 
 def sort_by_length(item):
    return len(item[1])  
@@ -1073,10 +1073,12 @@ def execute(self, inputs, outputs, gvm):
             #过滤当前箱子抓取碰撞的箱子
             filter_check_collision = lambda container_item: not check_collision(our_robot, check_robot_list,planning_env, init_joints, container_item)
             filtered_items = list(filter(filter_check_collision, container_items))  
+            filtered_items = sorted(filtered_items,key=lambda x:int(x.additional_info.values[-3]),reverse=True)
 
 
             #wcs订单里有目标点的箱子,通过非get vision results对箱子赋值，除了缓存区的箱子都是目标箱子
             pick_items = list(filter(lambda x:x.additional_info.values[-1]!="1",container_items))
+            pick_items = sorted(pick_items,key=lambda x:int(x.additional_info.values[-3]),reverse=True)
                       
             #添加进程函数参数   
             out_robot_msg = dill.dumps(our_robot.to_ros_msg())
@@ -1121,7 +1123,7 @@ def execute(self, inputs, outputs, gvm):
          if not calculation_flag:      
             try:       
                #获取进程队列结果   
-               calculation_dict = calculation_queue.get(timeout=150)
+               calculation_dict = calculation_queue.get(timeout=200)
             except:
                self.logger.info("计算超时")
                #设置终止事件，让其他进程计算结束
@@ -1139,7 +1141,7 @@ def execute(self, inputs, outputs, gvm):
                time.sleep(2)              
                calculation_queue.close()
                termination_event.clear()
-               raise "计算超时"   
+               raise XYZExceptionBase("10021", "计算超时")   
          #设置终止事件，让其他进程计算结束
          termination_event.set() 
          #等待其他进程计算结束

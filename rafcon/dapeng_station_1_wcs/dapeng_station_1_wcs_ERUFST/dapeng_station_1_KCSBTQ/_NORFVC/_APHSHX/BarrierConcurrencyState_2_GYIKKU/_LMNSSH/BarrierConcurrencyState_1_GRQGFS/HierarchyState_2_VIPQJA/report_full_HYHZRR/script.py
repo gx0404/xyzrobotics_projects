@@ -1,7 +1,7 @@
 import requests
 import json
 from rafcon.xyz_exception_base import XYZExceptionBase
-
+import time
 
 def execute(self, inputs, outputs, gvm):
     """ 
@@ -33,6 +33,7 @@ def execute(self, inputs, outputs, gvm):
     place_id = trajectory["grasp_plan"].to_workspace_id
     is_pal_pallet_full = inputs["is_pal_pallet_full"]
     if is_pal_pallet_full:
+        time.sleep(1)
         self.logger.info("已放满,回报放满")
         url = "http://127.0.0.1:7002/api/rafcon/report_depal_full"
         data = {

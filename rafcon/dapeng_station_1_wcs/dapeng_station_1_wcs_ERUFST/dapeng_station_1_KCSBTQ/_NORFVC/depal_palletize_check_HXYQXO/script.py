@@ -241,7 +241,7 @@ def get_rotate_angle(item,bottom_container_items):
     cos_theta = dot_product / (magnitude_A * magnitude_B)
     angle_rad = np.arccos(cos_theta)  # 弧度+
     angle_deg = np.degrees(angle_rad) # 角度+
-    #print("角度：", angle_deg)
+    #print("角度":, angle_deg)
     #垂直
     if angle_deg > 80 and angle_deg<100:
         if angle_deg>85 and angle_deg<95:
@@ -384,10 +384,10 @@ def execute(self, inputs, outputs, gvm):
             if row==5:
                 row_id = int(box_id)%row
                 lay_id = int(box_id)//row                  
-                if row_id in [1,2,3]:                    
-                    tf_base_box_real = SE3([0.002,-0.002,0,0,0,0,1])*tf_base_box_real
-                elif row_id in [0,4]:
-                    tf_base_box_real = tf_base_box_real*SE3([0.00,0.00,0,0,0,0,1])     
+                # if row_id in [1,2,3]:                    
+                #     tf_base_box_real = SE3([0.002,-0.002,0,0,0,0,1])*tf_base_box_real
+                # elif row_id in [0,4]:
+                #     tf_base_box_real = tf_base_box_real*SE3([0.00,0.00,0,0,0,0,1])     
             elif row==9:
                 row_id = int(box_id)%row
                 lay_id = int(box_id)//row
@@ -397,9 +397,9 @@ def execute(self, inputs, outputs, gvm):
                     tf_base_box_real = tf_base_box_real*SE3([0.00,0.001,0,0,0,0,1]) 
                 elif row_id in [5]:   
                     if lay_id<2:
-                        tf_base_box_real = tf_base_box_real*SE3([-0.004,0.0035,0,0,0,0,1])  
+                        tf_base_box_real = tf_base_box_real*SE3([-0.002,0.0015,0,0,0,0,1])  
                     else:
-                        tf_base_box_real = tf_base_box_real*SE3([-0.004,0.0035,0,0,0,0,1])                       
+                        tf_base_box_real = tf_base_box_real*SE3([-0.002,0.0015,0,0,0,0,1])                       
                 elif row_id in [6]:  
                     if lay_id<2:
                         tf_base_box_real = tf_base_box_real*SE3([-0.001,0.0015,0,0,0,0,1]) 
@@ -411,7 +411,7 @@ def execute(self, inputs, outputs, gvm):
                     else:
                         tf_base_box_real = tf_base_box_real*SE3([0.00,0.001,0,0,0,0,1])                      
                 elif row_id in [8]:
-                    tf_base_box_real = tf_base_box_real*SE3([0.00,-0.005,0,0,0,0,1])                       
+                    tf_base_box_real = tf_base_box_real*SE3([0.00,-0.0035,0,0,0,0,1])                       
                 elif row_id in [0]:
                     if lay_id<2:
                         tf_base_box_real = tf_base_box_real*SE3([0.00,0.00,0,0,0,0,1])  
@@ -510,9 +510,9 @@ def execute(self, inputs, outputs, gvm):
     
 
     #耦合抓取箱子和放置规划的箱子
-    bottom_plan_items = filter_bottom_items(pick_plan_items)
+    bottom_plan_items = filter_bottom_items(pick_plan_items,False)
 
-    bottom_container_items = filter_bottom_items(pick_container_items)
+    bottom_container_items = filter_bottom_items(pick_container_items,False)
     init_no_overlap_plan_items = []
     #row = gvm.get_variable("row", per_reference=False, default=None)
     if len(bottom_container_items)==row or not bottom_container_items:
@@ -667,7 +667,7 @@ def execute(self, inputs, outputs, gvm):
                     no_overlap_plan_items.remove(collision_items_list[0])
                     #添加干涉的箱子，已偏移的箱子到栈数据
                     stack.push([collision_items_list[0],[],])
-                    while not stack.is_empty(): #and not self.preempted:
+                    while not stack.is_empty() and not self.preempted:
                         #调出干涉的箱子，已偏移的箱子的栈数据
                         init_collision_item, update_plan_items = stack.pop() 
                         #计算更新碰撞 
@@ -683,10 +683,10 @@ def execute(self, inputs, outputs, gvm):
                             x_length = init_collision_item.origin.x-from_pick_pose[0]
                             y_length = init_collision_item.origin.y-from_pick_pose[1] 
                             #添加偏移点
-                            new_slide_list = split_slide([0.085-x_length,0.085-y_length],0.005)  
-                            new_slide_list+= split_slide([0.085-x_length,-0.085-y_length],0.005) 
-                            new_slide_list+= split_slide([-0.085-x_length,0.085-y_length],0.005) 
-                            new_slide_list+= split_slide([-0.085-x_length,-0.085-y_length],0.005) 
+                            new_slide_list = split_slide([0.08-x_length,0.08-y_length],0.005)  
+                            new_slide_list+= split_slide([0.08-x_length,-0.08-y_length],0.005) 
+                            new_slide_list+= split_slide([-0.08-x_length,0.08-y_length],0.005) 
+                            new_slide_list+= split_slide([-0.08-x_length,-0.08-y_length],0.005) 
                             new_slide_list = sorted(new_slide_list,key=lambda x:abs(x[0])+abs(x[1]))
                             old_collision_item = copy.deepcopy(init_collision_item)                       
                             old_collision_item.origin = Pose(*from_pick_pose)
@@ -694,8 +694,6 @@ def execute(self, inputs, outputs, gvm):
                             tf_box_rotate = get_rotate_angle(init_collision_item,bottom_container_items+update_plan_items).xyz_quat                   
                             #再对箱子进行平移
                             for slide in new_slide_list:
-                                if self.termination_event.is_set():
-                                    return False
                                 collision_item = copy.deepcopy(old_collision_item)
                                 collision_item.origin.x+=slide[0]
                                 collision_item.origin.y+=slide[1]
@@ -709,8 +707,6 @@ def execute(self, inputs, outputs, gvm):
                                 tf_box_rotate = get_rotate_angle(init_collision_item,bottom_container_items+update_plan_items).xyz_quat                   
                                 #再对箱子进行平移
                                 for slide in slide_list:
-                                    if self.termination_event.is_set():
-                                        return False
                                     #先对箱子进行旋转
                                     collision_item = copy.deepcopy(init_collision_item)
                                     new_tf_base_box = SE3(pose_to_list(init_collision_item.origin))*SE3(tf_box_rotate)
@@ -791,6 +787,7 @@ def execute(self, inputs, outputs, gvm):
             tf_update_box = tf_box_real 
             tf_update_box[2] = slot.origin.z
             slot.origin = Pose(*tf_update_box)
+            
     #import ipdb;ipdb.set_trace()    
     
                     

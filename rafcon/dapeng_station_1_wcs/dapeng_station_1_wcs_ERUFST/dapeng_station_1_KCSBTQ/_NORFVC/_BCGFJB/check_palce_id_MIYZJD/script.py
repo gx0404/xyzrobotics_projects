@@ -14,12 +14,14 @@ def execute(self, inputs, outputs, gvm):
             tf_flange_object_rotation = tf_flange_object[3:7]
             if tf_flange_object_rotation == [0, 1, -0.0, -0.0]\
                 or tf_flange_object_rotation == [0, -1, -0.0, -0.0]:
-                self.logger.info("条码朝向选择1")
-                outputs["scan_joints"] = [[]]
+                self.logger.info("条码朝向选择1")              
+                outputs["scan_joints"] = [[-0.91902,-1.2229,1.28801,-2.07447],
+                                          [-0.91902,-1.2229,1.28801,-2.07447+3.1415926*2]]
             elif tf_flange_object_rotation == [1.0, 0.0, 0.0, -0.0] \
                 or tf_flange_object_rotation == [-1.0, 0.0, 0.0, -0.0]:
                 self.logger.info("条码朝向选择2")
-                outputs["scan_joints"] = [[]]
+                outputs["scan_joints"] = [[-1.013829,-1.1141,1.132042,0.972309],]
+                                          #[-0.970460,-1.157250,1.2110,1.01568-3.1415926*2]]                
             else:
                 raise "奇怪的tf_flange_obj"
             return "cage_pallet"
@@ -32,12 +34,13 @@ def execute(self, inputs, outputs, gvm):
             if tf_flange_object_rotation == [-0.707, 0.707, -0.0, 0.0]\
                 or tf_flange_object_rotation == [0.707, -0.707, -0.0, 0.0]:
                 self.logger.info("条码朝向选择1")
-                
-                outputs["scan_joints"] = [[-1.003617,-0.996303,0.96713001,-0.6134825]]
+                outputs["scan_joints"] = [[-0.97545,-1.01730,0.99374,-0.52158],
+                                          [-0.97545,-1.01730,0.99374,-0.52158+3.1415926*2]]
             elif tf_flange_object_rotation == [-0.707, -0.707, -0.0, 0.0] \
                 or tf_flange_object_rotation == [0.707, 0.707, -0.0, 0.0]:
                 self.logger.info("条码朝向选择2")
-                outputs["scan_joints"] = [[-1.0669064,-1.16992573,1.2307052,2.4648133]]
+                outputs["scan_joints"] = [[-1.03110,-1.199802,1.2662,2.5643],
+                                          [-1.03110,-1.199802,1.2662,2.5643-3.1415926*2]]
             else:
                 raise "奇怪的tf_flange_obj"    
             return "cage_pallet"  

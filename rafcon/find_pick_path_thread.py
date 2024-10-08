@@ -943,10 +943,12 @@ class A_STAR_ASYNC():
          init_planning_env = copy.copy(planning_env)
          
          # 预先计算所有可能的起始点到目标点的代价
+         init_cost = 0
          for init_node in filtered_items:
             for target_item in pick_items:
                h_cost = self.heuristic_cost_estimate(init_node,target_item)
-               f_cost = h_cost+0
+               f_cost = h_cost+init_cost
+               init_cost+=0.01
                init_node_id = init_node.additional_info.values[-3]
                cost_item = CostItem(f_cost,0,init_node,[init_node.name])    
                open_set.put(cost_item)  
@@ -1044,7 +1046,7 @@ class A_STAR_ASYNC():
          else:           
             if current_direction!=direction:
                self.logger(f"{current_process_id}进程,{direction}面计算得到{all_paths},但是转向,等待中")
-               wait_time = 5
+               wait_time = 60
                current_time = time.time()
                while True:
                   if time.time()-current_time>wait_time or self.termination_event.is_set():

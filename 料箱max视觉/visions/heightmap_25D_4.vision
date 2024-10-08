@@ -154,6 +154,8 @@ nodes:
       name: LoadWorkspaceInfo
       params:
         calib_file: calibration/workspace/cache_pallet_4.yml
+        log_frame_tree: false
+        clear_all_data: false
     position:
       x: -308.20806533887401
       y: -1135.2631807999999
@@ -603,6 +605,9 @@ connections:
     out_index: 2
 service:
   enable: true
+  proxy:
+    enable: false
+    script_file: ""
   cmds:
     calculate_object_poses_3:
       enable: true

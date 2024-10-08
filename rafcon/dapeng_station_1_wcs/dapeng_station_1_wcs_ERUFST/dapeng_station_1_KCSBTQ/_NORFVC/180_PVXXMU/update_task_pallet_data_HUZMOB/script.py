@@ -19,7 +19,9 @@ def execute(self, inputs, outputs, gvm):
     if not inputs["pallet_tote_data_7"] is None:
         data["pallet_tote_data_7"] = inputs["pallet_tote_data_7"]   
     if not inputs["pallet_tote_data_8"] is None:
-        data["pallet_tote_data_8"] = inputs["pallet_tote_data_8"]                        
+        data["pallet_tote_data_8"] = inputs["pallet_tote_data_8"]       
+    if not inputs["path"] is None:
+        data["path"] = inputs["path"]                           
     self.logger.info(f"Update pallet data is {data}")
     
     url = "http://127.0.0.1:7002/api/rafcon/update_pallet_data"
@@ -44,7 +46,8 @@ def execute(self, inputs, outputs, gvm):
     
     if response["error"]!=0:
         raise Exception("Error occured when requesting response from hmi-back.")
-    
+    path = response["path"]
+    self.logger.info(f"path is {path}")
     current_direction = response["current_direction"]
     self.logger.info(f"current_direction is {current_direction}")
     pallet_tote_data = response["pallet_tote_data"]

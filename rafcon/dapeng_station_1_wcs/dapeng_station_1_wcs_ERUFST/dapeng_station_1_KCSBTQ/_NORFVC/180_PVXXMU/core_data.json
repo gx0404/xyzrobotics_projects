@@ -89,6 +89,14 @@
             "to_key": 1, 
             "to_state": "EMTFIV"
         }, 
+        "13": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 13, 
+            "from_key": 5, 
+            "from_state": "MFFLCH", 
+            "to_key": 8, 
+            "to_state": "HUZMOB"
+        }, 
         "14": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 14, 
@@ -104,6 +112,14 @@
             "from_state": "GMVWEJ", 
             "to_key": 0, 
             "to_state": "TGFRFB"
+        }, 
+        "16": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 16, 
+            "from_key": 3, 
+            "from_state": "MFFLCH", 
+            "to_key": 6, 
+            "to_state": "HUZMOB"
         }, 
         "17": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
@@ -233,14 +249,6 @@
             "to_key": 1, 
             "to_state": "DXYZOI"
         }, 
-        "99": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
-            "data_flow_id": 99, 
-            "from_key": 3, 
-            "from_state": "MFFLCH", 
-            "to_key": 6, 
-            "to_state": "HUZMOB"
-        }, 
         "113": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 113, 
@@ -347,6 +355,22 @@
     "scoped_variables": {}, 
     "state_id": "PVXXMU", 
     "transitions": {
+        "4": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 0, 
+            "from_state": "MFFLCH", 
+            "to_outcome": null, 
+            "to_state": "HUZMOB", 
+            "transition_id": 4
+        }, 
+        "5": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 0, 
+            "from_state": "HUZMOB", 
+            "to_outcome": null, 
+            "to_state": "AOAVEC", 
+            "transition_id": 5
+        }, 
         "11": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
@@ -570,22 +594,6 @@
             "to_outcome": null, 
             "to_state": "VURUGJ", 
             "transition_id": 114
-        }, 
-        "115": {
-            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
-            "from_outcome": 0, 
-            "from_state": "MFFLCH", 
-            "to_outcome": null, 
-            "to_state": "HUZMOB", 
-            "transition_id": 115
-        }, 
-        "116": {
-            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
-            "from_outcome": 0, 
-            "from_state": "HUZMOB", 
-            "to_outcome": null, 
-            "to_state": "AOAVEC", 
-            "transition_id": 116
         }
     }
 }

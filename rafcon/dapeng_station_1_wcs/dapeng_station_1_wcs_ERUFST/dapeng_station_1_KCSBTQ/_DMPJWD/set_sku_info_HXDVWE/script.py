@@ -106,18 +106,9 @@ def execute(self, inputs, outputs, gvm):
     # modify_workspace_of_environment(pl_workspace_1) 
 
     sku_dimension = [sku_info_default["length"],sku_info_default["width"],sku_info_default["height"]]
-    sku_dimension = list(map(lambda x:round(x,3),sku_dimension))
+    sku_dimension = list(map(lambda x:round(x,2),sku_dimension))
     rob_driver = RobotDriver(0)
-    if sku_dimension==[0.405,0.303,0.16]:
-        sku_info_default["overlapping_heihgt"] = 0.01
-        gvm.set_variable("depal_scan_code", 1, per_reference=False)
-        gvm.set_variable("cache_scan_code", 2, per_reference=False)
-        gvm.set_variable("merge_cache_scan_code", 3, per_reference=False)
-        sku_info_default["row"] = 9
-        switch_tool("0","tool0")
-        rob_driver.set_digital_output(1,0)
-        rob_driver.set_digital_output(13,1)
-    elif sku_dimension==[0.4,0.3,0.23]:
+    if sku_dimension==[0.4,0.3,0.23]:
         sku_info_default["overlapping_heihgt"] = 0.012
         gvm.set_variable("depal_scan_code", 1, per_reference=False)
         gvm.set_variable("cache_scan_code", 2, per_reference=False)
@@ -126,6 +117,7 @@ def execute(self, inputs, outputs, gvm):
         switch_tool("0","tool1")
         rob_driver.set_digital_output(1,0)
         rob_driver.set_digital_output(13,1)
+        outputs["barcode_point_to"] = "-y"
         # #笼车障碍物清除
         # #更新笼车围栏障碍物
         # collision_pallet_list = ["collision_pallet_2","collision_pallet_3"]
@@ -145,6 +137,7 @@ def execute(self, inputs, outputs, gvm):
         switch_tool("0","tool2")
         rob_driver.set_digital_output(1,1)
         rob_driver.set_digital_output(13,0)
+        outputs["barcode_point_to"] = "+x"
         # #笼车障碍物清除
         # pl = get_planning_environment()
         # #更新笼车围栏障碍物

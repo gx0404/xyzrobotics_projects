@@ -184,45 +184,78 @@ def execute(self, inputs, outputs, gvm):
     
     sku_info = inputs["sku_info"]
 
-    vision_service = self.smart_data["vision_service"]
+    vision_service_400_300 = "calculate_object_poses_4"
+    vision_service_600_400 = "calculate_object_poses_5"
 
-    if mode=="RELEASE" or (mode=="DEBUG" and data_source_path==""):
-
-        if flag_capture_image:
-            start_time = time.time()
-            eye_in_hand = self.smart_data["eye_in_hand"]  
+    if flag_capture_image:
+        start_time = time.time()
+        eye_in_hand = self.smart_data["eye_in_hand"]  
+        while not self.preempted:
+            if eye_in_hand:
+                r = RobotDriver(0)
+                scan_pose = r.get_cartpose().xyz_quat
+                ftr = vision_bridge.async_run(int(vision_id), "capture_images_1",info=json.dumps({"tf_world_hand":scan_pose}))
+            else:
+                ftr = vision_bridge.async_run(int(vision_id), "capture_images_1")            
+                      
+            #获取异步结果
+            current_time = time.time()
             while not self.preempted:
-                if eye_in_hand:
-                    r = RobotDriver(0)
-                    scan_pose = r.get_cartpose().xyz_quat
-                    capture_res = vision_bridge.run(int(vision_id), "capture_images_1",info=json.dumps({"tf_world_hand":scan_pose}))
-                else:
-                    capture_res = vision_bridge.run(int(vision_id), "capture_images")                  
-                if gvm.variable_exist("ERROR"):
-                    self.logger.error("视觉拍照失败")
-                    raise XYZExceptionBase(error_code="20011",
-                                error_msg="")    
-                if (time.time()-start_time) > self.smart_data["time_out"]:
+                if time.time()-current_time>10:
+                    self.logger.info(f"异步获取视觉结果超时")
                     raise XYZExceptionBase("20010", "OpenCameraFailed")
                 try:
-                    capture_res = MessageToDict(capture_res)
-                    if capture_res.get("error") == 0:
-                        break
-                    else:
-                        self.logger.warning("Try to re-connect camera, Please wait!")   
-                        self.logger.warning(capture_res)  
-                        self.preemptive_wait(2) 
-                except:
-                    self.preemptive_wait(2)
-                    
-        else:
-            capture_res = inputs["capture_res"]
+                    capture_res = ftr.get()
+                    break
+                except Exception as e:
+                    self.logger.info(f"{e}")
+                    self.preemptive_wait(0.1)
+                    continue
+                
+            if (time.time()-start_time) > self.smart_data["time_out"]:
+                raise XYZExceptionBase("20010", "OpenCameraFailed")
+            try:
+                capture_res = MessageToDict(capture_res)
+                if capture_res.get("error") == 0:
+                    break
+                else:
+                    self.logger.warning("Try to re-connect camera, Please wait!")   
+                    self.logger.warning(capture_res)  
+                    self.preemptive_wait(2) 
+            except:
+                self.preemptive_wait(2)
+                
+    else:
+        capture_res = inputs["capture_res"]
               
-        vision_result_raw = vision_bridge.run(int(vision_id), vision_service)
-
+    ftr = vision_bridge.async_run(int(vision_id),vision_service_400_300)
+    #vision_result_raw = vision_bridge.run(int(vision_id), vision_service)
+    #获取异步结果
+    current_time = time.time()
+    while not self.preempted:
+        if time.time()-current_time>30:
+            self.logger.info(f"异步获取识别结果超时")
+            raise "异步获取识别结果超时"
+        try:
+            vision_result_raw_400_300 = ftr.get()
+            break
+        except Exception as e:
+            self.logger.info(f"异步识别结果还未出现,重新获取")
+            self.logger.info(f"{e}")
+            self.preemptive_wait(0.1)
+            continue     
+    
+    if vision_result_raw_400_300.error:
+        self.logger.info(f"中欧视觉识别失败")
+        check_primitive_400_300 = True
+    else:    
+        length_400_300 = 0.4    
+        width_400_300 = 0.3  
+        height_400_300 = 0.23 
+      
         from xyz_msgs.vision_msgs import VisionSrv_pb2
         primitives_3d = VisionSrv_pb2.Request().primitives_3d
-        for result in vision_result_raw.primitives_3d:
+        for result in vision_result_raw_400_300.primitives_3d:
             request = VisionSrv_pb2.Primitive3D()  #将3Dprimitves信息转换成Protobuf格式用来和视觉服务通讯
             request.name = result.name
             request.id = result.id
@@ -234,286 +267,337 @@ def execute(self, inputs, outputs, gvm):
             request.pose.orientation.z = result.pose.orientation.z
             request.pose.orientation.w = result.pose.orientation.w
 
-            request.dimension.x = sku_info["length"]
-            request.dimension.y = sku_info["width"]
-            request.dimension.z = sku_info["height"]
+            request.dimension.x = length_400_300
+            request.dimension.y = width_400_300
+            request.dimension.z = height_400_300
             request.score = result.score
             primitives_3d.extend([request])
 
 
-
-        check_res = vision_bridge.run(int(vision_id), "check_primitive_cloud_4",primitives_3d=primitives_3d)
-        print(check_res)
+        ftr = vision_bridge.async_run(int(vision_id), "check_primitive_cloud_4",primitives_3d=primitives_3d)
+        check_res = ftr.get()
+        self.logger.info(f"400_300 check_res is {MessageToDict(check_res)}")
         if not check_res.error == 0:        
-            self.logger.error(f"完整性校验失败")
-            raise "完整性校验失败"
+            self.logger.error(f"中欧完整性校验失败")
+            check_primitive_400_300 = True
+        else:
+            self.logger.error(f"中欧完整性校验成功")
+            check_primitive_400_300 = False
             
-        def construct_vision_result(vision_result_raw, ts):
-            def convert_cloud(cloud_proto):
-                header = Header(
-                    seq=cloud_proto.header.seq,
-                    stamp=Time(),
-                    frame_id=cloud_proto.header.frame_id,
-                )
-                fields = []
-                for f in cloud_proto.fields:
-                    fields.append(
-                        PointField(name=f.name, offset=f.offset, datatype=f.datatype, count=f.count)
-                    )
-                return PointCloud2(
-                    header=header,
-                    height=cloud_proto.height,
-                    width=cloud_proto.width,
-                    is_dense=cloud_proto.is_dense,
-                    is_bigendian=cloud_proto.is_bigendian,
-                    fields=fields,
-                    point_step=cloud_proto.point_step,
-                    row_step=cloud_proto.row_step,
-                    data=cloud_proto.data,
-                )
-
-            vision_result = {
-                "error": vision_result_raw.error,
-                "results": [],
-                "cloud": None,
-                "timestamp": ts
-            }
-            for i, item in enumerate(vision_result_raw.primitives_3d):
-                pose = [
-                    item.pose.position.x,
-                    item.pose.position.y,
-                    item.pose.position.z,
-                    item.pose.orientation.x,
-                    item.pose.orientation.y,
-                    item.pose.orientation.z,
-                    item.pose.orientation.w,
-                ]
-                dimension = [
-                    sku_info["length"],
-                    sku_info["width"],
-                    sku_info["height"],
-                ]
-                info = {
-                    "id": i,
-                    "pose": pose,
-                    "dimension": dimension,
-                    "name": "box",
-                    "score": item.score,
-                    "grasp_poses": [],
-                    "timestamp": 0,
-                    "vision_id": i,
-                }
-                vision_result["results"].append(info)
-            
-            if vision_result_raw.cloud:
-                vision_result["cloud"] = convert_cloud(vision_result_raw.cloud)
-            return vision_result
-
-        ts = capture_res.get("timestamp")
-        vision_result = construct_vision_result(vision_result_raw, ts)    
-
-        #完整性校验
-            
+    ftr = vision_bridge.async_run(int(vision_id),vision_service_600_400)
+    #vision_result_raw = vision_bridge.run(int(vision_id), vision_service)
+    #获取异步结果
+    current_time = time.time()
+    while not self.preempted:
+        if time.time()-current_time>30:
+            self.logger.info(f"异步获取识别结果超时")
+            raise "异步获取识别结果超时"
+        try:
+            vision_result_raw_600_400 = ftr.get()
+            break
+        except Exception as e:
+            self.logger.info(f"异步识别结果还未出现,重新获取")
+            self.logger.info(f"{e}")
+            self.preemptive_wait(0.1)
+            continue          
+    if vision_result_raw_600_400.error:
+        self.logger.info(f"大欧视觉识别失败")
+        check_primitive_600_400 = True        
+    else:          
+        length_600_400 = 0.6    
+        width_600_400 = 0.4  
+        height_600_400 = 0.23 
     
-        # camera_ids = vision_bridge.get_camera_ids(vision_id).get('results')
-        camera_ids = ["-1"]
-        results = copy.copy(vision_result.get("results"))
-         
-        # add point cloud
-        if vision_result.get("cloud"):
-            self.logger.info("视觉获取到未识别成sku的点云(vision get cloud that not belong to primitive)")
-            vision_cloud = vision_result.get("cloud")
-            collision_cloud = PointCloud()
-            collision_cloud.name = "collision_cloud"
-            collision_cloud.point_cloud = vision_cloud
-            collision_cloud.origin  = Pose(0, 0, 0, 0, 0, 0, 1)
-            collision_cloud.grid_size = 0.005
-            collision_cloud.ignore_collision = False
-            outputs["collision_cloud"] = collision_cloud
+        from xyz_msgs.vision_msgs import VisionSrv_pb2
+        primitives_3d = VisionSrv_pb2.Request().primitives_3d
+        for result in vision_result_raw_600_400.primitives_3d:
+            request = VisionSrv_pb2.Primitive3D()  #将3Dprimitves信息转换成Protobuf格式用来和视觉服务通讯
+            request.name = result.name
+            request.id = result.id
+            request.pose.position.x = result.pose.position.x
+            request.pose.position.y = result.pose.position.y
+            request.pose.position.z = result.pose.position.z 
+            request.pose.orientation.x = result.pose.orientation.x
+            request.pose.orientation.y = result.pose.orientation.y
+            request.pose.orientation.z = result.pose.orientation.z
+            request.pose.orientation.w = result.pose.orientation.w
 
-        results = copy.copy(vision_result.get("results"))
-        ## add modify vision reuslt function
-        modify_z_axis_properties = self.smart_data["modify_Z_axis"]
-        if modify_z_axis_properties["enable"]:
-            fraction = modify_z_axis_properties["fraction"]
-            workspace = planning_env.get_workspace_ros(workspace_id)
-            tf_world_tote = workspace.get_bottom_pose().homogeneous
-            vision_result["results"]  = modify_z_axis(results, fraction, tf_world_tote)
+            request.dimension.x = length_600_400
+            request.dimension.y = width_600_400
+            request.dimension.z = height_600_400
+            request.score = result.score
+            primitives_3d.extend([request])
+
+
+        ftr = vision_bridge.async_run(int(vision_id), "check_primitive_cloud_5",primitives_3d=primitives_3d)
+        check_res = ftr.get()
+        self.logger.info(f"400_300 check_res is {MessageToDict(check_res)}")
+        if not check_res.error == 0:        
+            self.logger.error(f"大欧完整性校验失败")
+            check_primitive_600_400 = True
+        else:
+            self.logger.error(f"大欧完整性校验成功")
+            check_primitive_600_400 = False    
+    
+    if check_primitive_400_300 and check_primitive_600_400:
+        self.logger.info(f"大欧中欧完整性校验都失败")   
+        raise "大欧中欧完整性校验都失败" 
+    elif not check_primitive_400_300 and not check_primitive_600_400:
+        self.logger.info(f"大欧中欧完整性校验都成功")  
+        raise "大欧中欧完整性校验都成功"
+    
+    elif not check_primitive_400_300 and check_primitive_600_400:
+        self.logger.info(f"大欧校验失败,中欧完整性校验成功")      
+        if sku_info["row"]!=9:
+            self.logger.info(f"中欧视觉识别成功,但是第一次识别不为中欧")
+            raise "中欧视觉识别成功,但是第一次识别不为中欧"
+        else:
+            vision_result_raw = vision_result_raw_400_300
+    elif check_primitive_400_300 and not check_primitive_600_400:
+        self.logger.info(f"中欧校验失败,大欧完整性校验成功")                 
+        if sku_info["row"]!=5:
+            self.logger.info(f"大欧视觉识别成功,但是第一次识别不为大欧")
+            raise "大欧视觉识别成功,但是第一次识别不为大欧"
+        else:
+            vision_result_raw = vision_result_raw_600_400 
         
-        ## modify xy axis
+        
+    def construct_vision_result(vision_result_raw, ts):
+        def convert_cloud(cloud_proto):
+            header = Header(
+                seq=cloud_proto.header.seq,
+                stamp=Time(),
+                frame_id=cloud_proto.header.frame_id,
+            )
+            fields = []
+            for f in cloud_proto.fields:
+                fields.append(
+                    PointField(name=f.name, offset=f.offset, datatype=f.datatype, count=f.count)
+                )
+            return PointCloud2(
+                header=header,
+                height=cloud_proto.height,
+                width=cloud_proto.width,
+                is_dense=cloud_proto.is_dense,
+                is_bigendian=cloud_proto.is_bigendian,
+                fields=fields,
+                point_step=cloud_proto.point_step,
+                row_step=cloud_proto.row_step,
+                data=cloud_proto.data,
+            )
+
+        vision_result = {
+            "error": vision_result_raw.error,
+            "results": [],
+            "cloud": None,
+            "timestamp": ts
+        }
+        for i, item in enumerate(vision_result_raw.primitives_3d):
+            pose = [
+                item.pose.position.x,
+                item.pose.position.y,
+                item.pose.position.z,
+                item.pose.orientation.x,
+                item.pose.orientation.y,
+                item.pose.orientation.z,
+                item.pose.orientation.w,
+            ]
+            dimension = [
+                sku_info["length"],
+                sku_info["width"],
+                sku_info["height"],
+            ]
+            info = {
+                "id": i,
+                "pose": pose,
+                "dimension": dimension,
+                "name": "box",
+                "score": item.score,
+                "grasp_poses": [],
+                "timestamp": 0,
+                "vision_id": i,
+            }
+            vision_result["results"].append(info)
+        
+        if vision_result_raw.cloud:
+            vision_result["cloud"] = convert_cloud(vision_result_raw.cloud)
+        return vision_result
+
+    ts = capture_res.get("timestamp")
+    vision_result = construct_vision_result(vision_result_raw, ts)    
+
+    #完整性校验
+        
+
+    # camera_ids = vision_bridge.get_camera_ids(vision_id).get('results')
+    camera_ids = ["-1"]
+    results = copy.copy(vision_result.get("results"))
+        
+    # add point cloud
+    if vision_result.get("cloud"):
+        self.logger.info("视觉获取到未识别成sku的点云(vision get cloud that not belong to primitive)")
+        vision_cloud = vision_result.get("cloud")
+        collision_cloud = PointCloud()
+        collision_cloud.name = "collision_cloud"
+        collision_cloud.point_cloud = vision_cloud
+        collision_cloud.origin  = Pose(0, 0, 0, 0, 0, 0, 1)
+        collision_cloud.grid_size = 0.005
+        collision_cloud.ignore_collision = False
+        outputs["collision_cloud"] = collision_cloud
+
+    results = copy.copy(vision_result.get("results"))
+    ## add modify vision reuslt function
+    modify_z_axis_properties = self.smart_data["modify_Z_axis"]
+    if modify_z_axis_properties["enable"]:
+        fraction = modify_z_axis_properties["fraction"]
         workspace = planning_env.get_workspace_ros(workspace_id)
-      
-        if inputs["sku_info"]:
-            if "barcode_direction" not in inputs["sku_info"].keys():
-                self.logger.warning("Barcode direction is not set, using default value 0")
-                barcode_direction = 0
-            else:
-                barcode_direction = inputs["sku_info"]["barcode_direction"]
-            
-            vision_result["results"] = modify_XY_axis(results, workspace, barcode_direction)
+        tf_world_tote = workspace.get_bottom_pose().homogeneous
+        vision_result["results"]  = modify_z_axis(results, fraction, tf_world_tote)
+    
+    ## modify xy axis
+    workspace = planning_env.get_workspace_ros(workspace_id)
+    
+    if inputs["sku_info"]:
+        if "barcode_direction" not in inputs["sku_info"].keys():
+            self.logger.warning("Barcode direction is not set, using default value 0")
+            barcode_direction = 0
         else:
-            self.logger.warning("No input sku info, Notice that barcode direction is not set!")
-
-           
-        list(map(lambda info: info.update({"timestamp": vision_result.get("timestamp")}), results))
-        list(map(lambda info: info.update({"sku_info": inputs["sku_info"]}), results))
+            barcode_direction = inputs["sku_info"]["barcode_direction"]
         
-        shrunk_size = self.smart_data["shrunk_size"]
-        if not (shrunk_size >= 0 and shrunk_size <= 0.05):
-                raise XYZExceptionBase(error_code="E9998",
-                            error_msg="shrunk_size[{}] should be between 0m and 0.05m".format(shrunk_size))
-
-        #使用get height去判断是否为空
-        height_res = vision_bridge.run(int(vision_id), "get_safe_height_4")
-        height = float(height_res.info)
-        if str(vision_id) in ["2","3"]:
-            height-=0.025         
-        self.logger.info(f"height is {height}")
-              
-        if height<0.05:
-            if len(results) == 0:
-                self.logger.info(f"高度小于0.05，视觉判断为空")
-                return "empty"
-            else:
-                self.logger.info("视觉高度小于0.05，但是视觉识别到料箱")
-                raise "视觉高度小于0.05，但是视觉识别到料箱"    
-
-        layer = round(height/(0.23-0.01))
-        self.logger.info(f"当前层数为{layer}层")
-        gvm.set_variable("layer"+str(vision_id), layer, per_reference=False)
-
-        #这个结果为空可能是视觉服务异常
-        if len(results) == 0:
-            self.logger.error("视觉识别调用服务异常")
-            raise XYZExceptionBase(error_code="E0609",
-                        error_msg="")                  
-
-        
-        minimal_sku_height = self.smart_data["mix_depalletize_minimal_sku_height"]
-        if inputs["sku_info"]:
-            
-            l, w, h = inputs["sku_info"]["length"], inputs["sku_info"]["width"], inputs["sku_info"]["height"]
-            #h = min(vision_result["results"][0]["pose"][2] - workspace.get_bottom_pose().xyz_quat[2], inputs["sku_info"]["height"])
-            
-            ## default we assume this is single depalletize
-            if minimal_sku_height == 0.0:
-                minimal_sku_height = h
-
-            def check_dim(info):
-                vision_dim = np.sort(np.array(info["dimension"][:2]))[::-1]
-                sku_dim = np.array([l,w])
-                return np.allclose(vision_dim,sku_dim, rtol=0, atol=0.05)
-
-            if self.smart_data["check_dimension"]:
-                if (not all(map(check_dim, vision_result.get("results", [])))):
-                    vision_result["error"] = 1
-                    vision_result["error_msg"] = "RAFCON Vision error: {}".format(
-                            "Vision dimension cannot pass dimension check.")
-                    error_msg = "Vision dimension cannot pass dimension check."
-                    raise XYZVisionException(error_code="E0609",
-                                        error_msg=error_msg,
-                                        camera_ids=camera_ids) 
-
-                list(map(lambda info: info.update({"dimension": [l-shrunk_size+EPSILON, w-shrunk_size+EPSILON, h+EPSILON]}), results)) #shrunk size to get collision checking work
-            else:
-                def only_update_height(info):
-                    info["dimension"][0] = info["dimension"][0] - shrunk_size + EPSILON
-                    info["dimension"][1] = info["dimension"][1] - shrunk_size + EPSILON
-                    info["dimension"][2] = h + EPSILON
-
-                list(map(only_update_height, results)) #shrunk size to get collision checking work
-
-        
-        ## update sku_info using top box
-        results.sort(key=lambda info: info["pose"][2], reverse=True)
-        sku_info = results[0]["sku_info"]
-        # No input sku_info
-        if not sku_info:
-            self.logger.warning("Attention! NO input sku information.")
-            sku_info = {}
-        sku_info["length"] = results[0]["dimension"][0]
-        sku_info["width"] = results[0]["dimension"][1]
-        sku_info["height"] = results[0]["dimension"][2]
-        outputs["sku_info"] = sku_info
-
-        list(map(lambda info: info.update({"vision_id": info["id"]}), results))
-        self.logger.info(results)    
-        
-        def build_primitive(info):
-            vision_box_proxy = FormattedRealBox(id = int(info["id"]), 
-                                        tf_world_origin = SE3(info["pose"][0:7]), 
-                                        size = info["dimension"],
-                                        tf_origin_box_center = SE3([0, 0, -info["dimension"][-1]/2, 0, 0, 0, 1]))
-            pg = vision_box_proxy.primitive_group()
-
-
-            # We only support box object currently
-            pg.additional_info.type = "box"
-            pg.additional_info.keys.extend(list(map(str, info["sku_info"].keys())) \
-                + ["timestamp", "vision_id"])
-            pg.additional_info.values.extend(list(map(str, info["sku_info"].values())) \
-                + [str(info["timestamp"]), str(info["vision_id"])])
-            pg.additional_info.descriptions = pg.additional_info.keys                                 
-            return pg
-          
-        container_items = list(map(build_primitive, results)) 
-            
-        try:
-            clear_container_all_items(workspace_id)
-            self.logger.warning(f"清除真实环境中工作空间{workspace_id}的原有物体")
-            add_container_items(workspace_id, container_items)
-            add_bottom_padding_workspace(workspace_id, minimal_sku_height)
-            if gvm.get_variable("motion_payload", per_reference=True, default=None):
-                self.logger.warning(f"清除规划环境中工作空间{workspace_id}的原有物体")
-                planning_env.clear_container_all_items(workspace_id)
-                planning_env.add_container_items(workspace_id, container_items)
-                planning_env.add_bottom_padding_workspace(workspace_id, minimal_sku_height)
-                last_payload["planning_environment"] = PlanningEnvironmentRos.to_ros_msg(planning_env)
-                gvm.set_variable("motion_payload", last_payload, per_reference=True)
-        ## TODO: need a specific error type from env manager
-        except Exception:
-            raise XYZExceptionBase(error_code="E0707", error_msg="Appointed workspace does not exist in environment")
-        if mode=="DEBUG" and data_source_path=="":
-            if not os.path.exists(DEFAULT_OFFLINE_VISION_PATH):
-                os.mkdir(DEFAULT_OFFLINE_VISION_PATH)
-            cameras = '_'.join(camera_ids)
-            file_name = "ws_{}_{}_{}.json".format(vision_id, ts, cameras)
-            planning_env_msg = get_planning_environment()
-            planning_env = PlanningEnvironmentRos.from_ros_msg(planning_env_msg)
-            data_store_path = os.path.join(DEFAULT_OFFLINE_VISION_PATH, file_name)
-            pick_workspace = planning_env.get_workspace_ros(str(vision_id))
-            pick_workspace.to_json_file(data_store_path)
-
-    elif mode=="DEBUG" and data_source_path!="":
-        if '/' not in data_source_path:
-            data_path = os.path.join(DEFAULT_OFFLINE_VISION_PATH, data_source_path)
-        else:
-            data_path = data_source_path
-        if not os.path.exists(data_path):
-            raise Exception("incorrect path(路径设置错误，请检查)")
-        pick_workspace = WorkspaceRos.from_json_file(data_path)
-        container_items = pick_workspace.get_container_items()
-        try:
-            clear_container_all_items(workspace_id)
-            self.logger.warning(f"清除真实环境中工作空间{workspace_id}的原有物体")
-            add_container_items(workspace_id, container_items)
-            add_bottom_padding_workspace(workspace_id, minimal_sku_height)
-            if gvm.get_variable("motion_payload", per_reference=True, default=None):
-                planning_env.clear_container_all_items(workspace_id)
-                self.logger.warning(f"清除规划环境中工作空间{workspace_id}的原有物体")
-                planning_env.add_container_items(workspace_id, container_items)
-                planning_env.add_bottom_padding_workspace(workspace_id, minimal_sku_height)
-                last_payload["planning_environment"] = PlanningEnvironmentRos.to_ros_msg(planning_env)
-                gvm.set_variable("motion_payload", last_payload, per_reference=True)
-        ## TODO: need a specific error type from env manager
-        except Exception:
-            raise XYZExceptionBase(error_code="E0707", error_msg="Appointed workspace does not exist in environment")
+        vision_result["results"] = modify_XY_axis(results, workspace, barcode_direction)
     else:
-        raise Exception("mode or file path setting incorrect（模式或者路径设置错误， 请检查!）")
-    if self.smart_data["flag_check_primitives_change"]:
-        try:
-            check_change = getattr(vision_bridge, 'check_primitives_change')(vision_id, [])
-        except:
-            raise Exception("Make sure XVF service is set up corrected.（请检查XVF服务设置!）")
+        self.logger.warning("No input sku info, Notice that barcode direction is not set!")
+
+        
+    list(map(lambda info: info.update({"timestamp": vision_result.get("timestamp")}), results))
+    list(map(lambda info: info.update({"sku_info": inputs["sku_info"]}), results))
+    
+    shrunk_size = self.smart_data["shrunk_size"]
+    if not (shrunk_size >= 0 and shrunk_size <= 0.05):
+            raise XYZExceptionBase(error_code="E9998",
+                        error_msg="shrunk_size[{}] should be between 0m and 0.05m".format(shrunk_size))
+
+    #使用get height去判断是否为空
+    height_res = vision_bridge.run(int(vision_id), "get_safe_height_4")
+    height = float(height_res.info)
+    if str(vision_id) in ["2","3"]:
+        height-=0.025         
+    self.logger.info(f"height is {height}")
+            
+    if height<0.05:
+        if len(results) == 0:
+            self.logger.info(f"高度小于0.05，视觉判断为空")
+            return "empty"
+        else:
+            self.logger.info("视觉高度小于0.05，但是视觉识别到料箱")
+            raise "视觉高度小于0.05，但是视觉识别到料箱"    
+
+    layer = round(height/(0.23-0.01))
+    self.logger.info(f"当前层数为{layer}层")
+    gvm.set_variable("layer"+str(vision_id), layer, per_reference=False)
+
+    #这个结果为空可能是视觉服务异常
+    if len(results) == 0:
+        self.logger.error("视觉识别调用服务异常")
+        raise XYZExceptionBase(error_code="E0609",
+                    error_msg="")                  
+
+    
+    minimal_sku_height = self.smart_data["mix_depalletize_minimal_sku_height"]
+    if inputs["sku_info"]:
+        
+        l, w, h = inputs["sku_info"]["length"], inputs["sku_info"]["width"], inputs["sku_info"]["height"]
+        #h = min(vision_result["results"][0]["pose"][2] - workspace.get_bottom_pose().xyz_quat[2], inputs["sku_info"]["height"])
+        
+        ## default we assume this is single depalletize
+        if minimal_sku_height == 0.0:
+            minimal_sku_height = h
+
+        def check_dim(info):
+            vision_dim = np.sort(np.array(info["dimension"][:2]))[::-1]
+            sku_dim = np.array([l,w])
+            return np.allclose(vision_dim,sku_dim, rtol=0, atol=0.05)
+
+        if self.smart_data["check_dimension"]:
+            if (not all(map(check_dim, vision_result.get("results", [])))):
+                vision_result["error"] = 1
+                vision_result["error_msg"] = "RAFCON Vision error: {}".format(
+                        "Vision dimension cannot pass dimension check.")
+                error_msg = "Vision dimension cannot pass dimension check."
+                raise XYZVisionException(error_code="E0609",
+                                    error_msg=error_msg,
+                                    camera_ids=camera_ids) 
+
+            list(map(lambda info: info.update({"dimension": [l-shrunk_size+EPSILON, w-shrunk_size+EPSILON, h+EPSILON]}), results)) #shrunk size to get collision checking work
+        else:
+            def only_update_height(info):
+                info["dimension"][0] = info["dimension"][0] - shrunk_size + EPSILON
+                info["dimension"][1] = info["dimension"][1] - shrunk_size + EPSILON
+                info["dimension"][2] = h + EPSILON
+
+            list(map(only_update_height, results)) #shrunk size to get collision checking work
+
+    
+    ## update sku_info using top box
+    results.sort(key=lambda info: info["pose"][2], reverse=True)
+    sku_info = results[0]["sku_info"]
+    # No input sku_info
+    if not sku_info:
+        self.logger.warning("Attention! NO input sku information.")
+        sku_info = {}
+    sku_info["length"] = results[0]["dimension"][0]
+    sku_info["width"] = results[0]["dimension"][1]
+    sku_info["height"] = results[0]["dimension"][2]
+    outputs["sku_info"] = sku_info
+
+    list(map(lambda info: info.update({"vision_id": info["id"]}), results))
+    self.logger.info(results)    
+    
+    def build_primitive(info):
+        vision_box_proxy = FormattedRealBox(id = int(info["id"]), 
+                                    tf_world_origin = SE3(info["pose"][0:7]), 
+                                    size = info["dimension"],
+                                    tf_origin_box_center = SE3([0, 0, -info["dimension"][-1]/2, 0, 0, 0, 1]))
+        pg = vision_box_proxy.primitive_group()
+
+
+        # We only support box object currently
+        pg.additional_info.type = "box"
+        pg.additional_info.keys.extend(list(map(str, info["sku_info"].keys())) \
+            + ["timestamp", "vision_id"])
+        pg.additional_info.values.extend(list(map(str, info["sku_info"].values())) \
+            + [str(info["timestamp"]), str(info["vision_id"])])
+        pg.additional_info.descriptions = pg.additional_info.keys                                 
+        return pg
+        
+    container_items = list(map(build_primitive, results)) 
+        
+    try:
+        clear_container_all_items(workspace_id)
+        self.logger.warning(f"清除真实环境中工作空间{workspace_id}的原有物体")
+        add_container_items(workspace_id, container_items)
+        add_bottom_padding_workspace(workspace_id, minimal_sku_height)
+        if gvm.get_variable("motion_payload", per_reference=True, default=None):
+            self.logger.warning(f"清除规划环境中工作空间{workspace_id}的原有物体")
+            planning_env.clear_container_all_items(workspace_id)
+            planning_env.add_container_items(workspace_id, container_items)
+            planning_env.add_bottom_padding_workspace(workspace_id, minimal_sku_height)
+            last_payload["planning_environment"] = PlanningEnvironmentRos.to_ros_msg(planning_env)
+            gvm.set_variable("motion_payload", last_payload, per_reference=True)
+    ## TODO: need a specific error type from env manager
+    except Exception:
+        raise XYZExceptionBase(error_code="E0707", error_msg="Appointed workspace does not exist in environment")
+    if mode=="DEBUG" and data_source_path=="":
+        if not os.path.exists(DEFAULT_OFFLINE_VISION_PATH):
+            os.mkdir(DEFAULT_OFFLINE_VISION_PATH)
+        cameras = '_'.join(camera_ids)
+        file_name = "ws_{}_{}_{}.json".format(vision_id, ts, cameras)
+        planning_env_msg = get_planning_environment()
+        planning_env = PlanningEnvironmentRos.from_ros_msg(planning_env_msg)
+        data_store_path = os.path.join(DEFAULT_OFFLINE_VISION_PATH, file_name)
+        pick_workspace = planning_env.get_workspace_ros(str(vision_id))
+        pick_workspace.to_json_file(data_store_path)
+
+    
         
     return "success"

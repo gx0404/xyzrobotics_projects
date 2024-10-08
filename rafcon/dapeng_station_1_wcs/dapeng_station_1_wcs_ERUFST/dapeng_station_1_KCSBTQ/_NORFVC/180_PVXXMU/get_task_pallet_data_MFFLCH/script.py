@@ -77,6 +77,14 @@ def execute(self, inputs, outputs, gvm):
         "to_ws":to_ws
     }
     outputs["pallet_tote_data_7"] = pallet_tote_data_7
+    
+    #获取抓取箱子的位置
+    pick_box_pose = pose_to_list(item.origin)
+    if "from_pick_pose_dict" not in path.keys():
+        path["from_pick_pose_dict"] = {}
+    else:
+        path["from_pick_pose_dict"][pick_box_id] = pick_box_pose
+    outputs["path"] = path
 
     gvm.set_variable("pallet_tote_data", pallet_tote_data, per_reference=False)
     gvm.set_variable("pick_tote_data", pick_tote_data, per_reference=False)   

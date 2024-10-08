@@ -65,6 +65,7 @@ def execute(self, inputs, outputs, gvm):
             if collision_object.name in check_padding_list:
                 dimensions = list(collision_object.primitives[0].dimensions)
                 enlarge_length = 1
+                dimensions[0]+=0.1
                 dimensions[1]+=enlarge_length
                 dimensions[2]+=0.05
                 collision_object.primitives[0].dimensions=tuple(dimensions)  
@@ -86,6 +87,7 @@ def execute(self, inputs, outputs, gvm):
             if collision_object.name in check_padding_list:
                 dimensions = list(collision_object.primitives[0].dimensions)
                 enlarge_length = 0.1
+                dimensions[0]+=0.1
                 dimensions[1]+=enlarge_length
                 dimensions[2]+=0.1
                 collision_object.primitives[0].dimensions=tuple(dimensions)     
@@ -107,6 +109,7 @@ def execute(self, inputs, outputs, gvm):
             if collision_object.name in check_padding_list:               
                 dimensions = list(collision_object.primitives[0].dimensions)
                 enlarge_length = 1
+                dimensions[0]+=0.1
                 dimensions[1]+=enlarge_length
                 dimensions[2]+=0.05
                 collision_object.primitives[0].dimensions=tuple(dimensions)  
@@ -129,6 +132,7 @@ def execute(self, inputs, outputs, gvm):
             if collision_object.name in check_padding_list:
                 dimensions = list(collision_object.primitives[0].dimensions)
                 enlarge_length = 0.1
+                dimensions[0]+=0.1
                 dimensions[1]+=enlarge_length
                 dimensions[2]+=0.05
                 collision_object.primitives[0].dimensions=tuple(dimensions)  

@@ -103,7 +103,7 @@
             }, 
             "barcode_point_to": {
                 "type_config": {
-                    "current_type": "STATIC", 
+                    "current_type": "INPUT_PORT", 
                     "excluded_keys": {}, 
                     "optional_types": [
                         "STATIC", 

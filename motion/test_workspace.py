@@ -100,7 +100,9 @@ collision_4 = build_collision(name="col_4", origin=[0.052, -3.5, -0.32+1.5/2, 0,
 collision_13 = build_collision(name="col_13", origin=[0, 0 ,3, 0, 0, 0, 1], dimensions=[5, 5,0.11], geometric_type=GeometricPrimitive.BOX, alpha=0.1)
 
 #相机立柱
-collision_5 = build_collision(name="col_5", origin=[0.893+0.07, 2.824, 0.730, 0, 0, 0, 1], dimensions=[4.4, 0.2+0.02], geometric_type=GeometricPrimitive.CYLINDER, alpha=0.2)
+collision_5 = build_collision(name="col_5", origin=[0.9430, 2.824, -0.07000, 0, 0, 0, 1], dimensions=[2.8, 0.2+0.02], geometric_type=GeometricPrimitive.CYLINDER, alpha=0.2)
+#相机立柱2
+collision_18 = build_collision(name="col_18", origin=[0.9430, 2.824, 1.5, 0, 0, 0, 1], dimensions=[2, 0.17], geometric_type=GeometricPrimitive.CYLINDER, alpha=0.2)
 
 #相机
 collision_6 = build_collision(name="col_6", origin=[-0.04, 1.9, 2.43+0.04, 0, 0, 0, 1], dimensions=[1.5,1.5,0.25], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
@@ -125,6 +127,10 @@ collision_12 = build_collision(name="col_12", origin=[1.15, -2.57, -0.456-1.1/2-
 
 #机器人航空插头
 collision_14 = build_collision(name="col_14", origin=[-0.8, -0.15, -0.2, 0, 0, 0, 1], dimensions=[0.15, 0.7,0.94], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
+
+#相机立柱扫码器
+collision_17 = build_collision(name="col_17", origin=[1.07, 2.75, 0.73, 0.0, 0.0, 0.08715573006937669, 0.996194699207021], dimensions=[0.11, 0.35,0.33], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
+
 
 # 创建复杂障碍物(由多个几何体组成，一般不需要)，可以参考以下代码
 # combined_collision = PrimitiveGroup(name="col_combined", origin=Pose(2.7041, -0.802, 0.8, 0, 0, 0, 1))
@@ -165,7 +171,8 @@ pe.collision_objects.append(collision_12)
 pe.collision_objects.append(collision_13)
 pe.collision_objects.append(collision_14)
 pe.collision_objects.append(collision_15)
-# pe.collision_objects.append(collision_16)
+pe.collision_objects.append(collision_17)
+pe.collision_objects.append(collision_18)
 # pe.collision_objects.append(collision_pallet_2)
 # pe.collision_objects.append(collision_pallet_3)
 # pe.collision_objects.append(combined_collision)
@@ -302,8 +309,8 @@ tool_name = "tool2"
 #  -0.0,
 #  1]), dimension=[0.6, 0.4], max_suction_force=150)
 
-tip_primitive_1 = bulid_tip_primitive(tool_name = tool_name, id="tp_1", tf_tool_region=([0.13064,
- -0.00096,
+tip_primitive_1 = bulid_tip_primitive(tool_name = tool_name, id="tp_1", tf_tool_region=([0.13064+0.00075,
+ -0.00046,
  0.7646,
  0.0,
  -0.0,

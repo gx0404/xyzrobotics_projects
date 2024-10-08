@@ -73,10 +73,10 @@ def execute(self, inputs, outputs, gvm):
             outputs["place_drop_buffer"] = 0.003
         #笼车     
         elif place_workspace_id in ["2"]:
-            outputs["place_drop_buffer"] = -0.015  
+            outputs["place_drop_buffer"] = -0.015 
         #笼车     
         elif place_workspace_id in ["3"]:
-            outputs["place_drop_buffer"] = -0.015               
+            outputs["place_drop_buffer"] = -0.015              
         else:
             outputs["place_drop_buffer"] = 0.01    
     else:
@@ -97,10 +97,13 @@ def execute(self, inputs, outputs, gvm):
         place_relative_poses = [[0.0, 0.0, 0.06, 0, 0, 0, 1]] 
     elif place_workspace_id=="2" or place_workspace_id=="3":
         if row==9 and place_workspace_id=="3":
-            place_relative_poses = [[0.04, -0.04, 0.07, 0, 0, 0, 1]] 
-        else:
             place_relative_poses = [[-0.04, -0.04, 0.07, 0, 0, 0, 1]] 
-                
+        elif row==9 and place_workspace_id=="2":
+            place_relative_poses = [[-0.04, -0.04, 0.07, 0, 0, 0, 1]]
+        elif row==5 and place_workspace_id=="2":
+            place_relative_poses = [[-0.04, -0.04, 0.07, 0, 0, 0, 1]] 
+        elif row==5 and place_workspace_id=="3":
+            place_relative_poses = [[-0.04, -0.04, 0.07, 0, 0, 0, 1]]                 
         # place_box_id_dict = inputs["place_box_id"]
         # for key,vaules in place_box_id_dict.items():
         #     place_box_id = key  

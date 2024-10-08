@@ -17,8 +17,8 @@
         "2-config-solver": {
             "dcheck": 0.075, 
             "dsafe": {
-                "at_goal": 0.03, 
-                "at_start": 0.03, 
+                "at_goal": 0.02, 
+                "at_start": 0.02, 
                 "midway": 0.06
             }, 
             "simplify": true, 

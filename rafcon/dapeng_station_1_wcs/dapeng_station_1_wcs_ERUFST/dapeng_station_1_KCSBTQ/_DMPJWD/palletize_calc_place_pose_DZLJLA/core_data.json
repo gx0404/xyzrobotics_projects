@@ -32,6 +32,15 @@
             }, 
             "default_value": null, 
             "name": "extra"
+        }, 
+        "3": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 3, 
+            "data_type": {
+                "__type__": "__builtin__.str"
+            }, 
+            "default_value": null, 
+            "name": "/conveyor_case_config/barcode_point_to"
         }
     }, 
     "name": "palletize_calc_place_pose", 

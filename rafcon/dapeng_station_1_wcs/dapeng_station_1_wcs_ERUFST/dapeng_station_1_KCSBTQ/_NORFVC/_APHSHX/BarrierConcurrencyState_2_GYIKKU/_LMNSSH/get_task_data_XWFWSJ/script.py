@@ -79,10 +79,11 @@ def execute(self, inputs, outputs, gvm):
         path[path_key]["target_box"] = pick_box_id   
         
     #添加原先抓取箱子在拣配托盘上的姿态    
-    if "from_pick_pose_dict" not in path.keys():
-        path["from_pick_pose_dict"] = {}
-    else:
-        path["from_pick_pose_dict"][pick_box_id] = pick_box_pose
+    if pick_id=="0":
+        if "from_pick_pose_dict" not in path.keys():
+            path["from_pick_pose_dict"] = {}
+        else:
+            path["from_pick_pose_dict"][pick_box_id] = pick_box_pose
     outputs["path"] = path
                
     if place_id=="1":

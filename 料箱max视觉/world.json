@@ -6,7 +6,7 @@
             "name_editable": true,
             "node_validity": "kUndefined",
             "parent_uuid": "",
-            "uuid": "{a688360e-5119-4695-a7ae-fc4cc1242740}",
+            "uuid": "{0693a8be-8041-497e-9edd-f536ad5dff7c}",
             "visible": true
         },
         {
@@ -19,6 +19,7 @@
                 "collision_type_distance_threshold_map": null,
                 "collision_type_response_map": null,
                 "distance_threshold": 5e-05,
+                "extra_check_margin": 0.0,
                 "flag_calculate_contact_points": false,
                 "flag_calculate_distance": false,
                 "flag_calculate_env_collision": true,
@@ -50,7 +51,7 @@
             "name_editable": true,
             "node_validity": "kUndefined",
             "only_pose_visible": false,
-            "parent_uuid": "{a688360e-5119-4695-a7ae-fc4cc1242740}",
+            "parent_uuid": "{0693a8be-8041-497e-9edd-f536ad5dff7c}",
             "time": 0.0,
             "time_step": 0.001,
             "to_workspace_path": {

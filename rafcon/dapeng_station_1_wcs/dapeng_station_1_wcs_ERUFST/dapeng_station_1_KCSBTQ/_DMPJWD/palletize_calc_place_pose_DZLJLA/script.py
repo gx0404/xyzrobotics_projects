@@ -98,27 +98,28 @@ def execute(self, inputs, outputs, gvm):
         assert barcode_point_to in ["+x", "-x", "+y", "-y"]
         boxes_shape = conveyor_case_config['boxes_layout_shape']
         auto_shape = np.array(conveyor_case_config['auto_layout_shape'])
-                    
         if barcode_direction == 0 and barcode_point_to == "+x":
             box_dims = [l, w, h]
-            box_pose = [[0-0.05-0.01, 0, h+0.015, 0, 0,  0.99996192, 0.00872649]]    
+            box_pose = [[0-0.05, 0, h+0.015, 0, 0,  1,0]]   
+        elif barcode_direction == 0 and barcode_point_to == "-y":
+            box_dims = [w, l, h]
+            box_pose = [[(L-l)/2, 0, h, 0, 0, 0.7071, 0.7071]]             
         elif (barcode_direction in [3, 4] and barcode_point_to == "+x") or (barcode_direction in [1, 2] and barcode_point_to == "+y"):
             box_dims = [l, w, h]
-            box_pose = [[0-0.05-0.01, 0, h+0.015, 0, 0,  0.99996192, 0.00872649]]   
+            box_pose = [[0-0.05, 0, h+0.015, 0, 0,  1, 0]]   
             # box_pose = [[0, 0, h, 0, 0, 1, 0]]
         elif (barcode_direction in [3, 4] and barcode_point_to == "-x") or (barcode_direction in [1, 2] and barcode_point_to == "-y"):
             box_dims = [l, w, h]
             box_pose = [[0, 0, h, 0, 0, 0, 1]]
         elif (barcode_direction in [3, 4] and barcode_point_to == "-y") or (barcode_direction in [1, 2] and barcode_point_to == "+x"):
             box_dims = [w, l, h]
-            box_pose = [[(L-l)/2-0.01, 0, h, 0, 0, 0.7071, 0.7071]]
+            box_pose = [[(L-l)/2, 0, h, 0, 0, 0.7071, 0.7071]]
         elif (barcode_direction in [3, 4] and barcode_point_to == "+y") or (barcode_direction in [1, 2] and barcode_point_to == "-x"):
             box_dims = [w, l, h]
             box_pose = [[0, 0, h, 0, 0, -0.7071, 0.7071]]
         else:
             raise XYZLayoutException(error_code = "E0999",
                                      error_msg = "Invalid config.")
-            
         boxes_shape = (np.floor([W / box_dims[1], L / box_dims[0]]) * auto_shape +
                        boxes_shape * np.logical_not(auto_shape)).astype(int).tolist()
         boxes_size = np.array(boxes_shape[::-1]) * box_dims[:2]

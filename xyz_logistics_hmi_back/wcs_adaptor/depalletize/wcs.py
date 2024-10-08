@@ -355,7 +355,7 @@ def depal_task(body: SingleTaskCreateSchema):
             sku_dimension_2 = container_items_2[0].primitives[0].dimensions
             sku_dimension_2 = list(map(lambda x:round(x,2),sku_dimension_2))
         if container_items_3:
-            sku_dimension_3 = container_items_2[0].primitives[0].dimensions
+            sku_dimension_3 = container_items_3[0].primitives[0].dimensions
             sku_dimension_3 = list(map(lambda x:round(x,2),sku_dimension_3))                
     except ImportError as err:
         return make_json_response(error=5,error_message="环境节点未启动,请在HMI中启动环境节点") 

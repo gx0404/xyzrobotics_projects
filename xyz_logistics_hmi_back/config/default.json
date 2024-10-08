@@ -33,8 +33,8 @@
     "general_config_dir": "/home/xyz/xyz_app/app/xyz_logistics_hmi_back/config",
     "cmct_log_path": "/home/xyz/xyz_log/xyz_logistics_hmi_back",
     "wcs_addr": {
-        "host": "127.0.0.1",
-        "port": 10000
+        "host": "15.12.225.102",
+        "port": 89
     },
     "sock_addr": {
         "host": "127.0.0.1",

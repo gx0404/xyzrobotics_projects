@@ -432,16 +432,16 @@ class SEARCH_ASYNC():
                 for plan_item in remaining_plan_items:
                     #获取到放置是否干涉，以及旋转180放置是否干涉
                     place_collision_flag,change_180_no_collision = self.check_place_collision(our_robot,check_robot_list,init_planning_env,pick_joints,plan_item,pick_path_key) 
-               
+
+                    if self.row == 9:    
+                        if change_180_no_collision:
+                            cost_item = CostItem(self.cost_estimate(plan_item,0,pick_box_id_row,from_pick_id)+5,\
+                            old_path+[[pick_item,plan_item,True]],[plan_item.name]+[i.name for i in plan_path_list])        
+                            open_set.put(cost_item)                  
                     if not place_collision_flag:
                         cost_item = CostItem(self.cost_estimate(plan_item,0,pick_box_id_row,from_pick_id),\
-                        old_path+[[pick_item,plan_item,False]],[plan_item.name]+[i.name for i in plan_path_list]) 
-                        
-                        open_set.put(cost_item)
-                    if  change_180_no_collision:
-                        cost_item = CostItem(self.cost_estimate(plan_item,0,pick_box_id_row,from_pick_id),\
-                        old_path+[[pick_item,plan_item,True]],[plan_item.name]+[i.name for i in plan_path_list])        
-                        open_set.put(cost_item)             
+                        old_path+[[pick_item,plan_item,False]],[plan_item.name]+[i.name for i in plan_path_list])                         
+                        open_set.put(cost_item)           
                               
         #建立代价
         cost_z = None
@@ -514,6 +514,14 @@ class SEARCH_ASYNC():
                     for plan_item in new_remaining_plan_items:
                         #获取到放置是否干涉，以及旋转180放置是否干涉
                         place_collision_flag,change_180_no_collision = self.check_place_collision(our_robot,check_robot_list,check_planning_env,pick_joints,plan_item,pick_path_key) 
+ 
+                        if self.row == 9: 
+                            if change_180_no_collision:
+                                new_state_key = state_key + [plan_item.name]
+                                new_path = copy.copy(path)
+                                new_path.append([pick_item,plan_item,True])   
+                                cost_item = CostItem(f_cost+self.cost_estimate(plan_item,cost_z,pick_box_id_row,from_pick_id)+1,new_path,new_state_key) 
+                                open_set.put(cost_item)
                         
                         if not place_collision_flag:
                             new_state_key = state_key + [plan_item.name]
@@ -521,13 +529,7 @@ class SEARCH_ASYNC():
                             new_path.append([pick_item,plan_item,False])
                             cost_item = CostItem(f_cost+self.cost_estimate(plan_item,cost_z,pick_box_id_row,from_pick_id),new_path,new_state_key) 
                             open_set.put(cost_item)
-
-                        if change_180_no_collision:
-                            new_state_key = state_key + [plan_item.name]
-                            new_path = copy.copy(path)
-                            new_path.append([pick_item,plan_item,True])   
-                            cost_item = CostItem(f_cost+self.cost_estimate(plan_item,cost_z,pick_box_id_row,from_pick_id)+1,new_path,new_state_key) 
-                            open_set.put(cost_item)
+                            
         # if not all_path:
         #     raise "fault"                    
         return all_path                    
@@ -635,6 +637,7 @@ def execute(self, inputs, outputs, gvm):
     #获取拣配托盘上放置规划箱子,并只得到最底层的规划
     plan_items = planning_env.get_unfinished_planned_items("0")
     lower_layer = inputs["lower_layer"]
+    #lower_layer = True
     search_async = SEARCH_ASYNC()
     search_async.preempted = self.preempted
     search_async.logger = self.logger.info

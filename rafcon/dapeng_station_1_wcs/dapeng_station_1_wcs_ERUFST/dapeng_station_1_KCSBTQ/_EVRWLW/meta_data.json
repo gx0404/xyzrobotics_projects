@@ -78,7 +78,7 @@
                 "__jsonqualname__": "__builtin__.tuple", 
                 "items": [
                     4056.7218875297954, 
-                    643.3214628334804
+                    707.841435045742
                 ]
             }, 
             "size": {
@@ -96,7 +96,7 @@
                 "rel_pos": {
                     "__jsonqualname__": "__builtin__.tuple", 
                     "items": [
-                        43.47597569635097, 
+                        44.03767731502515, 
                         204.25174043628914
                     ]
                 }
@@ -109,7 +109,7 @@
                 "rel_pos": {
                     "__jsonqualname__": "__builtin__.tuple", 
                     "items": [
-                        43.47597569635097, 
+                        44.03767731502515, 
                         647.0004887753375
                     ]
                 }
@@ -122,7 +122,7 @@
                 "rel_pos": {
                     "__jsonqualname__": "__builtin__.tuple", 
                     "items": [
-                        43.47597569635097, 
+                        44.03767731502515, 
                         1347.9532613139188
                     ]
                 }
@@ -135,7 +135,7 @@
                 "rel_pos": {
                     "__jsonqualname__": "__builtin__.tuple", 
                     "items": [
-                        43.47597569635097, 
+                        44.03767731502515, 
                         1554.9629127708342
                     ]
                 }
@@ -149,7 +149,7 @@
                     "__jsonqualname__": "__builtin__.tuple", 
                     "items": [
                         400.86885654412407, 
-                        43.47597569635097
+                        44.03767731502515
                     ]
                 }
             }
@@ -162,7 +162,7 @@
                     "__jsonqualname__": "__builtin__.tuple", 
                     "items": [
                         624.0489108869577, 
-                        43.47597569635097
+                        44.03767731502515
                     ]
                 }
             }
@@ -178,13 +178,6 @@
                         44.03767731502515
                     ]
                 }
-            }
-        }
-    }, 
-    "transition1": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": {}
             }
         }
     }, 
@@ -268,7 +261,7 @@
     "transition15": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": {}
+                "waypoints": []
             }
         }
     }, 
@@ -293,10 +286,17 @@
             }
         }
     }, 
-    "transition2": {
+    "transition19": {
         "gui": {
             "editor_gaphas": {
                 "waypoints": {}
+            }
+        }
+    }, 
+    "transition2": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": []
             }
         }
     }, 
@@ -359,7 +359,7 @@
     "transition3": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": {}
+                "waypoints": []
             }
         }
     }, 
@@ -485,28 +485,28 @@
     "transition46": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": {}
+                "waypoints": []
             }
         }
     }, 
     "transition47": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": {}
+                "waypoints": []
             }
         }
     }, 
     "transition48": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": {}
+                "waypoints": []
             }
         }
     }, 
     "transition49": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": {}
+                "waypoints": []
             }
         }
     }, 
@@ -590,7 +590,7 @@
     "transition8": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": {}
+                "waypoints": []
             }
         }
     }, 

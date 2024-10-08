@@ -1,4 +1,4 @@
-one_camera_[0]:
+one_camera_[0]_400_300_230:
 - id: '{5167e216-0bee-45c0-bcde-4330f578a7b3}'
   model:
     name: XYZCamera
@@ -11,7 +11,7 @@ one_camera_[0]:
     name: SBMEstimator
     params:
       detection_targets:
-      - '400_300_230_1'
+      - '400_300_230'
   parent_id: '{00000000-0000-0000-0000-000000000000}'
 - id: '{87e22c96-a7f9-4daa-92ac-6639e791a3ac}'
   model:

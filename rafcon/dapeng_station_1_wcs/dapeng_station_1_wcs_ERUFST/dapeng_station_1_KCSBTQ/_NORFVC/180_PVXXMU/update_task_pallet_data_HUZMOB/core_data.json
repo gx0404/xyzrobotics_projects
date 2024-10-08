@@ -77,6 +77,15 @@
             }, 
             "default_value": null, 
             "name": "pallet_tote_data_8"
+        }, 
+        "8": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 8, 
+            "data_type": {
+                "__type__": "__builtin__.dict"
+            }, 
+            "default_value": null, 
+            "name": "path"
         }
     }, 
     "name": "update_task_pallet_data", 
