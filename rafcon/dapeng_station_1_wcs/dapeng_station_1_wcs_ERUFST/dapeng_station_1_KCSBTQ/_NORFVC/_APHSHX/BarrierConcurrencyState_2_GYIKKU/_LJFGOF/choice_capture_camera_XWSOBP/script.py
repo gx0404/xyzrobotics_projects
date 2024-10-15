@@ -33,7 +33,8 @@ def change_recipe(self,camera_quadrant_list,sku_type,vision_bridge):
     recipe_path = recipe_path_dict[camera_num]
     
     #判断是否需要新增配方
-    recipes_list_res = vision_bridge.run(0,"get_recipes_list")
+    ftr = vision_bridge.async_run(0,"get_recipes_list")
+    recipes_list_res = ftr.get()
     recipes_list = recipes_list_res.info
     recipe_name = recipe_name_dict[camera_num]+"_"+f"{camera_quadrant_list}"+"_"+sku_type_dict[sku_type][0]
 
@@ -194,14 +195,17 @@ def change_recipe(self,camera_quadrant_list,sku_type,vision_bridge):
             yaml.safe_dump(load_recipe, f,allow_unicode=True)                                                                 
             self.logger.info(f"更改配方文件成功,配方文件为{recipe_path}")  
             
-        load_recipe_res = vision_bridge.run(0,"set_recipe_from_file",info=json.dumps({"recipe_name":recipe_name,"file_path":recipe_path}))    
+        ftr = vision_bridge.async_run(0,"set_recipe_from_file",info=json.dumps({"recipe_name":recipe_name,"file_path":recipe_path}))    
+        load_recipe_res = ftr.get()
         self.logger.info(f"倒入更改后的配方文件结果为{load_recipe_res.error_msg}")
-        change_recipe_res = vision_bridge.run(0,"set_recipe",recipe_name)
+        ftr = vision_bridge.async_run(0,"set_recipe",recipe_name)
+        change_recipe_res = ftr.get()
         self.logger.info(f"切换配方结果为{change_recipe_res.error_msg}")
         return True
     else:
         self.logger.info(f"配方{recipe_name}已存在,无需倒入配方")
-        change_recipe_res = vision_bridge.run(0,"set_recipe",recipe_name)
+        ftr = vision_bridge.async_run(0,"set_recipe",recipe_name)
+        change_recipe_res = ftr.get()
         self.logger.info(f"切换配方结果为{change_recipe_res.error_msg}")        
         return False
 

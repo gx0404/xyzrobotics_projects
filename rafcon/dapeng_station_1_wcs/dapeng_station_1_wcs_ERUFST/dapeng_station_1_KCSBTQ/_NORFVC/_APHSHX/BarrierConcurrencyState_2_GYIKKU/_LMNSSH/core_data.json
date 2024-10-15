@@ -375,6 +375,14 @@
     "scoped_variables": {}, 
     "state_id": "LMNSSH", 
     "transitions": {
+        "1": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 1, 
+            "from_state": "QXTRGF", 
+            "to_outcome": null, 
+            "to_state": "ZLZLCH", 
+            "transition_id": 1
+        }, 
         "4": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 1, 
@@ -662,14 +670,6 @@
             "to_outcome": null, 
             "to_state": "ZLZLCH", 
             "transition_id": 62
-        }, 
-        "66": {
-            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
-            "from_outcome": 1, 
-            "from_state": "QXTRGF", 
-            "to_outcome": null, 
-            "to_state": "QXTRGF", 
-            "transition_id": 66
         }, 
         "79": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 

@@ -237,7 +237,7 @@ def execute(self, inputs, outputs, gvm):
     else:
         capture_res = inputs["capture_res"]
             
-    ftr = vision_bridge.run(int(vision_id), "merge_cloud_3")    
+    ftr = vision_bridge.async_run(int(vision_id), "merge_cloud_3")    
     ftr.get()
     
     ftr = vision_bridge.async_run(int(vision_id),vision_service)

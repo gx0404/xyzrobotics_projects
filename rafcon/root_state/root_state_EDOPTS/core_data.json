@@ -16,6 +16,14 @@
             "from_state": "HXDVWE", 
             "to_key": 0, 
             "to_state": "UINEWE"
+        }, 
+        "3": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 3, 
+            "from_key": 1, 
+            "from_state": "OTCEXT", 
+            "to_key": 0, 
+            "to_state": "SEBXWT"
         }
     }, 
     "description": null, 
@@ -55,6 +63,14 @@
     "scoped_variables": {}, 
     "state_id": "EDOPTS", 
     "transitions": {
+        "8": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": null, 
+            "from_state": null, 
+            "to_outcome": null, 
+            "to_state": "OTCEXT", 
+            "transition_id": 8
+        }, 
         "9": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
@@ -63,13 +79,13 @@
             "to_state": "ZSAWFR", 
             "transition_id": 9
         }, 
-        "11": {
+        "10": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
-            "from_outcome": null, 
-            "from_state": null, 
+            "from_outcome": 0, 
+            "from_state": "OTCEXT", 
             "to_outcome": null, 
-            "to_state": "GBOCFN", 
-            "transition_id": 11
+            "to_state": "SEBXWT", 
+            "transition_id": 10
         }, 
         "12": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 

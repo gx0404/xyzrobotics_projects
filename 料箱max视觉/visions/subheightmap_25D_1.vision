@@ -264,7 +264,7 @@ nodes:
       params:
         mode: 3D
         top_k: 60
-        min_score: 60
+        min_score: 80
         max_matching_dist: 0.005
         max_fitness_dist: 0.005
         max_iteration_num: 200
@@ -272,8 +272,8 @@ nodes:
         cloud2d_plane: XY
         knn: 5
     position:
-      x: 2110.5501171274404
-      y: -826.81309510983692
+      x: 2113.0384371274399
+      y: -826.81309510983704
   - id: "{1bda13c7-14b1-459a-92b5-c71f13f9781f}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -378,7 +378,7 @@ nodes:
       params:
         mode: 3D
         top_k: 60
-        min_score: 50
+        min_score: 80
         max_matching_dist: 0.005
         max_fitness_dist: 0.005
         max_iteration_num: 200
@@ -387,7 +387,7 @@ nodes:
         knn: 5
     position:
       x: 1454.68661209525
-      y: -2126.7149275694437
+      y: -2123.7289435694443
   - id: "{2ddc8368-0b79-49a2-bd77-7fdd1c2d3a37}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -434,7 +434,7 @@ nodes:
       params:
         calib_file: calibration/camera/eye_on_hand/camera_extrinsic.yml
     position:
-      x: -5133.3381365759969
+      x: -5129.8821365759977
       y: -24.681369599999925
   - id: "{3537d5bb-99bc-42a1-88e8-2d3010d52b87}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
@@ -664,7 +664,7 @@ nodes:
           - pallet
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 65
+        min_detection_score: 85
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 1
@@ -980,8 +980,8 @@ nodes:
         bottom_margin: 0.25
         top_margin: 0
     position:
-      x: -1299.6503992672242
-      y: -983.41412159815582
+      x: -1339.3943992672243
+      y: -1007.6061215981561
   - id: "{8956e080-0288-493c-a6f8-cdf9b7b2e39a}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1109,7 +1109,7 @@ nodes:
       params:
         mode: 3D
         top_k: 60
-        min_score: 68
+        min_score: 80
         max_matching_dist: 0.005
         max_fitness_dist: 0.005
         max_iteration_num: 200
@@ -1254,8 +1254,8 @@ nodes:
         transform_frame: Workspace
         transform_frame_id: ""
     position:
-      x: -1580.3966289561151
-      y: -998.70668153889551
+      x: -1661.6126289561153
+      y: -1014.2586815388954
   - id: "{bfa2dbcc-db09-4cf9-8ca3-c94b5bbf8b2a}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1294,8 +1294,8 @@ nodes:
           contrast: 30
           min_contrast: -1
     position:
-      x: -328.93437457141783
-      y: -2096.587311569443
+      x: -333.91101457141781
+      y: -2101.5639515694429
   - id: "{c1901a6b-56e3-4332-bcf5-2771c776af4c}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1369,7 +1369,7 @@ nodes:
       params:
         mode: 3D
         top_k: 60
-        min_score: 68
+        min_score: 80
         max_matching_dist: 0.005
         max_fitness_dist: 0.005
         max_iteration_num: 200
@@ -1377,8 +1377,8 @@ nodes:
         cloud2d_plane: XY
         knn: 5
     position:
-      x: 1754.3998861071016
-      y: 2516.0252337688562
+      x: 1754.3998861071018
+      y: 2513.0392497688563
   - id: "{c956010f-9879-43a9-95ab-b273765098db}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:

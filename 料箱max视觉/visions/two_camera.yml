@@ -1,29 +1,29 @@
-two_camera_[2, 3]_400_300_230:
+two_camera_[0, 1]_400_300_230:
 - id: '{4d3282e1-76eb-4c78-87ee-88356b2ca998}'
   model:
     name: XYZCamera
     params:
-      cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043090015.json
-      id: L340XP043090015
+      cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04306C005.json
+      id: L340XP04306C005
   parent_id: '{00000000-0000-0000-0000-000000000000}'
 - id: '{431c1aae-c6ff-4fc4-b5a2-7cc261eaa2c4}'
   model:
     name: XYZCamera
     params:
-      cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043070014.json
-      id: L340XP043070014
+      cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04404R025.json
+      id: L340XP04404R025
   parent_id: '{00000000-0000-0000-0000-000000000000}'
 - id: '{4dbd820a-a38c-4015-8144-a17955f74613}'
   model:
     name: LoadCameraCalibInfo
     params:
-      calib_file: calibration/camera/L340XP043090015/camera_extrinsic.yml
+      calib_file: calibration/camera/L340XP04306C005/camera_extrinsic.yml
   parent_id: '{00000000-0000-0000-0000-000000000000}'
 - id: '{5d8614cc-419c-4ecc-8406-0ecff71ff071}'
   model:
     name: LoadCameraCalibInfo
     params:
-      calib_file: calibration/camera/L340XP043070014/camera_extrinsic.yml
+      calib_file: calibration/camera/L340XP04404R025/camera_extrinsic.yml
   parent_id: '{00000000-0000-0000-0000-000000000000}'
 - id: '{1b5d45ca-94c5-4513-901e-f28396c3c014}'
   model:

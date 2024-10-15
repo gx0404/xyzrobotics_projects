@@ -29,6 +29,104 @@ from sensor_msgs.msg import PointCloud2, PointField
 from std_msgs.msg import Header
 from rospy import Time
 
+
+"""obb 碰撞检测"""
+class OBB:
+    def __init__(self, center, half_size, angle):
+        self.center = np.array(center)
+        self.half_size = np.array(half_size)
+        self.angle = angle
+        self.axes = self.compute_axes()
+
+    def compute_axes(self):
+        cos_a = np.cos(self.angle)
+        sin_a = np.sin(self.angle)
+        u1 = np.array([cos_a, sin_a])      # 主轴（长边方向）
+        u2 = np.array([-sin_a, cos_a])     # 副轴（短边方向）
+        return u1, u2
+
+    def get_corners(self):
+        u1, u2 = self.axes
+        corner1 = self.center + self.half_size[0] * u1 + self.half_size[1] * u2
+        corner2 = self.center + self.half_size[0] * u1 - self.half_size[1] * u2
+        corner3 = self.center - self.half_size[0] * u1 - self.half_size[1] * u2
+        corner4 = self.center - self.half_size[0] * u1 + self.half_size[1] * u2
+        return [corner1, corner2, corner3, corner4]
+
+def project_obb(obb, axis):
+    corners = obb.get_corners()
+    projections = [np.dot(corner, axis) for corner in corners]
+    return min(projections), max(projections)
+
+def obb_overlap(obb1, obb2):
+    axes = [obb1.axes[0], obb1.axes[1], obb2.axes[0], obb2.axes[1]]
+    
+    for axis in axes:
+        min1, max1 = project_obb(obb1, axis)
+        min2, max2 = project_obb(obb2, axis)
+        
+        if max1 < min2 or max2 < min1:
+            return False
+    
+    return True
+
+#通过obb计算是否碰撞
+def is_collision(check_item,other_items):
+    check_item_pose = pose_to_list(check_item.origin)
+    l_1,w_1,h_1 = check_item.primitives[0].dimensions
+    check_item_angle = tfm.euler_from_quaternion(check_item_pose[3:7])[2]
+    #缩小物料尺寸,避免碰撞检测误差
+    check_item_obb = OBB(center=(check_item_pose[0], check_item_pose[1]), half_size=(l_1/2-0.007,w_1/2-0.007), angle=check_item_angle)
+    check_collision = False
+    for item in other_items:
+        check_collision = True
+        item_pose = pose_to_list(item.origin)
+        l_2,w_2,h_2 = item.primitives[0].dimensions
+        item_angle = tfm.euler_from_quaternion(item_pose[3:7])[2]
+        #缩小物料尺寸,避免碰撞检测误差
+        item_obb = OBB(center=(item_pose[0], item_pose[1]), half_size=(l_2/2-0.007,w_2/2-0.007), angle=item_angle)
+        
+        if not obb_overlap(check_item_obb,item_obb):
+            check_collision = False
+        if check_collision:
+            break
+    return check_collision   
+
+#过滤得到底层箱子
+def filter_bottom_items(items,row_flag=True):
+    #两种模式,一种只取最低层，另一种则是每列箱子的最低层
+    if row_flag:
+        combined_data = {}
+        for item in items:
+            #建立x,y坐标的键，同一列箱子xy坐标一致
+            key = (round(item.origin.x,2), round(item.origin.y,2))
+            if key not in combined_data.keys():
+                #判断原先字典是否有xy近似的key的标志flag
+                check_key_flag = False
+                for check_key in combined_data.keys():
+                    #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
+                    if abs(item.origin.x-check_key[0])<0.015 and abs(item.origin.y-check_key[1])<0.015:    
+                        check_key_flag = True
+                        break
+                #如果不存在标志,则说明是个新列         
+                if not check_key_flag:                    
+                    combined_data[key] = item
+                #如果存在,则说明是老列,则需要判断是否保留z最小的实例   
+                else:
+                    if item.origin.z < combined_data[check_key].origin.z:
+                        combined_data[check_key] = item                  
+            else:   
+                # 只保留Z最小的类实例
+                if item.origin.z < combined_data[key].origin.z:
+                    combined_data[key] = item
+
+        new_items = list(combined_data.values())
+    #只考虑最低列,不考虑每列层数不同      
+    else:    
+        min_z = min(i.origin.z for i in items)
+        new_items = list(filter(lambda x:abs(x.origin.z-min_z)<0.1,items))    
+    return new_items
+
 # modify group x axis
 # barcode direction: 4: -x; 2: -y
 def modify_XY_axis(vision_results, workspace, barcode_direction):
@@ -499,7 +597,20 @@ def execute(self, inputs, outputs, gvm):
     next_pick_item_id = inputs["next_pick_item_id"]
        
     if next_pick_item_id in [i.additional_info.values[-3] for i in update_items]:
-        self.logger.info(f"顶置相机视觉结果已识别到目标抓取箱{next_pick_item_id}")              
+        self.logger.info(f"顶置相机视觉结果已识别到目标抓取箱{next_pick_item_id}")   
+        planning_env_msg = get_planning_environment()
+        planning_env = PlanningEnvironmentRos.from_ros_msg(planning_env_msg)
+        container_items = planning_env.get_container_items(vision_id)
+        bottom_items = filter_bottom_items(container_items)
+        for bottom_item in bottom_items:
+            check_items = copy.deepcopy(bottom_items)
+            check_items.remove(bottom_item)
+            bottom_item_id = bottom_item.additional_info.values[-3]
+            check_items_id = [i.additional_info.values[-3] for i in check_items]        
+            self.logger.info(f"检测箱子{bottom_item_id} 与 {check_items_id} 是否存在碰撞")
+            if is_collision(bottom_item, check_items):
+                self.logger.info(f"视觉检测到碰撞")
+                raise XYZExceptionBase("10022", "视觉检测到碰撞")            
         return "success"
     else:
         self.logger.info(f"顶置相机视觉结果未识别到目标抓取箱{next_pick_item_id}")  

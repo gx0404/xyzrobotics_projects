@@ -370,7 +370,7 @@
             "name": "col_17",
             "origin": {
                 "x": 1.07,
-                "y": 2.75,
+                "y": 2.76,
                 "z": 0.73,
                 "qx": 0.0,
                 "qy": 0.0,
@@ -436,6 +436,58 @@
                         2.0,
                         0.17,
                         0.0
+                    ],
+                    "absolute_mesh_paths": "",
+                    "meshes": {
+                        "triangles": [],
+                        "vertices": []
+                    },
+                    "use_convex": false,
+                    "relative_pose": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    }
+                }
+            ],
+            "tfs": [],
+            "color": {
+                "r": 0.10000000149011612,
+                "g": 0.5,
+                "b": 0.20000000298023224,
+                "a": 0.20000000298023224
+            },
+            "additional_info": {
+                "type": "",
+                "keys": [],
+                "values": [],
+                "descriptions": []
+            },
+            "ignore_collision": false,
+            "timestamp": ""
+        },
+        {
+            "name": "col_19",
+            "origin": {
+                "x": 1.2,
+                "y": 2.78,
+                "z": 0.73,
+                "qx": 0.0,
+                "qy": 0.0,
+                "qz": 0.0871557300688497,
+                "qw": 0.9961946992009975
+            },
+            "primitives": [
+                {
+                    "type": 1,
+                    "dimensions": [
+                        0.35,
+                        0.11,
+                        0.33
                     ],
                     "absolute_mesh_paths": "",
                     "meshes": {

@@ -338,7 +338,13 @@ def execute(self, inputs, outputs, gvm):
             check_primitive_600_400 = False    
     
     if check_primitive_400_300 and check_primitive_600_400:
-        self.logger.info(f"大欧中欧完整性校验都失败")   
+        self.logger.info(f"大欧中欧完整性校验都失败")  
+        ftr = vision_bridge.async_run(int(vision_id), "get_safe_height_4")
+        height_results_raw = ftr.get()
+        height = height_results_raw.info
+        self.logger.info(f"height is {height}")
+        if float(height)<0.2:
+            return "empty"        
         raise "大欧中欧完整性校验都失败" 
     elif not check_primitive_400_300 and not check_primitive_600_400:
         self.logger.info(f"大欧中欧完整性校验都成功")  
@@ -474,7 +480,8 @@ def execute(self, inputs, outputs, gvm):
                         error_msg="shrunk_size[{}] should be between 0m and 0.05m".format(shrunk_size))
 
     #使用get height去判断是否为空
-    height_res = vision_bridge.run(int(vision_id), "get_safe_height_4")
+    ftr = vision_bridge.async_run(int(vision_id), "get_safe_height_4")
+    height_res = ftr.get()
     height = float(height_res.info)
     if str(vision_id) in ["2","3"]:
         height-=0.025         

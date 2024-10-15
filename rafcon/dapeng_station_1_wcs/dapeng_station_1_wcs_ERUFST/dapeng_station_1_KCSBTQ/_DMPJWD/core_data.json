@@ -441,6 +441,14 @@
             "to_state": "WYJGHH", 
             "transition_id": 47
         }, 
+        "48": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 1, 
+            "from_state": "GBOCFN", 
+            "to_outcome": null, 
+            "to_state": "LVPPJL", 
+            "transition_id": 48
+        }, 
         "57": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 

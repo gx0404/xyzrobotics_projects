@@ -272,6 +272,14 @@ def execute(self, inputs, outputs, gvm):
     if not check_res.error == 0:        
         self.logger.error(f"完整性校验失败")
         raise "完整性校验失败"
+    
+    ftr = vision_bridge.async_run(int(vision_id), "get_safe_height")
+    height_results_raw = ftr.get()
+    height = height_results_raw.info
+    self.logger.info(f"height is {height}")
+    if float(height)>0.2:
+        self.logger.info(f"托盘不为空")
+        raise "托盘不为空"  
         
     def construct_vision_result(vision_result_raw, ts):
         def convert_cloud(cloud_proto):
@@ -389,7 +397,8 @@ def execute(self, inputs, outputs, gvm):
                         error_msg="shrunk_size[{}] should be between 0m and 0.05m".format(shrunk_size))
 
     #使用get height去判断是否为空
-    height_res = vision_bridge.run(int(vision_id), "get_safe_height")
+    ftr = vision_bridge.async_run(int(vision_id), "get_safe_height")
+    height_res = ftr.get()
     height = float(height_res.info)
     self.logger.info(f"height is {height}")
     if height<0.05:

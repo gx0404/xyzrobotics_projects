@@ -1,10 +1,5 @@
 {
     "data_flow1": {}, 
-    "data_flow2": {}, 
-    "data_flow26": {}, 
-    "data_flow27": {}, 
-    "data_flow28": {}, 
-    "data_flow29": {}, 
     "gui": {
         "editor_gaphas": {
             "name": {
@@ -59,7 +54,7 @@
                     "__jsonqualname__": "__builtin__.tuple", 
                     "items": [
                         3.1796575344150244, 
-                        125.5612647858746
+                        121.10368483034345
                     ]
                 }
             }
@@ -117,94 +112,31 @@
             }
         }
     }, 
-    "transition10": {
+    "transition1": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
-    "transition11": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
-    "transition12": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
-    "transition13": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
-    "transition14": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
+                "waypoints": {}
             }
         }
     }, 
     "transition2": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
-    "transition23": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
+                "waypoints": {}
             }
         }
     }, 
     "transition3": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": []
+                "waypoints": {}
             }
         }
     }, 
-    "transition6": {
+    "transition4": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
-    "transition60": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
-    "transition61": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
-    "transition62": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
-    "transition9": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
+                "waypoints": {}
             }
         }
     }

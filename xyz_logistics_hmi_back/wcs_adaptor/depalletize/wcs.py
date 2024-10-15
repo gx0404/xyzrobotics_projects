@@ -110,18 +110,62 @@ def robot_status():
     from xyz_motion import RobotDriver,create_kinesolver
     from py_xyz_robot import robot_config
     import numpy as np
-    time.sleep(0.05)
+    # time.sleep(0.05)
     try:
-        robot_name = robot_config.get_robot_name(0)
-        kinematic_solver = create_kinesolver(robot_name)
-        r = RobotDriver(0)
-        joints = kinematic_solver.convert_four_dof_to_six(list(r.get_joints()))
-        joints.pop(2)
-        joints[3]+=1.5707963267948966
-        joints = np.rad2deg(joints).tolist()
-        return make_json_response(error=0,robot_joints = joints,status="running")    
-    except:
-        return make_json_response(error=0,robot_joints = [],status="stop")     
+        # robot_name = robot_config.get_robot_name(0)
+        # kinematic_solver = create_kinesolver(robot_name)
+        # r = RobotDriver(0)
+        # joints = kinematic_solver.convert_four_dof_to_six(list(r.get_joints()))     
+        # joints.pop(2)
+        # joints[3]+=1.5707963267948966
+        # joints = np.rad2deg(joints).tolist()
+        
+        # from xyz_io_client.io_client import get_digit_input
+        # joints = []
+        # abs_aixs_list = [get_digit_input("3",i) for i in range(6,12)] 
+        # negative_aixs_list = [get_digit_input("3",i) for i in range(12,18)] 
+        # do_value_list = [get_digit_input("3",i) for i in range(109,141)]  
+        # for index, value in enumerate(negative_aixs_list):
+        #     if value == 1:
+        #         joints.append(-abs_aixs_list[index]/100)
+        #     else:
+        #         joints.append(abs_aixs_list[index]/100)
+        
+        # do_value_list = [get_digit_input("3",i) for i in range(109,141)]   
+        # do_value_dict = {}       
+        # for index,value in enumerate(do_value_list):
+        #     key = "DO"+str(index)
+        #     do_value_dict[key] = do_value_list[bool(value)]
+
+        from plc import plc_snap7
+        plc = plc_snap7()
+        plc.connect("192.168.36.5")
+        
+        joints = [i/100 for i in plc.get_ints("db",0,6,3)]
+        do_value_dict = {}
+        do_value_list = plc.get_ints("db",218,32,3)
+        for index,value in enumerate(do_value_list):
+            key = "DO"+str(index+1)
+            do_value_dict[key] = bool(do_value_list[index])
+            
+        di_value_dict = {}
+        di_value_list = plc.get_ints("db",282,32,3)
+        for index,value in enumerate(di_value_list):
+            key = "DI"+str(index+1)
+            di_value_dict[key] = bool(di_value_list[index])   
+                 
+        robot_status = bool(plc.get_ints("db",346,1,3)[0])
+        system_status =  current_app.status                            
+        return make_json_response(error=0,error_msg="",robot_joints = joints,
+                                  do_value_dict = do_value_dict,di_value_dict = di_value_dict,                                  
+                                  robot_status="running"if robot_status else "stop",
+                                  system_status="running" if system_status=="ready" else "stop")    
+    except Exception as e:
+        wcs_log.error(f"robot_status error,error is :{e}")
+        #import ipdb;ipdb.set_trace()
+        return make_json_response(error=1,error_msg=str(e),rrobot_joints = [],
+                                  do_value_dict = {},di_value_dict={},
+                                  robot_status="stop", system_status="stop")     
 
 
 

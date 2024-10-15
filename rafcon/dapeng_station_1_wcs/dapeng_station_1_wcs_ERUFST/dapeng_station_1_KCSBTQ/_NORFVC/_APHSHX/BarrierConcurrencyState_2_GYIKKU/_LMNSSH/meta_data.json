@@ -224,6 +224,13 @@
             }
         }
     }, 
+    "transition1": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
+            }
+        }
+    }, 
     "transition10": {
         "gui": {
             "editor_gaphas": {
@@ -569,28 +576,6 @@
         "gui": {
             "editor_gaphas": {
                 "waypoints": []
-            }
-        }
-    }, 
-    "transition66": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": [
-                    {
-                        "__jsonqualname__": "__builtin__.tuple", 
-                        "items": [
-                            153.66993072312525, 
-                            98.5966475367178
-                        ]
-                    }, 
-                    {
-                        "__jsonqualname__": "__builtin__.tuple", 
-                        "items": [
-                            136.32278523653633, 
-                            98.5966475367178
-                        ]
-                    }
-                ]
             }
         }
     }, 

@@ -97,6 +97,14 @@
     "scoped_variables": {}, 
     "state_id": "TFDMDL", 
     "transitions": {
+        "5": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 1, 
+            "from_state": "CEPGTI", 
+            "to_outcome": null, 
+            "to_state": "CEPGTI", 
+            "transition_id": 5
+        }, 
         "14": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
@@ -176,14 +184,6 @@
             "to_outcome": null, 
             "to_state": "CSNOXA", 
             "transition_id": 40
-        }, 
-        "41": {
-            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
-            "from_outcome": 1, 
-            "from_state": "CEPGTI", 
-            "to_outcome": null, 
-            "to_state": "CEPGTI", 
-            "transition_id": 41
         }, 
         "42": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 

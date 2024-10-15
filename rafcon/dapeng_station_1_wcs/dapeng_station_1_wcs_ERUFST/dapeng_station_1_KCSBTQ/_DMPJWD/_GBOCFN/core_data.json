@@ -65,6 +65,11 @@
             "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
             "name": "success", 
             "outcome_id": 0
+        }, 
+        "1": {
+            "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
+            "name": "empty", 
+            "outcome_id": 1
         }
     }, 
     "output_data_ports": {
@@ -112,6 +117,14 @@
             "to_outcome": 0, 
             "to_state": "GBOCFN", 
             "transition_id": 9
+        }, 
+        "49": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 1, 
+            "from_state": "UINEWE", 
+            "to_outcome": 1, 
+            "to_state": "GBOCFN", 
+            "transition_id": 49
         }
     }
 }

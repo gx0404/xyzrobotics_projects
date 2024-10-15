@@ -190,7 +190,7 @@ nodes:
       params:
         mode: 3D
         top_k: 60
-        min_score: 70
+        min_score: 80
         max_matching_dist: 0.005
         max_fitness_dist: 0.005
         max_iteration_num: 200
@@ -351,10 +351,10 @@ nodes:
           - 6
           - 6
         detection_targets:
-          - 600_400_230
+          - 400_300_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 83
+        min_detection_score: 86
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -551,7 +551,7 @@ nodes:
       params:
         mode: 3D
         top_k: 60
-        min_score: 68
+        min_score: 85
         max_matching_dist: 0.005
         max_fitness_dist: 0.005
         max_iteration_num: 200
@@ -580,11 +580,11 @@ nodes:
         min_size: 300
         max_size: 700000
         xy_tolerance: 0.003
-        z_tolerance: 0.002
+        z_tolerance: 0.005
         neighbor: 24
     position:
-      x: 911.75897599999985
-      y: -2984.9234559999982
+      x: 913.1989759999999
+      y: -2984.9234559999986
   - id: "{2a065fcc-7597-49a9-a4dc-7d96cbedf14d}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -667,11 +667,11 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 686.78488567610202
-      y: -4557.0740023599674
+      x: 522.98154487610191
+      y: -4939.6338487599669
     embedded_widget_rect:
-      w: 2026
-      h: 1171
+      w: 1849
+      h: 1278
   - id: "{338eda28-5338-4feb-bc1f-2fe4124f2e05}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -756,8 +756,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 2152.8705584077584
-      y: 3012.4061769000959
+      x: 1732.9665584077588
+      y: 3046.9661769000963
     embedded_widget_rect:
       w: 1383
       h: 1124
@@ -919,11 +919,11 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 5586.4357549543965
-      y: 4607.5454464256127
+      x: 5607.3157549543939
+      y: 4548.9854464256114
     embedded_widget_rect:
-      w: 553
-      h: 422
+      w: 683
+      h: 582
   - id: "{46a9af61-d8b4-4b3c-8523-76cdad8de091}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1123,9 +1123,9 @@ nodes:
           - 6
         detection_targets:
           - 400_300_230
-        detection_weak_contrast: 10
-        detection_min_contrast: 10
-        min_detection_score: 85
+        detection_weak_contrast: 30
+        detection_min_contrast: 30
+        min_detection_score: 86
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -1150,7 +1150,7 @@ nodes:
           contrast: 30
           min_contrast: -1
     position:
-      x: 2193.1895803537554
+      x: 2196.1755643537558
       y: 2584.6950842809151
   - id: "{50df878c-7926-4142-b82b-6283bc19748a}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
@@ -1305,8 +1305,8 @@ nodes:
         z_tolerance: 0.005
         neighbor: 24
     position:
-      x: 244.57497600000011
-      y: 87.757363200000043
+      x: 189.83193600000004
+      y: 18.084403200000054
   - id: "{5ad62e67-bfd1-4082-ab5e-2ccee1a35a13}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1777,11 +1777,11 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 2695.4337109344224
-      y: 4696.1661513375657
+      x: 1862.9047640208419
+      y: 4956.6054266462088
     embedded_widget_rect:
-      w: 400
-      h: 311
+      w: 714
+      h: 441
   - id: "{8e86adb0-d6af-408f-a8d1-bd6aa11e513b}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -2212,7 +2212,7 @@ nodes:
           - 600_400_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 90
+        min_detection_score: 86
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -2237,8 +2237,8 @@ nodes:
           contrast: 30
           min_contrast: -1
     position:
-      x: 1909.3547908223368
-      y: -3179.5564990950975
+      x: 1909.354790822337
+      y: -3180.7564990950978
   - id: "{b2f5c344-ccc0-4cc3-866c-69d7da9f4ff0}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -2389,7 +2389,7 @@ nodes:
       params:
         mode: 3D
         top_k: 60
-        min_score: 70
+        min_score: 85
         max_matching_dist: 0.005
         max_fitness_dist: 0.005
         max_iteration_num: 200
@@ -2569,8 +2569,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 3978.3340756834637
-      y: 2816.9715405633183
+      x: 4099.0540756834635
+      y: 2847.211540563319
     embedded_widget_rect:
       w: 556
       h: 396
@@ -2677,8 +2677,8 @@ nodes:
         viz_color: green
         thickness: 1
     position:
-      x: 3395.7734399999968
-      y: 3002.2755839999986
+      x: 3736.1894399999969
+      y: 2703.3315839999987
   - id: "{cd0d5609-5c61-4189-a983-a7f4e4ccb809}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -2828,11 +2828,11 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 441.45028989827119
-      y: -2657.6585234804925
+      x: 800.25028989827115
+      y: -2730.8585234804918
     embedded_widget_rect:
-      w: 200
-      h: 200
+      w: 677
+      h: 270
   - id: "{e242d46f-44cb-4d89-94eb-601a0db5ef6b}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -2849,7 +2849,7 @@ nodes:
       params:
         mode: 3D
         top_k: 60
-        min_score: 68
+        min_score: 85
         max_matching_dist: 0.005
         max_fitness_dist: 0.005
         max_iteration_num: 200
@@ -2940,7 +2940,7 @@ nodes:
       params:
         mode: 3D
         top_k: 60
-        min_score: 68
+        min_score: 85
         max_matching_dist: 0.005
         max_fitness_dist: 0.005
         max_iteration_num: 200
@@ -3002,7 +3002,7 @@ nodes:
           - pallet
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 65
+        min_detection_score: 85
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 1
@@ -3229,8 +3229,8 @@ nodes:
         cloud_extract_radius: 0.05
         output_cloud_type: Organized
     position:
-      x: 2873.3949578623342
-      y: -2841.2131177617634
+      x: 2851.0115978623339
+      y: -2853.3897577617645
 connections:
   - id: "{009d3b67-8906-4c76-b0c6-c1956a013ab2}"
     in_id: "{27e42d62-5749-4fc3-8aa9-dada075d2d4a}"
@@ -3487,6 +3487,11 @@ connections:
     in_index: 0
     out_id: "{bb22c145-40c3-477b-baa4-505cc179f8e3}"
     out_index: 0
+  - id: "{22f2399d-81ca-4a5c-b517-d8f778c6c9bf}"
+    in_id: "{8b6bab7b-b656-4b7f-9fda-f2ebded654f8}"
+    in_index: 1
+    out_id: "{bcb917c9-2199-4d9b-bc6a-7afe7c309fe0}"
+    out_index: 0
   - id: "{23a113a3-d20e-4fce-96f2-f8310a7ea08a}"
     in_id: "{abac4729-371a-438d-a16d-e900716997a0}"
     in_index: 0
@@ -3632,6 +3637,11 @@ connections:
     in_index: 1
     out_id: "{f485c919-47da-4ea9-8dad-43166676d04d}"
     out_index: 1
+  - id: "{3d19905c-275d-423e-a990-927be793910d}"
+    in_id: "{b0926b02-0679-4451-9a21-2a813f5acaee}"
+    in_index: 0
+    out_id: "{384c954d-93b1-48ab-a00d-211e59c44766}"
+    out_index: 3
   - id: "{3d4cb365-0a6a-459e-81c3-29b1aeaa98fe}"
     in_id: "{5d8614cc-419c-4ecc-8406-0ecff71ff071}"
     in_index: 2
@@ -3757,11 +3767,11 @@ connections:
     in_index: 0
     out_id: "{69463ff7-33e4-45f8-9e24-27a593a8e8c8}"
     out_index: 0
-  - id: "{4abae7a1-fbf3-4929-b784-d428e49fd81c}"
-    in_id: "{b0926b02-0679-4451-9a21-2a813f5acaee}"
-    in_index: 0
-    out_id: "{384c954d-93b1-48ab-a00d-211e59c44766}"
-    out_index: 3
+  - id: "{4b2833b5-0a20-4c19-8781-2c8c29a49269}"
+    in_id: "{cca023ad-ccfc-491c-8451-b71b03fa34e0}"
+    in_index: 1
+    out_id: "{05378c69-8e8b-46ae-ac55-a3d509883578}"
+    out_index: 0
   - id: "{4bba51d7-6dc4-4ad1-b491-32878d03be18}"
     in_id: "{21c4590e-5242-4a41-a56f-da025ab3a708}"
     in_index: 0
@@ -3792,6 +3802,11 @@ connections:
     in_index: 0
     out_id: "{c229c8b8-8221-4711-8248-e168573b44cd}"
     out_index: 2
+  - id: "{4e6a48c1-180b-4a7c-92c1-baf5d475e3e7}"
+    in_id: "{20e652df-c1b2-46b0-8c12-4b8be419c76e}"
+    in_index: 1
+    out_id: "{d2634137-c996-4678-8a20-d6a72a9a452c}"
+    out_index: 0
   - id: "{4ef1cd58-5be6-444f-a3d9-2437da770c68}"
     in_id: "{0e22d4a0-e9db-4529-8b78-6c1b2ff853cd}"
     in_index: 0
@@ -3807,11 +3822,6 @@ connections:
     in_index: 0
     out_id: "{427b4f54-69b4-4ee7-85e9-0a2fc83f8890}"
     out_index: 2
-  - id: "{510a0319-9351-4467-8c86-aee0f5fe351c}"
-    in_id: "{8e107a48-abf3-4c62-bb48-8fc6b75bd20d}"
-    in_index: 0
-    out_id: "{bdd4fd1b-0891-47e3-8d24-5406dc91c94b}"
-    out_index: 3
   - id: "{51132405-e742-4e36-ab5f-bb589384cd0a}"
     in_id: "{5ab17f18-57f1-403f-bc43-b52665a250a7}"
     in_index: 0
@@ -3981,11 +3991,6 @@ connections:
     in_id: "{bcb917c9-2199-4d9b-bc6a-7afe7c309fe0}"
     in_index: 0
     out_id: "{fed43642-6151-4e82-9bbc-84b6f1afcbe4}"
-    out_index: 0
-  - id: "{647d291a-c263-4e86-9ab8-fe8947bee054}"
-    in_id: "{cca023ad-ccfc-491c-8451-b71b03fa34e0}"
-    in_index: 1
-    out_id: "{05378c69-8e8b-46ae-ac55-a3d509883578}"
     out_index: 0
   - id: "{67c0418c-601d-4b38-bd82-27519e7a7436}"
     in_id: "{4822f78e-f758-40d2-9902-e443592024b9}"
@@ -4162,11 +4167,6 @@ connections:
     in_index: 0
     out_id: "{1b5d45ca-94c5-4513-901e-f28396c3c014}"
     out_index: 0
-  - id: "{832f9f56-563f-402d-9919-ef613f0165c1}"
-    in_id: "{8b6bab7b-b656-4b7f-9fda-f2ebded654f8}"
-    in_index: 1
-    out_id: "{e5caaac1-5f97-47ce-9e3c-c716d299bbc9}"
-    out_index: 0
   - id: "{83651eff-3876-45c5-b93b-2dd400e75039}"
     in_id: "{4a8b0392-24aa-484a-90a8-2e6b9aa5f8a4}"
     in_index: 1
@@ -4317,6 +4317,11 @@ connections:
     in_index: 1
     out_id: "{5167e216-0bee-45c0-bcde-4330f578a7b3}"
     out_index: 1
+  - id: "{9afa9041-83a5-4ed7-bb03-03ee1e0f528a}"
+    in_id: "{8e107a48-abf3-4c62-bb48-8fc6b75bd20d}"
+    in_index: 0
+    out_id: "{56a0c94e-fa08-4e6a-9c0f-e3a2662e2f3e}"
+    out_index: 3
   - id: "{9c84ed80-e6b0-44d7-a4b8-5059a58e6d07}"
     in_id: "{9e961193-ba0d-4e13-b0ad-407c01ad9549}"
     in_index: 0
@@ -4582,11 +4587,6 @@ connections:
     in_index: 0
     out_id: "{36cc3fd7-d8a0-436b-b5e0-ccdc77c625a4}"
     out_index: 2
-  - id: "{c75099da-ff4d-412b-b786-855d27d7924e}"
-    in_id: "{20e652df-c1b2-46b0-8c12-4b8be419c76e}"
-    in_index: 1
-    out_id: "{d2634137-c996-4678-8a20-d6a72a9a452c}"
-    out_index: 0
   - id: "{c77308f3-23b4-4bcb-b8fe-f740f06dd960}"
     in_id: "{31b38155-3d06-4a02-9843-011985edadf4}"
     in_index: 0
@@ -5134,71 +5134,6 @@ service:
       leaf_nodes: ["{46a9af61-d8b4-4b3c-8523-76cdad8de091}"]
       parallel: false
 recipes:
-  - three_camera_[1, 2, 3]_600_400_230:
-      - id: "{bb22c145-40c3-477b-baa4-505cc179f8e3}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04404R025.json
-            id: L340XP04404R025
-      - id: "{626dee08-21f7-4752-abe8-858e842c9403}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043090015.json
-            id: L340XP043090015
-      - id: "{04da14bd-afef-46fa-bf6c-9b61ac715857}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043070014.json
-            id: L340XP043070014
-      - id: "{1b8d0c00-49f8-4c64-8092-39b36b98c100}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: SBMEstimator
-          params:
-            detection_targets:
-              - 600_400_230
-      - id: "{fcec4402-4351-4ea0-8967-b2a8fc2c5265}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: CalculateTopLayerHeight
-          params:
-            layer_min_points: 4000
-      - id: "{b7ad046b-c208-496b-abf5-2f51741337a7}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP043070014/camera_extrinsic.yml
-      - id: "{562400dd-f1d1-417e-8852-b3a549371932}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP04404R025/camera_extrinsic.yml
-      - id: "{ac3ab389-7317-4c2d-9053-0b7595477352}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP043090015/camera_extrinsic.yml
-      - id: "{b0926b02-0679-4451-9a21-2a813f5acaee}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: SBMEstimator
-          params:
-            min_detection_score: 85
-      - id: "{00b13418-af61-4278-9745-15c4cc54ed6b}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            type: Virtual
   - three_camera_[0, 2, 3]_400_300_230:
       - id: "{bb22c145-40c3-477b-baa4-505cc179f8e3}"
         parent_id: "{00000000-0000-0000-0000-000000000000}"
@@ -5252,6 +5187,179 @@ recipes:
           name: LoadCameraCalibInfo
           params:
             calib_file: calibration/camera/L340XP043090015/camera_extrinsic.yml
+  - three_camera_[1, 2, 3]_600_400_230:
+      - id: "{bb22c145-40c3-477b-baa4-505cc179f8e3}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: XYZCamera
+          params:
+            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04404R025.json
+            id: L340XP04404R025
+      - id: "{626dee08-21f7-4752-abe8-858e842c9403}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: XYZCamera
+          params:
+            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043090015.json
+            id: L340XP043090015
+      - id: "{04da14bd-afef-46fa-bf6c-9b61ac715857}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: XYZCamera
+          params:
+            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043070014.json
+            id: L340XP043070014
+      - id: "{1b8d0c00-49f8-4c64-8092-39b36b98c100}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: SBMEstimator
+          params:
+            detection_targets:
+              - 600_400_230
+      - id: "{fcec4402-4351-4ea0-8967-b2a8fc2c5265}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: CalculateTopLayerHeight
+          params:
+            layer_min_points: 4000
+      - id: "{b7ad046b-c208-496b-abf5-2f51741337a7}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: LoadCameraCalibInfo
+          params:
+            calib_file: calibration/camera/L340XP043070014/camera_extrinsic.yml
+      - id: "{562400dd-f1d1-417e-8852-b3a549371932}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: LoadCameraCalibInfo
+          params:
+            calib_file: calibration/camera/L340XP04404R025/camera_extrinsic.yml
+      - id: "{ac3ab389-7317-4c2d-9053-0b7595477352}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: LoadCameraCalibInfo
+          params:
+            calib_file: calibration/camera/L340XP043090015/camera_extrinsic.yml
+  - two_camera_[0, 1]_600_400_230:
+      - id: "{4d3282e1-76eb-4c78-87ee-88356b2ca998}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: XYZCamera
+          params:
+            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04306C005.json
+            id: L340XP04306C005
+      - id: "{431c1aae-c6ff-4fc4-b5a2-7cc261eaa2c4}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: XYZCamera
+          params:
+            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04404R025.json
+            id: L340XP04404R025
+      - id: "{4dbd820a-a38c-4015-8144-a17955f74613}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: LoadCameraCalibInfo
+          params:
+            calib_file: calibration/camera/L340XP04306C005/camera_extrinsic.yml
+      - id: "{5d8614cc-419c-4ecc-8406-0ecff71ff071}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: LoadCameraCalibInfo
+          params:
+            calib_file: calibration/camera/L340XP04404R025/camera_extrinsic.yml
+      - id: "{1b5d45ca-94c5-4513-901e-f28396c3c014}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: SBMEstimator
+          params:
+            detection_targets:
+              - 600_400_230
+      - id: "{50df878c-7926-4142-b82b-6283bc19748a}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: CalculateTopLayerHeight
+          params:
+            layer_min_points: 4000
+  - two_camera_[2, 3]_400_300_230:
+      - id: "{4d3282e1-76eb-4c78-87ee-88356b2ca998}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: XYZCamera
+          params:
+            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043090015.json
+            id: L340XP043090015
+      - id: "{431c1aae-c6ff-4fc4-b5a2-7cc261eaa2c4}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: XYZCamera
+          params:
+            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043070014.json
+            id: L340XP043070014
+      - id: "{4dbd820a-a38c-4015-8144-a17955f74613}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: LoadCameraCalibInfo
+          params:
+            calib_file: calibration/camera/L340XP043090015/camera_extrinsic.yml
+      - id: "{5d8614cc-419c-4ecc-8406-0ecff71ff071}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: LoadCameraCalibInfo
+          params:
+            calib_file: calibration/camera/L340XP043070014/camera_extrinsic.yml
+      - id: "{1b5d45ca-94c5-4513-901e-f28396c3c014}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: SBMEstimator
+          params:
+            detection_targets:
+              - 400_300_230
+      - id: "{50df878c-7926-4142-b82b-6283bc19748a}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: CalculateTopLayerHeight
+          params:
+            layer_min_points: 2000
+  - two_camera_[0, 1]_400_300_230:
+      - id: "{4d3282e1-76eb-4c78-87ee-88356b2ca998}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: XYZCamera
+          params:
+            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04306C005.json
+            id: L340XP04306C005
+      - id: "{431c1aae-c6ff-4fc4-b5a2-7cc261eaa2c4}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: XYZCamera
+          params:
+            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04404R025.json
+            id: L340XP04404R025
+      - id: "{4dbd820a-a38c-4015-8144-a17955f74613}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: LoadCameraCalibInfo
+          params:
+            calib_file: calibration/camera/L340XP04306C005/camera_extrinsic.yml
+      - id: "{5d8614cc-419c-4ecc-8406-0ecff71ff071}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: LoadCameraCalibInfo
+          params:
+            calib_file: calibration/camera/L340XP04404R025/camera_extrinsic.yml
+      - id: "{1b5d45ca-94c5-4513-901e-f28396c3c014}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: SBMEstimator
+          params:
+            detection_targets:
+              - 400_300_230
+      - id: "{50df878c-7926-4142-b82b-6283bc19748a}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: CalculateTopLayerHeight
+          params:
+            layer_min_points: 2000
   - three_camera_[1, 2, 3]_400_300_230:
       - id: "{bb22c145-40c3-477b-baa4-505cc179f8e3}"
         parent_id: "{00000000-0000-0000-0000-000000000000}"
@@ -5358,418 +5466,3 @@ recipes:
           name: LoadCameraCalibInfo
           params:
             calib_file: calibration/camera/L340XP043090015/camera_extrinsic.yml
-  - two_camera_[1, 2]_600_400_230:
-      - id: "{4d3282e1-76eb-4c78-87ee-88356b2ca998}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04404R025.json
-            id: L340XP04404R025
-      - id: "{431c1aae-c6ff-4fc4-b5a2-7cc261eaa2c4}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043090015.json
-            id: L340XP043090015
-      - id: "{4dbd820a-a38c-4015-8144-a17955f74613}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP04404R025/camera_extrinsic.yml
-      - id: "{5d8614cc-419c-4ecc-8406-0ecff71ff071}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP043090015/camera_extrinsic.yml
-      - id: "{1b5d45ca-94c5-4513-901e-f28396c3c014}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: SBMEstimator
-          params:
-            detection_targets:
-              - 600_400_230
-      - id: "{50df878c-7926-4142-b82b-6283bc19748a}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: CalculateTopLayerHeight
-          params:
-            layer_min_points: 4000
-  - two_camera_[1, 2]_400_300_230:
-      - id: "{4d3282e1-76eb-4c78-87ee-88356b2ca998}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04404R025.json
-            id: L340XP04404R025
-      - id: "{431c1aae-c6ff-4fc4-b5a2-7cc261eaa2c4}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043090015.json
-            id: L340XP043090015
-      - id: "{4dbd820a-a38c-4015-8144-a17955f74613}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP04404R025/camera_extrinsic.yml
-      - id: "{5d8614cc-419c-4ecc-8406-0ecff71ff071}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP043090015/camera_extrinsic.yml
-      - id: "{1b5d45ca-94c5-4513-901e-f28396c3c014}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: SBMEstimator
-          params:
-            detection_targets:
-              - 400_300_230
-      - id: "{50df878c-7926-4142-b82b-6283bc19748a}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: CalculateTopLayerHeight
-          params:
-            layer_min_points: 2000
-  - one_camera_[3]_400_300_230:
-      - id: "{5167e216-0bee-45c0-bcde-4330f578a7b3}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043070014.json
-            id: L340XP043070014
-      - id: "{5018f7e8-b2eb-469a-aab3-81cba7277373}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: SBMEstimator
-          params:
-            detection_targets:
-              - 400_300_230
-      - id: "{87e22c96-a7f9-4daa-92ac-6639e791a3ac}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: CalculateTopLayerHeight
-          params:
-            layer_min_points: 2000
-      - id: "{78bd81ce-19ef-435b-9a99-869dc3fd09d0}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP043070014/camera_extrinsic.yml
-  - one_camera_[0]_400_300_230:
-      - id: "{5167e216-0bee-45c0-bcde-4330f578a7b3}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04306C005.json
-            id: L340XP04306C005
-      - id: "{5018f7e8-b2eb-469a-aab3-81cba7277373}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: SBMEstimator
-          params:
-            detection_targets:
-              - 400_300_230
-      - id: "{87e22c96-a7f9-4daa-92ac-6639e791a3ac}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: CalculateTopLayerHeight
-          params:
-            layer_min_points: 2000
-      - id: "{78bd81ce-19ef-435b-9a99-869dc3fd09d0}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP04306C005/camera_extrinsic.yml
-  - one_camera_[1]_400_300_230:
-      - id: "{5167e216-0bee-45c0-bcde-4330f578a7b3}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04404R025.json
-            id: L340XP04404R025
-      - id: "{5018f7e8-b2eb-469a-aab3-81cba7277373}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: SBMEstimator
-          params:
-            detection_targets:
-              - 400_300_230
-      - id: "{87e22c96-a7f9-4daa-92ac-6639e791a3ac}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: CalculateTopLayerHeight
-          params:
-            layer_min_points: 2000
-      - id: "{78bd81ce-19ef-435b-9a99-869dc3fd09d0}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP04404R025/camera_extrinsic.yml
-  - one_camera_[1]_600_400_230:
-      - id: "{5167e216-0bee-45c0-bcde-4330f578a7b3}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04404R025.json
-            id: L340XP04404R025
-      - id: "{5018f7e8-b2eb-469a-aab3-81cba7277373}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: SBMEstimator
-          params:
-            detection_targets:
-              - 600_400_230
-      - id: "{87e22c96-a7f9-4daa-92ac-6639e791a3ac}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: CalculateTopLayerHeight
-          params:
-            layer_min_points: 4000
-      - id: "{78bd81ce-19ef-435b-9a99-869dc3fd09d0}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP04404R025/camera_extrinsic.yml
-  - one_camera_[0]_600_400_230:
-      - id: "{5167e216-0bee-45c0-bcde-4330f578a7b3}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04306C005.json
-            id: L340XP04306C005
-      - id: "{5018f7e8-b2eb-469a-aab3-81cba7277373}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: SBMEstimator
-          params:
-            detection_targets:
-              - 600_400_230
-      - id: "{87e22c96-a7f9-4daa-92ac-6639e791a3ac}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: CalculateTopLayerHeight
-          params:
-            layer_min_points: 4000
-      - id: "{78bd81ce-19ef-435b-9a99-869dc3fd09d0}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP04306C005/camera_extrinsic.yml
-  - two_camera_[0, 1]_400_300_230:
-      - id: "{4d3282e1-76eb-4c78-87ee-88356b2ca998}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04306C005.json
-            id: L340XP04306C005
-      - id: "{431c1aae-c6ff-4fc4-b5a2-7cc261eaa2c4}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04404R025.json
-            id: L340XP04404R025
-      - id: "{4dbd820a-a38c-4015-8144-a17955f74613}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP04306C005/camera_extrinsic.yml
-      - id: "{5d8614cc-419c-4ecc-8406-0ecff71ff071}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP04404R025/camera_extrinsic.yml
-      - id: "{1b5d45ca-94c5-4513-901e-f28396c3c014}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: SBMEstimator
-          params:
-            detection_targets:
-              - 400_300_230
-      - id: "{50df878c-7926-4142-b82b-6283bc19748a}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: CalculateTopLayerHeight
-          params:
-            layer_min_points: 2000
-  - two_camera_[0, 3]_400_300_230:
-      - id: "{4d3282e1-76eb-4c78-87ee-88356b2ca998}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04306C005.json
-            id: L340XP04306C005
-      - id: "{431c1aae-c6ff-4fc4-b5a2-7cc261eaa2c4}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043070014.json
-            id: L340XP043070014
-      - id: "{4dbd820a-a38c-4015-8144-a17955f74613}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP04306C005/camera_extrinsic.yml
-      - id: "{5d8614cc-419c-4ecc-8406-0ecff71ff071}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP043070014/camera_extrinsic.yml
-      - id: "{1b5d45ca-94c5-4513-901e-f28396c3c014}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: SBMEstimator
-          params:
-            detection_targets:
-              - 400_300_230
-      - id: "{50df878c-7926-4142-b82b-6283bc19748a}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: CalculateTopLayerHeight
-          params:
-            layer_min_points: 2000
-  - two_camera_[2, 3]_400_300_230:
-      - id: "{4d3282e1-76eb-4c78-87ee-88356b2ca998}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043090015.json
-            id: L340XP043090015
-      - id: "{431c1aae-c6ff-4fc4-b5a2-7cc261eaa2c4}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043070014.json
-            id: L340XP043070014
-      - id: "{4dbd820a-a38c-4015-8144-a17955f74613}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP043090015/camera_extrinsic.yml
-      - id: "{5d8614cc-419c-4ecc-8406-0ecff71ff071}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP043070014/camera_extrinsic.yml
-      - id: "{1b5d45ca-94c5-4513-901e-f28396c3c014}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: SBMEstimator
-          params:
-            detection_targets:
-              - 400_300_230
-      - id: "{50df878c-7926-4142-b82b-6283bc19748a}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: CalculateTopLayerHeight
-          params:
-            layer_min_points: 2000
-  - two_camera_[0, 1]_600_400_230:
-      - id: "{4d3282e1-76eb-4c78-87ee-88356b2ca998}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04306C005.json
-            id: L340XP04306C005
-      - id: "{431c1aae-c6ff-4fc4-b5a2-7cc261eaa2c4}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04404R025.json
-            id: L340XP04404R025
-      - id: "{4dbd820a-a38c-4015-8144-a17955f74613}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP04306C005/camera_extrinsic.yml
-      - id: "{5d8614cc-419c-4ecc-8406-0ecff71ff071}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP04404R025/camera_extrinsic.yml
-      - id: "{1b5d45ca-94c5-4513-901e-f28396c3c014}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: SBMEstimator
-          params:
-            detection_targets:
-              - 600_400_230
-      - id: "{50df878c-7926-4142-b82b-6283bc19748a}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: CalculateTopLayerHeight
-          params:
-            layer_min_points: 4000
-  - two_camera_[0, 3]_600_400_230:
-      - id: "{4d3282e1-76eb-4c78-87ee-88356b2ca998}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP04306C005.json
-            id: L340XP04306C005
-      - id: "{431c1aae-c6ff-4fc4-b5a2-7cc261eaa2c4}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: XYZCamera
-          params:
-            cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043070014.json
-            id: L340XP043070014
-      - id: "{4dbd820a-a38c-4015-8144-a17955f74613}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP04306C005/camera_extrinsic.yml
-      - id: "{5d8614cc-419c-4ecc-8406-0ecff71ff071}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: LoadCameraCalibInfo
-          params:
-            calib_file: calibration/camera/L340XP043070014/camera_extrinsic.yml
-      - id: "{1b5d45ca-94c5-4513-901e-f28396c3c014}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: SBMEstimator
-          params:
-            detection_targets:
-              - 600_400_230
-      - id: "{50df878c-7926-4142-b82b-6283bc19748a}"
-        parent_id: "{00000000-0000-0000-0000-000000000000}"
-        model:
-          name: CalculateTopLayerHeight
-          params:
-            layer_min_points: 4000

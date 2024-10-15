@@ -194,11 +194,24 @@ def execute(self, inputs, outputs, gvm):
             if eye_in_hand:
                 r = RobotDriver(0)
                 scan_pose = r.get_cartpose().xyz_quat
-                capture_res = vision_bridge.run(int(vision_id), "capture_images_1",info=json.dumps({"tf_world_hand":scan_pose}))
+                ftr = vision_bridge.async_run(int(vision_id), "capture_images_1",info=json.dumps({"tf_world_hand":scan_pose}))
             else:
-                capture_res = vision_bridge.run(int(vision_id), "capture_images_1")                  
-            if gvm.variable_exist("ERROR"):
-                return "empty"
+                ftr = vision_bridge.async_run(int(vision_id), "capture_images_1")            
+                      
+            #获取异步结果
+            current_time = time.time()
+            while not self.preempted:
+                if time.time()-current_time>10:
+                    self.logger.info(f"异步获取视觉结果超时")
+                    raise XYZExceptionBase("20010", "OpenCameraFailed")
+                try:
+                    capture_res = ftr.get()
+                    break
+                except Exception as e:
+                    self.logger.info(f"{e}")
+                    self.preemptive_wait(0.1)
+                    continue
+                
             if (time.time()-start_time) > self.smart_data["time_out"]:
                 raise XYZExceptionBase("20010", "OpenCameraFailed")
             try:
@@ -214,8 +227,25 @@ def execute(self, inputs, outputs, gvm):
                 
     else:
         capture_res = inputs["capture_res"]
+        
     outputs["capture_res"] = capture_res   
-    vision_result_raw = vision_bridge.run(int(vision_id), vision_service)
+    
+    ftr = vision_bridge.async_run(int(vision_id),vision_service)
+    #vision_result_raw = vision_bridge.run(int(vision_id), vision_service)
+    #获取异步结果
+    current_time = time.time()
+    while not self.preempted:
+        if time.time()-current_time>30:
+            self.logger.info(f"异步获取识别结果超时")
+            raise "异步获取识别结果超时"
+        try:
+            vision_result_raw = ftr.get()
+            break
+        except Exception as e:
+            self.logger.info(f"异步识别结果还未出现,重新获取")
+            self.logger.info(f"{e}")
+            self.preemptive_wait(0.1)
+            continue  
     
     def construct_vision_result(vision_result_raw, ts):
         def convert_cloud(cloud_proto):
@@ -306,7 +336,22 @@ def execute(self, inputs, outputs, gvm):
     else:
         self.logger.info(f"第一个模型识别失败,启用第二个模型")
         vision_service = "calculate_object_poses_pallet_1"
-        vision_result_raw = vision_bridge.run(int(vision_id), vision_service)
+        ftr = vision_bridge.async_run(int(vision_id),vision_service)
+        #vision_result_raw = vision_bridge.run(int(vision_id), vision_service)
+        #获取异步结果
+        current_time = time.time()
+        while not self.preempted:
+            if time.time()-current_time>30:
+                self.logger.info(f"异步获取识别结果超时")
+                raise "异步获取识别结果超时"
+            try:
+                vision_result_raw = ftr.get()
+                break
+            except Exception as e:
+                self.logger.info(f"异步识别结果还未出现,重新获取")
+                self.logger.info(f"{e}")
+                self.preemptive_wait(0.1)
+                continue          
         vision_result = construct_vision_result(vision_result_raw, ts) 
         results = copy.copy(vision_result.get("results"))
         if len(results) == 1:

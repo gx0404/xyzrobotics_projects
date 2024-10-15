@@ -327,7 +327,7 @@ nodes:
       params:
         mode: 3D
         top_k: 60
-        min_score: 68
+        min_score: 80
         max_matching_dist: 0.005
         max_fitness_dist: 0.005
         max_iteration_num: 200
@@ -1581,8 +1581,8 @@ nodes:
         transform_frame: Workspace
         transform_frame_id: ""
     position:
-      x: -3263.5212582487584
-      y: 3712.2087780197062
+      x: -3460.1879249154254
+      y: 3665.5421113530397
   - id: "{954adb2a-c176-4a17-9790-b375d82bd3d5}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1855,8 +1855,8 @@ nodes:
       name: DataShow
       params: ~
     position:
-      x: -4287.813450301438
-      y: 1480.015736340481
+      x: -4721.2349998694399
+      y: 1597.6587283660808
     embedded_widget_rect:
       w: 256
       h: 211
@@ -2055,7 +2055,7 @@ nodes:
       params:
         mode: 3D
         top_k: 60
-        min_score: 68
+        min_score: 80
         max_matching_dist: 0.005
         max_fitness_dist: 0.005
         max_iteration_num: 200
@@ -2063,8 +2063,8 @@ nodes:
         cloud2d_plane: XY
         knn: 5
     position:
-      x: 1086.8811658810032
-      y: -479.69248336240588
+      x: 1079.4162058810034
+      y: -477.20416336240595
   - id: "{c69a1774-8490-4485-b892-373fc48a3f37}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -2145,7 +2145,7 @@ nodes:
         log_frame_tree: false
         clear_all_data: false
     position:
-      x: -3491.8246632509417
+      x: -3490.8246632509417
       y: -27.66852443920925
   - id: "{ca7237e4-fac4-4bf7-8d50-aa40a75a502c}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"

@@ -198,7 +198,7 @@ def is_collision(check_plan_item,other_plan_items):
     l_1,w_1,h_1 = check_plan_item.primitives[0].dimensions
     check_item_angle = tfm.euler_from_quaternion(check_item_pose[3:7])[2]
     check_item_obb = OBB(center=(check_item_pose[0], check_item_pose[1]), half_size=(l_1/2-0.00,w_1/2-0.00), angle=check_item_angle)
-
+    check_collision = False
     for plan_item in other_plan_items:
         check_collision = True
         item_pose = pose_to_list(plan_item.origin)
@@ -565,7 +565,7 @@ def execute(self, inputs, outputs, gvm):
                         new_slide_y.append(i*precision)
                     else:
                         new_slide_y.append(-i*precision)   
-                return_list = list(product(new_slide_y,new_slide_y))        
+                return_list = list(product(new_slide_x,new_slide_y))        
                 #return_list = [[x,y] for x,y in zip(new_slide_x,new_slide_y)]                               
                 return return_list   
             #添加偏移点

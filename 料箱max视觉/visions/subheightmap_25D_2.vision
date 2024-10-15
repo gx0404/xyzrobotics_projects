@@ -275,8 +275,8 @@ nodes:
         transform_frame: Workspace
         transform_frame_id: ""
     position:
-      x: -3707.4864314025508
-      y: -102.80759939146537
+      x: -3599.9910074025515
+      y: -1292.4236249914647
   - id: "{18732ea9-e8e1-4d95-ac65-17d855ce6792}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -337,7 +337,7 @@ nodes:
       params:
         mode: 3D
         top_k: 60
-        min_score: 68
+        min_score: 80
         max_matching_dist: 0.005
         max_fitness_dist: 0.005
         max_iteration_num: 200
@@ -612,8 +612,8 @@ nodes:
         source: request
         info: ""
     position:
-      x: -2892.4184887445299
-      y: 454.75876362484155
+      x: -2858.4344887445295
+      y: 422.68516362484155
   - id: "{33614694-3aa1-4154-9a46-b79d5d57401d}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1632,8 +1632,8 @@ nodes:
           - 0
         input_type: DoubleVector
     position:
-      x: -1993.072034538407
-      y: -219.87078732260312
+      x: -1937.1744140584069
+      y: -215.57097036260316
   - id: "{93e4c8a8-1d66-4761-89f7-f0c455f70e27}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -2162,7 +2162,7 @@ nodes:
       params:
         mode: 3D
         top_k: 60
-        min_score: 68
+        min_score: 80
         max_matching_dist: 0.005
         max_fitness_dist: 0.005
         max_iteration_num: 200
@@ -2880,6 +2880,11 @@ connections:
     in_index: 2
     out_id: "{0741c9d5-f107-44e6-b9b4-deb6b1fba710}"
     out_index: 0
+  - id: "{1fbd233b-6649-48e4-89f7-ba146d65b953}"
+    in_id: "{185886bd-924b-473a-999d-00f1dabded7d}"
+    in_index: 0
+    out_id: "{ca153ae8-dc34-4a88-94a5-ee96c054599b}"
+    out_index: 2
   - id: "{1fca6dc2-55a6-4570-a7a9-ea197c3a345b}"
     in_id: "{ec45b686-d642-4f80-afb7-aee4cc6e477a}"
     in_index: 0
@@ -3015,11 +3020,6 @@ connections:
     in_index: 0
     out_id: "{954adb2a-c176-4a17-9790-b375d82bd3d5}"
     out_index: 1
-  - id: "{335f8159-3bd4-4897-a53b-207f72c2fd7b}"
-    in_id: "{185886bd-924b-473a-999d-00f1dabded7d}"
-    in_index: 0
-    out_id: "{ca153ae8-dc34-4a88-94a5-ee96c054599b}"
-    out_index: 2
   - id: "{342ed286-7cb3-4a09-bdef-8062596d7375}"
     in_id: "{93e4c8a8-1d66-4761-89f7-f0c455f70e27}"
     in_index: 0
@@ -3055,11 +3055,6 @@ connections:
     in_index: 0
     out_id: "{2100be60-15cb-4f29-8ea0-f8792444b6ac}"
     out_index: 1
-  - id: "{3deabfa9-cfba-43e2-b3fa-0ddcea6f9d05}"
-    in_id: "{60ab913f-8db2-4146-91e6-7334ffa53a48}"
-    in_index: 0
-    out_id: "{185886bd-924b-473a-999d-00f1dabded7d}"
-    out_index: 0
   - id: "{3e3931f0-658b-4848-bc36-bd2406daf66a}"
     in_id: "{a8599eb4-5baf-4e28-90d9-9795b5701555}"
     in_index: 1
@@ -4109,6 +4104,11 @@ connections:
     in_id: "{fe5a7ff2-1180-432b-9e10-4441c3de239e}"
     in_index: 2
     out_id: "{74d8035a-021e-4b1c-89ab-654b5a6ed68a}"
+    out_index: 2
+  - id: "{ff369216-aa0a-4f1d-af23-bcb5eb7501ce}"
+    in_id: "{60ab913f-8db2-4146-91e6-7334ffa53a48}"
+    in_index: 0
+    out_id: "{ca153ae8-dc34-4a88-94a5-ee96c054599b}"
     out_index: 2
 service:
   enable: true

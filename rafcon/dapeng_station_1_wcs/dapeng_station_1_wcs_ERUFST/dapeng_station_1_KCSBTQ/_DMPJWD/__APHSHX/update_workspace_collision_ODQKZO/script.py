@@ -2,6 +2,8 @@ from xyz_env_manager.client import get_planning_environment, add_full_padding_ex
 from xyz_env_manager.client import modify_primitive_group_of_environment
 from xyz_motion import PlanningEnvironmentRos
 from rafcon.utils.helper_function import find_the_nearest_state_in_concurrency_state
+from xyz_env_manager.msg import GeometricPrimitive
+from xyz_env_manager.msg import Pose
 def execute(self, inputs, outputs, gvm):
     """ 
     This state changes free workspaces to collision objects. 
@@ -34,7 +36,7 @@ def execute(self, inputs, outputs, gvm):
     other_non_collision_workspace_ids = self.smart_data["other_non_collision_workspace_ids"]
     other_non_collision_workspace_ids+=["6"]
     other_collision_workspace_ids = self.smart_data["other_collision_workspace_ids"]
-    
+
     if len(list(set(other_non_collision_workspace_ids).intersection(set(other_collision_workspace_ids)))) != 0:
         self.logger.warnning("非障碍物的工作空间ID与指定障碍物的工作空间的ID有重复")
     
@@ -62,25 +64,34 @@ def execute(self, inputs, outputs, gvm):
         for collision_object in planning_env_msg.collision_objects:
             if collision_object.name in check_padding_list:
                 dimensions = list(collision_object.primitives[0].dimensions)
-                enlarge_length = 1.5
+                enlarge_length = 1
+                dimensions[0]+=0.1
                 dimensions[1]+=enlarge_length
-                dimensions[2]+=0.2
-                collision_object.primitives[0].dimensions=tuple(dimensions)   
-                # if collision_object.origin.x>-0.5 and collision_object.origin.y>0:
-                #     collision_object.origin.y +=1/2
-                # elif collision_object.origin.x>-0.5 and collision_object.origin.y<0:
-                #     collision_object.origin.y -=1/2
-                # elif collision_object.origin.x<-0.5:
-                #     collision_object.origin.x -=1/2    
+                dimensions[2]+=0.05
+                collision_object.primitives[0].dimensions=tuple(dimensions)  
+                collision_object.primitives[0].relative_pose.y-=enlarge_length/2
+
+                append_primitive = GeometricPrimitive(type=GeometricPrimitive.BOX, 
+                                                      dimensions=[1, 1.2, 1.8], relative_pose=Pose(
+                                                        0,
+                                                        1.2/2,
+                                                        1.8/2-0.1,
+                                                        0.0,
+                                                        0.0,
+                                                        0,
+                                                        1))  
+                collision_object.primitives.append(append_primitive)   
+                
         check_padding_list = [f"workspace_{i}_full_padding_pg" for i in range(2,3)]
         for collision_object in planning_env_msg.collision_objects:
             if collision_object.name in check_padding_list:
                 dimensions = list(collision_object.primitives[0].dimensions)
                 enlarge_length = 0.1
+                dimensions[0]+=0.2
                 dimensions[1]+=enlarge_length
-                dimensions[2]+=0.2
-                collision_object.primitives[0].dimensions=tuple(dimensions)   
-                                                    
+                dimensions[2]+=0.1
+                collision_object.primitives[0].dimensions=tuple(dimensions)     
+                                                  
         last_payload["planning_environment"] = planning_env_msg
         gvm.set_variable("motion_payload", last_payload, per_reference=True)
     
@@ -95,29 +106,37 @@ def execute(self, inputs, outputs, gvm):
         planning_env_msg = get_planning_environment()
         check_padding_list = [f"workspace_{i}_full_padding_pg" for i in range(3,4)]
         for collision_object in planning_env_msg.collision_objects:
-            if collision_object.name in check_padding_list:
+            if collision_object.name in check_padding_list:               
                 dimensions = list(collision_object.primitives[0].dimensions)
-                enlarge_length = 1.5
+                enlarge_length = 1
+                dimensions[0]+=0.1
                 dimensions[1]+=enlarge_length
-                #dimensions[0]-=0.05
-                dimensions[2]+=0.2
-                collision_object.primitives[0].dimensions=tuple(dimensions)
-                # if collision_object.origin.x>-0.5 and collision_object.origin.y>0:
-                #     collision_object.origin.y +=1/2
-                # elif collision_object.origin.x>-0.5 and collision_object.origin.y<0:
-                #     collision_object.origin.y -=1/2
-                # elif collision_object.origin.x<-0.5:
-                #     collision_object.origin.x -=1/2      
-                modify_primitive_group_of_environment(collision_object) 
+                dimensions[2]+=0.05
+                collision_object.primitives[0].dimensions=tuple(dimensions)  
+                collision_object.primitives[0].relative_pose.y-=enlarge_length/2
+
+                append_primitive = GeometricPrimitive(type=GeometricPrimitive.BOX, 
+                                                      dimensions=[1, 1.2, 1.8], relative_pose=Pose(
+                                                        0,
+                                                        1.2/2,
+                                                        1.8/2-0.1,
+                                                        0.0,
+                                                        0.0,
+                                                        0,
+                                                        1))  
+                collision_object.primitives.append(append_primitive)     
+                modify_primitive_group_of_environment(collision_object)  
+                
         check_padding_list = [f"workspace_{i}_full_padding_pg" for i in range(2,3)]
         for collision_object in planning_env_msg.collision_objects:
             if collision_object.name in check_padding_list:
                 dimensions = list(collision_object.primitives[0].dimensions)
                 enlarge_length = 0.1
+                dimensions[0]+=0.2
                 dimensions[1]+=enlarge_length
-                dimensions[2]+=0.2
+                dimensions[2]+=0.1
                 collision_object.primitives[0].dimensions=tuple(dimensions)  
-                modify_primitive_group_of_environment(collision_object)                            
+                modify_primitive_group_of_environment(collision_object)                             
     # update collisions in planning environment 
     if grasp_plan and not trajectory:
         update_planning_collision(grasp_plan)

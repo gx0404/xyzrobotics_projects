@@ -102,6 +102,19 @@
             }
         }
     }, 
+    "outcome1": {
+        "gui": {
+            "editor_gaphas": {
+                "rel_pos": {
+                    "__jsonqualname__": "__builtin__.tuple", 
+                    "items": [
+                        241.52290475182417, 
+                        71.15465276897422
+                    ]
+                }
+            }
+        }
+    }, 
     "output_data_port1": {
         "gui": {
             "editor_gaphas": {
@@ -112,6 +125,13 @@
                         120.85271053625017
                     ]
                 }
+            }
+        }
+    }, 
+    "transition49": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
             }
         }
     }, 

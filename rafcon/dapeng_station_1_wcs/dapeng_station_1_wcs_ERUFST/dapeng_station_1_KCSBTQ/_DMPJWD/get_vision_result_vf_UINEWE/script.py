@@ -478,7 +478,8 @@ def execute(self, inputs, outputs, gvm):
                         error_msg="shrunk_size[{}] should be between 0m and 0.05m".format(shrunk_size))
 
     #使用get height去判断是否为空
-    height_res = vision_bridge.run(int(vision_id), "get_safe_height_4")
+    ftr = vision_bridge.async_run(int(vision_id), "get_safe_height_4")
+    height_res = ftr.get()
     height = float(height_res.info)
     if str(vision_id) in ["2","3"]:
         height-=0.025         

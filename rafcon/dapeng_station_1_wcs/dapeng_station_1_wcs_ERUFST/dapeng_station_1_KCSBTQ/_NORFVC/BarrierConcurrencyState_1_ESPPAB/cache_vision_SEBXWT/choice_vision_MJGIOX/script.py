@@ -18,7 +18,8 @@ def execute(self, inputs, outputs, gvm):
                     return "success" 
             self.logger.info(f"layer is 1 ,同一层")    
             return "other_vision"
-        
+        else:
+            return "success"
         if len(box_id_list)%5:
             self.logger.info(f"非整层")
             return "success"
@@ -45,7 +46,8 @@ def execute(self, inputs, outputs, gvm):
                     return "success" 
             self.logger.info(f"layer is 1 ,同一层")    
             return "other_vision" 
-        
+        else:
+            return "success"
         if len(box_id_list)%9:
             self.logger.info(f"非整层")
             return "success"
