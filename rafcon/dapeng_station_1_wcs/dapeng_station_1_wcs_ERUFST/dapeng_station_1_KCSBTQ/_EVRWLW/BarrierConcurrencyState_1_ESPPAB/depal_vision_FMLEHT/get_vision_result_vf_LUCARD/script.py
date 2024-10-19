@@ -333,9 +333,7 @@ def execute(self, inputs, outputs, gvm):
 
     # camera_ids = vision_bridge.get_camera_ids(vision_id).get('results')
     camera_ids = ["-1"]
-    results = copy.copy(vision_result.get("results"))
-    for info in results:
-        info["pose"][2] += 0.218 * 4         
+    results = copy.copy(vision_result.get("results"))    
 
     # add point cloud
     if vision_result.get("cloud"):
@@ -580,7 +578,7 @@ def execute(self, inputs, outputs, gvm):
         wcs_planning_env.remove_bottom_padding_workspace(clear_id)
         
     wcs_planning_env.add_container_items(workspace_id, wcs_container_items)
-    wcs_planning_env.to_json_file("/home/xyz/xyz_app/projects/dapeng_station_0/wcs_pallet_json/planning_env.json")
+    wcs_planning_env.to_json_file("/home/xyz/xyz_app/projects/dapeng_station_1/wcs_pallet_json/planning_env.json")
     self.logger.info(f"load time is {time.time()-current_time}")
             
     from xyz_logistics_hmi_back.utils.utils import send_order_log
@@ -589,11 +587,11 @@ def execute(self, inputs, outputs, gvm):
         send_error_msg = f"视觉生成的箱子数量和wcs下发生成箱子数量不一致"
         send_order_log(message=send_error_msg, status=False) 
         error_info = {
-            "error": '10000',
+            "error": '10007',
             "data":{
             "error_msg": send_error_msg,
             "zh_msg": "",
-            "error_code": '10000',
+            "error_code": '10007',
             "tip": ""
             }
         }
@@ -633,11 +631,11 @@ def execute(self, inputs, outputs, gvm):
             send_error_msg = f"匹配所有面位置号失败,上游下发虚拟储位异常"    
         send_order_log(message=send_error_msg, status=False)          
         error_info = {
-            "error": '10000',
+            "error": '10007',
             "data":{
             "error_msg": send_error_msg,
             "zh_msg": "",
-            "error_code": '10000',
+            "error_code": '10007',
             "tip": ""
             }
         }
@@ -652,11 +650,11 @@ def execute(self, inputs, outputs, gvm):
         send_error_msg = f"实际转向不为{current_direction}面"
         send_order_log(message=send_error_msg, status=False) 
         error_info = {
-            "error": '10000',
+            "error": '10007',
             "data":{
             "error_msg": send_error_msg,
             "zh_msg": "",
-            "error_code": '10000',
+            "error_code": '10007',
             "tip": ""
             }
         }

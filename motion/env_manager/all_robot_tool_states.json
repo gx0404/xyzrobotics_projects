@@ -74,8 +74,8 @@
             "is_virtual_robot": true,
             "joint_position": [
                 0.0,
-                -1.2653637076958888,
-                0.0,
+                -1.5700000377769665,
+                1.3999999420844733,
                 0.0
             ],
             "has_tool": true,
@@ -112,8 +112,8 @@
                                 "z": 0.0985,
                                 "qx": 0.0,
                                 "qy": 0.0,
-                                "qz": 0.7071067811865477,
-                                "qw": 0.7071067811865475
+                                "qz": 0.7071067811865481,
+                                "qw": 0.707106781186547
                             }
                         },
                         {
@@ -158,8 +158,8 @@
                                 "z": 0.35,
                                 "qx": 0.0,
                                 "qy": 0.0,
-                                "qz": -0.7071067811865477,
-                                "qw": 0.7071067811865475
+                                "qz": -0.7071067811865481,
+                                "qw": 0.707106781186547
                             }
                         },
                         {
@@ -571,7 +571,7 @@
                     }
                 ],
                 "visual_mesh_path": "",
-                "active_tip_name": "",
+                "active_tip_name": "tip_0",
                 "mounting_transform": {
                     "x": 0.0,
                     "y": 0.0,
@@ -711,8 +711,8 @@
                             "z": 0.0985,
                             "qx": 0.0,
                             "qy": 0.0,
-                            "qz": 0.7071067811865477,
-                            "qw": 0.7071067811865475
+                            "qz": 0.7071067811865481,
+                            "qw": 0.707106781186547
                         }
                     },
                     {
@@ -757,8 +757,8 @@
                             "z": 0.35,
                             "qx": 0.0,
                             "qy": 0.0,
-                            "qz": -0.7071067811865477,
-                            "qw": 0.7071067811865475
+                            "qz": -0.7071067811865481,
+                            "qw": 0.707106781186547
                         }
                     },
                     {
@@ -1170,7 +1170,7 @@
                 }
             ],
             "visual_mesh_path": "",
-            "active_tip_name": "",
+            "active_tip_name": "tip_0",
             "mounting_transform": {
                 "x": 0.0,
                 "y": 0.0,
@@ -1283,8 +1283,8 @@
                             "z": 0.0985,
                             "qx": 0.0,
                             "qy": 0.0,
-                            "qz": 0.7071067811865477,
-                            "qw": 0.7071067811865475
+                            "qz": 0.7071067811865481,
+                            "qw": 0.707106781186547
                         }
                     },
                     {
@@ -1329,8 +1329,8 @@
                             "z": 0.35,
                             "qx": 0.0,
                             "qy": 0.0,
-                            "qz": -0.7071067811865477,
-                            "qw": 0.7071067811865475
+                            "qz": -0.7071067811865481,
+                            "qw": 0.707106781186547
                         }
                     },
                     {
@@ -1742,7 +1742,7 @@
                 }
             ],
             "visual_mesh_path": "",
-            "active_tip_name": "",
+            "active_tip_name": "tip_0",
             "mounting_transform": {
                 "x": 0.0,
                 "y": 0.0,
@@ -1830,20 +1830,112 @@
             "tool_name": "tool1",
             "has_attached_collision_object": false,
             "attached_collision_object": {
-                "reference_tip_name": "",
-                "reference_object_name": "",
-                "from_workspace_id": "",
-                "to_workspace_id": "",
+                "reference_tip_name": "tip_0",
+                "reference_object_name": "RealBox-1-1729325782",
+                "from_workspace_id": "0",
+                "to_workspace_id": "3",
                 "origin_tip_transform": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0,
-                    "qx": 0.0,
-                    "qy": 0.0,
-                    "qz": 0.0,
-                    "qw": 0.0
+                    "x": -4.440892098500626e-16,
+                    "y": 6.106226635438361e-16,
+                    "z": -1.1102230246251565e-16,
+                    "qx": 4.649601016704086e-16,
+                    "qy": 1.0,
+                    "qz": -6.018200689507897e-17,
+                    "qw": 2.2130441771768757e-18
                 },
-                "objects": []
+                "objects": [
+                    {
+                        "name": "RealBox-1-1729325782",
+                        "origin": {
+                            "x": 0.2401335597038269,
+                            "y": 2.209714596271515,
+                            "z": -0.9021120905876159,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": -0.7074790983451203,
+                            "qw": 0.7067342678862937
+                        },
+                        "primitives": [
+                            {
+                                "type": 1,
+                                "dimensions": [
+                                    0.3991,
+                                    0.2991,
+                                    0.2301
+                                ],
+                                "absolute_mesh_paths": "",
+                                "meshes": {
+                                    "triangles": [],
+                                    "vertices": []
+                                },
+                                "use_convex": false,
+                                "relative_pose": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": -0.11505,
+                                    "qx": 0.0,
+                                    "qy": 0.0,
+                                    "qz": 0.0,
+                                    "qw": 1.0
+                                }
+                            }
+                        ],
+                        "tfs": [],
+                        "color": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "additional_info": {
+                            "type": "box",
+                            "keys": [
+                                "barcode_direction",
+                                "height",
+                                "length",
+                                "weight",
+                                "width",
+                                "overlapping_heihgt",
+                                "row",
+                                "timestamp",
+                                "vision_id",
+                                "box_id",
+                                "barcode",
+                                "to_ws"
+                            ],
+                            "values": [
+                                "4",
+                                "0.2301",
+                                "0.3991",
+                                "5.0",
+                                "0.2991",
+                                "0.012",
+                                "9",
+                                "1729325780862",
+                                "1",
+                                "1",
+                                "3Z0000000036027865",
+                                "3"
+                            ],
+                            "descriptions": [
+                                "barcode_direction",
+                                "height",
+                                "length",
+                                "weight",
+                                "width",
+                                "overlapping_heihgt",
+                                "row",
+                                "timestamp",
+                                "vision_id",
+                                "box_id",
+                                "barcode",
+                                "to_ws"
+                            ]
+                        },
+                        "ignore_collision": false,
+                        "timestamp": ""
+                    }
+                ]
             },
             "ignored_objects": []
         }

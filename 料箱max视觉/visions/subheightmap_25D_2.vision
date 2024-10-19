@@ -37,8 +37,8 @@ nodes:
       x: -1013.8396629832546
       y: 1515.0785590657181
     embedded_widget_rect:
-      w: 200
-      h: 200
+      w: 303
+      h: 267
   - id: "{03943977-d4ff-4a08-9695-0e8745543666}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -98,7 +98,7 @@ nodes:
         enable_downsample: true
         leaf_size_downsample: 0.001
         layer_z_tolerance: 0.01
-        cloud_extract_radius: 0.05
+        cloud_extract_radius: 0.03
         output_cloud_type: Organized
     position:
       x: -2311.7224890879966
@@ -209,8 +209,8 @@ nodes:
         viz_color: green
         thickness: 1
     position:
-      x: 764.54666666666606
-      y: -2502.5039999999972
+      x: 591.7466666666661
+      y: -2506.8239999999969
   - id: "{15dacc42-fe29-4b45-a0b8-ae61343f1f2c}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -839,8 +839,8 @@ nodes:
       name: DataShow
       params: ~
     position:
-      x: -2393.6107642879992
-      y: 1961.5139349503991
+      x: -2500.4107642879985
+      y: 1878.7139349503993
     embedded_widget_rect:
       w: 375
       h: 273
@@ -1113,7 +1113,7 @@ nodes:
     model:
       name: ImageSaveModel
       params:
-        keyword: viz
+        keyword: 600_400_viz
         suffix: .jpg
     position:
       x: -323.19671807786631
@@ -1276,7 +1276,7 @@ nodes:
         enable_downsample: true
         leaf_size_downsample: 0.001
         layer_z_tolerance: 0.01
-        cloud_extract_radius: 0.05
+        cloud_extract_radius: 0.03
         output_cloud_type: Organized
     position:
       x: -2270.0250380778634
@@ -1856,8 +1856,8 @@ nodes:
       name: DataShow
       params: ~
     position:
-      x: -1902.1827688129679
-      y: -742.8087915420524
+      x: -1741.6929607443597
+      y: -689.31218885251633
     embedded_widget_rect:
       w: 256
       h: 211
@@ -2440,7 +2440,7 @@ nodes:
     model:
       name: ImageSaveModel
       params:
-        keyword: viz
+        keyword: 400_300_viz
         suffix: .jpg
     position:
       x: -145.53416908800068

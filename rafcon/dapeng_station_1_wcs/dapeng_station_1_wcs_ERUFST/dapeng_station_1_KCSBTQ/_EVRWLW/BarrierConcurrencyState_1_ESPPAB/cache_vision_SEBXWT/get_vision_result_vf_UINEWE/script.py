@@ -500,11 +500,11 @@ def execute(self, inputs, outputs, gvm):
     if len(results)!=len(cache_pallet_tote_data):
         send_error_msg = f"视觉生成的箱子数量和wcs下发生成箱子数量不一致"
         error_info = {
-            "error": '10000',
+            "error": '10008',
             "data":{
             "error_msg": send_error_msg,
             "zh_msg": "",
-            "error_code": '10000',
+            "error_code": '10008',
             "tip": ""
             }
         }
@@ -517,11 +517,11 @@ def execute(self, inputs, outputs, gvm):
     if False in container_items:
         self.logger.info(f"匹配所有面位置号失败")  
         error_info = {
-            "error": '10000',
+            "error": '10008',
             "data":{
             "error_msg": send_error_msg,
             "zh_msg": "",
-            "error_code": '10000',
+            "error_code": '10008',
             "tip": ""
             }
         }

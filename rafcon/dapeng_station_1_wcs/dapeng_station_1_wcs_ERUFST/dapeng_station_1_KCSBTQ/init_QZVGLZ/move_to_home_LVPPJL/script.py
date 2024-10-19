@@ -94,8 +94,8 @@ def execute(self, inputs, outputs, gvm):
     solver_config.wopt_config = wopt_config
     solver_config.astar_config = astar_config
     solver_config.smart_planner_config = smart_planner_options
-    solver_config.safety_distance.at_goal = 0.025
-    solver_config.safety_distance.at_start = 0.025   
+    solver_config.safety_distance.at_goal = 0.02
+    solver_config.safety_distance.at_start = 0.02  
     solver_config.step_num = self.smart_data["2-config-wopt"]["step_num"]
     solver_config.force_vertical = self.smart_data["3-config-node"]["force_vertical"]
     motion_payload["solver_config"] = solver_config

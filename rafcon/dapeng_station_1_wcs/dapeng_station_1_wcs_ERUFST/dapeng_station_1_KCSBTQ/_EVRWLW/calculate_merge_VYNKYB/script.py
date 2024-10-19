@@ -882,6 +882,9 @@ def execute(self, inputs, outputs, gvm):
          box_id_list = [str(i+layer*row) for i in range(1,row+1)] 
          layer_plan_items = list(filter(lambda x: x.additional_info.values[-3] in box_id_list, plan_items))
          layer_container_items = list(filter(lambda x: x.additional_info.values[-3] in box_id_list, container_items))
+         if len(layer_container_items)==row:
+            self.logger.info(f"第{layer+1}层实际为满箱,跳过计算")
+            continue
          if not len(layer_container_items) and len(layer_plan_items)==row:
             self.logger.info(f"第{layer+1}层无实际箱子,规划箱子也为满,终止检测")
             break

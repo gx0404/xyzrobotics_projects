@@ -46,9 +46,9 @@ def execute(self, inputs, outputs, gvm):
     for collision_object in planning_env_msg.collision_objects:
         if collision_object.name in check_padding_list:
             dimensions = list(collision_object.primitives[0].dimensions)
-            enlarge_ = 0.22
+            enlarge_ = 0.1
             dimensions[0]+=enlarge_
-            dimensions[1]+=enlarge_
+            dimensions[1]-=enlarge_
             dimensions[2]*=4
             collision_object.primitives[0].dimensions=tuple(dimensions)
             # if collision_object.origin.x>-0.5 and collision_object.origin.y>0:

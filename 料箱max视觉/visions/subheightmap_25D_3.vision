@@ -1510,7 +1510,7 @@ nodes:
     model:
       name: ImageSaveModel
       params:
-        keyword: viz
+        keyword: 600_400_viz
         suffix: .jpg
     position:
       x: -483.64575989546302
@@ -2415,7 +2415,7 @@ nodes:
     model:
       name: ImageSaveModel
       params:
-        keyword: viz
+        keyword: 400_300_viz
         suffix: .jpg
     position:
       x: -243.19177113600028

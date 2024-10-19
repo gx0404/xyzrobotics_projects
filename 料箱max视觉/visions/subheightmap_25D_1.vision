@@ -765,7 +765,7 @@ nodes:
       name: FilterByClustering
       params:
         min_size: 500
-        max_size: 700000
+        max_size: 900000
         xy_tolerance: 0.003
         z_tolerance: 0.003
         neighbor: 24

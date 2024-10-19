@@ -333,9 +333,7 @@ def execute(self, inputs, outputs, gvm):
 
     # camera_ids = vision_bridge.get_camera_ids(vision_id).get('results')
     camera_ids = ["-1"]
-    results = copy.copy(vision_result.get("results"))
-    for info in results:
-        info["pose"][2] += 0.218 * 4         
+    results = copy.copy(vision_result.get("results"))      
 
     # add point cloud
     if vision_result.get("cloud"):
@@ -580,7 +578,7 @@ def execute(self, inputs, outputs, gvm):
         wcs_planning_env.remove_bottom_padding_workspace(clear_id)
         
     wcs_planning_env.add_container_items(workspace_id, wcs_container_items)
-    wcs_planning_env.to_json_file("/home/xyz/xyz_app/projects/dapeng_station_0/wcs_pallet_json/planning_env.json")
+    wcs_planning_env.to_json_file("/home/xyz/xyz_app/projects/dapeng_station_1/wcs_pallet_json/planning_env.json")
     self.logger.info(f"load time is {time.time()-current_time}")
             
     from xyz_logistics_hmi_back.utils.utils import send_order_log

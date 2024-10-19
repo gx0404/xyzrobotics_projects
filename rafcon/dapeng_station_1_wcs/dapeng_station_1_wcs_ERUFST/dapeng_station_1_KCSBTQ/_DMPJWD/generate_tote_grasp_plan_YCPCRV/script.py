@@ -334,7 +334,7 @@ def execute(self, inputs, outputs, gvm):
         slot_symmetry_angle = 360
         is_square = False
         
-    slot_symmetry_angle = 360    
+    # slot_symmetry_angle = 360    
     slot_angles = list(range(0, 360, slot_symmetry_angle))
     # always consider 180 symmetry angle for tf_tip_obj first
     grasp_symmetry_angle = self.smart_data["grasp_symmetry_angle"]

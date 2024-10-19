@@ -7,7 +7,7 @@ def execute(self, inputs, outputs, gvm):
     sku_dimension = list(map(lambda x:round(x,2),sku_dimension))    
     if sku_dimension==[0.4,0.3,0.23]:
         self.logger.info(f"判断为中欧")
-        init_place_list = ["4","5"]
+        init_place_list = ["4"]
     elif sku_dimension==[0.6,0.4,0.23]:
         self.logger.info(f"判断为大欧")
         init_place_list = ["0","1"]

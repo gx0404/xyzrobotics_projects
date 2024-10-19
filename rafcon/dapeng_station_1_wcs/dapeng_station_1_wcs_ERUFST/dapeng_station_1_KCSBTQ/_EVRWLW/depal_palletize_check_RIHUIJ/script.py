@@ -197,7 +197,7 @@ def is_collision(check_plan_item,other_plan_items):
     check_item_pose = pose_to_list(check_plan_item.origin)
     l_1,w_1,h_1 = check_plan_item.primitives[0].dimensions
     check_item_angle = tfm.euler_from_quaternion(check_item_pose[3:7])[2]
-    check_item_obb = OBB(center=(check_item_pose[0], check_item_pose[1]), half_size=(l_1/2-0.00,w_1/2-0.00), angle=check_item_angle)
+    check_item_obb = OBB(center=(check_item_pose[0], check_item_pose[1]), half_size=(l_1/2+0.002,w_1/2+0.002), angle=check_item_angle)
     check_collision = False
     for plan_item in other_plan_items:
         check_collision = True
@@ -385,7 +385,7 @@ def execute(self, inputs, outputs, gvm):
                 row_id = int(box_id)%row
                 lay_id = int(box_id)//row                  
                 # if row_id in [1,2,3]:                    
-                #     tf_base_box_real = SE3([0.002,-0.002,0,0,0,0,1])*tf_base_box_real
+                #     tf_base_box_real = tf_base_box_real*SE3([-0.002,0.00,0,0,0,0,1])
                 # elif row_id in [0,4]:
                 #     tf_base_box_real = tf_base_box_real*SE3([0.00,0.00,0,0,0,0,1])     
             elif row==9:

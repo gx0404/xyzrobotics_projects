@@ -60,7 +60,7 @@ def execute(self, inputs, outputs, gvm):
     init_joints = [0.0, -1.57, 1.4, 0.0]
     init_joints_list.append(init_joints)
     init_joints_list.append(init_joints[0:-1]+[init_joints[-1]+3.1415926])
-    init_joints_list.append(init_joints[0:-1]+[init_joints[-1]-3.1415926])    
+    init_joints_list.append(init_joints[0:-1]+[init_joints[-1]-3.1415926])     
     #计算所有放置姿态法兰joint,tf_flange_obj是从抓取计算那里反算的
     if grasp_plan and object_poses:
         check_joints = []
