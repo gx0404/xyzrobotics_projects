@@ -1,0 +1,199 @@
+{
+    "data_source": {
+        "Config_A*": {
+            "multiprocess": true, 
+            "search_direction": "C"
+        }, 
+        "DFS_config": {
+            "multiprocess": false, 
+            "search_direction": "C", 
+            "serch_time_out": 180.0
+        }, 
+        "Enable_A*": true, 
+        "comment": "计算最优抓取解", 
+        "pick_id": "0", 
+        "place_id": "1"
+    }, 
+    "data_source_translation": {
+        "/Config_A*": "Astart配置", 
+        "/Config_A*/multiprocess": "是否开启多进程", 
+        "/Config_A*/search_direction": "需要搜索的转向", 
+        "/DFS_config": "DFS配置", 
+        "/DFS_config/Enable_all_short_path": "搜索所有最短路径，通常不建议开启搜索所有最短路径,开启后会消耗大量时间,请谨慎使用", 
+        "/DFS_config/multiprocess": "是否开启多进程", 
+        "/DFS_config/search_direction": "需要搜索的转向", 
+        "/DFS_config/serch_time_out": "深度优先搜DFS算法超时", 
+        "/Enable_A*": "是否开启A*算法,开启使用Astart搜索,不开启使用DFS深度优先搜索", 
+        "/comment": "通过托盘当前环境下的箱子,目标点位置号,搜索最快的抓取路径,支持a*", 
+        "/pick_id": "", 
+        "/place_id": ""
+    }, 
+    "data_source_type": {
+        "Config_A*": {
+            "multiprocess": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {
+                        "false": [], 
+                        "true": [
+                            "/Config_A*/search_direction"
+                        ]
+                    }, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }, 
+            "search_direction": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        "A", 
+                        "B", 
+                        "C", 
+                        "D"
+                    ]
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "DFS_config": {
+            "multiprocess": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {
+                        "false": [], 
+                        "true": [
+                            "/DFS_config/search_direction"
+                        ]
+                    }, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }, 
+            "search_direction": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        "A", 
+                        "B", 
+                        "C", 
+                        "D"
+                    ]
+                }
+            }, 
+            "serch_time_out": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "Enable_A*": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {
+                    "false": [
+                        "/Config_A*"
+                    ], 
+                    "true": [
+                        "/DFS_config"
+                    ]
+                }, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": [
+                    true, 
+                    false
+                ]
+            }
+        }, 
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "pick_id": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "place_id": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }
+    }
+}

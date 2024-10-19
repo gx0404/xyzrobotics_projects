@@ -59,8 +59,11 @@ nodes:
     model:
       name: CloudROIExtract
       params:
-        output_organized: true
+        mode: 2D Primitives
         using_mask: true
+        using_offset: false
+        output_organized: true
+        shrink_prop: 1.0
     position:
       x: 1856.4531307607022
       y: -865.8096601383096
@@ -69,6 +72,7 @@ nodes:
     model:
       name: FetchElement
       params:
+        alert: true
         element_index:
           - 0
         input_type: DoubleVector
@@ -113,12 +117,13 @@ nodes:
       name: XYZCamera
       params:
         type: XYZ
-        id: L340XP043110009
+        id: L340XP043090009
         cfg: camera_configs/ls_eye_on_hand.json
         capture_timeout: 5000
         retake_num: 5
         logger: false
         debug: false
+        use_organized: true
     position:
       x: -948.89177599999994
       y: -1130.0341759999997
@@ -149,6 +154,8 @@ nodes:
       name: LoadWorkspaceInfo
       params:
         calib_file: calibration/workspace/cache_pallet_4.yml
+        log_frame_tree: false
+        clear_all_data: false
     position:
       x: -308.20806533887401
       y: -1135.2631807999999
@@ -287,7 +294,7 @@ nodes:
     model:
       name: LoadCameraCalibInfo
       params:
-        calib_file: calibration/camera/眼在手上/camera_extrinsic.yml
+        calib_file: calibration/camera/eye_on_hand/camera_extrinsic.yml
     position:
       x: -605.25696000000016
       y: -1144.1303039999989
@@ -598,6 +605,9 @@ connections:
     out_index: 2
 service:
   enable: true
+  proxy:
+    enable: false
+    script_file: ""
   cmds:
     calculate_object_poses_3:
       enable: true

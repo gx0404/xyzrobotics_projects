@@ -1,0 +1,387 @@
+{
+    "data_source": {
+        "chosen_tip_names": [], 
+        "clear_motion_payload": true, 
+        "comment": "generate_tote_grasp_plan", 
+        "fixed_grasp_pose": {
+            "enable": false, 
+            "fixed_endflange_poses": [
+                [
+                    1.1489933773575511, 
+                    -1.6484835472293573, 
+                    -0.0050000000000001155, 
+                    0.7096752363462501, 
+                    -0.7045289624400789, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "modify_grasp_pose_by_size": {
+                "conveyor_box_alignment": "upper_left", 
+                "enable": false, 
+                "modify_axis": [
+                    0, 
+                    1, 
+                    0
+                ], 
+                "object_length_direction": "y", 
+                "refer_sku_dimensions": []
+            }
+        }, 
+        "grasp_symmetry_angle": 180, 
+        "pick_corner_heuristic": 3, 
+        "pick_workspace_id": "6", 
+        "place_corner_id": 0, 
+        "place_workspace_id": "1", 
+        "reuse_tag": "test_tag", 
+        "robot_id": "0", 
+        "show_valid_grasp_plans": false, 
+        "sort_slots_by_corner_id": false, 
+        "sort_slots_by_human_label": true, 
+        "square_threshold": 0.02
+    }, 
+    "data_source_translation": {
+        "/chosen_tip_names": "本次抓取可用的吸盘区域，默认选中所有吸具支持的区域", 
+        "/clear_motion_payload": "是否清空motion_payload", 
+        "/comment": "模块注释", 
+        "/fixed_grasp_pose": "固定抓取姿态", 
+        "/fixed_grasp_pose/enable": "是否开启固定抓取姿态", 
+        "/fixed_grasp_pose/fixed_endflange_poses": "机器人在抓取时的固定法兰姿态", 
+        "/fixed_grasp_pose/modify_grasp_pose_by_size": "根据物料尺寸修正抓取姿态", 
+        "/fixed_grasp_pose/modify_grasp_pose_by_size/conveyor_box_alignment": "物料在输送线上的位置", 
+        "/fixed_grasp_pose/modify_grasp_pose_by_size/enable": "是否开启据物料尺寸修正抓取姿态", 
+        "/fixed_grasp_pose/modify_grasp_pose_by_size/modify_axis": "在输送线坐标系下，需要修正的抓取方向", 
+        "/fixed_grasp_pose/modify_grasp_pose_by_size/object_length_direction": "在输送线坐标系下，物料长边的朝向，'x' or 'y'", 
+        "/fixed_grasp_pose/modify_grasp_pose_by_size/refer_sku_dimensions": "参考物料的尺寸[长，宽，高]，修正抓取姿态时，相对于这个尺寸进行偏移", 
+        "/grasp_symmetry_angle": "物体对称性，一般不用修改。在特定环境下，比如上表面为方形和圆形的sku，可以改变这个角度来获得更多抓取方案", 
+        "/pick_corner_heuristic": "优先抓取角点，角点编号0，1，2，3根据工作空间位置决定", 
+        "/pick_workspace_id": "抓取工作空间编号", 
+        "/place_corner_id": "放置工作空间角点", 
+        "/place_workspace_id": "放置工作空间编号", 
+        "/reuse_tag": "复用计算结果的标签", 
+        "/robot_id": "机器人编号", 
+        "/show_valid_grasp_plans": "在gui中展示所有合法的抓取规划", 
+        "/sort_slots_by_corner_id": "是否将放置坑位按照放置工作空间的角点排序", 
+        "/sort_slots_by_human_label": "是否将放置坑位按照人工示教的码垛顺序排序", 
+        "/square_threshold": "一般不用修改，使用默认值即可。一个物体长宽差如果小于这个阈值，则算法会把此物体当做正方形处理，主要在多抓判断相邻箱子是否可以合并时使用"
+    }, 
+    "data_source_type": {
+        "chosen_tip_names": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "clear_motion_payload": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": [
+                    true, 
+                    false
+                ]
+            }
+        }, 
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "fixed_grasp_pose": {
+            "enable": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {
+                        "false": [
+                            "/fixed_grasp_pose/fixed_endflange_poses"
+                        ], 
+                        "true": []
+                    }, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": [
+                        true, 
+                        false
+                    ]
+                }
+            }, 
+            "fixed_endflange_poses": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "modify_grasp_pose_by_size": {
+                "conveyor_box_alignment": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": [
+                            "lower_left", 
+                            "upper_left", 
+                            "upper_right", 
+                            "lower_right"
+                        ]
+                    }
+                }, 
+                "enable": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": [
+                            true, 
+                            false
+                        ]
+                    }
+                }, 
+                "modify_axis": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }, 
+                "object_length_direction": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": [
+                            "x", 
+                            "y"
+                        ]
+                    }
+                }, 
+                "refer_sku_dimensions": {
+                    "type_config": {
+                        "current_type": "STATIC", 
+                        "excluded_keys": {}, 
+                        "optional_types": [
+                            "STATIC", 
+                            "INPUT_PORT"
+                        ], 
+                        "value_options": []
+                    }
+                }, 
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "grasp_symmetry_angle": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": [
+                    45, 
+                    90, 
+                    180
+                ]
+            }
+        }, 
+        "pick_corner_heuristic": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": [
+                    0, 
+                    1, 
+                    2, 
+                    3
+                ]
+            }
+        }, 
+        "pick_workspace_id": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "place_corner_id": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": [
+                    0, 
+                    1, 
+                    2, 
+                    3
+                ]
+            }
+        }, 
+        "place_workspace_id": {
+            "type_config": {
+                "current_type": "INPUT_PORT", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "reuse_tag": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "robot_id": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "show_valid_grasp_plans": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": [
+                    true, 
+                    false
+                ]
+            }
+        }, 
+        "sort_slots_by_corner_id": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {
+                    "false": [], 
+                    "true": [
+                        "sort_slots_by_human_label"
+                    ]
+                }, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": [
+                    true, 
+                    false
+                ]
+            }
+        }, 
+        "sort_slots_by_human_label": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {
+                    "false": [], 
+                    "true": [
+                        "sort_slots_by_corner_id"
+                    ]
+                }, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": [
+                    true, 
+                    false
+                ]
+            }
+        }, 
+        "square_threshold": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }
+    }
+}

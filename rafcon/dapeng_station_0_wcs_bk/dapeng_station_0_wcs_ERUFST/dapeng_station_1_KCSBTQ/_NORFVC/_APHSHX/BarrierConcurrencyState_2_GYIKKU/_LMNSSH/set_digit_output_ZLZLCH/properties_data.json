@@ -1,0 +1,59 @@
+{
+    "data_source": {
+        "comment": "启动扫码", 
+        "device_id": "2", 
+        "port": 65021, 
+        "value": 1
+    }, 
+    "data_source_translation": {
+        "/comment": "模块注释，显示在图形界面中", 
+        "/device_id": "设备号的ID, 启动io服务时的io_server.json的配置", 
+        "/port": "读取设备的端口号， 对PLC就是寄存器起始地址", 
+        "/value": "该设备的端口号输出值"
+    }, 
+    "data_source_type": {
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "device_id": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "port": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ]
+        }, 
+        "value": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ]
+            }
+        }
+    }
+}

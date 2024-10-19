@@ -1,0 +1,43 @@
+{
+    "data_source": {
+        "comment": "拣配托盘续码匹配", 
+        "multiprocess": false
+    }, 
+    "data_source_translation": {
+        "/comment": "", 
+        "/multiprocess": ""
+    }, 
+    "data_source_type": {
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "multiprocess": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }
+    }
+}

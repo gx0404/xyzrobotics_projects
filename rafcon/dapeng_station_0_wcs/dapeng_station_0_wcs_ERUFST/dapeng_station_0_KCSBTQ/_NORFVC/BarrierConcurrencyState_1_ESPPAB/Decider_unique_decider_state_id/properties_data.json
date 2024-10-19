@@ -1,0 +1,45 @@
+{
+    "data_source": {
+        "outcome_transitions": {
+            "SEBXWT_cache_vision:0_success --and-- FMLEHT_depal_vision:0_success": 0
+        }
+    }, 
+    "data_source_translation": {
+        "/outcome_transitions": "", 
+        "/outcome_transitions/": "", 
+        "/outcome_transitions/SEBXWT_cache_vision:0_success --and-- FMLEHT_depal_vision:0_success": ""
+    }, 
+    "data_source_type": {
+        "outcome_transitions": {
+            "SEBXWT_cache_vision:0_success --and-- FMLEHT_depal_vision:0_success": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }
+    }
+}

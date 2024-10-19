@@ -28,7 +28,18 @@
                         "__classtype__": "xyz_io_server.modbus_tcp_protocol.ModbusTCPProtocol",
                         "ip": "15.12.225.130" 
                     }
-                }
+                },
+                "3":{
+                    "__classtype__": "xyz_io_server.plc.PLC",
+                    "name": "PLC",
+                    "id": "3",
+                    "register_bits": 16,
+                    "protocol":
+                    {
+                        "__classtype__": "xyz_io_server.modbus_tcp_protocol.ModbusTCPProtocol",
+                        "ip": "192.168.36.5" 
+                    }
+                }    
     },
     "simulation": false
 }

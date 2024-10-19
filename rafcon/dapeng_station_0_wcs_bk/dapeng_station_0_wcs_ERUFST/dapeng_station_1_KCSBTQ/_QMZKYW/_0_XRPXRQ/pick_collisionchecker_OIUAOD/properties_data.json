@@ -1,0 +1,95 @@
+{
+    "data_source": {
+        "comment": "检查tool具体的碰撞体", 
+        "height": 0.05, 
+        "slide_move": [
+            [
+                0.08, 
+                0.08, 
+                0.05, 
+                0, 
+                0, 
+                0, 
+                1
+            ], 
+            [
+                0.08, 
+                -0.08, 
+                0.05, 
+                0, 
+                0, 
+                0, 
+                1
+            ], 
+            [
+                -0.08, 
+                0.08, 
+                0.05, 
+                0, 
+                0, 
+                0, 
+                1
+            ], 
+            [
+                -0.08, 
+                -0.08, 
+                0.05, 
+                0, 
+                0, 
+                0, 
+                1
+            ]
+        ]
+    }, 
+    "data_source_translation": {
+        "/comment": "", 
+        "/height": "", 
+        "/init_tool": "", 
+        "/post_slide_move": "", 
+        "/slide_move": ""
+    }, 
+    "data_source_type": {
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "height": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "slide_move": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }
+    }
+}

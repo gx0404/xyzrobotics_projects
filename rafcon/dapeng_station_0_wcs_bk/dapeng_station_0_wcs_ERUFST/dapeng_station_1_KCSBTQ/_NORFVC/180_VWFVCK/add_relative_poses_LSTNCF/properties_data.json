@@ -1,0 +1,226 @@
+{
+    "data_source": {
+        "activated_mesh_name": "", 
+        "base_frame": "/map", 
+        "check_collision_path": false, 
+        "check_collsion_point": false, 
+        "comment": "near_pre_pick_1", 
+        "extended_object_dsafe": [
+            0.0, 
+            0.0, 
+            0.0
+        ], 
+        "force_vertical": false, 
+        "ignored_objects": [], 
+        "move_type": "MoveL", 
+        "node_name": "near_pre_pick_1", 
+        "pick_place_flag": 0, 
+        "place_drop_buffer": 0.0, 
+        "relative_node_name": "pick", 
+        "relative_poses": [
+            [
+                0, 
+                0, 
+                0.12, 
+                0, 
+                0, 
+                0, 
+                1
+            ]
+        ], 
+        "target_frame": "${ef}"
+    }, 
+    "data_source_translation": {
+        "/activated_mesh_name": "碰撞检测中需要激活的工具碰撞模型名称", 
+        "/base_frame": "相对运动发生的坐标系，${robot}表示机器人基座坐标系，${from}和${to}分别表示抓取和放置的工作空间，也可以是其他静态（比如/map）或者机器人中的（比如${ef}）坐标系。如果是机器人坐标系，则会按照relative_node_name节点时机器人的位姿进行计算。推荐使用from和to。", 
+        "/check_collision_path": "从上一个点到这个点的路径上检查还是不检查碰撞", 
+        "/check_collsion_point": "在这个点检查还是不检查碰撞", 
+        "/comment": "模块注释，显示在图形界面中", 
+        "/extended_object_dsafe": "手上物体的滑动安全距离，请在斜插轨迹终点配合检查路径碰撞使用", 
+        "/force_vertical": "解算中强制法兰轴线垂直于机器人基座水平面", 
+        "/ignored_objects": "碰撞检测中需要忽略的抓取物体名称，目前仅支持[]和[“${all}“]表示全部不忽略和全部忽略", 
+        "/move_type": "MoveL: 笛卡尔空间直线运动， MoveJ: 关节空间直线运动， Wopt: 使用关节空间运动规划算法，自动生成多个中间点， SmartPlanner: Wopt优化后的运动方式，能解决大部分Wopt无解的情况", 
+        "/node_name": "运动规划中这个点的名称， 运动规划的执行点可以依据名字索引", 
+        "/pick_place_flag": "0: 机器人不改变上一次的抓取状态， 1: 机器人在这个点抓取物体， 2： 机器人在这个点放下物体", 
+        "/place_drop_buffer": "放置物体时需要掉落的高度", 
+        "/relative_node_name": "相对的目标节点的名字", 
+        "/relative_poses": "在base_frame中发生的相对运动偏移", 
+        "/target_frame": "需要控制进行实际运动的坐标系"
+    }, 
+    "data_source_type": {
+        "activated_mesh_name": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "base_frame": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "check_collision_path": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "check_collsion_point": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "extended_object_dsafe": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "force_vertical": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "ignored_objects": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "move_type": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "node_name": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "pick_place_flag": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "place_drop_buffer": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "relative_node_name": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "relative_poses": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "target_frame": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }
+    }
+}

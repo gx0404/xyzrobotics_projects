@@ -25,7 +25,6 @@ def pose_to_list(container_item_origin):
 def check_collision(our_robot,check_robot_list,planning_env,init_joints,container_item,stop_event):
    #获取当前抓取箱子坐标
    tf_map_object = SE3(pose_to_list(container_item.origin))
-   tf_map_object = tf_map_object*SE3([0,0,-0.035,0,0,0,1])
    #获取抓取法兰所有姿态
    tf_tip_object_list = [[0,0,0,1,0,0,0],[0,0,0,0,1,0,0]]   
    tf_map_flange_list = []
@@ -65,36 +64,101 @@ def check_collision(our_robot,check_robot_list,planning_env,init_joints,containe
    #检测所有的姿态是否满足气缸碰撞条件，如果满足只取一组解
    collision_flag = True
    for joint_index,check_joint in enumerate(check_joints):
+      if not collision_flag:
+         break
       for check_robot in check_robot_list:
          #添加碰撞检测器
          checker = CollisionChecker(check_robot, planning_env)   
-         if checker.check_point_collision(check_joint):
-            if container_item.additional_info.values[-3]=="9":
-               pass
-               #import ipdb;ipdb.set_trace()
+         if checker.check_point_collision(check_joint):           
             continue
          else:
             collision_flag = False   
             break      
+         
+   #如果抓取无碰撞,计算下放置多的向下偏置       
+   if not collision_flag:
+      #考虑到拣配还原放置需要坐标偏移，因此需要调整
+      tf_map_object = tf_map_object*SE3([0,0,-0.035,0,0,0,1]) 
+      #获取抓取法兰所有姿态
+      tf_tip_object_list = [[0,0,0,1,0,0,0],[0,0,0,0,1,0,0]]   
+      tf_map_flange_list = []
+      for tf_tip_object in tf_tip_object_list:
+         tf_tip_object = SE3(tf_tip_object)
+         tf_map_flange = tf_map_object * tf_tip_object.inv() * our_robot.get_active_tool().get_tf_endflange_tip("tip_0").inv()
+         tf_map_flange_list.append(tf_map_flange.xyz_quat)  
 
+      #计算所有抓取姿态法兰joint
+      check_joints = []
+      for i in tf_map_flange_list:
+         if stop_event.is_set():
+            return True
+         for init_joint in init_joints_list:
+            check_joint = kinematic_solver.compute_best_ik(SE3(i), init_joint)
+            if not check_joint:
+               continue
+            else:
+               if len(check_joint)==4:
+                  check_joint = kinematic_solver.convert_four_dof_to_six(check_joint)
+                  check_joints.append(check_joint) 
+                  break
+               else:  
+                  check_joints.append(check_joint) 
+                  break 
+      if not check_joints:                
+         return True   
+                  
+
+      #检测所有的姿态是否满足气缸碰撞条件，如果满足只取一组解
+      collision_flag = True
+      for joint_index,check_joint in enumerate(check_joints):
+         if not collision_flag:
+            break
+         for check_robot in check_robot_list:
+            #添加碰撞检测器
+            checker = CollisionChecker(check_robot, planning_env)   
+            if checker.check_point_collision(check_joint):
+               continue
+            else:
+               collision_flag = False   
+               break         
+                   
    return collision_flag
 
 
 #过滤得到顶层箱子
-def filter_layer_items(items):
-
-   combined_data = {}
-   for item in items:
-      #建立x,y坐标的键，同一列箱子xy坐标一致
-      key = (round(item.origin.x,2), round(item.origin.y,2))
-      if key not in combined_data.keys():
-         combined_data[key] = item
-      else:   
-         # 只保留Z最大的类实例
-         if item.origin.z > combined_data[key].origin.z:
+def filter_layer_items(items,row_flag=True):
+   #两种模式,一种只取最高层，另一种则是每列箱子的最高层
+   if row_flag:
+      combined_data = {}
+      for item in items:
+         #建立x,y坐标的键，同一列箱子xy坐标一致
+         key = (round(item.origin.x,2), round(item.origin.y,2))
+         if key not in combined_data.keys():
+            #判断原先字典是否有xy近似的key的标志flag
+            check_key_flag = False
+            for check_key in combined_data.keys():
+               #判断绝对值是否小于0.015，如果xy都小于0.015，则认为是同列箱子
+               if abs(item.origin.x-check_key[0])<0.015 and abs(item.origin.y-check_key[1])<0.015:    
+                  check_key_flag = True
+                  break      
+                #如果不存在标志,则说明是个新列                   
+            if not check_key_flag:                    
+               combined_data[key] = item
+            #如果存在,则说明是老列,则需要判断是否保留z最大的实例   
+            else:
+               if item.origin.z > combined_data[check_key].origin.z:
+                  combined_data[check_key] = item        
+         else:   
+            # 只保留Z最大的类实例
+            if item.origin.z > combined_data[key].origin.z:
                combined_data[key] = item
 
-   new_items = list(combined_data.values())
+      new_items = list(combined_data.values())
+        
+   #只考虑最高列,不考虑每列层数不同   
+   else:
+      max_z = max(i.origin.z for i in items)
+      new_items = list(filter(lambda x:abs(x.origin.z-max_z)<0.1,items))
    return new_items
 
 #通过机器人限定搜索范围
@@ -707,7 +771,7 @@ class A_STAR_ASYNC():
    
    def path_check(self,current_process_id,path,container_items,our_robot,check_robot_list,planning_env,init_joints,stop_event):
       current_process_id
-      #偏置
+      #偏置列表
       slide_list = [[0.08, 0.08, 0.07, 0, 0, 0, 1], [0.08, -0.08, 0.07, 0, 0, 0, 1], [-0.08, 0.08, 0.07, 0, 0, 0, 1], [-0.08, -0.08, 0.07, 0, 0, 0, 1]]
       # 遍历路径
       self.logger(f"进程{current_process_id},开始后验路径{path}")
@@ -732,19 +796,91 @@ class A_STAR_ASYNC():
          for check_robot in check_robot_list:
             check_robot.detach_object()  
             check_robot.attach_object(attached_collision_object,[])          
+         
+         #拆分xy偏移精度
+         def split_slide(slide,precision):
+            split_x_length = int(slide[0]/precision)
+            split_y_length = int(slide[1]/precision)
+            new_slide_x = []
+            new_slide_y = []
+            for i in range(1,abs(split_x_length)+1):
+               if split_x_length>0:
+                  if i*precision>=0.014:
+                     new_slide_x.append(i*precision)
+               else:
+                  if -i*precision<=-0.014:
+                     new_slide_x.append(-i*precision)        
+            for i in range(1,abs(split_y_length)+1):
+               if split_y_length>0:
+                  if i*precision>=0.014:
+                     new_slide_y.append(i*precision)
+               else:
+                  if -i*precision<=-0.014:
+                     new_slide_y.append(-i*precision)   
+            return_list = [[x,y]+slide[2:7] for x,y in zip(new_slide_x,new_slide_y)]                               
+            return return_list  
+         
+         def divide_float_into_list(value, precision):
+            # 计算需要多少步骤来从0达到目标值，加1是为了包含最终值本身
+            steps = int(value / precision) + 1
+            # 生成列表，使用round确保浮点数精度问题不会影响结果
+            result = [round(i * precision, 2) for i in range(1, steps)]
+            return result 
+                                   
+         #遍历偏置列表
          slide_flag = False
-         #遍历偏置
          for slide in slide_list:
-            #更新偏置
-            check_item = copy.deepcopy(pick_item)
-            check_item.origin.x = check_item.origin.x+slide[0]
-            check_item.origin.y = check_item.origin.y+slide[1]
-            check_item.origin.z = check_item.origin.z+slide[2]
-            if not check_collision(our_robot,check_robot_list,planning_env,init_joints,check_item,stop_event):
-               slide_flag = True
-               break     
-            else:
-               continue 
+            #xy偏移拆分精度
+            precision = 0.001
+            check_offset_xy_list = split_slide(slide,precision)
+            self.logger(f"check_offset_xy_list is {check_offset_xy_list}")
+            xy_check_collision = False
+            for check_slide_xy in check_offset_xy_list:
+               #更新偏移
+               check_item = copy.deepcopy(pick_item)
+               check_item.origin = Pose(*((SE3(check_slide_xy)*SE3(pose_to_list(check_item.origin))).xyz_quat))
+               if check_collision(our_robot,check_robot_list,planning_env,init_joints,check_item,stop_event):
+                  self.logger(f"后验xy拆分{check_slide_xy}检测到碰撞")
+                  xy_check_collision = True
+                  break
+               else:
+                  continue
+            if xy_check_collision:
+               self.logger(f"偏移点{slide}在XY方向上检测到碰撞")   
+               continue
+            else:                                  
+               #如果xy偏置无干涉,开始后验z方向的偏置   
+               #z方向偏移拆分精度
+               offset_z = slide[2]+0.23
+               z_precision = 0.03
+               offset_list = divide_float_into_list(offset_z,z_precision)
+               self.logger(f"offset_list为{offset_list}")
+               offset_check_slide_list = []
+               for offset in offset_list:
+                  append_check_slide = copy.deepcopy(slide)
+                  append_check_slide[2] = offset 
+                  offset_check_slide_list.append(append_check_slide)    
+               self.logger(f"检查偏移点向上偏移,偏移列表为{offset_check_slide_list}")      
+               z_check_collision = False    
+               for check_slide_z in offset_check_slide_list:  
+                  #更新偏移
+                  check_item = copy.deepcopy(pick_item)
+                  check_item.origin = Pose(*((SE3(check_slide_z)*SE3(pose_to_list(check_item.origin))).xyz_quat))
+                  check_item.origin.z+=0.035                     
+                  if check_collision(our_robot,check_robot_list,planning_env,init_joints,check_item,stop_event):
+                     self.logger(f"后验z拆分{check_slide_z}检测到碰撞")
+                     z_check_collision = True
+                     break     
+                  else:
+                     continue     
+               if z_check_collision:
+                  self.logger(f"偏移点{slide}在Z方向上检测到碰撞")   
+                  continue     
+               else:   
+                  self.logger(f"偏移点{slide}XYZ后验无碰撞")
+                  slide_flag = True
+                  break
+                                                      
          if slide_flag:
             self.logger(f"进程{current_process_id},{node}验证ok,偏置{slide}无碰撞,继续搜索")
             continue
@@ -807,10 +943,12 @@ class A_STAR_ASYNC():
          init_planning_env = copy.copy(planning_env)
          
          # 预先计算所有可能的起始点到目标点的代价
+         init_cost = 0
          for init_node in filtered_items:
             for target_item in pick_items:
                h_cost = self.heuristic_cost_estimate(init_node,target_item)
-               f_cost = h_cost+0
+               f_cost = h_cost+init_cost
+               init_cost+=0.01
                init_node_id = init_node.additional_info.values[-3]
                cost_item = CostItem(f_cost,0,init_node,[init_node.name])    
                open_set.put(cost_item)  
@@ -896,6 +1034,7 @@ class A_STAR_ASYNC():
                   break    
                except Exception as e:
                   self.logger(f"{current_process_id}进程,异常信息{str(e)}")
+                  all_paths = []
                   break  
          # 关闭线程池，不再接受新任务
          executor.shutdown(wait=True)   
@@ -907,7 +1046,7 @@ class A_STAR_ASYNC():
          else:           
             if current_direction!=direction:
                self.logger(f"{current_process_id}进程,{direction}面计算得到{all_paths},但是转向,等待中")
-               wait_time = 120
+               wait_time = 60
                current_time = time.time()
                while True:
                   if time.time()-current_time>wait_time or self.termination_event.is_set():

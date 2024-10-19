@@ -1,0 +1,85 @@
+{
+    "data_source": {
+        "outcome_transitions": {
+            "FMLEHT_depal_vision:0_success --and-- SEBXWT_cache_vision:0_success": 0, 
+            "FMLEHT_depal_vision:0_success --and-- SEBXWT_cache_vision:1_fault": 1, 
+            "FMLEHT_depal_vision:1_fault_task --and-- SEBXWT_cache_vision:0_success": 2, 
+            "FMLEHT_depal_vision:1_fault_task --and-- SEBXWT_cache_vision:1_fault": 3
+        }
+    }, 
+    "data_source_translation": {
+        "/outcome_transitions": "", 
+        "/outcome_transitions/": "", 
+        "/outcome_transitions/FMLEHT_depal_vision:0_success --and-- SEBXWT_cache_vision:0_success": "", 
+        "/outcome_transitions/FMLEHT_depal_vision:0_success --and-- SEBXWT_cache_vision:1_fault": "", 
+        "/outcome_transitions/FMLEHT_depal_vision:1_fault_task --and-- SEBXWT_cache_vision:0_success": "", 
+        "/outcome_transitions/FMLEHT_depal_vision:1_fault_task --and-- SEBXWT_cache_vision:1_fault": "", 
+        "/outcome_transitions/SEBXWT_cache_vision:0_success --and-- FMLEHT_depal_vision:0_success": ""
+    }, 
+    "data_source_type": {
+        "outcome_transitions": {
+            "FMLEHT_depal_vision:0_success --and-- SEBXWT_cache_vision:0_success": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "FMLEHT_depal_vision:0_success --and-- SEBXWT_cache_vision:1_fault": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "FMLEHT_depal_vision:1_fault_task --and-- SEBXWT_cache_vision:0_success": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "FMLEHT_depal_vision:1_fault_task --and-- SEBXWT_cache_vision:1_fault": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }
+    }
+}

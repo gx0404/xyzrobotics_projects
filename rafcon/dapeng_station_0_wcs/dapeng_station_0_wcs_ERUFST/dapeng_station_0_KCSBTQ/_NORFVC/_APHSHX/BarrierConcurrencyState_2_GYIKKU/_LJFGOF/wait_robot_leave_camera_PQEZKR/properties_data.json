@@ -1,0 +1,123 @@
+{
+    "data_source": {
+        "comment": "wait_robot_leave_camera", 
+        "dim_scale": {
+            "X": 0.85, 
+            "Y": 0.9, 
+            "Z": 1.6
+        }, 
+        "robot_id": "0", 
+        "timeout": 10.0, 
+        "workspace_id": "0"
+    }, 
+    "data_source_translation": {
+        "/comment": "模块注释，显示在图形界面中", 
+        "/dim_scale": "", 
+        "/dim_scale/X": "", 
+        "/dim_scale/Y": "", 
+        "/dim_scale/Z": "", 
+        "/robot_id": "机器人的ID号", 
+        "/timeout": "最长等待时间， 单位秒", 
+        "/workspace_id": "", 
+        "/workspace_id_list": "希望离开的workspace组"
+    }, 
+    "data_source_type": {
+        "comment": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "dim_scale": {
+            "X": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "Y": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "Z": {
+                "type_config": {
+                    "current_type": "STATIC", 
+                    "excluded_keys": {}, 
+                    "optional_types": [
+                        "STATIC", 
+                        "INPUT_PORT"
+                    ], 
+                    "value_options": []
+                }
+            }, 
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "robot_id": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "timeout": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }, 
+        "type_config": {
+            "current_type": "STATIC", 
+            "excluded_keys": {}, 
+            "optional_types": [
+                "STATIC", 
+                "INPUT_PORT"
+            ], 
+            "value_options": []
+        }, 
+        "workspace_id": {
+            "type_config": {
+                "current_type": "STATIC", 
+                "excluded_keys": {}, 
+                "optional_types": [
+                    "STATIC", 
+                    "INPUT_PORT"
+                ], 
+                "value_options": []
+            }
+        }
+    }
+}
