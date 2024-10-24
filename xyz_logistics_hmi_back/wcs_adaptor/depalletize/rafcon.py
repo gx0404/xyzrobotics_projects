@@ -396,7 +396,7 @@ def get_task_info():
                 report_depal_task_finish(task,pallet_tote_data,agv_direction,error=98)   
                 task.end() 
                 clear_all_pallet_data()
-            mp.order.error("拣配任务被wcs终止结束")
+            mp.order.error("任务被wcs终止结束")
             output_data = GetTaskInfoOutputSchema()
             data = output_data.dict(by_alias=True)
             return make_json_response(data=data, error=0, **data)
@@ -433,6 +433,7 @@ def get_task_info():
 
         output_data.customized_data = task.customized_data
         output_data.lower_layer = task.lower_layer
+        output_data.lower_speed = task.lower_speed
 
         if task.order_id:
             # order存在且开始时间为None, 则说明当前任务是该订单的第一个任务, 即更新开始时间.

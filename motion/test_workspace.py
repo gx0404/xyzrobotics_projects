@@ -96,13 +96,13 @@ collision_4 = build_collision(name="col_4", origin=[0.052, -3.5, -0.32+1.5/2, 0,
 collision_13 = build_collision(name="col_13", origin=[0, 0 ,3, 0, 0, 0, 1], dimensions=[5, 5,0.11], geometric_type=GeometricPrimitive.BOX, alpha=0.1)
 
 #相机立柱
-collision_5 = build_collision(name="col_5", origin=[0.893, 2.824, -0.07000, 0, 0, 0, 1], dimensions=[2.8, 0.2+0.02], geometric_type=GeometricPrimitive.CYLINDER, alpha=0.2)
+collision_5 = build_collision(name="col_5", origin=[0.95, 2.824, -0.07000, 0, 0, 0, 1], dimensions=[2.8, 0.2+0.02], geometric_type=GeometricPrimitive.CYLINDER, alpha=0.2)
 #相机立柱2
-collision_18 = build_collision(name="col_18", origin=[0.9430, 2.824, 1.5, 0, 0, 0, 1], dimensions=[2, 0.17], geometric_type=GeometricPrimitive.CYLINDER, alpha=0.2)
+collision_18 = build_collision(name="col_18", origin=[0.95, 2.824, 1.5, 0, 0, 0, 1], dimensions=[2, 0.17], geometric_type=GeometricPrimitive.CYLINDER, alpha=0.2)
 
 
 #相机
-collision_6 = build_collision(name="col_6", origin=[-0.08, 1.75, 2.43+0.04, 0, 0, 0, 1], dimensions=[1,1,0.2], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
+collision_6 = build_collision(name="col_6", origin=[-0.08, 1.75, 2.43+0.04, 0, 0, 0, 1], dimensions=[1.5,1.5,0.2], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
 
 #相机斜杆
 collision_7 = build_collision(name="col_7", origin=[0.05, 2.4, 2.3,  0.08682408, -0.49240388,  0.15038371,  0.85286854], dimensions=[1.5, 0.11], geometric_type=GeometricPrimitive.CYLINDER, alpha=0.2)
@@ -195,9 +195,9 @@ all_robots.robot_configs.append(robot_config)
 
 tool_name = "tool1"
 
-tip_primitive_1 = bulid_tip_primitive(tool_name = tool_name, id="tp_1", tf_tool_region=(0.13207,
+tip_primitive_1 = bulid_tip_primitive(tool_name = tool_name, id="tp_1", tf_tool_region=(0.13107,
  0,
- 0.77994,
+ 0.782879,
  -0.0,
  0.0,
  0.70710678,
@@ -305,7 +305,7 @@ tool_name = "tool2"
 
 tip_primitive_1 = bulid_tip_primitive(tool_name = tool_name, id="tp_1", tf_tool_region=([0.13403,
  -0.00065,
- 0.765,
+ 0.7646,
  0.0,
  -0.0,
  0.0,

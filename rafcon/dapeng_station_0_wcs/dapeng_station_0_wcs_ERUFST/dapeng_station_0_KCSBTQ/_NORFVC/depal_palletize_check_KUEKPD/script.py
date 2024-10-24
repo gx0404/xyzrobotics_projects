@@ -238,7 +238,7 @@ def execute(self, inputs, outputs, gvm):
                 self.logger.info(f"视觉角度,数据库角度为{z_angle},z角度偏差大于10°") 
                 raise f"z角度偏差大于10°"             
             #偏置
-            tf_base_box_real = SE3([0.0055,-0.003,0,0,0,0,1])*tf_base_box_real
+            #tf_base_box_real = SE3([0.0055,-0.003,0,0,0,0,1])*tf_base_box_real
             container_item.origin = Pose(*tf_base_box_real.xyz_quat)                           
         else:
             self.logger.info(f"托盘数据缺少位置号{box_id}")

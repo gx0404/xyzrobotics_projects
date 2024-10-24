@@ -5,6 +5,7 @@ from xyz_env_manager.client import get_planning_environment,modify_primitive_gro
 from xyz_motion import PlanningEnvironmentRos
 from xyz_env_manager.client import modify_workspace_of_environment
 from xyz_env_manager.client import clear_planned_items
+from xyz_env_manager.msg import Pose
 def execute(self, inputs, outputs, gvm):
     """ 
     Output a constant value.
@@ -85,16 +86,35 @@ def execute(self, inputs, outputs, gvm):
         
     pl = get_planning_environment()    
     pl_workspace_2 = pl.workspaces[2]
-    pl_workspace_2.dimensions = (1.22, 0.815, 1.62)   
+    pl_workspace_2.bottom_pose.z = -1.282
+    pl_workspace_2.dimensions = (1.22, 0.83, 1.62)   
     pl_workspace_2.pallet.length = 1.22
-    pl_workspace_2.pallet.width = 0.815
+    pl_workspace_2.pallet.width = 0.83
+    pl_workspace_2.pallet.top_origin.z = -1.282
     
-    pl_workspace_3 = pl.workspaces[3]     
-    pl_workspace_3.dimensions = (1.22, 0.815, 1.62)    
+    pl_workspace_3 = pl.workspaces[3] 
+    pl_workspace_3.bottom_pose.z = -1.282     
+    pl_workspace_3.dimensions = (1.22, 0.83, 1.62)    
     pl_workspace_3.pallet.length = 1.25
-    pl_workspace_3.pallet.width = 0.815   
+    pl_workspace_3.pallet.width = 0.83  
+    pl_workspace_3.pallet.top_origin.z = -1.282  
+    
     modify_workspace_of_environment(pl_workspace_2)
     modify_workspace_of_environment(pl_workspace_3) 
+    
+    #初始化工作空间
+    pl_workspace_0 = pl.workspaces[0]
+    pl_workspace_0.bottom_pose = Pose(*[-0.15, 1.85+0.02, -1.121, 0.0, 0.0, 0.0, 1])    
+    modify_workspace_of_environment(pl_workspace_0)
+        
+    pl_workspace_1 = pl.workspaces[1]
+    pl_workspace_1.bottom_pose = Pose(*[-2, 1.1, -1.121, 0.0, 0.0, 0.707, 0.707])    
+    modify_workspace_of_environment(pl_workspace_1)
+    
+    pl_workspace_4 = pl.workspaces[4]
+    pl_workspace_4.bottom_pose = Pose(*[-1.92, -0.9, -1.121, 0.0, 0.0, 0.707, 0.707])    
+    modify_workspace_of_environment(pl_workspace_4)    
+
 
     sku_dimension = [sku_info_default["length"],sku_info_default["width"],sku_info_default["height"]]
     sku_dimension = list(map(lambda x:round(x,3),sku_dimension))
@@ -113,37 +133,18 @@ def execute(self, inputs, outputs, gvm):
         gvm.set_variable("depal_scan_code", 1, per_reference=False)
         gvm.set_variable("cache_scan_code", 2, per_reference=False)
         gvm.set_variable("merge_cache_scan_code", 3, per_reference=False)
+        gvm.set_variable("cage_scan_code", [12,13], per_reference=False)
         sku_info_default["row"] = 9
-        switch_tool("0","tool1")
-        rob_driver.set_digital_output(1,0)
-        rob_driver.set_digital_output(13,1)
-        #笼车障碍物清除
-        #更新笼车围栏障碍物
-        collision_pallet_list = ["collision_pallet_2","collision_pallet_3"]
-        for collision_objcet in pl.collision_objects:
-            if collision_objcet.name in collision_pallet_list:
-                self.logger.info(f"更新笼车围栏障碍物{collision_objcet.name}")
-                # collision_objcet.primitives[0].dimensions = [0.01,0.01,0.01] 
-                collision_objcet.primitives[0].dimensions = [0.87, 0.11,1.7]
-                modify_primitive_group_of_environment(collision_objcet)          
+        switch_tool("0","tool1")     
     elif sku_dimension==[0.6,0.4,0.23]:
         sku_info_default["overlapping_heihgt"] = 0.01
         gvm.set_variable("depal_scan_code", 4, per_reference=False)
         gvm.set_variable("cache_scan_code", 5, per_reference=False)
         gvm.set_variable("merge_cache_scan_code", 6, per_reference=False)
+        gvm.set_variable("cage_scan_code", 5, per_reference=False)
         sku_info_default["row"] = 5
         switch_tool("0","tool2")
-        rob_driver.set_digital_output(1,1)
-        rob_driver.set_digital_output(13,0)
-        #笼车障碍物清除
-        pl = get_planning_environment()
-        #更新笼车围栏障碍物
-        collision_pallet_list = ["collision_pallet_2","collision_pallet_3"]
-        for collision_objcet in pl.collision_objects:
-            if collision_objcet.name in collision_pallet_list:
-                self.logger.info(f"更新笼车围栏障碍物{collision_objcet.name}")
-                collision_objcet.primitives[0].dimensions = [0.87, 0.11,1.7]
-                modify_primitive_group_of_environment(collision_objcet)             
+            
     else:
         raise "无效的尺寸"  
     gvm.set_variable("row", sku_info_default["row"], per_reference=False)

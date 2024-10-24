@@ -110,18 +110,62 @@ def robot_status():
     from xyz_motion import RobotDriver,create_kinesolver
     from py_xyz_robot import robot_config
     import numpy as np
-    time.sleep(0.05)
+    # time.sleep(0.05)
     try:
-        robot_name = robot_config.get_robot_name(0)
-        kinematic_solver = create_kinesolver(robot_name)
-        r = RobotDriver(0)
-        joints = kinematic_solver.convert_four_dof_to_six(list(r.get_joints()))
-        joints.pop(2)
-        joints[3]+=1.5707963267948966
-        joints = np.rad2deg(joints).tolist()
-        return make_json_response(error=0,robot_joints = joints,status="running")    
-    except:
-        return make_json_response(error=0,robot_joints = [],status="stop")     
+        # robot_name = robot_config.get_robot_name(0)
+        # kinematic_solver = create_kinesolver(robot_name)
+        # r = RobotDriver(0)
+        # joints = kinematic_solver.convert_four_dof_to_six(list(r.get_joints()))     
+        # joints.pop(2)
+        # joints[3]+=1.5707963267948966
+        # joints = np.rad2deg(joints).tolist()
+        
+        # from xyz_io_client.io_client import get_digit_input
+        # joints = []
+        # abs_aixs_list = [get_digit_input("3",i) for i in range(6,12)] 
+        # negative_aixs_list = [get_digit_input("3",i) for i in range(12,18)] 
+        # do_value_list = [get_digit_input("3",i) for i in range(109,141)]  
+        # for index, value in enumerate(negative_aixs_list):
+        #     if value == 1:
+        #         joints.append(-abs_aixs_list[index]/100)
+        #     else:
+        #         joints.append(abs_aixs_list[index]/100)
+        
+        # do_value_list = [get_digit_input("3",i) for i in range(109,141)]   
+        # do_value_dict = {}       
+        # for index,value in enumerate(do_value_list):
+        #     key = "DO"+str(index)
+        #     do_value_dict[key] = do_value_list[bool(value)]
+
+        from plc import plc_snap7
+        plc = plc_snap7()
+        plc.connect("192.168.36.5")
+        
+        joints = [i/100 for i in plc.get_ints("db",0,6,3)]
+        do_value_dict = {}
+        do_value_list = plc.get_ints("db",218,32,3)
+        for index,value in enumerate(do_value_list):
+            key = "DO"+str(index+1)
+            do_value_dict[key] = bool(do_value_list[index])
+            
+        di_value_dict = {}
+        di_value_list = plc.get_ints("db",282,32,3)
+        for index,value in enumerate(di_value_list):
+            key = "DI"+str(index+1)
+            di_value_dict[key] = bool(di_value_list[index])   
+                 
+        robot_status = bool(plc.get_ints("db",346,1,3)[0])
+        system_status =  current_app.status                            
+        return make_json_response(error=0,error_msg="",robot_joints = joints,
+                                  do_value_dict = do_value_dict,di_value_dict = di_value_dict,                                  
+                                  robot_status="running"if robot_status else "stop",
+                                  system_status="running" if system_status=="ready" else "stop")    
+    except Exception as e:
+        wcs_log.error(f"robot_status error,error is :{e}")
+        #import ipdb;ipdb.set_trace()
+        return make_json_response(error=1,error_msg=str(e),rrobot_joints = [],
+                                  do_value_dict = {},di_value_dict={},
+                                  robot_status="stop", system_status="stop")     
 
 
 
@@ -333,6 +377,33 @@ def depal_task(body: SingleTaskCreateSchema):
     else:
         mp.order.error(f"wcs下发拣配任务sku类型错误")        
         return make_json_response(error=1,error_message="sku_type error")
+    
+    #判断上一次任务类型
+    last_data = get_last_task_type()
+    last_task = last_data["0"]
+    if last_task['task_type'] != TaskType.SINGLE_DEPAL.value:
+        mp.order.info(f"上次任务类型为{TASK_TYPE_DESC[last_task['task_type'].value]},需要清空所有环境")  
+        pallet_clear_list = ["0","1","2","3","4","5","6","7","8"]
+    else:
+        pallet_clear_list = body.pallet_clear_list      
+    
+    
+    try:
+        from xyz_env_manager.client import get_planning_environment
+        from xyz_motion import PlanningEnvironmentRos
+        pl = get_planning_environment()
+        planning_env = PlanningEnvironmentRos.from_ros_msg(pl)
+        container_items_2 = planning_env.get_container_items("2")
+        container_items_3 = planning_env.get_container_items("3")
+        if container_items_2:
+            sku_dimension_2 = container_items_2[0].primitives[0].dimensions
+            sku_dimension_2 = list(map(lambda x:round(x,2),sku_dimension_2))
+        if container_items_3:
+            sku_dimension_3 = container_items_3[0].primitives[0].dimensions
+            sku_dimension_3 = list(map(lambda x:round(x,2),sku_dimension_3))                
+    except ImportError as err:
+        return make_json_response(error=5,error_message="环境节点未启动,请在HMI中启动环境节点") 
+    
     #检查wcs下发的托盘条码是否和目标条码一致
     for key,item in body.pick_tote_data.items():
         if key not in body.pallet_tote_data.keys():
@@ -342,23 +413,41 @@ def depal_task(body: SingleTaskCreateSchema):
             mp.order.error(f"wcs下发拣配任务目标箱条码和托盘对应条码不一致")
             return make_json_response(error=2,error_message="目标箱条码和托盘对应条码不一致")
         if body.sku_type==0:
-            if item["to_ws"] != "6":
-                mp.order.error(f"中欧箱目标箱终点必须为输送线")    
-                return make_json_response(error=3,error_message="中欧箱目标箱终点必须为输送线") 
+            if item["to_ws"]=="2":
+                body.lower_speed = True
+                if container_items_2:
+                    if sku_dimension_2!=[0.4,0.3,0.23] and ("2" not in pallet_clear_list):
+                        mp.order.error(f"当前空间2环境已存在大欧箱,订单却下发空间2中欧箱")  
+                        return make_json_response(error=6,error_message="当前空间2环境已存在大欧箱,订单却下发空间2中欧箱")   
+            elif item["to_ws"]=="3":
+                body.lower_speed = True
+                if container_items_3:
+                    if sku_dimension_3!=[0.4,0.3,0.23] and ("3" not in pallet_clear_list):
+                        mp.order.error(f"当前空间3环境已存在大欧箱,订单却下发空间2中欧箱")  
+                        return make_json_response(error=6,error_message="当前空间3环境已存在大欧箱,订单却下发空间2中欧箱")  
+            elif item["to_ws"]=="6":
+                pass
+            else:
+                mp.order.error(f"中欧箱目标箱终点必须为笼车或者输送线")     
+                return make_json_response(error=3,error_message="中欧箱目标箱终点必须为笼车或者输送线")          
+                                       
         if body.sku_type==1:
-            if item["to_ws"] not in ["2","3","6"]:
-                mp.order.error(f"大欧箱目标箱终点必须为笼车或者输送线")    
-                return make_json_response(error=4,error_message="大欧箱目标箱终点必须为笼车或者输送线")        
-    
-    
-    #判断上一次任务类型
-    last_data = get_last_task_type()
-    last_task = last_data["0"]
-    if last_task['task_type'] != TaskType.SINGLE_DEPAL.value:
-        mp.order.info(f"上次任务类型为{TASK_TYPE_DESC[last_task['task_type'].value]},需要清空所有环境")  
-        pallet_clear_list = ["0","1","2","3","4","5","6","7","8"]
-    else:
-        pallet_clear_list = body.pallet_clear_list              
+            if item["to_ws"]=="2":
+                if container_items_2:
+                    if sku_dimension_2!=[0.6,0.4,0.23] and ("2" not in pallet_clear_list):
+                        mp.order.error(f"当前空间2环境已存在中欧箱,订单却下发空间2大欧箱")  
+                        return make_json_response(error=6,error_message="当前空间2环境已存在中欧箱,订单却下发空间2大欧箱")   
+            elif item["to_ws"]=="3":
+                if container_items_3:
+                    if sku_dimension_3!=[0.6,0.4,0.23]and ("3" not in pallet_clear_list):
+                        mp.order.error(f"当前空间3环境已存在中欧箱,订单却下发空间2大欧箱")  
+                        return make_json_response(error=6,error_message="当前空间3环境已存在中欧箱,订单却下发空间2大欧箱")  
+            elif item["to_ws"]=="6":
+                pass
+            else:
+                mp.order.error(f"大欧箱目标箱终点必须为笼车或者输送线")     
+                return make_json_response(error=3,error_message="大欧箱目标箱终点必须为笼车或者输送线")               
+                              
                   
     # 创建新任务
     task = Task(
@@ -373,6 +462,7 @@ def depal_task(body: SingleTaskCreateSchema):
         pallet_clear_list = pallet_clear_list,
         customized_data = body.pick_tote_data,
         lower_layer = body.lower_layer,
+        lower_speed = body.lower_speed,
     )
     task_manager.append(task)
 

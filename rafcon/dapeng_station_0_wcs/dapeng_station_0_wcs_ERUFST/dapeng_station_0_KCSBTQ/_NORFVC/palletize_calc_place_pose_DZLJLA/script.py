@@ -106,14 +106,14 @@ def execute(self, inputs, outputs, gvm):
             box_pose = [[0, 0, h, 0, 0, 0, 1]]
         elif (barcode_direction in [3, 4] and barcode_point_to == "+x") or (barcode_direction in [1, 2] and barcode_point_to == "+y"):
             box_dims = [l, w, h]
-            box_pose = [[0-0.05, 0, h+0.015, 0, 0, 1, 0]]   
+            box_pose = [[0-0.05-0.01, 0, h+0.015, 0, 0,  0.99996192, 0.00872649]]   
             # box_pose = [[0, 0, h, 0, 0, 1, 0]]
         elif (barcode_direction in [3, 4] and barcode_point_to == "-x") or (barcode_direction in [1, 2] and barcode_point_to == "-y"):
             box_dims = [l, w, h]
             box_pose = [[0, 0, h, 0, 0, 0, 1]]
         elif (barcode_direction in [3, 4] and barcode_point_to == "-y") or (barcode_direction in [1, 2] and barcode_point_to == "+x"):
             box_dims = [w, l, h]
-            box_pose = [[(L-l)/2, 0, h, 0, 0, 0.7071, 0.7071]]
+            box_pose = [[(L-l)/2-0.01, 0, h, 0, 0, 0.7071, 0.7071]]
         elif (barcode_direction in [3, 4] and barcode_point_to == "+y") or (barcode_direction in [1, 2] and barcode_point_to == "-x"):
             box_dims = [w, l, h]
             box_pose = [[0, 0, h, 0, 0, -0.7071, 0.7071]]

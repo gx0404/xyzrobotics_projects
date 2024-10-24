@@ -443,7 +443,7 @@ def execute(self, inputs, outputs, gvm):
 
     def build_primitive(info,pose_dict,cache_pallet_tote_data):
         tf_world_origin = SE3(info["pose"][0:7])
-        tf_world_origin = SE3([0.0045,-0.0025,0,0,0,0,1])*tf_world_origin
+        #tf_world_origin = SE3([0.0045,-0.0025,0,0,0,0,1])*tf_world_origin
         
         vision_box_proxy = FormattedRealBox(id = int(info["id"]), 
                                     tf_world_origin = tf_world_origin, 

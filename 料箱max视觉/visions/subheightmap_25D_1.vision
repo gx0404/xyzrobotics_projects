@@ -5,7 +5,7 @@ nodes:
       name: XYZCamera
       params:
         type: XYZ
-        id: L340XP043090009
+        id: L340XP043110009
         cfg: camera_configs/ls_eye_on_hand.json
         capture_timeout: 5000
         retake_num: 5
@@ -434,8 +434,8 @@ nodes:
       params:
         calib_file: calibration/camera/eye_on_hand/camera_extrinsic.yml
     position:
-      x: -5129.8821365759977
-      y: -24.681369599999925
+      x: -5333.5787765759997
+      y: -40.196569599999918
   - id: "{3537d5bb-99bc-42a1-88e8-2d3010d52b87}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -957,8 +957,8 @@ nodes:
         z_tolerance: 0.003
         neighbor: 24
     position:
-      x: -716.77439999999979
-      y: 2213.2511999999988
+      x: -716.7743999999999
+      y: 2211.5231999999983
   - id: "{87432e36-14f1-483d-a468-43b2687b6b38}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1490,8 +1490,8 @@ nodes:
       x: 3013.5714785789928
       y: 2676.2341716026694
     embedded_widget_rect:
-      w: 256
-      h: 211
+      w: 694
+      h: 599
   - id: "{e36cf5ca-c76c-48c3-9227-52dbd899cc1f}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:

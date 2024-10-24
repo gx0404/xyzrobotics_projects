@@ -4,10 +4,10 @@ import yaml,json
 from xyz_vision_lib.xyz_vision_bridge import XYZVisionBridge
 
 def change_recipe(self,camera_quadrant_list,sku_type,vision_bridge):
-    quadrant_camera_id_dict = {0: "L340XP04306C005", 
-                                1: "L340XP04404R025",
-                                2: "L340XP043090015",
-                                3: "L340XP043070014"}
+    quadrant_camera_id_dict = {0: "L340XP044010001", 
+                                1: "L340XP043080017",
+                                2: "L340XP044010015",
+                                3: "L340XP043110024"}
     recipe_path_dict = {
         1:"/home/xyz/xyz_app/app/料箱max视觉/visions/one_camera.yml",
         2:"/home/xyz/xyz_app/app/料箱max视觉/visions/two_camera.yml",

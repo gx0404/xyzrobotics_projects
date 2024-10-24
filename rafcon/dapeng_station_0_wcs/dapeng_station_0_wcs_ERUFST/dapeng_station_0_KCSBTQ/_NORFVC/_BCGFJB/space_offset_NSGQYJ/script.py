@@ -78,7 +78,7 @@ def execute(self, inputs, outputs, gvm):
         elif place_workspace_id in ["3"]:
             outputs["place_drop_buffer"] = -0.015              
         else:
-            outputs["place_drop_buffer"] = 0.01    
+            outputs["place_drop_buffer"] = 0.02    
     else:
         raise "无效的row"     
         

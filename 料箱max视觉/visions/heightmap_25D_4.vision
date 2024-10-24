@@ -117,7 +117,7 @@ nodes:
       name: XYZCamera
       params:
         type: XYZ
-        id: L340XP043090009
+        id: L340XP043110009
         cfg: camera_configs/ls_eye_on_hand.json
         capture_timeout: 5000
         retake_num: 5
@@ -157,7 +157,7 @@ nodes:
         log_frame_tree: false
         clear_all_data: false
     position:
-      x: -308.20806533887401
+      x: -306.76806533887401
       y: -1135.2631807999999
   - id: "{6634169c-7da2-425b-8318-7c557479cdb1}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"

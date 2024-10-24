@@ -32,6 +32,15 @@
             }, 
             "default_value": null, 
             "name": "pose_dict"
+        }, 
+        "6": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 6, 
+            "data_type": {
+                "__type__": "__builtin__.dict"
+            }, 
+            "default_value": null, 
+            "name": "cache_pallet_tote_data"
         }
     }, 
     "name": "get_vision_result_vf", 
