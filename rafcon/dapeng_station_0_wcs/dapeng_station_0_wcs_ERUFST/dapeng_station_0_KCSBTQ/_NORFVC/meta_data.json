@@ -489,7 +489,7 @@
     "transition29": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": {}
+                "waypoints": []
             }
         }
     }, 
@@ -725,6 +725,13 @@
             }
         }
     }, 
+    "transition7": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
+            }
+        }
+    }, 
     "transition72": {
         "gui": {
             "editor_gaphas": {
@@ -824,13 +831,6 @@
         }
     }, 
     "transition9": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
-    "transition90": {
         "gui": {
             "editor_gaphas": {
                 "waypoints": []

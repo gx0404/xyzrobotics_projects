@@ -213,13 +213,13 @@ nodes:
       params:
         dataset_folder: xyz_pose_estimator_dataset
         spread_and_pyr:
-          - 6
+          - 4
           - 8
         detection_targets:
           - 400_300_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 90
+        min_detection_score: 85
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 9
@@ -326,8 +326,8 @@ nodes:
       x: 2438.8298935468015
       y: 1380.1723391430642
     embedded_widget_rect:
-      w: 256
-      h: 211
+      w: 711
+      h: 461
   - id: "{27601311-1690-48fd-ac98-1f2009bad701}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -641,16 +641,6 @@ nodes:
     embedded_widget_rect:
       w: 602
       h: 508
-  - id: "{4c6a6cec-806c-4ac8-b81f-a5fb48981e18}"
-    parent_id: "{00000000-0000-0000-0000-000000000000}"
-    model:
-      name: MergeVector
-      params:
-        element_number: 2
-        input_type: Cloud
-    position:
-      x: 1992.783749608242
-      y: 1594.2844850425845
   - id: "{4ff95498-df08-4e7e-aa0e-dd9368e12e6a}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1357,8 +1347,8 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: 1494.3113993354168
-      y: 1721.0820954134558
+      x: 1438.3241993354168
+      y: 1826.8356954134556
     embedded_widget_rect:
       w: 575
       h: 394
@@ -1487,11 +1477,11 @@ nodes:
       name: DataShow
       params: ~
     position:
-      x: 3013.5714785789928
-      y: 2676.2341716026694
+      x: 2880.2381452456598
+      y: 2561.6508382693364
     embedded_widget_rect:
-      w: 694
-      h: 599
+      w: 844
+      h: 1054
   - id: "{e36cf5ca-c76c-48c3-9227-52dbd899cc1f}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1501,8 +1491,8 @@ nodes:
       x: 1561.6047013684695
       y: 3013.1601083472642
     embedded_widget_rect:
-      w: 325
-      h: 248
+      w: 710
+      h: 412
   - id: "{e5ad2dad-05ce-4ec4-a549-1502c62c42db}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -1847,11 +1837,6 @@ connections:
     in_id: "{df6401e7-a1ff-46fb-b85f-8db6ec284ff5}"
     in_index: 0
     out_id: "{02df84da-fe57-4fca-bcaf-fa9a3e00124f}"
-    out_index: 0
-  - id: "{25e09cb4-72aa-4fd4-8072-7db9cfc7279f}"
-    in_id: "{1e8cb48a-aa30-470a-8d79-47284f00a554}"
-    in_index: 0
-    out_id: "{4c6a6cec-806c-4ac8-b81f-a5fb48981e18}"
     out_index: 0
   - id: "{25f9d201-748d-4caa-85dd-9c35278c3707}"
     in_id: "{c956010f-9879-43a9-95ab-b273765098db}"
@@ -2258,6 +2243,11 @@ connections:
     in_index: 0
     out_id: "{5df16547-1735-4815-810a-e6980216899d}"
     out_index: 0
+  - id: "{9c5602ad-5437-40b9-b56d-53c846ab450b}"
+    in_id: "{1e8cb48a-aa30-470a-8d79-47284f00a554}"
+    in_index: 0
+    out_id: "{1b2dacf0-6ebc-40e8-8ca4-3bd79c0c5f93}"
+    out_index: 0
   - id: "{9e3bdcd5-40de-416c-85b9-1b320c6e91ee}"
     in_id: "{7d601fe9-5688-43c5-aa37-062bde53026a}"
     in_index: 0
@@ -2318,11 +2308,6 @@ connections:
     in_index: 1
     out_id: "{f2f50302-679e-47de-961f-b04f7e59b1bc}"
     out_index: 0
-  - id: "{b23fa1a2-b9a0-407a-aaf5-84bab22d9c11}"
-    in_id: "{4c6a6cec-806c-4ac8-b81f-a5fb48981e18}"
-    in_index: 1
-    out_id: "{2ddc8368-0b79-49a2-bd77-7fdd1c2d3a37}"
-    out_index: 2
   - id: "{b265644b-a615-4c8f-8b07-b8b30395e5a6}"
     in_id: "{5df16547-1735-4815-810a-e6980216899d}"
     in_index: 0
@@ -2567,11 +2552,6 @@ connections:
     in_id: "{9830665b-4d8a-4413-8588-fbed892bbafb}"
     in_index: 0
     out_id: "{2af10e30-2d7d-449f-9e5b-b0f3c8c15691}"
-    out_index: 1
-  - id: "{f6b7f77d-598b-4867-b393-d08adc4b67b1}"
-    in_id: "{4c6a6cec-806c-4ac8-b81f-a5fb48981e18}"
-    in_index: 0
-    out_id: "{2ddc8368-0b79-49a2-bd77-7fdd1c2d3a37}"
     out_index: 1
   - id: "{f90e2501-cc73-4175-b2bf-654c20a88dc9}"
     in_id: "{aa16e927-d00e-40dd-b264-a1eb4442f6bd}"

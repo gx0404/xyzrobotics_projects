@@ -70,15 +70,19 @@ def execute(self, inputs, outputs, gvm):
         self.logger.info("row is 9")    
         #缓存区
         if place_workspace_id == "1":
-            outputs["place_drop_buffer"] = 0.003
+            outputs["place_drop_buffer"] = -0.003
         #笼车     
         elif place_workspace_id in ["2"]:
-            outputs["place_drop_buffer"] = -0.015 
+            outputs["place_drop_buffer"] = -0.02
         #笼车     
         elif place_workspace_id in ["3"]:
-            outputs["place_drop_buffer"] = -0.015              
+            outputs["place_drop_buffer"] = -0.02
+        #输送线 
+        elif place_workspace_id in ["6"]:
+            outputs["place_drop_buffer"] = 0.015  
+        #笼车缓存区                            
         else:
-            outputs["place_drop_buffer"] = 0.02    
+            outputs["place_drop_buffer"] = 0.0   
     else:
         raise "无效的row"     
         
@@ -118,10 +122,10 @@ def execute(self, inputs, outputs, gvm):
         # else:
         #     raise "无效的place ID"                                        
     else:    
-        place_relative_poses = [[0.06, 0.06, 0.07, 0, 0, 0, 1], 
-                          [0.06, -0.06, 0.07, 0, 0, 0, 1], 
-                          [-0.06, 0.06, 0.07, 0, 0, 0, 1], 
-                          [-0.06, -0.06, 0.07, 0, 0, 0, 1]]  
+        place_relative_poses = [[0.05, 0.05, 0.07, 0, 0, 0, 1], 
+                          [0.05, -0.05, 0.07, 0, 0, 0, 1], 
+                          [-0.05, 0.05, 0.07, 0, 0, 0, 1], 
+                          [-0.05, -0.05, 0.07, 0, 0, 0, 1]]  
     outputs["place_relative_poses"] = place_relative_poses    
     if not grasp_plan:
         raise "需要连接grasp plan"

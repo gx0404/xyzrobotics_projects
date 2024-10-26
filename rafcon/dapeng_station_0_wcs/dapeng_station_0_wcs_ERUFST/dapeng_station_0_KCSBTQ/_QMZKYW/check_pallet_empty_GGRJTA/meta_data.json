@@ -135,28 +135,6 @@
             }
         }
     }, 
-    "transition101": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": [
-                    {
-                        "__jsonqualname__": "__builtin__.tuple", 
-                        "items": [
-                            118.08523743147879, 
-                            21.40320920639271
-                        ]
-                    }, 
-                    {
-                        "__jsonqualname__": "__builtin__.tuple", 
-                        "items": [
-                            75.17493075489813, 
-                            21.40320920639271
-                        ]
-                    }
-                ]
-            }
-        }
-    }, 
     "transition32": {
         "gui": {
             "editor_gaphas": {
@@ -178,6 +156,35 @@
             }
         }
     }, 
+    "transition5": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
+            }
+        }
+    }, 
+    "transition6": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": [
+                    {
+                        "__jsonqualname__": "__builtin__.tuple", 
+                        "items": [
+                            158.81766767332073, 
+                            59.24090321448977
+                        ]
+                    }, 
+                    {
+                        "__jsonqualname__": "__builtin__.tuple", 
+                        "items": [
+                            115.90736099674007, 
+                            59.24090321448977
+                        ]
+                    }
+                ]
+            }
+        }
+    }, 
     "transition92": {
         "gui": {
             "editor_gaphas": {
@@ -186,13 +193,6 @@
         }
     }, 
     "transition93": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
-    "transition95": {
         "gui": {
             "editor_gaphas": {
                 "waypoints": []

@@ -126,7 +126,7 @@ collision_12 = build_collision(name="col_12", origin=[1.15, -2.57, -0.456-1.1/2-
 collision_14 = build_collision(name="col_14", origin=[-0.8, -0.15, -0.2, 0, 0, 0, 1], dimensions=[0.15, 0.7,0.94], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
 
 #相机立柱扫码器2
-collision_17 = build_collision(name="col_17", origin=[1.2, 2.85, 0.73,  0.0, 0.0, 0.08715573006937669, 0.996194699207021], dimensions=[0.35, 0.11,0.33], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
+collision_17 = build_collision(name="col_17", origin=[1.2, 2.92, 0.73,  0.0, 0.0, 0.08715573006937669, 0.996194699207021], dimensions=[0.35, 0.11,0.33], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
 
 # 创建复杂障碍物(由多个几何体组成，一般不需要)，可以参考以下代码
 # combined_collision = PrimitiveGroup(name="col_combined", origin=Pose(2.7041, -0.802, 0.8, 0, 0, 0, 1))
@@ -197,7 +197,7 @@ tool_name = "tool1"
 
 tip_primitive_1 = bulid_tip_primitive(tool_name = tool_name, id="tp_1", tf_tool_region=(0.13107,
  0,
- 0.782879,
+ 0.790,
  -0.0,
  0.0,
  0.70710678,

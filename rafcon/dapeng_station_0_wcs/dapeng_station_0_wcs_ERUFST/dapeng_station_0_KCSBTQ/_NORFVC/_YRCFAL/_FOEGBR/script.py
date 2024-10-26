@@ -74,9 +74,9 @@ def execute(self, inputs, outputs, gvm):
     for i in range(3):
         self.logger.info(f"{aixs_list[i]}方向偏差为{pallet_pose[i]-check_pose[i]}")  
     pallet_pose[2]+=0.017    
-    if abs(pallet_pose[0]-check_pose[0])>0.05:
+    if abs(pallet_pose[0]-check_pose[0])>0.04:
         raise "x方向偏差过大"     
-    if abs(pallet_pose[1]-check_pose[1])>0.05:
+    if abs(pallet_pose[1]-check_pose[1])>0.03:
         raise "y方向偏差过大" 
     if abs(pallet_pose[2]-check_pose[2])>0.05:
         raise "z方向偏差过大"  
@@ -99,6 +99,8 @@ def execute(self, inputs, outputs, gvm):
     #work_space_ros = list(filter(lambda x:x.workspace_id==space_id,pl.workspaces))[0]
     tf_world_tote = SE3(pose_to_list(space_env_ros.pallet.top_origin)).homogeneous
     update_pose = modify_z_axis(update_pose, fraction, tf_world_tote)
+    
+    update_pose[0]-=0.01
     
     space_env_ros.bottom_pose = Pose(*update_pose)
     modify_workspace_of_environment(space_env_ros)  

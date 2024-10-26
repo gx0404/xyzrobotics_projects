@@ -83,7 +83,36 @@ def execute(self, inputs, outputs, gvm):
             else:
                 self.logger.info(f"视觉角度,数据库角度为{z_angle},z角度偏差大于10°") 
                 raise f"z角度偏差大于10°"   
-                    
+            
+            #偏置
+            row = gvm.get_variable("row", per_reference=False, default=None)
+            if row==5:
+                row_id = int(box_id)%row
+                lay_id = int(box_id)//row                  
+                # if row_id in [1,2,3]:                    
+                #     tf_base_box_real = SE3([0.002,-0.002,0,0,0,0,1])*tf_base_box_real
+                # elif row_id in [0,4]:
+                #     tf_base_box_real = tf_base_box_real*SE3([0.00,0.00,0,0,0,0,1])     
+            elif row==9:
+                row_id = int(box_id)%row
+                lay_id = int(box_id)//row
+                if row_id in [1,2]:
+                    tf_base_box_real = SE3([0.002,-0.001,0,0,0,0,1])*tf_base_box_real
+                elif row_id in [3,4]:     
+                    tf_base_box_real = SE3([0.002,-0.001,0,0,0,0,1])*tf_base_box_real
+                elif row_id in [5]:   
+                    tf_base_box_real = SE3([0.007,-0.002,0,0,0,0,1])*tf_base_box_real                     
+                elif row_id in [6]:  
+                    tf_base_box_real = SE3([0.007,-0.002,0,0,0,0,1])*tf_base_box_real                                                              
+                elif row_id in [7]:
+                    tf_base_box_real = SE3([0.005,-0.003,0,0,0,0,1])*tf_base_box_real                   
+                elif row_id in [8]:
+                    tf_base_box_real = SE3([0.006,0.00,0,0,0,0,1])*tf_base_box_real                      
+                elif row_id in [0]:
+                    tf_base_box_real = SE3([0.006,0.00,0,0,0,0,1])*tf_base_box_real                            
+            else:
+                raise "无效的row"     
+            container_item.origin = Pose(*tf_base_box_real.xyz_quat)               
         else:
             self.logger.info(f"托盘数据缺少位置号{box_id}")
             raise f"托盘数据缺少位置号"    

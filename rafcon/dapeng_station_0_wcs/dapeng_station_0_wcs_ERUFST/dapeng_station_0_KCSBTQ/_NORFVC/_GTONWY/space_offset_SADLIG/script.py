@@ -45,10 +45,10 @@ def execute(self, inputs, outputs, gvm):
     row = gvm.get_variable("row", per_reference=False, default=None)   
     if row==5:
         self.logger.info("row is 5")
-        outputs["place_drop_buffer"] = 0.022
+        outputs["place_drop_buffer"] = 0.007
     elif row==9:
         self.logger.info("row is 9")    
-        outputs["place_drop_buffer"] = 0.007
+        outputs["place_drop_buffer"] = 0.00
     else:
         raise "无效的row"   
     

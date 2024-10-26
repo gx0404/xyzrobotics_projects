@@ -1,24 +1,24 @@
-three_camera_[1, 2, 3]_400_300_230:
+three_camera_[0, 1, 2]_400_300_230:
 - id: '{bb22c145-40c3-477b-baa4-505cc179f8e3}'
+  model:
+    name: XYZCamera
+    params:
+      cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP044010001.json
+      id: L340XP044010001
+  parent_id: '{00000000-0000-0000-0000-000000000000}'
+- id: '{626dee08-21f7-4752-abe8-858e842c9403}'
   model:
     name: XYZCamera
     params:
       cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043080017.json
       id: L340XP043080017
   parent_id: '{00000000-0000-0000-0000-000000000000}'
-- id: '{626dee08-21f7-4752-abe8-858e842c9403}'
+- id: '{04da14bd-afef-46fa-bf6c-9b61ac715857}'
   model:
     name: XYZCamera
     params:
       cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP044010015.json
       id: L340XP044010015
-  parent_id: '{00000000-0000-0000-0000-000000000000}'
-- id: '{04da14bd-afef-46fa-bf6c-9b61ac715857}'
-  model:
-    name: XYZCamera
-    params:
-      cfg: /home/xyz/xyz_app/app/料箱max视觉/camera_configs/L340XP043110024.json
-      id: L340XP043110024
   parent_id: '{00000000-0000-0000-0000-000000000000}'
 - id: '{1b8d0c00-49f8-4c64-8092-39b36b98c100}'
   model:
@@ -37,17 +37,17 @@ three_camera_[1, 2, 3]_400_300_230:
   model:
     name: LoadCameraCalibInfo
     params:
-      calib_file: calibration/camera/L340XP043110024/camera_extrinsic.yml
+      calib_file: calibration/camera/L340XP044010015/camera_extrinsic.yml
   parent_id: '{00000000-0000-0000-0000-000000000000}'
 - id: '{562400dd-f1d1-417e-8852-b3a549371932}'
   model:
     name: LoadCameraCalibInfo
     params:
-      calib_file: calibration/camera/L340XP043080017/camera_extrinsic.yml
+      calib_file: calibration/camera/L340XP044010001/camera_extrinsic.yml
   parent_id: '{00000000-0000-0000-0000-000000000000}'
 - id: '{ac3ab389-7317-4c2d-9053-0b7595477352}'
   model:
     name: LoadCameraCalibInfo
     params:
-      calib_file: calibration/camera/L340XP044010015/camera_extrinsic.yml
+      calib_file: calibration/camera/L340XP043080017/camera_extrinsic.yml
   parent_id: '{00000000-0000-0000-0000-000000000000}'

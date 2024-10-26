@@ -71,5 +71,5 @@ def execute(self, inputs, outputs, gvm):
             break
        
         self.preemptive_wait(0.1)
-    self.preemptive_wait(0.5)
+
     return "success"

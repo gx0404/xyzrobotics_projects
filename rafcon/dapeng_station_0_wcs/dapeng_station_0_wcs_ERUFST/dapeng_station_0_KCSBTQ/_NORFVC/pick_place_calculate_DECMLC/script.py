@@ -301,68 +301,70 @@ class SEARCH_ASYNC():
                 continue
         if collision_flag:
             return_collision_flag = True        
-        #判断放置姿态如果旋转180能否放置    
-        for pick_joint in pick_joints:
-            collision_flag = True
-            init_joints = kinematic_solver.convert_six_dof_to_four(pick_joint[0])
-            tf_flange_object = pick_joint[1]
+            #判断放置姿态如果旋转180能否放置    
+            for pick_joint in pick_joints:
+                collision_flag = True
+                init_joints = kinematic_solver.convert_six_dof_to_four(pick_joint[0])
+                tf_flange_object = pick_joint[1]
 
-            #获取当前放置箱子坐标
-            tf_map_object = SE3(pose_to_list(plan_item.origin))
-            tf_map_object = tf_map_object*SE3([0,0,-0.035,0,0,0,1])
-            #旋转放置箱子180
-            tf_map_object = tf_map_object*SE3([0,0,0,0,0,1,0])
-            #获取放置姿态
-            tf_map_flange = tf_map_object*(tf_flange_object.inv())
-            #将抓取点作为初始点
-            init_joints_list = []
-            init_joints_list.append(init_joints)
-            init_joints_list.append(init_joints[0:-1]+[init_joints[-1]+3.1415926])
-            init_joints_list.append(init_joints[0:-1]+[init_joints[-1]-3.1415926])  
-            #放置点转化为joint 
-            check_joints = []
-            for init_joint in init_joints_list:
-                check_joint = kinematic_solver.compute_best_ik(SE3(tf_map_flange), init_joint)
-                if not check_joint:
-                    continue
-                else:
-                    if len(check_joint)==4:
-                        check_joint = kinematic_solver.convert_four_dof_to_six(check_joint)
-                        check_joints.append(check_joint) 
-                        break
-                    else:  
-                        check_joints.append(check_joint) 
-                        break 
-            if not check_joints:                
-                continue   
-            #检测所有的姿态是否满足气缸碰撞条件，如果满足只取一组解
-            for joint_index,check_joint in enumerate(check_joints):
-                for check_robot in check_robot_list:
-                    #添加碰撞检测器
-                    checker = CollisionChecker(check_robot, planning_env)   
-                    if checker.check_point_collision(check_joint):
-                        if pick_path_key==8:
-                            pass
-                            #import ipdb;ipdb.set_trace()
+                #获取当前放置箱子坐标
+                tf_map_object = SE3(pose_to_list(plan_item.origin))
+                tf_map_object = tf_map_object*SE3([0,0,-0.035,0,0,0,1])
+                #旋转放置箱子180
+                tf_map_object = tf_map_object*SE3([0,0,0,0,0,1,0])
+                #获取放置姿态
+                tf_map_flange = tf_map_object*(tf_flange_object.inv())
+                #将抓取点作为初始点
+                init_joints_list = []
+                init_joints_list.append(init_joints)
+                init_joints_list.append(init_joints[0:-1]+[init_joints[-1]+3.1415926])
+                init_joints_list.append(init_joints[0:-1]+[init_joints[-1]-3.1415926])  
+                #放置点转化为joint 
+                check_joints = []
+                for init_joint in init_joints_list:
+                    check_joint = kinematic_solver.compute_best_ik(SE3(tf_map_flange), init_joint)
+                    if not check_joint:
                         continue
                     else:
-                        if pick_path_key==8:
-                            pass
-                            #import ipdb;ipdb.set_trace()
-                        #self.logger(f"放置开始后验180,{plan_item.additional_info.values[-3]}")        
-                        # collision_flag = False 
-                        # break
-                        if check_place_slide_move(checker,kinematic_solver,check_joint):     
-                            collision_flag = False   
-                            break  
+                        if len(check_joint)==4:
+                            check_joint = kinematic_solver.convert_four_dof_to_six(check_joint)
+                            check_joints.append(check_joint) 
+                            break
+                        else:  
+                            check_joints.append(check_joint) 
+                            break 
+                if not check_joints:                
+                    continue   
+                #检测所有的姿态是否满足气缸碰撞条件，如果满足只取一组解
+                for joint_index,check_joint in enumerate(check_joints):
+                    for check_robot in check_robot_list:
+                        #添加碰撞检测器
+                        checker = CollisionChecker(check_robot, planning_env)   
+                        if checker.check_point_collision(check_joint):
+                            if pick_path_key==8:
+                                pass
+                                #import ipdb;ipdb.set_trace()
+                            continue
                         else:
-                            continue               
-        #如果旋转180°后还是检测到碰撞,说明无法放置；未检测到碰撞则是说明需要转下条码朝向                   
-        if collision_flag:
-            return_collision_flag_180 = False
+                            if pick_path_key==8:
+                                pass
+                                #import ipdb;ipdb.set_trace()
+                            #self.logger(f"放置开始后验180,{plan_item.additional_info.values[-3]}")        
+                            # collision_flag = False 
+                            # break
+                            if check_place_slide_move(checker,kinematic_solver,check_joint):     
+                                collision_flag = False   
+                                break  
+                            else:
+                                continue               
+            #如果旋转180°后还是检测到碰撞,说明无法放置；未检测到碰撞则是说明需要转下条码朝向                   
+            if collision_flag:
+                return_collision_flag_180 = False
+            else:
+                return_collision_flag_180 = True    
+            return return_collision_flag,return_collision_flag_180  
         else:
-            return_collision_flag_180 = True    
-        return return_collision_flag,return_collision_flag_180  
+            return return_collision_flag,False    
 
     def cost_estimate(self,plan_item,cost_z,pick_box_id_row,from_pick_id):
         if not self.lower_layer:
@@ -433,15 +435,21 @@ class SEARCH_ASYNC():
                     #获取到放置是否干涉，以及旋转180放置是否干涉
                     place_collision_flag,change_180_no_collision = self.check_place_collision(our_robot,check_robot_list,init_planning_env,pick_joints,plan_item,pick_path_key) 
 
-                    if self.row == 9:    
-                        if change_180_no_collision:
-                            cost_item = CostItem(self.cost_estimate(plan_item,0,pick_box_id_row,from_pick_id)+5,\
-                            old_path+[[pick_item,plan_item,True]],[plan_item.name]+[i.name for i in plan_path_list])        
-                            open_set.put(cost_item)                  
-                    if not place_collision_flag:
+                    # if self.row == 9:    
+                    #     if change_180_no_collision:
+                    #         cost_item = CostItem(self.cost_estimate(plan_item,0,pick_box_id_row,from_pick_id)+5,\
+                    #         old_path+[[pick_item,plan_item,True]],[plan_item.name]+[i.name for i in plan_path_list])        
+                    #         open_set.put(cost_item)                  
+                    if not place_collision_flag: 
                         cost_item = CostItem(self.cost_estimate(plan_item,0,pick_box_id_row,from_pick_id),\
                         old_path+[[pick_item,plan_item,False]],[plan_item.name]+[i.name for i in plan_path_list])                         
-                        open_set.put(cost_item)           
+                        open_set.put(cost_item) 
+                    else:
+                        if self.row == 9:    
+                            if change_180_no_collision:
+                                cost_item = CostItem(self.cost_estimate(plan_item,0,pick_box_id_row,from_pick_id)+5,\
+                                old_path+[[pick_item,plan_item,True]],[plan_item.name]+[i.name for i in plan_path_list])        
+                                open_set.put(cost_item)                                        
                               
         #建立代价
         cost_z = None
@@ -515,21 +523,29 @@ class SEARCH_ASYNC():
                         #获取到放置是否干涉，以及旋转180放置是否干涉
                         place_collision_flag,change_180_no_collision = self.check_place_collision(our_robot,check_robot_list,check_planning_env,pick_joints,plan_item,pick_path_key) 
  
-                        if self.row == 9: 
-                            if change_180_no_collision:
-                                new_state_key = state_key + [plan_item.name]
-                                new_path = copy.copy(path)
-                                new_path.append([pick_item,plan_item,True])   
-                                cost_item = CostItem(f_cost+self.cost_estimate(plan_item,cost_z,pick_box_id_row,from_pick_id)+1,new_path,new_state_key) 
-                                open_set.put(cost_item)
+                        # if self.row == 9: 
+                        #     if change_180_no_collision:
+                        #         new_state_key = state_key + [plan_item.name]
+                        #         new_path = copy.copy(path)
+                        #         new_path.append([pick_item,plan_item,True])   
+                        #         cost_item = CostItem(f_cost+self.cost_estimate(plan_item,cost_z,pick_box_id_row,from_pick_id)+1,new_path,new_state_key) 
+                        #         open_set.put(cost_item)
                         
                         if not place_collision_flag:
                             new_state_key = state_key + [plan_item.name]
                             new_path = copy.copy(path)
                             new_path.append([pick_item,plan_item,False])
+
                             cost_item = CostItem(f_cost+self.cost_estimate(plan_item,cost_z,pick_box_id_row,from_pick_id),new_path,new_state_key) 
                             open_set.put(cost_item)
-                            
+                        else:    
+                            if self.row == 9: 
+                                if change_180_no_collision:
+                                    new_state_key = state_key + [plan_item.name]
+                                    new_path = copy.copy(path)
+                                    new_path.append([pick_item,plan_item,True])   
+                                    cost_item = CostItem(f_cost+self.cost_estimate(plan_item,cost_z,pick_box_id_row,from_pick_id)+1,new_path,new_state_key) 
+                                    open_set.put(cost_item)                            
         # if not all_path:
         #     raise "fault"                    
         return all_path                    
