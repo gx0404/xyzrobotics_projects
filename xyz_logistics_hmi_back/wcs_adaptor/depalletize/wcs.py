@@ -413,6 +413,9 @@ def depal_task(body: SingleTaskCreateSchema):
             mp.order.error(f"wcs下发拣配任务目标箱条码和托盘对应条码不一致")
             return make_json_response(error=2,error_message="目标箱条码和托盘对应条码不一致")
         if body.sku_type==0:
+            if item["to_ws"] in ["2","3"]:
+                mp.order.error(f"当前不支持笼车任务")    
+                return make_json_response(error=7,error_message="当前不支持笼车任务")            
             if item["to_ws"]=="2":
                 body.lower_speed = True
                 if container_items_2:
@@ -432,6 +435,9 @@ def depal_task(body: SingleTaskCreateSchema):
                 return make_json_response(error=3,error_message="中欧箱目标箱终点必须为笼车或者输送线")          
                                        
         if body.sku_type==1:
+            if item["to_ws"] in ["2","3"]:
+                mp.order.error(f"当前不支持笼车任务")    
+                return make_json_response(error=7,error_message="当前不支持笼车任务")
             if item["to_ws"]=="2":
                 if container_items_2:
                     if sku_dimension_2!=[0.6,0.4,0.23] and ("2" not in pallet_clear_list):

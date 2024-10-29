@@ -781,474 +781,6 @@
             },
             "ignore_collision": false,
             "timestamp": ""
-        },
-        {
-            "name": "workspace_0_full_padding_pg",
-            "origin": {
-                "x": -0.15,
-                "y": 1.87,
-                "z": -1.121,
-                "qx": 0.0,
-                "qy": 0.0,
-                "qz": 0.0,
-                "qw": 1.0
-            },
-            "primitives": [
-                {
-                    "type": 1,
-                    "dimensions": [
-                        1.25,
-                        1.25,
-                        1.65
-                    ],
-                    "absolute_mesh_paths": "",
-                    "meshes": {
-                        "triangles": [],
-                        "vertices": []
-                    },
-                    "use_convex": false,
-                    "relative_pose": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.825,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    }
-                }
-            ],
-            "tfs": [],
-            "color": {
-                "r": 0.5,
-                "g": 0.0,
-                "b": 0.5,
-                "a": 0.699999988079071
-            },
-            "additional_info": {
-                "type": "",
-                "keys": [],
-                "values": [],
-                "descriptions": []
-            },
-            "ignore_collision": false,
-            "timestamp": ""
-        },
-        {
-            "name": "workspace_1_full_padding_pg",
-            "origin": {
-                "x": -2.0,
-                "y": 1.1,
-                "z": -1.121,
-                "qx": 0.0,
-                "qy": 0.0,
-                "qz": 0.7071067811865478,
-                "qw": 0.7071067811865474
-            },
-            "primitives": [
-                {
-                    "type": 1,
-                    "dimensions": [
-                        1.25,
-                        1.05,
-                        1.65
-                    ],
-                    "absolute_mesh_paths": "",
-                    "meshes": {
-                        "triangles": [],
-                        "vertices": []
-                    },
-                    "use_convex": false,
-                    "relative_pose": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.825,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    }
-                }
-            ],
-            "tfs": [],
-            "color": {
-                "r": 0.5,
-                "g": 0.0,
-                "b": 0.5,
-                "a": 0.699999988079071
-            },
-            "additional_info": {
-                "type": "",
-                "keys": [],
-                "values": [],
-                "descriptions": []
-            },
-            "ignore_collision": false,
-            "timestamp": ""
-        },
-        {
-            "name": "workspace_2_full_padding_pg",
-            "origin": {
-                "x": 1.6997058936953544,
-                "y": 1.651499969512224,
-                "z": -1.282,
-                "qx": 0.0,
-                "qy": 0.0,
-                "qz": 0.7101026059759206,
-                "qw": 0.7040982097592683
-            },
-            "primitives": [
-                {
-                    "type": 1,
-                    "dimensions": [
-                        1.22,
-                        0.83,
-                        1.62
-                    ],
-                    "absolute_mesh_paths": "",
-                    "meshes": {
-                        "triangles": [],
-                        "vertices": []
-                    },
-                    "use_convex": false,
-                    "relative_pose": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.81,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    }
-                }
-            ],
-            "tfs": [],
-            "color": {
-                "r": 0.5,
-                "g": 0.0,
-                "b": 0.5,
-                "a": 0.699999988079071
-            },
-            "additional_info": {
-                "type": "",
-                "keys": [],
-                "values": [],
-                "descriptions": []
-            },
-            "ignore_collision": false,
-            "timestamp": ""
-        },
-        {
-            "name": "workspace_3_full_padding_pg",
-            "origin": {
-                "x": 2.0,
-                "y": -0.3,
-                "z": -1.282,
-                "qx": 0.0,
-                "qy": 0.0,
-                "qz": 0.7071067811865532,
-                "qw": 0.7071067811865419
-            },
-            "primitives": [
-                {
-                    "type": 1,
-                    "dimensions": [
-                        1.22,
-                        0.83,
-                        1.62
-                    ],
-                    "absolute_mesh_paths": "",
-                    "meshes": {
-                        "triangles": [],
-                        "vertices": []
-                    },
-                    "use_convex": false,
-                    "relative_pose": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.81,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    }
-                }
-            ],
-            "tfs": [],
-            "color": {
-                "r": 0.5,
-                "g": 0.0,
-                "b": 0.5,
-                "a": 0.699999988079071
-            },
-            "additional_info": {
-                "type": "",
-                "keys": [],
-                "values": [],
-                "descriptions": []
-            },
-            "ignore_collision": false,
-            "timestamp": ""
-        },
-        {
-            "name": "workspace_4_full_padding_pg",
-            "origin": {
-                "x": -1.92,
-                "y": -0.9,
-                "z": -1.121,
-                "qx": 0.0,
-                "qy": 0.0,
-                "qz": 0.7071067811865478,
-                "qw": 0.7071067811865474
-            },
-            "primitives": [
-                {
-                    "type": 1,
-                    "dimensions": [
-                        1.25,
-                        1.05,
-                        1.65
-                    ],
-                    "absolute_mesh_paths": "",
-                    "meshes": {
-                        "triangles": [],
-                        "vertices": []
-                    },
-                    "use_convex": false,
-                    "relative_pose": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.825,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    }
-                }
-            ],
-            "tfs": [],
-            "color": {
-                "r": 0.5,
-                "g": 0.0,
-                "b": 0.5,
-                "a": 0.699999988079071
-            },
-            "additional_info": {
-                "type": "",
-                "keys": [],
-                "values": [],
-                "descriptions": []
-            },
-            "ignore_collision": false,
-            "timestamp": ""
-        },
-        {
-            "name": "workspace_5_full_padding_pg",
-            "origin": {
-                "x": -0.5,
-                "y": -2.4,
-                "z": -1.121,
-                "qx": 0.0,
-                "qy": 0.0,
-                "qz": 0.0,
-                "qw": 1.0
-            },
-            "primitives": [
-                {
-                    "type": 1,
-                    "dimensions": [
-                        1.25,
-                        1.05,
-                        1.65
-                    ],
-                    "absolute_mesh_paths": "",
-                    "meshes": {
-                        "triangles": [],
-                        "vertices": []
-                    },
-                    "use_convex": false,
-                    "relative_pose": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.825,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    }
-                }
-            ],
-            "tfs": [],
-            "color": {
-                "r": 0.5,
-                "g": 0.0,
-                "b": 0.5,
-                "a": 0.699999988079071
-            },
-            "additional_info": {
-                "type": "",
-                "keys": [],
-                "values": [],
-                "descriptions": []
-            },
-            "ignore_collision": false,
-            "timestamp": ""
-        },
-        {
-            "name": "workspace_6_full_padding_pg",
-            "origin": {
-                "x": 1.148,
-                "y": -1.7830000000000001,
-                "z": -1.0,
-                "qx": 0.0,
-                "qy": 0.0,
-                "qz": 0.707106781186548,
-                "qw": 0.7071067811865471
-            },
-            "primitives": [
-                {
-                    "type": 1,
-                    "dimensions": [
-                        0.61,
-                        0.41,
-                        0.6
-                    ],
-                    "absolute_mesh_paths": "",
-                    "meshes": {
-                        "triangles": [],
-                        "vertices": []
-                    },
-                    "use_convex": false,
-                    "relative_pose": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.3,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    }
-                }
-            ],
-            "tfs": [],
-            "color": {
-                "r": 0.5,
-                "g": 0.0,
-                "b": 0.5,
-                "a": 0.699999988079071
-            },
-            "additional_info": {
-                "type": "",
-                "keys": [],
-                "values": [],
-                "descriptions": []
-            },
-            "ignore_collision": false,
-            "timestamp": ""
-        },
-        {
-            "name": "workspace_7_full_padding_pg",
-            "origin": {
-                "x": 0.8950000000000001,
-                "y": -2.638,
-                "z": -0.47900000000000004,
-                "qx": 0.0,
-                "qy": 0.0,
-                "qz": 0.0,
-                "qw": 1.0
-            },
-            "primitives": [
-                {
-                    "type": 1,
-                    "dimensions": [
-                        0.4,
-                        0.3,
-                        0.4
-                    ],
-                    "absolute_mesh_paths": "",
-                    "meshes": {
-                        "triangles": [],
-                        "vertices": []
-                    },
-                    "use_convex": false,
-                    "relative_pose": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.2,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    }
-                }
-            ],
-            "tfs": [],
-            "color": {
-                "r": 0.5,
-                "g": 0.0,
-                "b": 0.5,
-                "a": 0.699999988079071
-            },
-            "additional_info": {
-                "type": "",
-                "keys": [],
-                "values": [],
-                "descriptions": []
-            },
-            "ignore_collision": false,
-            "timestamp": ""
-        },
-        {
-            "name": "workspace_8_full_padding_pg",
-            "origin": {
-                "x": 1.3050000000000002,
-                "y": -2.638,
-                "z": -0.47900000000000004,
-                "qx": 0.0,
-                "qy": 0.0,
-                "qz": 0.0,
-                "qw": 1.0
-            },
-            "primitives": [
-                {
-                    "type": 1,
-                    "dimensions": [
-                        0.4,
-                        0.3,
-                        0.4
-                    ],
-                    "absolute_mesh_paths": "",
-                    "meshes": {
-                        "triangles": [],
-                        "vertices": []
-                    },
-                    "use_convex": false,
-                    "relative_pose": {
-                        "x": 0.0,
-                        "y": 0.0,
-                        "z": 0.2,
-                        "qx": 0.0,
-                        "qy": 0.0,
-                        "qz": 0.0,
-                        "qw": 1.0
-                    }
-                }
-            ],
-            "tfs": [],
-            "color": {
-                "r": 0.5,
-                "g": 0.0,
-                "b": 0.5,
-                "a": 0.699999988079071
-            },
-            "additional_info": {
-                "type": "",
-                "keys": [],
-                "values": [],
-                "descriptions": []
-            },
-            "ignore_collision": false,
-            "timestamp": ""
         }
     ],
     "workspaces": [
@@ -1629,8 +1161,8 @@
                     "z": -1.168,
                     "qx": 0.0,
                     "qy": 0.0,
-                    "qz": 0.707106781186553,
-                    "qw": 0.7071067811865421
+                    "qz": 0.7071067811865656,
+                    "qw": 0.7071067811865296
                 },
                 "pallet_collision": {
                     "name": "pallet_1",
@@ -1640,8 +1172,8 @@
                         "z": -1.41,
                         "qx": 0.0,
                         "qy": 0.0,
-                        "qz": 0.707106781186553,
-                        "qw": 0.7071067811865421
+                        "qz": 0.7071067811865656,
+                        "qw": 0.7071067811865296
                     },
                     "primitives": [
                         {
@@ -1862,13 +1394,13 @@
             "workspace_id": "2",
             "type": 2,
             "bottom_pose": {
-                "x": 1.6997058936953544,
-                "y": 1.651499969512224,
+                "x": 1.7000000000000002,
+                "y": 1.65,
                 "z": -1.282,
                 "qx": 0.0,
                 "qy": 0.0,
-                "qz": 0.7101026059759206,
-                "qw": 0.7040982097592683
+                "qz": 0.7071067811865656,
+                "qw": 0.7071067811865296
             },
             "dimensions": [
                 1.22,
@@ -1932,8 +1464,8 @@
                     "z": -1.282,
                     "qx": 0.0,
                     "qy": 0.0,
-                    "qz": 0.7071067811865536,
-                    "qw": 0.7071067811865416
+                    "qz": 0.7071067811865656,
+                    "qw": 0.7071067811865296
                 },
                 "pallet_collision": {
                     "name": "pallet_2",
@@ -1943,8 +1475,8 @@
                         "z": -1.447,
                         "qx": 0.0,
                         "qy": 0.0,
-                        "qz": 0.7071067811865536,
-                        "qw": 0.7071067811865416
+                        "qz": 0.7071067811865656,
+                        "qw": 0.7071067811865296
                     },
                     "primitives": [
                         {
@@ -2170,8 +1702,8 @@
                 "z": -1.282,
                 "qx": 0.0,
                 "qy": 0.0,
-                "qz": 0.7071067811865531,
-                "qw": 0.707106781186542
+                "qz": 0.7071067811865656,
+                "qw": 0.7071067811865296
             },
             "dimensions": [
                 1.22,
@@ -2235,8 +1767,8 @@
                     "z": -1.282,
                     "qx": 0.0,
                     "qy": 0.0,
-                    "qz": 0.7071067811865531,
-                    "qw": 0.707106781186542
+                    "qz": 0.7071067811865656,
+                    "qw": 0.7071067811865296
                 },
                 "pallet_collision": {
                     "name": "pallet_3",
@@ -2246,8 +1778,8 @@
                         "z": -1.447,
                         "qx": 0.0,
                         "qy": 0.0,
-                        "qz": 0.7071067811865531,
-                        "qw": 0.707106781186542
+                        "qz": 0.7071067811865656,
+                        "qw": 0.7071067811865296
                     },
                     "primitives": [
                         {
@@ -2538,8 +2070,8 @@
                     "z": -1.161,
                     "qx": 0.0,
                     "qy": 0.0,
-                    "qz": 0.707106781186553,
-                    "qw": 0.7071067811865421
+                    "qz": 0.7071067811865656,
+                    "qw": 0.7071067811865296
                 },
                 "pallet_collision": {
                     "name": "pallet_4",
@@ -2549,8 +2081,8 @@
                         "z": -1.403,
                         "qx": 0.0,
                         "qy": 0.0,
-                        "qz": 0.707106781186553,
-                        "qw": 0.7071067811865421
+                        "qz": 0.7071067811865656,
+                        "qw": 0.7071067811865296
                     },
                     "primitives": [
                         {

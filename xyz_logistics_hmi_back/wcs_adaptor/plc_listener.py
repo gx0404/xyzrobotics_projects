@@ -91,7 +91,7 @@ def plc_monitor_scram_signal(interval: int = 0.5):
                     )
                     stop_xtf()
                     node.stop_robot_node(force_stop=True)
-                    error_info = ALL_ERROR.get("50007")
+                    error_info = ALL_ERROR.get("70020")
                     error_data = {
                         "code": "70020",
                         "msg_type": "error",
