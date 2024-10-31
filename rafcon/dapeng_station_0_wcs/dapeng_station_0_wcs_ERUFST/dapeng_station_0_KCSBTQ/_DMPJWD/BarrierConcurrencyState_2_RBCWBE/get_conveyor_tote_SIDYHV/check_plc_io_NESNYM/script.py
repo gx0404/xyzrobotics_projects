@@ -10,7 +10,7 @@ def execute(self, inputs, outputs, gvm):
             raise "大欧无效的放置位"           
     elif tote_type==0:
         sku_info = {'height': 0.23, 'length': 0.4, 'weight': 5.0, 'width': 0.3}    
-        if place_id  not in ["3","4"]:
+        if place_id  not in ["4","5"]:
             raise "中欧无效的放置位"          
     else:
         raise "无效的tote_type"

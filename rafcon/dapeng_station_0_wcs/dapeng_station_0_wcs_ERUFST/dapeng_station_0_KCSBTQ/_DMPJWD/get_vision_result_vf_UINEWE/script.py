@@ -340,24 +340,42 @@ def execute(self, inputs, outputs, gvm):
             check_primitive_600_400 = False    
     
     if check_primitive_400_300 and check_primitive_600_400:
-        self.logger.info(f"大欧中欧完整性校验都失败")   
-        raise "大欧中欧完整性校验都失败" 
+        self.logger.info(f"大欧中欧完整性校验都失败")
+        
+        ftr = vision_bridge.async_run(int(vision_id), "get_safe_height_4")   
+        height_results_raw = ftr.get()
+        height = height_results_raw.info
+        self.logger.info(f"height is {height}")
+        if float(height)<0.1 and not vision_result_raw_600_400.primitives_3d \
+            and not vision_result_raw_400_300.primitives_3d:
+            return "empty"            
+        raise XYZExceptionBase("10024", "大欧中欧完整性校验都失败") 
     elif not check_primitive_400_300 and not check_primitive_600_400:
         self.logger.info(f"大欧中欧完整性校验都成功")  
-        raise "大欧中欧完整性校验都成功"
+        
+        ftr = vision_bridge.async_run(int(vision_id), "get_safe_height_4")   
+        height_results_raw = ftr.get()
+        height = height_results_raw.info
+        self.logger.info(f"height is {height}")
+        if float(height)<0.1 and not vision_result_raw_600_400.primitives_3d \
+            and not vision_result_raw_400_300.primitives_3d:
+            return "empty"          
+        raise XYZExceptionBase("10024", "大欧中欧完整性校验都成功") 
     
     elif not check_primitive_400_300 and check_primitive_600_400:
         self.logger.info(f"大欧校验失败,中欧完整性校验成功")      
         if sku_info["row"]!=9:
             self.logger.info(f"中欧视觉识别成功,但是第一次识别不为中欧")
-            raise "中欧视觉识别成功,但是第一次识别不为中欧"
+            #raise "中欧视觉识别成功,但是第一次识别不为中欧"
+            vision_result_raw = vision_result_raw_400_300
         else:
             vision_result_raw = vision_result_raw_400_300
     elif check_primitive_400_300 and not check_primitive_600_400:
         self.logger.info(f"中欧校验失败,大欧完整性校验成功")                 
         if sku_info["row"]!=5:
             self.logger.info(f"大欧视觉识别成功,但是第一次识别不为大欧")
-            raise "大欧视觉识别成功,但是第一次识别不为大欧"
+            #raise "大欧视觉识别成功,但是第一次识别不为大欧"
+            vision_result_raw = vision_result_raw_600_400 
         else:
             vision_result_raw = vision_result_raw_600_400 
         

@@ -13,7 +13,7 @@ def execute(self, inputs, outputs, gvm):
             outputs["place_drop_buffer"] = 0.017   
     else:
         if place_id == "4":
-            outputs["place_drop_buffer"] = -0.01
+            outputs["place_drop_buffer"] = -0.015
         else:
-            outputs["place_drop_buffer"] = -0.01                        
+            outputs["place_drop_buffer"] = -0.015                        
     return "success"

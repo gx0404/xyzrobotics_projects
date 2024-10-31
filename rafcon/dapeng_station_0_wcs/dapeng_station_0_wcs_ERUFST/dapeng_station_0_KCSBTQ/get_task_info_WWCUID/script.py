@@ -191,6 +191,7 @@ def execute(self, inputs, outputs, gvm):
         return "depal"
     elif task_info["task_type"]==1:
         outputs["pallet_clear_list"] = task_info["pallet_clear_list"]+["2","3"] 
+        outputs["customized_data"] = task_info["customized_data"]
         self.logger.info(f"执行笼车单码任务")
         return "pal"      
     elif task_info["task_type"]==3:

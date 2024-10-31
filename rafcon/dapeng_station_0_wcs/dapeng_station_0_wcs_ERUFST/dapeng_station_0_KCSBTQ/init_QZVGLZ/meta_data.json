@@ -28,8 +28,8 @@
             "size": {
                 "__jsonqualname__": "__builtin__.tuple", 
                 "items": [
-                    434.66730770351853, 
-                    208.64293673193131
+                    528.9964946110929, 
+                    200.24672579735886
                 ]
             }
         }
@@ -40,7 +40,7 @@
                 "rel_pos": {
                     "__jsonqualname__": "__builtin__.tuple", 
                     "items": [
-                        4.172858734638626, 
+                        4.004934515947177, 
                         43.27488340816639
                     ]
                 }
@@ -54,7 +54,7 @@
                     "__jsonqualname__": "__builtin__.tuple", 
                     "items": [
                         27.0, 
-                        4.172858734638626
+                        4.004934515947177
                     ]
                 }
             }
@@ -67,7 +67,7 @@
                     "__jsonqualname__": "__builtin__.tuple", 
                     "items": [
                         24.6, 
-                        4.172858734638626
+                        4.004934515947177
                     ]
                 }
             }
@@ -79,7 +79,7 @@
                 "rel_pos": {
                     "__jsonqualname__": "__builtin__.tuple", 
                     "items": [
-                        430.4944489688799, 
+                        524.9915600951457, 
                         67.15971938325337
                     ]
                 }
@@ -142,14 +142,21 @@
             }
         }
     }, 
-    "transition55": {
+    "transition4": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": []
+                "waypoints": {}
             }
         }
     }, 
-    "transition6": {
+    "transition5": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
+            }
+        }
+    }, 
+    "transition55": {
         "gui": {
             "editor_gaphas": {
                 "waypoints": []

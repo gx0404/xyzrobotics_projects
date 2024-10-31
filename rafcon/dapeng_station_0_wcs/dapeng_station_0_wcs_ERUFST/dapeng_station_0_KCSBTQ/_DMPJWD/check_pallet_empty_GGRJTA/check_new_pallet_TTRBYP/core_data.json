@@ -14,6 +14,15 @@
             }, 
             "default_value": null, 
             "name": "sku_info"
+        }, 
+        "1": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 1, 
+            "data_type": {
+                "__type__": "__builtin__.dict"
+            }, 
+            "default_value": null, 
+            "name": "customized_data"
         }
     }, 
     "name": "check_new_pallet", 

@@ -5,12 +5,24 @@ def execute(self, inputs, outputs, gvm):
     sku_info = inputs["sku_info"] 
     sku_dimension = [sku_info["length"],sku_info["width"],sku_info["height"]]
     sku_dimension = list(map(lambda x:round(x,2),sku_dimension))    
+    init_pallet_id_list = inputs["customized_data"]["init_pallet_id"]
+    self.logger.info(f"init_pallet_id_list: {init_pallet_id_list}")
     if sku_dimension==[0.4,0.3,0.23]:
         self.logger.info(f"判断为中欧")
-        init_place_list = ["4"]
+        init_place_list = []
+        if "4" in init_pallet_id_list:
+            init_place_list.append("4")    
+        if "5" in init_pallet_id_list:
+            init_place_list.append("5")             
+        #init_place_list = ["4","5"]
     elif sku_dimension==[0.6,0.4,0.23]:
         self.logger.info(f"判断为大欧")
-        init_place_list = ["0","1"]
+        init_place_list = []
+        if "0" in init_pallet_id_list:
+            init_place_list.append("0")    
+        if "1" in init_pallet_id_list:
+            init_place_list.append("1")          
+        #init_place_list = ["0","1"]
     else:
         raise "无效的尺寸"    
                 
