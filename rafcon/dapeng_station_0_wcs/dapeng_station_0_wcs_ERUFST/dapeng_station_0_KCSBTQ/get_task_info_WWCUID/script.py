@@ -183,6 +183,8 @@ def execute(self, inputs, outputs, gvm):
             #     self.smart_data["tri-color_light_setting"]["value_green"])
         except:
             raise XYZExceptionBase("70018", "The communication between the industrial computer and the PLC is disconnected or the address bit of the operation is wrong.")
+    layer_num = task_info["layer_num"]
+    gvm.set_variable("layer_num", layer_num, per_reference=False)
     outputs["pallet_clear_list"] = task_info["pallet_clear_list"]    
     if task_info["task_type"]==0:
         outputs["pallet_clear_list"] = task_info["pallet_clear_list"]+["0","4"] 

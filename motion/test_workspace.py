@@ -40,8 +40,8 @@ pallet_2 = build_pallet(name="pallet_2", top_origin=[1.6+0.1, 1.65, -1.267-0.015
 ws2.pallet = pallet_2
 
 #笼车空间3-码垛托盘3
-ws3 = build_workspace(workspace_id="3", bottom_pose=[2, -0.3, -1.267-0.015, 0.0, 0.0, 0.707, 0.707], dimensions=[1.22, 0.815, 1.62], ws_type="pallet")
-pallet_3 = build_pallet(name="pallet_3", top_origin=[2, -0.3, -1.267-0.015-0.04, 0.0, 0.0, 0.707, 0.707], dimensions=[1.22, 0.815, 0.33])
+ws3 = build_workspace(workspace_id="3", bottom_pose=[1.97, -0.3, -1.267-0.015, 0.0, 0.0, 0.707, 0.707], dimensions=[1.22, 0.815, 1.62], ws_type="pallet")
+pallet_3 = build_pallet(name="pallet_3", top_origin=[1.97, -0.3, -1.267-0.015-0.04, 0.0, 0.0, 0.707, 0.707], dimensions=[1.22, 0.815, 0.33])
 ws3.pallet = pallet_3
 
 #码垛托盘4

@@ -73,10 +73,10 @@
             "have_stream_motion": true,
             "is_virtual_robot": true,
             "joint_position": [
-                -1.78585975912304,
-                -0.6431927502022299,
-                1.6908439124714207,
-                -0.20219792973328485
+                0.0,
+                -1.5700000377769665,
+                1.3999999420844733,
+                0.0
             ],
             "has_tool": true,
             "tool": {
@@ -1831,21 +1831,21 @@
             "has_attached_collision_object": false,
             "attached_collision_object": {
                 "reference_tip_name": "tip_0",
-                "reference_object_name": "RealBox-0-1730429682",
+                "reference_object_name": "RealBox-5-1730455387",
                 "from_workspace_id": "6",
                 "to_workspace_id": "0",
                 "origin_tip_transform": {
                     "x": 4.440892098500626e-16,
                     "y": 2.220446049250313e-16,
-                    "z": 2.220446049250313e-16,
-                    "qx": 1.0,
-                    "qy": -2.220446049250313e-16,
-                    "qz": -3.4418461603497563e-17,
-                    "qw": 5.339711431951112e-17
+                    "z": 8.881784197001252e-16,
+                    "qx": 1.0000000000000002,
+                    "qy": -2.220446049250314e-16,
+                    "qz": -3.4418461603497576e-17,
+                    "qw": 5.339711431951115e-17
                 },
                 "objects": [
                     {
-                        "name": "RealBox-0-1730429682",
+                        "name": "RealBox-5-1730455387",
                         "origin": {
                             "x": 1.160000008,
                             "y": -1.8050000000000002,
@@ -1907,7 +1907,7 @@
                                 "0.4",
                                 "0.01",
                                 "5",
-                                "1730429682"
+                                "1730455387"
                             ],
                             "descriptions": [
                                 "barcode_direction",

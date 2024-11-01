@@ -206,4 +206,4 @@ class PalletData(db.Model):
 class CageLayer(db.Model):
     __tablename__ = "cage_layer"
     id = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
-    layer_num = sa.Column(sa.Integer, default=6, comment="中欧笼车层数") 
+    layer_num = sa.Column(sa.Integer, comment="中欧笼车层数") 

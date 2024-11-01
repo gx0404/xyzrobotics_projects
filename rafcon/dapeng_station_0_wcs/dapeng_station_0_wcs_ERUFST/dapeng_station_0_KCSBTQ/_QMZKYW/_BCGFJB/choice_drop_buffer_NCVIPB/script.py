@@ -4,7 +4,7 @@ def execute(self, inputs, outputs, gvm):
     grasp_plan = inputs["grasp_plan"]
     place_id = str(grasp_plan.to_workspace_id)
     if place_id == "0":
-        outputs["place_drop_buffer"] = 0.015
+        outputs["place_drop_buffer"] = 0.012
     else:
-        outputs["place_drop_buffer"] = 0.017        
+        outputs["place_drop_buffer"] = 0.012        
     return "success"

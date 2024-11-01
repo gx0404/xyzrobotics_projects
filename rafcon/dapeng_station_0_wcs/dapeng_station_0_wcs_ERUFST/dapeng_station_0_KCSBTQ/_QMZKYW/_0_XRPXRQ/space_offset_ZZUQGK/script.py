@@ -15,7 +15,7 @@ def execute(self, inputs, outputs, gvm):
     workspace_ros = planning_env.get_workspace_ros(place_workspace_id)
     
     if not place_workspace_id in ["4"]:
-        outputs["relative_poses"] = [[0,0,0.7,0,0,0,1]]                   
+        outputs["relative_poses"] = [[0,0,0.6,0,0,0,1],[0,0,0.3,0,0,0,1]]                   
         return "success"        
     
     if not grasp_plan:
