@@ -673,6 +673,14 @@
             "to_key": 5, 
             "to_state": "PVXXMU"
         }, 
+        "85": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 85, 
+            "from_key": 5, 
+            "from_state": "NORFVC", 
+            "to_key": 2, 
+            "to_state": "HXDVWE"
+        }, 
         "87": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 87, 
@@ -883,6 +891,15 @@
             }, 
             "default_value": null, 
             "name": "lower_layer"
+        }, 
+        "5": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 5, 
+            "data_type": {
+                "__type__": "__builtin__.bool"
+            }, 
+            "default_value": null, 
+            "name": "lower_speed"
         }
     }, 
     "name": "拣配流程", 

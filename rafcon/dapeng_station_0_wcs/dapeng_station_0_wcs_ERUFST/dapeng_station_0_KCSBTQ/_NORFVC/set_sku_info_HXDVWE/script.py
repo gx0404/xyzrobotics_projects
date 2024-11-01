@@ -155,6 +155,8 @@ def execute(self, inputs, outputs, gvm):
     gvm.set_variable("motion_payload", None, per_reference=True)
     gvm.set_variable("move_camera_flag", True, per_reference=False)
     gvm.set_variable("update_box_ids", [], per_reference=False)  
+    lower_speed = inputs["lower_speed"]
+    gvm.set_variable("lower_speed", lower_speed, per_reference=False)
     clear_planned_items("6")
     outputs["sku_info"] = sku_info_default        
     return "success"

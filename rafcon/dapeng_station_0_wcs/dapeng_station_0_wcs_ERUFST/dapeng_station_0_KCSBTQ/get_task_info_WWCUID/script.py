@@ -188,6 +188,7 @@ def execute(self, inputs, outputs, gvm):
         outputs["pallet_clear_list"] = task_info["pallet_clear_list"]+["0","4"] 
         self.logger.info(f"执行拣配任务")
         outputs["lower_layer"] = task_info["lower_layer"]
+        outputs["lower_speed"] = task_info["lower_speed"]
         return "depal"
     elif task_info["task_type"]==1:
         outputs["pallet_clear_list"] = task_info["pallet_clear_list"]+["2","3"] 

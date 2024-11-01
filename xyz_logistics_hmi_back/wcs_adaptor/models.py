@@ -202,3 +202,8 @@ class PalletData(db.Model):
     pallet_tote_data_3 = sa.Column(sa.JSON, comment="笼车托盘3上的物料信息")
     pallet_tote_data_7 = sa.Column(sa.JSON, comment="混码缓存区7上的物料信息")
     pallet_tote_data_8 = sa.Column(sa.JSON, comment="混码缓存区8上的物料信息")
+    
+class CageLayer(db.Model):
+    __tablename__ = "cage_layer"
+    id = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
+    layer_num = sa.Column(sa.Integer, default=6, comment="中欧笼车层数") 
