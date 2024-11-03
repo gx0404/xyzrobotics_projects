@@ -177,6 +177,18 @@ ALL_ERROR["10006"] = {
     "de_tip": "已自动回报WCS虚拟储位匹配失败",
 }
 
+ALL_ERROR["11007"] = {
+    "error_code": "11007",
+    "error_msg": "all position num fault",
+    "zh_msg": "合托任务虚拟储位异常",
+    "tip": "已自动回报WCS虚拟储位匹配失败",
+    "ja_msg": "位置号匹配失败",
+    "ja_tip": "已自动回报WCS虚拟储位匹配失败",
+    "en_msg": "位置号匹配失败",
+    "en_tip": "已自动回报WCS虚拟储位匹配失败",
+    "de_msg": "位置号匹配失败",
+    "de_tip": "已自动回报WCS虚拟储位匹配失败",
+}
 
 ALL_ERROR["10007"] = {
     "error_code": "10007",

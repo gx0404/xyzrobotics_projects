@@ -29,7 +29,7 @@ from xyz_io_client.io_client import set_digit_output
 from sensor_msgs.msg import PointCloud2, PointField
 from std_msgs.msg import Header
 from rospy import Time
-
+from xyz_motion import pose_to_list
 
 # modify group x axis
 # barcode direction: 4: -x; 2: -y
@@ -428,7 +428,7 @@ def execute(self, inputs, outputs, gvm):
     send_error_msg = ""
             
 
-    def build_primitive(info,pose_dict,cache_pallet_tote_data):
+    def build_primitive(info,pose_dict,cache_pallet_tote_data,row):
         global send_error_msg
         vision_box_proxy = FormattedRealBox(id = int(info["id"]), 
                                     tf_world_origin = SE3(info["pose"][0:7]), 
@@ -476,7 +476,37 @@ def execute(self, inputs, outputs, gvm):
             send_error_msg+=f"\nwcs下发托盘数据缺少位置号{box_id}条码,"
             return False              
         pg.additional_info.keys.append("to_ws")
-        pg.additional_info.values.append("")                                   
+        pg.additional_info.values.append("")  
+        
+        tf_base_box_real = SE3(pose_to_list(pg.origin))
+        #偏置
+        if row==5:
+            row_id = int(box_id)%row
+            lay_id = int(box_id)//row                  
+            # if row_id in [1,2,3]:                    
+            #     tf_base_box_real = SE3([0.002,-0.002,0,0,0,0,1])*tf_base_box_real
+            # elif row_id in [0,4]:
+            #     tf_base_box_real = tf_base_box_real*SE3([0.00,0.00,0,0,0,0,1])     
+        elif row==9:
+            row_id = int(box_id)%row
+            lay_id = int(box_id)//row
+            if row_id in [1,2]:
+                tf_base_box_real = SE3([0.002,-0.001,0,0,0,0,1])*tf_base_box_real
+            elif row_id in [3,4]:     
+                tf_base_box_real = SE3([0.002,-0.001,0,0,0,0,1])*tf_base_box_real
+            elif row_id in [5]:   
+                tf_base_box_real = SE3([0.007,-0.002,0,0,0,0,1])*tf_base_box_real                     
+            elif row_id in [6]:  
+                tf_base_box_real = SE3([0.007,-0.002,0,0,0,0,1])*tf_base_box_real                                                              
+            elif row_id in [7]:
+                tf_base_box_real = SE3([0.005,-0.003,0,0,0,0,1])*tf_base_box_real                   
+            elif row_id in [8]:
+                tf_base_box_real = SE3([0.006,0.00,0,0,0,0,1])*tf_base_box_real                      
+            elif row_id in [0]:
+                tf_base_box_real = SE3([0.006,0.00,0,0,0,0,1])*tf_base_box_real                            
+        else:
+            raise "无效的row"          
+        pg.origin = Pose(*tf_base_box_real.xyz_quat)                                  
         return pg
     
 
@@ -496,15 +526,17 @@ def execute(self, inputs, outputs, gvm):
             results.append(append_result)
             
     cache_pallet_tote_data = inputs["cache_pallet_tote_data"]
-    pose_dict = inputs["pose_dict"]                
+    pose_dict = inputs["pose_dict"] 
+    from xyz_logistics_hmi_back.utils.utils import send_order_log               
     if len(results)!=len(cache_pallet_tote_data):
         send_error_msg = f"视觉生成的箱子数量和wcs下发生成箱子数量不一致"
+        send_order_log(message=send_error_msg, status=False) 
         error_info = {
-            "error": '10008',
+            "error": '11007',
             "data":{
             "error_msg": send_error_msg,
             "zh_msg": "",
-            "error_code": '10008',
+            "error_code": '11007',
             "tip": ""
             }
         }
@@ -512,16 +544,19 @@ def execute(self, inputs, outputs, gvm):
         self.logger.info(f"视觉生成的箱子数量和wcs下发生成箱子数量不一致")
         return "fault_task"                        
         raise "视觉生成的箱子数量和数据库箱子数量不一致"
-    container_items = [build_primitive(info, pose_dict, cache_pallet_tote_data) for info in results]
+    row = gvm.get_variable("row", per_reference=False, default=None)
+    container_items = [build_primitive(info, pose_dict, cache_pallet_tote_data,row) for info in results]
 
     if False in container_items:
-        self.logger.info(f"匹配所有面位置号失败")  
+        self.logger.info(f"匹配位置号失败")  
+        send_error_msg = f"匹配位置号失败"
+        send_order_log(message=send_error_msg, status=False)  
         error_info = {
-            "error": '10008',
+            "error": '11007',
             "data":{
             "error_msg": send_error_msg,
             "zh_msg": "",
-            "error_code": '10008',
+            "error_code": '11007',
             "tip": ""
             }
         }

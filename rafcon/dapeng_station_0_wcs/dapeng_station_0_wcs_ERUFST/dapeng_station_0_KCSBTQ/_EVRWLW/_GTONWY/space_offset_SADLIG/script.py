@@ -48,7 +48,7 @@ def execute(self, inputs, outputs, gvm):
     row = gvm.get_variable("row", per_reference=False, default=None)   
     if row==5:
         self.logger.info("row is 5")
-        outputs["place_drop_buffer"] = 0.02    
+        outputs["place_drop_buffer"] = 0.03    
             
     elif row==9:
         self.logger.info("row is 9")    

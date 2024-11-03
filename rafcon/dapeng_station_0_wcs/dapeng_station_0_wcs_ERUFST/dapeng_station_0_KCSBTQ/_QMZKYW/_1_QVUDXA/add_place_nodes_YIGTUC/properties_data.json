@@ -75,7 +75,7 @@
                 [
                     0, 
                     0, 
-                    0.025, 
+                    0.03, 
                     0, 
                     0, 
                     0, 
@@ -145,7 +145,7 @@
             }, 
             "relative_poses": {
                 "type_config": {
-                    "current_type": "STATIC", 
+                    "current_type": "INPUT_PORT", 
                     "excluded_keys": {}, 
                     "optional_types": [
                         "STATIC", 

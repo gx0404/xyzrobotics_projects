@@ -32,6 +32,15 @@
             }, 
             "default_value": null, 
             "name": "/3-place/place_drop_buffer"
+        }, 
+        "3": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 3, 
+            "data_type": {
+                "__type__": "__builtin__.list"
+            }, 
+            "default_value": null, 
+            "name": "/0-pre_place/relative_poses"
         }
     }, 
     "name": "add_place_nodes", 

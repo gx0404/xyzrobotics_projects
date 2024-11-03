@@ -3,7 +3,7 @@
         "comment": "notify_hmi", 
         "is_notify_error_mode": true, 
         "notify_error_mode": {
-            "error_code": "10012"
+            "error_code": "10007"
         }, 
         "notify_msg_mode": {
             "msg": "等待允许放箱信号", 

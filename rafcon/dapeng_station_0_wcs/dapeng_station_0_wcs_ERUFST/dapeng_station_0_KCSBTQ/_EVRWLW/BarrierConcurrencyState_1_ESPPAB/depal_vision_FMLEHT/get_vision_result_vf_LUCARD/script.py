@@ -587,11 +587,11 @@ def execute(self, inputs, outputs, gvm):
         send_error_msg = f"视觉生成的箱子数量和wcs下发生成箱子数量不一致"
         send_order_log(message=send_error_msg, status=False) 
         error_info = {
-            "error": '10007',
+            "error": '11007',
             "data":{
             "error_msg": send_error_msg,
             "zh_msg": "",
-            "error_code": '10007',
+            "error_code": '11007',
             "tip": ""
             }
         }
@@ -631,11 +631,11 @@ def execute(self, inputs, outputs, gvm):
             send_error_msg = f"匹配所有面位置号失败,上游下发虚拟储位异常"    
         send_order_log(message=send_error_msg, status=False)          
         error_info = {
-            "error": '10007',
+            "error": '11007',
             "data":{
             "error_msg": send_error_msg,
             "zh_msg": "",
-            "error_code": '10007',
+            "error_code": '11007',
             "tip": ""
             }
         }
@@ -650,11 +650,11 @@ def execute(self, inputs, outputs, gvm):
         send_error_msg = f"实际转向不为{current_direction}面"
         send_order_log(message=send_error_msg, status=False) 
         error_info = {
-            "error": '10007',
+            "error": '11007',
             "data":{
             "error_msg": send_error_msg,
             "zh_msg": "",
-            "error_code": '10007',
+            "error_code": '11007',
             "tip": ""
             }
         }
