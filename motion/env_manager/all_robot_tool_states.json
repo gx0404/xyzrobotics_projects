@@ -73,14 +73,14 @@
             "have_stream_motion": true,
             "is_virtual_robot": true,
             "joint_position": [
-                -1.8405248850121962,
-                -0.7497648756169089,
-                1.7766757318792905,
-                1.3181129333052537
+                1.0087343865668748,
+                -0.8644685423765068,
+                1.891655841339112,
+                -0.5620811213965013
             ],
             "has_tool": true,
             "tool": {
-                "name": "tool2",
+                "name": "tool1",
                 "tool_collisions": {
                     "name": "tool_collision",
                     "origin": {
@@ -176,7 +176,7 @@
                             },
                             "use_convex": false,
                             "relative_pose": {
-                                "x": -0.269,
+                                "x": -0.12000000000000001,
                                 "y": 0.0,
                                 "z": 0.61,
                                 "qx": 0.0,
@@ -388,7 +388,7 @@
                                 "use_convex": false,
                                 "relative_pose": {
                                     "x": -0.021570000000000006,
-                                    "y": -0.0009011965213759901,
+                                    "y": 0.0,
                                     "z": 0.395,
                                     "qx": 0.0,
                                     "qy": 0.0,
@@ -543,7 +543,7 @@
                                 },
                                 "use_convex": false,
                                 "relative_pose": {
-                                    "x": -0.269,
+                                    "x": -0.12000000000000001,
                                     "y": 0.0,
                                     "z": 0.61,
                                     "qx": 0.0,
@@ -585,13 +585,13 @@
                     {
                         "name": "tip_0",
                         "tip_pose": {
-                            "x": 0.13139,
-                            "y": -0.00046,
-                            "z": 0.7646,
+                            "x": 0.130433,
+                            "y": 0.0,
+                            "z": 0.782879,
                             "qx": 0.0,
-                            "qy": -0.0,
-                            "qz": -0.0,
-                            "qw": 1.0
+                            "qy": 0.0,
+                            "qz": -0.7071,
+                            "qw": 0.7071
                         },
                         "child_primitives_ids": [
                             "tp_1"
@@ -601,17 +601,17 @@
                         "bounding_box": {
                             "type": 1,
                             "origin": {
-                                "x": 0.13139,
-                                "y": -0.00046,
-                                "z": 0.7646,
+                                "x": 0.130433,
+                                "y": 0.0,
+                                "z": 0.782879,
                                 "qx": 0.0,
-                                "qy": -0.0,
-                                "qz": -0.0,
-                                "qw": 1.0
+                                "qy": 0.0,
+                                "qz": -0.7071,
+                                "qw": 0.7071
                             },
                             "dimensions": [
-                                0.6,
-                                0.4,
+                                0.4000000000000002,
+                                0.3000000000000001,
                                 2.2250738585072014e-308
                             ],
                             "points": []
@@ -625,17 +625,17 @@
                             {
                                 "type": 1,
                                 "origin": {
-                                    "x": 0.13139,
-                                    "y": -0.00046,
-                                    "z": 0.7646,
+                                    "x": 0.130433,
+                                    "y": 0.0,
+                                    "z": 0.782879,
                                     "qx": 0.0,
-                                    "qy": -0.0,
-                                    "qz": -0.0,
-                                    "qw": 1.0
+                                    "qy": 0.0,
+                                    "qz": -0.7071,
+                                    "qw": 0.7071
                                 },
                                 "dimensions": [
-                                    0.6,
-                                    0.4
+                                    0.4,
+                                    0.3
                                 ],
                                 "points": []
                             }
@@ -655,115 +655,23 @@
             "robot_tool_state": {
                 "robot_id": "0",
                 "has_tool": true,
-                "tool_name": "tool2",
-                "has_attached_collision_object": true,
+                "tool_name": "tool1",
+                "has_attached_collision_object": false,
                 "attached_collision_object": {
-                    "reference_tip_name": "tip_0",
-                    "reference_object_name": "RealBox-4-1730708073",
-                    "from_workspace_id": "0",
-                    "to_workspace_id": "6",
+                    "reference_tip_name": "",
+                    "reference_object_name": "",
+                    "from_workspace_id": "",
+                    "to_workspace_id": "",
                     "origin_tip_transform": {
-                        "x": -2.7755575615628914e-16,
+                        "x": 0.0,
                         "y": 0.0,
-                        "z": 3.3306690738754696e-16,
-                        "qx": 1.0,
-                        "qy": -2.7668839441830073e-16,
-                        "qz": -5.84946152619585e-17,
-                        "qw": -2.5114388984880834e-17
+                        "z": 0.0,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 0.0
                     },
-                    "objects": [
-                        {
-                            "name": "RealBox-4-1730708073",
-                            "origin": {
-                                "x": -0.4680084228515625,
-                                "y": 2.170675312280655,
-                                "z": -0.4635790824890136,
-                                "qx": 0.0,
-                                "qy": 0.0,
-                                "qz": 0.008522484312719455,
-                                "qw": 0.9999636829711065
-                            },
-                            "primitives": [
-                                {
-                                    "type": 1,
-                                    "dimensions": [
-                                        0.5991,
-                                        0.3991,
-                                        0.2301
-                                    ],
-                                    "absolute_mesh_paths": "",
-                                    "meshes": {
-                                        "triangles": [],
-                                        "vertices": []
-                                    },
-                                    "use_convex": false,
-                                    "relative_pose": {
-                                        "x": 0.0,
-                                        "y": 0.0,
-                                        "z": -0.11505,
-                                        "qx": 0.0,
-                                        "qy": 0.0,
-                                        "qz": 0.0,
-                                        "qw": 1.0
-                                    }
-                                }
-                            ],
-                            "tfs": [],
-                            "color": {
-                                "r": 1.0,
-                                "g": 1.0,
-                                "b": 1.0,
-                                "a": 1.0
-                            },
-                            "additional_info": {
-                                "type": "box",
-                                "keys": [
-                                    "barcode_direction",
-                                    "height",
-                                    "length",
-                                    "weight",
-                                    "width",
-                                    "overlapping_heihgt",
-                                    "row",
-                                    "timestamp",
-                                    "vision_id",
-                                    "box_id",
-                                    "barcode",
-                                    "to_ws"
-                                ],
-                                "values": [
-                                    "4",
-                                    "0.2301",
-                                    "0.5991",
-                                    "5.0",
-                                    "0.3991",
-                                    "0.01",
-                                    "5",
-                                    "1730708071277",
-                                    "4",
-                                    "14",
-                                    "JYS124102923547803",
-                                    "6"
-                                ],
-                                "descriptions": [
-                                    "barcode_direction",
-                                    "height",
-                                    "length",
-                                    "weight",
-                                    "width",
-                                    "overlapping_heihgt",
-                                    "row",
-                                    "timestamp",
-                                    "vision_id",
-                                    "box_id",
-                                    "barcode",
-                                    "to_ws"
-                                ]
-                            },
-                            "ignore_collision": false,
-                            "timestamp": ""
-                        }
-                    ]
+                    "objects": []
                 },
                 "ignored_objects": []
             }
@@ -1919,40 +1827,40 @@
         {
             "robot_id": "0",
             "has_tool": true,
-            "tool_name": "tool2",
-            "has_attached_collision_object": true,
+            "tool_name": "tool1",
+            "has_attached_collision_object": false,
             "attached_collision_object": {
                 "reference_tip_name": "tip_0",
-                "reference_object_name": "RealBox-4-1730708073",
+                "reference_object_name": "RealBox-3-1730713973",
                 "from_workspace_id": "0",
                 "to_workspace_id": "6",
                 "origin_tip_transform": {
-                    "x": -2.7755575615628914e-16,
-                    "y": 0.0,
-                    "z": 3.3306690738754696e-16,
+                    "x": 6.661338147750939e-16,
+                    "y": 2.7755575615628914e-17,
+                    "z": -5.551115123125783e-17,
                     "qx": 1.0,
-                    "qy": -2.7668839441830073e-16,
-                    "qz": -5.84946152619585e-17,
-                    "qw": -2.5114388984880834e-17
+                    "qy": 6.591949208711867e-17,
+                    "qz": 3.1731589575611285e-18,
+                    "qw": 6.246028270088948e-17
                 },
                 "objects": [
                     {
-                        "name": "RealBox-4-1730708073",
+                        "name": "RealBox-3-1730713973",
                         "origin": {
-                            "x": -0.4680084228515625,
-                            "y": 2.170675312280655,
-                            "z": -0.4635790824890136,
+                            "x": -0.13668481037020683,
+                            "y": 1.579978083372116,
+                            "z": -0.23380377292633048,
                             "qx": 0.0,
                             "qy": 0.0,
-                            "qz": 0.008522484312719455,
-                            "qw": 0.9999636829711065
+                            "qz": 0.6890731531578959,
+                            "qw": 0.7246917893815515
                         },
                         "primitives": [
                             {
                                 "type": 1,
                                 "dimensions": [
-                                    0.5991,
                                     0.3991,
+                                    0.2991,
                                     0.2301
                                 ],
                                 "absolute_mesh_paths": "",
@@ -1998,15 +1906,15 @@
                             "values": [
                                 "4",
                                 "0.2301",
-                                "0.5991",
-                                "5.0",
                                 "0.3991",
-                                "0.01",
-                                "5",
-                                "1730708071277",
-                                "4",
-                                "14",
-                                "JYS124102923547803",
+                                "5.0",
+                                "0.2991",
+                                "0.012",
+                                "9",
+                                "1730713971176",
+                                "3",
+                                "34",
+                                "3Z0000000037045688",
                                 "6"
                             ],
                             "descriptions": [

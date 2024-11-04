@@ -21,12 +21,15 @@
         }, 
         "3-config-node": {
             "force_vertical": true, 
-            "target_joints": [
-                -0.93157514, 
-                -1.1971873, 
-                1.252228, 
-                1.054562
-            ]
+            "target_joints": {
+                "__jsonqualname__": "__builtin__.tuple", 
+                "items": [
+                    -0.97545, 
+                    -1.0173, 
+                    0.99374, 
+                    -0.52158
+                ]
+            }
         }, 
         "4-config-execute": {
             "acc": [
