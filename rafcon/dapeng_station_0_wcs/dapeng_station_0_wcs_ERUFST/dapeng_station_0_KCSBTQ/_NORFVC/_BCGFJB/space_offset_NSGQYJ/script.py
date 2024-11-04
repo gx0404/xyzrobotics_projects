@@ -53,16 +53,16 @@ def execute(self, inputs, outputs, gvm):
         outputs["near_relative_poses"] = [[0, 0, 0.11, 0, 0, 0, 1]]
         #缓存区
         if place_workspace_id == "1":
-            outputs["place_drop_buffer"] = 0.02  
+            outputs["place_drop_buffer"] = 0.026
         #笼车     
         elif place_workspace_id in ["2"]:
-            outputs["place_drop_buffer"] = 0.005   
+            outputs["place_drop_buffer"] = 0.011   
         #笼车     
         elif place_workspace_id in ["3"]:
-            outputs["place_drop_buffer"] = 0.005              
+            outputs["place_drop_buffer"] = 0.011              
         #其他           
         else:
-            outputs["place_drop_buffer"] = 0.01         
+            outputs["place_drop_buffer"] = 0.016       
             
     elif row==9:
         #中欧
@@ -70,19 +70,19 @@ def execute(self, inputs, outputs, gvm):
         self.logger.info("row is 9")    
         #缓存区
         if place_workspace_id == "1":
-            outputs["place_drop_buffer"] = -0.003
+            outputs["place_drop_buffer"] = 0.003
         #笼车     
         elif place_workspace_id in ["2"]:
-            outputs["place_drop_buffer"] = -0.02
+            outputs["place_drop_buffer"] = -0.014
         #笼车     
         elif place_workspace_id in ["3"]:
-            outputs["place_drop_buffer"] = -0.02
+            outputs["place_drop_buffer"] = -0.014
         #输送线 
         elif place_workspace_id in ["6"]:
-            outputs["place_drop_buffer"] = 0.015  
+            outputs["place_drop_buffer"] = 0.02  
         #笼车缓存区                            
         else:
-            outputs["place_drop_buffer"] = 0.0   
+            outputs["place_drop_buffer"] = 0.006   
     else:
         raise "无效的row"     
         
