@@ -414,11 +414,13 @@ def depal_task(body: SingleTaskCreateSchema):
             return make_json_response(error=2,error_message="目标箱条码和托盘对应条码不一致")
         if body.sku_type==0:
             if item["to_ws"]=="2":
+                body.lower_speed = True
                 if container_items_2:
                     if sku_dimension_2!=[0.4,0.3,0.23] and ("2" not in pallet_clear_list):
                         mp.order.error(f"当前空间2环境已存在大欧箱,订单却下发空间2中欧箱")  
                         return make_json_response(error=6,error_message="当前空间2环境已存在大欧箱,订单却下发空间2中欧箱")   
             elif item["to_ws"]=="3":
+                body.lower_speed = True
                 if container_items_3:
                     if sku_dimension_3!=[0.4,0.3,0.23] and ("3" not in pallet_clear_list):
                         mp.order.error(f"当前空间3环境已存在大欧箱,订单却下发空间2中欧箱")  
@@ -460,6 +462,7 @@ def depal_task(body: SingleTaskCreateSchema):
         pallet_clear_list = pallet_clear_list,
         customized_data = body.pick_tote_data,
         lower_layer = body.lower_layer,
+        lower_speed = body.lower_speed,
     )
     task_manager.append(task)
 

@@ -33,6 +33,14 @@
             "to_key": 0, 
             "to_state": "GBOCFN"
         }, 
+        "8": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 8, 
+            "from_key": 3, 
+            "from_state": "DMPJWD", 
+            "to_key": 0, 
+            "to_state": "GGRJTA"
+        }, 
         "9": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 9, 
@@ -313,6 +321,15 @@
             }, 
             "default_value": null, 
             "name": "pick_id"
+        }, 
+        "3": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 3, 
+            "data_type": {
+                "__type__": "__builtin__.dict"
+            }, 
+            "default_value": null, 
+            "name": "customized_data"
         }
     }, 
     "name": "笼车码垛", 
@@ -345,13 +362,13 @@
             "to_state": "APHSHX", 
             "transition_id": 1
         }, 
-        "2": {
+        "3": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
             "from_state": "BPKWQS", 
             "to_outcome": null, 
-            "to_state": "YCPCRV", 
-            "transition_id": 2
+            "to_state": "GGRJTA", 
+            "transition_id": 3
         }, 
         "6": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 

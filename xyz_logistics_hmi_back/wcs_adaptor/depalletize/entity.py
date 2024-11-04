@@ -49,5 +49,6 @@ class DPTTask(LiteBaseTask):
     from_pallet_tote_data: Optional[dict] = Field(default={},description="合托任务拼托副（被拆）数据")
     to_pallet_tote_data: Optional[dict] = Field(default={},description="合托任务拼托主（码）工作空间数据")
     lower_layer: bool = Field(description="是否降层",default=False)
+    lower_speed: bool = Field(description="是否降速",default=False)
         
         

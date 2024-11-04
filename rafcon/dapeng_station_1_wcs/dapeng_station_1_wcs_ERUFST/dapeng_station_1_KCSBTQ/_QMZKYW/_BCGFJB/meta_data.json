@@ -14,8 +14,12 @@
     "data_flow3": {}, 
     "data_flow35": {}, 
     "data_flow37": {}, 
+    "data_flow4": {}, 
     "data_flow5": {}, 
+    "data_flow6": {}, 
     "data_flow7": {}, 
+    "data_flow8": {}, 
+    "data_flow9": {}, 
     "data_flow91": {}, 
     "data_flow97": {}, 
     "gui": {
@@ -216,10 +220,10 @@
             }
         }
     }, 
-    "transition24": {
+    "transition2": {
         "gui": {
             "editor_gaphas": {
-                "waypoints": []
+                "waypoints": {}
             }
         }
     }, 
@@ -234,6 +238,13 @@
         "gui": {
             "editor_gaphas": {
                 "waypoints": []
+            }
+        }
+    }, 
+    "transition3": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
             }
         }
     }, 

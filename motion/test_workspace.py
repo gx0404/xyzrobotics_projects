@@ -130,7 +130,7 @@ collision_14 = build_collision(name="col_14", origin=[-0.8, -0.15, -0.2, 0, 0, 0
 
 
 #相机立柱扫码器2
-collision_17 = build_collision(name="col_17", origin=[1.2, 2.85, 0.73,  0.0, 0.0, 0.08715573006937669, 0.996194699207021], dimensions=[0.35, 0.11,0.33], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
+collision_17 = build_collision(name="col_17", origin=[1.2, 2.85+0.035, 0.73,  0.0, 0.0, 0.08715573006937669, 0.996194699207021], dimensions=[0.35, 0.11,0.33], geometric_type=GeometricPrimitive.BOX, alpha=0.2)
 
 
 # 创建复杂障碍物(由多个几何体组成，一般不需要)，可以参考以下代码

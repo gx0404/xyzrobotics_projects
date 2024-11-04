@@ -29,7 +29,32 @@ from wcs_adaptor.depalletize.wcs_request import (
     #拣配任务
     notice_depal_place_ws_is_full)
 from wcs_adaptor.manager import workspace_manager
+from wcs_adaptor.models import CageLayer
+from apps.models import db
 
+#设置中欧码垛层数
+@custom_hmi_bp.route("/example/set_cage_layer", methods=["POST"])
+@req_log(log=wcs_log)
+@backup_manager_wrapper()
+def set_cage_layer():
+    app = cached_app()
+    with app.app_context():
+        if app.status == "ready":
+            return make_json_response(msg="正在运行程序,禁止操作")      
+        else: 
+            data = request.get_json()
+            layer_num = int(data["layer_num"]) 
+            model = CageLayer.query.first()
+            if not model:
+                model = CageLayer(layer_num=6)
+                db.session.add(model)
+                db.session.commit()
+            else:    
+                model.layer_num = layer_num
+                db.session.add(model)
+                db.session.commit()   
+            return make_json_response(msg="设置中欧层数成功")  
+        
 #中欧网页打开
 @custom_hmi_bp.route("/example/open_html_0", methods=["POST","GET"])
 @req_log(log=wcs_log)

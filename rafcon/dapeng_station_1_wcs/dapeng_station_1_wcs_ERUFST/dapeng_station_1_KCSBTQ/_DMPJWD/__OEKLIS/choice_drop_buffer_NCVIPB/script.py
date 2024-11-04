@@ -8,12 +8,12 @@ def execute(self, inputs, outputs, gvm):
     self.logger.info(f"place_id is {place_id}")
     if row==5:   
         if place_id == "0":
-            outputs["place_drop_buffer"] = 0.015
+            outputs["place_drop_buffer"] = 0.018
         else:
-            outputs["place_drop_buffer"] = 0.017   
+            outputs["place_drop_buffer"] = 0.02   
     else:
         if place_id == "4":
-            outputs["place_drop_buffer"] = -0.01
+            outputs["place_drop_buffer"] = -0.007
         else:
-            outputs["place_drop_buffer"] = -0.01                        
+            outputs["place_drop_buffer"] = -0.007                        
     return "success"

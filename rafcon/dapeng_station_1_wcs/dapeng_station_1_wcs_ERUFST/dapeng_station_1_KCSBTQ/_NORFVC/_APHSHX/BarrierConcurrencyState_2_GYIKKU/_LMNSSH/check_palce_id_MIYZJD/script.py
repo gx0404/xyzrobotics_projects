@@ -16,8 +16,14 @@ def execute(self, inputs, outputs, gvm):
             outputs["pre_speed"] = [50,50]                 
         return "other_pallet"
     else:   
+        lower_speed = gvm.get_variable("lower_speed", per_reference=False, default=None)  
+        if lower_speed:
+            outputs["pre_acc"] = [40,40]    
+            outputs["pre_speed"] = [70,70]  
+        else:  
+            outputs["pre_acc"] = [100,100]    
+            outputs["pre_speed"] = [100,100]                             
         outputs["acc"] = [100,100]
         outputs["speed"] = [100,100]    
-        outputs["pre_acc"] = [100,100]    
-        outputs["pre_speed"] = [100,100]         
+        
         return "success"

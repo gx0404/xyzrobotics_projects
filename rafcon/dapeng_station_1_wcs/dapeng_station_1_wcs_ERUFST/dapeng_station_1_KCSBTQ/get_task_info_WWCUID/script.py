@@ -183,7 +183,13 @@ def execute(self, inputs, outputs, gvm):
             #     self.smart_data["tri-color_light_setting"]["value_green"])
         except:
             raise XYZExceptionBase("70018", "The communication between the industrial computer and the PLC is disconnected or the address bit of the operation is wrong.")
-    outputs["pallet_clear_list"] = task_info["pallet_clear_list"]    
+    outputs["pallet_clear_list"] = task_info["pallet_clear_list"] 
+    layer_num = task_info["layer_num"]
+    gvm.set_variable("layer_num", layer_num, per_reference=False)    
+    if task_info["lower_speed"]:
+        gvm.set_variable("lower_speed", True, per_reference=True) 
+    else:
+        gvm.set_variable("lower_speed", False, per_reference=True)
     if task_info["task_type"]==0:
         outputs["pallet_clear_list"] = task_info["pallet_clear_list"]+["0","4"] 
         self.logger.info(f"执行拣配任务")
@@ -191,6 +197,7 @@ def execute(self, inputs, outputs, gvm):
         return "depal"
     elif task_info["task_type"]==1:
         outputs["pallet_clear_list"] = task_info["pallet_clear_list"]+["2","3"] 
+        outputs["customized_data"] = task_info["customized_data"]
         self.logger.info(f"执行笼车单码任务")
         return "pal"      
     elif task_info["task_type"]==3:

@@ -53,16 +53,16 @@ def execute(self, inputs, outputs, gvm):
         outputs["near_relative_poses"] = [[0, 0, 0.11, 0, 0, 0, 1]]
         #缓存区
         if place_workspace_id == "1":
-            outputs["place_drop_buffer"] = 0.02  
+            outputs["place_drop_buffer"] = 0.023  
         #笼车     
         elif place_workspace_id in ["2"]:
-            outputs["place_drop_buffer"] = 0.005   
+            outputs["place_drop_buffer"] = 0.008   
         #笼车     
         elif place_workspace_id in ["3"]:
-            outputs["place_drop_buffer"] = 0.005              
+            outputs["place_drop_buffer"] = 0.008              
         #其他           
         else:
-            outputs["place_drop_buffer"] = 0.01         
+            outputs["place_drop_buffer"] = 0.013         
             
     elif row==9:
         #中欧

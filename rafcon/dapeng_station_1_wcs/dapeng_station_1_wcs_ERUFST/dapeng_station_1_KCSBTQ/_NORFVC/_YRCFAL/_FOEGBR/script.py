@@ -72,11 +72,11 @@ def execute(self, inputs, outputs, gvm):
     #判断实际笼车位置和初始笼车位置       
     aixs_list = ["x","y","z"]
     for i in range(3):
-        self.logger.info(f"{aixs_list[i]}方向偏差为{pallet_pose[i]-check_pose[i]}")  
+        self.logger.info(f"{aixs_list[i]}方向偏差为{pallet_pose[i]-check_pose[i]}")       
     pallet_pose[2]+=0.017    
     if abs(pallet_pose[0]-check_pose[0])>0.05:
         raise "x方向偏差过大"     
-    if abs(pallet_pose[1]-check_pose[1])>0.05:
+    if abs(pallet_pose[1]-check_pose[1])>0.03:
         raise "y方向偏差过大" 
     if abs(pallet_pose[2]-check_pose[2])>0.05:
         raise "z方向偏差过大"  

@@ -15,15 +15,15 @@
     },
     "decoder_param": {
         "ContrastThreshold": 0.0020000000949949026,
-        "DataThreshold": 0.010000001586973672,
+        "DataThreshold": 0.010000001639127726,
         "DecoderMethod": "XYZ_LASER_DINP16"
     },
     "depth_scale": 1.0,
     "enable_calibration_mode": false,
     "image_param": {
-        "ExposureTime": 15360.0,
+        "ExposureTime": 20480.0,
         "ExposureTime2D": 45364.0,
-        "Gain": 1.0
+        "Gain": 2.0
     },
     "intrinsic_calibrated": false,
     "meta": {
@@ -54,9 +54,9 @@
         "method": "rg",
         "post_enable": true,
         "rg": {
-            "max_xy_diff": 0.002999999888241291,
-            "max_z_diff": 0.004000000026077032,
-            "min_region_size": 400
+            "max_xy_diff": 0.0029999997932463884,
+            "max_z_diff": 0.004000000189989805,
+            "min_region_size": 200
         }
     },
     "stream_param": {

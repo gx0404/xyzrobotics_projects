@@ -20,8 +20,8 @@
             "rel_pos": {
                 "__jsonqualname__": "__builtin__.tuple", 
                 "items": [
-                    392.83378596488, 
-                    82.83992743348244
+                    463.05043800267777, 
+                    82.17096607204257
                 ]
             }, 
             "size": {
@@ -41,6 +41,19 @@
                     "items": [
                         0.6, 
                         2.4
+                    ]
+                }
+            }
+        }
+    }, 
+    "input_data_port0": {
+        "gui": {
+            "editor_gaphas": {
+                "rel_pos": {
+                    "__jsonqualname__": "__builtin__.tuple", 
+                    "items": [
+                        0, 
+                        27.0
                     ]
                 }
             }

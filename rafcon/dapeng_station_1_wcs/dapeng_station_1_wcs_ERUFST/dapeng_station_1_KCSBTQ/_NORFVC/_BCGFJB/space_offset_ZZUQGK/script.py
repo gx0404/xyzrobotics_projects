@@ -39,7 +39,7 @@ def execute(self, inputs, outputs, gvm):
         work_space_dimensions = workspace_ros.get_dimensions()
         work_space_pose = workspace_ros.get_bottom_pose().xyz_quat
         tip_pose_z = tf_flange_tip.xyz_quat[2]
-        space_pose_obj_z = work_space_pose[2]+work_space_dimensions[2]+tip_pose_z+self.smart_data["sku_max_height"]+0.1
+        space_pose_obj_z = work_space_pose[2]+work_space_dimensions[2]+tip_pose_z+self.smart_data["sku_max_height"]+0.08
         pose_base_flange = tf_base_flange_list[0].xyz_quat
                 
         pose_xyz = pose_base_flange[0:2] + [space_pose_obj_z]        

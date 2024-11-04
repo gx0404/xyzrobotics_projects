@@ -9,12 +9,20 @@
             "to_key": 4, 
             "to_state": "IYJTQH"
         }, 
-        "4": {
+        "2": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
-            "data_flow_id": 4, 
+            "data_flow_id": 2, 
             "from_key": 2, 
             "from_state": "GGRJTA", 
             "to_key": 0, 
+            "to_state": "TTRBYP"
+        }, 
+        "3": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 3, 
+            "from_key": 0, 
+            "from_state": "GGRJTA", 
+            "to_key": 1, 
             "to_state": "TTRBYP"
         }, 
         "6": {
@@ -103,6 +111,15 @@
         "__jsonqualname__": "rafcon.core.state_elements.logical_port.Income"
     }, 
     "input_data_ports": {
+        "0": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
+            "data_port_id": 0, 
+            "data_type": {
+                "__type__": "__builtin__.dict"
+            }, 
+            "default_value": null, 
+            "name": "customized_data"
+        }, 
         "1": {
             "__jsonqualname__": "rafcon.core.state_elements.data_port.InputDataPort", 
             "data_port_id": 1, 

@@ -61,7 +61,7 @@ from wcs_adaptor.manager import order_manager, task_manager, workspace_manager
 from wcs_adaptor.plc_listener import plc_set_redlight
 from wcs_adaptor.zh_msg import ALL_ERROR, DEFAULT_ERROR
 
-from wcs_adaptor.models import PalletData
+from wcs_adaptor.models import PalletData,CageLayer
 from apps.models import db
 from datetime import datetime
 
@@ -433,6 +433,7 @@ def get_task_info():
 
         output_data.customized_data = task.customized_data
         output_data.lower_layer = task.lower_layer
+        output_data.lower_speed = task.lower_speed
 
         if task.order_id:
             # order存在且开始时间为None, 则说明当前任务是该订单的第一个任务, 即更新开始时间.
@@ -446,6 +447,15 @@ def get_task_info():
     else:
         output_data = GetTaskInfoOutputSchema()
     data = output_data.dict(by_alias=True)
+    
+    #获取笼车中欧层数
+    model = CageLayer.query.first()
+    if not model:
+        model = CageLayer(layer_num=6)
+        db.session.add(model)
+        db.session.commit()
+    layer_num = model.layer_num    
+    data["layer_num"] = layer_num        
     return make_json_response(data=data, error=0, **data)
 
 

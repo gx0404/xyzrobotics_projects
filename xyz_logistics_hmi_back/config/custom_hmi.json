@@ -2,6 +2,21 @@
   "ui": true,
   "content": [
     {
+      "id": "set_cage_layer",
+      "title": "设置中欧笼车层数",
+      "help": "设置中欧笼车层数,每次打开界面会自动获取当前层数，如果需要修改，请在HMI停止运行后再去辅助界面点击‘设置’按钮",
+      "api": "api/custom/example/set_cage_layer",
+      "type": "input-number",
+      "name": "layer_num",
+      "label": "设置",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default_value": 6,
+      "required": true,
+      "recheck": true
+    },     
+    {
       "id": "clear_manager",
       "title": "清空任务",
       "help": "点击‘清空’按钮，清空当前所有任务、订单",
