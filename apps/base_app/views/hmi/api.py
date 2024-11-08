@@ -89,8 +89,34 @@ def get_customized_hmi():
         }
         ---
     """
+    import pymysql
     with open(settings.CUSTOM_HMI_CG, "r") as fin:
         custom_hmi_params = json.load(fin)
+    
+    #获取更新中欧笼车层数    
+    content = custom_hmi_params["content"]    
+    for custom_config in content:
+        if custom_config["id"] == "set_cage_layer":
+            set_cage_layer_config = custom_config
+            break
+
+    # 连接到 MySQL 数据库
+    conn = pymysql.connect(
+        host='localhost',
+        user='root',
+        password='xyz123456',
+        database='hmi'
+    )
+    # 创建游标对象
+    cursor = conn.cursor()
+
+    # 执行 SQL 查询语句
+    query = "select * from cage_layer"
+    cursor.execute(query)
+    
+    # 获取查询结果
+    cage_layer_results = cursor.fetchall()    
+    set_cage_layer_config["default_value"] = cage_layer_results[0][1]
     return make_json_response(data=custom_hmi_params)
 
 

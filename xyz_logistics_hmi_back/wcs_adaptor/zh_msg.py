@@ -418,6 +418,19 @@ ALL_ERROR["10024"] = {
     "de_tip": "已自动回报WCS虚拟储位匹配失败",
 }
 
+ALL_ERROR["10025"] = {
+    "error_code": "10025",
+    "error_msg": "中欧拣配条码不匹配",
+    "zh_msg": "中欧拣配条码不匹配",
+    "tip": "手动把料箱放回拣配托盘，后续配合JCS处理",
+    "ja_msg": "位置号匹配失败",
+    "ja_tip": "已自动回报WCS虚拟储位匹配失败",
+    "en_msg": "位置号匹配失败",
+    "en_tip": "已自动回报WCS虚拟储位匹配失败",
+    "de_msg": "位置号匹配失败",
+    "de_tip": "已自动回报WCS虚拟储位匹配失败",
+}
+
 ALL_ERROR["20000"] = {
     "error_code": "20000",
     "error_msg": "NoValidObjects",

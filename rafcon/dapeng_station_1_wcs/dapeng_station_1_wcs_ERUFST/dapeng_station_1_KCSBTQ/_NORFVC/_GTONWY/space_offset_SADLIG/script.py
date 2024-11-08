@@ -48,7 +48,7 @@ def execute(self, inputs, outputs, gvm):
         outputs["place_drop_buffer"] = 0.025
     elif row==9:
         self.logger.info("row is 9")    
-        outputs["place_drop_buffer"] = 0.01
+        outputs["place_drop_buffer"] = 0.02
     else:
         raise "无效的row"   
     

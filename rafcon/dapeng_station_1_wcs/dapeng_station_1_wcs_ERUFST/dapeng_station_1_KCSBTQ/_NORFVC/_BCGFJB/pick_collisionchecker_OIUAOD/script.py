@@ -438,7 +438,7 @@ def execute(self, inputs, outputs, gvm):
     outputs["slide"] = [use_slide]  
     self.logger.info(use_slide)
     post_slide = copy.deepcopy(use_slide)
-    post_slide[2] = 0.01
+    post_slide[2] = 0.02
     outputs["post_slide"] = [post_slide] 
      
     outputs["un_clamp_collision"] = un_clamp_collision

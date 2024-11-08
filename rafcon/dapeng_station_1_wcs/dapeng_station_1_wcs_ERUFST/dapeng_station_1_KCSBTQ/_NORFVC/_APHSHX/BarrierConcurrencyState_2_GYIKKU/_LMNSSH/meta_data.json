@@ -5,9 +5,7 @@
             "editor_gaphas": {}
         }
     }, 
-    "data_flow109": {}, 
     "data_flow11": {}, 
-    "data_flow110": {}, 
     "data_flow12": {}, 
     "data_flow13": {
         "gui": {
@@ -259,35 +257,7 @@
             }
         }
     }, 
-    "transition115": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
-    "transition118": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
-    "transition119": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
     "transition12": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
-    "transition120": {
         "gui": {
             "editor_gaphas": {
                 "waypoints": []
@@ -326,6 +296,13 @@
         "gui": {
             "editor_gaphas": {
                 "waypoints": []
+            }
+        }
+    }, 
+    "transition2": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
             }
         }
     }, 
@@ -397,6 +374,13 @@
         "gui": {
             "editor_gaphas": {
                 "waypoints": []
+            }
+        }
+    }, 
+    "transition3": {
+        "gui": {
+            "editor_gaphas": {
+                "waypoints": {}
             }
         }
     }, 
@@ -472,13 +456,6 @@
             }
         }
     }, 
-    "transition38": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": []
-            }
-        }
-    }, 
     "transition39": {
         "gui": {
             "editor_gaphas": {
@@ -518,28 +495,6 @@
         "gui": {
             "editor_gaphas": {
                 "waypoints": []
-            }
-        }
-    }, 
-    "transition53": {
-        "gui": {
-            "editor_gaphas": {
-                "waypoints": [
-                    {
-                        "__jsonqualname__": "__builtin__.tuple", 
-                        "items": [
-                            166.29683104105825, 
-                            80.95069625062673
-                        ]
-                    }, 
-                    {
-                        "__jsonqualname__": "__builtin__.tuple", 
-                        "items": [
-                            150.75288069671856, 
-                            80.95069625062673
-                        ]
-                    }
-                ]
             }
         }
     }, 

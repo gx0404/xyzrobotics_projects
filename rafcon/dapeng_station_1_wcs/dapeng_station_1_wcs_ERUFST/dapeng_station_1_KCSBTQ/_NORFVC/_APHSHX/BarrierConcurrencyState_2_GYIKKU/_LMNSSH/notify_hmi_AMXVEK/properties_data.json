@@ -3,7 +3,7 @@
         "comment": "notify_hmi", 
         "is_notify_error_mode": true, 
         "notify_error_mode": {
-            "error_code": "10018"
+            "error_code": "10025"
         }, 
         "notify_msg_mode": {
             "msg": "机器人节点异常", 
