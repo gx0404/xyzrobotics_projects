@@ -322,6 +322,14 @@
             "to_state": "EQNWBR", 
             "transition_id": 16
         }, 
+        "17": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 1, 
+            "from_state": "EQNWBR", 
+            "to_outcome": null, 
+            "to_state": "HKKAXN", 
+            "transition_id": 17
+        }, 
         "24": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 

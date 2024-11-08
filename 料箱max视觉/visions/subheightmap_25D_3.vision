@@ -2258,7 +2258,7 @@ nodes:
           - 600_400_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 90
+        min_detection_score: 93
         nms_score: 0.2
         nms_across_all: true
         top_n: 4
@@ -2648,11 +2648,11 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: -1241.925653790719
-      y: 936.33940267007938
+      x: -1291.6941723092377
+      y: 883.09866192933828
     embedded_widget_rect:
-      w: 437
-      h: 311
+      w: 475
+      h: 359
   - id: "{f9e6e9c5-a40e-42f0-b85e-950bf0eac37b}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:

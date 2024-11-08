@@ -283,11 +283,11 @@ nodes:
       name: ImageShowModel
       params: ~
     position:
-      x: -1191.50221197312
-      y: -154.95393705983997
+      x: -1252.3355453064535
+      y: -208.15609755366711
     embedded_widget_rect:
-      w: 200
-      h: 200
+      w: 521
+      h: 551
   - id: "{18e105a2-9e32-4490-9a0b-160b7afda9f7}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:
@@ -449,7 +449,7 @@ nodes:
           - 600_400_230
         detection_weak_contrast: 30
         detection_min_contrast: 30
-        min_detection_score: 90
+        min_detection_score: 93
         nms_score: 0.20000000000000001
         nms_across_all: true
         top_n: 4
@@ -474,8 +474,8 @@ nodes:
           contrast: 30
           min_contrast: -1
     position:
-      x: -1200.5048934895219
-      y: 272.69148573221298
+      x: -1217.3048934895221
+      y: 281.09148573221307
   - id: "{27b5ab5b-78c6-4d30-8a51-ebdefcc3e5a2}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:

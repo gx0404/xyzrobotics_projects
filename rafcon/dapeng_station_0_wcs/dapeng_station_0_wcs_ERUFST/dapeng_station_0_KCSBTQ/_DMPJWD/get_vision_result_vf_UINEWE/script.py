@@ -338,7 +338,8 @@ def execute(self, inputs, outputs, gvm):
         else:
             self.logger.error(f"大欧完整性校验成功")
             check_primitive_600_400 = False    
-    
+            
+    row = gvm.get_variable("row", per_reference=False, default=None) 
     if check_primitive_400_300 and check_primitive_600_400:
         self.logger.info(f"大欧中欧完整性校验都失败")
         
@@ -363,20 +364,23 @@ def execute(self, inputs, outputs, gvm):
         raise XYZExceptionBase("10024", "大欧中欧完整性校验都成功") 
     
     elif not check_primitive_400_300 and check_primitive_600_400:
-        self.logger.info(f"大欧校验失败,中欧完整性校验成功")      
-        if sku_info["row"]!=9:
+        self.logger.info(f"大欧校验失败,中欧完整性校验成功")       
+        if row!=9:
+            change_flag = True
             self.logger.info(f"中欧视觉识别成功,但是第一次识别不为中欧")
             #raise "中欧视觉识别成功,但是第一次识别不为中欧"
             vision_result_raw = vision_result_raw_400_300
         else:
+            change_flag = False
             vision_result_raw = vision_result_raw_400_300
     elif check_primitive_400_300 and not check_primitive_600_400:
         self.logger.info(f"中欧校验失败,大欧完整性校验成功")                 
-        if sku_info["row"]!=5:
+        if row!=5:
             self.logger.info(f"大欧视觉识别成功,但是第一次识别不为大欧")
-            #raise "大欧视觉识别成功,但是第一次识别不为大欧"
+            change_flag = True
             vision_result_raw = vision_result_raw_600_400 
         else:
+            change_flag = False
             vision_result_raw = vision_result_raw_600_400 
         
         
@@ -618,5 +622,7 @@ def execute(self, inputs, outputs, gvm):
         pick_workspace.to_json_file(data_store_path)
 
     
-        
-    return "success"
+    if change_flag:
+        return "change"
+    else:    
+        return "success"

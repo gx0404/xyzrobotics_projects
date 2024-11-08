@@ -20,7 +20,27 @@ bp = Blueprint("ext", __name__, url_prefix="/api/ext")
 @openapi.api_doc(tags=["XLHB", "扩展接口"], summary="获取当前任务")
 def get_current_task():
     """获取正在执行的任务.""" 
-     
+    try:
+        import pymysql
+        # 连接到 MySQL 数据库
+        conn = pymysql.connect(
+            host='localhost',
+            user='root',
+            password='xyz123456',
+            database='hmi'
+        )
+        # 创建游标对象
+        cursor = conn.cursor()
+
+        # 执行 SQL 查询语句
+        query = "select * from cage_layer"
+        cursor.execute(query)  
+        # 获取查询结果
+        cage_layer_results = cursor.fetchall()           
+        cage_layer = cage_layer_results[0][1]
+    except:
+        cage_layer = 0
+               
     try:
         #import ipdb;ipdb.set_trace() 
         all_history_tasks = HistoryTaskModel.query.all()
@@ -126,6 +146,7 @@ def get_current_task():
                 elif task.task_type == 1:
                     task_type = "笼车空箱回收"    
                 data = {
+                    "笼车中欧设置层数":cage_layer,
                     "当天机械臂执行任务总时间(含任务异常)":f"{round(running_time,2)}小时",
                     "执行任务时间/当天24小时":f"{round(running_time/now_time*100,2)}%",
                     "白班拣单数量(8:00-20:00)":num_1,
@@ -148,6 +169,7 @@ def get_current_task():
 
         else:
             data = {
+                    "笼车中欧设置层数":cage_layer,
                     "当天机械臂执行任务总时间(含任务异常)":f"{round(running_time,2)}小时",
                     "执行任务时间/当天24小时":f"{round(running_time/now_time*100,2)}%",
                     "白班拣单数量(8:00-20:00)":num_1,
@@ -157,6 +179,7 @@ def get_current_task():
         if task := wcs_adaptor.manager.task_manager.first():
             sku_info = task.sku_info     
             data = {
+                "笼车中欧设置层数":cage_layer,
                 "任务ID": task.task_id,
                 "已完成数量": task.done_num,
                 "目标数量": task.target_num,

@@ -86,6 +86,14 @@
     "scoped_variables": {}, 
     "state_id": "GBOCFN", 
     "transitions": {
+        "1": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": -1, 
+            "from_state": "UINEWE", 
+            "to_outcome": null, 
+            "to_state": "HKKAXN", 
+            "transition_id": 1
+        }, 
         "5": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": null, 

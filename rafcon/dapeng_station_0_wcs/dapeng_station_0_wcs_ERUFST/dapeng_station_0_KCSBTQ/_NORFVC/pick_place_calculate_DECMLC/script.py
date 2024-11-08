@@ -410,11 +410,16 @@ class SEARCH_ASYNC():
 
         plan_items = list(filter(lambda x: x.name not in [i.name for i in plan_path_list], plan_items))
         
+        if self.lower_layer:
+            row_flag = False
+        else:
+            row_flag = True
+        
         remaining_plan_items = list(filter(lambda x:x.additional_info.values[-3] in pick_path,plan_items))
-        remaining_plan_items = filter_bottom_items(remaining_plan_items)
+        remaining_plan_items = filter_bottom_items(remaining_plan_items,row_flag=row_flag)
 
         remaining_pick_items = list(filter(lambda x: x.name not in [i.name for i in pick_path_list], container_items))
-        remaining_pick_items = filter_layer_items(remaining_pick_items)                 
+        remaining_pick_items = filter_layer_items(remaining_pick_items,row_flag=row_flag)                 
         # 初始化优先队列
         open_set = PriorityQueue() 
         visited_states = {}
@@ -498,7 +503,7 @@ class SEARCH_ASYNC():
             #过滤掉缓存区已完成的箱子
             remaining_pick_items = list(filter(lambda x:x.name not in [i.name for i in pick_path_list],container_items))
             #过滤缓存区非顶层箱子+最高层
-            remaining_pick_items = filter_layer_items(remaining_pick_items)
+            remaining_pick_items = filter_layer_items(remaining_pick_items,row_flag=row_flag)
 
             #过滤掉拣配托盘已放置的箱子
             remaining_plan_items = list(filter(lambda x:x not in plan_path_list,plan_items))
@@ -517,7 +522,7 @@ class SEARCH_ASYNC():
                     #原先哪一列
                     pick_box_id_row = int(from_pick_id)%self.row
                     #找到需要放置的箱子
-                    new_remaining_plan_items = filter_bottom_items(remaining_plan_items)
+                    new_remaining_plan_items = filter_bottom_items(remaining_plan_items,row_flag=row_flag)
 
                     for plan_item in new_remaining_plan_items:
                         #获取到放置是否干涉，以及旋转180放置是否干涉

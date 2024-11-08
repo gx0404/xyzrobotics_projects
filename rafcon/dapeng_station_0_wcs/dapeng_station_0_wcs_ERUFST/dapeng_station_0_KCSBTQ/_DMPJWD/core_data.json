@@ -1,6 +1,22 @@
 {
     "__jsonqualname__": "rafcon.core.states.hierarchy_state.HierarchyState", 
     "data_flows": {
+        "1": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 1, 
+            "from_key": 1, 
+            "from_state": "UINEWE", 
+            "to_key": 0, 
+            "to_state": "HXDVWE"
+        }, 
+        "2": {
+            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
+            "data_flow_id": 2, 
+            "from_key": 1, 
+            "from_state": "HXDVWE", 
+            "to_key": 0, 
+            "to_state": "UINEWE"
+        }, 
         "4": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 4, 
@@ -233,14 +249,6 @@
             "to_key": 5, 
             "to_state": "UINEWE"
         }, 
-        "76": {
-            "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
-            "data_flow_id": 76, 
-            "from_key": 1, 
-            "from_state": "HXDVWE", 
-            "to_key": 0, 
-            "to_state": "UINEWE"
-        }, 
         "79": {
             "__jsonqualname__": "rafcon.core.state_elements.data_flow.DataFlow", 
             "data_flow_id": 79, 
@@ -361,6 +369,22 @@
             "to_outcome": null, 
             "to_state": "APHSHX", 
             "transition_id": 1
+        }, 
+        "2": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": -1, 
+            "from_state": "UINEWE", 
+            "to_outcome": null, 
+            "to_state": "HKKAXN", 
+            "transition_id": 2
+        }, 
+        "3": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 2, 
+            "from_state": "UINEWE", 
+            "to_outcome": null, 
+            "to_state": "GBOCFN", 
+            "transition_id": 3
         }, 
         "5": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 

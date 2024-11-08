@@ -136,33 +136,28 @@ def notice_cage_full():
         if app.status == "ready":
             return make_json_response(msg="正在运行程序,禁止此功能,请在HMI点击停止后再使用此功能")      
         else:  
-            task = task_manager.first()
-            if task:
-                if task.task_type==TaskType.SINGLE_DEPAL:
-                    data = request.get_json()
-                    place_id = str(data["place_id"])
-                    notice_depal_place_ws_is_full(place_id)
-                    # 获取工作空间对象.
-                    ws = workspace_manager.get(ws_id=place_id)
-                    # 设置当前工作空间状态为未就绪
-                    ws.not_ready()  
-                    
-                    try:
-                        from xyz_env_manager.client import (
-                            remove_bottom_padding_workspace,
-                            clear_container_all_items,
-                            clear_planned_items,
-                        )
-                        remove_bottom_padding_workspace(place_id)
-                        clear_container_all_items(place_id)
-                        clear_planned_items(place_id)                           
-                    except ImportError as err:
-                        return make_json_response(msg="失败，检查环境节点")
-                    return make_json_response(msg="已通知JCS码满")
-                else:
-                    return make_json_response(msg="此功能仅适用于拣配任务")
-            else:
-                return make_json_response(msg="无拣配任务,无法通知码满")
+            data = request.get_json()
+            place_id = str(data["place_id"])
+            notice_depal_place_ws_is_full(place_id)
+            # 获取工作空间对象.
+            ws = workspace_manager.get(ws_id=place_id)
+            # 设置当前工作空间状态为未就绪
+            ws.not_ready()  
+            
+            try:
+                from xyz_env_manager.client import (
+                    remove_bottom_padding_workspace,
+                    clear_container_all_items,
+                    clear_planned_items,
+                )
+                remove_bottom_padding_workspace(place_id)
+                clear_container_all_items(place_id)
+                clear_planned_items(place_id)                           
+            except ImportError as err:
+                return make_json_response(msg="失败，检查环境节点")
+            return make_json_response(msg="已通知JCS码满")
+
+
 
 
 #拣配任务手动清空环境
@@ -175,27 +170,21 @@ def clear_cage_environment():
         if app.status == "ready":
             return make_json_response(msg="正在运行程序,禁止此功能,请在HMI点击停止后再使用此功能")      
         else:  
-            task = task_manager.first()
-            if task:
-                if task.task_type==TaskType.SINGLE_DEPAL:
-                    data = request.get_json()
-                    place_id = str(data["place_id"])                  
-                    try:
-                        from xyz_env_manager.client import (
-                            remove_bottom_padding_workspace,
-                            clear_container_all_items,
-                            clear_planned_items,
-                        )
-                        remove_bottom_padding_workspace(place_id)
-                        clear_container_all_items(place_id)
-                        clear_planned_items(place_id)                           
-                    except ImportError as err:
-                        return make_json_response(msg="失败，检查环境节点")
-                    return make_json_response(msg="已清空环境")
-                else:
-                    return make_json_response(msg="此功能仅适用于拣配任务")
-            else:
-                return make_json_response(msg="无拣配任务,无法清空环境")   
+
+            data = request.get_json()
+            place_id = str(data["place_id"])                  
+            try:
+                from xyz_env_manager.client import (
+                    remove_bottom_padding_workspace,
+                    clear_container_all_items,
+                    clear_planned_items,
+                )
+                remove_bottom_padding_workspace(place_id)
+                clear_container_all_items(place_id)
+                clear_planned_items(place_id)                           
+            except ImportError as err:
+                return make_json_response(msg="失败，检查环境节点")
+            return make_json_response(msg="已清空环境")
 
 #空箱回收手动通知码垛码满
 @custom_hmi_bp.route("/example/notice_pallet_full", methods=["POST"])

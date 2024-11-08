@@ -290,6 +290,22 @@
             "to_state": "EQNWBR", 
             "transition_id": 16
         }, 
+        "18": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 1, 
+            "from_state": "BKOIGX", 
+            "to_outcome": null, 
+            "to_state": "HKKAXN", 
+            "transition_id": 18
+        }, 
+        "19": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": 1, 
+            "from_state": "EQNWBR", 
+            "to_outcome": null, 
+            "to_state": "HKKAXN", 
+            "transition_id": 19
+        }, 
         "27": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 
