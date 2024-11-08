@@ -61,6 +61,11 @@
             "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
             "name": "empty", 
             "outcome_id": 1
+        }, 
+        "2": {
+            "__jsonqualname__": "rafcon.core.state_elements.logical_port.Outcome", 
+            "name": "change", 
+            "outcome_id": 2
         }
     }, 
     "output_data_ports": {

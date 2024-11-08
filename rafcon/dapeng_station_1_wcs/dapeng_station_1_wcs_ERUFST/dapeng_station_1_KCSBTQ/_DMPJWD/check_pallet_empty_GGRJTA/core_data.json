@@ -161,6 +161,14 @@
     "scoped_variables": {}, 
     "state_id": "GGRJTA", 
     "transitions": {
+        "1": {
+            "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
+            "from_outcome": -1, 
+            "from_state": "FOEGBR", 
+            "to_outcome": null, 
+            "to_state": "HKKAXN", 
+            "transition_id": 1
+        }, 
         "3": {
             "__jsonqualname__": "rafcon.core.state_elements.transition.Transition", 
             "from_outcome": 0, 

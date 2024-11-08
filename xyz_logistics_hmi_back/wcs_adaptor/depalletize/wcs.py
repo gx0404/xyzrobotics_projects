@@ -804,7 +804,8 @@ def pallet_pal_task(body: SingleTaskCreateSchema):
         sku_info=sku_info,
         from_ws=body.from_ws,
         to_ws=body.to_ws,
-        pallet_clear_list = pallet_clear_list
+        pallet_clear_list = pallet_clear_list,
+        customized_data = body.customized_data
     )
     task_manager.append(task)
 
