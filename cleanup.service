@@ -1,0 +1,7 @@
+[Unit]
+Description=My custom startup script
+[Service]
+ExecStart=/home/xyz/xyz_app/projects/dapeng_station_0/cleanup.sh
+[Install]
+WantedBy=multi-user.target
+
