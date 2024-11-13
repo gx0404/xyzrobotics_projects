@@ -155,7 +155,8 @@ def robot_status():
             di_value_dict[key] = bool(di_value_list[index])   
                  
         robot_status = bool(plc.get_ints("db",346,1,3)[0])
-        system_status =  current_app.status                            
+        system_status =  current_app.status      
+        plc.dis_connected()                      
         return make_json_response(error=0,error_msg="",robot_joints = joints,
                                   do_value_dict = do_value_dict,di_value_dict = di_value_dict,                                  
                                   robot_status="running"if robot_status else "stop",

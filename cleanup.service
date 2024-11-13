@@ -1,0 +1,11 @@
+[Unit]
+Description=My Custom Service
+After=syslog.target
+ 
+[Service]
+Type=simple
+ExecStart=/home/xyz/xyz_app/app/cleanup.sh
+Restart=on-failure
+ 
+[Install]
+WantedBy=multi-user.target
