@@ -781,6 +781,214 @@
             },
             "ignore_collision": false,
             "timestamp": ""
+        },
+        {
+            "name": "workspace_1_full_padding_pg",
+            "origin": {
+                "x": -2.0,
+                "y": 1.1,
+                "z": -1.121,
+                "qx": 0.0,
+                "qy": 0.0,
+                "qz": 0.7071067811865478,
+                "qw": 0.7071067811865474
+            },
+            "primitives": [
+                {
+                    "type": 1,
+                    "dimensions": [
+                        1.25,
+                        1.05,
+                        1.65
+                    ],
+                    "absolute_mesh_paths": "",
+                    "meshes": {
+                        "triangles": [],
+                        "vertices": []
+                    },
+                    "use_convex": false,
+                    "relative_pose": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.825,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    }
+                }
+            ],
+            "tfs": [],
+            "color": {
+                "r": 0.5,
+                "g": 0.0,
+                "b": 0.5,
+                "a": 0.699999988079071
+            },
+            "additional_info": {
+                "type": "",
+                "keys": [],
+                "values": [],
+                "descriptions": []
+            },
+            "ignore_collision": false,
+            "timestamp": ""
+        },
+        {
+            "name": "workspace_2_full_padding_pg",
+            "origin": {
+                "x": 1.709421806782484,
+                "y": 1.64566182307899,
+                "z": -1.282,
+                "qx": 0.0,
+                "qy": 0.0,
+                "qz": 0.7219098092275189,
+                "qw": 0.6919871583642917
+            },
+            "primitives": [
+                {
+                    "type": 1,
+                    "dimensions": [
+                        1.32,
+                        0.9299999999999999,
+                        1.7200000000000002
+                    ],
+                    "absolute_mesh_paths": "",
+                    "meshes": {
+                        "triangles": [],
+                        "vertices": []
+                    },
+                    "use_convex": false,
+                    "relative_pose": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.81,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    }
+                }
+            ],
+            "tfs": [],
+            "color": {
+                "r": 0.5,
+                "g": 0.0,
+                "b": 0.5,
+                "a": 0.699999988079071
+            },
+            "additional_info": {
+                "type": "",
+                "keys": [],
+                "values": [],
+                "descriptions": []
+            },
+            "ignore_collision": false,
+            "timestamp": ""
+        },
+        {
+            "name": "workspace_4_full_padding_pg",
+            "origin": {
+                "x": -1.92,
+                "y": -0.9,
+                "z": -1.121,
+                "qx": 0.0,
+                "qy": 0.0,
+                "qz": 0.7071067811865478,
+                "qw": 0.7071067811865474
+            },
+            "primitives": [
+                {
+                    "type": 1,
+                    "dimensions": [
+                        1.25,
+                        1.05,
+                        1.65
+                    ],
+                    "absolute_mesh_paths": "",
+                    "meshes": {
+                        "triangles": [],
+                        "vertices": []
+                    },
+                    "use_convex": false,
+                    "relative_pose": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.825,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    }
+                }
+            ],
+            "tfs": [],
+            "color": {
+                "r": 0.5,
+                "g": 0.0,
+                "b": 0.5,
+                "a": 0.699999988079071
+            },
+            "additional_info": {
+                "type": "",
+                "keys": [],
+                "values": [],
+                "descriptions": []
+            },
+            "ignore_collision": false,
+            "timestamp": ""
+        },
+        {
+            "name": "workspace_5_full_padding_pg",
+            "origin": {
+                "x": -0.5,
+                "y": -2.4,
+                "z": -1.121,
+                "qx": 0.0,
+                "qy": 0.0,
+                "qz": 0.0,
+                "qw": 1.0
+            },
+            "primitives": [
+                {
+                    "type": 1,
+                    "dimensions": [
+                        1.25,
+                        1.05,
+                        1.65
+                    ],
+                    "absolute_mesh_paths": "",
+                    "meshes": {
+                        "triangles": [],
+                        "vertices": []
+                    },
+                    "use_convex": false,
+                    "relative_pose": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.825,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.0,
+                        "qw": 1.0
+                    }
+                }
+            ],
+            "tfs": [],
+            "color": {
+                "r": 0.5,
+                "g": 0.0,
+                "b": 0.5,
+                "a": 0.699999988079071
+            },
+            "additional_info": {
+                "type": "",
+                "keys": [],
+                "values": [],
+                "descriptions": []
+            },
+            "ignore_collision": false,
+            "timestamp": ""
         }
     ],
     "workspaces": [
@@ -991,7 +1199,1100 @@
                 "timestamp": ""
             },
             "ignore_collision": false,
-            "container_items": [],
+            "container_items": [
+                {
+                    "name": "RealBox-1-1733481316",
+                    "origin": {
+                        "x": -0.5729185283184052,
+                        "y": 1.6972083497047423,
+                        "z": -0.24803402423858634,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7037151094626322,
+                        "qw": 0.7104822620685163
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481313975",
+                            "1",
+                            "18",
+                            "XTS124120508440504",
+                            "1"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-176-1733481316",
+                    "origin": {
+                        "x": -0.4683977007865906,
+                        "y": 2.1954200315475463,
+                        "z": -0.9053404117584227,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.0016413806506194398,
+                        "qw": 0.9999986529338727
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481316",
+                            "3",
+                            "4",
+                            "XTS124112420040101",
+                            "3"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-177-1733481316",
+                    "origin": {
+                        "x": 0.12505752444267274,
+                        "y": 2.2010952281951903,
+                        "z": -0.4660808826446532,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.9999906956778973,
+                        "qw": 0.0043137637435399145
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481316",
+                            "2",
+                            "15",
+                            "XTS124120508410303",
+                            "1"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-178-1733481316",
+                    "origin": {
+                        "x": 0.12505752444267274,
+                        "y": 2.2010952281951903,
+                        "z": -0.6861808826446532,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.9999906956778973,
+                        "qw": 0.0043137637435399145
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481316",
+                            "2",
+                            "10",
+                            "XTS124120508410202",
+                            "1"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-179-1733481316",
+                    "origin": {
+                        "x": 0.12505752444267274,
+                        "y": 2.2010952281951903,
+                        "z": -0.9062808826446532,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.9999906956778973,
+                        "qw": 0.0043137637435399145
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481316",
+                            "2",
+                            "5",
+                            "XTS124120508410101",
+                            "1"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-180-1733481316",
+                    "origin": {
+                        "x": -0.5729185283184052,
+                        "y": 1.6972083497047423,
+                        "z": -0.4681340242385863,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7037151094626322,
+                        "qw": 0.7104822620685163
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481316",
+                            "1",
+                            "13",
+                            "XTS124120508440303",
+                            "1"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-181-1733481316",
+                    "origin": {
+                        "x": -0.5729185283184052,
+                        "y": 1.6972083497047423,
+                        "z": -0.6882340242385863,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7037151094626322,
+                        "qw": 0.7104822620685163
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481316",
+                            "1",
+                            "8",
+                            "XTS124120508440202",
+                            "1"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-182-1733481316",
+                    "origin": {
+                        "x": -0.5729185283184052,
+                        "y": 1.6972083497047423,
+                        "z": -0.9083340242385863,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7037151094626322,
+                        "qw": 0.7104822620685163
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481316",
+                            "1",
+                            "3",
+                            "XTS124120508440101",
+                            "1"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-185-1733481316",
+                    "origin": {
+                        "x": 0.229720538854599,
+                        "y": 1.6998381960391997,
+                        "z": -0.9076817418098448,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7010999952451247,
+                        "qw": 0.7130629682344233
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481316",
+                            "4",
+                            "1",
+                            "XTS124112912020101",
+                            "3"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-187-1733481316",
+                    "origin": {
+                        "x": -0.17054602093994617,
+                        "y": 1.6971288669109343,
+                        "z": -0.688179337978363,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7046097350601838,
+                        "qw": 0.7095950403282267
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481316",
+                            "0",
+                            "7",
+                            "XTS124111513150202",
+                            "3"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-188-1733481316",
+                    "origin": {
+                        "x": -0.17054602093994617,
+                        "y": 1.6971288669109343,
+                        "z": -0.9082793379783629,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7046097350601838,
+                        "qw": 0.7095950403282267
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481316",
+                            "0",
+                            "2",
+                            "XTS124111513150101",
+                            "3"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-2-1733481316",
+                    "origin": {
+                        "x": 0.12505752444267274,
+                        "y": 2.2010952281951903,
+                        "z": -0.24598088264465323,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.9999906956778973,
+                        "qw": 0.0043137637435399145
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.10000000149011612,
+                        "g": 0.5,
+                        "b": 0.20000000298023224,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481313975",
+                            "2",
+                            "20",
+                            "XTS124120508410404",
+                            "1"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                }
+            ],
             "tfs": [],
             "all_planned_items": [],
             "updated_items_ids": [],
@@ -1001,9 +2302,103 @@
                 "placed_items": []
             },
             "booked_pick_items": {
-                "workspace_id": "",
-                "pick_item_names": [],
-                "book_items": []
+                "workspace_id": "0",
+                "pick_item_names": [
+                    "RealBox-184-1733481316"
+                ],
+                "book_items": [
+                    {
+                        "name": "RealBox-184-1733481316",
+                        "origin": {
+                            "x": 0.229720538854599,
+                            "y": 1.6998381960391997,
+                            "z": -0.6875817418098449,
+                            "qx": 0.0,
+                            "qy": 0.0,
+                            "qz": 0.7010999952451247,
+                            "qw": 0.7130629682344233
+                        },
+                        "primitives": [
+                            {
+                                "type": 1,
+                                "dimensions": [
+                                    0.5991,
+                                    0.3991,
+                                    0.2301
+                                ],
+                                "absolute_mesh_paths": "",
+                                "meshes": {
+                                    "triangles": [],
+                                    "vertices": []
+                                },
+                                "use_convex": false,
+                                "relative_pose": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": -0.11505,
+                                    "qx": 0.0,
+                                    "qy": 0.0,
+                                    "qz": 0.0,
+                                    "qw": 1.0
+                                }
+                            }
+                        ],
+                        "tfs": [],
+                        "color": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "additional_info": {
+                            "type": "box",
+                            "keys": [
+                                "barcode_direction",
+                                "height",
+                                "length",
+                                "weight",
+                                "width",
+                                "overlapping_heihgt",
+                                "row",
+                                "timestamp",
+                                "vision_id",
+                                "box_id",
+                                "barcode",
+                                "to_ws"
+                            ],
+                            "values": [
+                                "4",
+                                "0.2301",
+                                "0.5991",
+                                "5.0",
+                                "0.3991",
+                                "0.01",
+                                "5",
+                                "1733481316",
+                                "4",
+                                "6",
+                                "XTS124112912020202",
+                                "3"
+                            ],
+                            "descriptions": [
+                                "barcode_direction",
+                                "height",
+                                "length",
+                                "weight",
+                                "width",
+                                "overlapping_heihgt",
+                                "row",
+                                "timestamp",
+                                "vision_id",
+                                "box_id",
+                                "barcode",
+                                "to_ws"
+                            ]
+                        },
+                        "ignore_collision": false,
+                        "timestamp": ""
+                    }
+                ]
             },
             "polygons": [],
             "point_cloud": {
@@ -1161,8 +2556,8 @@
                     "z": -1.161,
                     "qx": 0.0,
                     "qy": 0.0,
-                    "qz": 0.7071067811882893,
-                    "qw": 0.7071067811848059
+                    "qz": 0.7071067811882956,
+                    "qw": 0.7071067811847995
                 },
                 "pallet_collision": {
                     "name": "pallet_1",
@@ -1172,8 +2567,8 @@
                         "z": -1.403,
                         "qx": 0.0,
                         "qy": 0.0,
-                        "qz": 0.7071067811882893,
-                        "qw": 0.7071067811848059
+                        "qz": 0.7071067811882956,
+                        "qw": 0.7071067811847995
                     },
                     "primitives": [
                         {
@@ -1394,13 +2789,13 @@
             "workspace_id": "2",
             "type": 2,
             "bottom_pose": {
-                "x": 1.7140583552420139,
-                "y": 1.6518673203885554,
+                "x": 1.709421806782484,
+                "y": 1.64566182307899,
                 "z": -1.282,
                 "qx": 0.0,
                 "qy": 0.0,
-                "qz": 0.7060040786996001,
-                "qw": 0.7082077667320014
+                "qz": 0.7219098092275189,
+                "qw": 0.6919871583642917
             },
             "dimensions": [
                 1.22,
@@ -1464,8 +2859,8 @@
                     "z": -1.282,
                     "qx": 0.0,
                     "qy": 0.0,
-                    "qz": 0.7071067811885258,
-                    "qw": 0.7071067811845694
+                    "qz": 0.707106781188533,
+                    "qw": 0.7071067811845622
                 },
                 "pallet_collision": {
                     "name": "pallet_2",
@@ -1475,8 +2870,8 @@
                         "z": -1.447,
                         "qx": 0.0,
                         "qy": 0.0,
-                        "qz": 0.7071067811885258,
-                        "qw": 0.7071067811845694
+                        "qz": 0.707106781188533,
+                        "qw": 0.7071067811845622
                     },
                     "primitives": [
                         {
@@ -1697,13 +3092,13 @@
             "workspace_id": "3",
             "type": 2,
             "bottom_pose": {
-                "x": 1.9899271056056023,
-                "y": -0.2984989762306213,
-                "z": -1.282,
+                "x": 2.0071540474891663,
+                "y": -0.3012454353272915,
+                "z": -1.2434774191975595,
                 "qx": 0.0,
                 "qy": 0.0,
-                "qz": 0.7139134943024399,
-                "qw": 0.7002339056721548
+                "qz": 0.7032875390219031,
+                "qw": 0.7109055052934358
             },
             "dimensions": [
                 1.22,
@@ -1767,8 +3162,8 @@
                     "z": -1.282,
                     "qx": 0.0,
                     "qy": 0.0,
-                    "qz": 0.7071067811885124,
-                    "qw": 0.7071067811845827
+                    "qz": 0.7071067811885201,
+                    "qw": 0.707106781184575
                 },
                 "pallet_collision": {
                     "name": "pallet_3",
@@ -1778,8 +3173,8 @@
                         "z": -1.447,
                         "qx": 0.0,
                         "qy": 0.0,
-                        "qz": 0.7071067811885124,
-                        "qw": 0.7071067811845827
+                        "qz": 0.7071067811885201,
+                        "qw": 0.707106781184575
                     },
                     "primitives": [
                         {
@@ -1900,14 +3295,2967 @@
                 "timestamp": ""
             },
             "ignore_collision": false,
-            "container_items": [],
+            "container_items": [
+                {
+                    "name": "RealBox-0-1733481316",
+                    "origin": {
+                        "x": 1.801855341297648,
+                        "y": -0.5998295092700786,
+                        "z": -1.01347741919756,
+                        "qx": -4.6156920121066815e-18,
+                        "qy": -1.4913698694107025e-16,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481313975",
+                            "0",
+                            "17",
+                            "XTS124111513150404",
+                            "3"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-174-1733481316",
+                    "origin": {
+                        "x": 2.2108549588423223,
+                        "y": -0.604236030314654,
+                        "z": -1.0134774191975593,
+                        "qx": 1.0628320523904295e-16,
+                        "qy": -1.376785007919795e-16,
+                        "qz": 0.7032875390219038,
+                        "qw": 0.7109055052934351
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481316",
+                            "3",
+                            "14",
+                            "XTS124112420040303",
+                            "3"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-175-1733481316",
+                    "origin": {
+                        "x": 1.8048551671974178,
+                        "y": -0.5998618290948173,
+                        "z": -0.7934774191975597,
+                        "qx": 9.24370272130586e-17,
+                        "qy": -1.6015230669143352e-16,
+                        "qz": 0.7032875390219038,
+                        "qw": 0.7109055052934351
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481316",
+                            "3",
+                            "9",
+                            "XTS124112420040202",
+                            "3"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-183-1733481316",
+                    "origin": {
+                        "x": 1.811434832390675,
+                        "y": 0.01084228882302149,
+                        "z": -0.7934774191975595,
+                        "qx": -7.163463593239253e-17,
+                        "qy": 1.5317578899413327e-16,
+                        "qz": -0.7109055052934358,
+                        "qw": 0.703287539021903
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481316",
+                            "4",
+                            "11",
+                            "XTS124112912020303",
+                            "3"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-186-1733481316",
+                    "origin": {
+                        "x": 2.2204344499353494,
+                        "y": 0.006435767778445903,
+                        "z": -0.7934774191975603,
+                        "qx": -5.286653086823609e-17,
+                        "qy": 1.462170535118472e-16,
+                        "qz": -0.7109055052934358,
+                        "qw": 0.703287539021903
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481316",
+                            "0",
+                            "12",
+                            "XTS124111513150303",
+                            "3"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-3-1733481316",
+                    "origin": {
+                        "x": 1.8084350064909058,
+                        "y": 0.010874608647760468,
+                        "z": -1.0134774191975593,
+                        "qx": -9.978341985525672e-17,
+                        "qy": -8.750939744885954e-18,
+                        "qz": -0.7109055052934361,
+                        "qw": 0.7032875390219027
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481313975",
+                            "3",
+                            "19",
+                            "XTS124112420040404",
+                            "3"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "RealBox-4-1733481316",
+                    "origin": {
+                        "x": 2.2174346240355787,
+                        "y": 0.006468087603184963,
+                        "z": -1.0134774191975597,
+                        "qx": -8.449176782835494e-17,
+                        "qy": 8.265955677010294e-17,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.5991,
+                                0.3991,
+                                0.2301
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.11505,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ],
+                        "values": [
+                            "4",
+                            "0.2301",
+                            "0.5991",
+                            "5.0",
+                            "0.3991",
+                            "0.01",
+                            "5",
+                            "1733481313975",
+                            "4",
+                            "16",
+                            "XTS124112912020404",
+                            "3"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp",
+                            "vision_id",
+                            "box_id",
+                            "barcode",
+                            "to_ws"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                }
+            ],
             "tfs": [],
-            "all_planned_items": [],
-            "updated_items_ids": [],
+            "all_planned_items": [
+                {
+                    "name": "PlanBox-0-1733481320",
+                    "origin": {
+                        "x": 1.8084350064909052,
+                        "y": 0.010874608647760353,
+                        "z": -1.0134774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5881464"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-1-1733481320",
+                    "origin": {
+                        "x": 2.2174346240355796,
+                        "y": 0.006468087603184569,
+                        "z": -1.0134774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5881765"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-10-1733481320",
+                    "origin": {
+                        "x": 1.804855167197418,
+                        "y": -0.5998618290948179,
+                        "z": -0.5734774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5883727"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-11-1733481320",
+                    "origin": {
+                        "x": 2.213854784742092,
+                        "y": -0.6042683501393937,
+                        "z": -0.5734774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5883954"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-12-1733481320",
+                    "origin": {
+                        "x": 1.8114348323906748,
+                        "y": 0.010842288823021295,
+                        "z": -0.3534774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5884168"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-13-1733481320",
+                    "origin": {
+                        "x": 2.220434449935349,
+                        "y": 0.006435767778445511,
+                        "z": -0.3534774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5884392"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-14-1733481320",
+                    "origin": {
+                        "x": 1.804855167197418,
+                        "y": -0.5998618290948179,
+                        "z": -0.3534774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5884607"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-15-1733481320",
+                    "origin": {
+                        "x": 2.213854784742092,
+                        "y": -0.6042683501393937,
+                        "z": -0.3534774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5884807"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-16-1733481320",
+                    "origin": {
+                        "x": 1.8114348323906748,
+                        "y": 0.010842288823021295,
+                        "z": -0.1334774191975594,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5885"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-17-1733481320",
+                    "origin": {
+                        "x": 2.220434449935349,
+                        "y": 0.006435767778445511,
+                        "z": -0.1334774191975594,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5885255"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-18-1733481320",
+                    "origin": {
+                        "x": 1.804855167197418,
+                        "y": -0.5998618290948179,
+                        "z": -0.1334774191975594,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.58855"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-19-1733481320",
+                    "origin": {
+                        "x": 2.213854784742092,
+                        "y": -0.6042683501393937,
+                        "z": -0.1334774191975594,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5885732"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-2-1733481320",
+                    "origin": {
+                        "x": 1.8018553412976483,
+                        "y": -0.5998295092700787,
+                        "z": -1.0134774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5881999"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-20-1733481320",
+                    "origin": {
+                        "x": 1.8114348323906748,
+                        "y": 0.010842288823021295,
+                        "z": 0.08652258080244057,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5885952"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-21-1733481320",
+                    "origin": {
+                        "x": 2.220434449935349,
+                        "y": 0.006435767778445511,
+                        "z": 0.08652258080244057,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.588616"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-22-1733481320",
+                    "origin": {
+                        "x": 1.804855167197418,
+                        "y": -0.5998618290948179,
+                        "z": 0.08652258080244057,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5886362"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-23-1733481320",
+                    "origin": {
+                        "x": 2.213854784742092,
+                        "y": -0.6042683501393937,
+                        "z": 0.08652258080244057,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5886564"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-24-1733481320",
+                    "origin": {
+                        "x": 1.8114348323906748,
+                        "y": 0.010842288823021295,
+                        "z": 0.30652258080244055,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5886757"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-25-1733481320",
+                    "origin": {
+                        "x": 2.220434449935349,
+                        "y": 0.006435767778445511,
+                        "z": 0.30652258080244055,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5887432"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-26-1733481320",
+                    "origin": {
+                        "x": 1.804855167197418,
+                        "y": -0.5998618290948179,
+                        "z": 0.30652258080244055,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5887673"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-27-1733481320",
+                    "origin": {
+                        "x": 2.213854784742092,
+                        "y": -0.6042683501393937,
+                        "z": 0.30652258080244055,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5887904"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-3-1733481320",
+                    "origin": {
+                        "x": 2.2108549588423223,
+                        "y": -0.6042360303146546,
+                        "z": -1.0134774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.588221"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-4-1733481320",
+                    "origin": {
+                        "x": 1.8114348323906748,
+                        "y": 0.010842288823021295,
+                        "z": -0.7934774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5882442"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-5-1733481320",
+                    "origin": {
+                        "x": 2.220434449935349,
+                        "y": 0.006435767778445511,
+                        "z": -0.7934774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5882661"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-6-1733481320",
+                    "origin": {
+                        "x": 1.804855167197418,
+                        "y": -0.5998618290948179,
+                        "z": -0.7934774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5882876"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-7-1733481320",
+                    "origin": {
+                        "x": 2.213854784742092,
+                        "y": -0.6042683501393937,
+                        "z": -0.7934774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": 0.7032875390219032,
+                        "qw": 0.7109055052934357
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5883098"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-8-1733481320",
+                    "origin": {
+                        "x": 1.8114348323906748,
+                        "y": 0.010842288823021295,
+                        "z": -0.5734774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5883312"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                },
+                {
+                    "name": "PlanBox-9-1733481320",
+                    "origin": {
+                        "x": 2.220434449935349,
+                        "y": 0.006435767778445511,
+                        "z": -0.5734774191975595,
+                        "qx": 0.0,
+                        "qy": 0.0,
+                        "qz": -0.7109055052934355,
+                        "qw": 0.7032875390219032
+                    },
+                    "primitives": [
+                        {
+                            "type": 1,
+                            "dimensions": [
+                                0.6,
+                                0.4,
+                                0.23
+                            ],
+                            "absolute_mesh_paths": "",
+                            "meshes": {
+                                "triangles": [],
+                                "vertices": []
+                            },
+                            "use_convex": false,
+                            "relative_pose": {
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": -0.115,
+                                "qx": 0.0,
+                                "qy": 0.0,
+                                "qz": 0.0,
+                                "qw": 1.0
+                            }
+                        }
+                    ],
+                    "tfs": [],
+                    "color": {
+                        "r": 0.5,
+                        "g": 0.30000001192092896,
+                        "b": 0.20000000298023224,
+                        "a": 0.30000001192092896
+                    },
+                    "additional_info": {
+                        "type": "box",
+                        "keys": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ],
+                        "values": [
+                            "4",
+                            "0.23",
+                            "0.6",
+                            "5.0",
+                            "0.4",
+                            "0.01",
+                            "5",
+                            "1733481320.5883524"
+                        ],
+                        "descriptions": [
+                            "barcode_direction",
+                            "height",
+                            "length",
+                            "weight",
+                            "width",
+                            "overlapping_heihgt",
+                            "row",
+                            "timestamp"
+                        ]
+                    },
+                    "ignore_collision": false,
+                    "timestamp": ""
+                }
+            ],
+            "updated_items_ids": [
+                "PlanBox-0-1733481320",
+                "PlanBox-1-1733481320",
+                "PlanBox-2-1733481320",
+                "PlanBox-3-1733481320",
+                "PlanBox-4-1733481320",
+                "PlanBox-5-1733481320",
+                "PlanBox-6-1733481320"
+            ],
             "booked_place_items": {
-                "workspace_id": "",
-                "planned_item_ids": [],
-                "placed_items": []
+                "workspace_id": "3",
+                "planned_item_ids": [
+                    "PlanBox-7-1733481320"
+                ],
+                "placed_items": [
+                    {
+                        "name": "RealBox-184-1733481316",
+                        "origin": {
+                            "x": 2.2138547847420926,
+                            "y": -0.6042683501393935,
+                            "z": -0.7934774191975592,
+                            "qx": -5.210806053089503e-17,
+                            "qy": -1.6347271039431506e-16,
+                            "qz": 0.7032875390219036,
+                            "qw": 0.7109055052934353
+                        },
+                        "primitives": [
+                            {
+                                "type": 1,
+                                "dimensions": [
+                                    0.5991,
+                                    0.3991,
+                                    0.2301
+                                ],
+                                "absolute_mesh_paths": "",
+                                "meshes": {
+                                    "triangles": [],
+                                    "vertices": []
+                                },
+                                "use_convex": false,
+                                "relative_pose": {
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": -0.11505,
+                                    "qx": 0.0,
+                                    "qy": 0.0,
+                                    "qz": 0.0,
+                                    "qw": 1.0
+                                }
+                            }
+                        ],
+                        "tfs": [],
+                        "color": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                        },
+                        "additional_info": {
+                            "type": "box",
+                            "keys": [
+                                "barcode_direction",
+                                "height",
+                                "length",
+                                "weight",
+                                "width",
+                                "overlapping_heihgt",
+                                "row",
+                                "timestamp",
+                                "vision_id",
+                                "box_id",
+                                "barcode",
+                                "to_ws"
+                            ],
+                            "values": [
+                                "4",
+                                "0.2301",
+                                "0.5991",
+                                "5.0",
+                                "0.3991",
+                                "0.01",
+                                "5",
+                                "1733481316",
+                                "4",
+                                "6",
+                                "XTS124112912020202",
+                                "3"
+                            ],
+                            "descriptions": [
+                                "barcode_direction",
+                                "height",
+                                "length",
+                                "weight",
+                                "width",
+                                "overlapping_heihgt",
+                                "row",
+                                "timestamp",
+                                "vision_id",
+                                "box_id",
+                                "barcode",
+                                "to_ws"
+                            ]
+                        },
+                        "ignore_collision": false,
+                        "timestamp": ""
+                    }
+                ]
             },
             "booked_pick_items": {
                 "workspace_id": "",
@@ -2070,8 +6418,8 @@
                     "z": -1.161,
                     "qx": 0.0,
                     "qy": 0.0,
-                    "qz": 0.7071067811882893,
-                    "qw": 0.7071067811848059
+                    "qz": 0.7071067811882956,
+                    "qw": 0.7071067811847995
                 },
                 "pallet_collision": {
                     "name": "pallet_4",
@@ -2081,8 +6429,8 @@
                         "z": -1.403,
                         "qx": 0.0,
                         "qy": 0.0,
-                        "qz": 0.7071067811882893,
-                        "qw": 0.7071067811848059
+                        "qz": 0.7071067811882956,
+                        "qw": 0.7071067811847995
                     },
                     "primitives": [
                         {
@@ -3162,7 +7510,7 @@
             "tfs": [],
             "all_planned_items": [
                 {
-                    "name": "PlanBox-0-1733452474",
+                    "name": "PlanBox-0-1733476666",
                     "origin": {
                         "x": 0.8180000040000001,
                         "y": -2.644999997,
@@ -3224,7 +7572,7 @@
                             "0.3",
                             "0.012",
                             "9",
-                            "1733452474.07031"
+                            "1733476666.04147"
                         ],
                         "descriptions": [
                             "barcode_direction",
@@ -3242,7 +7590,7 @@
                 }
             ],
             "updated_items_ids": [
-                "PlanBox-0-1733452474"
+                "PlanBox-0-1733476666"
             ],
             "booked_place_items": {
                 "workspace_id": "",
@@ -3252,18 +7600,18 @@
             "booked_pick_items": {
                 "workspace_id": "7",
                 "pick_item_names": [
-                    "RealBox-199-1733451607"
+                    "RealBox-175-1733476628"
                 ],
                 "book_items": [
                     {
-                        "name": "RealBox-199-1733451607",
+                        "name": "RealBox-175-1733476628",
                         "origin": {
-                            "x": 0.8180000039999995,
-                            "y": -2.644999997,
-                            "z": -0.24599999999999855,
-                            "qx": 1.4061535978504103e-16,
-                            "qy": -1.0073230430750227e-17,
-                            "qz": 2.6931581964539925e-16,
+                            "x": 0.8180000040000011,
+                            "y": -2.6449999969999998,
+                            "z": -0.246,
+                            "qx": 1.5621927860916196e-16,
+                            "qy": -1.2452029109882624e-16,
+                            "qz": -2.636949090074198e-16,
                             "qw": 1.0
                         },
                         "primitives": [
@@ -3322,10 +7670,10 @@
                                 "0.2991",
                                 "0.012",
                                 "9",
-                                "1733451607",
-                                "7",
-                                "3",
-                                "3Z0000000038118545",
+                                "1733476628",
+                                "0",
+                                "19",
+                                "3Z0000000038182269",
                                 "2"
                             ],
                             "descriptions": [
