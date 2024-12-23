@@ -154,6 +154,8 @@ nodes:
       name: LoadWorkspaceInfo
       params:
         calib_file: calibration/workspace/cache_pallet_5.yml
+        enable_input_primitive: False
+        input_type: Bottom
         log_frame_tree: false
         clear_all_data: false
     position:

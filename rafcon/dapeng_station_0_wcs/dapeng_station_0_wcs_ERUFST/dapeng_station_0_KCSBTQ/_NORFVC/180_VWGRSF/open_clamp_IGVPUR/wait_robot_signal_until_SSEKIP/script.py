@@ -108,8 +108,9 @@ def execute(self, inputs, outputs, gvm):
             #green
             set_digit_output("2",65033,0)
             #buzzer
-            set_digit_output("2",65034,1)            
-            return "timeout"            
+            set_digit_output("2",65034,1)           
+            from rafcon.xyz_exception_base import XYZExceptionBase
+            raise XYZExceptionBase("E0800", "夹具异常：检测或控制失败")            
         if rob_driver.get_robotstatus()["simulation"]:
             expected_values = expected_values
             if expected_values == target_values:

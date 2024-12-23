@@ -1,6 +1,6 @@
 import time
 from xyz_motion import RobotDriver
-
+from rafcon.xyz_exception_base import XYZExceptionBase
 def cont_check(port_ids, cont_check_time, robot_signal, rob_driver):
     start_time = time.time()
     while (time.time() - start_time) <= cont_check_time:
@@ -85,7 +85,7 @@ def execute(self, inputs, outputs, gvm):
             set_digit_output("2",65033,0)
             #buzzer
             set_digit_output("2",65034,1)           
-            return "timeout"
+            raise XYZExceptionBase("E0800", "夹具异常：检测或控制失败") 
         if rob_driver.get_robotstatus()["simulation"]:
             expected_values = self.smart_data["expected_values"]
             if expected_values == self.smart_data["target_values"]:
