@@ -70,7 +70,9 @@ def execute(self, inputs, outputs, gvm):
         raise Exception("最大等待时间应大于最大监测持续时间")
 
     while not self.preempted:
-        if gvm.variable_exist("ERROR"):
+        if gvm.variable_exist("ERROR"):     
+            return "timeout"
+        if (time.time() - start_time) > self.smart_data["timeout"]:
             from xyz_logistics_hmi_back.utils.utils import send_order_log
             msg = f"等待夹具光电检测信号无,信号地址为{self.smart_data['port_ids']}"
             send_order_log(message=msg, status=False)
@@ -82,10 +84,9 @@ def execute(self, inputs, outputs, gvm):
             #green
             set_digit_output("2",65033,0)
             #buzzer
-            set_digit_output("2",65034,1)        
-            return "timeout"
-        if (time.time() - start_time) > self.smart_data["timeout"]:
-            return "timeout"
+            set_digit_output("2",65034,1)   
+            from rafcon.xyz_exception_base import XYZExceptionBase
+            raise XYZExceptionBase("E0800", error_msg="夹具异常：检测或控制失败")
         if rob_driver.get_robotstatus()["simulation"]:
             expected_values = self.smart_data["expected_values"]
             if expected_values == self.smart_data["target_values"]:

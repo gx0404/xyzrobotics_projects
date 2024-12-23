@@ -988,6 +988,8 @@ nodes:
       name: LoadWorkspaceInfo
       params:
         calib_file: calibration/workspace/cache_pallt_1.yml
+        enable_input_primitive: False
+        input_type: Bottom
         log_frame_tree: false
         clear_all_data: false
     position:
@@ -1639,8 +1641,8 @@ nodes:
       x: 3365.1597895993314
       y: -666.60415727602322
     embedded_widget_rect:
-      w: 256
-      h: 211
+      w: 390
+      h: 301
   - id: "{f2f50302-679e-47de-961f-b04f7e59b1bc}"
     parent_id: "{00000000-0000-0000-0000-000000000000}"
     model:

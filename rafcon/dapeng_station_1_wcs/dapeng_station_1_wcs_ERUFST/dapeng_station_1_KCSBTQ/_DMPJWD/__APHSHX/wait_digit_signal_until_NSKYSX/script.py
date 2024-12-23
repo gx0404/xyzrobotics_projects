@@ -66,14 +66,14 @@ def execute(self, inputs, outputs, gvm):
             msg = f"等待输送线超时"
             send_order_log(message=msg, status=False)
             from xyz_io_client.io_client import set_digit_output
-            #red
-            set_digit_output("2",65031,1)
-            #yellow
-            set_digit_output("2",65032,0)
-            #green
-            set_digit_output("2",65033,0)
-            #buzzer
-            set_digit_output("2",65034,1)          
+            # #red
+            # set_digit_output("2",65031,1)
+            # #yellow
+            # set_digit_output("2",65032,0)
+            # #green
+            # set_digit_output("2",65033,0)
+            # #buzzer
+            # set_digit_output("2",65034,1)          
             return "timeout"
         digit_signals = []
         for port, expected_value in zip(self.smart_data["ports"], self.smart_data["expected_values"]):

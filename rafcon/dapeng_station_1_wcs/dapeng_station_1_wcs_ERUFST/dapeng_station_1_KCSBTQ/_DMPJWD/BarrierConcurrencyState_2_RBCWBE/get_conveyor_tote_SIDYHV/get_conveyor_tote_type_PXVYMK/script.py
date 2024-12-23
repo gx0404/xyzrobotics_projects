@@ -24,14 +24,14 @@ def execute(self, inputs, outputs, gvm):
             self.logger.info(f"空箱回收获取输送线料箱信息超时")
             msg = f"空箱回收获取输送线料箱信息超时"
             send_order_log(message=msg, status=False)
-            #red
-            set_digit_output("2",65031,1)
-            #yellow
-            set_digit_output("2",65032,0)
-            #green
-            set_digit_output("2",65033,0)
-            #buzzer
-            set_digit_output("2",65034,1)   
+            # #red
+            # set_digit_output("2",65031,1)
+            # #yellow
+            # set_digit_output("2",65032,0)
+            # #green
+            # set_digit_output("2",65033,0)
+            # #buzzer
+            # set_digit_output("2",65034,1)   
             time.sleep(10)        
             return "timeout"            
         try: 

@@ -1,4 +1,4 @@
-two_camera_[2, 3]_400_300_230:
+two_camera_[2, 3]_600_400_230:
 - id: '{4d3282e1-76eb-4c78-87ee-88356b2ca998}'
   model:
     name: XYZCamera
@@ -30,11 +30,11 @@ two_camera_[2, 3]_400_300_230:
     name: SBMEstimator
     params:
       detection_targets:
-      - '400_300_230'
+      - '600_400_230'
   parent_id: '{00000000-0000-0000-0000-000000000000}'
 - id: '{50df878c-7926-4142-b82b-6283bc19748a}'
   model:
     name: CalculateTopLayerHeight
     params:
-      layer_min_points: 2000
+      layer_min_points: 4000
   parent_id: '{00000000-0000-0000-0000-000000000000}'

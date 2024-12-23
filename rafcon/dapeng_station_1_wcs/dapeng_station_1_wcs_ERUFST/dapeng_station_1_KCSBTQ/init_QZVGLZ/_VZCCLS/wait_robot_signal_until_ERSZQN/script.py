@@ -73,7 +73,8 @@ def execute(self, inputs, outputs, gvm):
         if gvm.variable_exist("ERROR"):
             return "timeout"
         if (time.time() - start_time) > self.smart_data["timeout"]:
-            return "timeout"
+            from rafcon.xyz_exception_base import XYZExceptionBase
+            raise XYZExceptionBase("E0800", error_msg="夹具异常：检测或控制失败")
         if rob_driver.get_robotstatus()["simulation"]:
             expected_values = self.smart_data["expected_values"]
             if expected_values == self.smart_data["target_values"]:
