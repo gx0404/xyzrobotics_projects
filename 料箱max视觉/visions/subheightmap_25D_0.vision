@@ -2805,7 +2805,7 @@ nodes:
     model:
       name: ConstructOrthographicProjectionMap
       params:
-        pixel_size: 0.001
+        pixel_size: 0.002
         output_type: normalmap
         output_pixel_size: 0.001
     position:
