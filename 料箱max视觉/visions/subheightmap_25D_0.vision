@@ -1510,7 +1510,7 @@ nodes:
     model:
       name: ConstructOrthographicProjectionMap
       params:
-        pixel_size: 0.001
+        pixel_size: 0.002
         output_type: normalmap
         output_pixel_size: 0.001
     position:
@@ -5207,6 +5207,12 @@ recipes:
           name: FilterByClustering
           params:
             z_tolerance: 0.004
+      - id: "{8f2656a2-2004-4a44-a1f5-e3aa595a304e}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: ConstructOrthographicProjectionMap
+          params:
+            pixel_size: 0.002
   - three_camera_[0, 2, 3]_400_300_230:
       - id: "{bb22c145-40c3-477b-baa4-505cc179f8e3}"
         parent_id: "{00000000-0000-0000-0000-000000000000}"
@@ -5300,6 +5306,12 @@ recipes:
           name: CalculateTopLayerHeight
           params:
             layer_min_points: 2000
+      - id: "{74000126-06e3-4fca-a1af-35c3504b22c1}"
+        parent_id: "{00000000-0000-0000-0000-000000000000}"
+        model:
+          name: ConstructOrthographicProjectionMap
+          params:
+            output_type: normalmap
   - three_camera_[1, 2, 3]_400_300_230:
       - id: "{bb22c145-40c3-477b-baa4-505cc179f8e3}"
         parent_id: "{00000000-0000-0000-0000-000000000000}"

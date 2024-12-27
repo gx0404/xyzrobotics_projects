@@ -65,17 +65,18 @@ def execute(self, inputs, outputs, gvm):
             from xyz_logistics_hmi_back.utils.utils import send_order_log
             msg = f"等待输送线超时"
             send_order_log(message=msg, status=False)
-            from xyz_io_client.io_client import set_digit_output
-            #red
-            set_digit_output("2",65031,1)
-            #yellow
-            set_digit_output("2",65032,0)
-            #green
-            set_digit_output("2",65033,0)
-            #buzzer
-            set_digit_output("2",65034,1)          
-            from rafcon.xyz_exception_base import XYZExceptionBase
-            raise XYZExceptionBase("E0800", "夹具异常：检测或控制失败")
+            # from xyz_io_client.io_client import set_digit_output
+            # #red
+            # set_digit_output("2",65031,1)
+            # #yellow
+            # set_digit_output("2",65032,0)
+            # #green
+            # set_digit_output("2",65033,0)
+            # #buzzer
+            # set_digit_output("2",65034,1)          
+            # from rafcon.xyz_exception_base import XYZExceptionBase
+            # raise XYZExceptionBase("E0800", "夹具异常：检测或控制失败")
+            return "timeout"
         digit_signals = []
         for port, expected_value in zip(self.smart_data["ports"], self.smart_data["expected_values"]):
             digit_signals.append(get_digit_input(self.smart_data["device_id"], port, expected_value))
